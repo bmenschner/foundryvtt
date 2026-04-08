@@ -1,0 +1,65 @@
+services:
+
+  # ── FoundryVTT App ──────────────────────────────────────────────────────
+  foundry:
+    build:
+      context: .
+      args:
+        FOUNDRY_USERNAME: ${FOUNDRY_USERNAME:-}
+        FOUNDRY_PASSWORD: ${FOUNDRY_PASSWORD:-}
+        FOUNDRY_VERSION: ${FOUNDRY_VERSION:-13}
+    container_name: foundryvtt
+    # Hostname muss stabil bleiben – Foundry bindet die Lizenz daran!
+    hostname: foundryvtt
+    restart: unless-stopped
+    volumes:
+      - ./data:/foundry/data
+    expose:
+      - "30000"
+
+  # ── Nginx Reverse Proxy ─────────────────────────────────────────────────
+  nginx:
+    image: nginx:alpine
+    container_name: foundry-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "127.0.0.1:30000:30000" # Lokaler Zugriff (nur localhost, nicht von außen)
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on:
+      - foundry
+    # Nginx alle 6h sanft neu laden → neue Zertifikate werden übernommen
+    command: >
+      /bin/sh -c "while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g 'daemon off;'"
+
+  # ── Certbot / Let's Encrypt ─────────────────────────────────────────────
+  certbot:
+    image: certbot/certbot
+    container_name: foundry-certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    # Erneuert Zertifikate alle 12h automatisch
+    entrypoint: >
+      /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done"
+
+  # ── Automatisches Backup → GitHub ─────────────────────────────────────
+  backup:
+    build: ./backup
+    container_name: foundry-backup
+    restart: unless-stopped
+    environment:
+      BACKUP_REPO:      ${BACKUP_REPO:-git@github.com:bmenschner/foundryvtt-backups.git}
+      BACKUP_SCHEDULE:  ${BACKUP_SCHEDULE:-0 3 * * *}   # Standard: täglich 03:00 Uhr
+      BACKUP_BRANCH:    ${BACKUP_BRANCH:-main}
+      BACKUP_GIT_EMAIL: ${BACKUP_GIT_EMAIL:-backup@foundryvtt}
+      TZ:               Europe/Berlin
+    volumes:
+      - .:/backup/project:ro                               # Gesamtes Projektverzeichnis (read-only)
+      - ./backup/ssh/backup_key:/root/.ssh/id_ed25519:ro  # SSH Deploy Key (read-only!)
+    depends_on:
+      - foundry
