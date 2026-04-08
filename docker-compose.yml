@@ -5,9 +5,7 @@ services:
     build:
       context: .
       args:
-        FOUNDRY_USERNAME: ${FOUNDRY_USERNAME:-}
-        FOUNDRY_PASSWORD: ${FOUNDRY_PASSWORD:-}
-        FOUNDRY_VERSION: ${FOUNDRY_VERSION:-13}
+        FOUNDRY_TIMED_URL: ${FOUNDRY_TIMED_URL:-}
     container_name: foundryvtt
     # Hostname muss stabil bleiben – Foundry bindet die Lizenz daran!
     hostname: foundryvtt

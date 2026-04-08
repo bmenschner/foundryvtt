@@ -23,3 +23,13 @@
 {"level":"info","message":"Server started and listening on port 30000","timestamp":"2026-04-08 20:56:07"}
 {"level":"info","message":"Created client session edce799e96c8fbe0567fdae9","timestamp":"2026-04-08 20:56:19"}
 {"level":"info","message":"Server administrator password updated in \"/foundry/data/Config/admin.txt\"","timestamp":"2026-04-08 20:56:39"}
+{"level":"info","message":"Shutting down Foundry Virtual Tabletop server","timestamp":"2026-04-08 21:11:04"}
+{"level":"info","message":"Running on Node.js - Version 24.14.1","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"Foundry Virtual Tabletop - Version 14 Build 359","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"User Data Directory - \"/foundry/data\"","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"Application Options:\n{\n  \"compressStatic\": true,\n  \"fullscreen\": false,\n  \"hostname\": null,\n  \"language\": \"en.core\",\n  \"localHostname\": null,\n  \"port\": 30000,\n  \"proxyPort\": null,\n  \"proxySSL\": false,\n  \"routePrefix\": null,\n  \"updateChannel\": \"stable\",\n  \"upnp\": true,\n  \"awsConfig\": null,\n  \"compressSocket\": true,\n  \"cssTheme\": \"dark\",\n  \"tempDir\": null,\n  \"deleteNEDB\": false,\n  \"hotReload\": false,\n  \"passwordSalt\": null,\n  \"unixSocket\": null,\n  \"sslCert\": null,\n  \"sslKey\": null,\n  \"world\": null,\n  \"serviceConfig\": null,\n  \"telemetry\": false,\n  \"adminPassword\": \"••••••••••••••••\",\n  \"noBackups\": false\n}","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"Software license verification succeeded","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"Requesting UPnP port forwarding to destination port 30000","timestamp":"2026-04-08 21:11:08"}
+{"level":"info","message":"Server started and listening on port 30000","timestamp":"2026-04-08 21:11:11"}
+{"level":"info","message":"Created client session 81844ff390bef2ee8acfc3c8","timestamp":"2026-04-08 21:11:12"}
+{"level":"info","message":"Administrator authentication successful for session 81844ff390bef2ee8acfc3c8","timestamp":"2026-04-08 21:11:19"}
