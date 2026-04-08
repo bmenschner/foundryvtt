@@ -9,6 +9,11 @@
             "date": 1775604333079,
             "name": "/foundry/data/Logs/debug.2026-04-07.log",
             "hash": "de721efea44f68142fb8563bec7288da4eb7c29279f77dec6376c6e1b49bbbe6"
+        },
+        {
+            "date": 1775606838677,
+            "name": "/foundry/data/Logs/debug.2026-04-08.log",
+            "hash": "cf2e94d89f96836f1ddd1959c39f23bd636938938897f9719db81adb14feee53"
         }
     ],
     "hashType": "sha256"
