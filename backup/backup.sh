@@ -48,7 +48,7 @@ echo "▶ Kopiere Projektverzeichnis..."
 
 rsync -a --delete \
     --exclude='.git/' \
-    --exclude='foundryvtt.zip' \
+    --exclude='*.zip' \
     --exclude='backup/ssh/backup_key' \
     /backup/project/ "$REPO_DIR/"
 
@@ -57,8 +57,8 @@ cat > "$REPO_DIR/.gitignore" << 'EOF'
 # Private SSH Key – darf NIEMALS in Git!
 backup/ssh/backup_key
 
-# FoundryVTT ZIP – kommerzielle Software, nicht sichern
-foundryvtt.zip
+# FoundryVTT ZIP – kommerzielle Software, nicht ins Backup (>100MB)
+*.zip
 
 # Docker Build Cache
 .dockerignore

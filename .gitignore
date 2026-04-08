@@ -1,8 +1,8 @@
 # Private SSH Key – darf NIEMALS in Git!
 backup/ssh/backup_key
 
-# FoundryVTT ZIP – kommerzielle Software, nicht sichern
-foundryvtt.zip
+# FoundryVTT ZIP – kommerzielle Software, nicht ins Backup (>100MB)
+*.zip
 
 # Docker Build Cache
 .dockerignore
