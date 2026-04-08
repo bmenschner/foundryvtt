@@ -333,6 +333,21 @@ Faustregeln für `backup.sh`:
 
 ---
 
+## ✅ Erledigte Tasks (Session 4)
+
+### 10. Download-Mechanismus überarbeitet (Node.js statt curl+grep)
+- Analyse von `felddy/foundryvtt-docker` (Referenz-Projekt): nutzt JSON-API + TypeScript
+- Neues `get_release_url.js`: Login + Presigned URL via Node.js built-ins, kein npm install
+- Gleiche API wie felddy: `GET /releases/download?build=359&platform=node&response_type=json`
+- Lokal erfolgreich getestet
+
+### 11. Backup-Script: ZIP-Exclude auf `*.zip` erweitert
+- Problem: `_foundryvtt.zip` (umbenannt) wurde nicht vom spezifischen Exclude `foundryvtt.zip` erfasst
+- Fix: `--exclude='*.zip'` in rsync + `*.zip` in `.gitignore` des Backup-Repos
+- Git-History-Cleanup via `git filter-branch --force` + `git push --force`
+
+---
+
 ## 📁 Finale Dateistruktur
 
 ```
@@ -352,6 +367,7 @@ foundry/
 │       ├── backup_key         ← Privater SSH Deploy Key (NICHT in Git!)
 │       ├── backup_key.pub     ← Öffentlicher Key (in GitHub Deploy Keys eintragen)
 │       └── README.md          ← Setup-Anleitung für Key-Generierung
+├── get_release_url.js     ← Node.js Download-Helper (Login + Presigned URL via JSON-API)
 ├── data/                  ← Foundry User-Daten: Welten, Module, Systeme (Volume)
 ├── init-letsencrypt.sh    ← Einmalig ausführen für erstes SSL-Zertifikat
 ├── .env                   ← FOUNDRY_USERNAME, FOUNDRY_PASSWORD, BACKUP_REPO, ...
@@ -407,27 +423,117 @@ CSRF-Token: ...
 - Ohne Login kein Download → kein lokales ZIP auf Remote → Build bricht ab
 
 **Lösung:**
-`grep -oP` durch POSIX/BusyBox-kompatibles `grep -oE` + `sed` ersetzen:
-```sh
-# Vorher (GNU-only):
-grep -oP 'csrfmiddlewaretoken["\s]+value[="\s]+\K[^"]+'
-
-# Nachher (BusyBox-kompatibel):
-grep -oE 'csrfmiddlewaretoken[^>]+value="[^"]+"' \
-  | grep -oE 'value="[^"]+"' \
-  | sed 's/value="//;s/"//g'
-
-# Cookie-Fallback (vorher):
-grep -oP 'csrftoken=\K[^;]+'
-# Cookie-Fallback (nachher):
-grep -oE 'csrftoken=[^;]+' | sed 's/csrftoken=//'
-```
+`grep -oP` durch POSIX/BusyBox-kompatibles `grep -oE` + `sed` ersetzen (Zwischenlösung).
+Endgültige Lösung: Gesamter CSRF/Login-Flow in `get_release_url.js` ausgelagert (→ Fehler 11).
 
 **Lektion:**  
 Alpine Linux = BusyBox-Tools. Bei Shell-Skripten im Dockerfile **niemals GNU-spezifische Flags** annehmen:
 - ❌ `grep -P` / `grep -oP` ... `\K` → nur GNU grep
-- ✅ `grep -E` oder `grep -oE` + `sed` → BusyBox-kompatibel
+- ✅ Node.js built-ins oder `grep -E` + `sed` → portabel
 - Alternative: `apk add grep` installiert GNU grep, aber erhöht Image-Größe
+
+---
+
+### Fehler 10: `FOUNDRY_TIMED_URL` leer → Build schlägt fehl (kein ZIP auf Remote)
+
+**Fehlermeldung:**
+```
+✗ FEHLER: Kein Timed URL angegeben und kein lokales foundryvtt.zip gefunden!
+```
+
+**Ursache:**
+- Nach Umstieg auf Timed-URL-Ansatz: `FOUNDRY_TIMED_URL` war leer in `.env` auf Remote
+- Kein lokales ZIP auf Remote vorhanden → beide Fallbacks schlagen fehl
+- Timed URLs sind nur ~5 Minuten gültig → unpraktisch für automatisierte Builds
+
+**Lösung:**
+Ansatz komplett gewechselt → `get_release_url.js` (→ Fehler 11)
+
+---
+
+### Fehler 11: CSRF-Login mit `curl`+`grep` grundsätzlich fragil
+
+**Ursache (Root Cause aller Login-Probleme):**
+- `curl` + Shell-`grep` für CSRF-Extraktion ist grundsätzlich keine robuste Lösung
+- Analyse von **felddy/foundryvtt-docker** (dem Referenz-Projekt, 863 Stars) zeigte:
+  - Die offizielle Lösung nutzt **TypeScript + cheerio** für HTML-Parsing
+  - Und die **JSON-API**: `GET /releases/download?build=<build>&platform=node&response_type=json`
+  - Diese gibt direkt eine **Presigned S3-URL** zurück – zuverlässig, kein CSRF-Parsing
+
+**Lösung:** Neues `get_release_url.js` Script:
+- Nutzt **nur Node.js built-ins** (`https`, `url` – kein npm install)
+- Gleicher Ablauf wie felddy: CSRF per Regex (im JS!), Login, JSON-API, URL
+- Script liegt im Build-Context → wird per `COPY . /build-context/` ins Image kopiert
+- Aufruf im Dockerfile: `PRESIGNED_URL=$(node /build-context/get_release_url.js user pass ver)`
+
+```javascript
+// Kernstück: JSON-API Aufruf (wie felddy)
+const apiUrl = `${BASE}/releases/download?build=${build}&platform=node&response_type=json`;
+// Antwort: { url: "https://r2.foundryvtt.com/releases/...?verify=..." }
+```
+
+**Lokal getestet und funktioniert:**
+```
+Schritt 1/3: CSRF-Token holen... csrf: F13hROQi...
+Schritt 2/3: Login als bmenschner... Login erfolgreich.
+Schritt 3/3: Presigned URL für Build 359... Presigned URL erhalten.
+https://r2.foundryvtt.com/releases/14.359/FoundryVTT-Node-14.359.zip?verify=...
+```
+
+**Lektion:**  
+Für Web-Login/Session-Handling ist Shell+curl immer die falsche Wahl. Node.js oder Python liefern
+ezuverlässige HTTP-Clients mit Cookie-Jar, Redirect-Handling und HTML-Parsing.
+Da Node.js im Image bereits vorhanden ist (base image!), kostet der Einsatz nichts.
+
+---
+
+### Fehler 12: `_foundryvtt.zip` (139 MB) in Git-History → Push an GitHub abgelehnt
+
+**Fehlermeldung:**
+```
+remote: error: File _foundryvtt.zip is 139.61 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected.
+ ! [remote rejected] main -> main (pre-receive hook declined)
+```
+
+**Ursache:**
+- Projektverzeichnis enthielt eine `_foundryvtt.zip` (umbenannt von `foundryvtt.zip`)
+- `backup.sh` excludierte nur `'foundryvtt.zip'` (exakter Name) – nicht `_foundryvtt.zip`
+- Die 139 MB große Datei wurde in Git-History committet und beim Push abgelehnt
+- Selbst nach `delete mode` im nächsten Commit: große Datei steckt **in der History** → Push schlägt weiterhin fehl
+
+**Lösung Teil 1: `backup.sh` Fix**
+```sh
+# Vorher (zu spezifisch):
+--exclude='foundryvtt.zip'
+
+# Nachher (fängt alle ZIP-Namen):
+--exclude='*.zip'
+```
+Auch `.gitignore` im Backup-Repo auf `*.zip` erweitert.
+
+**Lösung Teil 2: Git-History bereinigen**
+```sh
+# Im Backup-Container:
+docker exec foundry-backup sh -c '
+  cp /root/.ssh/id_ed25519 /tmp/backup_key && chmod 600 /tmp/backup_key
+  export GIT_SSH_COMMAND="ssh -i /tmp/backup_key"
+  cd /repo
+  git filter-branch --force --index-filter \
+    "git rm --cached --ignore-unmatch \"*.zip\"" \
+    --prune-empty --tag-name-filter cat -- --all
+  git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+  git reflog expire --expire=now --all
+  git gc --prune=now --aggressive
+  git push origin main --force
+'
+```
+
+**Lektion:**  
+- Git-Excludes immer mit **Glob-Pattern** statt exaktem Namen schreiben (`*.zip` statt `foundryvtt.zip`)
+- Große Dateien (>50 MB) **niemals** in ein reguläres Git-Repo committen
+- Wenn es passiert: `git filter-branch` (oder `git-filter-repo`) entfernt die Datei aus **allen** Commits
+- `git push --force` danach erforderlich da History umgeschrieben
 
 ---
 
@@ -441,3 +547,6 @@ Alpine Linux = BusyBox-Tools. Bei Shell-Skripten im Dockerfile **niemals GNU-spe
 - **Nginx nach Konfig-Änderung**: Neue Ports → `docker compose restart nginx`; nur Konfig-Inhalt → `docker exec foundry-nginx nginx -s reload`.
 - **Lokaler Zugriff**: `http://localhost:30000` via nginx (kein SSL). Port ist nur auf `127.0.0.1` gebunden, nicht extern erreichbar.
 - **SSH-Key read-only**: Der Deploy Key ist `:ro` gemountet – `chmod` geht nur auf einer `/tmp`-Kopie.
+- **Backup-ZIP-Exclude**: rsync excludiert `*.zip` (Glob!) – nie mit exaktem Dateinamen, da ZIP ggf. umbenannt wird.
+- **Git-History-Cleanup**: Wenn große Datei in History landet → `git filter-branch --force --index-filter "git rm --cached --ignore-unmatch \"*.zip\"" -- --all` + `git push --force`.
+- **FoundryVTT-Download**: `get_release_url.js` nutzt JSON-API (`response_type=json`) für zuverlässige Presigned-URL. Kein `grep -P` (BusyBox-inkompatibel), kein npm install (nur Node built-ins).
