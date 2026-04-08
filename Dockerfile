@@ -6,36 +6,46 @@ RUN apk add --no-cache unzip curl bash
 WORKDIR /foundry/app
 
 # ── Build-Args für Download ─────────────────────────────────────────────────
-# Option A: Timed URL (empfohlen) – generieren unter:
-#   https://foundryvtt.com/community/<username>/licenses → "Timed URL"
-# Option B: Lokales foundryvtt.zip im Projektverzeichnis ablegen
-ARG FOUNDRY_TIMED_URL=""
+# Option A: Credentials (Username + Password von foundryvtt.com)
+#           → Download läuft vollautomatisch via JSON-API (wie felddy/foundryvtt-docker)
+# Option B: Lokales foundryvtt.zip neben dem Dockerfile ablegen
+#           → ZIP aus Build-Context kopiert (zuverlässiger Fallback)
+ARG FOUNDRY_USERNAME=""
+ARG FOUNDRY_PASSWORD=""
+ARG FOUNDRY_VERSION="14.359"
 
-# ── Lokales ZIP als Fallback kopieren (falls vorhanden) ────────────────────
+# ── Build-Context kopieren (enthält ZIP-Fallback + Download-Script) ─────────
 COPY . /build-context/
 
-# ── Download via Timed URL ODER nutze lokales ZIP ──────────────────────────
+# ── Download via Credentials ODER nutze lokales ZIP ────────────────────────
+# Das get_release_url.js Script:
+#   1. Holt CSRF-Token via node built-ins (kein grep -P, kein BusyBox-Problem)
+#   2. Loggt sich ein und holt Presigned S3-URL via JSON-API
+#   3. Gibt URL auf stdout aus → curl lädt ZIP herunter
 RUN set -e; \
     DOWNLOAD_OK=false; \
     \
-    # ── Versuch A: Download via Timed URL ─────────────────────────────────\
-    if [ -n "$FOUNDRY_TIMED_URL" ]; then \
-      echo "━━━ Versuche Download via Timed URL ━━━"; \
-      curl -L \
-        "$FOUNDRY_TIMED_URL" \
-        -o /tmp/foundryvtt.zip \
-        --write-out "HTTP-Status: %{http_code}, Größe: %{size_download} Bytes\n"; \
-      \
-      # ZIP-Validierung: Prüfe Magic-Bytes (ZIP beginnt mit PK\x03\x04)
-      if [ -f /tmp/foundryvtt.zip ] && \
-         [ "$(od -An -tx1 -N4 /tmp/foundryvtt.zip | tr -d ' \n')" = "504b0304" ]; then \
-        echo "  ✓ Gültiges ZIP heruntergeladen"; \
-        DOWNLOAD_OK=true; \
+    if [ -n "$FOUNDRY_USERNAME" ] && [ -n "$FOUNDRY_PASSWORD" ]; then \
+      echo "━━━ Versuche Download via Account-Credentials ━━━"; \
+      PRESIGNED_URL=$(node /build-context/get_release_url.js \
+        "$FOUNDRY_USERNAME" "$FOUNDRY_PASSWORD" "$FOUNDRY_VERSION" 2>/tmp/get_url.log) || true; \
+      if [ -n "$PRESIGNED_URL" ]; then \
+        echo "  ✓ Presigned URL erhalten"; \
+        curl -L "$PRESIGNED_URL" \
+          -o /tmp/foundryvtt.zip \
+          --write-out "HTTP-Status: %{http_code}, Größe: %{size_download} Bytes\n"; \
+        if [ -f /tmp/foundryvtt.zip ] && \
+           [ "$(od -An -tx1 -N4 /tmp/foundryvtt.zip | tr -d ' \n')" = "504b0304" ]; then \
+          echo "  ✓ Gültiges ZIP heruntergeladen"; \
+          DOWNLOAD_OK=true; \
+        else \
+          echo "  ✗ Download lieferte kein gültiges ZIP"; \
+          head -1 /tmp/foundryvtt.zip 2>/dev/null || true; \
+          rm -f /tmp/foundryvtt.zip; \
+        fi; \
       else \
-        echo "  ✗ Download lieferte kein gültiges ZIP (URL abgelaufen oder ungültig?)"; \
-        echo "  → Erste Zeile der Antwort:"; \
-        head -1 /tmp/foundryvtt.zip 2>/dev/null || true; \
-        rm -f /tmp/foundryvtt.zip; \
+        echo "  ✗ Login oder URL-Abruf fehlgeschlagen:"; \
+        cat /tmp/get_url.log || true; \
       fi; \
     fi; \
     \
@@ -46,11 +56,10 @@ RUN set -e; \
         cp /build-context/foundryvtt*.zip /tmp/foundryvtt.zip; \
         DOWNLOAD_OK=true; \
       else \
-        echo "✗ FEHLER: Kein Timed URL angegeben und kein lokales foundryvtt.zip gefunden!"; \
+        echo "✗ FEHLER: Download fehlgeschlagen und kein lokales foundryvtt.zip gefunden!"; \
         echo "  Optionen:"; \
-        echo "  1) Timed URL generieren: https://foundryvtt.com/community/<user>/licenses"; \
-        echo "     → docker compose build --build-arg FOUNDRY_TIMED_URL='<url>'"; \
-        echo "  2) foundryvtt.zip lokal ablegen (neben dem Dockerfile)"; \
+        echo "  1) FOUNDRY_USERNAME + FOUNDRY_PASSWORD in .env korrekt setzen"; \
+        echo "  2) foundryvtt.zip lokal neben dem Dockerfile ablegen"; \
         exit 1; \
       fi; \
     fi; \
