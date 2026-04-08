@@ -1,0 +1,21 @@
+{
+  "timestamp": 1775605412270,
+  "os": {
+    "platform": "linux",
+    "version": "Alpine Linux v3.23",
+    "node": "24.14.1"
+  },
+  "foundry": {
+    "generation": 14,
+    "build": 359,
+    "channel": "stable",
+    "hosting": null
+  },
+  "modules": {},
+  "systems": {},
+  "worlds": {},
+  "playtime": {
+    "total": 0,
+    "max": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 5
+    },
+    "auditLog": "/foundry/data/Logs/.b212d84502269fb4640d9d591707b08c52cc8d93-audit.json",
+    "files": [
+        {
+            "date": 1775604333079,
+            "name": "/foundry/data/Logs/debug.2026-04-07.log",
+            "hash": "de721efea44f68142fb8563bec7288da4eb7c29279f77dec6376c6e1b49bbbe6"
+        }
+    ],
+    "hashType": "sha256"
+}
