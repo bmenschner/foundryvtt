@@ -126,7 +126,7 @@ Error: Cannot find module '/foundry/app/resources/app/main.js'
 
 **Diagnose:**
 ```sh
-docker run --rm --entrypoint sh foundry2-foundry -c "ls /foundry/app/"
+docker run --rm --entrypoint sh foundry-foundry -c "ls /foundry/app/"
 # → main.js, main.mjs, client/, common/, dist/, node_modules/, ...
 ```
 
@@ -336,7 +336,7 @@ Faustregeln für `backup.sh`:
 ## 📁 Finale Dateistruktur
 
 ```
-foundry2/
+foundry/
 ├── Dockerfile             ← node:24-alpine, download + unzip
 ├── docker-compose.yml     ← foundry + nginx + certbot + backup
 ├── nginx/
@@ -387,6 +387,49 @@ docker compose down
 docker compose build --no-cache
 docker compose up -d
 ```
+
+### Fehler 9: `grep: unrecognized option: P` auf Remote-Host (BusyBox)
+
+**Fehlermeldung:**
+```
+grep: unrecognized option: P
+BusyBox v1.37.0 multi-call binary ...
+CSRF-Token: ...
+✗ Login fehlgeschlagen (falsche Credentials oder CSRF-Problem)
+✗ FEHLER: Download fehlgeschlagen und kein lokales foundryvtt.zip gefunden!
+```
+
+**Ursache:**
+- Alpine Linux verwendet **BusyBox grep** – dieses kennt kein `-P` (Perl-compatible regex / PCRE)
+- `grep -oP` mit Lookahead `\K` ist GNU-grep-spezifisch
+- Lokal funktionierte es zufällig, weil dort GNU-grep vorhanden war
+- `grep -P` scheiterte lautlos → CSRF-Token war leer → Login fehlgeschlagen
+- Ohne Login kein Download → kein lokales ZIP auf Remote → Build bricht ab
+
+**Lösung:**
+`grep -oP` durch POSIX/BusyBox-kompatibles `grep -oE` + `sed` ersetzen:
+```sh
+# Vorher (GNU-only):
+grep -oP 'csrfmiddlewaretoken["\s]+value[="\s]+\K[^"]+'
+
+# Nachher (BusyBox-kompatibel):
+grep -oE 'csrfmiddlewaretoken[^>]+value="[^"]+"' \
+  | grep -oE 'value="[^"]+"' \
+  | sed 's/value="//;s/"//g'
+
+# Cookie-Fallback (vorher):
+grep -oP 'csrftoken=\K[^;]+'
+# Cookie-Fallback (nachher):
+grep -oE 'csrftoken=[^;]+' | sed 's/csrftoken=//'
+```
+
+**Lektion:**  
+Alpine Linux = BusyBox-Tools. Bei Shell-Skripten im Dockerfile **niemals GNU-spezifische Flags** annehmen:
+- ❌ `grep -P` / `grep -oP` ... `\K` → nur GNU grep
+- ✅ `grep -E` oder `grep -oE` + `sed` → BusyBox-kompatibel
+- Alternative: `apk add grep` installiert GNU grep, aber erhöht Image-Größe
+
+---
 
 ## 🔑 Wichtige Hinweise
 

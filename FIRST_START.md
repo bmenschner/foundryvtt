@@ -24,8 +24,8 @@ Bevor du anfängst, müssen folgende Dinge erledigt sein:
 Klone oder kopiere das Projekt auf den Server:
 
 ```sh
-git clone <dein-repo-url> ~/foundry2
-cd ~/foundry2
+git clone git@github.com:bmenschner/foundryvtt-backups.git ~/foundry
+cd ~/foundry
 ```
 
 ---
@@ -205,7 +205,8 @@ Beim ersten Start ist folgendes zu tun:
 Das erste automatische Backup läuft gemäß `BACKUP_SCHEDULE` (Standard: täglich 03:00 Uhr). Für einen sofortigen Testlauf:
 
 ```sh
-docker compose exec foundry-backup /backup/backup.sh
+docker exec foundry-backup /usr/local/bin/backup.sh
+docker compose exec backup /usr/local/bin/backup.sh
 ```
 
 Überprüfe danach das GitHub-Repo auf neue Commits.
