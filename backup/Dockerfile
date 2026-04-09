@@ -8,9 +8,10 @@ RUN mkdir -p /root/.ssh && \
     ssh-keyscan github.com >> /root/.ssh/known_hosts && \
     chmod 700 /root/.ssh
 
-# Backup-Skript
-COPY backup.sh /usr/local/bin/backup.sh
-RUN chmod +x /usr/local/bin/backup.sh
+# Backup- und Restore-Skript
+COPY backup.sh  /usr/local/bin/backup.sh
+COPY restore.sh /usr/local/bin/restore.sh
+RUN chmod +x /usr/local/bin/backup.sh /usr/local/bin/restore.sh
 
 # Log-Datei anlegen
 RUN touch /var/log/backup.log
