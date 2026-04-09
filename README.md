@@ -58,7 +58,7 @@ nano .env
 ```dotenv
 FOUNDRY_USERNAME=your-foundry-username
 FOUNDRY_PASSWORD=your-foundry-password
-FOUNDRY_VERSION=14.359
+FOUNDRY_VERSION=13.351          # 13.x = last version with German translation
 
 DOMAIN=foundry.yourdomain.com
 
