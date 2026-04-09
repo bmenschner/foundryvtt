@@ -61,6 +61,23 @@ ssh -T git@github.com
 # Expected: Hi bmenschner! You've successfully authenticated...
 ```
 
+### SSH key overview
+
+Both keys live on the **remote host** – the backup container gets its key via a Docker volume mount, not by storing it inside the image.
+
+| Key | Location on host | Used by | Purpose |
+|---|---|---|---|
+| `~/.ssh/id_ed25519` | Home directory (generated above) | OS / `git` directly | `git clone` the code repo |
+| `backup/ssh/backup_key` | Project directory (step 3) | backup container via mount | `git push` to the backup repo |
+
+```
+~/foundry/
+  backup/
+    ssh/
+      backup_key       ← mounted into container as /root/.ssh/id_ed25519
+      backup_key.pub
+```
+
 ---
 
 ## Initial Setup
@@ -103,6 +120,13 @@ cat backup/ssh/backup_key.pub  # copy this output
 ```
 
 Add the public key to GitHub: `foundryvtt-backups` → **Settings → Deploy Keys → Add** (✅ Allow write access).
+
+The backup container receives this key via a Docker volume mount (defined in `docker-compose.yml`) – it is never baked into the image:
+
+```yaml
+volumes:
+  - ./backup/ssh/backup_key:/root/.ssh/id_ed25519:ro
+```
 
 The backup target repository must already exist on GitHub with at least one commit.
 
