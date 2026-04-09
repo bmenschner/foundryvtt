@@ -59,7 +59,7 @@ services:
       BACKUP_GIT_EMAIL: ${BACKUP_GIT_EMAIL:-backup@foundryvtt}
       TZ:               Europe/Berlin
     volumes:
-      - .:/backup/project:ro                               # Gesamtes Projektverzeichnis (read-only)
+      - ./data:/backup/data:ro                             # Nur User-Daten (read-only)
       - ./backup/ssh/backup_key:/root/.ssh/id_ed25519:ro  # SSH Deploy Key (read-only!)
     depends_on:
       - foundry

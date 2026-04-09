@@ -1,9 +1,12 @@
 #!/bin/sh
 # ============================================================================
-# backup.sh – FoundryVTT Backup → GitHub
+# backup.sh – FoundryVTT User-Daten Backup → GitHub (foundryvtt-backups)
 # Wird vom crond im backup-Container ausgeführt.
 # Kann auch manuell ausgelöst werden:
 #   docker exec foundry-backup /usr/local/bin/backup.sh
+#
+# Gesichert wird NUR der data/-Ordner (User-Welten, Module, Systeme).
+# Projekt-Dateien (Dockerfile, nginx, etc.) liegen im foundryvtt-Repo.
 # ============================================================================
 
 set -e
@@ -35,7 +38,6 @@ if [ ! -d "$REPO_DIR/.git" ]; then
     echo "▶ Klone Backup-Repo (Erststart)..."
     git clone "${BACKUP_REPO}" "$REPO_DIR"
     cd "$REPO_DIR"
-    # Branch sicherstellen (main oder master je nach Repo)
     git checkout "$BACKUP_BRANCH" 2>/dev/null || git checkout -b "$BACKUP_BRANCH"
 else
     echo "▶ Aktualisiere Backup-Repo..."
@@ -43,28 +45,22 @@ else
     git pull --rebase origin "$BACKUP_BRANCH" || true
 fi
 
-# ── Gesamtes Projektverzeichnis kopieren ─────────────────────────────────────
-echo "▶ Kopiere Projektverzeichnis..."
+# ── Nur User-Daten (data/) kopieren ─────────────────────────────────────────
+# Projekt-Dateien (Dockerfile, nginx, etc.) gehören ins foundryvtt-Repo, nicht hierher!
+echo "▶ Kopiere User-Daten (data/)..."
 
+mkdir -p "$REPO_DIR/data"
 rsync -a --delete \
-    --exclude='.git/' \
-    --exclude='*.zip' \
-    --exclude='backup/ssh/backup_key' \
-    /backup/project/ "$REPO_DIR/"
+    /backup/data/ "$REPO_DIR/data/"
 
-# .gitignore im Backup-Repo sicherstellen (doppelter Schutz für Secrets)
+echo "  ✓ data/ $(du -sh "$REPO_DIR/data" 2>/dev/null | cut -f1)"
+
+# ── .gitignore im Backup-Repo sicherstellen ──────────────────────────────────
 cat > "$REPO_DIR/.gitignore" << 'EOF'
-# Private SSH Key – darf NIEMALS in Git!
-backup/ssh/backup_key
-
-# FoundryVTT ZIP – kommerzielle Software, nicht ins Backup (>100MB)
+# Nur User-Daten (data/) gehören in dieses Repo.
+# Alles andere ist im foundryvtt Projekt-Repo.
 *.zip
-
-# Docker Build Cache
-.dockerignore
 EOF
-
-echo "  ✓ Projekt $(du -sh "$REPO_DIR" --exclude='.git' 2>/dev/null | cut -f1) gesamt"
 
 # ── Git: Änderungen committen und pushen ─────────────────────────────────────
 cd "$REPO_DIR"
