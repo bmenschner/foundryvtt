@@ -235,3 +235,40 @@ docker compose start foundry
 - **WebSocket:** Caddy proxies WebSocket connections automatically – no extra headers needed.
 - **Certificates:** Caddy acquires and renews Let's Encrypt certificates automatically. Stored in the `caddy_data` named volume.
 - **SSH key:** The deploy key is mounted read-only (`:ro`) – the backup script copies it to `/tmp` before use.
+
+---
+
+## Automated Deployment (GitHub Actions)
+
+Every push to `main` automatically deploys to the server via SSH. Pushes that only change documentation (`*.md`) are ignored.
+
+### What happens on deploy
+
+1. GitHub detects a push to `main`
+2. Changed files are checked – if `Dockerfile`, `Caddyfile`, or `docker-compose.yml` changed → `docker compose build`
+3. `git pull origin main` on the server
+4. `docker compose up -d`
+
+### One-time setup: Deploy SSH key
+
+Generate a dedicated key pair for GitHub Actions (on your local machine):
+
+```sh
+ssh-keygen -t ed25519 -C "github-actions-deploy" -f ~/.ssh/github_deploy -N ""
+```
+
+Add the public key to the server's `authorized_keys`:
+
+```sh
+cat ~/.ssh/github_deploy.pub
+# On the server:
+echo "<paste public key>" >> ~/.ssh/authorized_keys
+```
+
+Add the private key as GitHub Secrets:
+`github.com/bmenschner/foundryvtt` → **Settings → Secrets and variables → Actions**
+
+| Secret | Value |
+|---|---|
+| `DEPLOY_HOST` | Server IP or domain |
+| `DEPLOY_SSH_KEY` | Contents of `~/.ssh/github_deploy` (private key) |

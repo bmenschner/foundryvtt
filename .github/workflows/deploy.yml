@@ -1,0 +1,57 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "FIRST_START.md"
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # benötigt um geänderte Dateien mit HEAD~1 zu vergleichen
+
+      - name: Detect if Docker rebuild is needed
+        id: detect
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --name-only --format='' HEAD)
+          echo "Changed files:"
+          echo "$CHANGED"
+          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^Caddyfile$|^docker-compose\.yml$'; then
+            echo "needs_rebuild=true" >> $GITHUB_OUTPUT
+            echo "→ Rebuild required"
+          else
+            echo "needs_rebuild=false" >> $GITHUB_OUTPUT
+            echo "→ No rebuild required"
+          fi
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: root
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            cd ~/foundry
+
+            echo "▶ Pulling latest changes..."
+            git pull origin main
+
+            if [ "${{ steps.detect.outputs.needs_rebuild }}" = "true" ]; then
+              echo "▶ Rebuilding Docker images..."
+              docker compose build
+            fi
+
+            echo "▶ Starting containers..."
+            docker compose up -d
+
+            echo "✅ Deployment complete"
