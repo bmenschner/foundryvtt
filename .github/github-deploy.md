@@ -142,8 +142,8 @@ Push auf main
 | `backup/Dockerfile` | ✅ Ja |
 | `Caddyfile` | ✅ Ja |
 | `docker-compose.yml` | ✅ Ja |
-| `backup/backup.sh` | ❌ Nein (wird zur Laufzeit aus Volume gelesen) |
-| `backup/restore.sh` | ❌ Nein |
+| `backup/backup.sh` | ✅ Ja (per `COPY` ins Image gebacken) |
+| `backup/restore.sh` | ✅ Ja (per `COPY` ins Image gebacken) |
 | `README.md`, `*.md` | ❌ Kein Deployment |
 
 ---

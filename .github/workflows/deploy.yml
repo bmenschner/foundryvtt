@@ -25,7 +25,7 @@ jobs:
           CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --name-only --format='' HEAD)
           echo "Changed files:"
           echo "$CHANGED"
-          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^Caddyfile$|^docker-compose\.yml$'; then
+          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^Caddyfile$|^docker-compose\.yml$|^backup/.*\.sh$'; then
             echo "needs_rebuild=true" >> $GITHUB_OUTPUT
             echo "→ Rebuild required"
           else

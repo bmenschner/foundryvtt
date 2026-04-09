@@ -10,4 +10,3 @@ backup/ssh/backup_key
 
 # User-Daten vom Live-Host – werden in foundryvtt-backups gesichert, nicht hier!
 data/
-
