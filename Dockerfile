@@ -14,7 +14,11 @@ ARG FOUNDRY_USERNAME=""
 ARG FOUNDRY_PASSWORD=""
 ARG FOUNDRY_VERSION="13.351"
 
-# ── Build-Context kopieren (enthält ZIP-Fallback + Download-Script) ─────────
+# ── Build-Context kopieren ──────────────────────────────────────────────────
+# Der gesamte Projektordner wird hereinkopiert, weil:
+#   a) get_release_url.js für den automatischen Download gebraucht wird
+#   b) ein manuell abgelegtes foundryvtt.zip als Fallback dienen kann
+# Der Ordner wird am Ende des Builds wieder gelöscht (kein Platz verschwendet).
 COPY . /build-context/
 
 # ── Download via Credentials ODER nutze lokales ZIP ────────────────────────
@@ -34,7 +38,12 @@ RUN set -e; \
   curl -L "$PRESIGNED_URL" \
   -o /tmp/foundryvtt.zip \
   --write-out "HTTP-Status: %{http_code}, Größe: %{size_download} Bytes\n"; \
-  if [ -f /tmp/foundryvtt.zip ] && \
+  # ZIP-Integrität prüfen: Die ersten 4 Bytes eines gültigen ZIP-Archivs
+  # sind immer 50 4B 03 04 (= "PK" + Versionsbytes). Schlägt der API-Login
+  # fehl, liefert der Server eine HTML-Fehlerseite – kein ZIP. Ohne diese
+  # Prüfung würde unzip erst beim Entpacken mit einem kryptischen Fehler abbrechen.
+  if [ -f /tmp/foundryvtt.zip ] \
+  && \
   [ "$(od -An -tx1 -N4 /tmp/foundryvtt.zip | tr -d ' \n')" = "504b0304" ]; then \
   echo "  ✓ Gültiges ZIP heruntergeladen"; \
   DOWNLOAD_OK=true; \

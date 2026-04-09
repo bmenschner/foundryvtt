@@ -17,14 +17,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # benötigt um geänderte Dateien mit HEAD~1 zu vergleichen
+          # fetch-depth: 2 ist nötig, damit wir mit HEAD~1 die geänderten
+          # Dateien seit dem letzten Commit vergleichen können.
+          # Bei fetch-depth: 1 (Standard) wäre HEAD~1 nicht verfügbar.
+          fetch-depth: 2
 
       - name: Detect if Docker rebuild is needed
         id: detect
         run: |
+          # Geänderte Dateien ermitteln. Der Fallback (git show) greift beim
+          # allerersten Commit, wenn es noch kein HEAD~1 gibt.
           CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --name-only --format='' HEAD)
           echo "Changed files:"
           echo "$CHANGED"
+
+          # Rebuild nur wenn Dateien geändert wurden, die im Docker-Image landen.
+          # Änderungen an *.md oder anderen Nicht-Image-Dateien brauchen keinen Rebuild.
           if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^Caddyfile$|^docker-compose\.yml$|^backup/.*\.sh$'; then
             echo "needs_rebuild=true" >> $GITHUB_OUTPUT
             echo "→ Rebuild required"
@@ -43,14 +51,18 @@ jobs:
             set -e
             cd ~/foundry
 
+            # Neuesten Stand vom Repository holen
             echo "▶ Pulling latest changes..."
             git pull origin main
 
+            # Docker-Images nur neu bauen wenn sich image-relevante Dateien
+            # geändert haben (spart Zeit bei reinen Konfig-Commits)
             if [ "${{ steps.detect.outputs.needs_rebuild }}" = "true" ]; then
               echo "▶ Rebuilding Docker images..."
               docker compose build
             fi
 
+            # Container starten (oder neu starten falls image geändert)
             echo "▶ Starting containers..."
             docker compose up -d
 

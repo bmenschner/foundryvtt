@@ -6,12 +6,18 @@
  * für die angegebene Version auf stdout aus.
  *
  * Verwendung: node get_release_url.js <username> <password> <version>
- * Beispiel:   node get_release_url.js myuser mypass 14.359
+ * Beispiel:   node get_release_url.js myuser mypass 13.351
  *
- * Nutzt dieselbe JSON-API wie felddy/foundryvtt-docker:
- *   GET /releases/download?build=<build>&platform=node&response_type=json
+ * Kein npm install nötig: Das Script läuft direkt im Docker-Build-Schritt
+ * vor dem eigentlichen App-Layer, d.h. node_modules sind noch nicht vorhanden.
+ * Deshalb werden ausschließlich Node.js-built-ins verwendet.
  *
- * Keine externen npm-Pakete nötig – nur Node.js built-ins.
+ * Ablauf (identisch zu felddy/foundryvtt-docker):
+ *   1. CSRF-Token von der Startseite holen (CSRF = Pflicht für den Login-POST)
+ *   2. Login via POST mit Username, Passwort und CSRF-Token
+ *   3. Presigned S3-URL über die JSON-API abrufen
+ *      GET /releases/download?build=<build>&platform=node&response_type=json
+ *      → Antwort: { url: "https://r2.foundryvtt.com/..." }
  */
 
 'use strict';
@@ -79,8 +85,9 @@ function mergeCookies(headers, existing = '') {
 }
 
 /**
- * Extrahiert csrfmiddlewaretoken aus HTML mit einfachem Regex.
- * Zuverlässiger als grep -P weil node kein BusyBox ist.
+ * Extrahiert csrfmiddlewaretoken aus HTML per einfachem Regex.
+ * Wir nutzen Node.js-Regex statt grep, weil Alpine Linux BusyBox grep
+ * kein -P (Perl-Regex) kennt und dadurch im Docker-Build scheitern würde.
  */
 function parseCSRF(html) {
   const m = html.match(/name="csrfmiddlewaretoken"\s+value="([^"]+)"/);
