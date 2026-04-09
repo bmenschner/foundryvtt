@@ -27,9 +27,51 @@ https://foundryvtt.com/article/installation/
 - run `docker compose build` to build the new image.
 - run `docker-compose up -d` to start the application.
 
-# Backup
-- Backups are automated via a cronjob on the host system.
-- Backups are saved on github.com/menschner/foundryvtt-backups
+# Backup & Restore
+
+User data (`data/`) is automatically backed up to a separate GitHub repository:
+[github.com/bmenschner/foundryvtt-backups](https://github.com/bmenschner/foundryvtt-backups)
+
+The project code (Dockerfile, nginx config, etc.) lives here in
+[github.com/bmenschner/foundryvtt](https://github.com/bmenschner/foundryvtt).
+
+## Automatic Backup
+
+The `backup` container runs a cronjob (default: daily at 03:00) that pushes the
+`data/` folder to the backup repository via SSH.
+
+Trigger a backup manually at any time:
+
+```sh
+docker compose exec backup /usr/local/bin/backup.sh
+```
+
+## Restore
+
+List available backup snapshots:
+
+```sh
+docker compose exec backup /usr/local/bin/restore.sh --list
+```
+
+Restore the latest backup:
+
+```sh
+docker compose stop foundry
+docker compose exec backup /usr/local/bin/restore.sh
+docker compose start foundry
+```
+
+Restore a specific snapshot (use the commit hash from `--list`):
+
+```sh
+docker compose stop foundry
+docker compose exec backup /usr/local/bin/restore.sh abc1234
+docker compose start foundry
+```
+
+> **Note:** FoundryVTT should be stopped before restoring to avoid data corruption.
+> The restore script always asks for confirmation before overwriting any data.
 
 # SSL / HTTPS (Let's Encrypt)
 
