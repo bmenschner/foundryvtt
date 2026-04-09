@@ -1,0 +1,3 @@
+{$DOMAIN} {
+    reverse_proxy foundryvtt:30000
+}

@@ -9,15 +9,11 @@ Internet
    │
    ▼ :80 / :443
 ┌─────────────┐
-│    nginx    │  Reverse proxy, SSL termination
+│    Caddy    │  Reverse proxy, automatic HTTPS (Let's Encrypt)
 └──────┬──────┘
        │ :30000 (internal)
 ┌──────▼──────┐
 │  FoundryVTT │  App container (Node.js 24)
-└─────────────┘
-
-┌─────────────┐
-│   Certbot   │  Auto-renews Let's Encrypt certificates every 12h
 └─────────────┘
 
 ┌─────────────┐
@@ -26,7 +22,7 @@ Internet
 ```
 
 **Repositories:**
-- [`bmenschner/foundryvtt`](https://github.com/bmenschner/foundryvtt) – project code (Dockerfile, nginx, scripts)
+- [`bmenschner/foundryvtt`](https://github.com/bmenschner/foundryvtt) – project code (Dockerfile, Caddy, scripts)
 - [`bmenschner/foundryvtt-backups`](https://github.com/bmenschner/foundryvtt-backups) – user data (`data/`) only
 
 ---
@@ -89,18 +85,15 @@ docker compose build
 ```
 
 FoundryVTT is downloaded automatically during build using the credentials from `.env`.
-If the download fails, place `foundryvtt.zip` (Linux/Node.js build) in the project root as a fallback.
-
-### 5. Initialize SSL *(once only)*
+If the download fails, place `foundryvtt.zip` (Linux/Node.js build) in the project root as a fallback:
 
 ```sh
-chmod +x init-letsencrypt.sh
-./init-letsencrypt.sh
+scp ~/Downloads/foundryvtt-13.351.zip user@your-server:~/foundry/foundryvtt.zip
 ```
 
-This resolves the chicken-and-egg problem between nginx and Certbot by creating a temporary dummy certificate, then replacing it with a real Let's Encrypt certificate. Only needed once – renewal is fully automatic afterwards.
+> The file must be named exactly `foundryvtt.zip`.
 
-### 6. Start
+### 5. Start
 
 ```sh
 docker compose up -d
@@ -122,11 +115,21 @@ docker compose build --no-cache
 docker compose up -d
 ```
 
+### Local access (without SSL)
+
+Port 30000 is bound to `127.0.0.1` only – not reachable from the internet. Use an SSH tunnel to access it locally:
+
+```sh
+ssh -L 30000:localhost:30000 user@your-server
+```
+
+Then open `http://localhost:30000` in your browser.
+
 ### Logs
 
 ```sh
 docker compose logs -f foundry   # FoundryVTT
-docker compose logs -f nginx     # nginx
+docker compose logs -f caddy     # Caddy (HTTPS & proxy)
 docker compose logs -f backup    # Backup
 ```
 
@@ -167,8 +170,8 @@ docker compose start foundry
 
 | Symptom | Check |
 |---|---|
-| nginx won't start | Run `init-letsencrypt.sh` first; check `docker compose logs nginx` |
-| Certbot fails | Verify DNS propagation: `nslookup foundry.yourdomain.com`; confirm ports 80/443 are open |
+| HTTPS not working | Verify DNS propagation: `nslookup foundry.yourdomain.com`; check `docker compose logs caddy` |
+| Caddy certificate error | Confirm ports 80/443 are open; Let's Encrypt rate limits may apply |
 | Backup fails | Check SSH key: `docker compose exec backup ssh -T git@github.com` |
 | FoundryVTT won't start | Check `docker compose logs foundry`; verify `foundryvtt.zip` is valid |
 
@@ -177,6 +180,6 @@ docker compose start foundry
 ## Notes
 
 - **License binding:** The container `hostname` in `docker-compose.yml` must stay constant (`foundryvtt`). Foundry binds the license to it.
-- **WebSocket:** nginx forwards `Upgrade` and `Connection: upgrade` headers – required for real-time gameplay.
-- **Certificates:** Auto-renewed every 12h by Certbot; nginx reloads every 6h to pick them up.
+- **WebSocket:** Caddy proxies WebSocket connections automatically – no extra headers needed.
+- **Certificates:** Caddy acquires and renews Let's Encrypt certificates automatically. Stored in the `caddy_data` named volume.
 - **SSH key:** The deploy key is mounted read-only (`:ro`) – the backup script copies it to `/tmp` before use.
