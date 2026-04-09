@@ -36,6 +36,33 @@ Internet
 
 ---
 
+## Git Setup on the Remote Server
+
+The code repository uses SSH authentication. Set up a key on the server once so `git clone` and `git pull` work without a password.
+
+### Generate an SSH key on the server
+
+```sh
+ssh-keygen -t ed25519 -C "your-server-name" -f ~/.ssh/id_ed25519 -N ""
+cat ~/.ssh/id_ed25519.pub   # copy this output
+```
+
+### Add the key to GitHub
+
+Go to **github.com → Settings → SSH and GPG keys → New SSH key**, paste the public key and save.
+
+Alternatively, if the repository is private and you want to scope access, add it as a **Deploy Key** on the repository itself:
+`github.com/bmenschner/foundryvtt` → **Settings → Deploy Keys → Add deploy key** (read-only is sufficient for cloning).
+
+### Test the connection
+
+```sh
+ssh -T git@github.com
+# Expected: Hi bmenschner! You've successfully authenticated...
+```
+
+---
+
 ## Initial Setup
 
 ### 1. Clone the project
