@@ -75,6 +75,7 @@ cd ~/foundry
 ### 2. Configure `.env`
 
 ```sh
+cp .env.example .env
 nano .env
 ```
 

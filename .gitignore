@@ -1,4 +1,5 @@
-# Private SSH Key – darf NIEMALS in Git!
+# Secrets – niemals in Git!
+.env
 backup/ssh/backup_key
 
 # FoundryVTT ZIP – kommerzielle Software, nicht ins Backup (>100MB)
