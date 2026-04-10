@@ -1,6 +1,8 @@
-# FoundryVTT – Self-hosted Docker Setup
+# 🎲 FoundryVTT – Self-hosted Docker Setup
 
-Self-hosted [FoundryVTT](https://foundryvtt.com) via Docker with automated HTTPS, reverse proxy, and daily backups.
+Self-hosted [FoundryVTT](https://foundryvtt.com) via Docker with automated HTTPS, reverse proxy, and daily backups to GitHub.
+
+---
 
 ## Architecture
 
@@ -29,150 +31,232 @@ Internet
 
 ## Prerequisites
 
-- Server with public IP, ports **80** and **443** open
-- DNS record pointing to the server (propagated)
-- Docker & Docker Compose installed
-- FoundryVTT account with a valid license
+Before you start, make sure you have the following ready:
 
----
-
-## Git Setup on the Remote Server
-
-The code repository uses SSH authentication. Set up a key on the server once so `git clone` and `git pull` work without a password.
-
-### Generate an SSH key on the server
-
-```sh
-ssh-keygen -t ed25519 -C "your-server-name" -f ~/.ssh/id_ed25519 -N ""
-cat ~/.ssh/id_ed25519.pub   # copy this output
-```
-
-### Add the key to GitHub
-
-Go to **github.com → Settings → SSH and GPG keys → New SSH key**, paste the public key and save.
-
-Alternatively, if the repository is private and you want to scope access, add it as a **Deploy Key** on the repository itself:
-`github.com/bmenschner/foundryvtt` → **Settings → Deploy Keys → Add deploy key** (read-only is sufficient for cloning).
-
-### Test the connection
-
-```sh
-ssh -T git@github.com
-# Expected: Hi bmenschner! You've successfully authenticated...
-```
-
-### SSH key overview
-
-The backup container receives the deploy key as a **Base64-encoded environment variable** (`BACKUP_SSH_KEY`) – it is never baked into the image and requires no file mounts.
-
-| Key | Location | Used by | Purpose |
-|---|---|---|---|
-| `~/.ssh/id_ed25519` | Server home directory | OS / `git` directly | `git clone` the code repo |
-| `BACKUP_SSH_KEY` in `.env` | Environment variable (Base64) | backup container at runtime | `git push` to the backup repo |
+| What | Notes |
+|---|---|
+| Server with public IP | e.g. Hetzner, DigitalOcean, Netcup |
+| Ports **80** and **443** open | in the server firewall |
+| DNS record pointing to the server | `foundry.yourdomain.com → <server-ip>`, fully propagated |
+| **Docker** and **Docker Compose** installed | `docker --version` and `docker compose version` |
+| **Git** installed | `git --version` |
+| FoundryVTT account with a valid license | [foundryvtt.com](https://foundryvtt.com) |
 
 ---
 
 ## Initial Setup
 
-### 1. Clone the project
+### Step 1 – Get the project onto the server
 
+The project uses SSH authentication for Git. Set up a key on the server once so `git clone` works without a password.
+
+```sh
+# Generate an SSH key on the server
+ssh-keygen -t ed25519 -C "your-server-name" -f ~/.ssh/id_ed25519 -N ""
+
+# Show the public key and copy the output
+cat ~/.ssh/id_ed25519.pub
+```
+
+Add the public key to GitHub:
+→ **github.com → Settings → SSH and GPG keys → New SSH key**
+
+Test the connection:
+```sh
+ssh -T git@github.com
+# Expected: Hi bmenschner! You've successfully authenticated...
+```
+
+Now clone the project:
 ```sh
 git clone git@github.com:bmenschner/foundryvtt.git ~/foundry
 cd ~/foundry
 ```
 
-### 2. Configure `.env`
+---
+
+### Step 2 – Configure `.env`
 
 ```sh
 cp .env.example .env
 nano .env
 ```
 
+Fill in your values:
+
 ```dotenv
+# Your foundryvtt.com account credentials (used to download Foundry during build)
 FOUNDRY_USERNAME=your-foundry-username
 FOUNDRY_PASSWORD=your-foundry-password
 FOUNDRY_VERSION=13.351          # 13.x = last version with German translation
 
+# Your domain
 DOMAIN=foundry.yourdomain.com
 
+# Backup settings
 BACKUP_REPO=git@github.com:youruser/foundryvtt-backups.git
-BACKUP_SCHEDULE=0 3 * * *
+BACKUP_SCHEDULE=0 3 * * *       # daily at 03:00
 BACKUP_BRANCH=main
 BACKUP_GIT_EMAIL=your@email.com
-BACKUP_SSH_KEY=<base64-encoded-private-key>   # see step 3
+BACKUP_SSH_KEY=<base64-encoded-private-key>   # see Step 3
 ```
 
-> ⚠️ Never commit `.env` to a public repository.
+> ⚠️ Never commit `.env` to a public repository. It contains secrets.
 
-### 3. Set up SSH deploy key for backups
+---
 
-The deploy key is passed to the backup container as a **Base64-encoded environment variable** – no file mounts required.
+### Step 3 – Set up SSH deploy key for backups
+
+The backup container pushes your Foundry data to a private GitHub repo every night.
+To authenticate, it needs a dedicated SSH deploy key – stored **Base64-encoded** in `.env` (no file mounts, no secrets in the image).
+
+**3a – Generate the key pair**
 
 ```sh
-# Generate key pair
 ssh-keygen -t ed25519 -C "foundryvtt-backup" -f /tmp/backup_key -N ""
-
-# Base64-encode the private key → paste into .env as BACKUP_SSH_KEY
-base64 -w 0 /tmp/backup_key
-
-# Clean up the temp files after copying the value
-rm /tmp/backup_key /tmp/backup_key.pub
 ```
 
-Add the public key to GitHub: `foundryvtt-backups` → **Settings → Deploy Keys → Add** (✅ Allow write access).
+**3b – Base64-encode and add to `.env`**
 
 ```sh
-cat /tmp/backup_key.pub   # copy this before deleting
+# This outputs one long line – copy it entirely
+base64 -w 0 /tmp/backup_key
 ```
 
-The backup target repository must already exist on GitHub with at least one commit.
+Paste the output into `.env`:
+```dotenv
+BACKUP_SSH_KEY=LS0tLS1CRUdJTiBPUEVOU1NI...   # your full Base64 string, no line breaks
+```
 
-### 4. Build the images
+> ⚠️ Delete the temp files afterwards: `rm /tmp/backup_key /tmp/backup_key.pub`
+
+**3c – Add the public key to GitHub as a Deploy Key**
+
+```sh
+cat /tmp/backup_key.pub   # copy this before deleting the files
+```
+
+Go to the **backup repository** on GitHub:
+→ `github.com/<youruser>/foundryvtt-backups` → **Settings → Deploy Keys → Add deploy key**
+→ Paste the public key, enable ✅ **Allow write access**, save.
+
+**3d – Create the backup repository**
+
+The target repo (`BACKUP_REPO`) must already exist on GitHub with at least one commit.
+If it doesn't exist yet, create it on github.com with a blank README, then come back here.
+
+---
+
+### Step 4 – Build the Docker images
 
 ```sh
 docker compose build
 ```
 
-FoundryVTT is downloaded automatically during build using the credentials from `.env`.
-If the download fails, place `foundryvtt.zip` (Linux/Node.js build) in the project root as a fallback:
+FoundryVTT is downloaded automatically during the build using the credentials from `.env`.
+
+If the automatic download fails (e.g. due to Foundry API changes), place a manually downloaded
+`foundryvtt.zip` (Linux/Node.js build) into the project root as a fallback:
 
 ```sh
+# On your local machine:
 scp ~/Downloads/foundryvtt-13.351.zip user@your-server:~/foundry/foundryvtt.zip
 ```
 
 > The file must be named exactly `foundryvtt.zip`.
 
-### 5. Start
+---
+
+### Step 5 – Start the stack
 
 ```sh
 docker compose up -d
-docker compose ps   # all containers should show "Up"
 ```
 
-Open `https://foundry.yourdomain.com` in a browser, enter your license key, and set an admin password.
+Check that all three containers are running:
+
+```sh
+docker compose ps
+```
+
+| Container | Expected status |
+|---|---|
+| `foundryvtt` | Up |
+| `foundry-caddy` | Up |
+| `foundry-backup` | Up |
+
+Caddy automatically obtains an SSL certificate from Let's Encrypt on first start – no extra steps needed.
+
+**Watch the logs in real time:**
+
+```sh
+docker compose logs -f foundry   # FoundryVTT app
+docker compose logs -f caddy     # Caddy (HTTPS & proxy)
+docker compose logs -f backup    # Backup container
+```
 
 ---
 
-## Operations
+### Step 6 – First browser setup
+
+Open your browser and go to:
+```
+https://foundry.yourdomain.com
+```
+
+On first start you will be prompted to:
+1. Enter your **license key** (find it at https://foundryvtt.com/me/licenses/)
+2. Accept the license agreement
+3. Set an **admin password** (Settings → Configure → Administrator Password)
+
+> ⚠️ Note the admin password somewhere safe – there is no easy reset.
+
+---
+
+### Step 7 – Verify the backup
+
+The first automatic backup runs according to `BACKUP_SCHEDULE` (default: daily at 03:00).
+To trigger a backup immediately and verify everything works:
+
+```sh
+./backup.sh
+# or directly:
+docker compose exec backup /usr/local/bin/backup.sh
+```
+
+Then check the backup repository on GitHub for a new commit.
+
+---
+
+## Day-to-day Operations
 
 ### Update FoundryVTT
 
 ```sh
 docker compose down
-# Update FOUNDRY_VERSION in .env, then place new foundryvtt.zip (or use credentials)
+
+# 1. Update FOUNDRY_VERSION in .env
+# 2. Optionally place a new foundryvtt.zip in the project root
 docker compose build --no-cache
 docker compose up -d
 ```
 
 ### Local access (without SSL)
 
-Port 30000 is bound to `127.0.0.1` only – not reachable from the internet. Use an SSH tunnel to access it locally:
+Port 30000 is bound to `127.0.0.1` only – not reachable from the internet directly.
+Use an SSH tunnel to test locally without HTTPS:
 
 ```sh
 ssh -L 30000:localhost:30000 user@your-server
 ```
 
 Then open `http://localhost:30000` in your browser.
+
+### Manual backup
+
+```sh
+./backup.sh
+```
 
 ### Logs
 
@@ -188,67 +272,41 @@ docker compose logs -f backup    # Backup
 
 User data (`data/`) is automatically pushed to [`bmenschner/foundryvtt-backups`](https://github.com/bmenschner/foundryvtt-backups) daily at 03:00.
 
-### Manual backup
-
-```sh
-docker compose exec backup /usr/local/bin/backup.sh
-```
-
 ### Restore
 
 ```sh
-# List available snapshots
+# List available snapshots (commits)
 docker compose exec backup /usr/local/bin/restore.sh --list
 
-# Restore latest snapshot
+# Restore the latest snapshot
 docker compose stop foundry
 docker compose exec backup /usr/local/bin/restore.sh
 docker compose start foundry
 
-# Restore specific snapshot
+# Restore a specific snapshot
 docker compose stop foundry
 docker compose exec backup /usr/local/bin/restore.sh <commit-hash>
 docker compose start foundry
 ```
 
-> Stop FoundryVTT before restoring to avoid data corruption. The restore script always asks for confirmation.
-
----
-
-## Troubleshooting
-
-| Symptom | Check |
-|---|---|
-| HTTPS not working | Verify DNS propagation: `nslookup foundry.yourdomain.com`; check `docker compose logs caddy` |
-| Caddy certificate error | Confirm ports 80/443 are open; Let's Encrypt rate limits may apply |
-| Backup fails | Check SSH key: `docker compose exec backup ssh -T git@github.com` |
-| FoundryVTT won't start | Check `docker compose logs foundry`; verify `foundryvtt.zip` is valid |
-
----
-
-## Notes
-
-- **License binding:** The container `hostname` in `docker-compose.yml` must stay constant (`foundryvtt`). Foundry binds the license to it.
-- **WebSocket:** Caddy proxies WebSocket connections automatically – no extra headers needed.
-- **Certificates:** Caddy acquires and renews Let's Encrypt certificates automatically. Stored in the `caddy_data` named volume.
-- **SSH key:** The deploy key is stored Base64-encoded in `BACKUP_SSH_KEY` (`.env`) and written to `/tmp` at container startup – it is never baked into the image and requires no file mounts.
+> Always stop FoundryVTT before restoring to avoid data corruption. The restore script asks for confirmation.
 
 ---
 
 ## Automated Deployment (GitHub Actions)
 
-Every push to `main` automatically deploys to the server via SSH. Pushes that only change documentation (`*.md`) are ignored.
+Every push to `main` automatically deploys to the server via SSH.
+Pushes that only change documentation (`*.md`) are skipped.
 
-### What happens on deploy
-
+**What happens on each deploy:**
 1. GitHub detects a push to `main`
-2. Changed files are checked – if `Dockerfile`, `Caddyfile`, or `docker-compose.yml` changed → `docker compose build`
+2. If `Dockerfile`, `Caddyfile`, or `docker-compose.yml` changed → `docker compose build`
 3. `git pull origin main` on the server
 4. `docker compose up -d`
 
 ### One-time setup: Deploy SSH key
 
-Generate a dedicated key pair for GitHub Actions (on your local machine):
+Generate a dedicated key pair on your **local machine** (not the server):
 
 ```sh
 ssh-keygen -t ed25519 -C "github-actions-deploy" -f ~/.ssh/github_deploy -N ""
@@ -263,9 +321,31 @@ echo "<paste public key>" >> ~/.ssh/authorized_keys
 ```
 
 Add the private key as GitHub Secrets:
-`github.com/bmenschner/foundryvtt` → **Settings → Secrets and variables → Actions**
+→ `github.com/bmenschner/foundryvtt` → **Settings → Secrets and variables → Actions**
 
 | Secret | Value |
 |---|---|
 | `DEPLOY_HOST` | Server IP or domain |
 | `DEPLOY_SSH_KEY` | Contents of `~/.ssh/github_deploy` (private key) |
+
+---
+
+## Troubleshooting
+
+| Symptom | What to check |
+|---|---|
+| HTTPS not working | DNS propagation: `nslookup foundry.yourdomain.com`; ports 80/443 open? |
+| Caddy certificate error | `docker compose logs caddy`; Let's Encrypt rate limits may apply |
+| Backup fails | `docker compose logs backup`; test SSH: `docker compose exec backup ssh -T git@github.com` |
+| FoundryVTT won't start | `docker compose logs foundry`; verify `foundryvtt.zip` is valid |
+| `base64: truncated input` | `BACKUP_SSH_KEY` in `.env` is incomplete – re-run `base64 -w 0 /tmp/backup_key` |
+
+---
+
+## Notes
+
+- **License binding:** The `hostname` in `docker-compose.yml` must stay `foundryvtt`. Foundry binds the license to it – changing it requires re-activating the license.
+- **WebSocket:** Caddy proxies WebSocket connections automatically – no extra configuration needed.
+- **Certificates:** Caddy acquires and renews Let's Encrypt certificates automatically. Stored in the `caddy_data` named volume – don't delete it.
+- **SSH deploy key:** Stored Base64-encoded in `BACKUP_SSH_KEY` (`.env`) and written to `/tmp` at container startup. It is never baked into the image and requires no file mounts.
+- **`data/` directory:** Contains all Foundry user data (worlds, modules, systems). Backed up nightly. Never delete it without a verified backup.
