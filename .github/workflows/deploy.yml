@@ -33,7 +33,7 @@ jobs:
 
           # Rebuild nur wenn Dateien geändert wurden, die im Docker-Image landen.
           # Änderungen an *.md oder anderen Nicht-Image-Dateien brauchen keinen Rebuild.
-          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^Caddyfile$|^docker-compose\.yml$|^backup/.*\.sh$'; then
+          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^caddy/.*$|^docker-compose\.yml$|^backup/.*\.sh$'; then
             echo "needs_rebuild=true" >> $GITHUB_OUTPUT
             echo "→ Rebuild required"
           else
