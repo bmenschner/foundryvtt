@@ -13,9 +13,9 @@ services:
     hostname: foundryvtt
     restart: unless-stopped
     volumes:
-      - ./data:/foundry/data
+      - foundry_data:/foundry/data
     ports:
-      - "127.0.0.1:30000:30000"  # Lokaler Zugriff via SSH-Tunnel (nicht extern erreichbar)
+      - "127.0.0.1:30000:30000" # Lokaler Zugriff via SSH-Tunnel (nicht extern erreichbar)
 
   # ── Caddy Reverse Proxy (automatisches HTTPS via Let's Encrypt) ──────────
   caddy:
@@ -28,8 +28,8 @@ services:
     environment:
       DOMAIN: ${DOMAIN}
     volumes:
-      - caddy_data:/data      # Zertifikate (persistent)
-      - caddy_config:/config  # Caddy-Konfigurationscache
+      - caddy_data:/data # Zertifikate (persistent)
+      - caddy_config:/config # Caddy-Konfigurationscache
     depends_on:
       - foundry
 
@@ -39,17 +39,18 @@ services:
     container_name: foundry-backup
     restart: unless-stopped
     environment:
-      BACKUP_REPO:      ${BACKUP_REPO:-git@github.com:bmenschner/foundryvtt-backups.git}
-      BACKUP_SCHEDULE:  ${BACKUP_SCHEDULE:-0 3 * * *}   # Standard: täglich 03:00 Uhr
-      BACKUP_BRANCH:    ${BACKUP_BRANCH:-main}
+      BACKUP_REPO: ${BACKUP_REPO:-git@github.com:bmenschner/foundryvtt-backups.git}
+      BACKUP_SCHEDULE: ${BACKUP_SCHEDULE:-0 3 * * *} # Standard: täglich 03:00 Uhr
+      BACKUP_BRANCH: ${BACKUP_BRANCH:-main}
       BACKUP_GIT_EMAIL: ${BACKUP_GIT_EMAIL:-backup@foundryvtt}
-      BACKUP_SSH_KEY:   ${BACKUP_SSH_KEY}                # SSH Deploy Key (Base64-kodiert)
-      TZ:               Europe/Berlin
+      BACKUP_SSH_KEY: ${BACKUP_SSH_KEY} # SSH Deploy Key (Base64-kodiert)
+      TZ: Europe/Berlin
     volumes:
-      - ./data:/backup/data                              # User-Daten (rw: Backup liest, Restore schreibt)
+      - foundry_data:/backup/data # User-Daten (rw: Backup liest, Restore schreibt)
     depends_on:
       - foundry
 
 volumes:
+  foundry_data:
   caddy_data:
   caddy_config:
