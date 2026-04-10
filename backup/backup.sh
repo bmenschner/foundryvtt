@@ -20,11 +20,15 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo " FoundryVTT Backup – $TIMESTAMP"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# ── SSH-Key in beschreibbares Verzeichnis kopieren ───────────────────────────
-# Der Key ist read-only gemountet → chmod direkt darauf schlägt fehl
-cp /root/.ssh/id_ed25519 /tmp/backup_key
+# ── SSH-Key aus Umgebungsvariable schreiben ──────────────────────────────────
+# BACKUP_SSH_KEY enthält den privaten Key Base64-kodiert (kein Zeilenumbruch-Problem in .env)
+if [ -z "${BACKUP_SSH_KEY}" ]; then
+    echo "✗ Fehler: BACKUP_SSH_KEY ist nicht gesetzt. Backup abgebrochen." >&2
+    exit 1
+fi
+echo "${BACKUP_SSH_KEY}" | base64 -d > /tmp/backup_key
 chmod 600 /tmp/backup_key
-export GIT_SSH_COMMAND="ssh -i /tmp/backup_key"
+export GIT_SSH_COMMAND="ssh -i /tmp/backup_key -o StrictHostKeyChecking=no"
 
 # ── Git-Konfiguration ────────────────────────────────────────────────────────
 git config --global user.email "${BACKUP_GIT_EMAIL:-backup@foundryvtt}"

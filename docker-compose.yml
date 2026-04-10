@@ -44,10 +44,10 @@ services:
       BACKUP_SCHEDULE:  ${BACKUP_SCHEDULE:-0 3 * * *}   # Standard: täglich 03:00 Uhr
       BACKUP_BRANCH:    ${BACKUP_BRANCH:-main}
       BACKUP_GIT_EMAIL: ${BACKUP_GIT_EMAIL:-backup@foundryvtt}
+      BACKUP_SSH_KEY:   ${BACKUP_SSH_KEY}                # SSH Deploy Key (Base64-kodiert)
       TZ:               Europe/Berlin
     volumes:
-      - ./data:/backup/data                                # User-Daten (rw: Backup liest, Restore schreibt)
-      - ./backup/ssh/backup_key:/root/.ssh/id_ed25519:ro  # SSH Deploy Key (read-only!)
+      - ./data:/backup/data                              # User-Daten (rw: Backup liest, Restore schreibt)
     depends_on:
       - foundry
 
