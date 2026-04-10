@@ -63,20 +63,12 @@ ssh -T git@github.com
 
 ### SSH key overview
 
-Both keys live on the **remote host** – the backup container gets its key via a Docker volume mount, not by storing it inside the image.
+The backup container receives the deploy key as a **Base64-encoded environment variable** (`BACKUP_SSH_KEY`) – it is never baked into the image and requires no file mounts.
 
-| Key | Location on host | Used by | Purpose |
+| Key | Location | Used by | Purpose |
 |---|---|---|---|
-| `~/.ssh/id_ed25519` | Home directory (generated above) | OS / `git` directly | `git clone` the code repo |
-| `backup/ssh/backup_key` | Project directory (step 3) | backup container via mount | `git push` to the backup repo |
-
-```
-~/foundry/
-  backup/
-    ssh/
-      backup_key       ← mounted into container as /root/.ssh/id_ed25519
-      backup_key.pub
-```
+| `~/.ssh/id_ed25519` | Server home directory | OS / `git` directly | `git clone` the code repo |
+| `BACKUP_SSH_KEY` in `.env` | Environment variable (Base64) | backup container at runtime | `git push` to the backup repo |
 
 ---
 
@@ -107,25 +99,30 @@ BACKUP_REPO=git@github.com:youruser/foundryvtt-backups.git
 BACKUP_SCHEDULE=0 3 * * *
 BACKUP_BRANCH=main
 BACKUP_GIT_EMAIL=your@email.com
+BACKUP_SSH_KEY=<base64-encoded-private-key>   # see step 3
 ```
 
 > ⚠️ Never commit `.env` to a public repository.
 
 ### 3. Set up SSH deploy key for backups
 
+The deploy key is passed to the backup container as a **Base64-encoded environment variable** – no file mounts required.
+
 ```sh
-mkdir -p backup/ssh
-ssh-keygen -t ed25519 -C "foundryvtt-backup" -f backup/ssh/backup_key -N ""
-cat backup/ssh/backup_key.pub  # copy this output
+# Generate key pair
+ssh-keygen -t ed25519 -C "foundryvtt-backup" -f /tmp/backup_key -N ""
+
+# Base64-encode the private key → paste into .env as BACKUP_SSH_KEY
+base64 -w 0 /tmp/backup_key
+
+# Clean up the temp files after copying the value
+rm /tmp/backup_key /tmp/backup_key.pub
 ```
 
 Add the public key to GitHub: `foundryvtt-backups` → **Settings → Deploy Keys → Add** (✅ Allow write access).
 
-The backup container receives this key via a Docker volume mount (defined in `docker-compose.yml`) – it is never baked into the image:
-
-```yaml
-volumes:
-  - ./backup/ssh/backup_key:/root/.ssh/id_ed25519:ro
+```sh
+cat /tmp/backup_key.pub   # copy this before deleting
 ```
 
 The backup target repository must already exist on GitHub with at least one commit.
@@ -234,7 +231,7 @@ docker compose start foundry
 - **License binding:** The container `hostname` in `docker-compose.yml` must stay constant (`foundryvtt`). Foundry binds the license to it.
 - **WebSocket:** Caddy proxies WebSocket connections automatically – no extra headers needed.
 - **Certificates:** Caddy acquires and renews Let's Encrypt certificates automatically. Stored in the `caddy_data` named volume.
-- **SSH key:** The deploy key is mounted read-only (`:ro`) – the backup script copies it to `/tmp` before use.
+- **SSH key:** The deploy key is stored Base64-encoded in `BACKUP_SSH_KEY` (`.env`) and written to `/tmp` at container startup – it is never baked into the image and requires no file mounts.
 
 ---
 

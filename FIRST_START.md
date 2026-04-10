@@ -46,6 +46,7 @@ BACKUP_REPO=git@github.com:deinuser/foundryvtt-backups.git
 BACKUP_SCHEDULE=0 3 * * *           # täglich 03:00 Uhr
 BACKUP_BRANCH=main
 BACKUP_GIT_EMAIL=deine@email.de
+BACKUP_SSH_KEY=<base64-kodierter-privater-SSH-Key>   # siehe Schritt 3
 ```
 
 > ⚠️ **Wichtig:** Niemals `.env` in ein öffentliches Repository pushen!
@@ -54,31 +55,40 @@ BACKUP_GIT_EMAIL=deine@email.de
 
 ## Schritt 3 – SSH Deploy Key für Backup einrichten
 
-Das Backup-System pusht täglich Daten in ein privates GitHub-Repo. Dafür wird ein SSH-Schlüsselpaar benötigt.
+Das Backup-System pusht täglich Daten in ein privates GitHub-Repo. Der SSH-Key wird **nicht als Datei** in den Container gemountet, sondern als Base64-kodierte Umgebungsvariable (`BACKUP_SSH_KEY`) in der `.env` gesetzt.
 
-### 3a – Schlüsselpaar generieren (auf dem Server)
+### 3a – Schlüsselpaar generieren
 
 ```sh
-mkdir -p backup/ssh
-ssh-keygen -t ed25519 -C "foundryvtt-backup" -f backup/ssh/backup_key -N ""
+ssh-keygen -t ed25519 -C "foundryvtt-backup" -f /tmp/backup_key -N ""
 ```
 
-Dies erzeugt:
-- `backup/ssh/backup_key` → **Privater Schlüssel** (bleibt auf dem Server)
-- `backup/ssh/backup_key.pub` → **Öffentlicher Schlüssel** (wird bei GitHub hinterlegt)
+### 3b – Privaten Key Base64-kodieren und in `.env` eintragen
 
-### 3b – Public Key bei GitHub als Deploy Key hinterlegen
+```sh
+base64 -w 0 /tmp/backup_key
+```
+
+Den ausgegebenen String (eine lange Zeile, kein Umbruch) in `.env` eintragen:
+
+```dotenv
+BACKUP_SSH_KEY=LS0tLS1CRUdJTiBPUEVOU1NI...   # dein Base64-String
+```
+
+> ⚠️ Den temporären Key danach löschen: `rm /tmp/backup_key /tmp/backup_key.pub`
+
+### 3c – Public Key bei GitHub als Deploy Key hinterlegen
 
 1. Gehe zu: `github.com/<deinuser>/foundryvtt-backups` → **Settings** → **Deploy Keys**
 2. Klicke **Add deploy key**
-3. Füge den Inhalt von `backup/ssh/backup_key.pub` ein:
+3. Füge den Inhalt des Public Keys ein:
    ```sh
-   cat backup/ssh/backup_key.pub
+   cat /tmp/backup_key.pub
    ```
 4. ✅ **Allow write access** aktivieren
 5. Speichern
 
-### 3c – Backup-Repo initialisieren
+### 3d – Backup-Repo initialisieren
 
 Das Ziel-Repo (`BACKUP_REPO`) muss auf GitHub **bereits existieren** und mindestens einen Commit haben (z.B. eine leere README). Erstelle es manuell auf github.com, falls noch nicht vorhanden.
 
