@@ -31,8 +31,13 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo " FoundryVTT Restore"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# ── SSH-Key in beschreibbares Verzeichnis kopieren ───────────────────────────
-cp /root/.ssh/id_ed25519 /tmp/backup_key
+# ── SSH-Key aus Umgebungsvariable schreiben ──────────────────────────────────
+# BACKUP_SSH_KEY enthält den privaten Key Base64-kodiert
+if [ -z "${BACKUP_SSH_KEY}" ]; then
+    echo "❌ FEHLER: BACKUP_SSH_KEY ist nicht gesetzt. Restore abgebrochen." >&2
+    exit 1
+fi
+echo "${BACKUP_SSH_KEY}" | base64 -d > /tmp/backup_key
 chmod 600 /tmp/backup_key
 export GIT_SSH_COMMAND="ssh -i /tmp/backup_key"
 

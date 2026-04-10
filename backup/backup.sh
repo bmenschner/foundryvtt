@@ -28,7 +28,7 @@ if [ -z "${BACKUP_SSH_KEY}" ]; then
 fi
 echo "${BACKUP_SSH_KEY}" | base64 -d > /tmp/backup_key
 chmod 600 /tmp/backup_key
-export GIT_SSH_COMMAND="ssh -i /tmp/backup_key -o StrictHostKeyChecking=no"
+export GIT_SSH_COMMAND="ssh -i /tmp/backup_key"
 
 # ── Git-Konfiguration ────────────────────────────────────────────────────────
 git config --global user.email "${BACKUP_GIT_EMAIL:-backup@foundryvtt}"
