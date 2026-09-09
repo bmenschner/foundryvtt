@@ -1,7 +1,8 @@
 # Eigene Foundry-Module
 
 Der Ordner `modules/` ist die Quelle für eigene Module. Aktuell enthält er
-`sr6-multiple-wild-dice` in Version 1.1.0 für Foundry 14 und Shadowrun 6 Eden 4.0.7.
+`sr6-multiple-wild-dice` in Version 1.1.0 für Foundry 14 und Shadowrun 6 Eden 4.0.7
+sowie `roll20-macro-compat` in Version 0.2.0 für Roll20-Chat-Makros in Foundry 14.
 Die Versionsnummer steht jeweils in `module.json`; die Modul-ID muss dem Ordnernamen entsprechen.
 
 ## Änderungen ausrollen
@@ -42,12 +43,11 @@ aus `data/module-backups/` wiederherstellen; anschließend Foundry starten.
 Node.js 20 oder neuer verwenden. Die GitHub Actions und das Foundry-Image verwenden Node.js 24.
 
 ```sh
-node scripts/deploy-modules.mjs validate modules
-node --test tests/*.test.mjs
-node modules/sr6-multiple-wild-dice/tests/core.test.mjs
-node --check modules/sr6-multiple-wild-dice/scripts/main.mjs
+node scripts/check-modules.mjs
 ```
 
 Eine erfolgreiche Action bestätigt die Dateiinstallation, nicht die Funktion aller
 Spielmechaniken in einer laufenden Welt. Dort eine Probe mit Pool 8 und 3 Schicksalswürfeln
 ausführen und den Hinweis-Link prüfen. Einschränkungen stehen in der Modul-README.
+Für Roll20 die drei Originalmakros unter `modules/roll20-macro-compat/tests/fixtures/`
+als Chat-Makros einfügen, Abfragen beantworten und den Edge-Button ausprobieren.

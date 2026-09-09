@@ -32,11 +32,7 @@ jobs:
           node-version: '24'
 
       - name: Validate managed modules
-        run: |
-          node scripts/deploy-modules.mjs validate modules
-          node --test tests/*.test.mjs
-          node modules/sr6-multiple-wild-dice/tests/core.test.mjs
-          node --check modules/sr6-multiple-wild-dice/scripts/main.mjs
+        run: node scripts/check-modules.mjs
 
       - name: Detect if Docker rebuild is needed
         id: detect

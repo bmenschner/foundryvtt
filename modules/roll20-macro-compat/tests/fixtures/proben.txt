@@ -1,0 +1,1 @@
+&{template:default} {{name=Proben}} {{Geschafft=[[{?{Würfelpool|6}d6>4, ?{Würfelpool}d6>4, ?{Würfelpool}d6>4, ?{Würfelpool}d6>4, ?{Würfelpool}d6>4}>?{Schwellwert|3}]] x Schwellwert erreicht}}
