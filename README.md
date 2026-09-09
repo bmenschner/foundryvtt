@@ -4,6 +4,27 @@ Self-hosted [FoundryVTT](https://foundryvtt.com) via Docker with automated HTTPS
 
 ---
 
+## Datenverzeichnis nach der Volume-Migration
+
+Foundry und der Backup-Dienst verwenden jetzt gemeinsam `./data` auf dem Host.
+Foundry-Welten liegen unter `data/Data/worlds`, Module unter `data/Data/modules`.
+Das Verzeichnis muss vor dem Start existieren und die migrierten Daten enthalten.
+`create_host_path: false` verhindert die automatische Anlage eines leeren Ordners.
+Bei einer Neuinstallation den Ordner vor dem ersten Start mit `mkdir data` anlegen.
+Bestehende Installationen zuerst bei gestoppten Diensten vollständig sichern,
+kopieren und prüfen; ein leerer Ordner ersetzt keine Datenmigration.
+Das alte benannte Volume vorerst als Sicherung behalten, kein `down -v` ausführen.
+Nach neuen Spielständen ist das alte Volume veraltet und kein verlustfreier Rückweg.
+
+Reine Compose-Änderungen lösen im Deployment keinen Image-Build mehr aus.
+Änderungen an Build-Argumenten oder der gewünschten Foundry-Version benötigen
+jetzt einen bewusst ausgeführten Build. `up` läuft mit `--no-build`.
+Vor dem nächsten Build eine passende `.dockerignore` sicherstellen, die `.env`,
+`data/`, `migration-*/`, `_old/` und `.git/` ausschließt: Der Dockerfile kopiert den
+Build-Kontext. Migrationssicherungen gehören weder in Git noch in Images.
+Die älteren Setup-/Deployment-Beispiele weiter unten berücksichtigen diese
+Umstellung noch nicht vollständig.
+
 ## Architecture
 
 ```

@@ -13,7 +13,11 @@ services:
     hostname: foundryvtt
     restart: unless-stopped
     volumes:
-      - foundry_data:/foundry/data
+      - type: bind
+        source: ./data
+        target: /foundry/data
+        bind:
+          create_host_path: false
     ports:
       - "127.0.0.1:30000:30000" # Lokaler Zugriff via SSH-Tunnel (nicht extern erreichbar)
 
@@ -46,7 +50,11 @@ services:
       BACKUP_SSH_KEY: ${BACKUP_SSH_KEY} # SSH Deploy Key (Base64-kodiert)
       TZ: Europe/Berlin
     volumes:
-      - foundry_data:/backup/data # User-Daten (rw: Backup liest, Restore schreibt)
+      - type: bind
+        source: ./data
+        target: /backup/data
+        bind:
+          create_host_path: false
     depends_on:
       - foundry
 
