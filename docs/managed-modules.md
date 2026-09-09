@@ -1,7 +1,7 @@
 # Eigene Foundry-Module
 
 Der Ordner `modules/` ist die Quelle für eigene Module. Aktuell enthält er
-`sr6-multiple-wild-dice` in Version 1.0.2 für Foundry 14 und Shadowrun 6 Eden 4.0.7.
+`sr6-multiple-wild-dice` in Version 1.1.0 für Foundry 14 und Shadowrun 6 Eden 4.0.7.
 Die Versionsnummer steht jeweils in `module.json`; die Modul-ID muss dem Ordnernamen entsprechen.
 
 ## Änderungen ausrollen

@@ -8,21 +8,30 @@ export function parseCount(value) {
 
 // Eden writes a boolean choice immediately before constructing its formula.
 // Keep the numeric choice on this single configuration object only.
-export function installCount(configured, requested) {
+export function installCount(configured, requested, added = 0) {
+  parseCount(requested);
+  parseCount(added);
   const descriptor = Object.getOwnPropertyDescriptor(configured, "useWildDie");
   if (descriptor && (!descriptor.configurable || descriptor.get || descriptor.set)) {
     throw new Error("Eine andere Erweiterung verändert bereits die Schicksalswürfel-Auswahl.");
   }
-  let enabled = requested > 0;
+  const originalPool = Number(configured.pool) || 0;
+  let enabled = requested + added > 0;
   Object.defineProperty(configured, "useWildDie", {
     configurable: true,
     enumerable: true,
     get() {
       const pool = Math.max(0, Math.floor(Number(this.pool) || 0));
-      return enabled ? Math.min(requested, pool) : 0;
+      // Added dice occupy their own places in the final pool. Only the
+      // remaining original dice are eligible for replacement.
+      const extra = Math.min(added, pool);
+      return enabled ? extra + Math.min(requested, pool - extra) : 0;
     },
     set(value) { enabled = Boolean(value); }
   });
+  // Eden subsequently applies the modifier, wounds and its normal pool cap.
+  // Adjust the base exactly once, not on every read or recalculation.
+  configured.pool = originalPool + added;
   return () => {
     const value = configured.useWildDie;
     Object.defineProperty(configured, "useWildDie", {

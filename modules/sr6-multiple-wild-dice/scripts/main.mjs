@@ -20,25 +20,29 @@ Hooks.on("renderRollDialog", (app, html) => {
 
   let state = states.get(app);
   if (!state) {
-    state = { count: Number(configured.useWildDie) || (checkbox.checked ? 1 : 0) };
+    state = { count: Number(configured.useWildDie) || (checkbox.checked ? 1 : 0), added: 0 };
     states.set(app, state);
     for (const [key, button] of Object.entries(app.data.buttons)) {
       if (typeof button.callback !== "function") continue;
       const original = button.callback;
       button.callback = async function (...args) {
+        if (state.submitted) return;
         try {
           const count = parseCount(state.input.value);
+          const added = parseCount(state.addInput.value);
           const form = state.input.closest("form");
-          validateMode(count, {
+          validateMode(count + added, {
             explode: form.querySelector('[name="explode"]')?.checked,
             extended: form.querySelector('[name="extended"]')?.checked,
             threshold: Number(form.querySelector('[name="threshold"]')?.value),
             buying: /auto|buy|bought/i.test(key)
           });
           state.count = count;
-          state.checkbox.checked = count > 0;
+          state.added = added;
+          state.checkbox.checked = count + added > 0;
           state.release?.();
-          state.release = installCount(configured, count);
+          state.release = installCount(configured, count, added);
+          state.submitted = true;
         } catch (error) {
           ui.notifications.warn(error.message);
           throw error; // Prevent Dialog from closing or spending Edge/ammunition.
@@ -63,7 +67,7 @@ Hooks.on("renderRollDialog", (app, html) => {
   input.style.width = "5em";
   input.addEventListener("input", () => {
     state.count = input.value;
-    checkbox.checked = Number(input.value) > 0;
+    checkbox.checked = Number(input.value) + Number(state.added) > 0;
   });
   const help = document.createElement("span");
   help.className = "sr6-wild-hint";
@@ -85,7 +89,7 @@ Hooks.on("renderRollDialog", (app, html) => {
   tooltip.id = `${ID}-hint-${++hintId}`;
   tooltip.className = "sr6-wild-hint-tooltip";
   tooltip.setAttribute("role", "tooltip");
-  tooltip.textContent = "Anzahl im Gesamtpool. Zusätzliche Würfel vorher über den Pool-Modifikator hinzufügen. Maximal so viele wie der endgültige Pool enthält.";
+  tooltip.textContent = "Verwenden ersetzt normale Würfel. Hinzufügen vergrößert den Pool. Beispiel: Pool 12, verwenden 3, hinzufügen 2 ergibt 9 normale und 5 Schicksalswürfel (14 insgesamt). Zusatzwürfel nicht nochmals als Pool-Modifikator eintragen.";
   tooltip.hidden = true;
   tooltip.setAttribute("popover", "manual");
   styleHint(tooltip, {
@@ -113,10 +117,14 @@ Hooks.on("renderRollDialog", (app, html) => {
       if (tooltip.showPopover && !tooltip.matches(":popover-open")) tooltip.showPopover();
       const bounds = link.getBoundingClientRect();
       const viewport = link.ownerDocument.defaultView;
+      const below = Math.max(0, viewport.innerHeight - bounds.bottom - 18);
+      const above = Math.max(0, bounds.top - 18);
+      const placeBelow = tooltip.scrollHeight <= below || below >= above;
+      styleHint(tooltip, { "max-height": `${Math.max(24, placeBelow ? below : above)}px` });
       const width = tooltip.offsetWidth;
       const height = tooltip.offsetHeight;
       const left = Math.max(12, Math.min(bounds.right - width, viewport.innerWidth - width - 12));
-      const top = bounds.bottom + height + 6 <= viewport.innerHeight - 12
+      const top = placeBelow
         ? bounds.bottom + 6 : Math.max(12, bounds.top - height - 6);
       styleHint(tooltip, { left: `${left}px`, top: `${top}px` });
     }
@@ -146,7 +154,51 @@ Hooks.on("renderRollDialog", (app, html) => {
   const labelCell = checkbox.closest("td")?.previousElementSibling;
   if (labelCell && !labelCell.contains(checkbox)) labelCell.append(help);
   else input.after(help);
+  const addInput = document.createElement("input");
+  addInput.type = "number";
+  addInput.min = "0";
+  addInput.max = "100";
+  addInput.step = "1";
+  addInput.value = String(state.added);
+  addInput.dataset.sr6AddedWild = "true";
+  addInput.id = `${ID}-added-${hintId}`;
+  addInput.setAttribute("aria-label", "Schicksalswürfel hinzufügen");
+  addInput.style.width = "5em";
+  addInput.addEventListener("input", () => {
+    state.added = addInput.value;
+    checkbox.checked = Number(state.count) + Number(addInput.value) > 0;
+  });
+  const addLabel = document.createElement("label");
+  addLabel.htmlFor = addInput.id;
+  addLabel.textContent = "Schicksalswürfel hinzufügen";
+  const currentRow = checkbox.closest("tr");
+  if (currentRow && labelCell) {
+    const row = document.createElement("tr");
+    row.dataset.sr6AddedWildRow = "true";
+    let offset = 0;
+    for (const cell of currentRow.cells) {
+      if (cell === labelCell) break;
+      offset += cell.colSpan;
+    }
+    if (offset) {
+      const spacer = document.createElement("td");
+      spacer.colSpan = offset;
+      row.append(spacer);
+    }
+    const label = document.createElement("td");
+    label.style.textAlign = "right";
+    label.append(addLabel);
+    const field = document.createElement("td");
+    field.append(addInput);
+    row.append(label, field);
+    currentRow.after(row);
+  } else {
+    const row = document.createElement("div");
+    row.append(addLabel, addInput);
+    input.after(row);
+  }
   state.input = input;
+  state.addInput = addInput;
   state.checkbox = checkbox;
   app.setPosition({ height: "auto" });
 });
