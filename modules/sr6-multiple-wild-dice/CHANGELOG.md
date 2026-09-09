@@ -1,5 +1,12 @@
 # Änderungen
 
+## 1.1.0
+
+- Neues Feld „Schicksalswürfel hinzufügen“ direkt unter der bisherigen Auswahl.
+- Hinzugefügte Schicksalswürfel erhöhen den Pool; die bisherige Auswahl ersetzt weiterhin normale Würfel.
+- Beide Felder sind kombinierbar. Der Hinweis erklärt ihre Verwendung mit einem Rechenbeispiel.
+- Schutz gegen mehrfache Übergabe desselben Dialogs, damit Zusatzwürfel nicht doppelt addiert werden.
+
 ## 1.0.2
 
 - Hinweis direkt unter der Schicksalswürfel-Beschriftung platziert.
