@@ -1,0 +1,25 @@
+name: Check managed modules
+on:
+  pull_request:
+    paths:
+      - 'modules/**'
+      - 'scripts/deploy-modules.mjs'
+      - 'tests/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate packages and test deployment
+        run: |
+          node scripts/deploy-modules.mjs validate modules
+          node --test tests/*.test.mjs
+          node modules/sr6-multiple-wild-dice/tests/core.test.mjs
+          node --check modules/sr6-multiple-wild-dice/scripts/main.mjs

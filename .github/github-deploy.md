@@ -2,6 +2,12 @@
 
 Dieses Dokument beschreibt, wie das automatische Deployment via GitHub Actions eingerichtet wird.
 
+**Aktueller Modul-Ablauf:** Die Action prüft jetzt eigene Module aus `modules/` und
+installiert geänderte Pakete mit Sicherung in `data/Data/modules/`. Dafür wird Foundry
+kurz gestoppt und anschließend wieder gestartet. Details und Rückweg:
+[Eigene Module verwalten](../docs/managed-modules.md). Reine Moduländerungen benötigen
+keinen Docker-Build. Die älteren Ablaufbeispiele unten zeigen nur den Server-Teil.
+
 Bei jedem Push auf `main` verbindet sich GitHub über SSH mit dem Server und führt automatisch `git pull` und `docker compose up -d` aus. Reine Dokumentations-Änderungen (`.md`-Dateien) lösen kein Deployment aus.
 
 ---

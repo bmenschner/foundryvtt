@@ -1,0 +1,62 @@
+.sr6-wild-hint {
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin: 2px 0 0 auto;
+}
+
+.sr6-wild-hint .sr6-wild-hint-link {
+  display: inline;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.4;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+  opacity: 0.8;
+}
+
+.sr6-wild-hint .sr6-wild-hint-link:hover,
+.sr6-wild-hint .sr6-wild-hint-link:focus-visible {
+  opacity: 1;
+  text-decoration-style: solid;
+  text-shadow: none;
+}
+
+.sr6-wild-hint .sr6-wild-hint-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
+.sr6-wild-hint-tooltip {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  right: 0;
+  width: 260px;
+  max-width: 65vw;
+  padding: 10px 12px;
+  border: 1px solid #7b8494;
+  border-radius: 5px;
+  background: #202530;
+  color: #f1f3f5;
+  box-shadow: 0 4px 12px #0006;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+}
+
+.sr6-wild-hint-tooltip[hidden] { display: none; }

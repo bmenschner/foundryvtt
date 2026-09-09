@@ -25,6 +25,13 @@ Build-Kontext. Migrationssicherungen gehören weder in Git noch in Images.
 Die älteren Setup-/Deployment-Beispiele weiter unten berücksichtigen diese
 Umstellung noch nicht vollständig.
 
+## Eigene Module
+
+Eigene Module werden aus `modules/` über die vorhandene Deployment-Action installiert.
+Änderungen werden vorab geprüft; vorhandene Modulversionen werden gesichert.
+Bei geänderten Modulen startet Foundry kurz neu.
+Details: [Eigene Module verwalten](docs/managed-modules.md).
+
 ## Architecture
 
 ```

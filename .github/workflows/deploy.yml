@@ -9,6 +9,13 @@ on:
       - "FIRST_START.md"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: foundry-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: Deploy
@@ -18,17 +25,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          # fetch-depth: 2 ist nötig, damit wir mit HEAD~1 die geänderten
-          # Dateien seit dem letzten Commit vergleichen können.
-          # Bei fetch-depth: 1 (Standard) wäre HEAD~1 nicht verfügbar.
-          fetch-depth: 2
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate managed modules
+        run: |
+          node scripts/deploy-modules.mjs validate modules
+          node --test tests/*.test.mjs
+          node modules/sr6-multiple-wild-dice/tests/core.test.mjs
+          node --check modules/sr6-multiple-wild-dice/scripts/main.mjs
 
       - name: Detect if Docker rebuild is needed
         id: detect
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
         run: |
-          # Geänderte Dateien ermitteln. Der Fallback (git show) greift beim
-          # allerersten Commit, wenn es noch kein HEAD~1 gibt.
-          CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --name-only --format='' HEAD)
+          # Bei Pushes alle Commits dieses Pushs prüfen, nicht nur den letzten.
+          if [ -n "$BEFORE_SHA" ] && git cat-file -e "$BEFORE_SHA^{commit}" 2>/dev/null; then
+            CHANGED=$(git diff --name-only "$BEFORE_SHA" HEAD)
+          else
+            CHANGED=$(git show --name-only --format='' HEAD)
+          fi
           echo "Changed files:"
           echo "$CHANGED"
 
@@ -54,7 +74,11 @@ jobs:
 
             # Neuesten Stand vom Repository holen
             echo "▶ Pulling latest changes..."
-            git pull origin main
+            git pull --ff-only origin main
+            if [ "$(git rev-parse HEAD)" != "${{ github.sha }}" ]; then
+              echo "Server checkout differs from the tested commit; deploy the latest main run."
+              exit 1
+            fi
 
             # Docker-Images nur neu bauen wenn sich image-relevante Dateien
             # geändert haben (spart Zeit bei reinen Konfig-Commits)
@@ -66,5 +90,27 @@ jobs:
             # Container starten (oder neu starten falls image geändert)
             echo "▶ Starting containers..."
             docker compose up -d --no-build
+
+            # Die vorhandenen Images und den bestehenden Daten-Mount nutzen.
+            # Der Installer schreibt ausschließlich die verwalteten Modul-IDs.
+            managed_modules() {
+              docker compose run --rm --no-deps -T --entrypoint node \
+                -v "$PWD/modules:/managed-modules:ro" \
+                -v "$PWD/scripts/deploy-modules.mjs:/deploy-modules.mjs:ro" \
+                foundry /deploy-modules.mjs "$1" /managed-modules /foundry/data/Data/modules
+            }
+            MODULE_STATE=$(managed_modules check)
+            if [ "$MODULE_STATE" = "changed" ]; then
+              echo "▶ Installing managed modules with backup..."
+              docker compose stop foundry
+              # Auch bei einem Installationsfehler die bisherige Version wieder starten.
+              trap 'docker compose start foundry' EXIT
+              managed_modules install
+              docker compose start foundry
+              trap - EXIT
+            elif [ "$MODULE_STATE" != "unchanged" ]; then
+              echo "Unexpected module check result: $MODULE_STATE"
+              exit 1
+            fi
 
             echo "✅ Deployment complete"
