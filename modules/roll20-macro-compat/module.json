@@ -1,0 +1,11 @@
+{
+  "id": "roll20-macro-compat",
+  "title": "Roll20 Macro Compatibility",
+  "description": "Führt Roll20-Chat-Makros zur Laufzeit in Foundry aus; der gespeicherte Roll20-Text bleibt unverändert.",
+  "version": "0.2.0",
+  "authors": [{"name": "bmenschner", "url": "https://github.com/bmenschner"}],
+  "url": "https://github.com/bmenschner/foundryvtt/tree/main/modules/roll20-macro-compat",
+  "compatibility": {"minimum": "14", "maximum": "14"},
+  "esmodules": ["scripts/main.mjs"],
+  "styles": ["styles/roll20-macro-compat.css"]
+}

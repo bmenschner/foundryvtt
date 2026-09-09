@@ -1,0 +1,11 @@
+.r20mc-query label { display: grid; gap: 8px; }
+.r20mc-card { border: 1px solid #6c7480; border-radius: 6px; overflow: hidden; background: #f5f3ee; color: #20242b; }
+.r20mc-card h3 { margin: 0; padding: 8px 10px; background: #283244; color: #fff; font-size: 15px; }
+.r20mc-card table { margin: 0; width: 100%; border: 0; color: #20242b; }
+.r20mc-card th, .r20mc-card td { padding: 7px 9px; text-align: left; overflow-wrap: anywhere; color: #20242b; }
+.r20mc-card tr:nth-child(even) { background: #e9edf3; }
+.r20mc-card th { font-weight: 600; width: 45%; }
+.r20mc-inline { display: inline-block; padding: 1px 7px; background: #e9cf85; color: #171717; border: 1px solid #94743c; border-radius: 3px; font-weight: bold; }
+.r20mc-button { width: auto; height: auto; min-height: 26px; padding: 3px 8px; white-space: normal; font-size: 12px; background: #33435a; color: #fff; border: 1px solid #8394a5; border-radius: 4px; cursor: pointer; }
+.r20mc-total { display: block; font-size: 24px; padding: 8px; text-align: center; }
+.r20mc-emote { font-style: italic; }

@@ -1,0 +1,2 @@
+&{template:default} {{name=Entzug}}
+{{Restschaden=[[ ?{Wie hoch ist der Entzug?|0} - (?{Willenskraft + Charisma|0}d6>5) ]]}}
