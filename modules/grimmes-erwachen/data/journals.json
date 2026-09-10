@@ -1,0 +1,1364 @@
+[
+  {
+    "_id": "e737d68ed52e69bf",
+    "name": "01 – Spuk in der Wolfsburg",
+    "pages": [
+      {
+        "_id": "fce30515e2a797d6",
+        "name": "Überblick",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<h1>Spuk in der Wolfsburg</h1><p>Ein diskreter Todesfall führt zu einem alten Stiftungseid. Walther Sanders kaufte das Schloss, schloss die Armenversorgung und starb beim Besuch eines erwachenden Stadtgeistes. Ralf erbt die Verantwortung, ohne den Eid zu kennen. Ziel ist Aufklärung und Vermittlung, nicht die Vernichtung des Stadtgeistes.</p><p>Quelle: S. 5–24. Eigene Zusammenfassung und SR6-Adaption der bereitgestellten PDF.</p><p>Spielpläne: 1 Kästchen = 1 m. Perspektivische Kapitelbilder sind rasterlose Stimmungsbilder.</p>"
+        },
+        "sort": 0
+      },
+      {
+        "_id": "567598cf3f8b1c82",
+        "name": "01 Auftrag in der Tune-Bar",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 6–8</p><p>@UUID[Scene.0da50ebf7f9cc38d]{Spielplan öffnen}</p><h2>Situation</h2><p>Toni Schmidt bietet unabhängige Ermittlungen zum Tod Walther Sanders an. Ralf soll weder geschädigt noch öffentlich bloßgestellt werden. Schmidt verschweigt Karin als Auftraggeberin.</p><h2>Hinweise und Spielleitung</h2><p>Zugreise und Verkehrstickets bezahlt. Datenchip: Familie, Todesursache, Termine und Schmidts Notfallnummer. Bonus ausdrücklich erklären.</p><h2>Fortgang und Alternativen</h2><p>Die Spieler kennen Ziel, Diskretionsgebot und Zusatzauftrag. Über Geld verhandeln ist möglich; nicht an einer einzelnen Probe scheitern lassen.</p>"
+        },
+        "sort": 10000
+      },
+      {
+        "_id": "e5ee26705c9cc196",
+        "name": "02 Beinarbeit und Trauerfeier",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 9–11</p><p>@UUID[Scene.51fee806a1ff5b47]{Spielplan öffnen}</p><h2>Situation</h2><p>Connections, Matrix und Trauergäste beleuchten die Familie und die Schließung der Stiftung. Auf der Beerdigung begegnen die Runner Behncke, Kati, Ralf und Ziegler-Voigt.</p><h2>Hinweise und Spielleitung</h2><p>Ralf wird geschützt; Kati hält Abstand, bricht aber nicht vollständig mit der Familie. Arzt kann ansprechbar sein.</p><h2>Fortgang und Alternativen</h2><p>Hinweise lassen sich auch im Rathaus oder Haus gewinnen; keine Pflicht, jede Station abzuklappern.</p>"
+        },
+        "sort": 20000
+      },
+      {
+        "_id": "c565021a4831921e",
+        "name": "03 Rathaus: Akten und Praxis",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 12–13</p><p>@UUID[Scene.d15f5ffef421c1c7]{Spielplan öffnen}</p><h2>Situation</h2><p>Arztpraxis im EG, Bürgermeisterbüro im 2. OG. Beide wichtigen Datenspeicher sind lokal verkabelt und nicht einfach über den Host erreichbar.</p><h2>Hinweise und Spielleitung</h2><p>Arzt: Herzproblem/Todesbefund. Amtsakte: Übertragung der Einrichtungen am 22. April und Schließung am 23. April. Irmgard kontrolliert den Praxiszugang; Herbert das Vorzimmer.</p><h2>Fortgang und Alternativen</h2><p>Host Rathaus: Stufe 6, A/S/D/F 6/7/9/8 als Ausgangspunkt. Gerätesicherheit in SR6 ausspielen. Gespräche sind ebenso brauchbar wie Infiltration.</p>"
+        },
+        "sort": 30000
+      },
+      {
+        "_id": "ff2a0698ce284c28",
+        "name": "04 Nächtlicher Besuch im Sanders-Anwesen",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 13–17</p><p>@UUID[Scene.a2c029a047fb4c21]{Spielplan öffnen}</p><h2>Situation</h2><p>Garten, Keller, EG, OG und Dach sind getrennte Karten. Im südwestlichen Arbeitszimmer liegen Schlosskauf und Sternschutzvertrag. Der Edle erscheint bei Ralf und fordert die Einlösung des Versprechens.</p><h2>Hinweise und Spielleitung</h2><p>Haus: Stufe 4, A/S/D/F 4/5/7/6. Sternschutz: Stufe 7, 9/7/8/10. Tor, Dach, Kamerazentrale plus zwei Leibwächter. Ralfs Schrei löst Alarm und Flutlicht aus. Geist zieht zum Schloss.</p><h2>Fortgang und Alternativen</h2><p>Die Erscheinung kann auch beim Abzug von außen beobachtet werden. Keine erzwungene Gefangennahme nötig. Enthüllung und Fluchtroute klar halten.</p>"
+        },
+        "sort": 40000
+      },
+      {
+        "_id": "66225416e5423b18",
+        "name": "05 Schloss und Hausmannsturm",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 18–20</p><p>@UUID[Scene.51b2182713097312]{Spielplan öffnen}</p><h2>Situation</h2><p>Wachmann macht lange Runden und meidet den Turm. Nach etwa 50 m Treppe steht die Gruppe vor einer nur 4 × 4 m großen Stube. Arme-Fragmente halten die Runner zunächst für Schergen des Eidbrechers.</p><h2>Hinweise und Spielleitung</h2><p>Arme-Fragmente: Runnerzahl minus eins. Der Edle vermittelt und erklärt Stiftung und Eid. Kamerahost Schloss Stufe 3, A/S/D/F 3/4/6/5.</p><h2>Fortgang und Alternativen</h2><p>Der Edle beendet die Eskalation, sobald seine Botschaft gehört wird. Aufgabe: Ralf zu einem ernsthaften Versprechen bringen.</p>"
+        },
+        "sort": 50000
+      },
+      {
+        "_id": "806b3d4a8ced3553",
+        "name": "06 Geisterstunde",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 21–23</p><p>@UUID[Scene.a2c029a047fb4c21]{Spielplan öffnen}</p><h2>Situation</h2><p>Rückkehr zu Ralf; Kontakt über Kati, Behncke, Toni oder das Stichwort Geist an der Torwache. Im Gespräch eskaliert der Spuk.</p><h2>Hinweise und Spielleitung</h2><p>Arme-Fragmente: Runnerzahl plus eins; Edler und schließlich Stadtgeist K12. Gegenstände fliegen, Wachen können abgelenkt werden. Runner schützen, vermitteln und überzeugen.</p><h2>Fortgang und Alternativen</h2><p>Ralf verspricht Wiederherstellung der Armenhilfe: Geister ziehen ab. Gegnerzahl und Schrecken an die Gruppe anpassen, Gespräch bleibt ein wirkungsvoller Lösungsweg.</p>"
+        },
+        "sort": 60000
+      },
+      {
+        "_id": "72f1c96acfb8b082",
+        "name": "07 Rapport und Folgen",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 23–24</p><p>@UUID[Scene.0da50ebf7f9cc38d]{Spielplan öffnen}</p><h2>Situation</h2><p>Toni bittet zum Abschlussbericht in die Tune-Bar. Er fragt nach Todesursache, Geist und Ralfs Zukunft.</p><h2>Hinweise und Spielleitung</h2><p>Vereinbartes Honorar und Bonus abrechnen. Toni kann Connection werden, bei passendem Spiel auch Ralf.</p><h2>Fortgang und Alternativen</h2><p>Erfolg der Stiftung in einer kurzen Nachszene sichtbar machen; offene politische Folgen bleiben Kampagnenmaterial.</p>"
+        },
+        "sort": 70000
+      },
+      {
+        "_id": "3648cdcd60e47415",
+        "name": "Belohnung und Abschluss",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p>6.000 € je Runner, davon 1.000 € Vorschuss; bis zu 2.500 € zusätzlich je Kopf durch Verhandlung. 15.000 € Gruppenbonus für Abwendung der Gefahr. Vorlage: 3 Karma für Aufklärung, 5 für Schutz und Wiederherstellung der Stiftung, zusätzlich 1–3 nach Spielverlauf.</p><p>Belohnungen aus der SR5-Vorlage übernommen; für die eigene SR6-Kampagne nach Ermessen anpassen.</p>"
+        },
+        "sort": 80000
+      },
+      {
+        "_id": "043c7152ebdaa584",
+        "name": "NSC-Verzeichnis",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<ul><li>@UUID[Actor.932f23884ed1893e]{Toni Schmidt}</li><li>@UUID[Actor.79f8f85858c19fa4]{Sandra}</li><li>@UUID[Actor.eae220f6be703a42]{Ralf Sanders}</li><li>@UUID[Actor.38f930ed307aeeeb]{Karin „Kati“ Sanders}</li><li>@UUID[Actor.ca9f57f2d6ede4c9]{Walther Sanders}</li><li>@UUID[Actor.6976132fe8401099]{Charlotte Ziegler-Voigt}</li><li>@UUID[Actor.dc130fd24e78238c]{Dr. Arnold Behncke}</li><li>@UUID[Actor.251ffc3872722109]{Irmgard Weiß}</li><li>@UUID[Actor.db65bcaea2e48878]{Herbert Dahlen}</li><li>@UUID[Actor.90b5b3be0f7d422a]{Peter Günther}</li><li>@UUID[Actor.684e2332fe0705f1]{Harald Kleinschmitt}</li><li>@UUID[Actor.73607e6700d59195]{Lisa Nolte}</li><li>@UUID[Actor.bcfcea42a2af2c17]{Sternschutz-Wachmann}</li><li>@UUID[Actor.668dab03180361d9]{Sternschutz-Leibwächter}</li><li>@UUID[Actor.b0c1831544971c92]{Schlosswächter}</li><li>@UUID[Actor.49cfcf8c733a6a64]{Fragment des Edlen}</li><li>@UUID[Actor.a67118ee9025a56a]{Fragment der Armen}</li><li>@UUID[Actor.c2b914e0e5aac001]{Geist von Wolfsburg}</li></ul>"
+        },
+        "sort": 90000
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "journal-1"
+      }
+    }
+  },
+  {
+    "_id": "32a10a761fd711ea",
+    "name": "02 – Zucker für die Kinder",
+    "pages": [
+      {
+        "_id": "22dae712179191b8",
+        "name": "Überblick",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<h1>Zucker für die Kinder</h1><p>Johannes Dietrich folgt einem magischen Lockruf in den Erwachten Schwarzwald. Eine freie Geisthexe nutzt eine alte Süßigkeiten-Fabrik als Domäne. Die Rettungsmission führt über Waldrand, gefährliche Wildnis und das Geisterdorf Hundskopf in die Fabrik.</p><p>Quelle: S. 25–37. Eigene Zusammenfassung und SR6-Adaption der bereitgestellten PDF.</p><p>Spielpläne: 1 Kästchen = 1 m. Perspektivische Kapitelbilder sind rasterlose Stimmungsbilder.</p>"
+        },
+        "sort": 0
+      },
+      {
+        "_id": "f45511b5b3a22f11",
+        "name": "01 Ein überschaubarer Job",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 26–28</p><p>@UUID[Scene.ee817b82dba873a6]{Spielplan öffnen}</p><h2>Situation</h2><p>Der Karlsruher Schmidt bietet die Suche nach Johannes D. an. Hinter ihm steht Maria Dietrich. Das Verschwinden liegt ungefähr 24 Stunden zurück.</p><h2>Hinweise und Spielleitung</h2><p>Biometrie, Koordinaten am Waldrand und Übergabeort im Parkhaus. Johannes hat kein ortbares Kommlink. Risiken des Murgtals sind recherchierbar.</p><h2>Fortgang und Alternativen</h2><p>Nach Verhandlung den Auftrag und die Zeitnot klar benennen. Der Nachname bleibt zunächst verborgen.</p>"
+        },
+        "sort": 10000
+      },
+      {
+        "_id": "1c592429e74bbf76",
+        "name": "02 Wie man in den Wald ruft",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 28–29</p><p>@UUID[Scene.ae45f3dd49e36635]{Spielplan öffnen}</p><h2>Situation</h2><p>An der Bushaltestelle beobachtet die Gruppe Adam beim Versuch, den Zaun zu übersteigen. Er will unbedingt zur Fabrik und kann ihre Richtung zeigen.</p><h2>Hinweise und Spielleitung</h2><p>Kameraaufnahmen werden nach 48 Stunden gelöscht. An Adam kann eine ältere Beeinflussungssignatur gefunden werden. Er kann begleitet, verfolgt oder markiert werden.</p><h2>Fortgang und Alternativen</h2><p>Optionale Hell Goats: etwa 1,5 Ganger je Runner, fordern 500 € pro Kopf. Adam nutzt Unaufmerksamkeit zur Weiterreise. Ein weiteres Kind kann einen verlorenen Hinweis ersetzen.</p>"
+        },
+        "sort": 20000
+      },
+      {
+        "_id": "dc168f7aad4fe4aa",
+        "name": "03 Durch den Wald",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 29–32</p><p>@UUID[Scene.606a526759f5975e]{Spielplan öffnen}</p><h2>Situation</h2><p>Vier passende Begegnungen wählen; nicht jede Begegnung ist ein Kampf. Karten für Pfad, Brücke, Furt und Hütte liegen bei.</p><h2>Hinweise und Spielleitung</h2><p>Schlafender Bär/Piasma; verlorene pinke Jacke; morsche Brücke; halluzinogene Gasader; Wolfsrudel; Rankenbäume; fünf Wassergeister; riesige beobachtende Eule; Schreckhähne hinter Wildschwein; einbrechende Hütte; Feuerhirsche; nachsprechendes Schilf.</p><h2>Fortgang und Alternativen</h2><p>Eine sichere Brückenquerung, Handel mit Geistern oder das Umgehen eines Bären sind Erfolge. Verlorene Fährte nach einer zusätzlichen Begegnung durch Sicht auf die Fabrik ersetzen.</p>"
+        },
+        "sort": 30000
+      },
+      {
+        "_id": "a45e905ef0355850",
+        "name": "04 Hundskopf und der Zugang",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 33–34</p><p>@UUID[Scene.ff6d7c21e654fb12]{Spielplan öffnen}</p><h2>Situation</h2><p>Alfred beobachtet die Gruppe aus Ruinen. Sein Angriff mit Stock und Plastikschild ist wenig gefährlich. Freundlichkeit gewinnt seine Hilfe.</p><h2>Hinweise und Spielleitung</h2><p>Fabrik etwa 500 m entfernt. Alfred zeigt Kanaldeckel und Route; Kanal ist teilweise eingestürzt, Neogargylen greifen nicht von sich aus an. Alternativ Zaunlöcher, Ladetor oder Feuerleiter.</p><h2>Fortgang und Alternativen</h2><p>Kein Zwang zum Kanal. Kameras defekt, alte Schlösser, kein elektrisch geladener Zaun. Astraler Hüter K7 schützt die Fabrik.</p>"
+        },
+        "sort": 40000
+      },
+      {
+        "_id": "63a54d8f103c995d",
+        "name": "05 Die Süßigkeiten-Fabrik",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 34–37</p><p>@UUID[Scene.f9037f84dca1c5af]{Spielplan öffnen}</p><h2>Situation</h2><p>Johannes steckt im Lüftungsschacht der Nordwand. In der Halle stehen 36 Vorrichtungen, 27 sind belegt. Ein akut gefährdetes Kind auf dem Förderband setzt die Gruppe unter Zeitdruck.</p><h2>Hinweise und Spielleitung</h2><p>Die Hexe K7 und fünf K4-Diener: Teigmischer, zwei Greifarme, Industriekessel, Gabelstapler. Lager mit Kanaldeckel, Empfang, Umkleide und Produktionshalle sind verbunden.</p><h2>Fortgang und Alternativen</h2><p>Rettung und Evakuierung gehen vor langem Schlagabtausch. Die Geister verlassen ihre Domäne nicht. Heimliche Rettung von Johannes erfüllt den Auftrag, lässt die übrige Gefahr jedoch bestehen.</p>"
+        },
+        "sort": 50000
+      },
+      {
+        "_id": "bb62909f8ae69c55",
+        "name": "06 Rückweg und Übergabe",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 37</p><p>@UUID[Scene.ac57d7639b99b6c6]{Spielplan öffnen}</p><h2>Situation</h2><p>Rückweg gegebenenfalls mit einer weiteren Waldbegegnung. Im Parkhaus warten Schmidt, zwei Leibwächter und Maria in einer Limousine.</p><h2>Hinweise und Spielleitung</h2><p>Übergabe friedlich. Zusätzliche Kinder bringen die vereinbarte Sonderzahlung und werden nach Aussage Schmidts den Familien zugeführt.</p><h2>Fortgang und Alternativen</h2><p>Maria beansprucht öffentlich den Erfolg. Runner erhalten Geld und womöglich eine neue Connection; verbleibende Fabrikgefahr als Folge notieren.</p>"
+        },
+        "sort": 60000
+      },
+      {
+        "_id": "c427efe92831ddf6",
+        "name": "Belohnung und Abschluss",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p>3.000 € pro Runner für Johannes, verhandelbar bis +1.500 € je Kopf. 250 € pro zusätzlich gerettetem Kind. Vorlage: 2 Karma Überleben, 1 für Johannes, 1–2 für Rettung der meisten anderen Kinder, zusätzlich 1–3 nach Spielverlauf.</p><p>Belohnungen aus der SR5-Vorlage übernommen; für die eigene SR6-Kampagne nach Ermessen anpassen.</p>"
+        },
+        "sort": 70000
+      },
+      {
+        "_id": "8352f362681da166",
+        "name": "NSC-Verzeichnis",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<ul><li>@UUID[Actor.29f8f5c559aec969]{Herr Schmidt – Karlsruhe}</li><li>@UUID[Actor.a24d312aee6ceac4]{Manfred}</li><li>@UUID[Actor.8f32aee34232b995]{Maria Dietrich}</li><li>@UUID[Actor.dfe619eb817f31e7]{Jan Dietrich}</li><li>@UUID[Actor.61e91bd1ea22b84d]{Johannes Dietrich}</li><li>@UUID[Actor.415c5771d25c6d94]{Adam Braun}</li><li>@UUID[Actor.f247f1ecc4dd4ba5]{Alfred}</li><li>@UUID[Actor.6622b6af8ce1ebcc]{Hell-Goats-Ganger}</li><li>@UUID[Actor.f3076795e0710218]{Hell-Goats-Anführer}</li><li>@UUID[Actor.12478b301511bf39]{Bär}</li><li>@UUID[Actor.69fc4f6b6e314541]{Piasma}</li><li>@UUID[Actor.949e0df32fb26be7]{Wolf}</li><li>@UUID[Actor.cc756b71881635f6]{Schreckhahn}</li><li>@UUID[Actor.ad3932f731eb6317]{Rankenbaum}</li><li>@UUID[Actor.1565d1b4d5e9e2b7]{Wassergeist}</li><li>@UUID[Actor.fee4db1dbc62cfdc]{Neogargyle}</li><li>@UUID[Actor.0a6a6541c70ddba4]{Die Hexe}</li><li>@UUID[Actor.b59e8c5e3029d096]{Hexendiener – Teigmischer}</li><li>@UUID[Actor.4b452cb6cc5ce3a0]{Hexendiener – Greifarm A}</li><li>@UUID[Actor.7ad9a248a67fa0fc]{Hexendiener – Greifarm B}</li><li>@UUID[Actor.827c1d40319fb295]{Hexendiener – Industriekessel}</li><li>@UUID[Actor.c2bce7ddc2aa4007]{Hexendiener – Gabelstapler}</li><li>@UUID[Actor.dfeadc06a7a0d9c9]{Leibwächter – Troll}</li><li>@UUID[Actor.306992332e1fad6e]{Leibwächter – Elf}</li><li>@UUID[Actor.4046514a9bb91b07]{Gerettetes Kind}</li></ul>"
+        },
+        "sort": 80000
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "journal-2"
+      }
+    }
+  },
+  {
+    "_id": "ca662d74e7505014",
+    "name": "03 – Ring aus Feuer",
+    "pages": [
+      {
+        "_id": "82dbfe254751e034",
+        "name": "Überblick",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<h1>Ring aus Feuer</h1><p>Celine liegt im unerklärten Koma, Marlon ist verschwunden. Ein rassistischer Angriff am Landsmann und Marlons Sturz ins Heidenloch wiederholten unbeabsichtigt ein Opferritual. Acht Walküren suchen ihre schlafende Schwester Brünhild und entführen vermeintliche Einherjar aus dem Fußballcamp.</p><p>Quelle: S. 38–59. Eigene Zusammenfassung und SR6-Adaption der bereitgestellten PDF.</p><p>Spielpläne: 1 Kästchen = 1 m. Perspektivische Kapitelbilder sind rasterlose Stimmungsbilder.</p>"
+        },
+        "sort": 0
+      },
+      {
+        "_id": "bf100c7994988866",
+        "name": "01 Operation Dornröschen",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 41–42</p><p>@UUID[Scene.42bccbb2097d2b22]{Spielplan öffnen}</p><h2>Situation</h2><p>Treffen mit Lucas Steltz alias Schmidt im Cocktail Club des Alten Hallenbads. Er verlangt Aufklärung und Hilfe für Celine, hält Marlon für den Schlüssel.</p><h2>Hinweise und Spielleitung</h2><p>Eine Woche Zeit, diskrete Vorgehensweise, tote Matrixadresse für Zwischenberichte. Steltz ist privat betroffen und Celines Patenonkel.</p><h2>Fortgang und Alternativen</h2><p>Nicht ungeprüft seinen Verdacht gegen Marlon als Wahrheit übernehmen; Bezahlung in drei Teilziele aufteilen.</p>"
+        },
+        "sort": 10000
+      },
+      {
+        "_id": "29afeb004e27cfc4",
+        "name": "02 Der einzige Zeuge – Familien",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 44–46</p><p>@UUID[Scene.689e7025982a32a6]{Spielplan öffnen}</p><h2>Situation</h2><p>Grubers in Handschuhheim berichten über Musik und Streit vor dem Ausflug. In Boxberg zeigt Lea echte Sorge um Marlon; Elmar ist reserviert, aber kein Täter.</p><h2>Hinweise und Spielleitung</h2><p>Marlon nahm Decke, Picknickkorb und eine alte DFB-Trainingsjacke mit. Beide Jugendlichen sind Musiker. Metatyp-Vorurteile prägen die Gespräche, sind aber keine Tatsachen über die Opfer.</p><h2>Fortgang und Alternativen</h2><p>Erkenntnisse können auch am Krankenbett übermittelt werden. Die Dreizimmerwohnung der Neugebauers ist eine eigene Karte.</p>"
+        },
+        "sort": 20000
+      },
+      {
+        "_id": "bee75acb339c43f1",
+        "name": "03 Celine in der Uniklinik",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 45–46, 59</p><p>@UUID[Scene.573502accc869ad2]{Spielplan öffnen}</p><h2>Situation</h2><p>Celine liegt im Einzelzimmer. Dr. Alber nimmt begründete Hinweise ernst. Die Medizin hat keine Erklärung für das Koma gefunden.</p><h2>Hinweise und Spielleitung</h2><p>Bei Nacht ist die fremde magische Präsenz leichter zu bemerken. Krankenhausakte und Fundprotokoll nennen Heiligenberg und den Morgen des 29. Juni.</p><h2>Fortgang und Alternativen</h2><p>Zugang über Familie, nachvollziehbare Hilfe oder kurze unbeobachtete Zeit. Das Handout verrät die magische Auflösung nicht vorzeitig.</p>"
+        },
+        "sort": 30000
+      },
+      {
+        "_id": "205b6fbe76b82aee",
+        "name": "04 Tiefer Fall – Festspiele und Landsmann",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 47–49</p><p>@UUID[Scene.3ce8cee709920eed]{Spielplan öffnen}</p><h2>Situation</h2><p>Bühnenpersonal erinnert sich an Picknick und Streit. Im Landsmann reagieren Birgit und Sven nervös, nennen unter Druck Felix und Moritz.</p><h2>Hinweise und Spielleitung</h2><p>Felix und Moritz schlugen Marlon nieder und warfen ihn in das Heidenloch. Celine entkam. Täter können nach Vorwarnung auf dem Parkplatz lauern.</p><h2>Fortgang und Alternativen</h2><p>Zeugenhinweise nicht an einer einzigen Probe festmachen. Die Lage und Verhöre können ohne Gewalteskalation gelöst werden.</p>"
+        },
+        "sort": 40000
+      },
+      {
+        "_id": "5037509a0b904b56",
+        "name": "05 Das Heidenloch untersuchen",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 48–49</p><p>@UUID[Scene.2d82856d9c9d4943]{Spielplan öffnen}</p><h2>Situation</h2><p>Überdachter Schacht mit rostigem Gitter. Tiefe 56 m, Relief bei 22 m. Am Grund zunächst weder Leiche noch Spur Marlons.</p><h2>Hinweise und Spielleitung</h2><p>Magische Aktivität nimmt nach unten zu; in der Nacht besser erkennbar. Geschlossenes Portal zu einer Geisterdomäne am Grund.</p><h2>Fortgang und Alternativen</h2><p>Die Oberfläche ist maßstäblich, der Abstieg wird mit Höhenwerten gespielt. Eine fehlende Leiche widerlegt den Angriff nicht.</p>"
+        },
+        "sort": 50000
+      },
+      {
+        "_id": "dbe8c0feb159a59a",
+        "name": "06 Im neuen Licht besehen",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 43–44, 49–50, 57</p><p>@UUID[Scene.4b2e9aed2f9b54e9]{Spielplan öffnen}</p><h2>Situation</h2><p>Im DFB-Camp verschwinden seit dem 29. Juni jede Nacht Jungen nach Niederlagen. Betreuer und Jugendliche verschweigen das Problem zunächst.</p><h2>Hinweise und Spielleitung</h2><p>Zeitgleich reiten acht Walküren über Heidelberg. Das Trikotzeichen wird von ihnen als Odins Zeichen gedeutet. Wernberger kann einen Zusatzauftrag vermitteln.</p><h2>Fortgang und Alternativen</h2><p>Diese Motivdeutung gehört zur Fiktion des Abenteuers, nicht zu einer historischen Behauptung. Das Muster verbindet Camp und Heidenloch.</p>"
+        },
+        "sort": 60000
+      },
+      {
+        "_id": "15b42d159a9e704e",
+        "name": "07 Traum vom Opfer",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 50–51</p><p>@UUID[Scene.2d82856d9c9d4943]{Spielplan öffnen}</p><h2>Situation</h2><p>Ein Runner träumt von einem gefangenen Krieger, einer Schildmaid und dem Sturz in die Opfergrube.</p><h2>Hinweise und Spielleitung</h2><p>Der Traum zeigt das historische Muster hinter dem aktuellen Geschehen. Er kann einem bisher wenig beteiligten Charakter einen wichtigen Beitrag ermöglichen.</p><h2>Fortgang und Alternativen</h2><p>Optional, falls die Gruppe den Zusammenhang bereits versteht. Keine neue Pflichtspur einführen.</p>"
+        },
+        "sort": 70000
+      },
+      {
+        "_id": "19bdf044ab8caa43",
+        "name": "08 Odins Acht",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 51–52</p><p>@UUID[Scene.2d82856d9c9d4943]{Spielplan öffnen}</p><h2>Situation</h2><p>Um Mitternacht erscheinen die acht Reiterinnen. Ihr Scheinangriff testet die Entschlossenheit. Danach sind sie gesprächsbereit.</p><h2>Hinweise und Spielleitung</h2><p>Sie suchen Brünhild; Sigrun kann deren Traum als Alchera beschwören, aber ein Recke dieser Zeit muss sie befreien. Als Gegenleistung enden die Ritte.</p><h2>Fortgang und Alternativen</h2><p>Auftrag der Walküren: nach Zeichen auf den Gipfeln sehen. Kraftstufe 8 und Überzahl sollen Gespräch plausibel machen; kein obligatorischer Vernichtungskampf.</p>"
+        },
+        "sort": 80000
+      },
+      {
+        "_id": "e2f60abfe309c2bc",
+        "name": "09 Das ist ja wohl der Gipfel",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 52–53</p><p>@UUID[Scene.72d4ec5a23140cae]{Spielplan öffnen}</p><h2>Situation</h2><p>In der nächsten Nacht erscheint der Feuerring auf einem etwa 2 km nordöstlich gelegenen Gipfel. Im Ring schläft Brünhild auf Rosen.</p><h2>Hinweise und Spielleitung</h2><p>Ringdurchmesser 5 m. K5-Feuergeister in Anzahl der Runner; auch Überfliegen provoziert sie. Feuer ist als Gefahr/Licht markiert, keine undurchdringliche Wand.</p><h2>Fortgang und Alternativen</h2><p>Nach Überwindung der Wächter wird Brünhild nach Märchenmotiv erweckt. Am Tisch kann die Gruppe statt des Kusses eine gleichwertige symbolische Weckhandlung wählen; diese Alternative ist eigene Ergänzung.</p>"
+        },
+        "sort": 90000
+      },
+      {
+        "_id": "8f90d23a4ebb69e0",
+        "name": "10 Dornröschen erwacht",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p><strong>Quelle:</strong> S. 53–55</p><p>@UUID[Scene.573502accc869ad2]{Spielplan öffnen}</p><h2>Situation</h2><p>Die Alchera verschwindet, Celine erwacht etwa vier Stunden später. Die Ritte enden, Steltz bezahlt und bedankt sich.</p><h2>Hinweise und Spielleitung</h2><p>Standard dieses Pakets: versöhnliches Ende, Marlon und die Fußballer kehren lebend aus der Geisterdomäne zurück. Die Vorlage bietet ausdrücklich auch eine tragische Variante.</p><h2>Fortgang und Alternativen</h2><p>Celines Aussage ermöglicht neue Ermittlungen gegen die Täter. Ihr Erwachen kann eine spätere magische Entwicklung anstoßen.</p>"
+        },
+        "sort": 100000
+      },
+      {
+        "_id": "ff763ae504fec792",
+        "name": "Belohnung und Abschluss",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<p>Je 20.000 € für Marlon finden, entscheidende Heilungshinweise und eigene Befreiung Celines; insgesamt 60.000 € für die Gruppe, bis +5.000 € je Teilziel verhandelbar. 1.000 € Vorschuss je Kopf. Vorlage: 2 Karma Überleben, 2 Alchera, 1 Walkürenlösung, je 1 für drei zentrale Aufklärungen, zusätzlich 1–3 nach Spielverlauf.</p><p>Belohnungen aus der SR5-Vorlage übernommen; für die eigene SR6-Kampagne nach Ermessen anpassen.</p>"
+        },
+        "sort": 110000
+      },
+      {
+        "_id": "a6226e0068c9bad8",
+        "name": "NSC-Verzeichnis",
+        "type": "text",
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "text": {
+          "format": 1,
+          "content": "<ul><li>@UUID[Actor.dff28772ebc76960]{Lucas Steltz}</li><li>@UUID[Actor.f5e1d2a35bd63000]{Celine Gruber}</li><li>@UUID[Actor.52d26757d8dd9378]{Marlon Neugebauer}</li><li>@UUID[Actor.e03629d2cf974178]{Marie Gruber}</li><li>@UUID[Actor.a9b72360f407358f]{Jonas Gruber}</li><li>@UUID[Actor.88204099a121cd82]{Lea Neugebauer-Jablonski}</li><li>@UUID[Actor.c9e509ab26c29611]{Elmar}</li><li>@UUID[Actor.fbaf12ef71ff3d02]{Dr. Jeanique Alber}</li><li>@UUID[Actor.2a164d48b4091626]{Carsten Wernberger}</li><li>@UUID[Actor.161d49b7753b6c00]{Mariusz Kolanski}</li><li>@UUID[Actor.7fa5db9516148356]{Ruppert Sager}</li><li>@UUID[Actor.102ed142d319f244]{Birgit}</li><li>@UUID[Actor.90f2a5c0fdf8684b]{Sven}</li><li>@UUID[Actor.391cbbda644f8e02]{Felix}</li><li>@UUID[Actor.305eb6df6b76e875]{Moritz}</li><li>@UUID[Actor.2aa0ae1b04681cc8]{Festspiel-Aufräumer}</li><li>@UUID[Actor.a62029fe87c8dcba]{Festspiel-Wachmann}</li><li>@UUID[Actor.e7aaacd3f97259ab]{Jugendfußballer}</li><li>@UUID[Actor.9db608b717e672b0]{Brünhild}</li><li>@UUID[Actor.3c0a2a8a3746b9c5]{Geiravör}</li><li>@UUID[Actor.42146ee236fac162]{Herja}</li><li>@UUID[Actor.772bcce2923511af]{Kára}</li><li>@UUID[Actor.1c29baaf773f1bce]{Mista}</li><li>@UUID[Actor.e5186dce82b54d29]{Sigrun}</li><li>@UUID[Actor.cecb7e263755dab2]{Skuld}</li><li>@UUID[Actor.2372d07572c78906]{Svafa}</li><li>@UUID[Actor.6264091c776a817a]{Thrudr}</li><li>@UUID[Actor.bb6772f03b95a509]{Feuergeist}</li></ul>"
+        },
+        "sort": 120000
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "journal-3"
+      }
+    }
+  },
+  {
+    "_id": "09af8ae48a3fba70",
+    "name": "Handout – Ermittlungsauftrag Sanders",
+    "pages": [
+      {
+        "_id": "404d3befa67346c5",
+        "name": "Ermittlungsauftrag Sanders",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Ermittlungsauftrag Sanders</h1><p>Todesfall Walther Sanders unabhängig aufklären. Mögliche Gefährdung oder Beteiligung des Erben untersuchen. Unauffällig vorgehen; Familie nicht schädigen. Ansprechpartner: Toni Schmidt.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "handout-d496e072ffd5c310",
+        "source": "S. 7–8"
+      }
+    }
+  },
+  {
+    "_id": "4ab5c0e8146e8a1a",
+    "name": "Handout – Chronologie der Stiftung",
+    "pages": [
+      {
+        "_id": "da7fad9875cd86f9",
+        "name": "Chronologie der Stiftung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Chronologie der Stiftung</h1><p>19. April: Kauf von Schloss und Stiftung. 22. April: Übertragung der sozialen Einrichtungen an die Stadt. 23. April: Schließung der Einrichtungen. 25. April: Beauftragung des Sternschutzes. Nacht auf 26. April: Tod Walther Sanders.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "handout-91f71c3e36fd55aa",
+        "source": "S. 6, 13–16"
+      }
+    }
+  },
+  {
+    "_id": "ccf24428e608ff21",
+    "name": "Handout – Suchauftrag Johannes D.",
+    "pages": [
+      {
+        "_id": "089b38b7ddf241e2",
+        "name": "Suchauftrag Johannes D.",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Suchauftrag Johannes D.</h1><p>Gesucht: Johannes D., 13 Jahre. Letzte Sichtung an der Absperrung zum Murgtal, etwa 24 Stunden vor Auftragserteilung. Kein Kommlink bei sich. Lebend zum vereinbarten Übergabeort bringen.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "handout-9c3c0e0eec039869",
+        "source": "S. 27"
+      }
+    }
+  },
+  {
+    "_id": "04fe3da8c2287fe0",
+    "name": "Handout – Krankenakte Celine – Kurzfassung",
+    "pages": [
+      {
+        "_id": "cd57f501a71c079e",
+        "name": "Krankenakte Celine – Kurzfassung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Krankenakte Celine – Kurzfassung</h1><p>Aufnahme am 29.06.2081 nach Auffinden am Heiligenberg. Stabile Atmung, leichte Unterkühlung, kleinere Schürfungen. Keine medizinische Erklärung für das anhaltende Koma; neurologische Aktivität ähnelt Träumen. Routineuntersuchung der Aura unauffällig. Neurostimulanzien ohne Wirkung. Kontakt: Dr. Jeanique Alber, Neurologie.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "handout-a34c52c7491a5e5a",
+        "source": "S. 59"
+      }
+    }
+  },
+  {
+    "_id": "1f74d103ac870027",
+    "name": "Handout – Vermisste im Jugendcamp",
+    "pages": [
+      {
+        "_id": "00fc5094d393bfea",
+        "name": "Vermisste im Jugendcamp",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Vermisste im Jugendcamp</h1><p>Mehrere Jungen fehlen nach verlorenen Spielen. Seit dem 29. Juni scheint jede Nacht ein weiterer Spieler zu verschwinden. Bisherige Erklärungen reichen von heimlichem Ausflug bis vorzeitiger Abreise.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "handout-4ff3a4c9be1c8071",
+        "source": "S. 43–44, 57"
+      }
+    }
+  },
+  {
+    "_id": "dab3fd1d5ddcd8dd",
+    "name": "Matrix – Hosts und Zugriff",
+    "pages": [
+      {
+        "_id": "f639b875053567e5",
+        "name": "Matrix-Integration",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Matrix mit Eden 4.0.8 / Foundry 14</h1><p>Vier echte Host-Actors mit Software-IC und elektronischen Geräten. Die A/S/D/F-Werte und Hoststufen stammen aus dem ersten Abenteuer; SR6-IC-Zuordnung und ergänzte Geräteprofile sind eine eigene Adaption.</p><ol><li>@UUID[Actor.4a2f434796708ee3]{Rathaus Wolfsburg}</li><li>@UUID[Actor.ca386e7da54ac8e4]{Sanders – Wohnhaus}</li><li>@UUID[Actor.9f32bbc74fa07067]{Sanders – Sternschutz}</li><li>@UUID[Actor.72c4abfeb5d917c4]{Schloss Wolfsburg}</li></ol><h2>Am Tisch</h2><p>Host im Actorverzeichnis öffnen und bei Bedarf als Token auf die Szene ziehen. IC und Geräte über die Bereitstellungsfunktion des Hostbogens einsetzen. Die Ziffer im IC-Namen beschreibt die Alarmfolge, startet sie aber nicht automatisch. Die Zugriffsrechte OUTSIDER / USER / ADMIN und Matrix-Aktionen verwaltet Eden; das Paket installiert keine eigene Matrix-Regellogik.</p><p>Öffentliche und vertrauliche Informationen trennen. Die Praxisakten, das Amtszimmer und Walthers Arbeitsterminal bleiben offline; ein geknackter Host ersetzt den physischen Zugang nicht.</p><p>Für die beiden anderen Abenteuer bleiben Matrixrecherchen in den jeweiligen Journals. Die verlassene Fabrik erhält keinen erfundenen funktionsfähigen Sicherheits-Host. PANs der NSC wurden nicht als vollständig ausgerüstete Decker-Personas ergänzt.</p><p>Host-Token auf einer taktischen Karte sind abstrakte Matrix-Ziele; ihr Kästchen ist keine physische Größenangabe.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "matrix-v4"
+      }
+    }
+  },
+  {
+    "_id": "c3bea9dc52fe6704",
+    "name": "Karte – Tune-Bar – Auftrag und Rapport",
+    "pages": [
+      {
+        "_id": "41acad746c2d3021",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Tune-Bar – Auftrag und Rapport</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 30 × 22 m.</p><p><strong>Quelle:</strong> S. 6–8, 23</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Gastraum</li><li>Theke</li><li>Nebenraum / WC</li><li>Hebebühnen-Bühne</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Toni Schmidt × 1</li><li>Sandra × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-01-tune-bar"
+      }
+    }
+  },
+  {
+    "_id": "c63a070957b299c8",
+    "name": "Karte – St.-Annen-Kirche – Trauerfeier",
+    "pages": [
+      {
+        "_id": "4657e25ec61e56eb",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>St.-Annen-Kirche – Trauerfeier</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 50 × 40 m.</p><p><strong>Quelle:</strong> S. 11</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Kirche</li><li>Vorplatz / AR-Übertragung</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Ralf Sanders × 1</li><li>Karin „Kati“ Sanders × 1</li><li>Dr. Arnold Behncke × 1</li><li>Charlotte Ziegler-Voigt × 1</li><li>Sternschutz-Leibwächter × 2</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-02-st-annen"
+      }
+    }
+  },
+  {
+    "_id": "073d76206ba77e78",
+    "name": "Karte – Rathaus – Erdgeschoss und Arztpraxis",
+    "pages": [
+      {
+        "_id": "9bdc084e8788ef40",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Rathaus – Erdgeschoss und Arztpraxis</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 40 × 26 m.</p><p><strong>Quelle:</strong> S. 12–13</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Rathaus EG</li><li>Labor / lokaler Server</li><li>Wartezimmer</li><li>Sprechzimmer 1</li><li>Sprechzimmer 2</li><li>Empfang Praxis</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Irmgard Weiß × 1</li><li>Dr. Arnold Behncke × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-03-rathaus-praxis"
+      }
+    }
+  },
+  {
+    "_id": "7e3512a7057019e9",
+    "name": "Karte – Rathaus – Bürgermeisterbüro, 2. OG",
+    "pages": [
+      {
+        "_id": "c43393ae5efbc398",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Rathaus – Bürgermeisterbüro, 2. OG</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 30 × 20 m.</p><p><strong>Quelle:</strong> S. 13</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Amtsbereich</li><li>Vorzimmer</li><li>Amtszimmer / Papierakten</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Herbert Dahlen × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-04-rathaus-buero"
+      }
+    }
+  },
+  {
+    "_id": "e1b734c6207c56f2",
+    "name": "Karte – Sanders-Anwesen – Garten und Zufahrt",
+    "pages": [
+      {
+        "_id": "d7f6abc4c0c8172c",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sanders-Anwesen – Garten und Zufahrt</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 50 Pixel je Meter; 88 × 110 m.</p><p><strong>Quelle:</strong> S. 13–15</p><p>Grundstück 80 × 100 m laut Text; Gebäudeabmessungen und Gartenaufteilung als Spielplan ergänzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Haupthaus – separate Etagen</li><li>Garage</li><li>Gerätehaus</li><li>Nordtor / Kameras</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Sternschutz-Wachmann × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-05-sanders-garten"
+      }
+    }
+  },
+  {
+    "_id": "a04c6f3d39c95a18",
+    "name": "Karte – Sanders-Anwesen – Keller",
+    "pages": [
+      {
+        "_id": "1fe392fc732685ce",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sanders-Anwesen – Keller</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 28 m.</p><p><strong>Quelle:</strong> S. 14–16; Handout S. 69</p><p>Eigene Neuzeichnung nach Text und Handout. Hausgrundfläche 40 × 22 m als Spielmaß angenommen; Etagen deckungsgleich.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Haustechnik</li><li>Weinkeller</li><li>Wäsche</li><li>Küche</li><li>Vorräte</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-06-sanders-kg"
+      }
+    }
+  },
+  {
+    "_id": "474782965c9c1f33",
+    "name": "Karte – Sanders-Anwesen – Erdgeschoss",
+    "pages": [
+      {
+        "_id": "87729cadaf526532",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sanders-Anwesen – Erdgeschoss</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 28 m.</p><p><strong>Quelle:</strong> S. 14–16; Handout S. 69</p><p>Eigene Neuzeichnung nach Text und Handout. Hausgrundfläche 40 × 22 m als Spielmaß angenommen; Etagen deckungsgleich.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Bibliothek / Heimkino</li><li>Empfangshalle</li><li>Wohn- und Speiseraum</li><li>Kinolager</li><li>Service</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Peter Günther × 1</li><li>Harald Kleinschmitt × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-06-sanders-eg"
+      }
+    }
+  },
+  {
+    "_id": "093f63d7c6ae8a5b",
+    "name": "Karte – Sanders-Anwesen – Obergeschoss",
+    "pages": [
+      {
+        "_id": "b01338643be5897b",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sanders-Anwesen – Obergeschoss</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 28 m.</p><p><strong>Quelle:</strong> S. 14–16; Handout S. 69</p><p>Eigene Neuzeichnung nach Text und Handout. Hausgrundfläche 40 × 22 m als Spielmaß angenommen; Etagen deckungsgleich.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Ralf: Wohn- / Schlafbereich</li><li>Walther: Arbeitszimmer</li><li>Umlaufende Galerie</li><li>Personalwohnungen</li><li>Gästesuiten</li><li>Sternschutz-Quartier</li><li>Terminal Walther: lokal, kein WLAN</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Ralf Sanders × 1</li><li>Sternschutz-Leibwächter × 2</li><li>Sternschutz-Wachmann × 1</li><li>Lisa Nolte × 1</li><li>Fragment des Edlen × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-06-sanders-og"
+      }
+    }
+  },
+  {
+    "_id": "38682002ffb21dfb",
+    "name": "Karte – Sanders-Anwesen – Dachgarten",
+    "pages": [
+      {
+        "_id": "f79705a58bc5d1eb",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sanders-Anwesen – Dachgarten</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 28 m.</p><p><strong>Quelle:</strong> S. 14–16; Handout S. 69</p><p>Eigene Neuzeichnung nach Text und Handout. Hausgrundfläche 40 × 22 m als Spielmaß angenommen; Etagen deckungsgleich.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Oberlicht Halle</li><li>Treppe</li><li>Aufzug</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Sternschutz-Wachmann × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-06-sanders-dach"
+      }
+    }
+  },
+  {
+    "_id": "a01c3a4b74bfa36c",
+    "name": "Karte – Schloss Wolfsburg – Innenhof und Torflügel",
+    "pages": [
+      {
+        "_id": "090534691757ff68",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Schloss Wolfsburg – Innenhof und Torflügel</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 60 Pixel je Meter; 64 × 52 m.</p><p><strong>Quelle:</strong> S. 18–19</p><p>Spielbarer Ausschnitt mit vier Flügeln; keine vollständige Rekonstruktion der mehr als 80 Räume.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Innenhof</li><li>Wachstube am Tor</li><li>Hausmannsturm – 50 m Aufstieg</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Schlosswächter × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-07-schloss"
+      }
+    }
+  },
+  {
+    "_id": "717ba662afffc4c6",
+    "name": "Karte – Hausmannsturm – Wachstube",
+    "pages": [
+      {
+        "_id": "ba594b9d6b70419a",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Hausmannsturm – Wachstube</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 160 Pixel je Meter; 10 × 12 m.</p><p><strong>Quelle:</strong> S. 19–20</p><p>Wachstube innen exakt 4 × 4 m; Treppenpodest als spielbare Ergänzung.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Wachstube: 4 × 4 m</li><li>Podest</li></ol><p>@UUID[JournalEntry.e737d68ed52e69bf]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Fragment des Edlen × 1</li><li>Fragment der Armen × 1 (anfangs verborgen)</li><li>Fragment der Armen × 1 (anfangs verborgen)</li><li>Fragment der Armen × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 1,
+        "key": "map-guide-a1-08-hausmannsturm"
+      }
+    }
+  },
+  {
+    "_id": "3d7a49e322e1d17e",
+    "name": "Karte – Die Kanone – Auftrag",
+    "pages": [
+      {
+        "_id": "6f0ac29cde2e5a64",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Die Kanone – Auftrag</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 30 × 22 m.</p><p><strong>Quelle:</strong> S. 26–28</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Gastraum</li><li>Theke</li><li>Nebenraum / WC</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Herr Schmidt – Karlsruhe × 1</li><li>Manfred × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-01-kanone"
+      }
+    }
+  },
+  {
+    "_id": "5677b5861e75f45c",
+    "name": "Karte – Murgtal – Bushaltestelle und Absperrung",
+    "pages": [
+      {
+        "_id": "fe5438d4cd497fa5",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Murgtal – Bushaltestelle und Absperrung</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 48 × 32 m.</p><p><strong>Quelle:</strong> S. 28–29</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Bushaltestelle</li><li>Zaun – überkletterbar</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Adam Braun × 1</li><li>Hell-Goats-Ganger × 4 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-02-waldrand"
+      }
+    }
+  },
+  {
+    "_id": "2a1bda8b9a876f6d",
+    "name": "Karte – Erwachter Wald – Waldpfad und Lichtung",
+    "pages": [
+      {
+        "_id": "07e53dcb6512ea8f",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Erwachter Wald – Waldpfad und Lichtung</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 48 × 36 m.</p><p><strong>Quelle:</strong> S. 29–32</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Begegnungslichtung</li><li>Gasader / Spuren</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Bär × 1 (anfangs verborgen)</li><li>Wolf × 4 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-03-pfad"
+      }
+    }
+  },
+  {
+    "_id": "66b4f16b3635f378",
+    "name": "Karte – Erwachter Wald – Schlucht und Hängebrücke",
+    "pages": [
+      {
+        "_id": "165d3b624084db74",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Erwachter Wald – Schlucht und Hängebrücke</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 48 × 36 m.</p><p><strong>Quelle:</strong> S. 29–32</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Morsche Brücke</li><li>Schlucht / Stromschnellen</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-03-bruecke"
+      }
+    }
+  },
+  {
+    "_id": "c0d73258e2938d09",
+    "name": "Karte – Erwachter Wald – Furt der Wassergeister",
+    "pages": [
+      {
+        "_id": "a0559ab6bef555c3",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Erwachter Wald – Furt der Wassergeister</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 48 × 36 m.</p><p><strong>Quelle:</strong> S. 29–32</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Seichte Furt</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Wassergeist × 5</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-03-furt"
+      }
+    }
+  },
+  {
+    "_id": "b926164dfff0bd6e",
+    "name": "Karte – Erwachter Wald – Überwucherte Hütte",
+    "pages": [
+      {
+        "_id": "431d18fe0233b3ae",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Erwachter Wald – Überwucherte Hütte</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 48 × 36 m.</p><p><strong>Quelle:</strong> S. 29–32</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Verschüttete Hütte</li><li>Morsches Dach / Pilze</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-03-huette"
+      }
+    }
+  },
+  {
+    "_id": "3edff6c1480ba2a8",
+    "name": "Karte – Hundskopf – Geisterdorf",
+    "pages": [
+      {
+        "_id": "d60055c086604bc2",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Hundskopf – Geisterdorf</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 60 Pixel je Meter; 60 × 44 m.</p><p><strong>Quelle:</strong> S. 33–34</p><p>Ausschnitt des Dorfes; die Fabrik liegt erzählerisch 500 m entfernt, nicht am Kartenrand.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Ruine</li><li>Ruine</li><li>Ruine</li><li>Ruine</li><li>Kanaleinstieg</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Alfred × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-04-hundskopf"
+      }
+    }
+  },
+  {
+    "_id": "0d32c703374b8157",
+    "name": "Karte – Hundskopf – Kanalroute zur Fabrik",
+    "pages": [
+      {
+        "_id": "0e61fc78f6345718",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Hundskopf – Kanalroute zur Fabrik</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 54 × 30 m.</p><p><strong>Quelle:</strong> S. 33–34</p><p>Schematischer taktischer Ausschnitt der längeren Kanalroute; Verbindung zum Dorf und zur Fabrik über Szenenwechsel.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Einstieg Hundskopf</li><li>Aufstieg Lagerhalle</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Neogargyle × 2 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-05-kanal"
+      }
+    }
+  },
+  {
+    "_id": "d06fc1aa844e6ef0",
+    "name": "Karte – Süßigkeiten-Fabrik – Produktion und Lager",
+    "pages": [
+      {
+        "_id": "818bb07fd19dc104",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Süßigkeiten-Fabrik – Produktion und Lager</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 56 × 44 m.</p><p><strong>Quelle:</strong> S. 34–36; Handout S. 71</p><p>Eigene maßstäbliche Neuzeichnung nach Text und Handout; Gebäudemaße 40 × 32 m angenommen.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Empfang</li><li>Umkleide</li><li>Lager / Kanaldeckel</li><li>36 Vorrichtungen / 27 belegt</li><li>Industrieofen</li><li>Johannes: Lüftungsschacht</li><li>Feuerleiter</li><li>Offenes Ladetor</li></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Johannes Dietrich × 1 (anfangs verborgen)</li><li>Die Hexe × 1 (anfangs verborgen)</li><li>Hexendiener – Teigmischer × 1 (anfangs verborgen)</li><li>Hexendiener – Greifarm A × 1 (anfangs verborgen)</li><li>Hexendiener – Greifarm B × 1 (anfangs verborgen)</li><li>Hexendiener – Industriekessel × 1 (anfangs verborgen)</li><li>Hexendiener – Gabelstapler × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-06-fabrik"
+      }
+    }
+  },
+  {
+    "_id": "e8ea76b9335fe7ee",
+    "name": "Karte – Karlsruhe – Übergabe im Parkhaus",
+    "pages": [
+      {
+        "_id": "25a7776f17519211",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Karlsruhe – Übergabe im Parkhaus</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 30 m.</p><p><strong>Quelle:</strong> S. 37</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol></ol><p>@UUID[JournalEntry.32a10a761fd711ea]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Herr Schmidt – Karlsruhe × 1</li><li>Maria Dietrich × 1</li><li>Leibwächter – Troll × 1</li><li>Leibwächter – Elf × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 2,
+        "key": "map-guide-a2-07-parkhaus"
+      }
+    }
+  },
+  {
+    "_id": "5f10e263fccdbd07",
+    "name": "Karte – Cocktail Club – Altes Hallenbad",
+    "pages": [
+      {
+        "_id": "1ee2eb96913ebaab",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Cocktail Club – Altes Hallenbad</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 30 × 22 m.</p><p><strong>Quelle:</strong> S. 41–42</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Gastraum</li><li>Theke</li><li>Nebenraum / WC</li><li>Dachterrasse / Segel</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Lucas Steltz × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-01-cocktail"
+      }
+    }
+  },
+  {
+    "_id": "ef6f4c815a41d973",
+    "name": "Karte – Familie Gruber – Handschuhheim",
+    "pages": [
+      {
+        "_id": "beac3fa7acb8fa03",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Familie Gruber – Handschuhheim</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 24 × 20 m.</p><p><strong>Quelle:</strong> S. 44–46</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Celines Zimmer</li><li>Schlafzimmer</li><li>Wohnzimmer</li><li>Küche / Bad</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Marie Gruber × 1</li><li>Jonas Gruber × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-02-gruber"
+      }
+    }
+  },
+  {
+    "_id": "3b367ef6beca7215",
+    "name": "Karte – Familie Neugebauer – Boxberg",
+    "pages": [
+      {
+        "_id": "16104993a62c1793",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Familie Neugebauer – Boxberg</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 24 × 20 m.</p><p><strong>Quelle:</strong> S. 44–46</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Kinderzimmer</li><li>Schlafzimmer</li><li>Wohnzimmer</li><li>Küche / Bad</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Lea Neugebauer-Jablonski × 1</li><li>Elmar × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-02-neugebauer"
+      }
+    }
+  },
+  {
+    "_id": "e23c354b25708ad5",
+    "name": "Karte – Uniklinik – Neurologie",
+    "pages": [
+      {
+        "_id": "0f55293d7b2c9047",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Uniklinik – Neurologie</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 32 × 24 m.</p><p><strong>Quelle:</strong> S. 45–46, 59</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Celines Einzelzimmer</li><li>Stationszimmer</li><li>Untersuchung</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Celine Gruber × 1</li><li>Dr. Jeanique Alber × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-03-uniklinik"
+      }
+    }
+  },
+  {
+    "_id": "a0b8138adf96f257",
+    "name": "Karte – Heidenloch – Zugang und Begegnung",
+    "pages": [
+      {
+        "_id": "4971e8b48da34c73",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Heidenloch – Zugang und Begegnung</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 40 × 32 m.</p><p><strong>Quelle:</strong> S. 47–48, 51–52</p><p>Schacht 56 m tief laut Text; Oberfläche als 1-m-Plan. Keine seitliche Querschnittskarte: Tiefe über Journal und Tokenhöhe.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Heidenloch: −56 m / Relief bei −22 m</li><li>Rostiges Gitter / Überdachung</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Sigrun × 1 (anfangs verborgen)</li><li>Geiravör × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-04-heidenloch"
+      }
+    }
+  },
+  {
+    "_id": "c4a38179980b2498",
+    "name": "Karte – Café-Restaurant Landsmann",
+    "pages": [
+      {
+        "_id": "b9360a0f04ca9080",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Café-Restaurant Landsmann</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 80 Pixel je Meter; 44 × 34 m.</p><p><strong>Quelle:</strong> S. 48–49</p><p>Eigene maßstäbliche Spielplan-Ausarbeitung nach der Schauplatzbeschreibung; Außenmaße geschätzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Küche</li><li>WC</li><li>Gastraum</li><li>Biergarten</li><li>Parkplatz</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Birgit × 1</li><li>Sven × 1</li><li>Felix × 1 (anfangs verborgen)</li><li>Moritz × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-05-landsmann"
+      }
+    }
+  },
+  {
+    "_id": "68d98f51307b8fa3",
+    "name": "Karte – Heiligenberg – Festspielbühne und Picknick",
+    "pages": [
+      {
+        "_id": "89d053523cb0d824",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Heiligenberg – Festspielbühne und Picknick</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 60 Pixel je Meter; 64 × 48 m.</p><p><strong>Quelle:</strong> S. 47–48</p><p>Taktischer Ausschnitt; Wege zu Heidenloch und Klosterruinen als Szenenverbindungen.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Bühne</li><li>Zuschauerränge</li><li>Picknick-Fundstelle</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Festspiel-Aufräumer × 1</li><li>Festspiel-Wachmann × 1</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-06-festspiel"
+      }
+    }
+  },
+  {
+    "_id": "0e3f24b323dd264c",
+    "name": "Karte – DFB-Camp – Wohnheim und Befragung",
+    "pages": [
+      {
+        "_id": "6db32cc6b1b5e4af",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>DFB-Camp – Wohnheim und Befragung</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 70 Pixel je Meter; 56 × 38 m.</p><p><strong>Quelle:</strong> S. 43–44, 50</p><p>Taktischer Ausschnitt am Wohnheim; kein verkleinertes Fußballfeld.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Spielerzimmer</li><li>Flur / Aufsicht</li><li>Betreuung</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Carsten Wernberger × 1</li><li>Jugendfußballer × 4</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-07-trainingscamp"
+      }
+    }
+  },
+  {
+    "_id": "0d31ef2fe0068b0e",
+    "name": "Karte – Alchera – Ring aus Feuer",
+    "pages": [
+      {
+        "_id": "33857ff179033776",
+        "name": "Spielleitung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Alchera – Ring aus Feuer</h1><p><strong>Maßstab:</strong> 1 Kästchen = 1 m; 100 Pixel je Meter; 40 × 32 m.</p><p><strong>Quelle:</strong> S. 52–53</p><p>Feuerring exakt 5 m Durchmesser; Lichtung und Zugangswege als Spielplan ergänzt.</p><p>Nordrichtung: oben. Türen goldfarben, Wände hellgrau, technische Einrichtungen blaugrau. Vorschau enthält Raumnummern; Spielbild ist ohne eingebranntes Raster und ohne Geheimnisse.</p><ol><li>Rosenlager / Brünhild</li></ol><p>@UUID[JournalEntry.ca662d74e7505014]{Kapitel und Ablauf}</p><h2>Vorbereitete Figuren</h2><ul><li>Brünhild × 1 (anfangs verborgen)</li><li>Feuergeist × 1 (anfangs verborgen)</li><li>Feuergeist × 1 (anfangs verborgen)</li><li>Feuergeist × 1 (anfangs verborgen)</li><li>Feuergeist × 1 (anfangs verborgen)</li></ul><p>Begegnungszahlen sind für vier Runner vorbereitet. Laut Kapiteltext skalieren; verborgene Tokens erst zum passenden Zeitpunkt aufdecken. Unverborgene NSC sind neutrale Gesprächspartner, ihre genaue Position ist ein Aufstellungsvorschlag.</p>"
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "map-guide-a3-08-alchera"
+      }
+    }
+  }
+]

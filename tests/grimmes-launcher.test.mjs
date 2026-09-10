@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {initializeImporter,registerImporterMenu} from '../modules/grimmes-erwachen/importer.mjs';
+let created=0,menu,warning=0;
+globalThis.foundry={applications:{api:{ApplicationV2:class {}}}};
+globalThis.game={user:{isGM:true,id:'gm'},users:{activeGM:{id:'gm'}},modules:new Map([['grimmes-erwachen',{}]]),macros:{find:()=>undefined},settings:{registerMenu:(id,key,data)=>{menu=data;}}};
+globalThis.CONFIG={Macro:{documentClass:{create:async()=>{created++;}}}};
+globalThis.ui={notifications:{info:()=>{},warn:()=>warning++}};
+registerImporterMenu();assert(menu.restricted);assert(menu.type.prototype instanceof foundry.applications.api.ApplicationV2);
+await initializeImporter();assert.equal(created,1);assert.equal(typeof game.modules.get('grimmes-erwachen').api.showImporter,'function');
+CONFIG.Macro.documentClass.create=async()=>{throw new Error('simulierter Makrofehler');};
+const old=console.error;console.error=()=>{};await initializeImporter();console.error=old;
+assert.equal(warning,1);assert(game.modules.get('grimmes-erwachen').api);
+console.log('Startmenü, Makro ohne globale Macro-Klasse und Fehlermeldung geprüft.');

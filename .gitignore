@@ -9,7 +9,7 @@ backup/ssh/backup_key
 .dockerignore
 
 # User-Daten vom Live-Host – werden in foundryvtt-backups gesichert, nicht hier!
-data/
+/data/
 
 # Lokale Migrationssicherungen (enthalten Daten und Secrets)
 /migration-*/
