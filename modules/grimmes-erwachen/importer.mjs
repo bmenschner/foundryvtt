@@ -2,6 +2,83 @@ const ID = 'grimmes-erwachen';
 const BASE = `modules/${ID}`;
 let busy = false;
 
+export function prepareScene(data) {
+  const scene = foundry.utils.deepClone(data);
+  if (scene.background?.src && !scene.levels?.length) {
+    const levelId = foundry.utils.randomID();
+    scene.levels = [{_id:levelId,name:'Spielplan',background:{src:scene.background.src},flags:{[ID]:{key:'map-level'}}}];
+    scene.initialLevel = levelId;
+  }
+  delete scene.background;
+  return scene;
+}
+
+async function checkMedia(paths) {
+  const media = [...new Set(paths.filter(path=>path?.startsWith(`${BASE}/assets/`)))];
+  for (let i=0;i<media.length;i+=6) await Promise.all(media.slice(i,i+6).map(async path => {
+    const response = await fetch(path,{method:'HEAD'});
+    if (!response.ok) throw new Error(`Bild fehlt: ${path}. Der Modulordner muss samt assets kopiert sein.`);
+  }));
+}
+
+const sceneImage = scene => scene.levels?.find(l=>l.background?.src)?.background.src ?? scene.background?.src;
+const replaceablePortrait = path => !path || path.startsWith(`${BASE}/assets/tokens/`) || path === 'icons/svg/mystery-man.svg';
+
+export async function repairMedia({chapters=[1,2,3]}={}) {
+  if (!game.user.isGM) throw new Error('Nur für die Spielleitung verfügbar.');
+  if (Number(game.release?.generation) !== 14) throw new Error('Die Bildkorrektur benötigt Foundry 14.');
+  if (busy) { ui.notifications.warn('Ein Import oder eine Bildkorrektur läuft bereits.'); return; }
+  busy = true;
+  const report = {scenes:0,actors:0,tokens:0,pages:0};
+  try {
+    const [actors,journals,scenes] = await Promise.all(['actors','journals','scenes'].map(readData));
+    const data = selectDocuments({actors,journals,scenes},chapters,true);
+    await checkMedia([...data.scenes.map(sceneImage),...data.actors.map(a=>a.img),...data.journals.flatMap(j=>j.pages.filter(p=>p.type==='image').map(p=>p.src))]);
+    const portraits = new Map();
+    for (const source of data.actors) {
+      const actor = game.actors.find(a=>a.getFlag(ID,'key')===source.flags[ID].key);
+      if (!actor || !source.img?.includes('/assets/portraits/')) continue;
+      portraits.set(actor.id,source.img);
+      const changes = {};
+      if (replaceablePortrait(actor.img)) changes.img = source.img;
+      if (replaceablePortrait(actor.prototypeToken?.texture?.src)) changes['prototypeToken.texture.src'] = source.img;
+      if (Object.keys(changes).length) { await actor.update(changes); report.actors++; }
+    }
+    for (const source of data.scenes) {
+      const scene = game.scenes.find(s=>s.getFlag(ID,'key')===source.flags[ID].key);
+      if (!scene) continue;
+      const levels = Array.from(scene.levels ?? []);
+      let level = levels.find(l=>l.getFlag?.(ID,'key')==='map-level') ?? scene.initialLevel ?? levels[0];
+      if (typeof level === 'string') level = levels.find(l=>l.id===level);
+      if (!level && !levels.some(l=>l.background?.src)) {
+        [level] = await scene.createEmbeddedDocuments('Level',[{name:'Spielplan',background:{src:sceneImage(source)},flags:{[ID]:{key:'map-level'}}}]);
+        await scene.update({initialLevel:level.id});
+        report.scenes++;
+      } else if (level && !level.background?.src && !levels.some(l=>l.background?.src)) {
+        await scene.updateEmbeddedDocuments('Level',[{_id:level.id,'background.src':sceneImage(source)}]);
+        report.scenes++;
+      }
+      const changes = Array.from(scene.tokens ?? []).filter(t=>portraits.has(t.actorId) && replaceablePortrait(t.texture?.src))
+        .map(t=>({_id:t.id ?? t._id,'texture.src':portraits.get(t.actorId)}));
+      if (changes.length) { await scene.updateEmbeddedDocuments('Token',changes); report.tokens += changes.length; }
+    }
+    for (const source of data.journals) {
+      const journal = game.journal.find(j=>j.getFlag(ID,'key')===source.flags[ID].key);
+      if (!journal) continue;
+      const pages = source.pages.filter(p=>p.type==='image' && !Array.from(journal.pages).some(old=>old.getFlag?.(ID,'key')===p.flags?.[ID]?.key || old.src===p.src));
+      if (pages.length) {
+        await journal.createEmbeddedDocuments('JournalEntryPage',pages.map(p=>{const copy=foundry.utils.deepClone(p);delete copy._id;return copy;}));
+        report.pages += pages.length;
+      }
+    }
+    ui.notifications.info(`Bilder ergänzt: ${report.scenes} Szenen, ${report.actors} NSC, ${report.tokens} Tokens, ${report.pages} Journalseiten. Eigene Bilder und Spielwerte bleiben erhalten.`,{permanent:true});
+    return report;
+  } catch(error) {
+    ui.notifications.error(`Bildkorrektur gestoppt: ${error.message}. Erneutes Ausführen ist möglich.`,{permanent:true});
+    throw error;
+  } finally { busy=false; }
+}
+
 export function rewriteLinks(value, remap) {
   if (typeof value === 'string') {
     if (remap.has(value)) return remap.get(value);
@@ -23,7 +100,7 @@ export function selectDocuments(bundle, chapters, withActors) {
 }
 
 async function readData(name) {
-  const response = await fetch(`${BASE}/data/${name}.json`);
+  const response = await fetch(`${BASE}/data/${name}.json`,{cache:'no-store'});
   if (!response.ok) throw new Error(`Datei fehlt: ${name}.json (${response.status}). Modulordner vollständig kopieren.`);
   return response.json();
 }
@@ -78,19 +155,15 @@ export async function importBundle({chapters=[1,2,3],withActors=true}={}) {
         if (existing.has(`${type}:${d._id}`)) continue;
         const candidate = rewriteLinks(foundry.utils.deepClone(d),remap);
         candidate.flags[ID].key=d.flags[ID].key;
-        const migrated = Class.migrateDataSafe(candidate);
+        const migrated = Class.migrateDataSafe(type === 'Scene' ? prepareScene(candidate) : candidate);
         const temp = new Class(migrated,{temporary:true});
         if (temp.validate({strict:true}) === false) throw new Error(`Ungültige ${type}-Daten: ${d.name}`);
-        prepared.set(`${type}:${d._id}`,temp.toObject());
+        const normalized = temp.toObject();
+        if (type === 'Scene' && sceneImage(normalized) !== sceneImage(d)) throw new Error(`Szenenhintergrund wurde bei der Foundry-Konvertierung verworfen: ${d.name}`);
+        prepared.set(`${type}:${d._id}`,normalized);
       }
     }
-    const media = [...new Set(data.scenes.map(s => s.background.src))];
-    for (let i=0;i<media.length;i+=6) {
-      await Promise.all(media.slice(i,i+6).map(async path => {
-        const r = await fetch(path,{method:'HEAD'});
-        if (!r.ok) throw new Error(`Bild fehlt: ${path}. Der Modulordner muss samt assets kopiert sein.`);
-      }));
-    }
+    await checkMedia([...data.scenes.map(sceneImage),...data.actors.map(a=>a.img),...data.journals.flatMap(j=>j.pages.filter(p=>p.type==='image').map(p=>p.src))]);
     ui.notifications.info('Grimmes Erwachen: Dateien geprüft, Import startet.');
     const roots=new Map();
     for (const [type,docs,,Class] of sets) {
@@ -119,13 +192,15 @@ export async function showImporter() {
   const DialogClass = foundry.applications.api.DialogV2;
   const result = await DialogClass.wait({
     window:{title:'Grimmes Erwachen – Import'},
-    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC, 4 Matrix-Hosts und 39 Journals.</p><p>NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt. Bestehende importierte Inhalte werden übersprungen.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
+    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 4 Matrix-Hosts und 39 Journals mit Bildseiten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
     buttons:[
+      {action:'repair',label:'Bilder ergänzen / reparieren',callback:(event,button,dialog)=>({repair:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
       {action:'all',label:'Komplettpaket importieren',callback:(event,button,dialog)=>({chapter:dialog.element.querySelector('[name=chapter]').value,withActors:true})},
       {action:'maps',label:'Nur Szenen und Journals',callback:(event,button,dialog)=>({chapter:dialog.element.querySelector('[name=chapter]').value,withActors:false})}
     ],rejectClose:false
   });
   if (!result) return;
+  if (result.repair) return repairMedia({chapters:result.chapter==='all'?[1,2,3]:[Number(result.chapter)]});
   return importBundle({chapters:result.chapter==='all'?[1,2,3]:[Number(result.chapter)],withActors:result.withActors});
 }
 
@@ -141,7 +216,7 @@ export function registerImporterMenu() {
 }
 
 export async function initializeImporter() {
-  game.modules.get(ID).api={showImporter,importBundle};
+  game.modules.get(ID).api={showImporter,importBundle,repairMedia};
   // Only the active GM creates the launcher; importing content is an explicit click.
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id !== game.user.id)) return;
   try {

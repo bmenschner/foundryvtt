@@ -1,6 +1,6 @@
 # Grimmes Erwachen – Abenteuerpaket für Foundry 14
 
-Version 1.0.2 korrigiert die System-Kompatibilität: Eden ab 4.0.8 wird bei der Modulaktivierung nicht mehr durch eine fälschlich auf „4“ gesetzte maximale Abhängigkeitsversion abgewiesen. Der Importer prüft weiterhin Eden 4.x und die Matrix-Datenmodelle. Nach dem Deployment das Modul erneut aktivieren und die Welt neu laden.
+Version 1.1.0 ergänzt Szenenhintergründe auf nativen Foundry-14-Ebenen, 71 individuelle Porträts und Bildseiten in den Hauptjournals. Bereits importierte Welten über **Abenteuer importieren → Bilder ergänzen / reparieren** aktualisieren. Die [Schritt-für-Schritt-Anleitung](grimmes-erwachen-bilder.md) beschreibt die Bildkorrektur. Dieses Update wird zunächst als Pull Request bereitgestellt; es wird nicht automatisch auf den Server übertragen.
 
 Ziel: **Foundry VTT 14.367 (Stable)** und **Shadowrun 6 Eden 4.0.8**, System-ID `shadowrun6-eden`. Stand: 8. September 2026.
 
@@ -15,7 +15,8 @@ Enthalten sind die drei Abenteuer **Spuk in der Wolfsburg**, **Zucker für die K
 | NSC, Gegner und Kreaturen mit eigenen SR6-Arbeitswerten | 71 |
 | Matrix-Hosts für die Eden-4-Integration | 4 |
 | Eingebettete IC-Profile | 17 |
-| Journals, einschließlich Kartenhilfen und Handouts | 39 / 68 Seiten |
+| Journals, einschließlich Kartenhilfen und Handouts | 39 / 143 Seiten |
+| Individuelle Porträts für NSC, Geister und Kreaturen | 71 |
 
 Alle taktischen Szenen verwenden **1 Kästchen = 1 Meter**. Sie enthalten Wände, Türen, Lichtquellen, vorbereitete Tokens und Journalnotizen. Die Hintergrundszenen sind rasterlos. Das Titelbild trägt unten „Grimmes Erwachen“.
 
@@ -67,7 +68,7 @@ Das optionale Script-Makro `UVTT-auf-1m.js` stellt erkannte Karten dieses Pakets
 - Die Karten sind eigens ausgearbeitete, schematische Grundrisse. Bekannte Maße aus der Vorlage sind berücksichtigt, darunter das 80 × 100 m große Sanders-Grundstück, die 4 × 4 m große Turmstube und der Feuerring mit 5 m Durchmesser. Andere Außenmaße und viele Einrichtungsdetails sind ergänzte Spielleitungsannahmen und im Kartenjournal gekennzeichnet. Es sind keine originalgetreuen Vermessungen aller Schauplätze.
 - Das Schloss ist als spielbarer Ausschnitt mit Hof und Flügeln angelegt; seine über 80 Räume sind nicht sämtlich rekonstruiert. Das 56 m tiefe Heidenloch ist auf der Karte als Schachtöffnung dargestellt; Höhen und Abstieg stehen im Journal. Das Trainingscamp zeigt einen Unterkunftsausschnitt.
 - Begegnungen sind überwiegend für vier Runner vorbereitet. Gruppenabhängige Gegnerzahlen vor dem Spiel anpassen. Verborgene Gegner-Tokens erst zur passenden Szene aufdecken. Einige alternative Waldgegner sind gleichzeitig als verborgene Aufstellungsvorschläge vorhanden; nicht alle müssen in derselben Begegnung auftreten.
-- NSC-Werte sind eine **eigene SR6-Arbeitsadaption der SR5-Vorlage**, keine offizielle Konvertierung. Rollenprofile und vereinfachte Waffenwerte wurden ergänzt. Geister und Kreaturen verwenden bewusst den flexiblen NPC-Bogen, um individuelle Werte beizubehalten; Sonderkräfte sind Referenzeinträge und teilweise manuell abzuwickeln. Tokenbilder sind lesbare Monogramme, keine Porträts.
+- NSC-Werte sind eine **eigene SR6-Arbeitsadaption der SR5-Vorlage**, keine offizielle Konvertierung. Rollenprofile und vereinfachte Waffenwerte wurden ergänzt. Geister und Kreaturen verwenden bewusst den flexiblen NPC-Bogen, um individuelle Werte beizubehalten; Sonderkräfte sind Referenzeinträge und teilweise manuell abzuwickeln. Die 71 NSC und Kreaturen erhalten individuelle Porträts; die Bildkorrektur ersetzt die alten Monogramme und erhält selbst gewählte Bilder.
 - Die vier atmosphärischen Bilder wurden generiert und auf tatsächliche **3840 × 2160 Pixel** hochskaliert. Perspektivische Stimmungsbilder besitzen keinen metrischen Kartenmaßstab. Die taktischen Karten behalten ihr zum Grundriss passendes Seitenverhältnis.
 - Journals enthalten eigene Zusammenfassungen, Ablaufhilfen und kurze Handouts. Für vollständige Originaltexte und besondere Regeldetails die bereitgestellte PDF verwenden. Das Paket ist keine vollständige Reproduktion der Publikation.
 
@@ -75,7 +76,7 @@ Das optionale Script-Makro `UVTT-auf-1m.js` stellt erkannte Karten dieses Pakets
 
 Bildabmessungen und eingebettete UVTT-Bilder, Maßstab, Wand-/Türüberlagerungen, Token-Grenzen, eindeutige IDs, Bildpfade und Journalverknüpfungen wurden automatisch geprüft. Alle vier Hintergrundbilder sind 16:9 in UHD. Die Kartenübersicht und Titelvorschau wurden visuell kontrolliert.
 
-Dokumentdaten wurden offline mit der lokal verfügbaren Foundry-13.351-Datenbibliothek geprüft; zusätzlich wurden die originalen Host-/Software-Datenmodelle von Eden 4.0.8 in den isolierten Test geladen. Ein separater Importablauftest mit simulierten Dokumentklassen prüft Vollimport, Wiederholung, ID-Kollisionen, Kapitelwahl und Abbruch bei fehlendem Bild. **Dies ersetzt keinen Live-Importtest in Foundry 14.367.** Deshalb ist das Modul nicht als live „verified“ deklariert; die Vorprüfung im Importmakro erfolgt gegen eure tatsächliche Zielinstallation.
+Die ursprünglichen Dokumentdaten wurden offline mit der lokal verfügbaren Foundry-13.351-Datenbibliothek und den Host-/Software-Datenmodellen von Eden 4.0.8 geprüft. Dieser ältere Test deckt die neuen Foundry-14-Ebenen nicht ab. Aktuelle Tests mit simulierten Dokumentklassen prüfen Vollimport, Wiederholung, ID-Kollisionen, Kapitelwahl, Bildkorrektur und Abbruch bei fehlenden oder verworfenen Hintergründen. Zusätzliche Pakettests prüfen die Zuordnung sämtlicher Porträts, Bildseiten und Szenenebenen. **Dies ersetzt keinen Live-Importtest in Foundry 14.367.** Das Modul ist daher nicht als live „verified“ deklariert; die Vorprüfung beim Import erfolgt gegen eure tatsächliche Zielinstallation.
 
 Maschinenlesbare Ergebnisse: `dokumentation/Pruefbericht.json`, `dokumentation/Importtest.json`, `dokumentation/Schematest.json`. Der Schematest umfasst 360 Dokumente einschließlich eingebetteter Items.
 

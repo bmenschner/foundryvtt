@@ -142,6 +142,446 @@
           "content": "<ul><li>@UUID[Actor.932f23884ed1893e]{Toni Schmidt}</li><li>@UUID[Actor.79f8f85858c19fa4]{Sandra}</li><li>@UUID[Actor.eae220f6be703a42]{Ralf Sanders}</li><li>@UUID[Actor.38f930ed307aeeeb]{Karin „Kati“ Sanders}</li><li>@UUID[Actor.ca9f57f2d6ede4c9]{Walther Sanders}</li><li>@UUID[Actor.6976132fe8401099]{Charlotte Ziegler-Voigt}</li><li>@UUID[Actor.dc130fd24e78238c]{Dr. Arnold Behncke}</li><li>@UUID[Actor.251ffc3872722109]{Irmgard Weiß}</li><li>@UUID[Actor.db65bcaea2e48878]{Herbert Dahlen}</li><li>@UUID[Actor.90b5b3be0f7d422a]{Peter Günther}</li><li>@UUID[Actor.684e2332fe0705f1]{Harald Kleinschmitt}</li><li>@UUID[Actor.73607e6700d59195]{Lisa Nolte}</li><li>@UUID[Actor.bcfcea42a2af2c17]{Sternschutz-Wachmann}</li><li>@UUID[Actor.668dab03180361d9]{Sternschutz-Leibwächter}</li><li>@UUID[Actor.b0c1831544971c92]{Schlosswächter}</li><li>@UUID[Actor.49cfcf8c733a6a64]{Fragment des Edlen}</li><li>@UUID[Actor.a67118ee9025a56a]{Fragment der Armen}</li><li>@UUID[Actor.c2b914e0e5aac001]{Geist von Wolfsburg}</li></ul>"
         },
         "sort": 90000
+      },
+      {
+        "_id": "e34e288dd24136f0",
+        "name": "Illustration – 01 – Spuk in der Wolfsburg",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/backgrounds/kapitel-1.jpg",
+        "image": {
+          "caption": "Stimmungsbild – eigene Illustration"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "chapter-art-1"
+          }
+        }
+      },
+      {
+        "_id": "538d3e1af2a6ab8e",
+        "name": "Grimmes Erwachen – Titelbild",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/backgrounds/titel.png",
+        "image": {
+          "caption": "Titelbild, 3840 × 2160"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 1,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "title-art"
+          }
+        }
+      },
+      {
+        "_id": "be33d2541765e1cc",
+        "name": "Porträt – Toni Schmidt",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/932f23884ed1893e.png",
+        "image": {
+          "caption": "Eigene Interpretation: Toni Schmidt"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10000000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-932f23884ed1893e"
+          }
+        }
+      },
+      {
+        "_id": "2ce7c37415fa7ee9",
+        "name": "Porträt – Sandra",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/79f8f85858c19fa4.png",
+        "image": {
+          "caption": "Eigene Interpretation: Sandra"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10010000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-79f8f85858c19fa4"
+          }
+        }
+      },
+      {
+        "_id": "07399af63087285e",
+        "name": "Porträt – Ralf Sanders",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/eae220f6be703a42.png",
+        "image": {
+          "caption": "Eigene Interpretation: Ralf Sanders"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10020000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-eae220f6be703a42"
+          }
+        }
+      },
+      {
+        "_id": "1b987f12ddf86fb1",
+        "name": "Porträt – Karin „Kati“ Sanders",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/38f930ed307aeeeb.png",
+        "image": {
+          "caption": "Eigene Interpretation: Karin „Kati“ Sanders"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10030000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-38f930ed307aeeeb"
+          }
+        }
+      },
+      {
+        "_id": "bf389efb0f5e0d3a",
+        "name": "Porträt – Walther Sanders",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/ca9f57f2d6ede4c9.png",
+        "image": {
+          "caption": "Eigene Interpretation: Walther Sanders"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10040000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-ca9f57f2d6ede4c9"
+          }
+        }
+      },
+      {
+        "_id": "62a62feb22233bd3",
+        "name": "Porträt – Charlotte Ziegler-Voigt",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/6976132fe8401099.png",
+        "image": {
+          "caption": "Eigene Interpretation: Charlotte Ziegler-Voigt"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10050000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-6976132fe8401099"
+          }
+        }
+      },
+      {
+        "_id": "668e1220782419b0",
+        "name": "Porträt – Dr. Arnold Behncke",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/dc130fd24e78238c.png",
+        "image": {
+          "caption": "Eigene Interpretation: Dr. Arnold Behncke"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10060000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-dc130fd24e78238c"
+          }
+        }
+      },
+      {
+        "_id": "cc35b088342ee608",
+        "name": "Porträt – Irmgard Weiß",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/251ffc3872722109.png",
+        "image": {
+          "caption": "Eigene Interpretation: Irmgard Weiß"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10070000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-251ffc3872722109"
+          }
+        }
+      },
+      {
+        "_id": "8ad15e5d472b08c2",
+        "name": "Porträt – Herbert Dahlen",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/db65bcaea2e48878.png",
+        "image": {
+          "caption": "Eigene Interpretation: Herbert Dahlen"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10080000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-db65bcaea2e48878"
+          }
+        }
+      },
+      {
+        "_id": "137568570352835b",
+        "name": "Porträt – Peter Günther",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/90b5b3be0f7d422a.png",
+        "image": {
+          "caption": "Eigene Interpretation: Peter Günther"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10090000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-90b5b3be0f7d422a"
+          }
+        }
+      },
+      {
+        "_id": "897e76350f74f7cf",
+        "name": "Porträt – Harald Kleinschmitt",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/684e2332fe0705f1.png",
+        "image": {
+          "caption": "Eigene Interpretation: Harald Kleinschmitt"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10100000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-684e2332fe0705f1"
+          }
+        }
+      },
+      {
+        "_id": "4444aaaac932603f",
+        "name": "Porträt – Lisa Nolte",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/73607e6700d59195.png",
+        "image": {
+          "caption": "Eigene Interpretation: Lisa Nolte"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10110000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-73607e6700d59195"
+          }
+        }
+      },
+      {
+        "_id": "09b9b684aa449d07",
+        "name": "Porträt – Sternschutz-Wachmann",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/bcfcea42a2af2c17.png",
+        "image": {
+          "caption": "Eigene Interpretation: Sternschutz-Wachmann"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10120000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-bcfcea42a2af2c17"
+          }
+        }
+      },
+      {
+        "_id": "dae13ecc21468ed5",
+        "name": "Porträt – Sternschutz-Leibwächter",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/668dab03180361d9.png",
+        "image": {
+          "caption": "Eigene Interpretation: Sternschutz-Leibwächter"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10130000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-668dab03180361d9"
+          }
+        }
+      },
+      {
+        "_id": "8f21e535c41bed0a",
+        "name": "Porträt – Schlosswächter",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/b0c1831544971c92.png",
+        "image": {
+          "caption": "Eigene Interpretation: Schlosswächter"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10140000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-b0c1831544971c92"
+          }
+        }
+      },
+      {
+        "_id": "2ee90b71c924bef2",
+        "name": "Porträt – Fragment des Edlen",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/49cfcf8c733a6a64.png",
+        "image": {
+          "caption": "Eigene Interpretation: Fragment des Edlen"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10150000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-49cfcf8c733a6a64"
+          }
+        }
+      },
+      {
+        "_id": "028f642550d8ed76",
+        "name": "Porträt – Fragment der Armen",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/a67118ee9025a56a.png",
+        "image": {
+          "caption": "Eigene Interpretation: Fragment der Armen"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10160000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-a67118ee9025a56a"
+          }
+        }
+      },
+      {
+        "_id": "d426458e4bd6e2f4",
+        "name": "Porträt – Geist von Wolfsburg",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/c2b914e0e5aac001.png",
+        "image": {
+          "caption": "Eigene Interpretation: Geist von Wolfsburg"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10170000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-c2b914e0e5aac001"
+          }
+        }
       }
     ],
     "ownership": {
@@ -283,6 +723,578 @@
           "content": "<ul><li>@UUID[Actor.29f8f5c559aec969]{Herr Schmidt – Karlsruhe}</li><li>@UUID[Actor.a24d312aee6ceac4]{Manfred}</li><li>@UUID[Actor.8f32aee34232b995]{Maria Dietrich}</li><li>@UUID[Actor.dfe619eb817f31e7]{Jan Dietrich}</li><li>@UUID[Actor.61e91bd1ea22b84d]{Johannes Dietrich}</li><li>@UUID[Actor.415c5771d25c6d94]{Adam Braun}</li><li>@UUID[Actor.f247f1ecc4dd4ba5]{Alfred}</li><li>@UUID[Actor.6622b6af8ce1ebcc]{Hell-Goats-Ganger}</li><li>@UUID[Actor.f3076795e0710218]{Hell-Goats-Anführer}</li><li>@UUID[Actor.12478b301511bf39]{Bär}</li><li>@UUID[Actor.69fc4f6b6e314541]{Piasma}</li><li>@UUID[Actor.949e0df32fb26be7]{Wolf}</li><li>@UUID[Actor.cc756b71881635f6]{Schreckhahn}</li><li>@UUID[Actor.ad3932f731eb6317]{Rankenbaum}</li><li>@UUID[Actor.1565d1b4d5e9e2b7]{Wassergeist}</li><li>@UUID[Actor.fee4db1dbc62cfdc]{Neogargyle}</li><li>@UUID[Actor.0a6a6541c70ddba4]{Die Hexe}</li><li>@UUID[Actor.b59e8c5e3029d096]{Hexendiener – Teigmischer}</li><li>@UUID[Actor.4b452cb6cc5ce3a0]{Hexendiener – Greifarm A}</li><li>@UUID[Actor.7ad9a248a67fa0fc]{Hexendiener – Greifarm B}</li><li>@UUID[Actor.827c1d40319fb295]{Hexendiener – Industriekessel}</li><li>@UUID[Actor.c2bce7ddc2aa4007]{Hexendiener – Gabelstapler}</li><li>@UUID[Actor.dfeadc06a7a0d9c9]{Leibwächter – Troll}</li><li>@UUID[Actor.306992332e1fad6e]{Leibwächter – Elf}</li><li>@UUID[Actor.4046514a9bb91b07]{Gerettetes Kind}</li></ul>"
         },
         "sort": 80000
+      },
+      {
+        "_id": "a68eb4c908fad428",
+        "name": "Illustration – 02 – Zucker für die Kinder",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/backgrounds/kapitel-2.jpg",
+        "image": {
+          "caption": "Stimmungsbild – eigene Illustration"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "chapter-art-2"
+          }
+        }
+      },
+      {
+        "_id": "064c71964ee3f165",
+        "name": "Porträt – Herr Schmidt – Karlsruhe",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/29f8f5c559aec969.png",
+        "image": {
+          "caption": "Eigene Interpretation: Herr Schmidt – Karlsruhe"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10000000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-29f8f5c559aec969"
+          }
+        }
+      },
+      {
+        "_id": "030dc52ab6a242e9",
+        "name": "Porträt – Manfred",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/a24d312aee6ceac4.png",
+        "image": {
+          "caption": "Eigene Interpretation: Manfred"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10010000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-a24d312aee6ceac4"
+          }
+        }
+      },
+      {
+        "_id": "c7051a3935e7b880",
+        "name": "Porträt – Maria Dietrich",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/8f32aee34232b995.png",
+        "image": {
+          "caption": "Eigene Interpretation: Maria Dietrich"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10020000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-8f32aee34232b995"
+          }
+        }
+      },
+      {
+        "_id": "4c5ff857b093f2e6",
+        "name": "Porträt – Jan Dietrich",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/dfe619eb817f31e7.png",
+        "image": {
+          "caption": "Eigene Interpretation: Jan Dietrich"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10030000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-dfe619eb817f31e7"
+          }
+        }
+      },
+      {
+        "_id": "da4729187495199b",
+        "name": "Porträt – Johannes Dietrich",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/61e91bd1ea22b84d.png",
+        "image": {
+          "caption": "Eigene Interpretation: Johannes Dietrich"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10040000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-61e91bd1ea22b84d"
+          }
+        }
+      },
+      {
+        "_id": "54212329f5324cd2",
+        "name": "Porträt – Adam Braun",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/415c5771d25c6d94.png",
+        "image": {
+          "caption": "Eigene Interpretation: Adam Braun"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10050000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-415c5771d25c6d94"
+          }
+        }
+      },
+      {
+        "_id": "debab589d96ad208",
+        "name": "Porträt – Alfred",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/f247f1ecc4dd4ba5.png",
+        "image": {
+          "caption": "Eigene Interpretation: Alfred"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10060000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-f247f1ecc4dd4ba5"
+          }
+        }
+      },
+      {
+        "_id": "480c874e4b06a112",
+        "name": "Porträt – Hell-Goats-Ganger",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/6622b6af8ce1ebcc.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hell-Goats-Ganger"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10070000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-6622b6af8ce1ebcc"
+          }
+        }
+      },
+      {
+        "_id": "acf4bbcba47cecea",
+        "name": "Porträt – Hell-Goats-Anführer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/f3076795e0710218.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hell-Goats-Anführer"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10080000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-f3076795e0710218"
+          }
+        }
+      },
+      {
+        "_id": "853c93b87a46c54d",
+        "name": "Porträt – Bär",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/12478b301511bf39.png",
+        "image": {
+          "caption": "Eigene Interpretation: Bär"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10090000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-12478b301511bf39"
+          }
+        }
+      },
+      {
+        "_id": "7543118f17f20b80",
+        "name": "Porträt – Piasma",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/69fc4f6b6e314541.png",
+        "image": {
+          "caption": "Eigene Interpretation: Piasma"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10100000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-69fc4f6b6e314541"
+          }
+        }
+      },
+      {
+        "_id": "4016c49c965d8dd0",
+        "name": "Porträt – Wolf",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/949e0df32fb26be7.png",
+        "image": {
+          "caption": "Eigene Interpretation: Wolf"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10110000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-949e0df32fb26be7"
+          }
+        }
+      },
+      {
+        "_id": "d43561dfb98f8663",
+        "name": "Porträt – Schreckhahn",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/cc756b71881635f6.png",
+        "image": {
+          "caption": "Eigene Interpretation: Schreckhahn"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10120000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-cc756b71881635f6"
+          }
+        }
+      },
+      {
+        "_id": "f25371d5db611254",
+        "name": "Porträt – Rankenbaum",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/ad3932f731eb6317.png",
+        "image": {
+          "caption": "Eigene Interpretation: Rankenbaum"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10130000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-ad3932f731eb6317"
+          }
+        }
+      },
+      {
+        "_id": "b29c36d72bf3e99f",
+        "name": "Porträt – Wassergeist",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/1565d1b4d5e9e2b7.png",
+        "image": {
+          "caption": "Eigene Interpretation: Wassergeist"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10140000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-1565d1b4d5e9e2b7"
+          }
+        }
+      },
+      {
+        "_id": "4b40c90b37368317",
+        "name": "Porträt – Neogargyle",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/fee4db1dbc62cfdc.png",
+        "image": {
+          "caption": "Eigene Interpretation: Neogargyle"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10150000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-fee4db1dbc62cfdc"
+          }
+        }
+      },
+      {
+        "_id": "3f8d7cd8880821c9",
+        "name": "Porträt – Die Hexe",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/0a6a6541c70ddba4.png",
+        "image": {
+          "caption": "Eigene Interpretation: Die Hexe"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10160000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-0a6a6541c70ddba4"
+          }
+        }
+      },
+      {
+        "_id": "e5326167f58375ed",
+        "name": "Porträt – Hexendiener – Teigmischer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/b59e8c5e3029d096.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hexendiener – Teigmischer"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10170000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-b59e8c5e3029d096"
+          }
+        }
+      },
+      {
+        "_id": "4d9a335220a0f5c9",
+        "name": "Porträt – Hexendiener – Greifarm A",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/4b452cb6cc5ce3a0.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hexendiener – Greifarm A"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10180000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-4b452cb6cc5ce3a0"
+          }
+        }
+      },
+      {
+        "_id": "bef1fa264c463b35",
+        "name": "Porträt – Hexendiener – Greifarm B",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/7ad9a248a67fa0fc.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hexendiener – Greifarm B"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10190000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-7ad9a248a67fa0fc"
+          }
+        }
+      },
+      {
+        "_id": "32480aeac8d9e09f",
+        "name": "Porträt – Hexendiener – Industriekessel",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/827c1d40319fb295.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hexendiener – Industriekessel"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10200000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-827c1d40319fb295"
+          }
+        }
+      },
+      {
+        "_id": "f4069427fc1f8461",
+        "name": "Porträt – Hexendiener – Gabelstapler",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/c2bce7ddc2aa4007.png",
+        "image": {
+          "caption": "Eigene Interpretation: Hexendiener – Gabelstapler"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10210000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-c2bce7ddc2aa4007"
+          }
+        }
+      },
+      {
+        "_id": "35988934a78791e4",
+        "name": "Porträt – Leibwächter – Troll",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/dfeadc06a7a0d9c9.png",
+        "image": {
+          "caption": "Eigene Interpretation: Leibwächter – Troll"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10220000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-dfeadc06a7a0d9c9"
+          }
+        }
+      },
+      {
+        "_id": "454137f5a144bcba",
+        "name": "Porträt – Leibwächter – Elf",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/306992332e1fad6e.png",
+        "image": {
+          "caption": "Eigene Interpretation: Leibwächter – Elf"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10230000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-306992332e1fad6e"
+          }
+        }
+      },
+      {
+        "_id": "6b3f6af35743e369",
+        "name": "Porträt – Gerettetes Kind",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/4046514a9bb91b07.png",
+        "image": {
+          "caption": "Eigene Interpretation: Gerettetes Kind"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10240000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-4046514a9bb91b07"
+          }
+        }
       }
     ],
     "ownership": {
@@ -480,6 +1492,644 @@
           "content": "<ul><li>@UUID[Actor.dff28772ebc76960]{Lucas Steltz}</li><li>@UUID[Actor.f5e1d2a35bd63000]{Celine Gruber}</li><li>@UUID[Actor.52d26757d8dd9378]{Marlon Neugebauer}</li><li>@UUID[Actor.e03629d2cf974178]{Marie Gruber}</li><li>@UUID[Actor.a9b72360f407358f]{Jonas Gruber}</li><li>@UUID[Actor.88204099a121cd82]{Lea Neugebauer-Jablonski}</li><li>@UUID[Actor.c9e509ab26c29611]{Elmar}</li><li>@UUID[Actor.fbaf12ef71ff3d02]{Dr. Jeanique Alber}</li><li>@UUID[Actor.2a164d48b4091626]{Carsten Wernberger}</li><li>@UUID[Actor.161d49b7753b6c00]{Mariusz Kolanski}</li><li>@UUID[Actor.7fa5db9516148356]{Ruppert Sager}</li><li>@UUID[Actor.102ed142d319f244]{Birgit}</li><li>@UUID[Actor.90f2a5c0fdf8684b]{Sven}</li><li>@UUID[Actor.391cbbda644f8e02]{Felix}</li><li>@UUID[Actor.305eb6df6b76e875]{Moritz}</li><li>@UUID[Actor.2aa0ae1b04681cc8]{Festspiel-Aufräumer}</li><li>@UUID[Actor.a62029fe87c8dcba]{Festspiel-Wachmann}</li><li>@UUID[Actor.e7aaacd3f97259ab]{Jugendfußballer}</li><li>@UUID[Actor.9db608b717e672b0]{Brünhild}</li><li>@UUID[Actor.3c0a2a8a3746b9c5]{Geiravör}</li><li>@UUID[Actor.42146ee236fac162]{Herja}</li><li>@UUID[Actor.772bcce2923511af]{Kára}</li><li>@UUID[Actor.1c29baaf773f1bce]{Mista}</li><li>@UUID[Actor.e5186dce82b54d29]{Sigrun}</li><li>@UUID[Actor.cecb7e263755dab2]{Skuld}</li><li>@UUID[Actor.2372d07572c78906]{Svafa}</li><li>@UUID[Actor.6264091c776a817a]{Thrudr}</li><li>@UUID[Actor.bb6772f03b95a509]{Feuergeist}</li></ul>"
         },
         "sort": 120000
+      },
+      {
+        "_id": "0af77c27f345096b",
+        "name": "Illustration – 03 – Ring aus Feuer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/backgrounds/kapitel-3.jpg",
+        "image": {
+          "caption": "Stimmungsbild – eigene Illustration"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "chapter-art-3"
+          }
+        }
+      },
+      {
+        "_id": "fe0f23900203ca90",
+        "name": "Porträt – Lucas Steltz",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/dff28772ebc76960.png",
+        "image": {
+          "caption": "Eigene Interpretation: Lucas Steltz"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10000000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-dff28772ebc76960"
+          }
+        }
+      },
+      {
+        "_id": "abca2db38e08d3f7",
+        "name": "Porträt – Celine Gruber",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/f5e1d2a35bd63000.png",
+        "image": {
+          "caption": "Eigene Interpretation: Celine Gruber"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10010000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-f5e1d2a35bd63000"
+          }
+        }
+      },
+      {
+        "_id": "1bbe3ec35af3096c",
+        "name": "Porträt – Marlon Neugebauer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/52d26757d8dd9378.png",
+        "image": {
+          "caption": "Eigene Interpretation: Marlon Neugebauer"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10020000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-52d26757d8dd9378"
+          }
+        }
+      },
+      {
+        "_id": "2f865882150db0c0",
+        "name": "Porträt – Marie Gruber",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/e03629d2cf974178.png",
+        "image": {
+          "caption": "Eigene Interpretation: Marie Gruber"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10030000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-e03629d2cf974178"
+          }
+        }
+      },
+      {
+        "_id": "5b399cf9cf2cb46d",
+        "name": "Porträt – Jonas Gruber",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/a9b72360f407358f.png",
+        "image": {
+          "caption": "Eigene Interpretation: Jonas Gruber"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10040000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-a9b72360f407358f"
+          }
+        }
+      },
+      {
+        "_id": "ce36ac716903283c",
+        "name": "Porträt – Lea Neugebauer-Jablonski",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/88204099a121cd82.png",
+        "image": {
+          "caption": "Eigene Interpretation: Lea Neugebauer-Jablonski"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10050000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-88204099a121cd82"
+          }
+        }
+      },
+      {
+        "_id": "af52502cfe4e476b",
+        "name": "Porträt – Elmar",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/c9e509ab26c29611.png",
+        "image": {
+          "caption": "Eigene Interpretation: Elmar"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10060000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-c9e509ab26c29611"
+          }
+        }
+      },
+      {
+        "_id": "b9197f8b7d1a3666",
+        "name": "Porträt – Dr. Jeanique Alber",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/fbaf12ef71ff3d02.png",
+        "image": {
+          "caption": "Eigene Interpretation: Dr. Jeanique Alber"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10070000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-fbaf12ef71ff3d02"
+          }
+        }
+      },
+      {
+        "_id": "bb93f0ef750658a7",
+        "name": "Porträt – Carsten Wernberger",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/2a164d48b4091626.png",
+        "image": {
+          "caption": "Eigene Interpretation: Carsten Wernberger"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10080000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-2a164d48b4091626"
+          }
+        }
+      },
+      {
+        "_id": "0ce1b6c2c9cbfad1",
+        "name": "Porträt – Mariusz Kolanski",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/161d49b7753b6c00.png",
+        "image": {
+          "caption": "Eigene Interpretation: Mariusz Kolanski"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10090000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-161d49b7753b6c00"
+          }
+        }
+      },
+      {
+        "_id": "5d39286d85a9507d",
+        "name": "Porträt – Ruppert Sager",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/7fa5db9516148356.png",
+        "image": {
+          "caption": "Eigene Interpretation: Ruppert Sager"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10100000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-7fa5db9516148356"
+          }
+        }
+      },
+      {
+        "_id": "dc1778b9934dceb7",
+        "name": "Porträt – Birgit",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/102ed142d319f244.png",
+        "image": {
+          "caption": "Eigene Interpretation: Birgit"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10110000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-102ed142d319f244"
+          }
+        }
+      },
+      {
+        "_id": "98b698b346b5d9fc",
+        "name": "Porträt – Sven",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/90f2a5c0fdf8684b.png",
+        "image": {
+          "caption": "Eigene Interpretation: Sven"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10120000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-90f2a5c0fdf8684b"
+          }
+        }
+      },
+      {
+        "_id": "cd0044e1d40f4c10",
+        "name": "Porträt – Felix",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/391cbbda644f8e02.png",
+        "image": {
+          "caption": "Eigene Interpretation: Felix"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10130000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-391cbbda644f8e02"
+          }
+        }
+      },
+      {
+        "_id": "f7ec383a155dfbf2",
+        "name": "Porträt – Moritz",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/305eb6df6b76e875.png",
+        "image": {
+          "caption": "Eigene Interpretation: Moritz"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10140000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-305eb6df6b76e875"
+          }
+        }
+      },
+      {
+        "_id": "915fcb733d2aff4d",
+        "name": "Porträt – Festspiel-Aufräumer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/2aa0ae1b04681cc8.png",
+        "image": {
+          "caption": "Eigene Interpretation: Festspiel-Aufräumer"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10150000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-2aa0ae1b04681cc8"
+          }
+        }
+      },
+      {
+        "_id": "0f01375239a41dfa",
+        "name": "Porträt – Festspiel-Wachmann",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/a62029fe87c8dcba.png",
+        "image": {
+          "caption": "Eigene Interpretation: Festspiel-Wachmann"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10160000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-a62029fe87c8dcba"
+          }
+        }
+      },
+      {
+        "_id": "fe8355472d1db047",
+        "name": "Porträt – Jugendfußballer",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/e7aaacd3f97259ab.png",
+        "image": {
+          "caption": "Eigene Interpretation: Jugendfußballer"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10170000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-e7aaacd3f97259ab"
+          }
+        }
+      },
+      {
+        "_id": "887c5d6c06acda9c",
+        "name": "Porträt – Brünhild",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/9db608b717e672b0.png",
+        "image": {
+          "caption": "Eigene Interpretation: Brünhild"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10180000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-9db608b717e672b0"
+          }
+        }
+      },
+      {
+        "_id": "5aecc2019abb47a0",
+        "name": "Porträt – Geiravör",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/3c0a2a8a3746b9c5.png",
+        "image": {
+          "caption": "Eigene Interpretation: Geiravör"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10190000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-3c0a2a8a3746b9c5"
+          }
+        }
+      },
+      {
+        "_id": "a22d7481d37ab5be",
+        "name": "Porträt – Herja",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/42146ee236fac162.png",
+        "image": {
+          "caption": "Eigene Interpretation: Herja"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10200000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-42146ee236fac162"
+          }
+        }
+      },
+      {
+        "_id": "4fa0c8804a983c30",
+        "name": "Porträt – Kára",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/772bcce2923511af.png",
+        "image": {
+          "caption": "Eigene Interpretation: Kára"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10210000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-772bcce2923511af"
+          }
+        }
+      },
+      {
+        "_id": "f2948686a4376a90",
+        "name": "Porträt – Mista",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/1c29baaf773f1bce.png",
+        "image": {
+          "caption": "Eigene Interpretation: Mista"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10220000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-1c29baaf773f1bce"
+          }
+        }
+      },
+      {
+        "_id": "3f1145398a8a3e18",
+        "name": "Porträt – Sigrun",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/e5186dce82b54d29.png",
+        "image": {
+          "caption": "Eigene Interpretation: Sigrun"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10230000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-e5186dce82b54d29"
+          }
+        }
+      },
+      {
+        "_id": "cf2e3c4ee1a8981c",
+        "name": "Porträt – Skuld",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/cecb7e263755dab2.png",
+        "image": {
+          "caption": "Eigene Interpretation: Skuld"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10240000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-cecb7e263755dab2"
+          }
+        }
+      },
+      {
+        "_id": "601fe03c30592701",
+        "name": "Porträt – Svafa",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/2372d07572c78906.png",
+        "image": {
+          "caption": "Eigene Interpretation: Svafa"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10250000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-2372d07572c78906"
+          }
+        }
+      },
+      {
+        "_id": "8a47bafbd6328ad0",
+        "name": "Porträt – Thrudr",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/6264091c776a817a.png",
+        "image": {
+          "caption": "Eigene Interpretation: Thrudr"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10260000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-6264091c776a817a"
+          }
+        }
+      },
+      {
+        "_id": "5c39c0b92d9e1d5d",
+        "name": "Porträt – Feuergeist",
+        "type": "image",
+        "src": "modules/grimmes-erwachen/assets/portraits/bb6772f03b95a509.png",
+        "image": {
+          "caption": "Eigene Interpretation: Feuergeist"
+        },
+        "title": {
+          "show": true,
+          "level": 1
+        },
+        "sort": 10270000,
+        "ownership": {
+          "default": -1
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "portrait-bb6772f03b95a509"
+          }
+        }
       }
     ],
     "ownership": {

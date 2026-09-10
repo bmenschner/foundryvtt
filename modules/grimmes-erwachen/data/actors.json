@@ -3,7 +3,7 @@
     "_id": "932f23884ed1893e",
     "name": "Toni Schmidt",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/932f23884ed1893e.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/932f23884ed1893e.png",
     "system": {
       "attributes": {
         "bod": {
@@ -403,7 +403,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/932f23884ed1893e.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/932f23884ed1893e.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -428,7 +428,7 @@
     "_id": "79f8f85858c19fa4",
     "name": "Sandra",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/79f8f85858c19fa4.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/79f8f85858c19fa4.png",
     "system": {
       "attributes": {
         "bod": {
@@ -828,7 +828,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/79f8f85858c19fa4.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/79f8f85858c19fa4.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -853,7 +853,7 @@
     "_id": "eae220f6be703a42",
     "name": "Ralf Sanders",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/eae220f6be703a42.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/eae220f6be703a42.png",
     "system": {
       "attributes": {
         "bod": {
@@ -1253,7 +1253,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/eae220f6be703a42.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/eae220f6be703a42.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -1278,7 +1278,7 @@
     "_id": "38f930ed307aeeeb",
     "name": "Karin „Kati“ Sanders",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/38f930ed307aeeeb.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/38f930ed307aeeeb.png",
     "system": {
       "attributes": {
         "bod": {
@@ -1678,7 +1678,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/38f930ed307aeeeb.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/38f930ed307aeeeb.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -1703,7 +1703,7 @@
     "_id": "ca9f57f2d6ede4c9",
     "name": "Walther Sanders",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/ca9f57f2d6ede4c9.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/ca9f57f2d6ede4c9.png",
     "system": {
       "attributes": {
         "bod": {
@@ -2103,7 +2103,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/ca9f57f2d6ede4c9.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/ca9f57f2d6ede4c9.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -2128,7 +2128,7 @@
     "_id": "6976132fe8401099",
     "name": "Charlotte Ziegler-Voigt",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/6976132fe8401099.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/6976132fe8401099.png",
     "system": {
       "attributes": {
         "bod": {
@@ -2528,7 +2528,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/6976132fe8401099.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/6976132fe8401099.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -2553,7 +2553,7 @@
     "_id": "dc130fd24e78238c",
     "name": "Dr. Arnold Behncke",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/dc130fd24e78238c.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/dc130fd24e78238c.png",
     "system": {
       "attributes": {
         "bod": {
@@ -2953,7 +2953,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/dc130fd24e78238c.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/dc130fd24e78238c.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -2978,7 +2978,7 @@
     "_id": "251ffc3872722109",
     "name": "Irmgard Weiß",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/251ffc3872722109.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/251ffc3872722109.png",
     "system": {
       "attributes": {
         "bod": {
@@ -3378,7 +3378,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/251ffc3872722109.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/251ffc3872722109.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -3403,7 +3403,7 @@
     "_id": "db65bcaea2e48878",
     "name": "Herbert Dahlen",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/db65bcaea2e48878.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/db65bcaea2e48878.png",
     "system": {
       "attributes": {
         "bod": {
@@ -3803,7 +3803,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/db65bcaea2e48878.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/db65bcaea2e48878.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -3828,7 +3828,7 @@
     "_id": "90b5b3be0f7d422a",
     "name": "Peter Günther",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/90b5b3be0f7d422a.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/90b5b3be0f7d422a.png",
     "system": {
       "attributes": {
         "bod": {
@@ -4228,7 +4228,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/90b5b3be0f7d422a.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/90b5b3be0f7d422a.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -4253,7 +4253,7 @@
     "_id": "684e2332fe0705f1",
     "name": "Harald Kleinschmitt",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/684e2332fe0705f1.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/684e2332fe0705f1.png",
     "system": {
       "attributes": {
         "bod": {
@@ -4653,7 +4653,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/684e2332fe0705f1.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/684e2332fe0705f1.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -4678,7 +4678,7 @@
     "_id": "73607e6700d59195",
     "name": "Lisa Nolte",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/73607e6700d59195.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/73607e6700d59195.png",
     "system": {
       "attributes": {
         "bod": {
@@ -5078,7 +5078,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/73607e6700d59195.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/73607e6700d59195.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -5103,7 +5103,7 @@
     "_id": "bcfcea42a2af2c17",
     "name": "Sternschutz-Wachmann",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/bcfcea42a2af2c17.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/bcfcea42a2af2c17.png",
     "system": {
       "attributes": {
         "bod": {
@@ -5592,7 +5592,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/bcfcea42a2af2c17.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/bcfcea42a2af2c17.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -5617,7 +5617,7 @@
     "_id": "668dab03180361d9",
     "name": "Sternschutz-Leibwächter",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/668dab03180361d9.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/668dab03180361d9.png",
     "system": {
       "attributes": {
         "bod": {
@@ -6154,7 +6154,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/668dab03180361d9.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/668dab03180361d9.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -6179,7 +6179,7 @@
     "_id": "b0c1831544971c92",
     "name": "Schlosswächter",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/b0c1831544971c92.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/b0c1831544971c92.png",
     "system": {
       "attributes": {
         "bod": {
@@ -6668,7 +6668,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/b0c1831544971c92.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/b0c1831544971c92.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -6693,7 +6693,7 @@
     "_id": "49cfcf8c733a6a64",
     "name": "Fragment des Edlen",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/49cfcf8c733a6a64.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/49cfcf8c733a6a64.png",
     "system": {
       "attributes": {
         "bod": {
@@ -7358,7 +7358,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/49cfcf8c733a6a64.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/49cfcf8c733a6a64.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -7383,7 +7383,7 @@
     "_id": "a67118ee9025a56a",
     "name": "Fragment der Armen",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/a67118ee9025a56a.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/a67118ee9025a56a.png",
     "system": {
       "attributes": {
         "bod": {
@@ -8048,7 +8048,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/a67118ee9025a56a.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/a67118ee9025a56a.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -8073,7 +8073,7 @@
     "_id": "c2b914e0e5aac001",
     "name": "Geist von Wolfsburg",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/c2b914e0e5aac001.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/c2b914e0e5aac001.png",
     "system": {
       "attributes": {
         "bod": {
@@ -8738,7 +8738,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/c2b914e0e5aac001.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/c2b914e0e5aac001.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -8763,7 +8763,7 @@
     "_id": "29f8f5c559aec969",
     "name": "Herr Schmidt – Karlsruhe",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/29f8f5c559aec969.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/29f8f5c559aec969.png",
     "system": {
       "attributes": {
         "bod": {
@@ -9163,7 +9163,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/29f8f5c559aec969.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/29f8f5c559aec969.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -9188,7 +9188,7 @@
     "_id": "a24d312aee6ceac4",
     "name": "Manfred",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/a24d312aee6ceac4.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/a24d312aee6ceac4.png",
     "system": {
       "attributes": {
         "bod": {
@@ -9588,7 +9588,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/a24d312aee6ceac4.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/a24d312aee6ceac4.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -9613,7 +9613,7 @@
     "_id": "8f32aee34232b995",
     "name": "Maria Dietrich",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/8f32aee34232b995.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/8f32aee34232b995.png",
     "system": {
       "attributes": {
         "bod": {
@@ -10013,7 +10013,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/8f32aee34232b995.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/8f32aee34232b995.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -10038,7 +10038,7 @@
     "_id": "dfe619eb817f31e7",
     "name": "Jan Dietrich",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/dfe619eb817f31e7.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/dfe619eb817f31e7.png",
     "system": {
       "attributes": {
         "bod": {
@@ -10438,7 +10438,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/dfe619eb817f31e7.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/dfe619eb817f31e7.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -10463,7 +10463,7 @@
     "_id": "61e91bd1ea22b84d",
     "name": "Johannes Dietrich",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/61e91bd1ea22b84d.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/61e91bd1ea22b84d.png",
     "system": {
       "attributes": {
         "bod": {
@@ -10863,7 +10863,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/61e91bd1ea22b84d.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/61e91bd1ea22b84d.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -10888,7 +10888,7 @@
     "_id": "415c5771d25c6d94",
     "name": "Adam Braun",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/415c5771d25c6d94.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/415c5771d25c6d94.png",
     "system": {
       "attributes": {
         "bod": {
@@ -11288,7 +11288,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/415c5771d25c6d94.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/415c5771d25c6d94.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -11313,7 +11313,7 @@
     "_id": "f247f1ecc4dd4ba5",
     "name": "Alfred",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/f247f1ecc4dd4ba5.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/f247f1ecc4dd4ba5.png",
     "system": {
       "attributes": {
         "bod": {
@@ -11713,7 +11713,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/f247f1ecc4dd4ba5.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/f247f1ecc4dd4ba5.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -11738,7 +11738,7 @@
     "_id": "6622b6af8ce1ebcc",
     "name": "Hell-Goats-Ganger",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/6622b6af8ce1ebcc.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/6622b6af8ce1ebcc.png",
     "system": {
       "attributes": {
         "bod": {
@@ -12227,7 +12227,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/6622b6af8ce1ebcc.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/6622b6af8ce1ebcc.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -12252,7 +12252,7 @@
     "_id": "f3076795e0710218",
     "name": "Hell-Goats-Anführer",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/f3076795e0710218.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/f3076795e0710218.png",
     "system": {
       "attributes": {
         "bod": {
@@ -12741,7 +12741,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/f3076795e0710218.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/f3076795e0710218.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -12766,7 +12766,7 @@
     "_id": "12478b301511bf39",
     "name": "Bär",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/12478b301511bf39.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/12478b301511bf39.png",
     "system": {
       "attributes": {
         "bod": {
@@ -13271,7 +13271,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/12478b301511bf39.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/12478b301511bf39.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -13296,7 +13296,7 @@
     "_id": "69fc4f6b6e314541",
     "name": "Piasma",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/69fc4f6b6e314541.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/69fc4f6b6e314541.png",
     "system": {
       "attributes": {
         "bod": {
@@ -13801,7 +13801,7 @@
       "width": 3,
       "height": 3,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/69fc4f6b6e314541.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/69fc4f6b6e314541.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -13826,7 +13826,7 @@
     "_id": "949e0df32fb26be7",
     "name": "Wolf",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/949e0df32fb26be7.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/949e0df32fb26be7.png",
     "system": {
       "attributes": {
         "bod": {
@@ -14331,7 +14331,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/949e0df32fb26be7.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/949e0df32fb26be7.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -14356,7 +14356,7 @@
     "_id": "cc756b71881635f6",
     "name": "Schreckhahn",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/cc756b71881635f6.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/cc756b71881635f6.png",
     "system": {
       "attributes": {
         "bod": {
@@ -14877,7 +14877,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/cc756b71881635f6.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/cc756b71881635f6.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -14902,7 +14902,7 @@
     "_id": "ad3932f731eb6317",
     "name": "Rankenbaum",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/ad3932f731eb6317.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/ad3932f731eb6317.png",
     "system": {
       "attributes": {
         "bod": {
@@ -15319,7 +15319,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/ad3932f731eb6317.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/ad3932f731eb6317.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -15344,7 +15344,7 @@
     "_id": "1565d1b4d5e9e2b7",
     "name": "Wassergeist",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/1565d1b4d5e9e2b7.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/1565d1b4d5e9e2b7.png",
     "system": {
       "attributes": {
         "bod": {
@@ -15897,7 +15897,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/1565d1b4d5e9e2b7.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/1565d1b4d5e9e2b7.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -15922,7 +15922,7 @@
     "_id": "fee4db1dbc62cfdc",
     "name": "Neogargyle",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/fee4db1dbc62cfdc.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/fee4db1dbc62cfdc.png",
     "system": {
       "attributes": {
         "bod": {
@@ -16322,7 +16322,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/fee4db1dbc62cfdc.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/fee4db1dbc62cfdc.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -16347,7 +16347,7 @@
     "_id": "0a6a6541c70ddba4",
     "name": "Die Hexe",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/0a6a6541c70ddba4.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/0a6a6541c70ddba4.png",
     "system": {
       "attributes": {
         "bod": {
@@ -17028,7 +17028,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/0a6a6541c70ddba4.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/0a6a6541c70ddba4.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -17053,7 +17053,7 @@
     "_id": "b59e8c5e3029d096",
     "name": "Hexendiener – Teigmischer",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/b59e8c5e3029d096.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/b59e8c5e3029d096.png",
     "system": {
       "attributes": {
         "bod": {
@@ -17606,7 +17606,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/b59e8c5e3029d096.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/b59e8c5e3029d096.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -17631,7 +17631,7 @@
     "_id": "4b452cb6cc5ce3a0",
     "name": "Hexendiener – Greifarm A",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/4b452cb6cc5ce3a0.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/4b452cb6cc5ce3a0.png",
     "system": {
       "attributes": {
         "bod": {
@@ -18184,7 +18184,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/4b452cb6cc5ce3a0.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/4b452cb6cc5ce3a0.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -18209,7 +18209,7 @@
     "_id": "7ad9a248a67fa0fc",
     "name": "Hexendiener – Greifarm B",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/7ad9a248a67fa0fc.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/7ad9a248a67fa0fc.png",
     "system": {
       "attributes": {
         "bod": {
@@ -18762,7 +18762,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/7ad9a248a67fa0fc.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/7ad9a248a67fa0fc.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -18787,7 +18787,7 @@
     "_id": "827c1d40319fb295",
     "name": "Hexendiener – Industriekessel",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/827c1d40319fb295.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/827c1d40319fb295.png",
     "system": {
       "attributes": {
         "bod": {
@@ -19340,7 +19340,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/827c1d40319fb295.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/827c1d40319fb295.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -19365,7 +19365,7 @@
     "_id": "c2bce7ddc2aa4007",
     "name": "Hexendiener – Gabelstapler",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/c2bce7ddc2aa4007.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/c2bce7ddc2aa4007.png",
     "system": {
       "attributes": {
         "bod": {
@@ -19918,7 +19918,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/c2bce7ddc2aa4007.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/c2bce7ddc2aa4007.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -19943,7 +19943,7 @@
     "_id": "dfeadc06a7a0d9c9",
     "name": "Leibwächter – Troll",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/dfeadc06a7a0d9c9.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/dfeadc06a7a0d9c9.png",
     "system": {
       "attributes": {
         "bod": {
@@ -20432,7 +20432,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/dfeadc06a7a0d9c9.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/dfeadc06a7a0d9c9.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -20457,7 +20457,7 @@
     "_id": "306992332e1fad6e",
     "name": "Leibwächter – Elf",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/306992332e1fad6e.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/306992332e1fad6e.png",
     "system": {
       "attributes": {
         "bod": {
@@ -20946,7 +20946,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/306992332e1fad6e.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/306992332e1fad6e.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -20971,7 +20971,7 @@
     "_id": "4046514a9bb91b07",
     "name": "Gerettetes Kind",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/4046514a9bb91b07.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/4046514a9bb91b07.png",
     "system": {
       "attributes": {
         "bod": {
@@ -21371,7 +21371,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/4046514a9bb91b07.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/4046514a9bb91b07.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -21396,7 +21396,7 @@
     "_id": "dff28772ebc76960",
     "name": "Lucas Steltz",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/dff28772ebc76960.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/dff28772ebc76960.png",
     "system": {
       "attributes": {
         "bod": {
@@ -21796,7 +21796,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/dff28772ebc76960.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/dff28772ebc76960.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -21821,7 +21821,7 @@
     "_id": "f5e1d2a35bd63000",
     "name": "Celine Gruber",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/f5e1d2a35bd63000.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/f5e1d2a35bd63000.png",
     "system": {
       "attributes": {
         "bod": {
@@ -22221,7 +22221,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/f5e1d2a35bd63000.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/f5e1d2a35bd63000.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -22246,7 +22246,7 @@
     "_id": "52d26757d8dd9378",
     "name": "Marlon Neugebauer",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/52d26757d8dd9378.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/52d26757d8dd9378.png",
     "system": {
       "attributes": {
         "bod": {
@@ -22646,7 +22646,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/52d26757d8dd9378.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/52d26757d8dd9378.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -22671,7 +22671,7 @@
     "_id": "e03629d2cf974178",
     "name": "Marie Gruber",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/e03629d2cf974178.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/e03629d2cf974178.png",
     "system": {
       "attributes": {
         "bod": {
@@ -23071,7 +23071,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/e03629d2cf974178.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/e03629d2cf974178.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -23096,7 +23096,7 @@
     "_id": "a9b72360f407358f",
     "name": "Jonas Gruber",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/a9b72360f407358f.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/a9b72360f407358f.png",
     "system": {
       "attributes": {
         "bod": {
@@ -23496,7 +23496,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/a9b72360f407358f.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/a9b72360f407358f.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -23521,7 +23521,7 @@
     "_id": "88204099a121cd82",
     "name": "Lea Neugebauer-Jablonski",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/88204099a121cd82.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/88204099a121cd82.png",
     "system": {
       "attributes": {
         "bod": {
@@ -23921,7 +23921,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/88204099a121cd82.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/88204099a121cd82.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -23946,7 +23946,7 @@
     "_id": "c9e509ab26c29611",
     "name": "Elmar",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/c9e509ab26c29611.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/c9e509ab26c29611.png",
     "system": {
       "attributes": {
         "bod": {
@@ -24346,7 +24346,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/c9e509ab26c29611.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/c9e509ab26c29611.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -24371,7 +24371,7 @@
     "_id": "fbaf12ef71ff3d02",
     "name": "Dr. Jeanique Alber",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/fbaf12ef71ff3d02.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/fbaf12ef71ff3d02.png",
     "system": {
       "attributes": {
         "bod": {
@@ -24771,7 +24771,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/fbaf12ef71ff3d02.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/fbaf12ef71ff3d02.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -24796,7 +24796,7 @@
     "_id": "2a164d48b4091626",
     "name": "Carsten Wernberger",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/2a164d48b4091626.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/2a164d48b4091626.png",
     "system": {
       "attributes": {
         "bod": {
@@ -25196,7 +25196,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/2a164d48b4091626.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/2a164d48b4091626.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -25221,7 +25221,7 @@
     "_id": "161d49b7753b6c00",
     "name": "Mariusz Kolanski",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/161d49b7753b6c00.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/161d49b7753b6c00.png",
     "system": {
       "attributes": {
         "bod": {
@@ -25621,7 +25621,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/161d49b7753b6c00.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/161d49b7753b6c00.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -25646,7 +25646,7 @@
     "_id": "7fa5db9516148356",
     "name": "Ruppert Sager",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/7fa5db9516148356.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/7fa5db9516148356.png",
     "system": {
       "attributes": {
         "bod": {
@@ -26046,7 +26046,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/7fa5db9516148356.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/7fa5db9516148356.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -26071,7 +26071,7 @@
     "_id": "102ed142d319f244",
     "name": "Birgit",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/102ed142d319f244.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/102ed142d319f244.png",
     "system": {
       "attributes": {
         "bod": {
@@ -26471,7 +26471,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/102ed142d319f244.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/102ed142d319f244.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -26496,7 +26496,7 @@
     "_id": "90f2a5c0fdf8684b",
     "name": "Sven",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/90f2a5c0fdf8684b.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/90f2a5c0fdf8684b.png",
     "system": {
       "attributes": {
         "bod": {
@@ -26896,7 +26896,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/90f2a5c0fdf8684b.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/90f2a5c0fdf8684b.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -26921,7 +26921,7 @@
     "_id": "391cbbda644f8e02",
     "name": "Felix",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/391cbbda644f8e02.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/391cbbda644f8e02.png",
     "system": {
       "attributes": {
         "bod": {
@@ -27410,7 +27410,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/391cbbda644f8e02.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/391cbbda644f8e02.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -27435,7 +27435,7 @@
     "_id": "305eb6df6b76e875",
     "name": "Moritz",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/305eb6df6b76e875.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/305eb6df6b76e875.png",
     "system": {
       "attributes": {
         "bod": {
@@ -27924,7 +27924,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/305eb6df6b76e875.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/305eb6df6b76e875.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -27949,7 +27949,7 @@
     "_id": "2aa0ae1b04681cc8",
     "name": "Festspiel-Aufräumer",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/2aa0ae1b04681cc8.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/2aa0ae1b04681cc8.png",
     "system": {
       "attributes": {
         "bod": {
@@ -28349,7 +28349,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/2aa0ae1b04681cc8.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/2aa0ae1b04681cc8.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -28374,7 +28374,7 @@
     "_id": "a62029fe87c8dcba",
     "name": "Festspiel-Wachmann",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/a62029fe87c8dcba.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/a62029fe87c8dcba.png",
     "system": {
       "attributes": {
         "bod": {
@@ -28774,7 +28774,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/a62029fe87c8dcba.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/a62029fe87c8dcba.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -28799,7 +28799,7 @@
     "_id": "e7aaacd3f97259ab",
     "name": "Jugendfußballer",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/e7aaacd3f97259ab.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/e7aaacd3f97259ab.png",
     "system": {
       "attributes": {
         "bod": {
@@ -29199,7 +29199,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/e7aaacd3f97259ab.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/e7aaacd3f97259ab.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -29224,7 +29224,7 @@
     "_id": "9db608b717e672b0",
     "name": "Brünhild",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/9db608b717e672b0.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/9db608b717e672b0.png",
     "system": {
       "attributes": {
         "bod": {
@@ -29841,7 +29841,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/9db608b717e672b0.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/9db608b717e672b0.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -29866,7 +29866,7 @@
     "_id": "3c0a2a8a3746b9c5",
     "name": "Geiravör",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/3c0a2a8a3746b9c5.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/3c0a2a8a3746b9c5.png",
     "system": {
       "attributes": {
         "bod": {
@@ -30483,7 +30483,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/3c0a2a8a3746b9c5.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/3c0a2a8a3746b9c5.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -30508,7 +30508,7 @@
     "_id": "42146ee236fac162",
     "name": "Herja",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/42146ee236fac162.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/42146ee236fac162.png",
     "system": {
       "attributes": {
         "bod": {
@@ -31141,7 +31141,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/42146ee236fac162.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/42146ee236fac162.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -31166,7 +31166,7 @@
     "_id": "772bcce2923511af",
     "name": "Kára",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/772bcce2923511af.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/772bcce2923511af.png",
     "system": {
       "attributes": {
         "bod": {
@@ -31799,7 +31799,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/772bcce2923511af.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/772bcce2923511af.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -31824,7 +31824,7 @@
     "_id": "1c29baaf773f1bce",
     "name": "Mista",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/1c29baaf773f1bce.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/1c29baaf773f1bce.png",
     "system": {
       "attributes": {
         "bod": {
@@ -32473,7 +32473,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/1c29baaf773f1bce.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/1c29baaf773f1bce.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -32498,7 +32498,7 @@
     "_id": "e5186dce82b54d29",
     "name": "Sigrun",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/e5186dce82b54d29.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/e5186dce82b54d29.png",
     "system": {
       "attributes": {
         "bod": {
@@ -33131,7 +33131,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/e5186dce82b54d29.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/e5186dce82b54d29.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -33156,7 +33156,7 @@
     "_id": "cecb7e263755dab2",
     "name": "Skuld",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/cecb7e263755dab2.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/cecb7e263755dab2.png",
     "system": {
       "attributes": {
         "bod": {
@@ -33773,7 +33773,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/cecb7e263755dab2.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/cecb7e263755dab2.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -33798,7 +33798,7 @@
     "_id": "2372d07572c78906",
     "name": "Svafa",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/2372d07572c78906.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/2372d07572c78906.png",
     "system": {
       "attributes": {
         "bod": {
@@ -34415,7 +34415,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/2372d07572c78906.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/2372d07572c78906.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -34440,7 +34440,7 @@
     "_id": "6264091c776a817a",
     "name": "Thrudr",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/6264091c776a817a.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/6264091c776a817a.png",
     "system": {
       "attributes": {
         "bod": {
@@ -35057,7 +35057,7 @@
       "width": 2,
       "height": 2,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/6264091c776a817a.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/6264091c776a817a.png"
       },
       "disposition": 0,
       "displayName": 20,
@@ -35082,7 +35082,7 @@
     "_id": "bb6772f03b95a509",
     "name": "Feuergeist",
     "type": "NPC",
-    "img": "modules/grimmes-erwachen/assets/tokens/bb6772f03b95a509.png",
+    "img": "modules/grimmes-erwachen/assets/portraits/bb6772f03b95a509.png",
     "system": {
       "attributes": {
         "bod": {
@@ -35619,7 +35619,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "modules/grimmes-erwachen/assets/tokens/bb6772f03b95a509.png"
+        "src": "modules/grimmes-erwachen/assets/portraits/bb6772f03b95a509.png"
       },
       "disposition": 0,
       "displayName": 20,
