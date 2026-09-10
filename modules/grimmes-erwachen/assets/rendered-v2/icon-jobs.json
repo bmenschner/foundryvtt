@@ -1,0 +1,731 @@
+[
+  {
+    "key": "cafe-stuhl-holz",
+    "category": "gastronomie",
+    "name": "Café-Stuhl",
+    "widthMeters": 0.5,
+    "heightMeters": 0.55,
+    "file": "bibliotheken/gastronomie/cafe-stuhl-holz.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE wooden cafe chair. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.5 by 0.55 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "cafe-tisch-rund",
+    "category": "gastronomie",
+    "name": "Runder Cafétisch",
+    "widthMeters": 0.8,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/gastronomie/cafe-tisch-rund.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE round oak cafe table, empty, no chairs. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "esstisch",
+    "category": "gastronomie",
+    "name": "Esstisch",
+    "widthMeters": 1.6,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/gastronomie/esstisch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE rectangular restaurant table, empty, no chairs. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.6 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "blumenvase",
+    "category": "gastronomie",
+    "name": "Blumenvase",
+    "widthMeters": 0.25,
+    "heightMeters": 0.25,
+    "file": "bibliotheken/gastronomie/blumenvase.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE small vase with fresh flowers. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.25 by 0.25 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kasse",
+    "category": "gastronomie",
+    "name": "Kasse",
+    "widthMeters": 0.4,
+    "heightMeters": 0.35,
+    "file": "bibliotheken/gastronomie/kasse.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE modern point of sale cash register. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.4 by 0.35 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "tresen",
+    "category": "gastronomie",
+    "name": "Tresenelement",
+    "widthMeters": 2,
+    "heightMeters": 0.65,
+    "file": "bibliotheken/gastronomie/tresen.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE straight wooden cafe counter segment. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.65 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kuchenvitrine",
+    "category": "gastronomie",
+    "name": "Kuchenvitrine",
+    "widthMeters": 1.4,
+    "heightMeters": 0.65,
+    "file": "bibliotheken/gastronomie/kuchenvitrine.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE glass pastry display filled with cakes. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.4 by 0.65 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "espressomaschine",
+    "category": "gastronomie",
+    "name": "Espressomaschine",
+    "widthMeters": 0.8,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/gastronomie/espressomaschine.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE commercial espresso machine. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "spuelbecken",
+    "category": "gastronomie",
+    "name": "Spülbecken",
+    "widthMeters": 1.2,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/gastronomie/spuelbecken.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE commercial stainless double sink. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "herd",
+    "category": "gastronomie",
+    "name": "Herd",
+    "widthMeters": 0.9,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/gastronomie/herd.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE commercial four burner stove. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.9 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kuehlschrank",
+    "category": "gastronomie",
+    "name": "Kühlschrank",
+    "widthMeters": 0.8,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/gastronomie/kuehlschrank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE industrial refrigerator with cutaway top showing shelves. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "biergartentisch",
+    "category": "gastronomie",
+    "name": "Biergartentisch",
+    "widthMeters": 2.2,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/gastronomie/biergartentisch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE outdoor wooden beer garden table without benches. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.2 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "bank",
+    "category": "gastronomie",
+    "name": "Bank",
+    "widthMeters": 2.2,
+    "heightMeters": 0.35,
+    "file": "bibliotheken/gastronomie/bank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE simple outdoor wood bench. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.2 by 0.35 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "sonnenschirm",
+    "category": "gastronomie",
+    "name": "Sonnenschirm",
+    "widthMeters": 3,
+    "heightMeters": 3,
+    "file": "bibliotheken/gastronomie/sonnenschirm.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE open cream patio umbrella viewed vertically. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 3 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "barhocker",
+    "category": "club",
+    "name": "Barhocker",
+    "widthMeters": 0.45,
+    "heightMeters": 0.45,
+    "file": "bibliotheken/club/barhocker.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE round black leather bar stool. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.45 by 0.45 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "bartresen",
+    "category": "club",
+    "name": "Bartresen",
+    "widthMeters": 3,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/club/bartresen.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE sleek black illuminated straight cocktail bar counter. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "flaschenregal",
+    "category": "club",
+    "name": "Flaschenregal",
+    "widthMeters": 1.5,
+    "heightMeters": 0.4,
+    "file": "bibliotheken/club/flaschenregal.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE cocktail liquor storage rack with colorful bottle tops. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.5 by 0.4 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "lounge-sofa",
+    "category": "club",
+    "name": "Lounge-Sofa",
+    "widthMeters": 2.4,
+    "heightMeters": 0.9,
+    "file": "bibliotheken/club/lounge-sofa.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE luxurious plum velvet three seat lounge sofa. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.4 by 0.9 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "couchtisch",
+    "category": "club",
+    "name": "Couchtisch",
+    "widthMeters": 1.2,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/club/couchtisch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE low oval dark glass lounge table. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "dj-pult",
+    "category": "club",
+    "name": "DJ-Pult",
+    "widthMeters": 1.8,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/club/dj-pult.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE DJ mixing console with twin turntables. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.8 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "lautsprecher",
+    "category": "club",
+    "name": "Lautsprecher",
+    "widthMeters": 0.5,
+    "heightMeters": 0.45,
+    "file": "bibliotheken/club/lautsprecher.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE large black floor speaker. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.5 by 0.45 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "garderobe",
+    "category": "club",
+    "name": "Garderobe",
+    "widthMeters": 2,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/club/garderobe.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE coat check rack with hanging coats. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "empfang",
+    "category": "club",
+    "name": "Empfang",
+    "widthMeters": 1.8,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/club/empfang.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE small elegant reception desk with terminal. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.8 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "absperrung",
+    "category": "club",
+    "name": "Absperrkordel",
+    "widthMeters": 1.5,
+    "heightMeters": 0.2,
+    "file": "bibliotheken/club/absperrung.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE velvet rope queue barrier with two brass posts. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.5 by 0.2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "sonnensegel",
+    "category": "club",
+    "name": "Sonnensegel",
+    "widthMeters": 4,
+    "heightMeters": 3,
+    "file": "bibliotheken/club/sonnensegel.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE triangular cream rooftop sun sail. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 4 by 3 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "spind",
+    "category": "sport",
+    "name": "Spindreihe",
+    "widthMeters": 2,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/sport/spind.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE four sports changing room lockers, open cutaway tops. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "umkleidebank",
+    "category": "sport",
+    "name": "Umkleidebank",
+    "widthMeters": 2,
+    "heightMeters": 0.4,
+    "file": "bibliotheken/sport/umkleidebank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE slatted locker room bench. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.4 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "dusche",
+    "category": "sport",
+    "name": "Dusche",
+    "widthMeters": 1,
+    "heightMeters": 1,
+    "file": "bibliotheken/sport/dusche.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE individual shower tray with drain and shower head. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "fussballtor",
+    "category": "sport",
+    "name": "Fußballtor",
+    "widthMeters": 7.32,
+    "heightMeters": 2,
+    "file": "bibliotheken/sport/fussballtor.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE full size white football soccer goal with white net. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 7.32 by 2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "fussball",
+    "category": "sport",
+    "name": "Fußball",
+    "widthMeters": 0.22,
+    "heightMeters": 0.22,
+    "file": "bibliotheken/sport/fussball.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single classic soccer ball. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.22 by 0.22 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "trainingshuetchen",
+    "category": "sport",
+    "name": "Trainingshütchen",
+    "widthMeters": 0.3,
+    "heightMeters": 0.3,
+    "file": "bibliotheken/sport/trainingshuetchen.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single orange sports training cone. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.3 by 0.3 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "hantelbank",
+    "category": "sport",
+    "name": "Hantelbank",
+    "widthMeters": 1.6,
+    "heightMeters": 0.65,
+    "file": "bibliotheken/sport/hantelbank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE gym weight bench with barbell rack. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.6 by 0.65 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "laufband",
+    "category": "sport",
+    "name": "Laufband",
+    "widthMeters": 2,
+    "heightMeters": 0.9,
+    "file": "bibliotheken/sport/laufband.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE modern gym treadmill. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.9 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "ergometer",
+    "category": "sport",
+    "name": "Ergometer",
+    "widthMeters": 1.2,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/sport/ergometer.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE stationary exercise bike. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "taktiktafel",
+    "category": "sport",
+    "name": "Taktiktafel",
+    "widthMeters": 1.2,
+    "heightMeters": 0.4,
+    "file": "bibliotheken/sport/taktiktafel.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE soccer tactical whiteboard lying flat with pitch diagram. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 0.4 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "geraeteregal",
+    "category": "sport",
+    "name": "Geräteregal",
+    "widthMeters": 2,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/sport/geraeteregal.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE sports equipment rack containing balls bibs cones. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "massageliege",
+    "category": "sport",
+    "name": "Massageliege",
+    "widthMeters": 2,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/sport/massageliege.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE physiotherapy massage table. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "bett",
+    "category": "wohnen",
+    "name": "Einzelbett",
+    "widthMeters": 2.1,
+    "heightMeters": 1,
+    "file": "bibliotheken/wohnen/bett.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single bed with pillow and folded blanket. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.1 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "doppelbett",
+    "category": "wohnen",
+    "name": "Doppelbett",
+    "widthMeters": 2.1,
+    "heightMeters": 1.8,
+    "file": "bibliotheken/wohnen/doppelbett.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE double bed with pillows. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.1 by 1.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "schrank",
+    "category": "wohnen",
+    "name": "Kleiderschrank",
+    "widthMeters": 1.8,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/wohnen/schrank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE wooden wardrobe with cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.8 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "sessel",
+    "category": "wohnen",
+    "name": "Sessel",
+    "widthMeters": 0.9,
+    "heightMeters": 0.9,
+    "file": "bibliotheken/wohnen/sessel.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE comfortable upholstered armchair. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.9 by 0.9 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "buecherregal",
+    "category": "wohnen",
+    "name": "Bücherregal",
+    "widthMeters": 1.8,
+    "heightMeters": 0.35,
+    "file": "bibliotheken/wohnen/buecherregal.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE wood bookcase with books seen from cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.8 by 0.35 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "waschbecken",
+    "category": "wohnen",
+    "name": "Waschbecken",
+    "widthMeters": 0.6,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/wohnen/waschbecken.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE white porcelain bathroom sink. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.6 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "toilette",
+    "category": "wohnen",
+    "name": "Toilette",
+    "widthMeters": 0.4,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/wohnen/toilette.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE white porcelain toilet. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.4 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "badewanne",
+    "category": "wohnen",
+    "name": "Badewanne",
+    "widthMeters": 1.8,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/wohnen/badewanne.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE empty white bathtub. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.8 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "pflanze",
+    "category": "wohnen",
+    "name": "Zimmerpflanze",
+    "widthMeters": 0.8,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/wohnen/pflanze.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE potted leafy indoor plant. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "teppich",
+    "category": "wohnen",
+    "name": "Teppich",
+    "widthMeters": 3,
+    "heightMeters": 2,
+    "file": "bibliotheken/wohnen/teppich.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE rectangular worn red patterned rug. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "schreibtisch",
+    "category": "buero_medizin",
+    "name": "Schreibtisch",
+    "widthMeters": 1.6,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/buero_medizin/schreibtisch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE office desk with computer keyboard papers. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.6 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "buerostuhl",
+    "category": "buero_medizin",
+    "name": "Bürostuhl",
+    "widthMeters": 0.65,
+    "heightMeters": 0.65,
+    "file": "bibliotheken/buero_medizin/buerostuhl.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE black swivel office chair. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.65 by 0.65 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "meetingtisch",
+    "category": "buero_medizin",
+    "name": "Meetingtisch",
+    "widthMeters": 3,
+    "heightMeters": 1.2,
+    "file": "bibliotheken/buero_medizin/meetingtisch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE oval conference table without chairs. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 1.2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "aktenschrank",
+    "category": "buero_medizin",
+    "name": "Aktenschrank",
+    "widthMeters": 1,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/buero_medizin/aktenschrank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE metal office file cabinet cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "terminal",
+    "category": "buero_medizin",
+    "name": "Terminal",
+    "widthMeters": 0.6,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/buero_medizin/terminal.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE compact futuristic computer terminal. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.6 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "untersuchungsliege",
+    "category": "buero_medizin",
+    "name": "Untersuchungsliege",
+    "widthMeters": 2,
+    "heightMeters": 0.75,
+    "file": "bibliotheken/buero_medizin/untersuchungsliege.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE clean medical examination bed. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.75 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "krankenbett",
+    "category": "buero_medizin",
+    "name": "Krankenbett",
+    "widthMeters": 2.2,
+    "heightMeters": 1,
+    "file": "bibliotheken/buero_medizin/krankenbett.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE hospital bed with side rails. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.2 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "medizinschrank",
+    "category": "buero_medizin",
+    "name": "Medizinschrank",
+    "widthMeters": 1,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/buero_medizin/medizinschrank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE medical supply cabinet with cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "instrumentenwagen",
+    "category": "buero_medizin",
+    "name": "Instrumentenwagen",
+    "widthMeters": 0.7,
+    "heightMeters": 0.5,
+    "file": "bibliotheken/buero_medizin/instrumentenwagen.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE medical instrument trolley. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.7 by 0.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "serverrack",
+    "category": "buero_medizin",
+    "name": "Serverrack",
+    "widthMeters": 0.8,
+    "heightMeters": 1,
+    "file": "bibliotheken/buero_medizin/serverrack.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE computer server rack cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "werkbank",
+    "category": "industrie_verkehr",
+    "name": "Werkbank",
+    "widthMeters": 2,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/industrie_verkehr/werkbank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE heavy workshop bench with vise and tools. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "palette",
+    "category": "industrie_verkehr",
+    "name": "Palette",
+    "widthMeters": 1.2,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/industrie_verkehr/palette.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE wooden shipping pallet. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kiste",
+    "category": "industrie_verkehr",
+    "name": "Kiste",
+    "widthMeters": 1,
+    "heightMeters": 1,
+    "file": "bibliotheken/industrie_verkehr/kiste.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE closed wooden cargo crate. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "fass",
+    "category": "industrie_verkehr",
+    "name": "Fass",
+    "widthMeters": 0.6,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/industrie_verkehr/fass.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE steel industrial barrel. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.6 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "maschine",
+    "category": "industrie_verkehr",
+    "name": "Fertigungsmaschine",
+    "widthMeters": 3,
+    "heightMeters": 2,
+    "file": "bibliotheken/industrie_verkehr/maschine.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE industrial CNC production machine cutaway top. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "foerderband",
+    "category": "industrie_verkehr",
+    "name": "Förderband",
+    "widthMeters": 4,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/industrie_verkehr/foerderband.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE straight factory conveyor belt segment. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 4 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "gabelstapler",
+    "category": "industrie_verkehr",
+    "name": "Gabelstapler",
+    "widthMeters": 3,
+    "heightMeters": 1.2,
+    "file": "bibliotheken/industrie_verkehr/gabelstapler.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE yellow industrial forklift. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 1.2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "auto",
+    "category": "industrie_verkehr",
+    "name": "Auto",
+    "widthMeters": 4.5,
+    "heightMeters": 1.8,
+    "file": "bibliotheken/industrie_verkehr/auto.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE weathered futuristic compact car. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 4.5 by 1.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "autositz",
+    "category": "industrie_verkehr",
+    "name": "Autositzbank",
+    "widthMeters": 1.5,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/industrie_verkehr/autositz.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE salvaged automobile rear seat bench used as bar furniture. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.5 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "muellcontainer",
+    "category": "industrie_verkehr",
+    "name": "Müllcontainer",
+    "widthMeters": 2,
+    "heightMeters": 1.2,
+    "file": "bibliotheken/industrie_verkehr/muellcontainer.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE green metal dumpster. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 1.2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "generator",
+    "category": "industrie_verkehr",
+    "name": "Generator",
+    "widthMeters": 2,
+    "heightMeters": 1,
+    "file": "bibliotheken/industrie_verkehr/generator.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE diesel backup generator. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "rohr",
+    "category": "industrie_verkehr",
+    "name": "Rohrsegment",
+    "widthMeters": 3,
+    "heightMeters": 0.4,
+    "file": "bibliotheken/industrie_verkehr/rohr.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE rusty industrial straight pipe section. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 0.4 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kirchenbank",
+    "category": "sakral_natur",
+    "name": "Kirchenbank",
+    "widthMeters": 3,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/sakral_natur/kirchenbank.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE dark carved wooden church pew. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 3 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "altar",
+    "category": "sakral_natur",
+    "name": "Altar",
+    "widthMeters": 2.4,
+    "heightMeters": 1.1,
+    "file": "bibliotheken/sakral_natur/altar.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE stone church altar. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2.4 by 1.1 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "lesepult",
+    "category": "sakral_natur",
+    "name": "Lesepult",
+    "widthMeters": 0.7,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/sakral_natur/lesepult.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE wooden church lectern. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.7 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "kerzenstaender",
+    "category": "sakral_natur",
+    "name": "Kerzenständer",
+    "widthMeters": 0.4,
+    "heightMeters": 0.4,
+    "file": "bibliotheken/sakral_natur/kerzenstaender.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE brass church candle stand. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.4 by 0.4 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "trauerkranz",
+    "category": "sakral_natur",
+    "name": "Trauerkranz",
+    "widthMeters": 0.8,
+    "heightMeters": 0.8,
+    "file": "bibliotheken/sakral_natur/trauerkranz.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE funeral wreath of white flowers and greenery. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 0.8 by 0.8 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "sarg",
+    "category": "sakral_natur",
+    "name": "Sarg",
+    "widthMeters": 2,
+    "heightMeters": 0.7,
+    "file": "bibliotheken/sakral_natur/sarg.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE closed polished wooden coffin. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 0.7 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "baum",
+    "category": "sakral_natur",
+    "name": "Laubbaum",
+    "widthMeters": 5,
+    "heightMeters": 5,
+    "file": "bibliotheken/sakral_natur/baum.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single full leafy deciduous tree canopy. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 5 by 5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "busch",
+    "category": "sakral_natur",
+    "name": "Busch",
+    "widthMeters": 1.5,
+    "heightMeters": 1.5,
+    "file": "bibliotheken/sakral_natur/busch.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single dense green shrub. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.5 by 1.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "fels",
+    "category": "sakral_natur",
+    "name": "Fels",
+    "widthMeters": 2,
+    "heightMeters": 1.5,
+    "file": "bibliotheken/sakral_natur/fels.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE single weathered irregular grey boulder. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 1.5 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "baumstamm",
+    "category": "sakral_natur",
+    "name": "Baumstamm",
+    "widthMeters": 4,
+    "heightMeters": 0.6,
+    "file": "bibliotheken/sakral_natur/baumstamm.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE fallen dead tree trunk. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 4 by 0.6 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "schutt",
+    "category": "sakral_natur",
+    "name": "Schutthaufen",
+    "widthMeters": 2,
+    "heightMeters": 2,
+    "file": "bibliotheken/sakral_natur/schutt.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE small rubble pile of broken stones. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 2 by 2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  },
+  {
+    "key": "feuerstelle",
+    "category": "sakral_natur",
+    "name": "Feuerstelle",
+    "widthMeters": 1.2,
+    "heightMeters": 1.2,
+    "file": "bibliotheken/sakral_natur/feuerstelle.png",
+    "prompt": "Use case: stylized-concept. Reusable individual VTT map sprite: ONE unlit campsite stone fire ring. Strict orthographic top-down camera exactly vertical 90 degrees, no isometric perspective. Detailed realistic hand-painted battlemap style, restrained contemporary/future Germany material design, consistent soft neutral overhead lighting. Object footprint approximately 1.2 by 1.2 meters, keep believable proportions. Single complete isolated object centered with generous transparent padding. True transparent alpha background, no painted checkerboard, no floor, no room, no surrounding furniture, no text, no border, no people. PNG for independent placement and rotation on a battlemap."
+  }
+]
