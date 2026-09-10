@@ -1,5 +1,7 @@
 # Grimmes Erwachen – Abenteuerpaket für Foundry 14
 
+Version 1.0.2 korrigiert die System-Kompatibilität: Eden ab 4.0.8 wird bei der Modulaktivierung nicht mehr durch eine fälschlich auf „4“ gesetzte maximale Abhängigkeitsversion abgewiesen. Der Importer prüft weiterhin Eden 4.x und die Matrix-Datenmodelle. Nach dem Deployment das Modul erneut aktivieren und die Welt neu laden.
+
 Ziel: **Foundry VTT 14.367 (Stable)** und **Shadowrun 6 Eden 4.0.8**, System-ID `shadowrun6-eden`. Stand: 8. September 2026.
 
 Enthalten sind die drei Abenteuer **Spuk in der Wolfsburg**, **Zucker für die Kinder** und **Ring aus Feuer**, aufbereitet nach der bereitgestellten PDF *Grimms Erwachen*. Der Paket- und Bildtitel folgt deinem gewünschten Wortlaut „Grimmes Erwachen“.
