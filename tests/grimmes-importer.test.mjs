@@ -25,6 +25,7 @@ function reset(){
 const log=console.info;console.info=()=>{};
 reset();
 const first=await importBundle();assert.deepEqual(first.created,{Actor:75,JournalEntry:39,Scene:34});
+assert([...game.scenes.values()].every(scene=>scene.levels?.some(level=>level.background?.src)));
 const second=await importBundle();assert.deepEqual(second.created,{Actor:0,JournalEntry:0,Scene:0});assert.deepEqual(second.skipped,first.created);
 reset();
 const original=bundle.actors[0];await CONFIG.Actor.documentClass.create({_id:original._id,name:'Bestehender fremder Actor'});
@@ -36,6 +37,9 @@ const collisionRetry=await importBundle();assert.deepEqual(collisionRetry.create
 reset();const partial=await importBundle({chapters:[2],withActors:false});assert.equal(partial.created.Actor,0);assert.equal(partial.created.Scene,11);assert([...game.scenes.values()].every(s=>!(s.tokens?.length)));
 reset();const fetchGood=globalThis.fetch;globalThis.fetch=async(path,options)=>options?.method==='HEAD'?{ok:false,status:404}:fetchGood(path,options);
 const errorLog=console.error;console.error=()=>{};await assert.rejects(importBundle(),/Bild fehlt/);console.error=errorLog;
+assert.equal(game.actors.size+game.journal.size+game.scenes.size+game.folders.size,0);
+reset();const SceneClass=CONFIG.Scene.documentClass;CONFIG.Scene.documentClass=class extends SceneClass {toObject(){const data=super.toObject();delete data.levels;delete data.background;return data;}};
+console.error=()=>{};await assert.rejects(importBundle(),/Szenenhintergrund wurde/);console.error=errorLog;
 assert.equal(game.actors.size+game.journal.size+game.scenes.size+game.folders.size,0);
 assert.equal(rewriteLinks('@UUID[Actor.abcdef]',new Map([['abcdef','ghijkl']])),'@UUID[Actor.ghijkl]');
 console.info=log;
