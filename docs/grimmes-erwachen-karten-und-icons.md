@@ -1,6 +1,6 @@
 # Karten und Icon-Bibliotheken
 
-**Dateien vollständig:** 32 Karten und 81 einzelne transparente Icons. Der Katalog zeigt alle sieben Bibliotheken. Siehe `STATUS.md` für den Prüfstand.
+**Erweiterung:** 277 von 277 geplanten Icons vorhanden. Siehe `STATUS.md` für die offenen Dateien und den Prüfstand.
 
 Die gerenderten Karten und die einzelnen Objekte liegen getrennt vor. „Ring aus Feuer“ wurde unverändert übernommen. Alle neuen Bilder wurden mit dem eingebauten Bildgenerator erzeugt; die vollständigen Vorgaben stehen in `render-jobs.json` und `icon-jobs.json`. Die Recherchequellen dienen als funktionale und gestalterische Referenzen; es wurden keine fremden Asset-Pakete übernommen.
 
