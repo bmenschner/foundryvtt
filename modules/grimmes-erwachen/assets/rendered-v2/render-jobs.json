@@ -1,0 +1,281 @@
+[
+  {
+    "key": "a1-01-tune-bar",
+    "kind": "map",
+    "name": "Tune-Bar – Auftrag und Rapport",
+    "file": "karten/a1-01-tune-bar.png",
+    "widthMeters": 30,
+    "heightMeters": 22,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Tune-Bar – Auftrag und Rapport. Whole rectangular site measures 30 by 22 meters; landscape aspect ratio 30:22. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Gastraum; voll ausgestattete Theke; getrennte Toiletten; Getränkelager; Hebebühnen-Bühne. Required visible objects: Autositz-Sitzbänke mit erkennbaren Lehnen, Werkbänke als Tische, Zapfhähne, Flaschenregal, Kasse, Spülbecken, Werkzeugwand, Motorbauteile als Dekoration, Lautsprecher und Mikrofone auf der Hebebühnen-Bühne.. Layout and adventure-specific constraints: Sitzplätze zur Bühne orientieren; Bediengang hinter der Theke; Begegnungstisch außerhalb der Verkehrswege. Autositze als Möbel zeichnen, nicht als komplette Autos.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-02-st-annen",
+    "kind": "map",
+    "name": "St.-Annen-Kirche – Trauerfeier",
+    "file": "karten/a1-02-st-annen.png",
+    "widthMeters": 50,
+    "heightMeters": 40,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: St.-Annen-Kirche – Trauerfeier. Whole rectangular site measures 50 by 40 meters; landscape aspect ratio 50:40. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Kirchenschiff; Altarbereich; Sakristei; Eingang und Vorplatz. Required visible objects: Kirchenbänke mit Mittelgang, Altar, Lesepult, Kerzenständer, Trauerkränze, Sargplatz, Orgelbereich, Garderobenhaken in der Sakristei, AR-Übertragungstechnik auf dem Vorplatz.. Layout and adventure-specific constraints: Altar und Sarg müssen von den Sitzreihen sichtbar sein. Seitengänge und Türzugänge freihalten; Fantasy-Referenz nur für kirchliche Möblierung, keine fremde Krypta übernehmen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-03-rathaus-praxis",
+    "kind": "map",
+    "name": "Rathaus – Erdgeschoss und Arztpraxis",
+    "file": "karten/a1-03-rathaus-praxis.png",
+    "widthMeters": 40,
+    "heightMeters": 26,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Rathaus – Erdgeschoss und Arztpraxis. Whole rectangular site measures 40 by 26 meters; landscape aspect ratio 40:26. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Rathausfoyer; separater Praxisempfang; Wartezimmer; zwei Sprechzimmer; Labor; WC; Akten-/Serverbereich. Required visible objects: Empfangstresen mit Terminal und Kartenterminal, Wartezimmerstühle, Pflanzen, Untersuchungsliegen, Rollhocker, Waschbecken, Diagnostikgeräte, Laborarbeitsplatte, Probenkühlschrank, abschließbare Aktenschränke.. Layout and adventure-specific constraints: Patientenweg Empfang → Warten → Untersuchung; Labor nicht als Durchgang. Lokale Akten und Server bleiben räumlich vom allgemeinen Publikumsverkehr getrennt.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-04-rathaus-buero",
+    "kind": "map",
+    "name": "Rathaus – Bürgermeisterbüro, 2. OG",
+    "file": "karten/a1-04-rathaus-buero.png",
+    "widthMeters": 30,
+    "heightMeters": 20,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Rathaus – Bürgermeisterbüro, 2. OG. Whole rectangular site measures 30 by 20 meters; landscape aspect ratio 30:20. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Vorzimmer; Amtszimmer; Besprechungsbereich; Papierarchiv. Required visible objects: Sekretariatsschreibtisch, Besucherbank, Bürostühle, großer Arbeitstisch, zwei Besucherstühle, Besprechungstisch, Aktenregale, Papierstapel, Drucker, Garderobe und Pflanzen.. Layout and adventure-specific constraints: Zutritt zum Amtszimmer über das Vorzimmer; Schreibtisch nicht mitten in einer übergroßen leeren Fläche. Papierunterlagen bleiben als solche erkennbar.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-05-sanders-garten",
+    "kind": "map",
+    "name": "Sanders-Anwesen – Garten und Zufahrt",
+    "file": "karten/a1-05-sanders-garten.png",
+    "widthMeters": 88,
+    "heightMeters": 110,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Sanders-Anwesen – Garten und Zufahrt. Whole rectangular site measures 88 by 110 meters; landscape aspect ratio 88:110. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: 80 × 100 m Grundstück; Zufahrt; Garage; Gerätehaus; Gartenwege; Hauseingänge. Required visible objects: Pförtner-/Toranlage, Kameras, Fahrspuren, Fahrzeugstellplätze, Hecken, Blumenbeete, Gartenbänke, Terrasse, Geräteständer und Bewässerungsdetails.. Layout and adventure-specific constraints: Grundstücksmaß beibehalten. Haupthaus exakt mit den Etagen verknüpfen; Zugänge, Garage und Gerätehaus müssen über Wege erreichbar sein. Sichtblocker an Hecken und Stämmen plausibel setzen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-06-sanders-kg",
+    "kind": "map",
+    "name": "Sanders-Anwesen – Keller",
+    "file": "karten/a1-06-sanders-kg.png",
+    "widthMeters": 44,
+    "heightMeters": 28,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Sanders-Anwesen – Keller. Whole rectangular site measures 44 by 28 meters; landscape aspect ratio 44:28. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Haustechnik; Weinkeller; Wäscherei; Küche; Vorräte. Required visible objects: Heiz-/Lüftungsaggregate mit Wartungsgang; Flaschenregale und Verkostungstisch; Waschmaschinen, Trockner, Wäschewagen; Herd, Haube, Spüle, Arbeitsinseln; Kühl- und Trockenlager.. Layout and adventure-specific constraints: Anlieferung und Vorräte an die Küche anbinden. Etagenübergreifende Treppen und Aufzug deckungsgleich erhalten.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-06-sanders-eg",
+    "kind": "map",
+    "name": "Sanders-Anwesen – Erdgeschoss",
+    "file": "karten/a1-06-sanders-eg.png",
+    "widthMeters": 44,
+    "heightMeters": 28,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Sanders-Anwesen – Erdgeschoss. Whole rectangular site measures 44 by 28 meters; landscape aspect ratio 44:28. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Empfangshalle; Bibliothek/Heimkino; Wohn- und Speiseraum; Kinolager; Service. Required visible objects: Bücherregale, Lesesessel und Lampen; Leinwand, Projektor und geordnete Kinosessel; Sofagruppen, Beistelltische, Pflanzen; Esstisch mit Stühlen, Geschirrschrank, Servierwagen.. Layout and adventure-specific constraints: Sitzrichtungen zur Leinwand beachten. Halle und Galerieanschluss frei halten. Kein zweites beliebiges Bar-/Kneipenlayout.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-06-sanders-og",
+    "kind": "map",
+    "name": "Sanders-Anwesen – Obergeschoss",
+    "file": "karten/a1-06-sanders-og.png",
+    "widthMeters": 44,
+    "heightMeters": 28,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Sanders-Anwesen – Obergeschoss. Whole rectangular site measures 44 by 28 meters; landscape aspect ratio 44:28. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Ralfs Wohn-/Schlafbereich; Walthers Arbeitszimmer; Galerie; Personalwohnungen; Gästesuiten; Sternschutz-Quartier. Required visible objects: Betten mit Kopfteil, Nachttische, Kleiderschränke, private Bäder; Walthers Schreibtisch mit lokalem Terminal und Papierakten; Personal-Kleinküchen; Sicherheitsspinde und Funkarbeitsplatz.. Layout and adventure-specific constraints: Bäder separat zugänglich; Galerie bleibt ein begehbarer Umlauf. Walthers Terminal nicht als frei zugänglicher Netzwerkknoten umdeuten.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-06-sanders-dach",
+    "kind": "map",
+    "name": "Sanders-Anwesen – Dachgarten",
+    "file": "karten/a1-06-sanders-dach.png",
+    "widthMeters": 44,
+    "heightMeters": 28,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Sanders-Anwesen – Dachgarten. Whole rectangular site measures 44 by 28 meters; landscape aspect ratio 44:28. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Dachgarten; Oberlicht; Treppe; Aufzug; Wartungswege. Required visible objects: Pflanzkübel, niedrige Hecken, Loungegarnituren, Sonnenschutz, Dachentwässerung, Geländer, Technikgehäuse und sichere Wartungswege.. Layout and adventure-specific constraints: Oberlicht und vertikale Zugänge deckungsgleich mit den unteren Geschossen. Dachkante und Oberlicht sind keine normalen Türen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-07-schloss",
+    "kind": "map",
+    "name": "Schloss Wolfsburg – Innenhof und Torflügel",
+    "file": "karten/a1-07-schloss.png",
+    "widthMeters": 64,
+    "heightMeters": 52,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Schloss Wolfsburg – Innenhof und Torflügel. Whole rectangular site measures 64 by 52 meters; landscape aspect ratio 64:52. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Vierflügeliger Hofausschnitt; Tordurchfahrt; Wachstube; Treppen; Zugang Hausmannsturm. Required visible objects: Hofpflaster, Torbeschläge, Bänke, historische Türen, Informationstafeln, Wachschreibtisch mit Funkgerät, Ausstellungs- oder Verwaltungsdetails nach Raumfunktion.. Layout and adventure-specific constraints: Schlossgrundform und Hof behalten; Fantasy-Keep nur als Materialreferenz. Keine erfundenen Kerker/Thronsäle einsetzen. Mehr als 80 Räume weiterhin nicht als vollständig rekonstruiert ausgeben.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a1-08-hausmannsturm",
+    "kind": "map",
+    "name": "Hausmannsturm – Wachstube",
+    "file": "karten/a1-08-hausmannsturm.png",
+    "widthMeters": 10,
+    "heightMeters": 12,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Hausmannsturm – Wachstube. Whole rectangular site measures 10 by 12 meters; landscape aspect ratio 10:12. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: 4 × 4 m Innenraum; Podest; Treppenzugang. Required visible objects: Kleiner Tisch, zwei Stühle, schmaler Schrank, Laterne/Leuchte, Fensterbänke, Mauerwerk und Türbeschläge.. Layout and adventure-specific constraints: 4 × 4 m tatsächlich einhalten; keine übergroßen Möbel. Türen, Podest und Bewegungsfläche brauchen Platz; die Turmhöhe ist keine Kartenlänge.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-01-kanone",
+    "kind": "map",
+    "name": "Die Kanone – Auftrag",
+    "file": "karten/a2-01-kanone.png",
+    "widthMeters": 30,
+    "heightMeters": 22,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Die Kanone – Auftrag. Whole rectangular site measures 30 by 22 meters; landscape aspect ratio 30:22. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Eingang mit Türsteherplatz; Gastraum; Bar; Getränkelager; getrennte Toiletten. Required visible objects: Abgenutzte Tische und einzelne Stühle, Barhocker, Zapfanlage, Gläser, Flaschenregale, Kasse, Spüle, Getränkekisten, Jackenhaken, kleine Spiel-/Musikecke als Ausarbeitung.. Layout and adventure-specific constraints: Kontrollierter Eingang und Verhandlungstisch mit etwas Abstand zum Trubel. Nicht das gleiche Mobiliar wie im eleganten Cocktail Club.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-02-waldrand",
+    "kind": "map",
+    "name": "Murgtal – Bushaltestelle und Absperrung",
+    "file": "karten/a2-02-waldrand.png",
+    "widthMeters": 48,
+    "heightMeters": 32,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Murgtal – Bushaltestelle und Absperrung. Whole rectangular site measures 48 by 32 meters; landscape aspect ratio 48:32. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Straße; Haltebucht; Wartehäuschen; Schranke/Zaun; Zugang Wald. Required visible objects: Haltestellenschild, Fahrplan, Sitzbank, Mülleimer, Straßenmarkierungen, Poller, Warnschilder, Zaunpfosten, Fahrspuren und überwucherter Wegrand.. Layout and adventure-specific constraints: Straße, Waldweg und überkletterbare Absperrung müssen zusammenpassen. Ein busbreiter Straßenquerschnitt darf nicht wie ein Fußpfad aussehen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-03-pfad",
+    "kind": "map",
+    "name": "Erwachter Wald – Waldpfad und Lichtung",
+    "file": "karten/a2-03-pfad.png",
+    "widthMeters": 48,
+    "heightMeters": 36,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Erwachter Wald – Waldpfad und Lichtung. Whole rectangular site measures 48 by 36 meters; landscape aspect ratio 48:36. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Schmaler Pfad; Lichtung; Unterholz; auffällige Spuren-/Gasaderstelle. Required visible objects: Unterschiedliche Baumarten und Stammstärken, Farne, Wurzeln, Totholz, Laub, Steine, Pilze und Bodenmulden.. Layout and adventure-specific constraints: Dichte Randvegetation und freie Laufwege unterscheiden. Gasspuren nicht durch übergroße leuchtende Spielersymbole verraten; Geheimhinweise ins GM-Journal.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-03-bruecke",
+    "kind": "map",
+    "name": "Erwachter Wald – Schlucht und Hängebrücke",
+    "file": "karten/a2-03-bruecke.png",
+    "widthMeters": 48,
+    "heightMeters": 36,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Erwachter Wald – Schlucht und Hängebrücke. Whole rectangular site measures 48 by 36 meters; landscape aspect ratio 48:36. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Beide Widerlager; Brückensteg; Abbruchkanten; Stromschnellen. Required visible objects: Einzelne Bohlen, fehlende Planken, Seile, Befestigungspfosten, Felsspalten, Strudel, Geröll und abgeschlagene Äste.. Layout and adventure-specific constraints: Materialreferenz Banshee Bridge nicht als Steinbrücke kopieren: Die Abenteuerbrücke bleibt morsch und hängend. Tiefe durch Felskanten und Schatten, nicht Perspektivverzerrung darstellen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-03-furt",
+    "kind": "map",
+    "name": "Erwachter Wald – Furt der Wassergeister",
+    "file": "karten/a2-03-furt.png",
+    "widthMeters": 48,
+    "heightMeters": 36,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Erwachter Wald – Furt der Wassergeister. Whole rectangular site measures 48 by 36 meters; landscape aspect ratio 48:36. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Flusslauf; Kiesbank; flache Furt; steilere Uferabschnitte. Required visible objects: Sichtbare Kiesel im flachen Wasser, größere Trittsteine, Schilf, Treibholz, Strömungslinien und nasse Ufer.. Layout and adventure-specific constraints: Querungsroute soll ohne Beschriftung erkennbar sein. Wassergeister als bewegliche Tokens; keine fest eingebrannten Figuren.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-03-huette",
+    "kind": "map",
+    "name": "Erwachter Wald – Überwucherte Hütte",
+    "file": "karten/a2-03-huette.png",
+    "widthMeters": 48,
+    "heightMeters": 36,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Erwachter Wald – Überwucherte Hütte. Whole rectangular site measures 48 by 36 meters; landscape aspect ratio 48:36. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Eingestürzter Wohnraum; Türöffnung; Schuttzone; überwuchertes Umfeld. Required visible objects: Balken, Ziegel/Schindeln, zerbrochener Tisch, Ofenrest, Bettgestell, Pilze, Kletterpflanzen und geborstene Fensterrahmen.. Layout and adventure-specific constraints: Dachreste dürfen nur tatsächlich verschüttete Bereiche verdecken. Einen möglichen Zugang lesbar halten; schwieriges Gelände getrennt vom unpassierbaren Schutt markieren.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-04-hundskopf",
+    "kind": "map",
+    "name": "Hundskopf – Geisterdorf",
+    "file": "karten/a2-04-hundskopf.png",
+    "widthMeters": 60,
+    "heightMeters": 44,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Hundskopf – Geisterdorf. Whole rectangular site measures 60 by 44 meters; landscape aspect ratio 60:44. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Mehrere unterschiedlich zerstörte Häuser; ehemaliger Dorfweg; Alfreds Lager; Kanaleinstieg. Required visible objects: Verschieden große Grundmauern, Feuerstellen, Mauerreste, verwitterte Zäune, Gartenspuren, Schutt, Alfreds improvisierte Unterkunft und erkennbarer Einstieg.. Layout and adventure-specific constraints: Häuser müssen unterschiedliche frühere Funktionen erkennen lassen. Fabrik bleibt erzählerisch 500 m entfernt und wird nicht an den Dorfkartenrand gesetzt.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-05-kanal",
+    "kind": "map",
+    "name": "Hundskopf – Kanalroute zur Fabrik",
+    "file": "karten/a2-05-kanal.png",
+    "widthMeters": 54,
+    "heightMeters": 30,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Hundskopf – Kanalroute zur Fabrik. Whole rectangular site measures 54 by 30 meters; landscape aspect ratio 54:30. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Wasserrinne; seitliche Wartungsstege; Nischen; Einstiegsleiter; Fabrikaufstieg. Required visible objects: Rohre mit Flanschen, Ventile, Gitter, Rost, Ablagerungen, feuchtes Mauerwerk, Wartungskästen und Steigbügel.. Layout and adventure-specific constraints: Durchgehenden trockenen oder ausdrücklich nassen Weg erkennbar zeichnen. Deckel, Leiter und Lagerhallenaufstieg räumlich aufeinander abstimmen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-06-fabrik",
+    "kind": "map",
+    "name": "Süßigkeiten-Fabrik – Produktion und Lager",
+    "file": "karten/a2-06-fabrik.png",
+    "widthMeters": 56,
+    "heightMeters": 44,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Süßigkeiten-Fabrik – Produktion und Lager. Whole rectangular site measures 56 by 44 meters; landscape aspect ratio 56:44. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Empfang; Umkleide; Lager; Produktionsstraße; Ofen; Lüftung; Kanalzugang; Ladetor; Feuerleiter. Required visible objects: Teigmischer mit Bottich, Förderbänder, Greifarme, Industriekessel, Ofen mit Öffnung, Gabelstapler, Sackware, Zutatenregale, Paletten, Rohre, Bedienpulte und Umkleidespinde.. Layout and adventure-specific constraints: Prozessfolge Zutaten → Mischen → Formen → Backen → Lager ist lesbar. Die fünf Maschinendiener erhalten unterscheidbare Gefäße. Abenteuerrelevante Vorrichtungen, 36 Plätze und 27 Belegungen bleiben in der GM-Ebene; keine Kinder oder Gewalt ins Kartenbild einbrennen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a2-07-parkhaus",
+    "kind": "map",
+    "name": "Karlsruhe – Übergabe im Parkhaus",
+    "file": "karten/a2-07-parkhaus.png",
+    "widthMeters": 44,
+    "heightMeters": 30,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Karlsruhe – Übergabe im Parkhaus. Whole rectangular site measures 44 by 30 meters; landscape aspect ratio 44:30. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Fahrgasse; Stellplätze; Rampe; Treppe/Aufzug; vereinbarter Übergabepunkt. Required visible objects: Stellplatzlinien, Richtungspfeile, Pfeiler mit Schutzbügeln, parkende Autos, Entwässerungsrinnen, Schranken, Ticketautomat und Leuchten.. Layout and adventure-specific constraints: Autos in die Stellflächen, nicht quer in Laufwege setzen. Rampe, Fahrgasse und Ausfahrt verbinden; ausreichend offene Fläche für die friedliche Übergabe erhalten.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-01-cocktail",
+    "kind": "map",
+    "name": "Cocktail Club – Altes Hallenbad",
+    "file": "karten/a3-01-cocktail.png",
+    "widthMeters": 30,
+    "heightMeters": 22,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Cocktail Club – Altes Hallenbad. Whole rectangular site measures 30 by 22 meters; landscape aspect ratio 30:22. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Aufzugsvorraum im 4. OG; Empfang; Garderobe; Innenlounge; ausgestattete Cocktailbar; diskretes Separee; WC; Service; Dachterrasse; kleine Tanzfläche. Required visible objects: Niedrige Loungesofas, einzelne Sessel, Couchtische, Gläser, Blumen/Pflanzkübel, Sonnensegel, Barhocker, Kasse, Eisbecken, Flaschenrückwand, Spüle, DJ-Pult und Lautsprecher.. Layout and adventure-specific constraints: Das Treffen mit Lucas findet im separaten Raum statt. Sonnensegel nicht über die ganze Spieleransicht deckend zeichnen. Tanzfläche als Nutzerergänzung zur Dachbar integrieren; keine große Standarddisco und kein Schwimmbecken.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-02-gruber",
+    "kind": "map",
+    "name": "Familie Gruber – Handschuhheim",
+    "file": "karten/a3-02-gruber.png",
+    "widthMeters": 24,
+    "heightMeters": 20,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Familie Gruber – Handschuhheim. Whole rectangular site measures 24 by 20 meters; landscape aspect ratio 24:20. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Celines Zimmer; Elternschlafzimmer; Wohnzimmer; separate Küche; separates Bad; Flur. Required visible objects: Musikinstrumentenkoffer, Notenständer, Schreibtisch, Bücher, Kleiderschränke, Sofa, Esstisch und Stühle, echte Küchenzeile, Herd, Kühlschrank, Badewanne/Dusche, WC und Waschbecken.. Layout and adventure-specific constraints: Küche und Bad dürfen kein gemeinsamer Raum bleiben. Nutzung und Laufwege müssen zusammenpassen; Familienatmosphäre statt Hotelgrundriss.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-02-neugebauer",
+    "kind": "map",
+    "name": "Familie Neugebauer – Boxberg",
+    "file": "karten/a3-02-neugebauer.png",
+    "widthMeters": 24,
+    "heightMeters": 20,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Familie Neugebauer – Boxberg. Whole rectangular site measures 24 by 20 meters; landscape aspect ratio 24:20. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Drei Wohn-/Schlafräume gemäß Vorlage; separate Küche; separates Bad; kleiner Flur. Required visible objects: Etagenbetten oder weitere platzsparende Schlafgelegenheiten, Schultaschen, Spielzeug, Wäsche, eng gestellte Stühle, improvisierte Ablagen, Küchenutensilien und Elmars AR-Zubehör.. Layout and adventure-specific constraints: Die belegte Enge sichtbar machen, ohne unpassierbare Räume zu zeichnen. Keine geräumige Kopie der Gruber-Wohnung; zusätzliche Räume nicht erfinden, um die Enge zu beseitigen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-03-uniklinik",
+    "kind": "map",
+    "name": "Uniklinik – Neurologie",
+    "file": "karten/a3-03-uniklinik.png",
+    "widthMeters": 32,
+    "heightMeters": 24,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Uniklinik – Neurologie. Whole rectangular site measures 32 by 24 meters; landscape aspect ratio 32:24. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Celines Einzelzimmer mit Bad; Stationsstützpunkt; Untersuchung; Materialraum; Besucherbereich; Flur. Required visible objects: Klinikbett mit Seitengittern, Nachtschrank, Besucherstuhl, Monitor, Infusionsständer, Handwaschbecken, Medikamentenschrank, Pflegewagen, Untersuchungsliege und Dokumentationsplätze.. Layout and adventure-specific constraints: Celine bleibt ein separater Token. Durchgangsflächen für Bettentransport vorsehen; Behandlungsräume nicht unnötig als Operationssaal ausstatten.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-04-heidenloch",
+    "kind": "map",
+    "name": "Heidenloch – Zugang und Begegnung",
+    "file": "karten/a3-04-heidenloch.png",
+    "widthMeters": 40,
+    "heightMeters": 32,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Heidenloch – Zugang und Begegnung. Whole rectangular site measures 40 by 32 meters; landscape aspect ratio 40:32. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Überdachter Einstieg; Gitter; Mauerfassung; Zuweg; Vegetationsrand. Required visible objects: Dachstützen, rostige Gitterstäbe, Scharnier und Schloss, Steinmauerwerk, Moos, Geländerreste und kleine Hinweistafel.. Layout and adventure-specific constraints: Überdachung als ausblendbare Dachdarstellung planen, damit der Zugang spielbar bleibt. 56 m Schachttiefe nicht als 56 m breite Öffnung zeichnen; Tiefeninformation im Journal erhalten.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-05-landsmann",
+    "kind": "map",
+    "name": "Café-Restaurant Landsmann",
+    "file": "karten/a3-05-landsmann.png",
+    "widthMeters": 44,
+    "heightMeters": 34,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Café-Restaurant Landsmann. Whole rectangular site measures 44 by 34 meters; landscape aspect ratio 44:34. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Gaststube; Kuchen-/Kaffeetheke; Küche; Spülbereich; Vorräte; getrennte Toiletten; separater Gesprächsraum; Biergarten; Parkplatz und Personalzugang. Required visible objects: Zweier- und Vierertische mit passenden Stühlen, Tischdecken/Platzsets, kleine Blumenvasen, Kuchenvitrine mit Kirschtorte, Kaffeemaschine, Mühle, Kasse, Servicetresen, Gläser, Besteckstation, Herd, Haube, Spüle, Kühlschränke, Außenbestuhlung und Pflanzkübel.. Layout and adventure-specific constraints: Gast-, Service- und Lieferwege trennen. Der Gesprächsraum erhält eigene Sitzgruppe und Tür und wird nicht als WC benutzt. Fachwerkcharakter über Wandmaterial, Fenster und Eingang vermitteln; Parkplatzkonflikt aus der Vorlage räumlich ermöglichen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-06-festspiel",
+    "kind": "map",
+    "name": "Heiligenberg – Festspielbühne und Picknick",
+    "file": "karten/a3-06-festspiel.png",
+    "widthMeters": 64,
+    "heightMeters": 48,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: Heiligenberg – Festspielbühne und Picknick. Whole rectangular site measures 64 by 48 meters; landscape aspect ratio 64:48. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Halbrunde gestufte Ränge; Bühne; Orchesterzone; Seitenzugänge; Backstage-Service; Picknick-Fundstelle. Required visible objects: Sitzstufen, Geländer, Treppenläufe, Bühnenkulissen, Notenpulte, Instrumentenkoffer, Kabelbrücken, Flightcases, mobile Technik und Reinigungsausstattung.. Layout and adventure-specific constraints: Historische Hang-/Amphitheaterform erhalten. Mobile Ausstattung gehört zur zukünftigen Abenteueraufführung; die heutige Thingstätte nicht fälschlich als dauerhaft ausgestattetes Opernhaus darstellen. Picknickgegenstände nur als GM-Hinweis, wenn laut Verlauf bereits entsorgt.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-07-trainingscamp",
+    "kind": "map",
+    "name": "DFB-Camp – Wohnheim und Befragung",
+    "file": "karten/a3-07-trainingscamp.png",
+    "widthMeters": 56,
+    "heightMeters": 38,
+    "prompt": "Use case: illustration-story. Asset: richly furnished gridless tactical battlemap. Location: DFB-Camp – Wohnheim und Befragung. Whole rectangular site measures 56 by 38 meters; landscape aspect ratio 56:38. Aim maximum available image resolution, ideally 3840 pixels or more on the long edge. Rooms/areas: Athlete dormitory with individual sleeping rooms, reception, supervisor office, communal lounge, shared bathrooms with toilets and showers, laundry, small kitchenette; do not include a playing field or a gym in this dormitory map.. Required visible objects: Beds with pillows, wardrobes, sports bags, team shirts on hooks, laundry carts, sofas, study tables with chairs, supervisor desk, bulletin board, shared toilets in separate stalls, washbasins and showers.. Layout and adventure-specific constraints: Das bisherige 56 × 38-m-Wohnheim kann kein normal großes Fußballfeld enthalten. Wohnheimkarte verbessern und zwei verknüpfte Szenen für Funktionsgebäude und Feld ergänzen. Die Nähe zur Uniklinik aus der Vorlage bleibt bestehen.. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-07-sportplatz",
+    "kind": "map",
+    "name": "DFB-Camp – Sportplatz",
+    "file": "karten/a3-07-sportplatz.png",
+    "widthMeters": 125,
+    "heightMeters": 88,
+    "prompt": "Use case: illustration-story. Render a strict top-down orthographic soccer football training field battlemap in future Germany, 125 by 88 meter rectangular site, aspect ratio 125:88. A complete regulation-proportioned 105 by 68 meter pitch centered inside the site, long axis horizontal. Accurate white touchlines, goal lines, halfway line, center dot and 9.15m radius center circle; at each end correct penalty box, small goal box, penalty spot and penalty arc outside the box; corner arcs and corner flags. Goals centered on goal lines with visible netting. Natural green grass with mowing stripes and light worn areas, not a plain flat green rectangle. Along one sideline player benches, ball trolley, cones and training hurdles on the perimeter off the field, gravel access path, fence with gates, small equipment shed. No large grandstand, no stadium crowd, no players. Keep pitch unblocked. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  },
+  {
+    "key": "a3-07-funktionsgebaeude",
+    "kind": "map",
+    "name": "DFB-Camp – Funktionsgebäude",
+    "file": "karten/a3-07-funktionsgebaeude.png",
+    "widthMeters": 56,
+    "heightMeters": 38,
+    "prompt": "Use case: illustration-story. Render a richly detailed cutaway top-down VTT map of a professional German football training clubhouse, rectangular site 56 by 38 meters, aspect 56:38. Recognizable sports architecture: front reception foyer with desk and seating; two team changing rooms with individual lockers, benches, shirt hooks and boot shelves; adjacent separate tiled shower rooms and toilets with washbasins; large strength and conditioning room with treadmills, weight racks, benches and exercise mats; physiotherapy room with treatment tables and cabinets; meeting room with a conference table, many chairs, display and football tactics board; coaches office; equipment store with ball cages, cones, folded mini-goals and hurdle racks; staff kitchenette. Wide connected corridor from reception to back exit facing an off-map football pitch, accessible exterior footpath. No beds, no hospital ward, no tables in shower cubicles. Detailed realistic hand-painted VTT battlemap, restrained future Germany / Shadowrun technology, natural material texture and many small recognizable objects. Strict vertical orthographic top-down camera, no isometric perspective, cutaway interiors without roofs. No labels, numbers, legend, grid, people, creatures, tokens or watermark. Even readable ambient lighting and short object shadows. Every room must be connected by usable doorways; keep door openings free of furniture. Each table must have appropriately sized individual chairs. Use human-scale furniture and logical service circulation."
+  }
+]

@@ -1,0 +1,1256 @@
+{
+  "plannedTotal": 277,
+  "additionalIcons": 196,
+  "requirements": [
+    {
+      "map": "a1-01-tune-bar",
+      "requirement": "Zapfanlage",
+      "iconKeys": [
+        "zapfanlage"
+      ]
+    },
+    {
+      "map": "a1-01-tune-bar",
+      "requirement": "Werkzeugwand",
+      "iconKeys": [
+        "werkzeugwand"
+      ]
+    },
+    {
+      "map": "a1-01-tune-bar",
+      "requirement": "Motorbauteil",
+      "iconKeys": [
+        "motorbauteil"
+      ]
+    },
+    {
+      "map": "a1-01-tune-bar",
+      "requirement": "Mikrofon",
+      "iconKeys": [
+        "mikrofon"
+      ]
+    },
+    {
+      "map": "a1-01-tune-bar",
+      "requirement": "Hebebühne/Bühnenpodest",
+      "iconKeys": [
+        "hebebuehne",
+        "buehnenpodest"
+      ]
+    },
+    {
+      "map": "a1-02-st-annen",
+      "requirement": "Orgel",
+      "iconKeys": [
+        "orgel"
+      ]
+    },
+    {
+      "map": "a1-02-st-annen",
+      "requirement": "Garderobenhaken",
+      "iconKeys": [
+        "garderobenhaken"
+      ]
+    },
+    {
+      "map": "a1-02-st-annen",
+      "requirement": "AR-Übertragungstechnik",
+      "iconKeys": [
+        "ar-uebertragungstechnik"
+      ]
+    },
+    {
+      "map": "a1-03-rathaus-praxis",
+      "requirement": "Kartenterminal",
+      "iconKeys": [
+        "kartenterminal"
+      ]
+    },
+    {
+      "map": "a1-03-rathaus-praxis",
+      "requirement": "Medizinischer Rollhocker",
+      "iconKeys": [
+        "medizinischer-rollhocker"
+      ]
+    },
+    {
+      "map": "a1-03-rathaus-praxis",
+      "requirement": "Diagnostikgerät",
+      "iconKeys": [
+        "diagnostikgeraet"
+      ]
+    },
+    {
+      "map": "a1-03-rathaus-praxis",
+      "requirement": "Laborarbeitsplatte",
+      "iconKeys": [
+        "laborarbeitsplatte"
+      ]
+    },
+    {
+      "map": "a1-03-rathaus-praxis",
+      "requirement": "Probenkühlschrank",
+      "iconKeys": [
+        "probenkuehlschrank"
+      ]
+    },
+    {
+      "map": "a1-04-rathaus-buero",
+      "requirement": "Aktenregal",
+      "iconKeys": [
+        "aktenregal"
+      ]
+    },
+    {
+      "map": "a1-04-rathaus-buero",
+      "requirement": "Papierstapel",
+      "iconKeys": [
+        "papierstapel"
+      ]
+    },
+    {
+      "map": "a1-04-rathaus-buero",
+      "requirement": "Drucker",
+      "iconKeys": [
+        "drucker"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Toranlage",
+      "iconKeys": [
+        "toranlage"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Überwachungskamera",
+      "iconKeys": [
+        "ueberwachungskamera"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Heckensegment",
+      "iconKeys": [
+        "heckensegment"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Blumenbeet",
+      "iconKeys": [
+        "blumenbeet"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Gartengeräteständer",
+      "iconKeys": [
+        "gartengeraetestaender"
+      ]
+    },
+    {
+      "map": "a1-05-sanders-garten",
+      "requirement": "Bewässerungselement",
+      "iconKeys": [
+        "bewaesserungssprinkler",
+        "gartenschlauch"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Heizaggregat",
+      "iconKeys": [
+        "heizaggregat"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Lüftungsaggregat",
+      "iconKeys": [
+        "lueftungsaggregat"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Waschmaschine",
+      "iconKeys": [
+        "waschmaschine"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Trockner",
+      "iconKeys": [
+        "trockner"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Wäschewagen",
+      "iconKeys": [
+        "waeschewagen"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Dunstabzugshaube",
+      "iconKeys": [
+        "dunstabzugshaube"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Küchenarbeitsinsel",
+      "iconKeys": [
+        "kuechenarbeitsinsel"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-kg",
+      "requirement": "Vorratsregal",
+      "iconKeys": [
+        "vorratsregal"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Leselampe",
+      "iconKeys": [
+        "leselampe"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Leinwand",
+      "iconKeys": [
+        "leinwand"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Projektor",
+      "iconKeys": [
+        "projektor"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Kinosessel",
+      "iconKeys": [
+        "kinosessel"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Geschirrschrank",
+      "iconKeys": [
+        "geschirrschrank"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-eg",
+      "requirement": "Servierwagen",
+      "iconKeys": [
+        "servierwagen"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-og",
+      "requirement": "Nachttisch",
+      "iconKeys": [
+        "nachttisch"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-og",
+      "requirement": "Papierstapel",
+      "iconKeys": [
+        "papierstapel"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-og",
+      "requirement": "Küchenzeile",
+      "iconKeys": [
+        "kuechenzeile"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-og",
+      "requirement": "Funkgerät/Funkarbeitsplatz",
+      "iconKeys": [
+        "funkgeraet",
+        "funkarbeitsplatz"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-dach",
+      "requirement": "Pflanzkübel außen",
+      "iconKeys": [
+        "pflanzkuebel-aussen"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-dach",
+      "requirement": "Heckensegment",
+      "iconKeys": [
+        "heckensegment"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-dach",
+      "requirement": "Dachentwässerung",
+      "iconKeys": [
+        "dachentwaesserung"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-dach",
+      "requirement": "Geländer",
+      "iconKeys": [
+        "gelaender"
+      ]
+    },
+    {
+      "map": "a1-06-sanders-dach",
+      "requirement": "Technikgehäuse",
+      "iconKeys": [
+        "technikgehaeuse"
+      ]
+    },
+    {
+      "map": "a1-07-schloss",
+      "requirement": "Historische Tür/Torbeschlag",
+      "iconKeys": [
+        "historische-tuer",
+        "torbeschlag"
+      ]
+    },
+    {
+      "map": "a1-07-schloss",
+      "requirement": "Informationstafel",
+      "iconKeys": [
+        "informationstafel"
+      ]
+    },
+    {
+      "map": "a1-07-schloss",
+      "requirement": "Funkgerät",
+      "iconKeys": [
+        "funkgeraet"
+      ]
+    },
+    {
+      "map": "a1-08-hausmannsturm",
+      "requirement": "Laterne/Leuchte",
+      "iconKeys": [
+        "laterne",
+        "leuchte"
+      ]
+    },
+    {
+      "map": "a1-08-hausmannsturm",
+      "requirement": "Schmaler Schrank",
+      "iconKeys": [
+        "schmaler-schrank"
+      ]
+    },
+    {
+      "map": "a2-01-kanone",
+      "requirement": "Zapfanlage",
+      "iconKeys": [
+        "zapfanlage"
+      ]
+    },
+    {
+      "map": "a2-01-kanone",
+      "requirement": "Trinkglas",
+      "iconKeys": [
+        "trinkglas"
+      ]
+    },
+    {
+      "map": "a2-01-kanone",
+      "requirement": "Getränkekiste",
+      "iconKeys": [
+        "getraenkekiste"
+      ]
+    },
+    {
+      "map": "a2-01-kanone",
+      "requirement": "Garderobenhaken",
+      "iconKeys": [
+        "garderobenhaken"
+      ]
+    },
+    {
+      "map": "a2-01-kanone",
+      "requirement": "Kneipen-Spiel-/Musikgerät",
+      "iconKeys": [
+        "jukebox"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Haltestellenschild",
+      "iconKeys": [
+        "haltestellenschild"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Fahrplantafel",
+      "iconKeys": [
+        "fahrplantafel"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Mülleimer",
+      "iconKeys": [
+        "muelleimer"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Poller",
+      "iconKeys": [
+        "poller"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Warnschild",
+      "iconKeys": [
+        "warnschild"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Zaunpfosten",
+      "iconKeys": [
+        "zaunpfosten"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Straßenschranke",
+      "iconKeys": [
+        "strassenschranke"
+      ]
+    },
+    {
+      "map": "a2-02-waldrand",
+      "requirement": "Wartehäuschen",
+      "iconKeys": [
+        "wartehaeuschen"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Weitere Baumart/Stammvariante",
+      "iconKeys": [
+        "nadelbaum",
+        "junger-laubbaum",
+        "baumstumpf"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Farn",
+      "iconKeys": [
+        "farn"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Wurzel",
+      "iconKeys": [
+        "wurzel"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Laubstreu",
+      "iconKeys": [
+        "laubstreu"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Pilze",
+      "iconKeys": [
+        "pilze"
+      ]
+    },
+    {
+      "map": "a2-03-pfad",
+      "requirement": "Bodenmulde",
+      "iconKeys": [
+        "bodenmulde"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Holzbohle",
+      "iconKeys": [
+        "holzbohle"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Seil",
+      "iconKeys": [
+        "seil"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Befestigungspfosten",
+      "iconKeys": [
+        "befestigungspfosten"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Felsspalte/Felskante",
+      "iconKeys": [
+        "felsspalte",
+        "felskante"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Wasserstrudel",
+      "iconKeys": [
+        "wasserstrudel"
+      ]
+    },
+    {
+      "map": "a2-03-bruecke",
+      "requirement": "Abgebrochener Ast",
+      "iconKeys": [
+        "abgebrochener-ast"
+      ]
+    },
+    {
+      "map": "a2-03-furt",
+      "requirement": "Kieselbank",
+      "iconKeys": [
+        "kieselbank"
+      ]
+    },
+    {
+      "map": "a2-03-furt",
+      "requirement": "Trittstein",
+      "iconKeys": [
+        "trittstein"
+      ]
+    },
+    {
+      "map": "a2-03-furt",
+      "requirement": "Schilf",
+      "iconKeys": [
+        "schilf"
+      ]
+    },
+    {
+      "map": "a2-03-furt",
+      "requirement": "Treibholz",
+      "iconKeys": [
+        "treibholz"
+      ]
+    },
+    {
+      "map": "a2-03-furt",
+      "requirement": "Strömungs-/Uferoverlay",
+      "iconKeys": [
+        "stroemungsoverlay",
+        "nasses-uferoverlay"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Holzbalken",
+      "iconKeys": [
+        "holzbalken"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Dachziegel/Schindeln",
+      "iconKeys": [
+        "dachziegel",
+        "dachschindel"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Zerbrochener Tisch",
+      "iconKeys": [
+        "zerbrochener-tisch"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Ofenrest",
+      "iconKeys": [
+        "ofenrest"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Bettgestell",
+      "iconKeys": [
+        "bettgestell"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Pilze",
+      "iconKeys": [
+        "pilze"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Kletterpflanze",
+      "iconKeys": [
+        "kletterpflanze"
+      ]
+    },
+    {
+      "map": "a2-03-huette",
+      "requirement": "Geborstener Fensterrahmen",
+      "iconKeys": [
+        "geborstener-fensterrahmen"
+      ]
+    },
+    {
+      "map": "a2-04-hundskopf",
+      "requirement": "Mauerrest",
+      "iconKeys": [
+        "mauerrest"
+      ]
+    },
+    {
+      "map": "a2-04-hundskopf",
+      "requirement": "Verwitterter Zaun",
+      "iconKeys": [
+        "verwitterter-zaun"
+      ]
+    },
+    {
+      "map": "a2-04-hundskopf",
+      "requirement": "Gartenspuren",
+      "iconKeys": [
+        "gartenspuren"
+      ]
+    },
+    {
+      "map": "a2-04-hundskopf",
+      "requirement": "Improvisierte Unterkunft",
+      "iconKeys": [
+        "improvisierte-unterkunft"
+      ]
+    },
+    {
+      "map": "a2-04-hundskopf",
+      "requirement": "Kanaleinstieg",
+      "iconKeys": [
+        "kanaleinstieg"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Rohrflansch",
+      "iconKeys": [
+        "rohrflansch"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Ventil",
+      "iconKeys": [
+        "ventil"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Gitter",
+      "iconKeys": [
+        "gitter"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Wartungskasten",
+      "iconKeys": [
+        "wartungskasten"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Steigbügel",
+      "iconKeys": [
+        "steigbuegel"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Einstiegsleiter",
+      "iconKeys": [
+        "einstiegsleiter"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Kanaldeckel",
+      "iconKeys": [
+        "kanaldeckel"
+      ]
+    },
+    {
+      "map": "a2-05-kanal",
+      "requirement": "Ablagerungs-/Rostoverlay",
+      "iconKeys": [
+        "ablagerungsoverlay",
+        "rostoverlay"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Teigmischer mit Bottich",
+      "iconKeys": [
+        "teigmischer-mit-bottich"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Greifarm",
+      "iconKeys": [
+        "greifarm"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Industriekessel",
+      "iconKeys": [
+        "industriekessel"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Industriebackofen",
+      "iconKeys": [
+        "industriebackofen"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Sackware",
+      "iconKeys": [
+        "sackware"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Zutatenregal",
+      "iconKeys": [
+        "zutatenregal"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Bedienpult",
+      "iconKeys": [
+        "bedienpult"
+      ]
+    },
+    {
+      "map": "a2-06-fabrik",
+      "requirement": "Feuerleiter",
+      "iconKeys": [
+        "feuerleiter"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Pfeiler mit Schutzbügel",
+      "iconKeys": [
+        "pfeiler-mit-schutzbuegel"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Entwässerungsrinne",
+      "iconKeys": [
+        "entwaesserungsrinne"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Straßenschranke",
+      "iconKeys": [
+        "strassenschranke"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Ticketautomat",
+      "iconKeys": [
+        "ticketautomat"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Leuchte",
+      "iconKeys": [
+        "leuchte"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Stellplatzlinien",
+      "iconKeys": [
+        "stellplatzlinien"
+      ]
+    },
+    {
+      "map": "a2-07-parkhaus",
+      "requirement": "Richtungspfeil",
+      "iconKeys": [
+        "richtungspfeil"
+      ]
+    },
+    {
+      "map": "a3-01-cocktail",
+      "requirement": "Trinkglas",
+      "iconKeys": [
+        "trinkglas"
+      ]
+    },
+    {
+      "map": "a3-01-cocktail",
+      "requirement": "Pflanzkübel außen",
+      "iconKeys": [
+        "pflanzkuebel-aussen"
+      ]
+    },
+    {
+      "map": "a3-01-cocktail",
+      "requirement": "Eisbecken",
+      "iconKeys": [
+        "eisbecken"
+      ]
+    },
+    {
+      "map": "a3-02-gruber",
+      "requirement": "Instrumentenkoffer",
+      "iconKeys": [
+        "instrumentenkoffer"
+      ]
+    },
+    {
+      "map": "a3-02-gruber",
+      "requirement": "Notenständer",
+      "iconKeys": [
+        "notenstaender"
+      ]
+    },
+    {
+      "map": "a3-02-gruber",
+      "requirement": "Einzelbuch/Bücherstapel",
+      "iconKeys": [
+        "einzelbuch",
+        "buecherstapel"
+      ]
+    },
+    {
+      "map": "a3-02-gruber",
+      "requirement": "Küchenzeile",
+      "iconKeys": [
+        "kuechenzeile"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Etagenbett",
+      "iconKeys": [
+        "etagenbett"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Schultasche",
+      "iconKeys": [
+        "schultasche"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Spielzeug",
+      "iconKeys": [
+        "spielzeugauto",
+        "teddybaer"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Wäschestapel",
+      "iconKeys": [
+        "waeschestapel"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Improvisierte Ablage",
+      "iconKeys": [
+        "improvisierte-ablage"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "Küchenutensilien",
+      "iconKeys": [
+        "kuechenutensilien"
+      ]
+    },
+    {
+      "map": "a3-02-neugebauer",
+      "requirement": "AR-Zubehör",
+      "iconKeys": [
+        "ar-brille",
+        "ar-handschuh"
+      ]
+    },
+    {
+      "map": "a3-03-uniklinik",
+      "requirement": "Kliniknachtschrank",
+      "iconKeys": [
+        "kliniknachtschrank"
+      ]
+    },
+    {
+      "map": "a3-03-uniklinik",
+      "requirement": "Patientenmonitor",
+      "iconKeys": [
+        "patientenmonitor"
+      ]
+    },
+    {
+      "map": "a3-03-uniklinik",
+      "requirement": "Infusionsständer",
+      "iconKeys": [
+        "infusionsstaender"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Dachstütze",
+      "iconKeys": [
+        "dachstuetze"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Gitter",
+      "iconKeys": [
+        "gitter"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Scharnier/Schloss",
+      "iconKeys": [
+        "scharnier",
+        "vorhaengeschloss"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Moos",
+      "iconKeys": [
+        "moos"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Geländerrest",
+      "iconKeys": [
+        "gelaenderrest"
+      ]
+    },
+    {
+      "map": "a3-04-heidenloch",
+      "requirement": "Informationstafel",
+      "iconKeys": [
+        "informationstafel"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Tischdecke/Platzset",
+      "iconKeys": [
+        "tischdecke",
+        "platzset"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Kaffeemühle",
+      "iconKeys": [
+        "kaffeemuehle"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Trinkglas",
+      "iconKeys": [
+        "trinkglas"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Besteckstation",
+      "iconKeys": [
+        "besteckstation"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Dunstabzugshaube",
+      "iconKeys": [
+        "dunstabzugshaube"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Pflanzkübel außen",
+      "iconKeys": [
+        "pflanzkuebel-aussen"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Teller",
+      "iconKeys": [
+        "teller"
+      ]
+    },
+    {
+      "map": "a3-05-landsmann",
+      "requirement": "Tasse",
+      "iconKeys": [
+        "tasse"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Bühnenkulisse",
+      "iconKeys": [
+        "buehnenkulisse"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Notenständer",
+      "iconKeys": [
+        "notenstaender"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Instrumentenkoffer",
+      "iconKeys": [
+        "instrumentenkoffer"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Kabelbrücke",
+      "iconKeys": [
+        "kabelbruecke"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Flightcase",
+      "iconKeys": [
+        "flightcase"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Mobile Bühnentechnik",
+      "iconKeys": [
+        "buehnenscheinwerfer",
+        "lichtmischpult"
+      ]
+    },
+    {
+      "map": "a3-06-festspiel",
+      "requirement": "Reinigungsausstattung",
+      "iconKeys": [
+        "reinigungswagen",
+        "besen",
+        "wischmopp",
+        "putzeimer"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Trikothaken",
+      "iconKeys": [
+        "trikothaken"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Schuhablage",
+      "iconKeys": [
+        "schuhablage"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Trainingsmatte",
+      "iconKeys": [
+        "trainingsmatte"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Ballwagen",
+      "iconKeys": [
+        "ballwagen"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Minihürde",
+      "iconKeys": [
+        "minihuerde"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Auswechselbank",
+      "iconKeys": [
+        "auswechselbank"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Sporttasche",
+      "iconKeys": [
+        "sporttasche"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Trikot",
+      "iconKeys": [
+        "trikot"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Wäschewagen",
+      "iconKeys": [
+        "waeschewagen"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Pinnwand",
+      "iconKeys": [
+        "pinnwand"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Eckfahne",
+      "iconKeys": [
+        "eckfahne"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Hantelständer",
+      "iconKeys": [
+        "hantelstaender"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Ballkäfig",
+      "iconKeys": [
+        "ballkaefig"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Klapp-Minitor",
+      "iconKeys": [
+        "klapp-minitor"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Hürdenregal",
+      "iconKeys": [
+        "huerdenregal"
+      ]
+    },
+    {
+      "map": "a3-07-trainingscamp",
+      "requirement": "Besprechungsdisplay",
+      "iconKeys": [
+        "besprechungsdisplay"
+      ]
+    },
+    {
+      "map": "a3-08-alchera",
+      "requirement": "Feuerring",
+      "iconKeys": [
+        "feuerring"
+      ]
+    },
+    {
+      "map": "a3-08-alchera",
+      "requirement": "Rosenlager",
+      "iconKeys": [
+        "rosenlager"
+      ]
+    }
+  ],
+  "additionalVariants": [
+    "wartezimmerstuhl",
+    "besucherbank",
+    "besucherstuhl",
+    "sicherheitsspind",
+    "beistelltisch",
+    "fensterbank",
+    "tuerbeschlag",
+    "abgenutzter-kneipentisch",
+    "abgenutzter-kneipenstuhl",
+    "kleine-steine",
+    "geroell",
+    "grundmauersegment",
+    "tanzflaechenmodul",
+    "pflegewagen",
+    "schacht-mauerfassung",
+    "schacht-ueberdachung",
+    "kirschtorte",
+    "aussenstuhl",
+    "sitzstufe",
+    "treppe",
+    "picknickkorb",
+    "picknickdecke",
+    "duschkopf"
+  ],
+  "scopeNote": "Unspezifische Sammelbegriffe wurden konkretisiert: Jukebox für Kneipen-Musikecke, Spielzeugauto und Teddybär für Spielzeug, AR-Brille und AR-Handschuh für AR-Zubehör, Lichtmischpult und Bühnenscheinwerfer für mobile Bühnentechnik. Picknickgegenstände separat, nur nach Bedarf einsetzen. Zuordnung ist ein Produktionsplan, keine Bestätigung fertiger oder visuell geprüfter Dateien."
+}
