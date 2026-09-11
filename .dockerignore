@@ -1,0 +1,5 @@
+**
+!Dockerfile
+!entrypoint.sh
+!get_release_url.js
+!foundryvtt*.zip
