@@ -27,3 +27,7 @@ assert.equal(game.folders.length,1);
 await assert.rejects(run(game,async(url,options)=>options?.method==='HEAD'?{ok:false}:fetchOk(),Folder,Scene,foundry,ui),/Hintergrund fehlt/);
 assert.equal(game.scenes.length,2);
 console.log('Import geprüft: 1-m-Raster, V14-Level, vorhandene Szenen erhalten, idempotent, fehlende Bilder stoppen vor Änderungen. Kein Live-Foundry-Test.');
+const alchera=JSON.parse(fs.readFileSync('modules/grimmes-erwachen/assets/rendered-v2/Bibliotheken.json','utf8')).maps.find(m=>m.key==='a3-08-alchera');
+await run(game,async()=>({ok:true,json:async()=>({maps:[alchera]})}),Folder,Scene,foundry,ui);
+assert.equal(game.scenes[2].width,3376);assert.equal(game.scenes[2].height,2701);
+assert.equal(game.scenes[2].grid.distance,1);assert.equal(game.scenes[2].grid.size,100);

@@ -1,0 +1,30 @@
+{
+  "image": "a3-08-alchera-high-detail.png",
+  "pixelWidth": 1402,
+  "pixelHeight": 1122,
+  "calibration": {
+    "reference": "Feuerring, etwa 5 m Durchmesser laut Abenteuer",
+    "measurement": "Median der radialen Abstaende des leuchtenden Ringkoerpers in 36 Winkelsektoren; einzelne Flammenspitzen sind keine feste Grenze.",
+    "centerImagePixels": [
+      701,
+      522
+    ],
+    "measuredDiameterPixels": 207.66543804690497,
+    "referenceDiameterMeters": 5,
+    "nativePixelsPerMeter": 41.53308760938099,
+    "approximate": true
+  },
+  "foundry": {
+    "width": 3376,
+    "height": 2701,
+    "padding": 0,
+    "grid": {
+      "type": 1,
+      "size": 100,
+      "distance": 1,
+      "units": "m"
+    }
+  },
+  "widthMeters": 33.76,
+  "heightMeters": 27.01
+}

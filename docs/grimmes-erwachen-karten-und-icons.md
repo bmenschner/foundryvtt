@@ -1,18 +1,22 @@
 # Karten und Icon-Bibliotheken
 
+**Neu in 1.2.2:** „Alchera – Ring aus Feuer (High Detail)“ wird über **Inhalte aktualisieren** als zusätzliche Szene importiert. Sie verwendet **3376 × 2701 Szenenpixel**, Rastergröße **100**, Rasterdistanz **1 m**. Die Fläche beträgt **33,76 × 27,01 m**; der gezeichnete Ringkörper ist am ungefähr fünf Meter großen Feuerring des Abenteuers kalibriert. Die tatsächliche Bildauflösung beträgt **1402 × 1122 Pixel**. Wände, Licht und Tokenpositionen müssen für diese neue Szene eingerichtet werden. Wiederholtes Aktualisieren erzeugt keine zweite Kopie.
+
+Die neue Illustration ersetzt die alte schematische Szene nicht automatisch. Der ursprüngliche Ring bleibt als Bestandskarte erhalten. Prompt und Kalibrierwerte liegen im Modul unter `assets/rendered-v2/alchera-high-detail/`.
+
 **Erweiterung:** 277 von 277 geplanten Icons vorhanden. Siehe `STATUS.md` für die offenen Dateien und den Prüfstand.
 
 Die gerenderten Karten und die einzelnen Objekte liegen getrennt vor. „Ring aus Feuer“ wurde unverändert übernommen. Alle neuen Bilder wurden mit dem eingebauten Bildgenerator erzeugt; die vollständigen Vorgaben stehen in `render-jobs.json` und `icon-jobs.json`. Die Recherchequellen dienen als funktionale und gestalterische Referenzen; es wurden keine fremden Asset-Pakete übernommen.
 
 ## Karten importieren
 
-1. Modulversion **1.2.1** samt Bildern installieren und die Foundry-Welt neu laden.
+1. Modulversion **1.2.2** samt Bildern installieren und die Foundry-Welt neu laden.
 2. Als Spielleitung **Einstellungen → Einstellungen konfigurieren → Grimmes Erwachen → Abenteuer importieren** öffnen. Alternativ das vorhandene Startmakro nutzen.
 3. Abenteuer auswählen und **Inhalte aktualisieren** anklicken. Ein eigenes Script-Makro ist nicht mehr erforderlich.
 4. Die neuen Szenen erscheinen in den Kapitelordnern unter **Grimmes Erwachen**, mit dem Zusatz **– neue Karte**. Bereits mit `Import-Karten.js` angelegte Szenen bleiben an ihrem bisherigen Ort und werden erkannt.
 5. Wände, Türen, Licht und Tokenpositionen für die neuen Grundrisse einrichten. Die neuen Arbeitskopien haben zunächst freie Sicht und keine Wände oder Tokens.
 
-Die Aktualisierung ergänzt fehlende Einträge des Grundpakets (NSC, Matrix-Hosts, Journals und ursprüngliche Szenen) und die 31 neuen Karten. Sie repariert fehlende Bildzuordnungen und ersetzt alte Modul-Monogramme. Eigene Bilder, vorhandene Spielwerte, Journaltexte und bestehende Szenengeometrie bleiben erhalten. Wiederholtes Ausführen erzeugt keine Duplikate; bei einem Abbruch kann es erneut gestartet werden. Die Bilder werden vor dem Anlegen geprüft. Es gibt keine automatische Rücknahme bereits erfolgreicher Teilschritte.
+Die Aktualisierung ergänzt fehlende Einträge des Grundpakets (NSC, Matrix-Hosts, Journals und ursprüngliche Szenen) und die 32 neuen Karten. Sie repariert fehlende Bildzuordnungen und ersetzt alte Modul-Monogramme. Eigene Bilder, vorhandene Spielwerte, Journaltexte und bestehende Szenengeometrie bleiben erhalten. Wiederholtes Ausführen erzeugt keine Duplikate; bei einem Abbruch kann es erneut gestartet werden. Die Bilder werden vor dem Anlegen geprüft. Es gibt keine automatische Rücknahme bereits erfolgreicher Teilschritte.
 
 „Ring aus Feuer“ bleibt in seiner bestehenden Szene. Ein Austausch von Bilddateien am gleichen Pfad über die GitHub Action wird nach einem Neuladen sichtbar; das allein legt keine neuen Foundry-Dokumente an. Für neue Szenen und NSC ist der Update-Knopf erforderlich. Ein Pull Request löst keine Bereitstellung aus. Unverwaltete Module bleiben beim bestehenden Deployment erhalten.
 

@@ -16,8 +16,9 @@ let created = 0;
 for (const map of catalog.maps) {
   if (game.scenes.some(s => s.getFlag('grimmes-erwachen', 'renderV2Key') === map.key)) continue;
   const levelId = foundry.utils.randomID();
-  const width = Math.round(map.widthMeters * 100);
-  const height = Math.round(width * map.pixelHeight / map.pixelWidth);
+  const width = map.sceneDimensions?.width ?? Math.round(map.widthMeters * 100);
+  const height = map.sceneDimensions?.height ?? Math.round(width * map.pixelHeight / map.pixelWidth);
+  if (![width,height].every(n=>Number.isSafeInteger(n) && n>0)) throw new Error('Ungültige Szenengröße: ' + map.key);
   await Scene.create({
     name: map.name + ' – neue Karte', folder: folder.id,
     width, height, padding: 0,

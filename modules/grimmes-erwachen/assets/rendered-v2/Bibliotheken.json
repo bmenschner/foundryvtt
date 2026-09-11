@@ -6472,6 +6472,23 @@
       "pixelHeight": 1034,
       "mode": "RGB",
       "sha256": "8cd121ed46ad1228f5abf7cfbf3b8181c95b0aeb6e90d285874a37568e6a6162"
+    },
+    {
+      "key": "a3-08-alchera",
+      "kind": "map",
+      "name": "Alchera – Ring aus Feuer (High Detail)",
+      "file": "karten/a3-08-alchera-high-detail.png",
+      "widthMeters": 33.76,
+      "heightMeters": 27.01,
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGB",
+      "sha256": "b6a3b306c08a25c4791a42ffd0cb9d9ac4d9f5889fd621dafa20e3b8eaaadbc7",
+      "calibrationFile": "alchera-high-detail/Skalierung.json",
+      "sceneDimensions": {
+        "width": 3376,
+        "height": 2701
+      }
     }
   ]
 }
