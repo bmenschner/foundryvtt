@@ -5,8 +5,8 @@ backup/ssh/backup_key
 # FoundryVTT ZIP – kommerzielle Software, nicht ins Backup (>100MB)
 *.zip
 
-# Docker Build Cache
-.dockerignore
+# Generated deployment manifests (runner only)
+.deployment-*
 
 # User-Daten vom Live-Host – werden in foundryvtt-backups gesichert, nicht hier!
 /data/

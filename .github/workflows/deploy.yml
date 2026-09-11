@@ -25,109 +25,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '24'
 
       - name: Validate managed modules
         run: node scripts/check-modules.mjs
 
-      - name: Detect if Docker rebuild is needed
-        id: detect
+      - name: Transfer tested files and deploy without server Git
         env:
-          BEFORE_SHA: ${{ github.event.before }}
-        run: |
-          # Bei Pushes alle Commits dieses Pushs prüfen, nicht nur den letzten.
-          if [ -n "$BEFORE_SHA" ] && git cat-file -e "$BEFORE_SHA^{commit}" 2>/dev/null; then
-            CHANGED=$(git diff --name-only "$BEFORE_SHA" HEAD)
-          else
-            CHANGED=$(git show --name-only --format='' HEAD)
-          fi
-          echo "Changed files:"
-          echo "$CHANGED"
-
-          # Rebuild nur wenn Dateien geändert wurden, die im Docker-Image landen.
-          # Änderungen an *.md oder anderen Nicht-Image-Dateien brauchen keinen Rebuild.
-          if echo "$CHANGED" | grep -qE '(^|/)Dockerfile$|^caddy/.*$|^entrypoint\.sh$|^backup/.*\.sh$'; then
-            echo "needs_rebuild=true" >> $GITHUB_OUTPUT
-            echo "→ Rebuild required"
-          else
-            echo "needs_rebuild=false" >> $GITHUB_OUTPUT
-            echo "→ No rebuild required"
-          fi
-
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: root
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: |
-            set -e
-            cd ~/foundry
-
-            # Nur ein Commit auf dem Deployment-Server; die volle Historie bleibt auf GitHub.
-            # Gegen gleichzeitige Deployments sperren, bevor Reflogs/Objekte bereinigt werden.
-            exec 9>.git/deploy.lock
-            flock -n 9
-            git diff --quiet
-            git diff --cached --quiet
-            # Zusätzliche lokale Referenzen könnten unveröffentlichte Arbeit enthalten.
-            EXTRA_REFS=$(git for-each-ref --format='%(refname)' | grep -vE '^refs/(heads/main|remotes/origin/(main|HEAD))$' || true)
-            if [ -n "$EXTRA_REFS" ]; then
-              echo "Server has additional Git refs; review before removing history: $EXTRA_REFS"
-              exit 1
-            fi
-            echo "▶ Fetching current deployment without history..."
-            git -c gc.auto=0 fetch --no-tags --depth=1 origin +refs/heads/main:refs/remotes/origin/main
-            if [ "$(git rev-parse FETCH_HEAD)" != "${{ github.sha }}" ]; then
-              echo "Server checkout differs from the tested commit; deploy the latest main run."
-              exit 1
-            fi
-            # Checkout ohne force schützt lokale/unverwaltete Dateien vor Überschreiben.
-            git checkout --detach FETCH_HEAD
-            git branch -f main HEAD
-            git checkout main
-            git config remote.origin.fetch '+refs/heads/main:refs/remotes/origin/main'
-            git config remote.origin.tagOpt --no-tags
-            git reflog expire --expire=now --all
-            git -c gc.cruftPacks=false gc --prune=now
-            echo "▶ Server Git storage:"
-            du -sh .git
-
-            # Docker-Images nur neu bauen wenn sich image-relevante Dateien
-            # geändert haben (spart Zeit bei reinen Konfig-Commits)
-            if [ "${{ steps.detect.outputs.needs_rebuild }}" = "true" ]; then
-              echo "▶ Rebuilding Docker images..."
-              docker compose build
-            fi
-
-            # Container starten (oder neu starten falls image geändert)
-            echo "▶ Starting containers..."
-            docker compose up -d --no-build
-
-            # Die vorhandenen Images und den bestehenden Daten-Mount nutzen.
-            # Der Installer schreibt ausschließlich die verwalteten Modul-IDs.
-            managed_modules() {
-              docker compose run --rm --no-deps -T --entrypoint node \
-                -v "$PWD/modules:/managed-modules:ro" \
-                -v "$PWD/scripts/deploy-modules.mjs:/deploy-modules.mjs:ro" \
-                foundry /deploy-modules.mjs "$1" /managed-modules /foundry/data/Data/modules
-            }
-            MODULE_STATE=$(managed_modules check)
-            if [ "$MODULE_STATE" = "changed" ]; then
-              echo "▶ Installing managed modules with backup..."
-              docker compose stop foundry
-              # Auch bei einem Installationsfehler die bisherige Version wieder starten.
-              trap 'docker compose start foundry' EXIT
-              managed_modules install
-              docker compose start foundry
-              trap - EXIT
-            elif [ "$MODULE_STATE" != "unchanged" ]; then
-              echo "Unexpected module check result: $MODULE_STATE"
-              exit 1
-            fi
-
-            echo "✅ Deployment complete"
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_SHA: ${{ github.sha }}
+        run: bash scripts/publish-deployment.sh
