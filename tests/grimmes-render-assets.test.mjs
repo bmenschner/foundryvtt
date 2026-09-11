@@ -7,7 +7,7 @@ const hash=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
 test('rendered pack contains all promised distinct transparent icons and map files',()=>{
   const data=JSON.parse(fs.readFileSync(`${root}/Bibliotheken.json`,'utf8'));
   assert.equal(data.complete,true);assert.deepEqual(data.missing,[]);
-  assert.equal(data.icons.length,277);assert.equal(data.maps.length,31);
+  assert.equal(data.icons.length,277);assert.equal(data.maps.length,32);
   assert.equal(new Set(data.icons.map(i=>i.category)).size,8);
   assert.equal(new Set(data.icons.map(i=>i.sha256)).size,277);
   for(const asset of [...data.icons,...data.maps]) {
@@ -20,6 +20,20 @@ test('rendered pack contains all promised distinct transparent icons and map fil
     assert.equal(fs.readFileSync(`${root}/${icon.file}`)[25],6,`${icon.file}: RGBA PNG`);
   }
   assert.equal(hash(fs.readFileSync(`${root}/karten/a3-08-alchera.webp`)),hash(fs.readFileSync('modules/grimmes-erwachen/assets/maps/a3-08-alchera.webp')));
+});
+
+test('Alchera detail map is calibrated to a five metre ring',()=>{
+  const data=JSON.parse(fs.readFileSync(`${root}/Bibliotheken.json`,'utf8'));
+  const map=data.maps.find(m=>m.key==='a3-08-alchera');
+  const calibration=JSON.parse(fs.readFileSync(`${root}/${map.calibrationFile}`,'utf8'));
+  const {width,height}=map.sceneDimensions;
+  assert.equal(width,Math.round(map.widthMeters*100));assert.equal(height,Math.round(map.heightMeters*100));
+  assert.equal(width,calibration.foundry.width);assert.equal(height,calibration.foundry.height);
+  assert.equal(calibration.foundry.grid.distance,1);assert.equal(calibration.foundry.grid.units,'m');
+  const ringMeters=calibration.calibration.measuredDiameterPixels*width/map.pixelWidth/100;
+  assert(Math.abs(ringMeters-5)<0.01);
+  const png=fs.readFileSync(`${root}/${map.file}`);
+  assert.equal(png.readUInt32BE(16),map.pixelWidth);assert.equal(png.readUInt32BE(20),map.pixelHeight);
 });
 test('research gaps and additional variants all resolve to generated icon files',()=>{
   const read=name=>JSON.parse(fs.readFileSync(`${root}/${name}.json`,'utf8'));

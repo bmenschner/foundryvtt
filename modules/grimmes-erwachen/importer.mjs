@@ -18,8 +18,10 @@ async function renderedScenes(chapters) {
   const catalog = await response.json();
   return catalog.maps.filter(map=>chapters.includes(Number(map.key.match(/^a([123])-/)?.[1]))).map(map=>{
     if (![map.widthMeters,map.pixelWidth,map.pixelHeight].every(n=>Number.isFinite(n) && n>0) || !/^karten\/[\w-]+\.png$/.test(map.file)) throw new Error(`Ungültige Kartendaten: ${map.key}`);
-    const levelId=foundry.utils.randomID(),width=Math.round(map.widthMeters*100);
-    return {_id:foundry.utils.randomID(),name:`${map.name} – neue Karte`,width,height:Math.round(width*map.pixelHeight/map.pixelWidth),padding:0,
+    const levelId=foundry.utils.randomID(),width=map.sceneDimensions?.width ?? Math.round(map.widthMeters*100);
+    const height=map.sceneDimensions?.height ?? Math.round(width*map.pixelHeight/map.pixelWidth);
+    if (![width,height].every(n=>Number.isSafeInteger(n) && n>0)) throw new Error(`Ungültige Szenengröße: ${map.key}`);
+    return {_id:foundry.utils.randomID(),name:`${map.name} – neue Karte`,width,height,padding:0,
       grid:{type:1,size:100,distance:1,units:'m',alpha:0.18},
       levels:[{_id:levelId,name:'Spielplan',background:{src:`${BASE}/assets/rendered-v2/${map.file}`},flags:{[ID]:{key:'map-level'}}}],initialLevel:levelId,
       tokenVision:false,fogExploration:false,environment:{darknessLevel:0,globalLight:{enabled:true}},
@@ -228,7 +230,7 @@ export async function showImporter() {
   const DialogClass = foundry.applications.api.DialogV2;
   const result = await DialogClass.wait({
     window:{title:'Grimmes Erwachen – Import'},
-    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 4 Matrix-Hosts und 39 Journals mit Bildseiten.</p><p><strong>Inhalte aktualisieren</strong> ergänzt fehlende NSC, Hosts und Journals sowie 31 neue Karten als separate Szenen (1 m/Kästchen). Bereits per Kartenmakro angelegte Szenen werden erkannt. Fehlende Bilder werden repariert; eigene Bilder und Spielwerte bleiben erhalten. Die neuen Karten haben zunächst keine Wände, Lichter oder Tokens und freie Sicht. Bestehende Grundrisse bleiben erhalten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
+    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 4 Matrix-Hosts und 39 Journals mit Bildseiten.</p><p><strong>Inhalte aktualisieren</strong> ergänzt fehlende NSC, Hosts und Journals sowie 32 neue Karten als separate Szenen (1 m/Kästchen). Bereits per Kartenmakro angelegte Szenen werden erkannt. Fehlende Bilder werden repariert; eigene Bilder und Spielwerte bleiben erhalten. Die neuen Karten haben zunächst keine Wände, Lichter oder Tokens und freie Sicht. Bestehende Grundrisse bleiben erhalten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
     buttons:[
       {action:'update',label:'Inhalte aktualisieren',callback:(event,button,dialog)=>({update:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
       {action:'repair',label:'Bilder ergänzen / reparieren',callback:(event,button,dialog)=>({repair:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
