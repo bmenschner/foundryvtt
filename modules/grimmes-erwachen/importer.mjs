@@ -2,6 +2,40 @@ const ID = 'grimmes-erwachen';
 const BASE = `modules/${ID}`;
 let busy = false;
 
+async function exclusively(work) {
+  if (busy) { ui.notifications.warn('Ein Import oder eine Aktualisierung läuft bereits.'); return; }
+  busy = true;
+  try { return await work(); } finally { busy = false; }
+}
+
+const findScene = (collection, source) => collection.find(s =>
+  s.getFlag(ID,'key') === source.flags[ID].key ||
+  (source.flags[ID].renderV2Key && s.getFlag(ID,'renderV2Key') === source.flags[ID].renderV2Key));
+
+async function renderedScenes(chapters) {
+  const response = await fetch(`${BASE}/assets/rendered-v2/Bibliotheken.json`,{cache:'no-store'});
+  if (!response.ok) throw new Error('Kartenverzeichnis fehlt. Bitte das vollständige Modul installieren.');
+  const catalog = await response.json();
+  return catalog.maps.filter(map=>chapters.includes(Number(map.key.match(/^a([123])-/)?.[1]))).map(map=>{
+    if (![map.widthMeters,map.pixelWidth,map.pixelHeight].every(n=>Number.isFinite(n) && n>0) || !/^karten\/[\w-]+\.png$/.test(map.file)) throw new Error(`Ungültige Kartendaten: ${map.key}`);
+    const levelId=foundry.utils.randomID(),width=Math.round(map.widthMeters*100);
+    return {_id:foundry.utils.randomID(),name:`${map.name} – neue Karte`,width,height:Math.round(width*map.pixelHeight/map.pixelWidth),padding:0,
+      grid:{type:1,size:100,distance:1,units:'m',alpha:0.18},
+      levels:[{_id:levelId,name:'Spielplan',background:{src:`${BASE}/assets/rendered-v2/${map.file}`},flags:{[ID]:{key:'map-level'}}}],initialLevel:levelId,
+      tokenVision:false,fogExploration:false,environment:{darknessLevel:0,globalLight:{enabled:true}},
+      flags:{[ID]:{key:`rendered:${map.key}`,renderV2Key:map.key,chapter:Number(map.key[1]),needsWallReview:true}}};
+  });
+}
+
+export async function updateContents({chapters=[1,2,3]}={}) {
+  return exclusively(async()=>{
+    const imported=await runImportBundle({chapters,withActors:true,withRendered:true});
+    const repaired=await runRepairMedia({chapters,withRendered:true});
+    ui.notifications.info(`Aktualisiert: ${imported.created.Scene} neue Szenen, ${imported.created.Actor} neue NSC/Hosts. Fehlende Bilder wurden ergänzt. Neue Karten benötigen Wände und Tokenpositionen.`,{permanent:true});
+    return {imported,repaired};
+  });
+}
+
 export function prepareScene(data) {
   const scene = foundry.utils.deepClone(data);
   if (scene.background?.src && !scene.levels?.length) {
@@ -24,15 +58,16 @@ async function checkMedia(paths) {
 const sceneImage = scene => scene.levels?.find(l=>l.background?.src)?.background.src ?? scene.background?.src;
 const replaceablePortrait = path => !path || path.startsWith(`${BASE}/assets/tokens/`) || path === 'icons/svg/mystery-man.svg';
 
-export async function repairMedia({chapters=[1,2,3]}={}) {
+export async function repairMedia(options={}) { return exclusively(()=>runRepairMedia(options)); }
+
+async function runRepairMedia({chapters=[1,2,3],withRendered=false}={}) {
   if (!game.user.isGM) throw new Error('Nur für die Spielleitung verfügbar.');
   if (Number(game.release?.generation) !== 14) throw new Error('Die Bildkorrektur benötigt Foundry 14.');
-  if (busy) { ui.notifications.warn('Ein Import oder eine Bildkorrektur läuft bereits.'); return; }
-  busy = true;
   const report = {scenes:0,actors:0,tokens:0,pages:0};
   try {
     const [actors,journals,scenes] = await Promise.all(['actors','journals','scenes'].map(readData));
     const data = selectDocuments({actors,journals,scenes},chapters,true);
+    if (withRendered) data.scenes.push(...await renderedScenes(chapters));
     await checkMedia([...data.scenes.map(sceneImage),...data.actors.map(a=>a.img),...data.journals.flatMap(j=>j.pages.filter(p=>p.type==='image').map(p=>p.src))]);
     const portraits = new Map();
     for (const source of data.actors) {
@@ -45,7 +80,7 @@ export async function repairMedia({chapters=[1,2,3]}={}) {
       if (Object.keys(changes).length) { await actor.update(changes); report.actors++; }
     }
     for (const source of data.scenes) {
-      const scene = game.scenes.find(s=>s.getFlag(ID,'key')===source.flags[ID].key);
+      const scene = findScene(game.scenes,source);
       if (!scene) continue;
       const levels = Array.from(scene.levels ?? []);
       let level = levels.find(l=>l.getFlag?.(ID,'key')==='map-level') ?? scene.initialLevel ?? levels[0];
@@ -76,7 +111,7 @@ export async function repairMedia({chapters=[1,2,3]}={}) {
   } catch(error) {
     ui.notifications.error(`Bildkorrektur gestoppt: ${error.message}. Erneutes Ausführen ist möglich.`,{permanent:true});
     throw error;
-  } finally { busy=false; }
+  }
 }
 
 export function rewriteLinks(value, remap) {
@@ -117,10 +152,10 @@ async function ensureFolder(type, chapter, roots) {
   return folder.id;
 }
 
-export async function importBundle({chapters=[1,2,3],withActors=true}={}) {
+export async function importBundle(options={}) { return exclusively(()=>runImportBundle(options)); }
+
+async function runImportBundle({chapters=[1,2,3],withActors=true,withRendered=false}={}) {
   if (!game.user.isGM) throw new Error('Der Import ist nur für die Spielleitung verfügbar.');
-  if (busy) { ui.notifications.warn('Ein Import läuft bereits.'); return; }
-  busy = true;
   const report = {created:{Actor:0,JournalEntry:0,Scene:0},skipped:{Actor:0,JournalEntry:0,Scene:0},core:game.version,system:game.system.id,systemVersion:game.system.version};
   try {
     const generation = Number(game.release?.generation ?? String(game.version).split('.')[0]);
@@ -130,13 +165,14 @@ export async function importBundle({chapters=[1,2,3],withActors=true}={}) {
     }
     const [actors,journals,scenes] = await Promise.all(['actors','journals','scenes'].map(readData));
     const data = selectDocuments({actors,journals,scenes},chapters,withActors);
+    if (withRendered) data.scenes.push(...await renderedScenes(chapters));
     const remap = new Map();
     const sets = [['Actor',data.actors,game.actors,CONFIG.Actor.documentClass],['JournalEntry',data.journals,game.journal,CONFIG.JournalEntry.documentClass],['Scene',data.scenes,game.scenes,CONFIG.Scene.documentClass]];
     // Plan IDs before creating anything, preserving documents from earlier imports.
     const existing = new Map();
     for (const [type,docs,collection] of sets) {
       for (const d of docs) {
-        const prior = collection.find(v => v.getFlag(ID,'key') === d.flags[ID].key);
+        const prior = type === 'Scene' ? findScene(collection,d) : collection.find(v => v.getFlag(ID,'key') === d.flags[ID].key);
         if (prior) { remap.set(d._id,prior.id); existing.set(`${type}:${d._id}`,prior); }
         else if (collection.has(d._id)) remap.set(d._id,foundry.utils.randomID());
       }
@@ -184,7 +220,7 @@ export async function importBundle({chapters=[1,2,3],withActors=true}={}) {
     console.error('Grimmes Erwachen – Importfehler',error,report);
     ui.notifications.error(`Import gestoppt: ${error.message}. Bereits angelegte Einträge bleiben erhalten; ein erneuter Import überspringt sie.`,{permanent:true});
     throw error;
-  } finally { busy=false; }
+  }
 }
 
 export async function showImporter() {
@@ -192,14 +228,16 @@ export async function showImporter() {
   const DialogClass = foundry.applications.api.DialogV2;
   const result = await DialogClass.wait({
     window:{title:'Grimmes Erwachen – Import'},
-    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 4 Matrix-Hosts und 39 Journals mit Bildseiten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
+    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 4 Matrix-Hosts und 39 Journals mit Bildseiten.</p><p><strong>Inhalte aktualisieren</strong> ergänzt fehlende NSC, Hosts und Journals sowie 31 neue Karten als separate Szenen (1 m/Kästchen). Bereits per Kartenmakro angelegte Szenen werden erkannt. Fehlende Bilder werden repariert; eigene Bilder und Spielwerte bleiben erhalten. Die neuen Karten haben zunächst keine Wände, Lichter oder Tokens und freie Sicht. Bestehende Grundrisse bleiben erhalten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
     buttons:[
+      {action:'update',label:'Inhalte aktualisieren',callback:(event,button,dialog)=>({update:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
       {action:'repair',label:'Bilder ergänzen / reparieren',callback:(event,button,dialog)=>({repair:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
       {action:'all',label:'Komplettpaket importieren',callback:(event,button,dialog)=>({chapter:dialog.element.querySelector('[name=chapter]').value,withActors:true})},
       {action:'maps',label:'Nur Szenen und Journals',callback:(event,button,dialog)=>({chapter:dialog.element.querySelector('[name=chapter]').value,withActors:false})}
     ],rejectClose:false
   });
   if (!result) return;
+  if (result.update) return updateContents({chapters:result.chapter==='all'?[1,2,3]:[Number(result.chapter)]});
   if (result.repair) return repairMedia({chapters:result.chapter==='all'?[1,2,3]:[Number(result.chapter)]});
   return importBundle({chapters:result.chapter==='all'?[1,2,3]:[Number(result.chapter)],withActors:result.withActors});
 }
@@ -216,7 +254,7 @@ export function registerImporterMenu() {
 }
 
 export async function initializeImporter() {
-  game.modules.get(ID).api={showImporter,importBundle,repairMedia};
+  game.modules.get(ID).api={showImporter,importBundle,repairMedia,updateContents};
   // Only the active GM creates the launcher; importing content is an explicit click.
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id !== game.user.id)) return;
   try {

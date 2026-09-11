@@ -6,13 +6,17 @@ Die gerenderten Karten und die einzelnen Objekte liegen getrennt vor. „Ring au
 
 ## Karten importieren
 
-1. Das fertige Paket auf dem Host unter `foundry/data/Data/modules/grimmes-erwachen/assets/rendered-v2/` ablegen. Dort müssen `Bibliotheken.json`, `karten/` und `bibliotheken/` liegen. Die zusätzlichen Dateien dürfen bestehende Modulordner nicht ersetzen.
-2. In Foundry 14 als Spielleitung ein neues Makro des Typs **Script** anlegen.
-3. Den Inhalt von `Import-Karten.js` in das Makro kopieren, speichern und ausführen.
-4. Die neuen Szenen erscheinen im Ordner **Grimmes Erwachen – neue Karten zur Bearbeitung**. Ein erneuter Lauf überspringt bereits importierte Karten.
-5. Eine neue Szene öffnen und Wände, Türen, Licht sowie Startpositionen passend zum gerenderten Grundriss einrichten. Anschließend bei Bedarf Tokensicht und Nebelerkundung aktivieren. Die neuen Arbeitskopien haben zunächst freie Sicht und keine Wände oder Tokens.
+1. Modulversion **1.2.1** samt Bildern installieren und die Foundry-Welt neu laden.
+2. Als Spielleitung **Einstellungen → Einstellungen konfigurieren → Grimmes Erwachen → Abenteuer importieren** öffnen. Alternativ das vorhandene Startmakro nutzen.
+3. Abenteuer auswählen und **Inhalte aktualisieren** anklicken. Ein eigenes Script-Makro ist nicht mehr erforderlich.
+4. Die neuen Szenen erscheinen in den Kapitelordnern unter **Grimmes Erwachen**, mit dem Zusatz **– neue Karte**. Bereits mit `Import-Karten.js` angelegte Szenen bleiben an ihrem bisherigen Ort und werden erkannt.
+5. Wände, Türen, Licht und Tokenpositionen für die neuen Grundrisse einrichten. Die neuen Arbeitskopien haben zunächst freie Sicht und keine Wände oder Tokens.
 
-Das Makro lässt vorhandene Abenteuer-Szenen unverändert. „Ring aus Feuer“ bleibt in seiner bestehenden Szene; die unveränderte Bilddatei liegt zusätzlich im Paket.
+Die Aktualisierung ergänzt fehlende Einträge des Grundpakets (NSC, Matrix-Hosts, Journals und ursprüngliche Szenen) und die 31 neuen Karten. Sie repariert fehlende Bildzuordnungen und ersetzt alte Modul-Monogramme. Eigene Bilder, vorhandene Spielwerte, Journaltexte und bestehende Szenengeometrie bleiben erhalten. Wiederholtes Ausführen erzeugt keine Duplikate; bei einem Abbruch kann es erneut gestartet werden. Die Bilder werden vor dem Anlegen geprüft. Es gibt keine automatische Rücknahme bereits erfolgreicher Teilschritte.
+
+„Ring aus Feuer“ bleibt in seiner bestehenden Szene. Ein Austausch von Bilddateien am gleichen Pfad über die GitHub Action wird nach einem Neuladen sichtbar; das allein legt keine neuen Foundry-Dokumente an. Für neue Szenen und NSC ist der Update-Knopf erforderlich. Ein Pull Request löst keine Bereitstellung aus. Unverwaltete Module bleiben beim bestehenden Deployment erhalten.
+
+Der Icon-Katalog bleibt vorerst die vorhandene HTML-Datei; ein integrierter Foundry-Bilderbrowser ist nicht Teil dieser Aktualisierung.
 
 ## Maßstab und Auflösung
 

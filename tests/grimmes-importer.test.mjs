@@ -1,13 +1,16 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-import {importBundle,selectDocuments,rewriteLinks} from '../modules/grimmes-erwachen/importer.mjs';
+import {importBundle,updateContents,selectDocuments,rewriteLinks} from '../modules/grimmes-erwachen/importer.mjs';
 const root='modules/';
 const bundle=Object.fromEntries(['actors','journals','scenes'].map(k=>[k,JSON.parse(fs.readFileSync(root+'grimmes-erwachen/data/'+k+'.json','utf8'))]));
 let seq=0;
 class Collection extends Map {find(fn){return [...this.values()].find(fn);} }
 function mockClass(collection){return class {
-  constructor(d){this.data=structuredClone(d);this.id=d._id;Object.assign(this,d);}
+  constructor(d){this.data=structuredClone(d);this.id=d._id;Object.assign(this,structuredClone(d));for(const level of this.levels??[])level.id=level._id;}
   getFlag(scope,key){return this.flags?.[scope]?.[key];}
+  async update(changes){for(const [path,value] of Object.entries(changes)){const parts=path.split('.'),last=parts.pop();let obj=this;for(const part of parts)obj=obj[part]??={};obj[last]=value;}return this;}
+  async createEmbeddedDocuments(type,docs){const key=type==='Level'?'levels':'pages';this[key]??=[];const made=docs.map(d=>({...structuredClone(d),id:String(++seq)}));this[key].push(...made);return made;}
+  async updateEmbeddedDocuments(type,docs){const key=type==='Level'?'levels':'tokens';for(const d of docs){const item=this[key].find(v=>(v.id??v._id)===d._id);for(const [path,value] of Object.entries(d)){if(path==='_id')continue;const parts=path.split('.'),last=parts.pop();let obj=item;for(const part of parts)obj=obj[part]??={};obj[last]=value;}}}
   validate(){return true;}
   toObject(){return structuredClone(this.data);}
   static migrateDataSafe(d){return d;}
@@ -42,6 +45,34 @@ reset();const SceneClass=CONFIG.Scene.documentClass;CONFIG.Scene.documentClass=c
 console.error=()=>{};await assert.rejects(importBundle(),/Szenenhintergrund wurde/);console.error=errorLog;
 assert.equal(game.actors.size+game.journal.size+game.scenes.size+game.folders.size,0);
 assert.equal(rewriteLinks('@UUID[Actor.abcdef]',new Map([['abcdef','ghijkl']])),'@UUID[Actor.ghijkl]');
+// Update an existing world, including a scene previously imported by the standalone macro.
+reset();await importBundle();
+const owned=game.actors.find(a=>a.img?.includes('/portraits/'));
+owned.img='worlds/custom/me.png';owned.prototypeToken.texture.src='worlds/custom/token.png';owned.system={customStat:99};
+const oldScene=game.scenes.find(s=>s.getFlag('grimmes-erwachen','key')==='a1-01-tune-bar');
+const oldGeometry=JSON.stringify({levels:oldScene.levels,walls:oldScene.walls,tokens:oldScene.tokens});
+const catalog=JSON.parse(fs.readFileSync(root+'grimmes-erwachen/assets/rendered-v2/Bibliotheken.json','utf8'));
+const map=catalog.maps[0];
+await CONFIG.Scene.documentClass.create({_id:'legacyRendered01',name:'Meine Kartenkopie',flags:{'grimmes-erwachen':{renderV2Key:map.key}},levels:[{_id:'customLevel',background:{src:'worlds/custom/map.webp'}}]});
+const missingActor=[...game.actors.values()].find(a=>a.id!==owned.id);game.actors.delete(missingActor.id);
+const updated=await updateContents();
+assert.equal(updated.imported.created.Scene,30);assert.equal(updated.imported.created.Actor,1);
+assert.equal(owned.img,'worlds/custom/me.png');assert.deepEqual(owned.system,{customStat:99});
+assert.equal(JSON.stringify({levels:oldScene.levels,walls:oldScene.walls,tokens:oldScene.tokens}),oldGeometry);
+assert.equal(game.scenes.get('legacyRendered01').levels[0].background.src,'worlds/custom/map.webp');
+const newScenes=[...game.scenes.values()].filter(s=>s.getFlag('grimmes-erwachen','key')?.startsWith('rendered:'));
+assert.equal(newScenes.length,30);assert(newScenes.every(s=>s.grid.distance===1 && s.grid.size===100 && s.grid.units==='m' && !s.walls?.length && !s.tokens?.length));
+assert.deepEqual((await updateContents()).imported.created,{Actor:0,JournalEntry:0,Scene:0});
+const repairScene=newScenes[0];repairScene.levels[0].background.src=null;
+assert.equal((await updateContents()).repaired.scenes,1);assert(repairScene.levels[0].background.src.includes('/rendered-v2/karten/'));
+// Missing rendered files must stop both import and repair before world changes.
+reset();const normalFetch=globalThis.fetch;
+globalThis.fetch=async(path,opts)=>opts?.method==='HEAD' && path.includes('/rendered-v2/')?{ok:false}:normalFetch(path,opts);
+console.error=()=>{};await assert.rejects(updateContents(),/Bild fehlt/);console.error=errorLog;
+assert.equal(game.actors.size+game.journal.size+game.scenes.size+game.folders.size,0);
+reset();await updateContents({chapters:[2]});
+assert([...game.scenes.values()].every(s=>s.getFlag('grimmes-erwachen','chapter')===2));
+assert.equal(game.scenes.size,11+catalog.maps.filter(m=>m.key.startsWith('a2-')).length);
 console.info=log;
 const report={passed:true,tests:['Vollimport: 75 Actors, 39 Journals, 34 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
 

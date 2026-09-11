@@ -1,6 +1,6 @@
 # Grimmes Erwachen – Abenteuerpaket für Foundry 14
 
-Version 1.1.0 ergänzt Szenenhintergründe auf nativen Foundry-14-Ebenen, 71 individuelle Porträts und Bildseiten in den Hauptjournals. Bereits importierte Welten über **Abenteuer importieren → Bilder ergänzen / reparieren** aktualisieren. Die [Schritt-für-Schritt-Anleitung](grimmes-erwachen-bilder.md) beschreibt die Bildkorrektur. Dieses Update wird zunächst als Pull Request bereitgestellt; es wird nicht automatisch auf den Server übertragen.
+Version **1.2.1** ergänzt **Abenteuer importieren → Inhalte aktualisieren**: fehlende NSC, Hosts und Grundpaket-Dokumente hinzufügen, 31 neue Karten als separate Szenen anlegen und fehlende Bilder reparieren. Eigene Bilder, Spielwerte und bestehende Grundrisse bleiben erhalten. Bereits per Kartenmakro angelegte Szenen werden erkannt. Die neuen Karten benötigen noch Wände, Licht und Tokenpositionen; sie haben zunächst freie Sicht. Die [Schritt-für-Schritt-Anleitung](grimmes-erwachen-karten-und-icons.md) beschreibt die Aktualisierung. Dieses Update wird als Pull Request bereitgestellt; es wird nicht automatisch auf den Server übertragen.
 
 Ziel: **Foundry VTT 14.367 (Stable)** und **Shadowrun 6 Eden 4.0.8**, System-ID `shadowrun6-eden`. Stand: 8. September 2026.
 
@@ -18,7 +18,7 @@ Enthalten sind die drei Abenteuer **Spuk in der Wolfsburg**, **Zucker für die K
 | Journals, einschließlich Kartenhilfen und Handouts | 39 / 143 Seiten |
 | Individuelle Porträts für NSC, Geister und Kreaturen | 71 |
 
-Alle taktischen Szenen verwenden **1 Kästchen = 1 Meter**. Sie enthalten Wände, Türen, Lichtquellen, vorbereitete Tokens und Journalnotizen. Die Hintergrundszenen sind rasterlos. Das Titelbild trägt unten „Grimmes Erwachen“.
+Alle taktischen Szenen verwenden **1 Kästchen = 1 Meter**. Die ursprünglichen 30 Karten enthalten Wände, Türen, Lichtquellen, vorbereitete Tokens und Journalnotizen. Die 31 neuen Karten sind separate Arbeitskopien ohne diese Ausstattung. Die Hintergrundszenen sind rasterlos. Das Titelbild trägt unten „Grimmes Erwachen“.
 
 ## Empfohlener Import: gesamtes Abenteuerpaket
 

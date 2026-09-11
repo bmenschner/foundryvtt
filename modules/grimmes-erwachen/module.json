@@ -1,8 +1,8 @@
 {
   "id": "grimmes-erwachen",
   "title": "Grimmes Erwachen – drei Abenteuer für SR6",
-  "description": "Privates Abenteuerpaket für Foundry 14 und Shadowrun 6 Eden 4.0.8: 30 taktische 1-m-Karten, vier 4K-Hintergründe in 16:9, 71 NSC, vier Matrix-Hosts mit 17 IC und strukturierte Journals. Eigene SR6-Adaption der bereitgestellten SR5-Vorlage. Zusätzlich 31 neu gerenderte Karten als separate Arbeitskopien, der unveränderte Ring aus Feuer und 277 transparente Ausstattungs-Icons mit Katalog und manuellem Import.",
-  "version": "1.2.0",
+  "description": "Privates Abenteuerpaket für Foundry 14 und Shadowrun 6 Eden 4.0.8: 30 taktische 1-m-Karten, vier 4K-Hintergründe in 16:9, 71 NSC, vier Matrix-Hosts mit 17 IC und strukturierte Journals. Eigene SR6-Adaption der bereitgestellten SR5-Vorlage. Zusätzlich 31 neu gerenderte Karten als separate Arbeitskopien, der unveränderte Ring aus Feuer und 277 transparente Ausstattungs-Icons mit Katalog. Integrierte Aktualisierung ergänzt neue Karten und NSC und repariert fehlende Bilder.",
+  "version": "1.2.1",
   "authors": [
     {
       "name": "Private Abenteueraufbereitung mit Codex"
