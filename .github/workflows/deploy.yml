@@ -68,13 +68,34 @@ jobs:
             set -e
             cd ~/foundry
 
-            # Neuesten Stand vom Repository holen
-            echo "▶ Pulling latest changes..."
-            git pull --ff-only origin main
-            if [ "$(git rev-parse HEAD)" != "${{ github.sha }}" ]; then
+            # Nur ein Commit auf dem Deployment-Server; die volle Historie bleibt auf GitHub.
+            # Gegen gleichzeitige Deployments sperren, bevor Reflogs/Objekte bereinigt werden.
+            exec 9>.git/deploy.lock
+            flock -n 9
+            git diff --quiet
+            git diff --cached --quiet
+            # Zusätzliche lokale Referenzen könnten unveröffentlichte Arbeit enthalten.
+            EXTRA_REFS=$(git for-each-ref --format='%(refname)' | grep -vE '^refs/(heads/main|remotes/origin/(main|HEAD))$' || true)
+            if [ -n "$EXTRA_REFS" ]; then
+              echo "Server has additional Git refs; review before removing history: $EXTRA_REFS"
+              exit 1
+            fi
+            echo "▶ Fetching current deployment without history..."
+            git -c gc.auto=0 fetch --no-tags --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+            if [ "$(git rev-parse FETCH_HEAD)" != "${{ github.sha }}" ]; then
               echo "Server checkout differs from the tested commit; deploy the latest main run."
               exit 1
             fi
+            # Checkout ohne force schützt lokale/unverwaltete Dateien vor Überschreiben.
+            git checkout --detach FETCH_HEAD
+            git branch -f main HEAD
+            git checkout main
+            git config remote.origin.fetch '+refs/heads/main:refs/remotes/origin/main'
+            git config remote.origin.tagOpt --no-tags
+            git reflog expire --expire=now --all
+            git -c gc.cruftPacks=false gc --prune=now
+            echo "▶ Server Git storage:"
+            du -sh .git
 
             # Docker-Images nur neu bauen wenn sich image-relevante Dateien
             # geändert haben (spart Zeit bei reinen Konfig-Commits)
