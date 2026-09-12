@@ -1,0 +1,10 @@
+{
+  "id": "assets-grimmes-erwachen",
+  "title": "Assets - Grimmes Erwachen",
+  "description": "277 transparente Kartenelemente in acht Kategorien. Eigenständiger Bilderkatalog mit Suche und maßstabsgerechter Tile-Platzierung für Foundry 14. Keine Abhängigkeit vom Abenteuerpaket oder einem Spielsystem.",
+  "version": "1.0.0",
+  "authors": [{"name": "Private Abenteueraufbereitung mit Codex"}],
+  "compatibility": {"minimum": "14.366", "maximum": "14"},
+  "esmodules": ["catalog.mjs"],
+  "styles": ["catalog.css"]
+}
