@@ -11,14 +11,14 @@ test('standalone pack contains every generated element, without adventure depend
   const manifest=JSON.parse(fs.readFileSync(`${root}/module.json`));assert.equal(manifest.title,'Assets - Grimmes Erwachen');assert(!manifest.relationships);
   const icons=JSON.parse(fs.readFileSync(`${root}/catalog.json`)).icons;
   const originals=JSON.parse(fs.readFileSync('modules/grimmes-erwachen/assets/rendered-v2/Bibliotheken.json')).icons;
-  assert.equal(icons.length,279);assert.equal(new Set(icons.map(a=>a.category)).size,10);
-  assert.deepEqual(icons.filter(a=>a.kind!=='terrain').map(a=>a.key).sort(),originals.map(a=>a.key).sort());
+  assert.equal(icons.length,281);assert.equal(new Set(icons.map(a=>a.category)).size,10);
+  assert.deepEqual(icons.filter(a=>!a.generation).map(a=>a.key).sort(),originals.map(a=>a.key).sort());
   for(const icon of icons){
     const data=fs.readFileSync(`${root}/${icon.file}`);
     assert.equal(data.toString('ascii',0,4),'RIFF');assert.equal(data.toString('ascii',8,12),'WEBP');
     assert.equal(crypto.createHash('sha256').update(data).digest('hex'),icon.sha256);
-    if(icon.kind!=='terrain') assert.equal(icon.sourceSha256,originals.find(a=>a.key===icon.key).sha256);
-    if(icon.kind!=='terrain') assert.deepEqual(icon.alphaBounds,originals.find(a=>a.key===icon.key).alphaBounds);
+    if(!icon.generation) assert.equal(icon.sourceSha256,originals.find(a=>a.key===icon.key).sha256);
+    if(!icon.generation) assert.deepEqual(icon.alphaBounds,originals.find(a=>a.key===icon.key).alphaBounds);
     assert.equal(icon.rgbaSha256.length,64);
   }
   const report=JSON.parse(fs.readFileSync(`${root}/conversion-report.json`));

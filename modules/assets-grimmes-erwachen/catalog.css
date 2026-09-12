@@ -12,3 +12,7 @@
 .age-detail label {display:flex;gap:8px;align-items:center}
 .age-detail input[type=number] {max-width:110px}
 .age-detail input[readonly] {flex:1;min-width:0;font-size:12px}
+.age-brush{position:fixed;top:80px;right:330px;z-index:10000;width:260px;padding:16px;display:flex;flex-direction:column;gap:8px;background:#242724;color:#eee;border:1px solid #a5b7a2;border-radius:8px;box-shadow:0 4px 20px #0008;font:14px sans-serif}
+.age-brush :is(button,select,input){background:#363e36;color:#fff;min-height:32px;border:1px solid #83917f;border-radius:4px;width:100%}
+.age-brush button{cursor:pointer}.age-brush button:disabled{opacity:.5}.age-brush p{margin:0;line-height:1.4}.age-brush-overlay{position:fixed;inset:0;z-index:50;cursor:crosshair;touch-action:none}
+@media(max-width:800px){.age-brush{right:12px;top:60px;width:230px}}

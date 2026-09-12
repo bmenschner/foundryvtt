@@ -1,8 +1,8 @@
 {
   "id": "assets-grimmes-erwachen",
   "title": "Assets - Grimmes Erwachen",
-  "description": "279 Kartenelemente in zehn Kategorien: 277 transparente Objekte sowie Gras und Asphalt. Eigenständiger Bilderkatalog mit maßstabsgerechter Tile-Platzierung für Foundry 14.",
-  "version": "1.1.0",
+  "description": "281 Kartenelemente mit Gras, Asphalt und Bordsteinen. Eigenständiger Bilderkatalog und Malpinsel für maßstabsgerechte Bodenflächen in Foundry 14.",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "Private Abenteueraufbereitung mit Codex"
