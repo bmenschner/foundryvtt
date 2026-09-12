@@ -1,0 +1,22 @@
+[
+  {
+    "key": "gras-einfach",
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "pixelsIdentical": true,
+    "horizontalSeamMean": 25.049175970228603,
+    "verticalSeamMean": 24.721158958001062,
+    "adjacentHorizontalMean": 19.261759655614405,
+    "adjacentVerticalMean": 19.567074746286742
+  },
+  {
+    "key": "asphalt-einfach",
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "pixelsIdentical": true,
+    "horizontalSeamMean": 21.95933014354067,
+    "verticalSeamMean": 20.33599149388623,
+    "adjacentHorizontalMean": 16.93297341033301,
+    "adjacentVerticalMean": 18.157186176886267
+  }
+]

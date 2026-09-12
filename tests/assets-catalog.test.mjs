@@ -11,14 +11,14 @@ test('standalone pack contains every generated element, without adventure depend
   const manifest=JSON.parse(fs.readFileSync(`${root}/module.json`));assert.equal(manifest.title,'Assets - Grimmes Erwachen');assert(!manifest.relationships);
   const icons=JSON.parse(fs.readFileSync(`${root}/catalog.json`)).icons;
   const originals=JSON.parse(fs.readFileSync('modules/grimmes-erwachen/assets/rendered-v2/Bibliotheken.json')).icons;
-  assert.equal(icons.length,277);assert.equal(new Set(icons.map(a=>a.category)).size,8);
-  assert.deepEqual(icons.map(a=>a.key).sort(),originals.map(a=>a.key).sort());
+  assert.equal(icons.length,279);assert.equal(new Set(icons.map(a=>a.category)).size,10);
+  assert.deepEqual(icons.filter(a=>a.kind!=='terrain').map(a=>a.key).sort(),originals.map(a=>a.key).sort());
   for(const icon of icons){
     const data=fs.readFileSync(`${root}/${icon.file}`);
     assert.equal(data.toString('ascii',0,4),'RIFF');assert.equal(data.toString('ascii',8,12),'WEBP');
     assert.equal(crypto.createHash('sha256').update(data).digest('hex'),icon.sha256);
-    assert.equal(icon.sourceSha256,originals.find(a=>a.key===icon.key).sha256);
-    assert.deepEqual(icon.alphaBounds,originals.find(a=>a.key===icon.key).alphaBounds);
+    if(icon.kind!=='terrain') assert.equal(icon.sourceSha256,originals.find(a=>a.key===icon.key).sha256);
+    if(icon.kind!=='terrain') assert.deepEqual(icon.alphaBounds,originals.find(a=>a.key===icon.key).alphaBounds);
     assert.equal(icon.rgbaSha256.length,64);
   }
   const report=JSON.parse(fs.readFileSync(`${root}/conversion-report.json`));
@@ -28,6 +28,18 @@ test('search combines words and category, including umlauts',()=>{
   assert.equal(filterAssets([asset],'cafe stuhl','gastronomie').length,1);
   assert.equal(filterAssets([asset],'stuhl','sport').length,0);
   assert.equal(filterAssets([asset],'unbekannt').length,0);
+});
+test('terrain tiles occupy their specified metre footprint without transparent margins',()=>{
+  const terrain=JSON.parse(fs.readFileSync(`${root}/catalog.json`)).icons.filter(a=>a.kind==='terrain');
+  assert.equal(terrain.length,2);
+  for(const a of terrain){
+    assert.deepEqual(a.alphaBounds,[0,0,a.pixelWidth,a.pixelHeight]);
+    assert.deepEqual(a.alphaExtrema,[255,255]);
+    const tile=tileData(a,context);
+    assert.equal(tile.width,a.widthMeters*100);
+    assert.equal(tile.height,a.heightMeters*100);
+    assert.equal(filterAssets(terrain,a.name,a.category).length,1);
+  }
 });
 test('tile scale excludes transparent margins and centres visible bounds on the selected level',()=>{
   const tile=tileData(asset,context);

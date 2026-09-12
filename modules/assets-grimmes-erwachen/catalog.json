@@ -6649,6 +6649,58 @@
       ],
       "sourceSha256": "a810f04fbbce579f3ef7bfa2dc161f11c8e4e8a1f313138611de0882bebf15ce",
       "rgbaSha256": "feb745cdfdf30a49b4396e9a68e7c0936b48939ac7f4429bfac22beddec1e9e3"
+    },
+    {
+      "key": "gras-einfach",
+      "name": "Gras – einfache Rasenfläche",
+      "category": "boden",
+      "file": "assets/boden/gras-einfach.webp",
+      "widthMeters": 4,
+      "heightMeters": 4.0,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "17e19c86825344e0217ed7470ab8db8ee3b7bd9d299251df7bef9c43b7946eca",
+      "sourceSha256": "c701ac5d80d7b0200ab9fd541780abc7ecfd8abbf03e27e411e31d47af4fa449",
+      "rgbaSha256": "3b5cc1d6eb4cee008564b400e0abd6770cf24e0171cb8b0f0b4669699285e5f0",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "generation": "built-in image_gen"
+    },
+    {
+      "key": "asphalt-einfach",
+      "name": "Straße – einfacher Asphalt",
+      "category": "strassen",
+      "file": "assets/strassen/asphalt-einfach.webp",
+      "widthMeters": 6,
+      "heightMeters": 6.0,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "9368cd4d77bd8116453ff080434cedc7c564a73fbdecd560e59094f6d8654cf7",
+      "sourceSha256": "fba2ed9a3d4ee1dd2b46fa732c37a52e25d9a5c57321c419d5ec961f871b607a",
+      "rgbaSha256": "da43edb98b05793c777f8760df0f8b2fccb2a7bb7b2482696f815dc324326a0f",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "generation": "built-in image_gen"
     }
   ]
 }

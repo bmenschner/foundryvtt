@@ -1,6 +1,17 @@
 # Assets - Grimmes Erwachen
 
-Eigenständige Bibliothek für Foundry 14 mit allen **277 generierten, transparenten Kartenelementen** in acht Kategorien: Gastronomie, Club, Sport, Wohnen, Büro/Medizin, Industrie/Verkehr, Sakral/Natur und Bauteile.
+Eigenständige Bibliothek für Foundry 14 mit **279 Elementen**: 277 transparente Ausstattungsobjekte und zwei deckende Bodentexturen. Zehn Kategorien einschließlich Boden und Straßen.
+
+## Neue Grundtexturen in Version 1.1.0
+
+- **Boden → Gras – einfache Rasenfläche:** 4 × 4 m pro Tile.
+- **Straßen → Straße – einfacher Asphalt:** 6 × 6 m pro Tile. Mehrere Stücke hintereinander ergeben eine 6 m breite Straße ohne Markierungen.
+
+Beide Bilder sind 1254 × 1254 Pixel groß, ohne eingebranntes Raster. Bei Rasterdistanz 1 m belegt Gras 4 × 4 Kästchen und Asphalt 6 × 6 Kästchen. Zum Verlängern Tiles duplizieren und direkt aneinanderlegen; bloßes Vergrößern streckt die Textur. Die Straße besteht zunächst aus der Asphaltoberfläche. Gehwege, Bordsteine und Übergangsränder sind noch nicht enthalten.
+
+Für eine gezeichnete Grasfläche: Rechteck oder Polygon mit Foundrys Zeichenwerkzeug anlegen, dessen Konfiguration öffnen und als Fülltyp **Pattern/Muster** den Bildpfad `modules/assets-grimmes-erwachen/assets/boden/gras-einfach.webp` verwenden. Foundry wiederholt die Textur; die automatische 4-m-Skalierung des Katalogs gilt für Tiles, nicht für diese native Musterfüllung. Diese Version ergänzt Texturen, keinen eigenen Malpinsel. Die Reihenfolge von Zeichnungen und Tiles muss in der jeweiligen Szene geprüft werden.
+
+Die Texturen wurden eigenständig mit dem integrierten Bildgenerator erstellt. Gestalterische Referenz: [Tom Cartos, Suburban Street Simple](https://www.tomcartos.com/tc-modern-preview). Keine Bildausschnitte der Quelle sind enthalten. Eine 3 × 3 Wiederholung wurde im Browser visuell geprüft; gegenüberliegende Randpixel sind nicht mathematisch identisch, leichte Wiederholungsmuster bleiben möglich. `terrain-prompts.json` enthält die Prompts, `terrain-report.json` die Bild- und Randprüfwerte. Der ältere Umkodierungsbericht bezieht sich weiterhin auf die ursprünglichen 277 Objekte.
 
 ## Verwendung
 
