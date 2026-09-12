@@ -6701,6 +6701,60 @@
       ],
       "kind": "terrain",
       "generation": "built-in image_gen"
+    },
+    {
+      "key": "bordstein-gerade",
+      "name": "Bordstein – gerade",
+      "category": "strassen",
+      "file": "assets/strassen/bordstein-gerade.webp",
+      "widthMeters": 1,
+      "heightMeters": 0.19440424505547516,
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "alphaBounds": [
+        49,
+        159,
+        2122,
+        562
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "kind": "curb",
+      "generation": "built-in image_gen",
+      "sha256": "6351830350b1ff28ae3ca72909b42200ce30b803be08d8f25e80aaa14e332266",
+      "sourceSha256": "cca918a2a7bb548137325e61c407f04283aeb76b89353a277083e1cf69d3fc19",
+      "rgbaSha256": "0bc849da63b3d3ab76cbab32684ee9e7602a9d233f1d1267aba8859f46c8a9a0",
+      "alphaBoundsThreshold": 16
+    },
+    {
+      "key": "bordstein-ecke",
+      "name": "Bordstein – 90°-Ecke",
+      "category": "strassen",
+      "file": "assets/strassen/bordstein-ecke.webp",
+      "widthMeters": 1,
+      "heightMeters": 0.9471799462846912,
+      "pixelWidth": 1288,
+      "pixelHeight": 1221,
+      "mode": "RGBA",
+      "alphaBounds": [
+        88,
+        74,
+        1205,
+        1132
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "kind": "curb",
+      "generation": "built-in image_gen",
+      "sha256": "6b1c7e0bc95d2f93016eef8b3bfca337e64bbc27051dcc07e9671e0f609071d4",
+      "sourceSha256": "2951f9601d3145bedeacd2659d886c7682b75d7ff9f22a277c4f1214aec10eff",
+      "rgbaSha256": "aff33f77f5903487c162d092c9d3a808bc8e504d96e0c0017ed3198247275da0",
+      "alphaBoundsThreshold": 16
     }
   ]
 }

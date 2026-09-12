@@ -60,7 +60,8 @@ export function catalogElement(icons) {
   const search=node('input');search.type='search';search.placeholder='Element suchen …';search.setAttribute('aria-label','Element suchen');
   const category=node('select');category.setAttribute('aria-label','Kategorie');category.append(new Option('Alle Kategorien',''));
   for(const [key,label] of Object.entries(categories)) category.append(new Option(label,key));
-  tools.append(search,category);
+  const paint=node('button','Boden malen');paint.type='button';paint.addEventListener('click',()=>showBrush().catch(error=>ui.notifications.error(error.message)));
+  tools.append(search,category,paint);
   const status=node('p');status.setAttribute('aria-live','polite');
   const cards=node('div',undefined,'age-cards');
   const paging=node('div',undefined,'age-tools');
@@ -107,8 +108,9 @@ export function registerCatalog() {
   }
   game.settings.registerMenu(ID,'catalog',{name:'Assets - Grimmes Erwachen',label:'Bilderkatalog öffnen',hint:'Kartenelemente und Bodentexturen durchsuchen und als Tile platzieren.',icon:'fas fa-images',type:CatalogMenu,restricted:true});
 }
+export async function showBrush(){await (await import('./brush.mjs')).showBrush();if(browser?.rendered)await browser.close();}
 export async function initializeCatalog() {
-  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset};
+  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush};
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id!==game.user.id)) return;
   if (game.macros.find(m=>m.getFlag(ID,'key')==='launcher')) return;
   try {await CONFIG.Macro.documentClass.create({name:'Assets - Grimmes Erwachen',type:'script',img:'icons/svg/chest.svg',command:`await game.modules.get('${ID}').api.showCatalog();`,ownership:{default:0},flags:{[ID]:{key:'launcher'}}});}

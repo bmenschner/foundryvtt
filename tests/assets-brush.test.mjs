@@ -1,0 +1,36 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {strokeBounds,pixelsPerMeter,saveStroke,undoStroke} from '../modules/assets-grimmes-erwachen/brush.mjs';
+import {ID} from '../modules/assets-grimmes-erwachen/catalog.mjs';
+test('brush uses metre scale, clips to scene and handles reverse rectangles',()=>{
+  assert.equal(pixelsPerMeter({size:100,distance:1,units:'m'}),100);
+  assert(Math.abs(pixelsPerMeter({size:100,distance:5,units:'ft'})-100/1.524)<1e-8);
+  const rect={x:0,y:0,width:1000,height:1000};
+  assert.deepEqual(strokeBounds([{x:10,y:10}],100,'freehand',rect),{x:0,y:0,width:60,height:60});
+  assert.deepEqual(strokeBounds([{x:300,y:400},{x:100,y:200}],10,'rectangle',rect),{x:100,y:200,width:200,height:200});
+  assert.throws(()=>strokeBounds([{x:1200,y:1200}],10,'freehand',rect));
+  assert.throws(()=>strokeBounds([{x:NaN,y:0}],10,'freehand',rect));
+  assert.throws(()=>pixelsPerMeter({size:0,distance:1,units:'m'}));
+});
+test('brush stores images outside module, preserves other tiles, undo only removes owned stroke',async()=>{
+  const made=[],deleted=[],uploads=[];
+  const level={id:'ground',elevation:{bottom:0}};
+  const objects=new Map([['prop',{id:'prop',sort:0,levels:new Set(['ground']),flags:{}}]]);
+  const tiles={get:id=>objects.get(id),[Symbol.iterator]:()=>objects.values()};
+  const scene={tiles,createEmbeddedDocuments:async(type,items)=>{const tile={id:'stroke',...items[0]};objects.set(tile.id,tile);made.push(tile);return [tile];},deleteEmbeddedDocuments:async(type,ids)=>{deleted.push(...ids);ids.forEach(id=>objects.delete(id));}};
+  globalThis.game={user:{isGM:true},release:{generation:14},world:{id:'test-world'}};
+  globalThis.canvas={ready:true,scene,level};
+  const picker={browse:async()=>({}),upload:async(source,path,file)=>{uploads.push({source,path,file});return {path:`${path}/${file.name}`};}};
+  globalThis.foundry={applications:{apps:{FilePicker:{implementation:picker}}}};
+  const args={scene,level,asset:{key:'gras-einfach',name:'Gras'},bounds:{x:20,y:40,width:200,height:100},surface:{toBlob:cb=>cb(new Blob(['png']))}};
+  await saveStroke(args);
+  assert.equal(uploads[0].path,'worlds/test-world/assets-grimmes-erwachen-painted');
+  assert.equal(made[0].width,200);assert.deepEqual(made[0].levels,['ground']);assert(made[0].sort<0);assert(made[0].flags[ID].painted);
+  await undoStroke();assert.deepEqual(deleted,['stroke']);assert(objects.has('prop'));
+  await assert.rejects(undoStroke(),/Kein eigener/);
+  game.user.isGM=false;await assert.rejects(saveStroke(args),/Spielleitung/);assert.equal(uploads.length,1);
+  game.user.isGM=true;picker.upload=async()=>{canvas.level={id:'other'};return {path:'worlds/test-world/file.png'};};
+  await assert.rejects(saveStroke(args),/gewechselt/);assert.equal(made.length,1);
+  canvas.level=level;picker.upload=async()=>({error:'Upload gescheitert'});
+  await assert.rejects(saveStroke(args),/Upload gescheitert/);assert.equal(made.length,1);
+});
