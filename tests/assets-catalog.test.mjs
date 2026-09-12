@@ -11,7 +11,7 @@ test('standalone pack contains every generated element, without adventure depend
   const manifest=JSON.parse(fs.readFileSync(`${root}/module.json`));assert.equal(manifest.title,'Assets - Grimmes Erwachen');assert(!manifest.relationships);
   const icons=JSON.parse(fs.readFileSync(`${root}/catalog.json`)).icons;
   const originals=JSON.parse(fs.readFileSync('modules/grimmes-erwachen/assets/rendered-v2/Bibliotheken.json')).icons;
-  assert.equal(icons.length,281);assert.equal(new Set(icons.map(a=>a.category)).size,10);
+  assert.equal(icons.length,282);assert.equal(new Set(icons.map(a=>a.category)).size,10);
   assert.deepEqual(icons.filter(a=>!a.generation).map(a=>a.key).sort(),originals.map(a=>a.key).sort());
   for(const icon of icons){
     const data=fs.readFileSync(`${root}/${icon.file}`);
@@ -31,7 +31,7 @@ test('search combines words and category, including umlauts',()=>{
 });
 test('terrain tiles occupy their specified metre footprint without transparent margins',()=>{
   const terrain=JSON.parse(fs.readFileSync(`${root}/catalog.json`)).icons.filter(a=>a.kind==='terrain');
-  assert.equal(terrain.length,2);
+  assert.equal(terrain.length,3);
   for(const a of terrain){
     assert.deepEqual(a.alphaBounds,[0,0,a.pixelWidth,a.pixelHeight]);
     assert.deepEqual(a.alphaExtrema,[255,255]);

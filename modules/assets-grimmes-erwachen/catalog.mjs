@@ -23,7 +23,7 @@ export function tileData(asset,{grid,rect,level},widthMeters=asset.widthMeters) 
   const scale=widthMeters*grid.size/(grid.distance*metres)/(right-left);
   return {name:asset.name,texture:{src:assetPath(asset)},width:asset.pixelWidth*scale,height:asset.pixelHeight*scale,
     x:rect.x+rect.width/2-(left+right)/2*scale,y:rect.y+rect.height/2-(top+bottom)/2*scale,
-    rotation:0,hidden:false,locked:false,elevation:Number.isFinite(level?.elevation?.bottom)?level.elevation.bottom:0,
+    anchorX:0,anchorY:0,rotation:0,hidden:false,locked:false,elevation:Number.isFinite(level?.elevation?.bottom)?level.elevation.bottom:0,
     levels:level?.id?[level.id]:[],flags:{[ID]:{key:asset.key,widthMeters}}};
 }
 export async function loadCatalog() {
@@ -116,4 +116,10 @@ export async function initializeCatalog() {
   try {await CONFIG.Macro.documentClass.create({name:'Assets - Grimmes Erwachen',type:'script',img:'icons/svg/chest.svg',command:`await game.modules.get('${ID}').api.showCatalog();`,ownership:{default:0},flags:{[ID]:{key:'launcher'}}});}
   catch(error){ui.notifications.warn('Das Startmakro konnte nicht erstellt werden. Der Bilderkatalog ist in den Moduleinstellungen verfügbar.');}
 }
-if (typeof Hooks!=='undefined') {Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);}
+export function sceneControls(controls) {
+  controls[ID]={name:ID,title:'Assets – Grimmes Erwachen',icon:'fa-solid fa-images',order:Object.keys(controls).length,visible:game.user.isGM,
+    onChange:(_event,enabled)=>{if(enabled)showCatalog().catch(error=>ui.notifications.error(error.message));},
+    tools:{catalog:{name:'catalog',title:'Bilderkatalog öffnen',icon:'fa-solid fa-images',order:0,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))},
+      brush:{name:'brush',title:'Boden malen',icon:'fa-solid fa-paintbrush',order:1,button:true,onChange:()=>showBrush().catch(error=>ui.notifications.error(error.message))}}};
+}
+if (typeof Hooks!=='undefined') {Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);Hooks.on('getSceneControlButtons',sceneControls);}

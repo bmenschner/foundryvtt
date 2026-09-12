@@ -1,13 +1,25 @@
 # Assets - Grimmes Erwachen
 
-Eigenständige Bibliothek für Foundry 14 mit **281 Elementen**: 277 Ausstattungsobjekte, zwei transparente Bordsteine und zwei deckende Bodentexturen. Zehn Kategorien einschließlich Boden und Straßen.
+Eigenständige Bibliothek für Foundry 14 mit **282 Elementen**: 277 Ausstattungsobjekte, zwei transparente Bordsteine und drei deckende Bodentexturen. Zehn Kategorien einschließlich Boden und Straßen.
+
+## Bedienungsverbesserungen in Version 1.3.0
+
+- Links in der Foundry-Navigation öffnet das **Bilder-Symbol „Assets – Grimmes Erwachen“** den Katalog. Die Unterwerkzeuge öffnen Katalog oder Pinsel erneut.
+- **Gehweg – helle Betonplatten** ergänzt Asphalt und Bordsteine. Im Katalog unter Straßen und im Pinsel als Material verfügbar, 4 × 4 m pro Wiederholung.
+- Neue Tiles setzen den Foundry-14-Anker ausdrücklich auf die linke obere Ecke. Dadurch werden gemalte Rechtecke nicht mehr um eine halbe Breite/Höhe nach links/oben versetzt. Bereits gespeicherte oder manuell korrigierte Tiles werden nicht automatisch verschoben.
+- **Freihand** setzt zusammenhängende Quadrate mit der eingestellten Pinselbreite. Sie beginnen am Startpunkt und schließen über gemeinsame Kanten aneinander an; diagonale Bewegungen ergeben eine eckige Treppe. Eine gerade Bewegung erzeugt eine gerade Reihe. Der gesamte Strich bleibt ein Tile.
+- **Fläche erweitern:** Malen pausieren, auf der Tile-Ebene ein eigenes gemaltes Tile auswählen, im Pinsel **Ausgewählte Fläche erweitern** anklicken. Einen der vier grünen Griffe nach oben, unten, links oder rechts ziehen. Die Gegenkante bleibt fest, die Textur wird im Metermaßstab neu wiederholt. Esc bricht vor dem Loslassen ab. Zum erneuten Erweitern den Knopf nochmals anklicken.
+
+Die Erweiterung funktioniert für entsperrte, ungedrehte gemalte Tiles auf der aktuellen Ebene, auch aus Version 1.2.0. Bei Freihandflächen wird die Silhouette proportional in die neue Begrenzung übertragen; die Textur selbst wird nicht gestreckt. Foundrys normale Größenänderung außerhalb dieser vier Griffe streckt weiterhin das gespeicherte Bild. Rückgängig entfernt den letzten eigenen Pinselstrich, nicht einzelne Größenänderungen. Ältere Bilddateien bleiben als unveränderte Dateien im Weltordner erhalten.
+
+Prüfung: 47 automatische Tests, Browser-Prüfung für Rechtecke, eckige Freihandstriche, vier sichtbare Griffe und tatsächliches Erweitern nach rechts bei unverändertem linken Rand. Die Geometrie aller vier Richtungen ist automatisiert geprüft. Der Browser verwendet simulierte Foundry-Dokumente; noch kein Live-Test in einer Foundry-Welt. Generierte Gehwegquelle und Prompt: `pavement-prompt.json` (integrierter Bildgenerator).
 
 ## Neue Grundtexturen in Version 1.1.0
 
 - **Boden → Gras – einfache Rasenfläche:** 4 × 4 m pro Tile.
 - **Straßen → Straße – einfacher Asphalt:** 6 × 6 m pro Tile. Mehrere Stücke hintereinander ergeben eine 6 m breite Straße ohne Markierungen.
 
-Beide Bilder sind 1254 × 1254 Pixel groß, ohne eingebranntes Raster. Bei Rasterdistanz 1 m belegt Gras 4 × 4 Kästchen und Asphalt 6 × 6 Kästchen. Zum Verlängern Tiles duplizieren und direkt aneinanderlegen; bloßes Vergrößern streckt die Textur. Die Straße besteht zunächst aus der Asphaltoberfläche. Gehwege und weiche Übergangsränder sind noch nicht enthalten; Bordsteine werden separat platziert.
+Beide Bilder sind 1254 × 1254 Pixel groß, ohne eingebranntes Raster. Bei Rasterdistanz 1 m belegt Gras 4 × 4 Kästchen und Asphalt 6 × 6 Kästchen. Zum Verlängern Tiles duplizieren und direkt aneinanderlegen; bloßes Vergrößern streckt die Textur. Die Straße besteht zunächst aus der Asphaltoberfläche. Weiche Übergangsränder sind noch nicht enthalten; Gehweg und Bordsteine werden separat platziert.
 
 Für eine gezeichnete Grasfläche: Rechteck oder Polygon mit Foundrys Zeichenwerkzeug anlegen, dessen Konfiguration öffnen und als Fülltyp **Pattern/Muster** den Bildpfad `modules/assets-grimmes-erwachen/assets/boden/gras-einfach.webp` verwenden. Foundry wiederholt die Textur; die automatische 4-m-Skalierung des Katalogs gilt für Tiles, nicht für diese native Musterfüllung. Für eine maßstabsgerechte Füllung ist der neue Malpinsel vorzuziehen. Die Reihenfolge von Zeichnungen und Tiles muss in der jeweiligen Szene geprüft werden.
 
@@ -19,7 +31,7 @@ Die Texturen wurden eigenständig mit dem integrierten Bildgenerator erstellt. G
 
 1. Szene öffnen; Rasterdistanz **1 m** einstellen und die gewünschte Ebene wählen.
 2. Bilderkatalog öffnen und **Boden malen** anklicken. Der Katalog schließt sich, das kleine Pinselwerkzeug bleibt offen.
-3. **Gras** oder **Asphalt**, **Freihand** oder **Rechteck** auswählen. Im Freihandmodus ist die Pinselbreite von 0,25 bis 20 m einstellbar.
+3. **Gras**, **Asphalt** oder **Gehweg**, **Freihand** oder **Rechteck** auswählen. Im Freihandmodus ist die Pinselbreite von 0,25 bis 20 m einstellbar.
 4. **Malen starten** anklicken und mit gedrückter linker Maustaste zeichnen. Loslassen speichert die Fläche als Tile. Zuerst Gras malen, danach Asphalt darüber. Die Texturgröße bleibt unabhängig von der gemalten Fläche erhalten (Gras 4 m, Asphalt 6 m pro Wiederholung).
 5. **Letzten Strich zurücknehmen** entfernt den eigenen letzten Strich auf der aktuellen Ebene. **Esc**, Rechtsklick oder **Malen pausieren** gibt die normale Szenenbedienung frei. **Schließen** beendet das Werkzeug.
 6. Im Katalog unter **Straßen** nach **Bordstein** suchen: gerades Stück und 90°-Ecke wählen, platzieren, auf der Tile-Ebene drehen und duplizieren. Die sichtbare Breite ist auf 1 m voreingestellt; das gerade Stück ist etwa 0,19 m tief, die Ecke etwa 0,95 m hoch. Die Maße folgen den erzeugten Bildproportionen. Nahezu unsichtbare Alphapixel unter 16/255 zählen bei diesen beiden Elementen nicht zum Maßstab; die Bildpixel selbst sind unverändert.

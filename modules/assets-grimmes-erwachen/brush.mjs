@@ -1,10 +1,20 @@
 import {ID,loadCatalog,tileData,assetPath} from './catalog.mjs';
 let active;
 const history=[];
+export function squareCells(points,size) {
+  if(!points.length || !Number.isFinite(size) || size<=0)throw new Error('Ungültige Pinselbreite.');
+  const origin=points[0],cells=new Map();let last={x:0,y:0};
+  function add(x,y){if(cells.size>=4096)throw new Error('Bitte kürzere Abschnitte malen.');cells.set(`${x},${y}`,{x:origin.x+x*size,y:origin.y+y*size,width:size,height:size});}
+  add(0,0);
+  for(const p of points){const next={x:Math.floor((p.x-origin.x)/size),y:Math.floor((p.y-origin.y)/size)};
+    while(last.x!==next.x || last.y!==next.y){if(last.x!==next.x)last.x+=Math.sign(next.x-last.x);else last.y+=Math.sign(next.y-last.y);add(last.x,last.y);}}
+  return [...cells.values()];
+}
 
 export function strokeBounds(points,diameter,mode,rect) {
   if (!['freehand','rectangle'].includes(mode) || !points.length || points.length>10000 || !points.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)) || !Number.isFinite(diameter) || diameter<=0) throw new Error('Ungültiger Pinselstrich.');
-  const pad=mode==='freehand'?diameter/2:0;
+  if(mode==='freehand') {const cells=squareCells(points,diameter);return strokeBounds(cells.flatMap(c=>[{x:c.x,y:c.y},{x:c.x+c.width,y:c.y+c.height}]),diameter,'rectangle',rect);}
+  const pad=0;
   const x=Math.max(rect.x,Math.floor(Math.min(...points.map(p=>p.x))-pad));
   const y=Math.max(rect.y,Math.floor(Math.min(...points.map(p=>p.y))-pad));
   const right=Math.min(rect.x+rect.width,Math.ceil(Math.max(...points.map(p=>p.x))+pad));
@@ -28,11 +38,7 @@ export function renderStroke({points,diameter,mode,bounds,ppm,asset,image}) {
   ctx.fillStyle=ctx.strokeStyle=pattern;
   if(mode==='rectangle') ctx.fillRect(bounds.x,bounds.y,bounds.width,bounds.height);
   else {
-    ctx.lineCap=ctx.lineJoin='round';ctx.lineWidth=diameter;
-    ctx.beginPath();ctx.moveTo(points[0].x,points[0].y);
-    for(const p of points.slice(1)) ctx.lineTo(p.x,p.y);
-    ctx.stroke();
-    for(const p of [points[0],points.at(-1)]) {ctx.beginPath();ctx.arc(p.x,p.y,diameter/2,0,Math.PI*2);ctx.fill();}
+    for(const cell of squareCells(points,diameter))ctx.fillRect(cell.x,cell.y,cell.width,cell.height);
   }
   return surface;
 }
@@ -59,7 +65,7 @@ export async function saveStroke({scene,level,asset,bounds,surface}) {
   const ceiling=Math.min(0,...tiles.filter(t=>!t.flags?.[ID]?.painted).map(t=>t.sort??0));
   const latest=Math.max(ceiling-100000,...tiles.filter(t=>t.flags?.[ID]?.painted).map(t=>t.sort??0));
   const [tile]=await scene.createEmbeddedDocuments('Tile',[{name:`Gemalt: ${asset.name}`,texture:{src:result.path},...bounds,
-    rotation:0,hidden:false,locked:false,sort:Math.min(ceiling-1,latest+1),elevation:level.elevation?.bottom??0,levels:[level.id],
+    anchorX:0,anchorY:0,rotation:0,hidden:false,locked:false,sort:Math.min(ceiling-1,latest+1),elevation:level.elevation?.bottom??0,levels:[level.id],
     flags:{[ID]:{painted:true,key:asset.key}}}]);
   if(!tile) throw new Error('Das gemalte Tile konnte nicht angelegt werden.');
   history.push({scene,levelId:level.id,id:tile.id});
@@ -87,9 +93,10 @@ export async function showBrush() {
   const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Freihand','freehand'),new Option('Rechteck','rectangle'));
   const width=node('input');width.type='number';width.min='0.25';width.max='20';width.step='0.25';width.value='2';width.setAttribute('aria-label','Pinselbreite in Metern');
   const label=node('label','Pinselbreite (m)');label.append(width);
+  const extend=node('button','Ausgewählte Fläche erweitern');extend.addEventListener('click',async()=>{if(busy)return;setEnabled(false);try{(await import('./resize.mjs')).beginResize();}catch(error){status.textContent=error.message;}});
   const toggle=node('button','Malen starten'),undo=node('button','Letzten Strich zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Material wählen und Malen starten. Esc beendet den Malmodus.');status.setAttribute('aria-live','polite');
-  panel.append(material,mode,label,toggle,undo,close,status);
+  panel.append(material,mode,label,toggle,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='age-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false;
@@ -107,7 +114,7 @@ export async function showBrush() {
     const ctx=overlay.getContext('2d'),client=points.map(p=>canvas.clientCoordinatesFromCanvas(p));
     ctx.strokeStyle=ctx.fillStyle='rgba(110,210,140,0.45)';
     if(stroke.mode==='rectangle'){const a=client[0],b=client.at(-1);ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);}
-    else {const a=canvas.clientCoordinatesFromCanvas({x:points[0].x+stroke.diameter,y:points[0].y});ctx.lineWidth=Math.abs(a.x-client[0].x);ctx.lineCap=ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(client[0].x,client[0].y);for(const p of client.slice(1))ctx.lineTo(p.x,p.y);ctx.stroke();ctx.beginPath();ctx.arc(client.at(-1).x,client.at(-1).y,ctx.lineWidth/2,0,2*Math.PI);ctx.fill();}
+    else {for(const cell of squareCells(points,stroke.diameter)){const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+cell.width,y:cell.y+cell.height});ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);}}
   }
   toggle.addEventListener('click',()=>{if(!busy)setEnabled(!enabled);},options);
   close.addEventListener('click',dispose,options);
