@@ -1,6 +1,6 @@
 export const ID='assets-grimmes-erwachen';
 const BASE=`modules/${ID}`;
-export const categories={gastronomie:'Gastronomie',club:'Club',sport:'Sport',wohnen:'Wohnen',buero_medizin:'Büro und Medizin',industrie_verkehr:'Industrie und Verkehr',sakral_natur:'Sakral und Natur',bauteile:'Bauteile'};
+export const categories={gastronomie:'Gastronomie',club:'Club',sport:'Sport',wohnen:'Wohnen',buero_medizin:'Büro und Medizin',industrie_verkehr:'Industrie und Verkehr',sakral_natur:'Sakral und Natur',bauteile:'Bauteile',boden:'Boden',strassen:'Straßen'};
 let browser;
 
 export const normalize=value=>String(value??'').toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replaceAll('ß','ss');
@@ -105,7 +105,7 @@ export function registerCatalog() {
   class CatalogMenu extends foundry.applications.api.ApplicationV2 {
     render(){showCatalog().catch(error=>ui.notifications.error(error.message));return this;}
   }
-  game.settings.registerMenu(ID,'catalog',{name:'Assets - Grimmes Erwachen',label:'Bilderkatalog öffnen',hint:'277 Kartenelemente durchsuchen und als Tile platzieren.',icon:'fas fa-images',type:CatalogMenu,restricted:true});
+  game.settings.registerMenu(ID,'catalog',{name:'Assets - Grimmes Erwachen',label:'Bilderkatalog öffnen',hint:'Kartenelemente und Bodentexturen durchsuchen und als Tile platzieren.',icon:'fas fa-images',type:CatalogMenu,restricted:true});
 }
 export async function initializeCatalog() {
   game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset};
