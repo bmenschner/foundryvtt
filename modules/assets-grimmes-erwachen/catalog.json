@@ -6755,6 +6755,32 @@
       "sourceSha256": "2951f9601d3145bedeacd2659d886c7682b75d7ff9f22a277c4f1214aec10eff",
       "rgbaSha256": "aff33f77f5903487c162d092c9d3a808bc8e504d96e0c0017ed3198247275da0",
       "alphaBoundsThreshold": 16
+    },
+    {
+      "key": "gehweg-betonplatten",
+      "name": "Gehweg – helle Betonplatten",
+      "category": "strassen",
+      "file": "assets/strassen/gehweg-betonplatten.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "7383bb15eb2555064007e945d413b3233e9b8ba26c914a90a62526401156dda9",
+      "sourceSha256": "2dfb76354da74f3fbe1e4cbf4ccf3e6b554bbf4998bc8c84433b894cd3b2be7b",
+      "rgbaSha256": "2d4af7f13c70c24ef67d02c183af89e07b0dbd95de9c5e64768960b529ebacee"
     }
   ]
 }

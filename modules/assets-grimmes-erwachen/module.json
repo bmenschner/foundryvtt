@@ -1,8 +1,8 @@
 {
   "id": "assets-grimmes-erwachen",
   "title": "Assets - Grimmes Erwachen",
-  "description": "281 Kartenelemente mit Gras, Asphalt und Bordsteinen. Eigenständiger Bilderkatalog und Malpinsel für maßstabsgerechte Bodenflächen in Foundry 14.",
-  "version": "1.2.0",
+  "description": "282 Assets mit Gras, Asphalt, Gehweg und Bordsteinen. Bibliothek in der linken Navigation, eckiger Bodenpinsel und Ziehgriffe zum Erweitern gemalter Flächen.",
+  "version": "1.3.0",
   "authors": [
     {
       "name": "Private Abenteueraufbereitung mit Codex"
