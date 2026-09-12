@@ -1,0 +1,6654 @@
+{
+  "unit": "m",
+  "scaleNote": "Empfohlene Objektmaße ohne transparenten Rand; keine vermessenen Herstellermaße.",
+  "icons": [
+    {
+      "key": "cafe-stuhl-holz",
+      "category": "gastronomie",
+      "name": "Café-Stuhl",
+      "widthMeters": 0.5,
+      "heightMeters": 0.55,
+      "file": "assets/gastronomie/cafe-stuhl-holz.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "21b74fd12a525084935330a90b4497091f52c643cf2dcf1ae5f9733c0e98558c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1192,
+        1198
+      ],
+      "sourceSha256": "8fb88462fa491e0176b431df4d5dcddc2b14b4913751ae754fac19d236eb139e",
+      "rgbaSha256": "f3ba5eb94b51baa0b06297fa329ce5c9933eca96eba0be431384eec693107993"
+    },
+    {
+      "key": "cafe-tisch-rund",
+      "category": "gastronomie",
+      "name": "Runder Cafétisch",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/gastronomie/cafe-tisch-rund.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "ae5b525f5a9b32e710e469f70c8022a6cd6166143c94a394459ff2bc067bd052",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        85,
+        1238,
+        1228
+      ],
+      "sourceSha256": "8aa8969b52f2560f85eef30a06f8b4cbf0f35ea90a5d88fc04538d93ed5545ce",
+      "rgbaSha256": "08b38aed10680b0359c6b5e82315093c0f781f07afb40b9ae0dbcc2d337ec128"
+    },
+    {
+      "key": "esstisch",
+      "category": "gastronomie",
+      "name": "Esstisch",
+      "widthMeters": 1.6,
+      "heightMeters": 0.8,
+      "file": "assets/gastronomie/esstisch.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "309d0a5ba696677a2cf0ba633793a8c28384118454afbb477ac65da4b487ab35",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        253,
+        30,
+        1665,
+        887
+      ],
+      "sourceSha256": "ba59c6c14d418be4de3b854ca38f9f343f178ae6723b044e515ffe99619eb8fb",
+      "rgbaSha256": "00f1df89fd3a0f4da33bb4561f57e05056f1b28932e2a881d86002c6a21c29bb"
+    },
+    {
+      "key": "blumenvase",
+      "category": "gastronomie",
+      "name": "Blumenvase",
+      "widthMeters": 0.25,
+      "heightMeters": 0.25,
+      "file": "assets/gastronomie/blumenvase.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "20ed5c8960719a447d1a5b0ebd8617d4cea5ce22e3eb6564ffb192866157f6ab",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        37,
+        21,
+        1228,
+        1223
+      ],
+      "sourceSha256": "fdf643dae5d116e6873f5178d45a354d0677a358bc9ff1e2f09c551d9d2b72f8",
+      "rgbaSha256": "54ddcc3740df1ed40f9f00c542223c7ad469b4d8b0cc8bf54d2e394a4ca1e0c9"
+    },
+    {
+      "key": "kasse",
+      "category": "gastronomie",
+      "name": "Kasse",
+      "widthMeters": 0.4,
+      "heightMeters": 0.35,
+      "file": "assets/gastronomie/kasse.webp",
+      "pixelWidth": 1341,
+      "pixelHeight": 1173,
+      "mode": "RGBA",
+      "sha256": "24c9ae019b72fa2fc9f50be4a2dbcb4958178ef860e9c22d3e2c96ee46d64355",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1321,
+        1173
+      ],
+      "sourceSha256": "b9eb35b3130901f7037f190700836d10ac7aed668a4af59916392a9511f2041b",
+      "rgbaSha256": "540f25edea89d841e7854b46dd7fd26f4a7b088fda2ad61ab79595bc506edf10"
+    },
+    {
+      "key": "tresen",
+      "category": "gastronomie",
+      "name": "Tresenelement",
+      "widthMeters": 2,
+      "heightMeters": 0.65,
+      "file": "assets/gastronomie/tresen.webp",
+      "pixelWidth": 2200,
+      "pixelHeight": 715,
+      "mode": "RGBA",
+      "sha256": "2bb2f4def952ef85c35845ec1f33b3c76cc6ed56fd0cb49c3afd2e02a22f11fb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        47,
+        21,
+        2151,
+        697
+      ],
+      "sourceSha256": "7a3b17038f5dd8acd4b3a37705bcc152a5ec9ec7f0382dfbd01e49e207c5907b",
+      "rgbaSha256": "cbf07493fdb2d35405e2c8dceee18959ff24eebcdef534c70a934c50573a2d24"
+    },
+    {
+      "key": "kuchenvitrine",
+      "category": "gastronomie",
+      "name": "Kuchenvitrine",
+      "widthMeters": 1.4,
+      "heightMeters": 0.65,
+      "file": "assets/gastronomie/kuchenvitrine.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "6ea821c1982d7be5482f3c1d82c089686efc7f37fcba5955ebe8d172eadc266f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        1720,
+        887
+      ],
+      "sourceSha256": "4b7778102be4967589ed52d041dec41e5a35677534477326e6030750740400c3",
+      "rgbaSha256": "2cdb9feedc6206363e3395e52764a189a1e38fc80dd2be5a0921d4c4d0f2fc1f"
+    },
+    {
+      "key": "espressomaschine",
+      "category": "gastronomie",
+      "name": "Espressomaschine",
+      "widthMeters": 0.8,
+      "heightMeters": 0.5,
+      "file": "assets/gastronomie/espressomaschine.webp",
+      "pixelWidth": 1586,
+      "pixelHeight": 992,
+      "mode": "RGBA",
+      "sha256": "fdd9f4ad51e56b4908441a4ae8ab4339657084cbd5ff20f1757bb097c3595ca3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1486,
+        904
+      ],
+      "sourceSha256": "7bab0cb73aa822d0005f8d35c72cd76e88e55c3bbe620d38ecd349c989db0198",
+      "rgbaSha256": "a9438a5f80a3b513236b7823fd613121be83d34cb1f30665837655cb10f31562"
+    },
+    {
+      "key": "spuelbecken",
+      "category": "gastronomie",
+      "name": "Spülbecken",
+      "widthMeters": 1.2,
+      "heightMeters": 0.6,
+      "file": "assets/gastronomie/spuelbecken.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "5c613a4e8eb62b3cab8562fb21b531846aa2e14db04a53f81296d44748573c1e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        41,
+        1629,
+        821
+      ],
+      "sourceSha256": "d91dc735a360da926d7b2be7a8c59641ddec6b576cc6a83b4f06c3377ee55c68",
+      "rgbaSha256": "0afdde5146add88a5dead8786b48cae7e55c6594e21e7dd9096599346bcc3e8e"
+    },
+    {
+      "key": "herd",
+      "category": "gastronomie",
+      "name": "Herd",
+      "widthMeters": 0.9,
+      "heightMeters": 0.7,
+      "file": "assets/gastronomie/herd.webp",
+      "pixelWidth": 1427,
+      "pixelHeight": 1102,
+      "mode": "RGBA",
+      "sha256": "acaa19fa083b7a0f74d2d0efb124afd8378c3e872a12ea6ac004d35fefdc9039",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        129,
+        48,
+        1339,
+        1102
+      ],
+      "sourceSha256": "1d017bef957b4642beac1f32dd3a7d74746293ce3255bbb7acb4d45cce51d6c0",
+      "rgbaSha256": "2c8113c7b2895e430f7e16a63b69e5798a7eb586d1abbbcab4496fe8d0507975"
+    },
+    {
+      "key": "kuehlschrank",
+      "category": "gastronomie",
+      "name": "Kühlschrank",
+      "widthMeters": 0.8,
+      "heightMeters": 0.7,
+      "file": "assets/gastronomie/kuehlschrank.webp",
+      "pixelWidth": 1341,
+      "pixelHeight": 1173,
+      "mode": "RGBA",
+      "sha256": "fbde7a0c034fefabdae4a827c1ac317fd536d9faa11506f7aa7174e03b2ea508",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        122,
+        9,
+        1157,
+        1173
+      ],
+      "sourceSha256": "694d0b37186f856c3cdbd513b2ba9f067c45315114741d3bcb0b2c3c9f145ba9",
+      "rgbaSha256": "b9106778f706268740faa6a71e94f392112945e58ba1488bbf72f89ee4f0ed6b"
+    },
+    {
+      "key": "biergartentisch",
+      "category": "gastronomie",
+      "name": "Biergartentisch",
+      "widthMeters": 2.2,
+      "heightMeters": 0.6,
+      "file": "assets/gastronomie/biergartentisch.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "f801661d73958bcfcf2de9d0d558e0b80fe9f24955deb2a758f013e9b30e0c66",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        31,
+        21,
+        1755,
+        873
+      ],
+      "sourceSha256": "dbec051cd0652617dfa7800f54cfd40237a4604657a0b2bfa8f28235a259ace4",
+      "rgbaSha256": "e8e6851d03807495c2af74c8ecb45ca2d5538dc8272df6405f57f7de34b46180"
+    },
+    {
+      "key": "bank",
+      "category": "gastronomie",
+      "name": "Bank",
+      "widthMeters": 2.2,
+      "heightMeters": 0.35,
+      "file": "assets/gastronomie/bank.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "1f742191873dc6976ede2a618f11e838c33f840e8c23f2d406d03408b588df38",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        130,
+        21,
+        1734,
+        780
+      ],
+      "sourceSha256": "0965f7d23b6a00f72690e94b403085c26e2dea389796c4d51d7b7f59d0f3f569",
+      "rgbaSha256": "27c1af8bff5ec1409208203138d66973bdc7919dce2378ef1caf92898192b639"
+    },
+    {
+      "key": "sonnenschirm",
+      "category": "gastronomie",
+      "name": "Sonnenschirm",
+      "widthMeters": 3,
+      "heightMeters": 3,
+      "file": "assets/gastronomie/sonnenschirm.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "8cb470e8ef1e882fa5d945209db3a3bfbae4f6481c7d60f9436fadd3ef37cf7c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        1243,
+        1232
+      ],
+      "sourceSha256": "f2ad48d76a4b34da141f40e9e6520fed34a47b28c4523eda82f0e60e508432d5",
+      "rgbaSha256": "96ead6a1d5549878d733a9525d40c40059a05a3749cc901f9866cb32c0cc14a5"
+    },
+    {
+      "key": "barhocker",
+      "category": "club",
+      "name": "Barhocker",
+      "widthMeters": 0.45,
+      "heightMeters": 0.45,
+      "file": "assets/club/barhocker.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "f772d363b9e25e5ce1dc0f7d6dbfdced1648f17cd114bca30c63c56d9c499304",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        97,
+        121,
+        1192,
+        1182
+      ],
+      "sourceSha256": "18e93f1d8121b7908983afef54517b1eaf9782d9f7047a9a4bfa71a33c2ca636",
+      "rgbaSha256": "2ce70d85fc176dc8687ba1a67a9bd82c56612eae39f42c45bf6d72cce0cf3aee"
+    },
+    {
+      "key": "bartresen",
+      "category": "club",
+      "name": "Bartresen",
+      "widthMeters": 3,
+      "heightMeters": 0.8,
+      "file": "assets/club/bartresen.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "1798060c6082685d90e7b02b9409d57850f82f22c24c5ccde1933e013935db99",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        143,
+        0,
+        1969,
+        771
+      ],
+      "sourceSha256": "8601818c42aa9fad8eb07177c6e615f92785ed83b83d003313c2aaa0fa8903ca",
+      "rgbaSha256": "ebb2b606d6c80c2d234dad266cb87b4ef2730e9ce3a9c2930dc5f45576a766bf"
+    },
+    {
+      "key": "flaschenregal",
+      "category": "club",
+      "name": "Flaschenregal",
+      "widthMeters": 1.5,
+      "heightMeters": 0.4,
+      "file": "assets/club/flaschenregal.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "ad998d532409c57faac08711437d1a6df2570e843c8546dfee42f4c46135af0e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        100,
+        21,
+        1880,
+        793
+      ],
+      "sourceSha256": "bdfbd905820a3fec72e2c6dd4604d1ce02338eba962772fa168556ae90d46584",
+      "rgbaSha256": "1653d9e90d3f9eb91bd6bce64968ed0feec985c1ec5c23541391ef56460e057a"
+    },
+    {
+      "key": "lounge-sofa",
+      "category": "club",
+      "name": "Lounge-Sofa",
+      "widthMeters": 2.4,
+      "heightMeters": 0.9,
+      "file": "assets/club/lounge-sofa.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "2577374dac9733eca2646afd994094dd392def056e050dbc6ff8b6ccd4a71cdb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        62,
+        78,
+        1931,
+        775
+      ],
+      "sourceSha256": "dd9ce9cbeb3e9f37fd5e923f0f8f00772e2c57df926b0c43381eda1440d61e4d",
+      "rgbaSha256": "7045b0694b84a2393d45c3b8dccae67766450d15d5de9f30e25df5c6a650036b"
+    },
+    {
+      "key": "couchtisch",
+      "category": "club",
+      "name": "Couchtisch",
+      "widthMeters": 1.2,
+      "heightMeters": 0.6,
+      "file": "assets/club/couchtisch.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "c09b86c3549eec561fcb6ae21028409a0460bfed2c0dc48659845faa16f03206",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        133,
+        31,
+        1756,
+        887
+      ],
+      "sourceSha256": "acc11ec93f77d3e672e951dd9a9737420b1507f26ca838fc4db55cabd2581503",
+      "rgbaSha256": "ed43c4aa8c0f2fa3fa99a1e50e64695dde074c721734e46e2abff6946496cc39"
+    },
+    {
+      "key": "dj-pult",
+      "category": "club",
+      "name": "DJ-Pult",
+      "widthMeters": 1.8,
+      "heightMeters": 0.7,
+      "file": "assets/club/dj-pult.webp",
+      "pixelWidth": 1896,
+      "pixelHeight": 830,
+      "mode": "RGBA",
+      "sha256": "fdc3cbd8573093b2e719ef77c955e8dff034d9fac040f0bb01a8a9326f79505a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        18,
+        1872,
+        830
+      ],
+      "sourceSha256": "9f72e3e68e852ac05c34ffe0065ea37a0d82148866b14454a4b3852829b3fb8c",
+      "rgbaSha256": "298367f2894884b5eae494df238e8cd956966f3053e1c95ce0bd37097379af2f"
+    },
+    {
+      "key": "lautsprecher",
+      "category": "club",
+      "name": "Lautsprecher",
+      "widthMeters": 0.5,
+      "heightMeters": 0.45,
+      "file": "assets/club/lautsprecher.webp",
+      "pixelWidth": 1322,
+      "pixelHeight": 1190,
+      "mode": "RGBA",
+      "sha256": "ebb3df924c3722fa203e85c8b6d2a52cd47ed666278b553c2ba488d0b71d2a66",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        98,
+        0,
+        1252,
+        1190
+      ],
+      "sourceSha256": "d39ae71ce707e5fa3f6ebed32400b45182d5773637a0624e7fdebd63652fcca2",
+      "rgbaSha256": "77c9c9be9bb26a0cb47090966f0bdf4a5a2a90d2eb3f762e8446b256d789f474"
+    },
+    {
+      "key": "garderobe",
+      "category": "club",
+      "name": "Garderobe",
+      "widthMeters": 2,
+      "heightMeters": 0.6,
+      "file": "assets/club/garderobe.webp",
+      "pixelWidth": 1997,
+      "pixelHeight": 787,
+      "mode": "RGBA",
+      "sha256": "19fa79ec6f93d99357a72ca690948ff098ac90ab19fafa9adfe2a6cf436e7bbd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        74,
+        7,
+        1939,
+        787
+      ],
+      "sourceSha256": "0a3690a15f02c989dca35105cb0bae38ead037cd7510e441c83a98efbcddad66",
+      "rgbaSha256": "d82422912958ce5f76f7282b734ab09fab24d557fdd1a0a090d2e4cf90cd26b8"
+    },
+    {
+      "key": "empfang",
+      "category": "club",
+      "name": "Empfang",
+      "widthMeters": 1.8,
+      "heightMeters": 0.7,
+      "file": "assets/club/empfang.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "a24dce87dcd4eb78f807300ae2cad2c15d050ed4a7e272052f9ea0076875f8a7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1746,
+        847
+      ],
+      "sourceSha256": "2856b4c06a9f812933c92bbcc946b054588774ced07044437a4c8e9c1b48bc61",
+      "rgbaSha256": "c4bd7f2afa9d86fc05ce597a5c0bdaa45c4b98724529847f64c369a83f24f762"
+    },
+    {
+      "key": "absperrung",
+      "category": "club",
+      "name": "Absperrkordel",
+      "widthMeters": 1.5,
+      "heightMeters": 0.2,
+      "file": "assets/club/absperrung.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "3b5cec0cb6c11bf3eecf5bfcabb869bdfeb2240b66533716e16e7d73078ad864",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        40,
+        21,
+        1733,
+        831
+      ],
+      "sourceSha256": "fb25a72c4fbeec5133115d2ee7e3dacc162ca1086748d1ca20374591642fc68e",
+      "rgbaSha256": "eed83856cfdfd80f55706c339c31cd91673519f152ccc33185146c0c26648d27"
+    },
+    {
+      "key": "sonnensegel",
+      "category": "club",
+      "name": "Sonnensegel",
+      "widthMeters": 4,
+      "heightMeters": 3,
+      "file": "assets/club/sonnensegel.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "39aefc6baa218aa925b0d6ab97de38116fe3703d59ee1012a948bd5ccaa79ea8",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        132,
+        0,
+        1384,
+        1070
+      ],
+      "sourceSha256": "b8d9d86c4442685bc407a3752fafd75ac747dd2e5dacca431671aca5f59bb2df",
+      "rgbaSha256": "1625b2a686ae62cc407e4a8efa7d04757b64e2a7121d5c91c602355e659f1347"
+    },
+    {
+      "key": "spind",
+      "category": "sport",
+      "name": "Spindreihe",
+      "widthMeters": 2,
+      "heightMeters": 0.5,
+      "file": "assets/sport/spind.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "10320562aec87e3f0d027a0e556e59a152278acdfaed9b21326cd0f4c9f1ae90",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        135,
+        52,
+        1848,
+        793
+      ],
+      "sourceSha256": "644534c9b3099392d0619eea8270a21c4c76f4cf70be18918edabdb1b6f66ed9",
+      "rgbaSha256": "87d84eacecdfccde96f7b0778cdd3404b74da474478b0af4b4897c01cba04785"
+    },
+    {
+      "key": "umkleidebank",
+      "category": "sport",
+      "name": "Umkleidebank",
+      "widthMeters": 2,
+      "heightMeters": 0.4,
+      "file": "assets/sport/umkleidebank.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "913f0866f8be2eb61ab387b2089c6bd7af949fa80608f391d1f25dfcbe548812",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1661,
+        831
+      ],
+      "sourceSha256": "ac5f1f70b517a6254574f62aab7243ad66059e2382fbfdaf67090242cc91970a",
+      "rgbaSha256": "e96a0735b80f739489acf07e366ea9b61f68e47f97ae7712061e3b0dc5373dc0"
+    },
+    {
+      "key": "dusche",
+      "category": "sport",
+      "name": "Dusche",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sport/dusche.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "78b9098cfea53f32634acc2d7c6611950f123038c1f2ee870cfb83a9742df173",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        31,
+        9,
+        1198,
+        1223
+      ],
+      "sourceSha256": "d994c6897d4de8dfd6b5c34460ca43e1184390bbb2ba2b1d59c5c6a8df3872ea",
+      "rgbaSha256": "c1eb97945749e3d7af6550bd4c7c6a9c428475d3d28c1b6eaa17b5ed4c153b48"
+    },
+    {
+      "key": "fussballtor",
+      "category": "sport",
+      "name": "Fußballtor",
+      "widthMeters": 7.32,
+      "heightMeters": 2,
+      "file": "assets/sport/fussballtor.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "17a37746b135a6a31e0f3fc36cf14ffa52ff255c3e5a8b35f129ad12f12c8ee4",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        53,
+        38,
+        1953,
+        793
+      ],
+      "sourceSha256": "5fa727ba63b43c171db9489d7b119e19c2da12b917da44264eda3df10bb1a359",
+      "rgbaSha256": "1fad1566e0edef46a8aad777a860edb826f285704fa9822344e6e304283a6882"
+    },
+    {
+      "key": "fussball",
+      "category": "sport",
+      "name": "Fußball",
+      "widthMeters": 0.22,
+      "heightMeters": 0.22,
+      "file": "assets/sport/fussball.webp",
+      "pixelWidth": 1278,
+      "pixelHeight": 1230,
+      "mode": "RGBA",
+      "sha256": "5f2a55548188908bfd59ba4e5061d30e10d26d0b99d76f34371159097a580d5e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1226,
+        1190
+      ],
+      "sourceSha256": "70623ff11defbe17f37a43b9a9d5fbd909847f5cf9a13bdccb4fafe2cbe85406",
+      "rgbaSha256": "db049d24067cd2d8992c6519e752648105b1371ce8638c0654bc53973c4252b5"
+    },
+    {
+      "key": "trainingshuetchen",
+      "category": "sport",
+      "name": "Trainingshütchen",
+      "widthMeters": 0.3,
+      "heightMeters": 0.3,
+      "file": "assets/sport/trainingshuetchen.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "42fd49a96db01d268a228dc9078c83b63e2f38fa02b645f3e44b98dbcd3c75cf",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        21,
+        1218,
+        1228
+      ],
+      "sourceSha256": "2bcaedd4d2176c08be7c8ede543f447e50027fd39c5067cd0aa53d50c63e5136",
+      "rgbaSha256": "3e136656e1bcca4316c3de766c2784defe0f70a6c7b135dcd00b171470ad5a99"
+    },
+    {
+      "key": "hantelbank",
+      "category": "sport",
+      "name": "Hantelbank",
+      "widthMeters": 1.6,
+      "heightMeters": 0.65,
+      "file": "assets/sport/hantelbank.webp",
+      "pixelWidth": 1615,
+      "pixelHeight": 974,
+      "mode": "RGBA",
+      "sha256": "9640b3e2af1cae5492e4a82ce40e29bbd721ef6e2d80c3e2ea50bc646d5e0b98",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        194,
+        1,
+        1587,
+        941
+      ],
+      "sourceSha256": "1c173f0c12dca40a27ea8f1a73befae8ac2667cecd94f1cddd5bf88a69821af6",
+      "rgbaSha256": "8130cafcda7bfaee294d99cfadc730b253b0e091a983b655a86a225a46dff438"
+    },
+    {
+      "key": "laufband",
+      "category": "sport",
+      "name": "Laufband",
+      "widthMeters": 2,
+      "heightMeters": 0.9,
+      "file": "assets/sport/laufband.webp",
+      "pixelWidth": 1870,
+      "pixelHeight": 841,
+      "mode": "RGBA",
+      "sha256": "eac1d63c236ffc966b458861babea1035d3619500f2615ba8e3dd154bc57aae9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        5,
+        1854,
+        841
+      ],
+      "sourceSha256": "95feaa0bcd4d5983af8c05e8552a807fd153d17d75a0ba8efcb95fa2cd9cc324",
+      "rgbaSha256": "cebdfb0aedd882c323ebedae3b96ce653bb9e665fd21505fd2d71c2c50704183"
+    },
+    {
+      "key": "ergometer",
+      "category": "sport",
+      "name": "Ergometer",
+      "widthMeters": 1.2,
+      "heightMeters": 0.6,
+      "file": "assets/sport/ergometer.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "1a7627a811c4d49815fad06f7e6eebdfe03450d96379879274f11e524ff62ffe",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        27,
+        1754,
+        849
+      ],
+      "sourceSha256": "968350445deb64ffca0da7a6632d649b9e8bff5568afe2c3577acd728b6044cf",
+      "rgbaSha256": "3f76938c6fb30edf79bc6d8e87a10c1028c941c7526c4312ae495716bc483647"
+    },
+    {
+      "key": "taktiktafel",
+      "category": "sport",
+      "name": "Taktiktafel",
+      "widthMeters": 1.2,
+      "heightMeters": 0.4,
+      "file": "assets/sport/taktiktafel.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "2de07946b8f951f6e4ed237d57f0a04219fd8169d4bd00b58ce22897d8ba285a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        215,
+        9,
+        1761,
+        771
+      ],
+      "sourceSha256": "3377cbfa50f1bd86fc541c33ff715696370d35b72cbaf96a35d117fa5f5afd2d",
+      "rgbaSha256": "1d146c2f37a1c094d6b4db24db243f9e10815eb412b5fb8822ed6a5b5a16883c"
+    },
+    {
+      "key": "geraeteregal",
+      "category": "sport",
+      "name": "Geräteregal",
+      "widthMeters": 2,
+      "heightMeters": 0.7,
+      "file": "assets/sport/geraeteregal.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "1b2d8819b0f6cd0019c66cf0dfc453a97c4f2af829efd4c8db2a66258e2fcd01",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        111,
+        9,
+        1728,
+        887
+      ],
+      "sourceSha256": "a85cd0c0102e1589ad6785769766a8e8a007b0d226563dc1d53910cc75d5be76",
+      "rgbaSha256": "4f7ba6032848547ec49a0e54db288e8c55ea608ce7279a3acd793cb482aa7eb1"
+    },
+    {
+      "key": "massageliege",
+      "category": "sport",
+      "name": "Massageliege",
+      "widthMeters": 2,
+      "heightMeters": 0.8,
+      "file": "assets/sport/massageliege.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "f506b1bca10e9ad083a42531cd60c749d9ef9aed957c57f694c385ee084aabb3",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        38,
+        1512,
+        984
+      ],
+      "sourceSha256": "22d6b444a4acf706b28dfdf89ea6b66d5691b6702f1213ffd372b628ff84b15d",
+      "rgbaSha256": "baad13242c7703a7fb4c4a6cb54354fb0aabbece3de61f0b1636bdd8e77c1159"
+    },
+    {
+      "key": "bett",
+      "category": "wohnen",
+      "name": "Einzelbett",
+      "widthMeters": 2.1,
+      "heightMeters": 1,
+      "file": "assets/wohnen/bett.webp",
+      "pixelWidth": 1817,
+      "pixelHeight": 866,
+      "mode": "RGBA",
+      "sha256": "63af5ac44da040efe2c9ea3fc9500abf693848a84f697a26e7077b46399f29f1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        33,
+        1797,
+        866
+      ],
+      "sourceSha256": "4a4ff13c63efe9a544963e6984740b21e1e1cdf372cb35b1815e29ab04519524",
+      "rgbaSha256": "2659e0d14f5224313f84c7ebda874a0ed23c0779f199136d72a4b60a3068151e"
+    },
+    {
+      "key": "doppelbett",
+      "category": "wohnen",
+      "name": "Doppelbett",
+      "widthMeters": 2.1,
+      "heightMeters": 1.8,
+      "file": "assets/wohnen/doppelbett.webp",
+      "pixelWidth": 1355,
+      "pixelHeight": 1161,
+      "mode": "RGBA",
+      "sha256": "ab99b42e3360c84363586208e7b3c4f07fe32cefeb7b2c7f1e5067e7ea984841",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        1341,
+        1157
+      ],
+      "sourceSha256": "c864ee4c56f99ef2e7342ed22e337e00d1962855ebd4fa09304af642985dff46",
+      "rgbaSha256": "4c54b8ffbefca8b4844a04a57aeff24a5afc327195a1c7340addf88bc1c6edcf"
+    },
+    {
+      "key": "schrank",
+      "category": "wohnen",
+      "name": "Kleiderschrank",
+      "widthMeters": 1.8,
+      "heightMeters": 0.6,
+      "file": "assets/wohnen/schrank.webp",
+      "pixelWidth": 1926,
+      "pixelHeight": 816,
+      "mode": "RGBA",
+      "sha256": "8a9f1102b5becb9dfa6681c04924791fa55de8e078d4ce2aeee763e31e5fbe5c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        79,
+        0,
+        1894,
+        816
+      ],
+      "sourceSha256": "ad6e4db0b276fbc80e07054e60c4c1977103bb20404c105f0fd797530db51652",
+      "rgbaSha256": "982b03dd6da89e00611ee956e830fd70b71b942f670fcef50c0a94d3ac11f09d"
+    },
+    {
+      "key": "sessel",
+      "category": "wohnen",
+      "name": "Sessel",
+      "widthMeters": 0.9,
+      "heightMeters": 0.9,
+      "file": "assets/wohnen/sessel.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "1885f3362124820c351db33af16b30513097682ca254dec0b3027385e1cf17fd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1232,
+        1254
+      ],
+      "sourceSha256": "22754d33a2ed3b36cc2f6961feead6abf489c71962a1fdc988843fa6580cd871",
+      "rgbaSha256": "f51d9314221c52504c55ee92b9fc31d4c82f53d13e08fe9dc7c88cd3a6a1b16d"
+    },
+    {
+      "key": "buecherregal",
+      "category": "wohnen",
+      "name": "Bücherregal",
+      "widthMeters": 1.8,
+      "heightMeters": 0.35,
+      "file": "assets/wohnen/buecherregal.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "f060b89ac8a2c5ecca2dd64821055bf4b210aae4b8b6c2a05d8768cd8619f7e2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        21,
+        1738,
+        754
+      ],
+      "sourceSha256": "5e51d795f37c96049867e88ff5a686b6a8c53f18848541f352df45dd4f4371eb",
+      "rgbaSha256": "665950e2a8211159c944413913aff3e327326e78096813976661350f07d2ad21"
+    },
+    {
+      "key": "waschbecken",
+      "category": "wohnen",
+      "name": "Waschbecken",
+      "widthMeters": 0.6,
+      "heightMeters": 0.5,
+      "file": "assets/wohnen/waschbecken.webp",
+      "pixelWidth": 1374,
+      "pixelHeight": 1145,
+      "mode": "RGBA",
+      "sha256": "b825fb3b89f9534949859ab0595ded6aba18544c1e98673a37a278157128cf3e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        3,
+        1338,
+        1145
+      ],
+      "sourceSha256": "f99c99707fdbd49e1638697243e9b6a3984a7001d17cb58ff84c8cae16182b5d",
+      "rgbaSha256": "08371291f464921932518a54417eb18d573400354d4d402f9dae4a2f5619bc81"
+    },
+    {
+      "key": "toilette",
+      "category": "wohnen",
+      "name": "Toilette",
+      "widthMeters": 0.4,
+      "heightMeters": 0.7,
+      "file": "assets/wohnen/toilette.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "d9faa5dee531a20740c17cbd146f52f13202355c9e7c50fb0ffe06b25e2367bb",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1008,
+        1490
+      ],
+      "sourceSha256": "fe1a08a46e3a08130afd6ba8336ba0c091cec8c871020eae2e51bdb76cfcca05",
+      "rgbaSha256": "b8266a114215e7c95f8f83db9383c1435ab00141ceec4e2361d27d774affb0bc"
+    },
+    {
+      "key": "badewanne",
+      "category": "wohnen",
+      "name": "Badewanne",
+      "widthMeters": 1.8,
+      "heightMeters": 0.8,
+      "file": "assets/wohnen/badewanne.webp",
+      "pixelWidth": 1881,
+      "pixelHeight": 836,
+      "mode": "RGBA",
+      "sha256": "21805caffd61fcee92b25bc8f437bf7b73aba8c688c694020127d73b9369a89e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        103,
+        27,
+        1732,
+        784
+      ],
+      "sourceSha256": "036f13d03fe74046f74911ca46dd015d49af8719cfcb7db806cdb33e84abeddd",
+      "rgbaSha256": "ba60f6b1e38b19c87de3964f526cebbfd4f1279936962387bad83036ae6d8641"
+    },
+    {
+      "key": "pflanze",
+      "category": "wohnen",
+      "name": "Zimmerpflanze",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/wohnen/pflanze.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "22b511e182e766cfa3f598aedae96373c093653f8cee88e95f8b4ed2e71ea13f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1240,
+        1254
+      ],
+      "sourceSha256": "e633910d920a2bbd01fdad76a10938f3f16994157e057d40f143831d5f42f3a5",
+      "rgbaSha256": "6c25bdb63eeb5b0c6fae074a26fd9bc5bb37c9047d287ed8030df589346cdbbb"
+    },
+    {
+      "key": "teppich",
+      "category": "wohnen",
+      "name": "Teppich",
+      "widthMeters": 3,
+      "heightMeters": 2,
+      "file": "assets/wohnen/teppich.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "d13f75a871062bbaf15a009a5ce132001717cbed1403adac94290ccf01d995f3",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        1,
+        1522,
+        1024
+      ],
+      "sourceSha256": "3de6ec8c79f3f7de6d338a657b77b2b7d12697e48fab56b2ac5e7b2ec70202fe",
+      "rgbaSha256": "9df2648b63190cac4a24cfc9ece7fa021c3935bffddc6cfe14d12e08b5bdf028"
+    },
+    {
+      "key": "schreibtisch",
+      "category": "buero_medizin",
+      "name": "Schreibtisch",
+      "widthMeters": 1.6,
+      "heightMeters": 0.8,
+      "file": "assets/buero_medizin/schreibtisch.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "df88f4690df4fdd34e34a282aa2e3d722feb6c29de48a27f7a11b5f6063303a1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        2,
+        8,
+        1744,
+        861
+      ],
+      "sourceSha256": "748b3d3c8ce1d8d2ad0a0dea5278975bd19ac869e29b6a22b4ced795e74f9971",
+      "rgbaSha256": "8d6422a44ef369e10531434eebc9173cf0ca8ab782b93fd5047d872849cb5397"
+    },
+    {
+      "key": "buerostuhl",
+      "category": "buero_medizin",
+      "name": "Bürostuhl",
+      "widthMeters": 0.65,
+      "heightMeters": 0.65,
+      "file": "assets/buero_medizin/buerostuhl.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "5922399b0319dbebc814c1c88e812a0029ab9a981318d057d5ccf5773193b4a0",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1218,
+        1214
+      ],
+      "sourceSha256": "72a7078ae8f32b7bee6fef2f516297c2683d5e580fa50d39999d6f00ddf54e11",
+      "rgbaSha256": "c0f598d1cbbd2e4f9893b60b32c92f866cc12612a96df6bd51c4c22bafc12126"
+    },
+    {
+      "key": "meetingtisch",
+      "category": "buero_medizin",
+      "name": "Meetingtisch",
+      "widthMeters": 3,
+      "heightMeters": 1.2,
+      "file": "assets/buero_medizin/meetingtisch.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "f834c9b14c1166da595347793e88e5e338854c1d10fa29fff5df912c76e1ee13",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        27,
+        1693,
+        761
+      ],
+      "sourceSha256": "0d8bd941bb6b590e6fcd1c172359552f3a9552a73abf6ed3c94532f305265bd6",
+      "rgbaSha256": "0108af994e56745f769e89f5c4333723b0e3ee37940a6248ae9a92ec87aa8234"
+    },
+    {
+      "key": "aktenschrank",
+      "category": "buero_medizin",
+      "name": "Aktenschrank",
+      "widthMeters": 1,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/aktenschrank.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "7fca860a7b404b7b1dd125aace7123b21dc537475c2cc0737b3fe340c188e578",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        240,
+        9,
+        1518,
+        887
+      ],
+      "sourceSha256": "f92a67a3c45dca928f0fa421ebbc983be3760bb97d68bafeef21db7556287f29",
+      "rgbaSha256": "13315c3da915ce4e691255eafc83e2afa368474bc0392586e336382c5702d9a2"
+    },
+    {
+      "key": "terminal",
+      "category": "buero_medizin",
+      "name": "Terminal",
+      "widthMeters": 0.6,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/terminal.webp",
+      "pixelWidth": 1374,
+      "pixelHeight": 1145,
+      "mode": "RGBA",
+      "sha256": "463c58d1d18ea1bf6937c070f4a4981a5500c6df08feee528f861ac681124e34",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1322,
+        1105
+      ],
+      "sourceSha256": "d8e3e678d4e0cb5a9e463b08aa57b60a8134d2e47d36860d619f6932b98ad57b",
+      "rgbaSha256": "06a7a17eff0a33eb1ad705d3447b4c4022b6c3ccd0d5e919e31e0ffca65ad9dd"
+    },
+    {
+      "key": "untersuchungsliege",
+      "category": "buero_medizin",
+      "name": "Untersuchungsliege",
+      "widthMeters": 2,
+      "heightMeters": 0.75,
+      "file": "assets/buero_medizin/untersuchungsliege.webp",
+      "pixelWidth": 1672,
+      "pixelHeight": 941,
+      "mode": "RGBA",
+      "sha256": "797765989350b9d16b6b4371c4755a6a474523b636f197dc937533616951072d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        2,
+        21,
+        1610,
+        941
+      ],
+      "sourceSha256": "bb82c38e11ef1dd1c11e70c7673a3f9be4bbe2b1f0e3a5d7748a334dc82c7af7",
+      "rgbaSha256": "d150c96eb39c2062281108c03f70f6bd8da9559a1c0701db10c89c3827f18d70"
+    },
+    {
+      "key": "krankenbett",
+      "category": "buero_medizin",
+      "name": "Krankenbett",
+      "widthMeters": 2.2,
+      "heightMeters": 1,
+      "file": "assets/buero_medizin/krankenbett.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "a48ea40a05e3786a363447a197b4087e67dab1498badfed217d00aa096183eb0",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        972,
+        1503
+      ],
+      "sourceSha256": "538305527cbeb84feec1f93491b81489380b707c1f7f9e6eac06de523878b6f4",
+      "rgbaSha256": "e661f370b289e7bcf5f7229e69af4c05dd237fe18f9f70caafd77424baa87290"
+    },
+    {
+      "key": "medizinschrank",
+      "category": "buero_medizin",
+      "name": "Medizinschrank",
+      "widthMeters": 1,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/medizinschrank.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "e93700826d95fd78603aa1c5c22988fc35a94807e5407fcc153b8f854d2839aa",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1730,
+        845
+      ],
+      "sourceSha256": "af5f6f09ac9cc1e8cf88cdd4830db1aafbf83f9a7161e6e60ab9265813fe13f6",
+      "rgbaSha256": "c2d427dea163e600b8570eaf733ab04999b8a715c0d44213575317f4a3db2905"
+    },
+    {
+      "key": "instrumentenwagen",
+      "category": "buero_medizin",
+      "name": "Instrumentenwagen",
+      "widthMeters": 0.7,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/instrumentenwagen.webp",
+      "pixelWidth": 1484,
+      "pixelHeight": 1060,
+      "mode": "RGBA",
+      "sha256": "61c4e7b5a6edc0039c465cd3e26e0ed705240ac72012e8a308230d96ccff9719",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1428,
+        1060
+      ],
+      "sourceSha256": "3b1210d86453341c5bc276270bd108284b8e6ecdcd1fce0015c92b4ca00496ee",
+      "rgbaSha256": "91d4fa503c937c7c0baa2fc6a606d0194eef88a54e2170807ccd2385a70ba65e"
+    },
+    {
+      "key": "serverrack",
+      "category": "buero_medizin",
+      "name": "Serverrack",
+      "widthMeters": 0.8,
+      "heightMeters": 1,
+      "file": "assets/buero_medizin/serverrack.webp",
+      "pixelWidth": 1145,
+      "pixelHeight": 1374,
+      "mode": "RGBA",
+      "sha256": "b9097c85a8223703915fabb2c04991876d89ec511c8f694ad347bec00599cf9c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        37,
+        1107,
+        1350
+      ],
+      "sourceSha256": "861cd92739b707e45e4d70aa7a696b87aae4bea0dab5f38dc8b02096c389f8c1",
+      "rgbaSha256": "122b2497b867508783a62797da67ff216466c497fe5b9d7568e202803554cd46"
+    },
+    {
+      "key": "werkbank",
+      "category": "industrie_verkehr",
+      "name": "Werkbank",
+      "widthMeters": 2,
+      "heightMeters": 0.8,
+      "file": "assets/industrie_verkehr/werkbank.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "306583c33a0ea12c4bbd97069b7c405e4879f2d21d312ed16faf6976820fa483",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        77,
+        23,
+        1967,
+        793
+      ],
+      "sourceSha256": "8518024c2ed7b6666b182f7054790433f5f56be5d7e3c5d26c348cf0097baab6",
+      "rgbaSha256": "e18877c75f8a99f5cb30ff0a3c92eb89c7bb335eccb7b309c326a9130f2db7e1"
+    },
+    {
+      "key": "palette",
+      "category": "industrie_verkehr",
+      "name": "Palette",
+      "widthMeters": 1.2,
+      "heightMeters": 0.8,
+      "file": "assets/industrie_verkehr/palette.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "12760fd9e18a55fd77eb470743f957fa7d5269be71c409d1a6da376e301afb2e",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1525,
+        960
+      ],
+      "sourceSha256": "320092bf13ef58ef4ee096e6bc40dac978cabfd01ae9733740f8d856988c9a26",
+      "rgbaSha256": "c7f5be65632f6957b16674ba86114e0e0ba675825c76296798a2998b0e9b83ce"
+    },
+    {
+      "key": "kiste",
+      "category": "industrie_verkehr",
+      "name": "Kiste",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/industrie_verkehr/kiste.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "5459180e9f060b818c01d6c0d51f70af54450cfd7b27430557dd8e27d3b44404",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        20,
+        1208,
+        1189
+      ],
+      "sourceSha256": "9dd87543af8ca123b112fc93a4eb1f16e04f79755cac1ceafca8479c95b55ec8",
+      "rgbaSha256": "7f0411b87c2f0fb0c78ba59970707c6d80c7ef718fd78379421ad43b033b8243"
+    },
+    {
+      "key": "fass",
+      "category": "industrie_verkehr",
+      "name": "Fass",
+      "widthMeters": 0.6,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/fass.webp",
+      "pixelWidth": 1263,
+      "pixelHeight": 1245,
+      "mode": "RGBA",
+      "sha256": "dcf2f6afd577f1f62940e9db2faba7f93a0942ee6afa847c3e35e3d5d3ec3a5c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        58,
+        51,
+        1227,
+        1207
+      ],
+      "sourceSha256": "aa7de7e71bdeff2c0b9023db16052ced793d35d6886d37414b610e014be80adf",
+      "rgbaSha256": "1de5bfc69bb69115f81bae0d079ede48330b51a90bcfc8e3b84a781ed0e7eefb"
+    },
+    {
+      "key": "maschine",
+      "category": "industrie_verkehr",
+      "name": "Fertigungsmaschine",
+      "widthMeters": 3,
+      "heightMeters": 2,
+      "file": "assets/industrie_verkehr/maschine.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "0133f145ec4379a09c5f3046e9249f5b7e19bac2f1537743be79d1d4bcf3f82b",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        1510,
+        1024
+      ],
+      "sourceSha256": "92dc77c59e93fba62059c1ac22050b4910a05a541c868e9ceafd6bcb411d6999",
+      "rgbaSha256": "7d254db60f700bee7f65fd91edfbd4bc7bcf597ffeffb8baba3d364911667428"
+    },
+    {
+      "key": "foerderband",
+      "category": "industrie_verkehr",
+      "name": "Förderband",
+      "widthMeters": 4,
+      "heightMeters": 0.8,
+      "file": "assets/industrie_verkehr/foerderband.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "44d9b869d5c53d19e5d756066267f282ccb2e06d6e8f7aaf8865eb657ab73b10",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        38,
+        21,
+        1742,
+        831
+      ],
+      "sourceSha256": "e5c08c555656bb8d39d07de9781153fd0f7731dcd3cbb9e6fcfdaf234dfb3c6f",
+      "rgbaSha256": "ef1453c8d96428d20c896314f4225993af4de9f52d2f7065ca30999bc3340a18"
+    },
+    {
+      "key": "gabelstapler",
+      "category": "industrie_verkehr",
+      "name": "Gabelstapler",
+      "widthMeters": 3,
+      "heightMeters": 1.2,
+      "file": "assets/industrie_verkehr/gabelstapler.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "b7d7239cc5d37f0508b8f18f284d90b5564395a9dc98abbc31fc29fe203209b2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        63,
+        21,
+        1752,
+        887
+      ],
+      "sourceSha256": "41fec419b8ef019d272ac168372342cf2d81d221c43c1ebf19adee4358e261a9",
+      "rgbaSha256": "de879eddc9f249f86f0075cc109707d2c9ff03c4d46de4a5409634fb9e5864c8"
+    },
+    {
+      "key": "auto",
+      "category": "industrie_verkehr",
+      "name": "Auto",
+      "widthMeters": 4.5,
+      "heightMeters": 1.8,
+      "file": "assets/industrie_verkehr/auto.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "27c2e9fa16064961fd3859614b7c8d022187151d16fab5b97c5d609b5a17bb68",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        274,
+        23,
+        1776,
+        753
+      ],
+      "sourceSha256": "93a151cc6bf89a017463ec5531e437c9714deecfd42c987138c60b37c626c850",
+      "rgbaSha256": "4138f153f431825798b59335fafa3da5b9f568298825c7b8d17c2b1868d2bbc3"
+    },
+    {
+      "key": "autositz",
+      "category": "industrie_verkehr",
+      "name": "Autositzbank",
+      "widthMeters": 1.5,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/autositz.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "e7af4b2bb5218611c2dd65e06f44d50e90bb1900252d8467f3dda4bbbb42b1c6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        7,
+        1756,
+        871
+      ],
+      "sourceSha256": "301e85ba1518f1c013e40697ee6efbad3f2109e0c7d5731bbec66a863e66dcf9",
+      "rgbaSha256": "72b854e6040c413bdefd22d36ca0da489c717b3d3c4387a4ea8835e02116c8a3"
+    },
+    {
+      "key": "muellcontainer",
+      "category": "industrie_verkehr",
+      "name": "Müllcontainer",
+      "widthMeters": 2,
+      "heightMeters": 1.2,
+      "file": "assets/industrie_verkehr/muellcontainer.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "fcde508790cae4de68472f6a94bef60426eb577eef69f3389cf98047ccc6e3ee",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1518,
+        1024
+      ],
+      "sourceSha256": "7e272cab5f7fc9546cd9985a7280b418742e35af23b878f96b2dac821e9cdfb2",
+      "rgbaSha256": "8913b93bccb5368feb5b03225b0e87efbe267f5f352cab560f2447ac75661a6b"
+    },
+    {
+      "key": "generator",
+      "category": "industrie_verkehr",
+      "name": "Generator",
+      "widthMeters": 2,
+      "heightMeters": 1,
+      "file": "assets/industrie_verkehr/generator.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "b1730402c03289ffe9c2cf1d63c47c65fe79741e938e42afa68fde07c3899aac",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        36,
+        1744,
+        887
+      ],
+      "sourceSha256": "1ff55a93d5771c2b13d50bc0b8ce0214484854096a70c399f6ac902381e26892",
+      "rgbaSha256": "39db1ad7378a507b4e1257f24295625d66d793b903da0d04f366bfb86877507d"
+    },
+    {
+      "key": "rohr",
+      "category": "industrie_verkehr",
+      "name": "Rohrsegment",
+      "widthMeters": 3,
+      "heightMeters": 0.4,
+      "file": "assets/industrie_verkehr/rohr.webp",
+      "pixelWidth": 2048,
+      "pixelHeight": 768,
+      "mode": "RGBA",
+      "sha256": "e873c47091e61a30938a21f5f106e563196a6c8aa2ce2d777db6d6e5413f5568",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        47,
+        21,
+        2006,
+        744
+      ],
+      "sourceSha256": "fa25eb3104e6b0f6ec810e463171fe5aa1dc6f350f4b0806be07dd96ed8df6ab",
+      "rgbaSha256": "12e607be6daf574fc21454c9192e7523ab78ed90764279e77b5bce81cbbb17b1"
+    },
+    {
+      "key": "kirchenbank",
+      "category": "sakral_natur",
+      "name": "Kirchenbank",
+      "widthMeters": 3,
+      "heightMeters": 0.6,
+      "file": "assets/sakral_natur/kirchenbank.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "4c5484b645c7ddaa52fcb8d318283e56dc0760781180538264f1be843442d94e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        59,
+        35,
+        1752,
+        855
+      ],
+      "sourceSha256": "137c8950967251708b8276b3fa7ef4f998d5f3cf0dc49d8ff57d784b3b08edcc",
+      "rgbaSha256": "635e1e692451ef920d1152747e1de2d7e81790a67873b49e2832ac44b31c1b5f"
+    },
+    {
+      "key": "altar",
+      "category": "sakral_natur",
+      "name": "Altar",
+      "widthMeters": 2.4,
+      "heightMeters": 1.1,
+      "file": "assets/sakral_natur/altar.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "0b8242859301d5236c912df7c970ebe1c482331e03c0336b607dbbe712d87bdb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        122,
+        9,
+        1649,
+        871
+      ],
+      "sourceSha256": "6c58c09a30e58391c6fd8cbbdd7d7f2ec29e0f7fd7c8b083bb540ade10860074",
+      "rgbaSha256": "2a9905fe667d50a839dc2c2132ffe2d08693e1dc763af151de5d0bc7369358d4"
+    },
+    {
+      "key": "lesepult",
+      "category": "sakral_natur",
+      "name": "Lesepult",
+      "widthMeters": 0.7,
+      "heightMeters": 0.6,
+      "file": "assets/sakral_natur/lesepult.webp",
+      "pixelWidth": 1355,
+      "pixelHeight": 1161,
+      "mode": "RGBA",
+      "sha256": "81932a2fb85a0856f38f28d467d9fa3277d4b425d9be1906a2627afee845924a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        1305,
+        1143
+      ],
+      "sourceSha256": "38e3c0cd466a0589cf9d1f9db394b3beb7b178d2cb3c36d6701db579d3578221",
+      "rgbaSha256": "447457aa15a9fa5cc18a8d46723a0b4e0a2667a37e752e3bb295a1e0d67d63b8"
+    },
+    {
+      "key": "kerzenstaender",
+      "category": "sakral_natur",
+      "name": "Kerzenständer",
+      "widthMeters": 0.4,
+      "heightMeters": 0.4,
+      "file": "assets/sakral_natur/kerzenstaender.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "a899eaaa23f7cd683d4f065f8a19716f191dd1d346d51695b6ef75187919c3ea",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1230,
+        1230
+      ],
+      "sourceSha256": "aa131540ba03ba86de05fa84917c3c8c749fc3a65f57c1074affbd97a0b49492",
+      "rgbaSha256": "b6c2771f4f1db325eb98814ff3d30332a4f625b3e2656844477bba3631f86aeb"
+    },
+    {
+      "key": "trauerkranz",
+      "category": "sakral_natur",
+      "name": "Trauerkranz",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/sakral_natur/trauerkranz.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "d5c8795c8a83561a64ce28bb82989ddfb788a5df2916e6aa688c581f135247f5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        32,
+        1234,
+        1254
+      ],
+      "sourceSha256": "9c84ec8b019b887e65a8c27d4d1f477dc8766a1eea7e36085b38ee7f9bb05e83",
+      "rgbaSha256": "c02976d1b4235fca7b125a96b95a9b16aa74b7fe96bbeba17ee4272320948770"
+    },
+    {
+      "key": "sarg",
+      "category": "sakral_natur",
+      "name": "Sarg",
+      "widthMeters": 2,
+      "heightMeters": 0.7,
+      "file": "assets/sakral_natur/sarg.webp",
+      "pixelWidth": 1974,
+      "pixelHeight": 797,
+      "mode": "RGBA",
+      "sha256": "89a8700cb88c834753a7ff7dff06feb3473f4b6bfd18e11078331f09bf79fccd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1960,
+        774
+      ],
+      "sourceSha256": "375e15e94a27b2f141c27d40fae1b1d3879385d25a36adbd154378266b43458a",
+      "rgbaSha256": "18427313e36cf4773be483f4109706768391507549802bce228793bc8bf663d7"
+    },
+    {
+      "key": "baum",
+      "category": "sakral_natur",
+      "name": "Laubbaum",
+      "widthMeters": 5,
+      "heightMeters": 5,
+      "file": "assets/sakral_natur/baum.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "c1a1ab664ddfdfb6fd3eb4db24e434724df9d0e40b0f067d0bf7996fc91b258a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1240,
+        1254
+      ],
+      "sourceSha256": "641991ad6750520c7fc02546c7c4f56dc363cf5a8036fd788cee2c19c79d98a3",
+      "rgbaSha256": "ee3680be2ddef9aa0aee306352aac5f687659426ece790483f0461a422e5d561"
+    },
+    {
+      "key": "busch",
+      "category": "sakral_natur",
+      "name": "Busch",
+      "widthMeters": 1.5,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/busch.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "63bc090d8692b8b18a78fe0193ffcb1172cec7c33bdabd5dfbb9b6d8bc16bba2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        29,
+        1232,
+        1254
+      ],
+      "sourceSha256": "14f7096b0b9c306b43698e1da23fb286466bff06310330360d2b978f4b7a047d",
+      "rgbaSha256": "3f34073ff4afdc0ce20f33205f533cae920cb0ce8743e26ea312d9738c246bb5"
+    },
+    {
+      "key": "fels",
+      "category": "sakral_natur",
+      "name": "Fels",
+      "widthMeters": 2,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/fels.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "ecbd1264ec6847787440f2fa9b95160930e1df84d20a72bec45981760377ef36",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        3,
+        1426,
+        1062
+      ],
+      "sourceSha256": "b2cb8b3c0f8f2be8ae7c73ef72b8d4e760bea2e6f57c01063fd75a6c2d9b53ee",
+      "rgbaSha256": "ec6aea6ac3da200b13e7248f59a467f69ed7f32678a76959848381553d020e5a"
+    },
+    {
+      "key": "baumstamm",
+      "category": "sakral_natur",
+      "name": "Baumstamm",
+      "widthMeters": 4,
+      "heightMeters": 0.6,
+      "file": "assets/sakral_natur/baumstamm.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "7520e3a641a7026d81fa85dc617c83ba9fd607f187aa5faad143dcc9da76f52c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        38,
+        21,
+        1752,
+        863
+      ],
+      "sourceSha256": "3b58c90c9984d74c119f2ffb406b2e0c870457706d421843b036af1f15ef6b58",
+      "rgbaSha256": "1c29b2008a90589348122de5aff10c6d3a8b8e07067d6d3d5e8f41720413157a"
+    },
+    {
+      "key": "schutt",
+      "category": "sakral_natur",
+      "name": "Schutthaufen",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/schutt.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "8760775acb7e913a43a88f42f11279b0e1a027c4ecdd801154fde18fcce60c9e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1222,
+        1254
+      ],
+      "sourceSha256": "db365e3bc771f69d51958f823b25bd56378289fbeffae52dc42e5d2e6607c5ab",
+      "rgbaSha256": "87f068d8872e9e3cbac0f4fa45c06c03bfe7457bfe6338e9879d76a4c325e983"
+    },
+    {
+      "key": "feuerstelle",
+      "category": "sakral_natur",
+      "name": "Feuerstelle",
+      "widthMeters": 1.2,
+      "heightMeters": 1.2,
+      "file": "assets/sakral_natur/feuerstelle.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "5daf5071bb04d9e8a3eb20b8c928cb8fbc5af6a2a8b37268c06fa7f6bf0ca1da",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1251,
+        1254
+      ],
+      "sourceSha256": "21e2b667735f80955515e53239c78a2caeff4d202bae6cb16075618b8d255158",
+      "rgbaSha256": "14fe0a7819b7e1b21b16ed4eed094e8e24188aa9f5ab99a7a90e9b9c72e8b0d8"
+    },
+    {
+      "key": "zapfanlage",
+      "category": "gastronomie",
+      "name": "Zapfanlage",
+      "widthMeters": 0.7,
+      "heightMeters": 0.3,
+      "file": "assets/gastronomie/zapfanlage.webp",
+      "pixelWidth": 1916,
+      "pixelHeight": 821,
+      "mode": "RGBA",
+      "sha256": "5f0851de1a075a855649e4fa383a1bea56c274b0762a7ce7598f3ceb2e2fd7bd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        191,
+        46,
+        1828,
+        769
+      ],
+      "sourceSha256": "08f92eb34e38d5c7ddf4c9cc09522b0a2de8ffb40c08cd26b0200f7a68a3e6c5",
+      "rgbaSha256": "ae67dae33dd0ba6781010128d7714cfa9e2f71d6b93c64fa6be936ab15838f2e"
+    },
+    {
+      "key": "trinkglas",
+      "category": "gastronomie",
+      "name": "Trinkglas",
+      "widthMeters": 0.08,
+      "heightMeters": 0.08,
+      "file": "assets/gastronomie/trinkglas.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "89d33141d8bf1ab13680e5a7c1387bb823d622c4f9e064c20ed9d6d76ce05a92",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1104,
+        1254
+      ],
+      "sourceSha256": "b5746011fe98a1418ef11b28fd7641ed9000f8ff354057465df2e90f486c3b9f",
+      "rgbaSha256": "d6589039c39026514214686ce308f163cf38167a3e3a63b9605ee5073430b41b"
+    },
+    {
+      "key": "getraenkekiste",
+      "category": "gastronomie",
+      "name": "Getränkekiste",
+      "widthMeters": 0.4,
+      "heightMeters": 0.3,
+      "file": "assets/gastronomie/getraenkekiste.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "24979eeed59eda3e2efc0ef334eb1e85c4e9006935d2f233409cd5cf6a926ee9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1430,
+        1078
+      ],
+      "sourceSha256": "0d1791cbec9eb2003dc6ee14837cb6fd73ef9a3a7fa94f546b7c781df05714da",
+      "rgbaSha256": "14f52b398cd54d5f1d8547034d2e9d8c6838568c746fd00e63e9c916d290e4f3"
+    },
+    {
+      "key": "eisbecken",
+      "category": "gastronomie",
+      "name": "Eisbecken",
+      "widthMeters": 0.6,
+      "heightMeters": 0.4,
+      "file": "assets/gastronomie/eisbecken.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "112d8246d0e702983c70dadef2c691e49c44bf517373aacbd904c27b2c0538da",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        146,
+        0,
+        1488,
+        1024
+      ],
+      "sourceSha256": "bc369824c7b7af4446b3549ed6a3871e7386b98a4da282a5e0d28582a38f8683",
+      "rgbaSha256": "052e186cf4cea00070f15c827fb2c1d9248ba99ebf1be4955617e7919b619a08"
+    },
+    {
+      "key": "tischdecke",
+      "category": "gastronomie",
+      "name": "Tischdecke",
+      "widthMeters": 1.6,
+      "heightMeters": 0.8,
+      "file": "assets/gastronomie/tischdecke.webp",
+      "pixelWidth": 1768,
+      "pixelHeight": 889,
+      "mode": "RGBA",
+      "sha256": "27e01d224eccb962e2d3ee048f2ca758753f9c3f308ae69d377cad750f21078b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        82,
+        15,
+        1734,
+        851
+      ],
+      "sourceSha256": "9a6c092e620c3868fed42a8d42a40e32fcb573f0e6452b7d3b8b5dab248b2f5f",
+      "rgbaSha256": "3f5ac1159ab6fbdf69ee4062292fae392fa2ca4441c736e07159fdf0e84f39bc"
+    },
+    {
+      "key": "platzset",
+      "category": "gastronomie",
+      "name": "Platzset",
+      "widthMeters": 0.45,
+      "heightMeters": 0.3,
+      "file": "assets/gastronomie/platzset.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "c088fad9ff9945a0d0c6461746230a69234dbe0b2b78b22174dd9781e4868c29",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1484,
+        1024
+      ],
+      "sourceSha256": "613570ed05c3460e6aed649160bc9c6d8094ab861602cc469db0581bdad41917",
+      "rgbaSha256": "fd6d90022aaac56de72f8f70221e682d0634be6bbc9f59f31a8fccfda0a8347c"
+    },
+    {
+      "key": "kaffeemuehle",
+      "category": "gastronomie",
+      "name": "Kaffeemühle",
+      "widthMeters": 0.25,
+      "heightMeters": 0.35,
+      "file": "assets/gastronomie/kaffeemuehle.webp",
+      "pixelWidth": 1054,
+      "pixelHeight": 1492,
+      "mode": "RGBA",
+      "sha256": "de67cc01bf7db00a52c2c56620a1cd757347089fd62238a97662bf9a6adb822a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        36,
+        1038,
+        1492
+      ],
+      "sourceSha256": "bb589151f7c86e72c5e6e63be19cb3e064e4a03ad3ce454825f9cbdd29d92c54",
+      "rgbaSha256": "124ba62ffd6ab8100e59c167318dfd030aa8a8b03bb9a17bab291115fb052b4f"
+    },
+    {
+      "key": "besteckstation",
+      "category": "gastronomie",
+      "name": "Besteckstation",
+      "widthMeters": 0.6,
+      "heightMeters": 0.4,
+      "file": "assets/gastronomie/besteckstation.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "878419a16e2349e5716e14e8846f4ab7aae24a89b9c7f7ecb76202d5c856f91b",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        117,
+        0,
+        1414,
+        1000
+      ],
+      "sourceSha256": "f74aebe072db085288c71dd61f65089095be9f8688250f298546a8d1059cbc49",
+      "rgbaSha256": "92981a41ba1fa74132d73ca9868edccb832d416712ffb7edd127979c9aabceb5"
+    },
+    {
+      "key": "dunstabzugshaube",
+      "category": "gastronomie",
+      "name": "Dunstabzugshaube",
+      "widthMeters": 1.2,
+      "heightMeters": 0.8,
+      "file": "assets/gastronomie/dunstabzugshaube.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "01c519bad672cd3ea35884696890e1dc0a4a75280411216b6d04fb7fcdd0a5d4",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1456,
+        1024
+      ],
+      "sourceSha256": "6d12001f8e75f65a1aab6d8252ecd2fed857d81b8cb972cc2d470b95b7738af6",
+      "rgbaSha256": "284aec653d2e74d5436ee6a146c37c9e6c4667af3df3fda293690f6c37bc5f01"
+    },
+    {
+      "key": "teller",
+      "category": "gastronomie",
+      "name": "Teller",
+      "widthMeters": 0.27,
+      "heightMeters": 0.27,
+      "file": "assets/gastronomie/teller.webp",
+      "pixelWidth": 1278,
+      "pixelHeight": 1230,
+      "mode": "RGBA",
+      "sha256": "e3b6d11106d1cf1a79fcaa3cf842b28bd395eb20d5550d5a83422aafd238d42b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        74,
+        56,
+        1207,
+        1180
+      ],
+      "sourceSha256": "5a333a1f28dbc5063c84e14f1a6f5e3f996913774a01c27a16bbbc828f26858e",
+      "rgbaSha256": "bb223d6bb87a89a73d56761e1b74f3440af9c2f4da356cac22b64f2097c594a0"
+    },
+    {
+      "key": "tasse",
+      "category": "gastronomie",
+      "name": "Tasse",
+      "widthMeters": 0.12,
+      "heightMeters": 0.1,
+      "file": "assets/gastronomie/tasse.webp",
+      "pixelWidth": 1374,
+      "pixelHeight": 1145,
+      "mode": "RGBA",
+      "sha256": "9bbdba959a74bbba9a0fb65fc1c52fd429cd2dca17526126088bb1808ad6a5e9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        27,
+        88,
+        1248,
+        1105
+      ],
+      "sourceSha256": "9b8299793338292fd794511e9f5be712855f6fbc919bdccac9e19a3c62b00c5c",
+      "rgbaSha256": "d2271eb4cd1c5309d44d6a2150f0743961c584c386a4aad68cadf21bcae11236"
+    },
+    {
+      "key": "kirschtorte",
+      "category": "gastronomie",
+      "name": "Kirschtorte",
+      "widthMeters": 0.3,
+      "heightMeters": 0.3,
+      "file": "assets/gastronomie/kirschtorte.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "9f9f5f6102b430795e940232492c431a9e6c85d96d5fc35590618fd12e2baa8f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1200,
+        1254
+      ],
+      "sourceSha256": "694ff8b83fac3976fed4ac370ed3bc72fadf6ba0f636cc36c08133e81c3cdbe1",
+      "rgbaSha256": "4ebe48939faa1a9a1ef6863dcf15fb12bd7e04d598f019b1c8c93cf5b42b83c3"
+    },
+    {
+      "key": "aussenstuhl",
+      "category": "gastronomie",
+      "name": "Außenstuhl",
+      "widthMeters": 0.55,
+      "heightMeters": 0.55,
+      "file": "assets/gastronomie/aussenstuhl.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "a8ac8aa713901aadcf955a4777ffbb9f47a9f5cf7015c1b9e84734861c2e7cb1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        1240,
+        1254
+      ],
+      "sourceSha256": "bc61145eb7d0bdad4d38205235e18fa7da59de5ea3bece395c8bbdf082c99d7f",
+      "rgbaSha256": "7ce26fb317f989a3dc679f8589f108a65bec05b349fd1860da232ae0405e14f9"
+    },
+    {
+      "key": "abgenutzter-kneipentisch",
+      "category": "gastronomie",
+      "name": "Abgenutzter Kneipentisch",
+      "widthMeters": 1.2,
+      "heightMeters": 0.75,
+      "file": "assets/gastronomie/abgenutzter-kneipentisch.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "6db414791410a05dbde668c0e989df9f686dcf97a755c4d4ee235b62a4578b67",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        49,
+        9,
+        1514,
+        1024
+      ],
+      "sourceSha256": "77fb00eab4a6a48d8b5ce78cfb8a12fbd85553648eae1354ed1b8f4fd502f83f",
+      "rgbaSha256": "a0b6f749556285a7352b57e4a0b5e9d599cc096425d86ab9e54d08cac340f0a8"
+    },
+    {
+      "key": "abgenutzter-kneipenstuhl",
+      "category": "gastronomie",
+      "name": "Abgenutzter Kneipenstuhl",
+      "widthMeters": 0.5,
+      "heightMeters": 0.55,
+      "file": "assets/gastronomie/abgenutzter-kneipenstuhl.webp",
+      "pixelWidth": 1199,
+      "pixelHeight": 1312,
+      "mode": "RGBA",
+      "sha256": "c089e4ddd6a39e80261f53568c54cf0c96524b1171466a58c2c583817e575fa9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        31,
+        23,
+        1152,
+        1312
+      ],
+      "sourceSha256": "3a57c6acc6d2c87df9a5c9c166d1f6820290df1914a7655b173d7a38c57aaea4",
+      "rgbaSha256": "9c36c2973e4ad8aa84434b2cb7b7941701b8fb4260f6a6ae5a9a2fe0cf874a0d"
+    },
+    {
+      "key": "kuechenarbeitsinsel",
+      "category": "gastronomie",
+      "name": "Küchenarbeitsinsel",
+      "widthMeters": 2.4,
+      "heightMeters": 1,
+      "file": "assets/gastronomie/kuechenarbeitsinsel.webp",
+      "pixelWidth": 1672,
+      "pixelHeight": 941,
+      "mode": "RGBA",
+      "sha256": "7e5e799d930ceffc09b9ddabf5e3869c58d89759f6b92a735daeb7e50c7439de",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        2,
+        21,
+        1610,
+        941
+      ],
+      "sourceSha256": "0d55e4cc9dd0a7065832e5a48c03c718f364175183468c1b82eead6497e61ad1",
+      "rgbaSha256": "99426a64d36581dd7d6c343f02237f8fb266d3f04bfcb892d2ce0621367ebf2d"
+    },
+    {
+      "key": "vorratsregal",
+      "category": "gastronomie",
+      "name": "Vorratsregal",
+      "widthMeters": 1.8,
+      "heightMeters": 0.6,
+      "file": "assets/gastronomie/vorratsregal.webp",
+      "pixelWidth": 1952,
+      "pixelHeight": 806,
+      "mode": "RGBA",
+      "sha256": "3132234ac6da7666596a029826daff3ba4203a7b174a9110e0893c8e0f69c541",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        20,
+        1864,
+        786
+      ],
+      "sourceSha256": "02dfad4128bf5d01e931a97b6cad3ce00a297e8da43f9d6ee7ff7c45a347fa55",
+      "rgbaSha256": "6c8dbbcb636e699a74bcac2e9ce07064e87d27ebf7ef4f3f23995c437866f765"
+    },
+    {
+      "key": "kuechenzeile",
+      "category": "gastronomie",
+      "name": "Küchenzeile",
+      "widthMeters": 3,
+      "heightMeters": 0.65,
+      "file": "assets/gastronomie/kuechenzeile.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "f4b28289418f8fc46451ea884614bc1512aa883443e00d2cbddf74de16c11b51",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        65,
+        23,
+        2104,
+        710
+      ],
+      "sourceSha256": "e8c3de8f5b01a903df2f87238916790fd07865e3bdcdf52bb0104bd1f5e87fbe",
+      "rgbaSha256": "1eb938500d4676adfa2d5e7ce58cf3b655e8607d2ec1625d57c4d51a9a5ab444"
+    },
+    {
+      "key": "kuechenutensilien",
+      "category": "gastronomie",
+      "name": "Küchenutensilien",
+      "widthMeters": 0.5,
+      "heightMeters": 0.4,
+      "file": "assets/gastronomie/kuechenutensilien.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "2bbe27fa9f21167b055e1ecd7ad65e1971ecc1de1c7a31a6631c9efd92d16779",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        51,
+        1382,
+        1082
+      ],
+      "sourceSha256": "8ccfad7aeaf82c4148ac60abd771e166babd315d202842ba1e5c142a555a155c",
+      "rgbaSha256": "67cccca02678fdf692ce65cdccf2814de6e1f6685b3f38bcffb169f96edb9561"
+    },
+    {
+      "key": "geschirrschrank",
+      "category": "gastronomie",
+      "name": "Geschirrschrank",
+      "widthMeters": 1.4,
+      "heightMeters": 0.5,
+      "file": "assets/gastronomie/geschirrschrank.webp",
+      "pixelWidth": 2098,
+      "pixelHeight": 749,
+      "mode": "RGBA",
+      "sha256": "9f3e3284c8b1a5dcaa4a61dc6188cf496c3661bff3b787cb552e2b3e8c33f906",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        143,
+        42,
+        1955,
+        725
+      ],
+      "sourceSha256": "04970640f11445302bdc5e88b1226627209f0ca65395223b9b0f195e3ccfc2b4",
+      "rgbaSha256": "ccc58226f1da3b344f9e69c6e875ec1de78f9f5d57db8866163c1d06b52d701f"
+    },
+    {
+      "key": "servierwagen",
+      "category": "gastronomie",
+      "name": "Servierwagen",
+      "widthMeters": 0.8,
+      "heightMeters": 0.5,
+      "file": "assets/gastronomie/servierwagen.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "ce71b2ea5feccdf7772ddf94ddfb1adc0409f25d2d87a3934a76412497667810",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1522,
+        1024
+      ],
+      "sourceSha256": "e19de00f55b84c7d17215a59237cbee1d1adcd8bbd687a1be4d6f97c2bf7219f",
+      "rgbaSha256": "87e8a5f2cfc1aeff66bef24dccce79b45b03185c6979bf622cd8b6e6b999abb0"
+    },
+    {
+      "key": "mikrofon",
+      "category": "club",
+      "name": "Mikrofon",
+      "widthMeters": 0.25,
+      "heightMeters": 0.08,
+      "file": "assets/club/mikrofon.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "152e169a98878c04510506ff019affdf0e3afb8adb2a423927c1949ac0615f8e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        81,
+        25,
+        2156,
+        670
+      ],
+      "sourceSha256": "7a82a788fc7ad98dee34136c4ce3f4e67d96dc89766fbdc7d678a30ebb7ce4f7",
+      "rgbaSha256": "0ff19a8efcff8aaf41022b157639e0e1f66571a5d7664370347bd751e13fb600"
+    },
+    {
+      "key": "jukebox",
+      "category": "club",
+      "name": "Jukebox",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/club/jukebox.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "a482055cadf4a088cf562cad8482fb41f9877234ad6f96bcdd40e5529f7b6d46",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1394,
+        1086
+      ],
+      "sourceSha256": "36ec64e86ac3a82889cae2b22970cd07bca435739da9809081d49476d3329c29",
+      "rgbaSha256": "9ea6a9418f3cdb534aa221e4c62fbde41bf0c9bc40e4176ed755cfb8825e7243"
+    },
+    {
+      "key": "buehnenkulisse",
+      "category": "club",
+      "name": "Bühnenkulisse",
+      "widthMeters": 3,
+      "heightMeters": 0.3,
+      "file": "assets/club/buehnenkulisse.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "438da3faf778805a0c5d60f5440ab307cd95c4147647008972e82bb284b94524",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        111,
+        23,
+        2171,
+        682
+      ],
+      "sourceSha256": "b693b7b05f8b123c59106bdb7c977767ab50f0a1eca7d00ec9129dbe42fe95b8",
+      "rgbaSha256": "91b0d369442e6efb9638248e31ddc78080d2712f9b0706c9e2be01fd0093bc8c"
+    },
+    {
+      "key": "notenstaender",
+      "category": "club",
+      "name": "Notenständer",
+      "widthMeters": 0.5,
+      "heightMeters": 0.4,
+      "file": "assets/club/notenstaender.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "4add420c7cfe3278b07a6ce7242d28f1ca726ddefb36c80c36bd273d326d9e2d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        40,
+        1388,
+        1096
+      ],
+      "sourceSha256": "f6f89fb0d6b9c1fe628ba64ea40738691d73dcb68fe3376c8b9ddd902e55690d",
+      "rgbaSha256": "f0dde3e5010d223df992889941719d81d17bd91c75b501448e244195dbdb836e"
+    },
+    {
+      "key": "instrumentenkoffer",
+      "category": "club",
+      "name": "Instrumentenkoffer",
+      "widthMeters": 0.8,
+      "heightMeters": 0.3,
+      "file": "assets/club/instrumentenkoffer.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "e689b55418e9cfda1bb04bad8a2678560b385f0ca65fcbf8eb7d1472c48e1279",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        2,
+        21,
+        1744,
+        839
+      ],
+      "sourceSha256": "8527f985f267efa6268cc20e6a6d5257e347092d0132d9964fb214f75d286365",
+      "rgbaSha256": "c95d3e518a74a9f3c96a22274d8963429ff0cfb0393b82305e6888ee58a623d0"
+    },
+    {
+      "key": "kabelbruecke",
+      "category": "club",
+      "name": "Kabelbrücke",
+      "widthMeters": 1.5,
+      "heightMeters": 0.4,
+      "file": "assets/club/kabelbruecke.webp",
+      "pixelWidth": 2048,
+      "pixelHeight": 768,
+      "mode": "RGBA",
+      "sha256": "bafa5480252e4c7092849ca6d8aa615da551ae5c4db229facb992244face34b4",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        2048,
+        734
+      ],
+      "sourceSha256": "de7641c1e24b0461e8afdaffeb6290a823fa863cbec42deca655f9c2a12b2b0c",
+      "rgbaSha256": "87397823423630987e7ddc819280124a024766cda43ac32d9007fd0763b5c94b"
+    },
+    {
+      "key": "flightcase",
+      "category": "club",
+      "name": "Flightcase",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/club/flightcase.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "d7026b94d21de6a09550ac26243eb97ed3e3a13d85197fc82e49c0df8d6d47f2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1386,
+        1086
+      ],
+      "sourceSha256": "fe05008a5e09a0d5c308e5005fb75785c0fd6ee19782259f3871781e5de8e91b",
+      "rgbaSha256": "ebc1b7bda4c333805afd24d601df397d6d1ea501d2a594385298b805258c127a"
+    },
+    {
+      "key": "buehnenscheinwerfer",
+      "category": "club",
+      "name": "Bühnenscheinwerfer",
+      "widthMeters": 0.5,
+      "heightMeters": 0.4,
+      "file": "assets/club/buehnenscheinwerfer.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "8252800094aaf51375cd2898ad265052fe8dbe30a703be2b9b55240cf9250306",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        35,
+        1372,
+        1080
+      ],
+      "sourceSha256": "71e2bafde89586acfa2fa8717291c99b4a85c2a6e818587e9bba141087b736cf",
+      "rgbaSha256": "ced32eb34c6d8594a91bfcedc06fb5ce64fbe4ed39f96658b8357cd3387dd53f"
+    },
+    {
+      "key": "lichtmischpult",
+      "category": "club",
+      "name": "Lichtmischpult",
+      "widthMeters": 0.9,
+      "heightMeters": 0.5,
+      "file": "assets/club/lichtmischpult.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "a9e7758315f228045050b7be6c0d86e3d366c81897fc8385d86017d095331bab",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1526,
+        1024
+      ],
+      "sourceSha256": "ea14d34c38bb66f29566e29c7956afb889a528fcaa954916577516d1ba8d4cd1",
+      "rgbaSha256": "8becd69760bb3faf0803ffc29a6d9f75f989428508e3343fbee890a4438c8fe9"
+    },
+    {
+      "key": "tanzflaechenmodul",
+      "category": "club",
+      "name": "Tanzflächenmodul",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/club/tanzflaechenmodul.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "69677945ba158adbd8ffaf34cc682e42379135182f0d89860960164769adab3f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        29,
+        1208,
+        1230
+      ],
+      "sourceSha256": "ec74f7a762fa356547b63e3b1ae9711411daf47a74ce3d932419e83505777c90",
+      "rgbaSha256": "5c28ed92bd71bcd40c2aa6f5344b6ffc1e6685734dd0c778065bf2bddbc4735f"
+    },
+    {
+      "key": "reinigungswagen",
+      "category": "club",
+      "name": "Reinigungswagen",
+      "widthMeters": 0.8,
+      "heightMeters": 0.5,
+      "file": "assets/club/reinigungswagen.webp",
+      "pixelWidth": 1586,
+      "pixelHeight": 992,
+      "mode": "RGBA",
+      "sha256": "ead477abddc977b4dd9500ccc7eb1ee40c98b10d82897764676e415429001500",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        99,
+        21,
+        1562,
+        968
+      ],
+      "sourceSha256": "6d7b65ef97df26c9b812eac7c76ccef0632faa48d6a2df177ae6cd3c827cb434",
+      "rgbaSha256": "d0f18f67fa8d7057ba53cefc0f1dec6f71ea53b8c1feccec06003bd38b6fb7c2"
+    },
+    {
+      "key": "besen",
+      "category": "club",
+      "name": "Besen",
+      "widthMeters": 0.4,
+      "heightMeters": 1.4,
+      "file": "assets/club/besen.webp",
+      "pixelWidth": 793,
+      "pixelHeight": 1983,
+      "mode": "RGBA",
+      "sha256": "f88999ef559313b666fce2aff91a8b3adb304ab0c04fc364b130e38798431406",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        27,
+        793,
+        1983
+      ],
+      "sourceSha256": "809646eff504829ecad102cf636c70cb8bc8b9f18683e8552d06d0a4839f6bc1",
+      "rgbaSha256": "0fb6d1c3c5a81134d57a8d429ff04bca26ce1de401f9368bd15b719a8f8dddfd"
+    },
+    {
+      "key": "wischmopp",
+      "category": "club",
+      "name": "Wischmopp",
+      "widthMeters": 0.4,
+      "heightMeters": 1.4,
+      "file": "assets/club/wischmopp.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "369e5b37a9c1438cd475a1c26eaa15ca7f01f65ab8c97dd4ef5cf675d2108d41",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        193,
+        8,
+        962,
+        1474
+      ],
+      "sourceSha256": "38bd81fc8532afe2e4f755fb574c30bff8b8e355070144d7c8faeae7c3919077",
+      "rgbaSha256": "369aa2f77c31c5326efd8cd89014a1a62435fddf4d95b25a5d6a252a4bc8e623"
+    },
+    {
+      "key": "putzeimer",
+      "category": "club",
+      "name": "Putzeimer",
+      "widthMeters": 0.35,
+      "heightMeters": 0.3,
+      "file": "assets/club/putzeimer.webp",
+      "pixelWidth": 1355,
+      "pixelHeight": 1161,
+      "mode": "RGBA",
+      "sha256": "ca51438685fd46e3a9422bb5c39c0965c7d0f458b776b8db75fd7037d90aaf63",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1341,
+        1145
+      ],
+      "sourceSha256": "db389bf67123f0839a4d7558d96af7d34a218d352deb502f142f88b14ede6abf",
+      "rgbaSha256": "4afde1284d2858cd3dda0ebdfbb43812aa5021f58ec9b2dacf1c97bcd0986b1b"
+    },
+    {
+      "key": "trikothaken",
+      "category": "sport",
+      "name": "Trikothaken",
+      "widthMeters": 0.1,
+      "heightMeters": 0.1,
+      "file": "assets/sport/trikothaken.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "0f83a6a8b662885b2d31684a1c9249e9a5d155f29b9f3c4543cb08b5d6d50bfb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1208,
+        1228
+      ],
+      "sourceSha256": "be45372ed85d4ae47ee6743349e5c9e0e6e845fd491c8c076fa5f4eb468ba533",
+      "rgbaSha256": "f2a0345cc46dc9744c333a1c9afb28ff4fd8567437184b08cb1feacd939dc29e"
+    },
+    {
+      "key": "schuhablage",
+      "category": "sport",
+      "name": "Schuhablage",
+      "widthMeters": 1.2,
+      "heightMeters": 0.35,
+      "file": "assets/sport/schuhablage.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "32ceb9c80331302fcc392ac1eacad3f0693c7593b2ca1f61c93063b5c10db1ed",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        17,
+        2094,
+        684
+      ],
+      "sourceSha256": "0157e35dca2d5988ada780b8d86b366362465feae3f95470ff655257e2e58cb8",
+      "rgbaSha256": "92ecdeee6433d2b6805860d8f6f8a37f831b61f2ba994dba3f07a44b62c822b8"
+    },
+    {
+      "key": "trainingsmatte",
+      "category": "sport",
+      "name": "Trainingsmatte",
+      "widthMeters": 1.8,
+      "heightMeters": 0.65,
+      "file": "assets/sport/trainingsmatte.webp",
+      "pixelWidth": 1923,
+      "pixelHeight": 818,
+      "mode": "RGBA",
+      "sha256": "b0845f1fdd6301372190c28b4c109903bd829924883562472d449971bf6dfa09",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        95,
+        21,
+        1875,
+        818
+      ],
+      "sourceSha256": "6795cdcaefd2ed699b7465f78df86466fd81e10561978a3b7dfcfef9b27e5ebb",
+      "rgbaSha256": "be6cd337eb9ec485e3716ee62066eab92e2a8078bf803c1b7de694bc46584580"
+    },
+    {
+      "key": "ballwagen",
+      "category": "sport",
+      "name": "Ballwagen",
+      "widthMeters": 1.2,
+      "heightMeters": 0.7,
+      "file": "assets/sport/ballwagen.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "047778e75514f25592bb2e33b70d41d9f1b76f1c1522b55a1d2711705a247ad3",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        53,
+        0,
+        1522,
+        1000
+      ],
+      "sourceSha256": "1c1d13afda5d8fd75cc3151b9aa6392905f3a1044867392eb094960feed76a1a",
+      "rgbaSha256": "dd0241dc901fa3ccb2a6d84b93ef6e4e65ba9255d2a184bae3c493cbf7c8c80f"
+    },
+    {
+      "key": "minihuerde",
+      "category": "sport",
+      "name": "Minihürde",
+      "widthMeters": 0.6,
+      "heightMeters": 0.35,
+      "file": "assets/sport/minihuerde.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "be46dc932b15a8fe525d7d7e83747b41b2ec7cf3066ac712f4994b2a79c18c0b",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        89,
+        21,
+        1522,
+        982
+      ],
+      "sourceSha256": "916c91eec5c4a44a84ec25f973aceceada1b0bf9e402fd04550db5414f5dcd44",
+      "rgbaSha256": "5765c4e662b782f54c9732706d29a4b212147c75a0b795ca8b537ac560979b15"
+    },
+    {
+      "key": "auswechselbank",
+      "category": "sport",
+      "name": "Auswechselbank",
+      "widthMeters": 4,
+      "heightMeters": 1.2,
+      "file": "assets/sport/auswechselbank.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "2faa195b5c832ca737b727e456ad174d39dd8340f48014d9363cc9cdb9e890e4",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        25,
+        2129,
+        692
+      ],
+      "sourceSha256": "d933178e70ec0f14a7468d695a95cdcf110e3893d10eb87e1705facd6aecd3e1",
+      "rgbaSha256": "b4c3d6c0a9216d8e82a1575e7ad9068a5d85d4873a555e26a7d4942f57c663cc"
+    },
+    {
+      "key": "sporttasche",
+      "category": "sport",
+      "name": "Sporttasche",
+      "widthMeters": 0.6,
+      "heightMeters": 0.3,
+      "file": "assets/sport/sporttasche.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "3cd0f49f445c7a5512929cbe46659c5339d7dd37f2d90254428d9234c0fa4fa1",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        64,
+        1512,
+        1024
+      ],
+      "sourceSha256": "0b498ef2dbf0ddfdf33cb55121a05e0d748182b6a45009e1d47ab08010242ea4",
+      "rgbaSha256": "e6ecafdb4028c6b861f3824c74ead180f16f4a77d347a460e6e463e505829481"
+    },
+    {
+      "key": "trikot",
+      "category": "sport",
+      "name": "Trikot",
+      "widthMeters": 0.65,
+      "heightMeters": 0.75,
+      "file": "assets/sport/trikot.webp",
+      "pixelWidth": 1168,
+      "pixelHeight": 1347,
+      "mode": "RGBA",
+      "sha256": "7cfb1d9a68afe509861b5f39bb74c218e74d438acc0520ea37151c954cb0ee55",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        53,
+        1168,
+        1302
+      ],
+      "sourceSha256": "3f0534fefeb08c7d5b7b95966399b538081acac22a13aa8fd047a98d28705b16",
+      "rgbaSha256": "24ffc985e8919d35824c71d382eab6c0f72163ccffbab0b882b281822a576097"
+    },
+    {
+      "key": "pinnwand",
+      "category": "sport",
+      "name": "Pinnwand",
+      "widthMeters": 1.2,
+      "heightMeters": 0.8,
+      "file": "assets/sport/pinnwand.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "0926df28d07c1c36b03d568b7bb0e88c17f904e1fda58ec10de2f0e2e00d3e38",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        1458,
+        1024
+      ],
+      "sourceSha256": "50e1faa7704a4adaac932137315fb5aa1379ce7076b09bfe13b8355e89f8ff9e",
+      "rgbaSha256": "a1c812b589faeb3ee836077086dce02afb0f22a85ea731e1d051f6cfe8e925e2"
+    },
+    {
+      "key": "eckfahne",
+      "category": "sport",
+      "name": "Eckfahne",
+      "widthMeters": 0.45,
+      "heightMeters": 0.4,
+      "file": "assets/sport/eckfahne.webp",
+      "pixelWidth": 1312,
+      "pixelHeight": 1199,
+      "mode": "RGBA",
+      "sha256": "d70e4279c7542e6f650fbdb3e585d94751c7d888fe3d0f3d828b0581fee5a179",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        97,
+        21,
+        1234,
+        1159
+      ],
+      "sourceSha256": "3d4b48044ef320e15dd9961ad285be12ae511a47b65444dbd2234bcbf88efbb0",
+      "rgbaSha256": "f41187ce0a3f934c9ef1ca9f64f4b0f89178a74a0ac20201893b483a56c612d4"
+    },
+    {
+      "key": "hantelstaender",
+      "category": "sport",
+      "name": "Hantelständer",
+      "widthMeters": 1.8,
+      "heightMeters": 0.6,
+      "file": "assets/sport/hantelstaender.webp",
+      "pixelWidth": 2073,
+      "pixelHeight": 758,
+      "mode": "RGBA",
+      "sha256": "1b0a4b6de6aa18d6ccac70aa8e2d70c037575fe2780185ab1ecb239671eb5aa1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        21,
+        2059,
+        709
+      ],
+      "sourceSha256": "7465aa303055890334c2290f144dc4f7e31f92656764902e4cc4a779c1ffc68a",
+      "rgbaSha256": "93e9077d56bbed7aa21301e6fe20c51b9723809a29892722e600a87196f077c3"
+    },
+    {
+      "key": "ballkaefig",
+      "category": "sport",
+      "name": "Ballkäfig",
+      "widthMeters": 1.5,
+      "heightMeters": 0.8,
+      "file": "assets/sport/ballkaefig.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "bb9a7a27401415934d682ed387a7a887d5a6048ee0b4e07b821bf1e4bc84f246",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1536,
+        1024
+      ],
+      "sourceSha256": "4c0fec3d1a1917ad3a2e00ff9298eb353b3e0be9de437b955f99a55b1f058cf3",
+      "rgbaSha256": "0364bd4a57df38ddc1a018b1ddbd019b12298564eb8caabb38f52e7b1102e424"
+    },
+    {
+      "key": "klapp-minitor",
+      "category": "sport",
+      "name": "Klapp-Minitor",
+      "widthMeters": 1.8,
+      "heightMeters": 1,
+      "file": "assets/sport/klapp-minitor.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "f639503cb183ed494b104ecffbd227732399f07eed677871a9e72d6e8d8a9045",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        44,
+        21,
+        1488,
+        970
+      ],
+      "sourceSha256": "42d4c5850b8194478c2b747280eafd4db7620f4b60b0976478598170be8058ae",
+      "rgbaSha256": "052d6afc23dc15926e3d769834e531673699b7b0188a9045b0332708aa948da6"
+    },
+    {
+      "key": "huerdenregal",
+      "category": "sport",
+      "name": "Hürdenregal",
+      "widthMeters": 1.5,
+      "heightMeters": 0.7,
+      "file": "assets/sport/huerdenregal.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "dce9dd23e930113ebc129d5980df96a43eb4814a47d9a2ef3a2ab2620796be79",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        91,
+        101,
+        1491,
+        951
+      ],
+      "sourceSha256": "bde14d599c4a76d161f6c3c59490e5a427f480ced80dc7876f6cd5db843ce195",
+      "rgbaSha256": "69af8ee06c07be414006bb76b0ab40e9b3838379a29d79a834332ea8f38c378e"
+    },
+    {
+      "key": "besprechungsdisplay",
+      "category": "sport",
+      "name": "Besprechungsdisplay",
+      "widthMeters": 1.2,
+      "heightMeters": 0.7,
+      "file": "assets/sport/besprechungsdisplay.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "6e7920a5e85ee381ac10cd19ab0c47d7d0e57207afea75e93456a75b8c4561bc",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        3,
+        1464,
+        945
+      ],
+      "sourceSha256": "6d3e36fb012c691a0db26c246992e920f50ee0a3cbbda9a0c0ee3b196c11993b",
+      "rgbaSha256": "1929cdaa5ef36d979dd96cf6cd6aa0745769e6163237ee1294d0e7eeb817b575"
+    },
+    {
+      "key": "duschkopf",
+      "category": "sport",
+      "name": "Duschkopf",
+      "widthMeters": 0.2,
+      "heightMeters": 0.2,
+      "file": "assets/sport/duschkopf.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "3471454a5e8feda253e5cc3f5c4c10a01e02df7d61aed1f11a4810816b6b4908",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        97,
+        33,
+        1192,
+        1222
+      ],
+      "sourceSha256": "49d3b610f8a45f1d2104f7e07da4e230bd60efa94615ce10b64eb32603609e97",
+      "rgbaSha256": "458b329b2eb18172a130eeaa000864061cbe2032b7d1b2a4fd906394b834734d"
+    },
+    {
+      "key": "garderobenhaken",
+      "category": "wohnen",
+      "name": "Garderobenhaken",
+      "widthMeters": 0.15,
+      "heightMeters": 0.1,
+      "file": "assets/wohnen/garderobenhaken.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "fe4aba3032caff168bcd865b5cec7ed6b3120c2efb30308e151fd8a362f80490",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        289,
+        21,
+        1522,
+        968
+      ],
+      "sourceSha256": "cf19121ebf054c84df5bba5094d7582841fdb034f15e2d315e42d2c7ef7da697",
+      "rgbaSha256": "c7a2450e8b9b4521e7f124d1548ecba046caf6ea674c10a2eee5db870aaf74ef"
+    },
+    {
+      "key": "waschmaschine",
+      "category": "wohnen",
+      "name": "Waschmaschine",
+      "widthMeters": 0.6,
+      "heightMeters": 0.65,
+      "file": "assets/wohnen/waschmaschine.webp",
+      "pixelWidth": 1320,
+      "pixelHeight": 1191,
+      "mode": "RGBA",
+      "sha256": "1bfd1e4e5bc3db63a4c99b67485fbf48c367bcf6cff5ff9df567833381e56eb7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1311,
+        1152
+      ],
+      "sourceSha256": "fcc0a1af178562b97de050cdb6fd329900736422340a7e7d31e6576751efc096",
+      "rgbaSha256": "caf847534694ab996986d4f9a5aadceafc708635c087276f1734a61fedfd4b68"
+    },
+    {
+      "key": "trockner",
+      "category": "wohnen",
+      "name": "Trockner",
+      "widthMeters": 0.6,
+      "heightMeters": 0.65,
+      "file": "assets/wohnen/trockner.webp",
+      "pixelWidth": 1312,
+      "pixelHeight": 1199,
+      "mode": "RGBA",
+      "sha256": "8f0c259b113e26b6ad9071d1918172322b6269b9780ede734d66a75d7497a039",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        71,
+        16,
+        1292,
+        1161
+      ],
+      "sourceSha256": "fb5d6a16f1ac6771146d984a1a421af8bea6c1891d8cbba542c43754f1668c3b",
+      "rgbaSha256": "8c4034f33347c3df1ab9655b2bdc4cc4b354351a336e9a9ff884709431f116a9"
+    },
+    {
+      "key": "waeschewagen",
+      "category": "wohnen",
+      "name": "Wäschewagen",
+      "widthMeters": 1,
+      "heightMeters": 0.6,
+      "file": "assets/wohnen/waeschewagen.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "242d84d21e97df263da2f6a6f1886c7786368cecc66847d04a7dea3dc62f1e68",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        78,
+        9,
+        1526,
+        1024
+      ],
+      "sourceSha256": "31b24cc106f0a5e0877ce4876315e26d630215014c90033b8d5899941fae6431",
+      "rgbaSha256": "9bd9c44bc77d9947880741772f1559bd6577e3e143cdcdcb6868a246df9d3c40"
+    },
+    {
+      "key": "leselampe",
+      "category": "wohnen",
+      "name": "Leselampe",
+      "widthMeters": 0.4,
+      "heightMeters": 0.4,
+      "file": "assets/wohnen/leselampe.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "0e71de8488f13a63aeeaacb23a4d272834cb38a1b2e59715166d56d55aaf5d07",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        17,
+        21,
+        1241,
+        1228
+      ],
+      "sourceSha256": "7f1a55dc98ed971426c10ba6130f1470a1615c37a3b394b23ae0a61a95782f2c",
+      "rgbaSha256": "cc8c7a40be60ddbe6d59c93aa971a6d382934c1db5b3099fba571cba5c3559f7"
+    },
+    {
+      "key": "leinwand",
+      "category": "wohnen",
+      "name": "Leinwand",
+      "widthMeters": 2.4,
+      "heightMeters": 0.2,
+      "file": "assets/wohnen/leinwand.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "d101e4ef3d87a834f74e27e10042795e33b9dd4f30592b4e6d6aae7f916a8541",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        35,
+        32,
+        1502,
+        952
+      ],
+      "sourceSha256": "cb4bcb2502487eb3d2a99486ad676b340c838ec9c884637655010e59a16bf940",
+      "rgbaSha256": "16a55d55b71e8efe4fae3e702d8c61ae6207532dd1c0d97bd5cab265bdb223f2"
+    },
+    {
+      "key": "projektor",
+      "category": "wohnen",
+      "name": "Projektor",
+      "widthMeters": 0.4,
+      "heightMeters": 0.3,
+      "file": "assets/wohnen/projektor.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "9f1974c773f882b35b1849597f1d12e649a5ca54eacb699c6858f3d92e2c411a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        89,
+        39,
+        1402,
+        1086
+      ],
+      "sourceSha256": "5da97dafb57d9fdb8162f398201538eb8e4f1a9c21fc93dbb8a0d48214370089",
+      "rgbaSha256": "8c001a1bd97054cfc4889bc70cf113cbc6208acdf1b578ca197bdfdc3dc70fb0"
+    },
+    {
+      "key": "kinosessel",
+      "category": "wohnen",
+      "name": "Kinosessel",
+      "widthMeters": 0.8,
+      "heightMeters": 0.9,
+      "file": "assets/wohnen/kinosessel.webp",
+      "pixelWidth": 1234,
+      "pixelHeight": 1275,
+      "mode": "RGBA",
+      "sha256": "4990d4b718502ad63f6662952d7534fe08d054e78889066d7cdc869bd65afd1b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1172,
+        1275
+      ],
+      "sourceSha256": "0d3367b8e9536f859f006bee722c15e56a66f9f32dce9f3c74a65b079dffb3d4",
+      "rgbaSha256": "bdb1429e284f0a3cf731704a37d193f19b7a076c2fa2ee1075d6e45960ea0dbc"
+    },
+    {
+      "key": "nachttisch",
+      "category": "wohnen",
+      "name": "Nachttisch",
+      "widthMeters": 0.5,
+      "heightMeters": 0.4,
+      "file": "assets/wohnen/nachttisch.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "7554939e80ce5d71ed7220104ee419cf33a9fe84741ba625ac84454f8313d43f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1273,
+        1060
+      ],
+      "sourceSha256": "ec1df891e818dcb04a5464b5cfb6e619281e1ad20f73f29fa4ac7f43ca6d1983",
+      "rgbaSha256": "2907ecf0debfc3f07ef2eb36bcaba5cc15c720a2013cefeff94cda507bd504d8"
+    },
+    {
+      "key": "laterne",
+      "category": "wohnen",
+      "name": "Laterne",
+      "widthMeters": 0.3,
+      "heightMeters": 0.3,
+      "file": "assets/wohnen/laterne.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "d80b7201c084606e07f22c91b22821b4c6a209df0d5747b4123dbb6566d50ee5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        55,
+        53,
+        1208,
+        1236
+      ],
+      "sourceSha256": "2bd869b61b8a7dd365362fd20d61b7a5746f807b5fa8562a7023d9d734c7ba71",
+      "rgbaSha256": "ba706cbb202687cbbe10d4c89edcf8f2b79e397bd742f6d6fb3f6f7e24a780bd"
+    },
+    {
+      "key": "schmaler-schrank",
+      "category": "wohnen",
+      "name": "Schmaler Schrank",
+      "widthMeters": 0.6,
+      "heightMeters": 0.4,
+      "file": "assets/wohnen/schmaler-schrank.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "0d04b7a00335190b90b94b08482329942893d7651c76c96cbe764a6891e00e22",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        177,
+        32,
+        1522,
+        974
+      ],
+      "sourceSha256": "c58a8ecdec8e03e0575d7355651652d2f4c5244a32e5addebdc6a8d6e837b2e1",
+      "rgbaSha256": "223b14421816dfde9dce87512c126a13512b27a31aef1915f11a6a91bf104d2a"
+    },
+    {
+      "key": "einzelbuch",
+      "category": "wohnen",
+      "name": "Einzelbuch",
+      "widthMeters": 0.22,
+      "heightMeters": 0.16,
+      "file": "assets/wohnen/einzelbuch.webp",
+      "pixelWidth": 1470,
+      "pixelHeight": 1070,
+      "mode": "RGBA",
+      "sha256": "a00e8387031deeca22ebc71575443c705a539b247cf8061a84a183a0beae794c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        41,
+        21,
+        1426,
+        1046
+      ],
+      "sourceSha256": "5164927338ff01f1a69bd03c65cf3597244f07ca6b05afe972472e22244bbc14",
+      "rgbaSha256": "40092d0045b582972d82eb67d65191e596fa5c6465d7877594cb3860fd4fd588"
+    },
+    {
+      "key": "buecherstapel",
+      "category": "wohnen",
+      "name": "Bücherstapel",
+      "widthMeters": 0.3,
+      "heightMeters": 0.25,
+      "file": "assets/wohnen/buecherstapel.webp",
+      "pixelWidth": 1374,
+      "pixelHeight": 1145,
+      "mode": "RGBA",
+      "sha256": "6f50fd235f597e3db78613163aa825cb1b61138bb5685d1ec220cbaa444b1d35",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        45,
+        17,
+        1338,
+        1145
+      ],
+      "sourceSha256": "e567e57c5257c44d43299c9efaa3b5a3c4725bf52232ddf422519b840244c290",
+      "rgbaSha256": "983f2303f3ef722929b26f18e1d1c447ce1768e93929e20efc8e76d5aead32f2"
+    },
+    {
+      "key": "etagenbett",
+      "category": "wohnen",
+      "name": "Etagenbett",
+      "widthMeters": 2.1,
+      "heightMeters": 1,
+      "file": "assets/wohnen/etagenbett.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "1ad09b4012c945b4d7a6dd6c0e0d0008d2a5fafe76b0fe3defdc18eadbfbe234",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        249,
+        23,
+        1687,
+        851
+      ],
+      "sourceSha256": "5945d3e42218166a11118f8655eac464a4c58f1d755c4f7e1553fc7cb45e88cb",
+      "rgbaSha256": "c610c5398bf4bcf2a94a60ff8ed998ec066e91447b60bb888ea0838b59f6adff"
+    },
+    {
+      "key": "schultasche",
+      "category": "wohnen",
+      "name": "Schultasche",
+      "widthMeters": 0.4,
+      "heightMeters": 0.3,
+      "file": "assets/wohnen/schultasche.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "24611abbd38113d57d5170060ba362d2ca44294333d94a5ee8611bbf00b6adeb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        52,
+        1297,
+        1076
+      ],
+      "sourceSha256": "8d81142ad29a71312d7a86edea26a47a506087180a6a069e69bce86416c371fb",
+      "rgbaSha256": "de4fc26e9e9e0e54fd720eaf2ea3904d8a301557273497ede24c78bb58b986a2"
+    },
+    {
+      "key": "spielzeugauto",
+      "category": "wohnen",
+      "name": "Spielzeugauto",
+      "widthMeters": 0.2,
+      "heightMeters": 0.1,
+      "file": "assets/wohnen/spielzeugauto.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "7b2039df3694dd4c0c145b944950bcc737e07edc6d28071a908c0615494b3625",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        408,
+        37,
+        1502,
+        851
+      ],
+      "sourceSha256": "9bcb0ffb69edbce5b112c3328e907b624900b9908b10c0ef2e5516c9a801968e",
+      "rgbaSha256": "2b76c6ff9b3a9332b7e997f8a238174a7967cf5b0d8713d82d679ac7743f1a1d"
+    },
+    {
+      "key": "teddybaer",
+      "category": "wohnen",
+      "name": "Teddybär",
+      "widthMeters": 0.35,
+      "heightMeters": 0.45,
+      "file": "assets/wohnen/teddybaer.webp",
+      "pixelWidth": 1101,
+      "pixelHeight": 1428,
+      "mode": "RGBA",
+      "sha256": "a0982199d91be079eddb195dc5776148477301a83467550a3758006c6dba58ca",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        37,
+        1081,
+        1428
+      ],
+      "sourceSha256": "fdef0d5f12d3a474d029b6d93c1c657a7d2b12f337a5cf9e9022ae4e21926ade",
+      "rgbaSha256": "b2b47e0235c5765184b4010c8e0754f6f1493273bedd31cfbe159bb532b834b9"
+    },
+    {
+      "key": "waeschestapel",
+      "category": "wohnen",
+      "name": "Wäschestapel",
+      "widthMeters": 0.5,
+      "heightMeters": 0.4,
+      "file": "assets/wohnen/waeschestapel.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "8b827b30454a69e1e6a0b00b7a1ba77105b48254932e6c832a367a6b9c216ef7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1388,
+        1096
+      ],
+      "sourceSha256": "c105328856f30362d2a4bf25ae1cdb6f9cf2f383d3f94335caad527f3c2c3e04",
+      "rgbaSha256": "f31449a8eb4672a0017d32a7df170a7baac24d009093131f2562603b27a7d4b0"
+    },
+    {
+      "key": "improvisierte-ablage",
+      "category": "wohnen",
+      "name": "Improvisierte Ablage",
+      "widthMeters": 1.2,
+      "heightMeters": 0.4,
+      "file": "assets/wohnen/improvisierte-ablage.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "fb23863895a6e9f4e9ce3cf3b01382c773393660458da9785ab46cc5ace4009e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        2,
+        21,
+        1744,
+        845
+      ],
+      "sourceSha256": "1cc46abdd091c12a5dbd058656cbc3488617d91376e1fb6c6530483c83850f20",
+      "rgbaSha256": "beda1df176a6591a8a8b3325265d247127c534c15b70d3187cf930f8b6068308"
+    },
+    {
+      "key": "ar-brille",
+      "category": "wohnen",
+      "name": "AR-Brille",
+      "widthMeters": 0.18,
+      "heightMeters": 0.16,
+      "file": "assets/wohnen/ar-brille.webp",
+      "pixelWidth": 1330,
+      "pixelHeight": 1182,
+      "mode": "RGBA",
+      "sha256": "c48067da93e7506bacaa29c22870e21bd1a0fb841ed6826e55e4ca675ee67df1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        53,
+        1218,
+        1113
+      ],
+      "sourceSha256": "523af1a306821101cc47b0b0fff20c0e5a992c2fb504d1c06a78818dc8f7de42",
+      "rgbaSha256": "ddb03d6228989a6c69cc33dfde8a723f7c2dc8109541198a49229958b5ca1115"
+    },
+    {
+      "key": "ar-handschuh",
+      "category": "wohnen",
+      "name": "AR-Handschuh",
+      "widthMeters": 0.12,
+      "heightMeters": 0.25,
+      "file": "assets/wohnen/ar-handschuh.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "c15230e37024637f67c99b9ea63b8d6db56621a52fd9e2441816ebdb99cc8fd6",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        72,
+        15,
+        1002,
+        1494
+      ],
+      "sourceSha256": "3e7de5556c357f63e21deaf4bf6140e636af684be34901d18c310e4e6fea129a",
+      "rgbaSha256": "f302d1fbbd3c08852cbe93a0c03f8b13579d9894b029429d3839d58621b96678"
+    },
+    {
+      "key": "beistelltisch",
+      "category": "wohnen",
+      "name": "Beistelltisch",
+      "widthMeters": 0.55,
+      "heightMeters": 0.55,
+      "file": "assets/wohnen/beistelltisch.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "a0174b475d38c1dab78f4cd1473832ba6013294eb5cfe57164d91847373a56c1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        103,
+        51,
+        1222,
+        1198
+      ],
+      "sourceSha256": "d5025c5131654fab435e0294e5c7ac5b305bc8ffccad34586503f07ce673664f",
+      "rgbaSha256": "56f99bd64ae4e9bc0df0e172f0de60b834b3ea509d2ccf1992345713a3bb0ab0"
+    },
+    {
+      "key": "picknickkorb",
+      "category": "wohnen",
+      "name": "Picknickkorb",
+      "widthMeters": 0.5,
+      "heightMeters": 0.35,
+      "file": "assets/wohnen/picknickkorb.webp",
+      "pixelWidth": 1482,
+      "pixelHeight": 1062,
+      "mode": "RGBA",
+      "sha256": "a1e355b2193fcf6c3676e008b55b575f0068ef68b173fd1b6f91e226d9cb1054",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        73,
+        1436,
+        1062
+      ],
+      "sourceSha256": "3b6f701aec21174872869ef1b50783567c71adafaeedbc94a00d970e5eb25838",
+      "rgbaSha256": "2c321e87b3ddfaea33125b5856abcc5c7fce872b50e55d3e78f765728bdb150a"
+    },
+    {
+      "key": "picknickdecke",
+      "category": "wohnen",
+      "name": "Picknickdecke",
+      "widthMeters": 2,
+      "heightMeters": 1.5,
+      "file": "assets/wohnen/picknickdecke.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "ee5856e168560e2b2b41ec8ae9b89a4eff6ad9637c15848c5b915591da8f0a51",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1428,
+        1086
+      ],
+      "sourceSha256": "17f0a357a0fbeb41942ddb46454cd9dff5913318ad5a50090a9b4b6c2577f476",
+      "rgbaSha256": "1df9bedd5d629f0f46f4e03fe7478636cb4a792732cf071dda8cd93296f05127"
+    },
+    {
+      "key": "kartenterminal",
+      "category": "buero_medizin",
+      "name": "Kartenterminal",
+      "widthMeters": 0.18,
+      "heightMeters": 0.1,
+      "file": "assets/buero_medizin/kartenterminal.webp",
+      "pixelWidth": 1672,
+      "pixelHeight": 941,
+      "mode": "RGBA",
+      "sha256": "f26866d322b0b3667c590a507d5bc23ee576027218e03a2305cb8cb395ada1cd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        35,
+        1485,
+        923
+      ],
+      "sourceSha256": "dd4428db972c1f296079b3370e1a675bdc29264e3f1138cd7b5ca8fcb71aed2f",
+      "rgbaSha256": "24ad4370bb70bcde031ae326b0cfb43e09a906f48ea3e14225bc059348496023"
+    },
+    {
+      "key": "medizinischer-rollhocker",
+      "category": "buero_medizin",
+      "name": "Medizinischer Rollhocker",
+      "widthMeters": 0.5,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/medizinischer-rollhocker.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "20dc19d16bc2e0ea160c677be599832f870f1a41ce621365a0a49c94b6a16d67",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        103,
+        29,
+        1192,
+        1214
+      ],
+      "sourceSha256": "f8178eca737d1ef03202720fca2b8fcf2ff0a7cb902877f87d307246b117fd10",
+      "rgbaSha256": "f8f308760af45c0d2dfcb06ccfbebafbd104b1c1b63a807c9c8cd7f7c749fb66"
+    },
+    {
+      "key": "diagnostikgeraet",
+      "category": "buero_medizin",
+      "name": "Diagnostikgerät",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/diagnostikgeraet.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "f1f89b9ef549e7885cef024e7b7141d89d38a3b0c8d0fc8c61b14c54ebde609e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        32,
+        1414,
+        1054
+      ],
+      "sourceSha256": "ed2e264db1a0b18c6fd51cfc19e0da33e7373a0a2c7d87ea09fe1711146c5824",
+      "rgbaSha256": "8abf79cc2c46bb74793c8d29b96b5c47f41f096b0907cac913c38b92e9fa3d6c"
+    },
+    {
+      "key": "laborarbeitsplatte",
+      "category": "buero_medizin",
+      "name": "Laborarbeitsplatte",
+      "widthMeters": 2,
+      "heightMeters": 0.7,
+      "file": "assets/buero_medizin/laborarbeitsplatte.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "15bce53278a1257f02a9f81f9786e853ef317f56aa619f7a4addde31696c4afe",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        45,
+        23,
+        1754,
+        847
+      ],
+      "sourceSha256": "0b7b55d2d142e2e8eb155c0ead91fe812d362adfcec3b9a0d2a64357db4b5abd",
+      "rgbaSha256": "7e4599192f20cca4b3d02c4005dea781f6660661363d7eb9bdf5deb34fdd8919"
+    },
+    {
+      "key": "probenkuehlschrank",
+      "category": "buero_medizin",
+      "name": "Probenkühlschrank",
+      "widthMeters": 0.6,
+      "heightMeters": 0.65,
+      "file": "assets/buero_medizin/probenkuehlschrank.webp",
+      "pixelWidth": 1319,
+      "pixelHeight": 1193,
+      "mode": "RGBA",
+      "sha256": "62026403348ceaad6344cf2435d7d51c94c67bd1e0d22964848e46844ca91c7e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        81,
+        19,
+        1289,
+        1127
+      ],
+      "sourceSha256": "51e0680f61ebcd9ab33a4dfe80419e02e498f879db3f701a4a363d75ccdda0f3",
+      "rgbaSha256": "2343817fc06af7dc457343596660956c89936e0a41b609bdbb204656788f634b"
+    },
+    {
+      "key": "aktenregal",
+      "category": "buero_medizin",
+      "name": "Aktenregal",
+      "widthMeters": 1.8,
+      "heightMeters": 0.4,
+      "file": "assets/buero_medizin/aktenregal.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "5eb887bc0960526ee60997ad53867522bbe177609667e326a08b9e233da95088",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        2167,
+        724
+      ],
+      "sourceSha256": "901376b9a24c592f7305af55cc8f4c5f3c0c8bd632318304c79bccdab0e8d78c",
+      "rgbaSha256": "f1c0d316c77ba26af0cd84eb86b2f775d09790f22d9feaa7079204d269165a9b"
+    },
+    {
+      "key": "papierstapel",
+      "category": "buero_medizin",
+      "name": "Papierstapel",
+      "widthMeters": 0.3,
+      "heightMeters": 0.22,
+      "file": "assets/buero_medizin/papierstapel.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "bd34b423228c0d2d415aec18560bf7ea1806be0de12c2d6e0ae8180fcc901df0",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        21,
+        1410,
+        1070
+      ],
+      "sourceSha256": "c7b20d7e0f854f22e5373eeaead36ff310c85dc973e63bde4ae5a6d0a68d9ec2",
+      "rgbaSha256": "390898583dfa70b023c67fa820a0c579c06b517335b750ab312277633c118f6e"
+    },
+    {
+      "key": "drucker",
+      "category": "buero_medizin",
+      "name": "Drucker",
+      "widthMeters": 0.5,
+      "heightMeters": 0.45,
+      "file": "assets/buero_medizin/drucker.webp",
+      "pixelWidth": 1315,
+      "pixelHeight": 1196,
+      "mode": "RGBA",
+      "sha256": "d25dd2a007633f9c486be1f703049e2bd0b5cd2a1cba53068ff96679c75f0b40",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        78,
+        54,
+        1272,
+        1158
+      ],
+      "sourceSha256": "4a598f0cd5d12bd513d0bbc97ac51bda74b28a16110ca516f06f566994fb22f5",
+      "rgbaSha256": "3d68f4df6c17df7dd2f23c33bbdcf4f93e63f8ff4a1ddccdb110c84d4ca7d08a"
+    },
+    {
+      "key": "wartezimmerstuhl",
+      "category": "buero_medizin",
+      "name": "Wartezimmerstuhl",
+      "widthMeters": 0.55,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/wartezimmerstuhl.webp",
+      "pixelWidth": 1278,
+      "pixelHeight": 1230,
+      "mode": "RGBA",
+      "sha256": "b22bb7ea1b01f93a0e914f910c3d3fc6988f156f6f767babd5ea45d46b23e722",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1256,
+        1214
+      ],
+      "sourceSha256": "706736848c33a2f7c3a9537eb67a96d8ace02f62a7a34d4413b242e59fc997f8",
+      "rgbaSha256": "f712c02ee5e6cb0169e04d3ee0dfcd68876fa70cec08d54ce77d01260595f12a"
+    },
+    {
+      "key": "besucherbank",
+      "category": "buero_medizin",
+      "name": "Besucherbank",
+      "widthMeters": 1.8,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/besucherbank.webp",
+      "pixelWidth": 1988,
+      "pixelHeight": 791,
+      "mode": "RGBA",
+      "sha256": "03f77c5ba6b473e567d2ec95b7a8527eb3e5f8d7d313bddccafc128e558d5902",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        27,
+        1918,
+        791
+      ],
+      "sourceSha256": "f794144dd9a4f01236bfeaab83fa92dc1c6b6b70d035d911e467b29ee38b43b4",
+      "rgbaSha256": "84aa44749c897dec285f0da0f52b2b272ef518d251140a5f38f87374e2732305"
+    },
+    {
+      "key": "besucherstuhl",
+      "category": "buero_medizin",
+      "name": "Besucherstuhl",
+      "widthMeters": 0.55,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/besucherstuhl.webp",
+      "pixelWidth": 1199,
+      "pixelHeight": 1312,
+      "mode": "RGBA",
+      "sha256": "2e1118160e6512fb33cc6a0801018a7e17e82b1172fa67b91bb087c32d9c2b4d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        77,
+        1130,
+        1312
+      ],
+      "sourceSha256": "74f1935c5a1ef09c12c763fe8875e943f17a4cb72dd10a8f2d72000c49e933e5",
+      "rgbaSha256": "17e9f77e91dc741e2d69bbb151c8ad8ed532a66270494165808ff89d411bd74b"
+    },
+    {
+      "key": "funkgeraet",
+      "category": "buero_medizin",
+      "name": "Funkgerät",
+      "widthMeters": 0.25,
+      "heightMeters": 0.2,
+      "file": "assets/buero_medizin/funkgeraet.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "d96033810f324602ddfa7f4d5693d5b71eb31c227d717c372fa12b51e8e77bae",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1388,
+        1066
+      ],
+      "sourceSha256": "3a3e1f2c65d07fd8f45e8ef122a207467dbb34ca251fc2a456404a79b8daa31d",
+      "rgbaSha256": "6af8ffb3c2e02350b5fba6aa54553103eea7892d7ca5cf0b748845c2b86d7d7e"
+    },
+    {
+      "key": "funkarbeitsplatz",
+      "category": "buero_medizin",
+      "name": "Funkarbeitsplatz",
+      "widthMeters": 1.6,
+      "heightMeters": 0.8,
+      "file": "assets/buero_medizin/funkarbeitsplatz.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "a9bc48ff51b7fae00a029123562d1798dc4c0e6a173d1001528424fc99f8c500",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        150,
+        0,
+        1760,
+        887
+      ],
+      "sourceSha256": "c8c253cf3d3c5bc57b791291c0d6dc441cc7e2ba57c5eb8be722e927ec3e5f44",
+      "rgbaSha256": "2691713db1f4373f49d38fa32bc2a86430cff99249b1f20a4bd292fc47015ddd"
+    },
+    {
+      "key": "sicherheitsspind",
+      "category": "buero_medizin",
+      "name": "Sicherheitsspind",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/sicherheitsspind.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "ad11037e7edc4add669e4035ecdc9bb4dd9f01136ce3b52c15aadbd3297927b5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        143,
+        58,
+        1272,
+        1048
+      ],
+      "sourceSha256": "7aa055abddf02a24c89b2a1aee0ef1040763029f921a9d09d472f7496344c446",
+      "rgbaSha256": "bf2f82201b226172f0b270e6ad05fa0855dfadac77d801b5ef09626cf9a0e3d6"
+    },
+    {
+      "key": "kliniknachtschrank",
+      "category": "buero_medizin",
+      "name": "Kliniknachtschrank",
+      "widthMeters": 0.5,
+      "heightMeters": 0.45,
+      "file": "assets/buero_medizin/kliniknachtschrank.webp",
+      "pixelWidth": 1315,
+      "pixelHeight": 1196,
+      "mode": "RGBA",
+      "sha256": "6d14aa0627bc82388ef3beaad7ba06360aaf5ab3c971767489cdd24c1ad2e90d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        91,
+        102,
+        1195,
+        1156
+      ],
+      "sourceSha256": "0f6262f75eb2bb8029b827ab6b58a31832bde7db2da9ce42ba62b6157717d04e",
+      "rgbaSha256": "6d6539816ac4a0875e9465902cc11ee940e4dd620e78e4d6ad8856a4fd0cbfd9"
+    },
+    {
+      "key": "patientenmonitor",
+      "category": "buero_medizin",
+      "name": "Patientenmonitor",
+      "widthMeters": 0.4,
+      "heightMeters": 0.3,
+      "file": "assets/buero_medizin/patientenmonitor.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "8d47dd84ee75f1e5c3ad4dee41a65693f88d7535d0428a149991433c6c2b4894",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        20,
+        1408,
+        1048
+      ],
+      "sourceSha256": "b038b205e5bd57ed53b8f611b543147ab677607b5527fa4670098974cd2208cc",
+      "rgbaSha256": "2245c02ec7f76d11586858a8dc744d6bdc6208508e33f6204cadbefabb892473"
+    },
+    {
+      "key": "infusionsstaender",
+      "category": "buero_medizin",
+      "name": "Infusionsständer",
+      "widthMeters": 0.5,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/infusionsstaender.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "838e5a79dfbddf1016e330f7c50b8929787ca57d56b499e344d8223c3c891e77",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        21,
+        1224,
+        1228
+      ],
+      "sourceSha256": "d933b2fbcb7b32b52489af33ecbc255b06cc20f528088600144b73131af783b9",
+      "rgbaSha256": "c84573c566deca71914fa152752f2fcd135ffdc5f6f6f2f59dc7820b58ca5232"
+    },
+    {
+      "key": "pflegewagen",
+      "category": "buero_medizin",
+      "name": "Pflegewagen",
+      "widthMeters": 0.8,
+      "heightMeters": 0.5,
+      "file": "assets/buero_medizin/pflegewagen.webp",
+      "pixelWidth": 1586,
+      "pixelHeight": 992,
+      "mode": "RGBA",
+      "sha256": "06ddca317c46f1697ede0c99943af3d2d852294b9bb2d88daf0a5307afcf5bb6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        87,
+        21,
+        1456,
+        966
+      ],
+      "sourceSha256": "d797221cb26d2ecb87b0e90ce29f7f94ea4f7a9f0ed20693ff133cdcc8d08e55",
+      "rgbaSha256": "09ee40c29e0999530a8ab668edb28d841003d48044d8f2d40848ac8b5fd5752f"
+    },
+    {
+      "key": "ar-uebertragungstechnik",
+      "category": "buero_medizin",
+      "name": "AR-Übertragungstechnik",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/buero_medizin/ar-uebertragungstechnik.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "829c644fafd85c6d8ea9dc2235a1af81e2368043596d16fd41eabc16eb5b6915",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        35,
+        1435,
+        1029
+      ],
+      "sourceSha256": "2f9b2c3384705599f0504b82766139ac62b4f193bd59a600549361451a0451a9",
+      "rgbaSha256": "3dad6f270de1ce1b57af7f7d486a92e03d26abd47b47ff0ff073246c01283c08"
+    },
+    {
+      "key": "werkzeugwand",
+      "category": "industrie_verkehr",
+      "name": "Werkzeugwand",
+      "widthMeters": 1.6,
+      "heightMeters": 0.2,
+      "file": "assets/industrie_verkehr/werkzeugwand.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "dfa03412ba7d73c514879d8e734876beb7c9bc1dc4c96368d865ea46e144cf48",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        47,
+        7,
+        2125,
+        660
+      ],
+      "sourceSha256": "c5d4f0298c2a6fa7ed868fab7671fd93d1d96dcd93cea5e3e8c3ca86faf43f93",
+      "rgbaSha256": "a64375da4966b2fc973728738e1b093c451d63373f4228ef7e820243fbfbe35f"
+    },
+    {
+      "key": "motorbauteil",
+      "category": "industrie_verkehr",
+      "name": "Motorbauteil",
+      "widthMeters": 0.8,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/motorbauteil.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "31bd0befc71e0e07d4bfc945a6a1ca4292cef037c07cca9b7a27a8fcecc0dc4e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1440,
+        1076
+      ],
+      "sourceSha256": "19872e0ff08a5af7958333884c08834393ee94f4b9dee1682ea27b1862e02b06",
+      "rgbaSha256": "9f339bd49926a5b74727dee5ee819551a73719c909dba5905ac88e27b731630d"
+    },
+    {
+      "key": "hebebuehne",
+      "category": "industrie_verkehr",
+      "name": "Hebebühne",
+      "widthMeters": 5,
+      "heightMeters": 2.5,
+      "file": "assets/industrie_verkehr/hebebuehne.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "a68875daaefcf631710cffb5c49abf630ef8b8c891e80c643b1a9d3ab0ac4cdc",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        48,
+        21,
+        1744,
+        869
+      ],
+      "sourceSha256": "915e8883a8c425d9567141ca86214dc3c67773bc2bea41feec6bb2d577998872",
+      "rgbaSha256": "48e4932b90d23800810aaaea088ff4c9133e6499ab7711359484d9a9647917eb"
+    },
+    {
+      "key": "buehnenpodest",
+      "category": "industrie_verkehr",
+      "name": "Bühnenpodest",
+      "widthMeters": 4,
+      "heightMeters": 3,
+      "file": "assets/industrie_verkehr/buehnenpodest.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "4f0ad1d1eb7af3da5530150e3ae3ac4f64310427b6b223216158e917a814e398",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        88,
+        17,
+        1366,
+        1033
+      ],
+      "sourceSha256": "6b2b7d0e76276146f1be6158be1d5a31cb6749bd2472f66442409b9dcab66711",
+      "rgbaSha256": "70d0dc3ef610a2ae7217323b824a7881db848418b0edc969117387177b6493a9"
+    },
+    {
+      "key": "ueberwachungskamera",
+      "category": "industrie_verkehr",
+      "name": "Überwachungskamera",
+      "widthMeters": 0.35,
+      "heightMeters": 0.15,
+      "file": "assets/industrie_verkehr/ueberwachungskamera.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "27c99dfdb50052ecae6ebd7b5396b3e924a95c7be2fe856ee25fbedfbce14691",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        178,
+        224,
+        1630,
+        829
+      ],
+      "sourceSha256": "355178ed8197755c0c462efa44e0bbd92e09f58b91bb2f35b0f1dd1654401846",
+      "rgbaSha256": "3cfc31c9254cef0c91bda4e3fd57b0daa8ed1df5cb3e242135a5e171ef96f69b"
+    },
+    {
+      "key": "heizaggregat",
+      "category": "industrie_verkehr",
+      "name": "Heizaggregat",
+      "widthMeters": 1.5,
+      "heightMeters": 1,
+      "file": "assets/industrie_verkehr/heizaggregat.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "64e020242defe3ea6a7be69abb734bada66a598288d8fa1f0cb8e9e43df40f4e",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        21,
+        17,
+        1522,
+        1024
+      ],
+      "sourceSha256": "5eb5af6b9d513b1fa9432ce69e2142f80268f20ce1b20933b8f01123f73649f8",
+      "rgbaSha256": "faf5f6509c58e0e94ee4d7fb6ff6afac9acac13c311613a526e11218ddf05d77"
+    },
+    {
+      "key": "lueftungsaggregat",
+      "category": "industrie_verkehr",
+      "name": "Lüftungsaggregat",
+      "widthMeters": 2,
+      "heightMeters": 1.2,
+      "file": "assets/industrie_verkehr/lueftungsaggregat.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "56f24529d43c55ddcc880e81d47fd325ab6dc9924c8fc7c11dfdcaca3a4f76fc",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        48,
+        21,
+        1504,
+        998
+      ],
+      "sourceSha256": "8065641b5df3d4bbdfa56737350c058a07c4b083b197044ad2448af9a6a38f1a",
+      "rgbaSha256": "bdae318ddc60c90d887107efa696ff844fb6986c33f5f29b6c6a88d718cac499"
+    },
+    {
+      "key": "technikgehaeuse",
+      "category": "industrie_verkehr",
+      "name": "Technikgehäuse",
+      "widthMeters": 1,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/technikgehaeuse.webp",
+      "pixelWidth": 1618,
+      "pixelHeight": 972,
+      "mode": "RGBA",
+      "sha256": "feb42b45594c6e2d0dec176c46948b5584c039441e4bbaf2fb7f4b0c1dae3995",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        83,
+        7,
+        1617,
+        972
+      ],
+      "sourceSha256": "2c50f4817359f3ffebbea6bfc5b3b4f20697cb7ab94da98eaa36cac666ee7e1f",
+      "rgbaSha256": "61856c8cfea6c647105b0f462078a19c008750508e23c645d9623504d4a4bf22"
+    },
+    {
+      "key": "haltestellenschild",
+      "category": "industrie_verkehr",
+      "name": "Haltestellenschild",
+      "widthMeters": 0.5,
+      "heightMeters": 0.3,
+      "file": "assets/industrie_verkehr/haltestellenschild.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "7dd8e22e05a65e184307f0cc13884f5bfd3197e5244ec9f4114f3e89faf77891",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        176,
+        32,
+        1535,
+        968
+      ],
+      "sourceSha256": "6378193301cdc2ac72ab8b1e7f418a2c5d404274c81fa14287b79c92c7db5846",
+      "rgbaSha256": "cf5dd6a7c37272db74b4cc8427879cc21b214c4adf9a1a7809369179cf512b87"
+    },
+    {
+      "key": "fahrplantafel",
+      "category": "industrie_verkehr",
+      "name": "Fahrplantafel",
+      "widthMeters": 0.6,
+      "heightMeters": 0.4,
+      "file": "assets/industrie_verkehr/fahrplantafel.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "96a38e38480c24aa60b30800ba1b56f9c7fa7bce53aaa553fe3ea7773f1dd9da",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        33,
+        72,
+        1482,
+        998
+      ],
+      "sourceSha256": "f039573a2810ee47a250bc991007136013135666b2cefe075838e9c73a1737b8",
+      "rgbaSha256": "ae12452faaf5dbf3f33e2dbe2c498b1a06cc1f49f29565219486b0cf77646362"
+    },
+    {
+      "key": "muelleimer",
+      "category": "industrie_verkehr",
+      "name": "Mülleimer",
+      "widthMeters": 0.45,
+      "heightMeters": 0.45,
+      "file": "assets/industrie_verkehr/muelleimer.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "ed84116126f224ebc14086e1de2c97c69d57856fa7de09f1735e2fee828180b6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        97,
+        96,
+        1152,
+        1182
+      ],
+      "sourceSha256": "3a39db8d0fbde374686fe96585f5fc5aed651819703582aebbb9e08eddfc64a7",
+      "rgbaSha256": "2e72af5c1b9d71b1d6cee0268a4f0713aa99e3c602dd7dcc37853e550a9bf565"
+    },
+    {
+      "key": "poller",
+      "category": "industrie_verkehr",
+      "name": "Poller",
+      "widthMeters": 0.2,
+      "heightMeters": 0.2,
+      "file": "assets/industrie_verkehr/poller.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "7a504a8cd22452fa1eb00fe04b234235d0330d0327d06013b6a21a3760a2986b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        52,
+        1200,
+        1198
+      ],
+      "sourceSha256": "31504ce9d1cfbc0018086d2332f321d6088f9ff4ba8b50adc1512501950af44d",
+      "rgbaSha256": "65fa05d43923c125015190c9f9471786f3bdda667ab8045f2c4385c849b1d3f4"
+    },
+    {
+      "key": "warnschild",
+      "category": "industrie_verkehr",
+      "name": "Warnschild",
+      "widthMeters": 0.6,
+      "heightMeters": 0.3,
+      "file": "assets/industrie_verkehr/warnschild.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "30e032d06ccb822e9ce6ebc66f5b7538cc90925e7ab1be97940d96aeae4a51ce",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        348,
+        13,
+        1510,
+        871
+      ],
+      "sourceSha256": "82c6e3284cc0d435109a52a87025b3ebd685a732f32819acd4fadedfcc8997cb",
+      "rgbaSha256": "edcc17a67161b9ed61e3cb9dbf300c1dc82abba5533f7599a2ac9d6c1c8f16bf"
+    },
+    {
+      "key": "strassenschranke",
+      "category": "industrie_verkehr",
+      "name": "Straßenschranke",
+      "widthMeters": 4,
+      "heightMeters": 0.4,
+      "file": "assets/industrie_verkehr/strassenschranke.webp",
+      "pixelWidth": 1923,
+      "pixelHeight": 818,
+      "mode": "RGBA",
+      "sha256": "a5f542a6f163e6d575bf2ba29a600ed3b52aa1d7c0e5f9477d898e4f0c43dd33",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        69,
+        21,
+        1875,
+        762
+      ],
+      "sourceSha256": "777b5af00d79243f4f255d7eaeb1d231707efa33cb6fb32baf877e8c06dba08f",
+      "rgbaSha256": "9ecd634eb00c66aa41efd3a36b778befea3664cd57491c75652e7765a90046c4"
+    },
+    {
+      "key": "wartehaeuschen",
+      "category": "industrie_verkehr",
+      "name": "Wartehäuschen",
+      "widthMeters": 3,
+      "heightMeters": 1.5,
+      "file": "assets/industrie_verkehr/wartehaeuschen.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "4263503dc8afc8341e2a6db9ceefdb64449d53e8dea765eabe16200676aa9e79",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        61,
+        3,
+        1442,
+        1024
+      ],
+      "sourceSha256": "66fad138587d69b90bf37460210bd00aeec0bb8c81926fd9de5abd4d42d60690",
+      "rgbaSha256": "c314ae0c7b21dd258bd882d08769e88935385a14d985c6600ee02b9f1434997f"
+    },
+    {
+      "key": "rohrflansch",
+      "category": "industrie_verkehr",
+      "name": "Rohrflansch",
+      "widthMeters": 0.45,
+      "heightMeters": 0.45,
+      "file": "assets/industrie_verkehr/rohrflansch.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "774f4929d3c82ca39e88b06445897fdc2c809712ef0b2d4ee82164e51ffd1995",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1202,
+        1254
+      ],
+      "sourceSha256": "2280b7a2ad76d1d8526f019083961063d6b91b3b75d1b6c9279ff7857145a48d",
+      "rgbaSha256": "8bb14ae4bc5d486d2138560518f191f0a978f085f9936a2fc7fb9344bb1ba579"
+    },
+    {
+      "key": "ventil",
+      "category": "industrie_verkehr",
+      "name": "Ventil",
+      "widthMeters": 0.5,
+      "heightMeters": 0.5,
+      "file": "assets/industrie_verkehr/ventil.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "e137bfdd4b851f5b4f82dc52f15c0ad9ac1cb2fe9dc40b56aa0d40810e336f58",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1209,
+        1254
+      ],
+      "sourceSha256": "1e4482c5d13b4fb687b94340fa1f9472da4887ea2b17b7044dfca532e7d871a0",
+      "rgbaSha256": "e4f17040477c16b0b9dc28596398949398e75ffdc8aacee8c74f7ef19f5768f1"
+    },
+    {
+      "key": "wartungskasten",
+      "category": "industrie_verkehr",
+      "name": "Wartungskasten",
+      "widthMeters": 0.6,
+      "heightMeters": 0.4,
+      "file": "assets/industrie_verkehr/wartungskasten.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "dc5f1782751d189e953a31c9a10d36ea524bd397d260a3f28e4dece01abd09fa",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        41,
+        5,
+        1438,
+        1024
+      ],
+      "sourceSha256": "b15974fdc5b9a21884c0d575c5afb184ff0c8111a0e0821be67f2476892a9397",
+      "rgbaSha256": "e73276365720655156fa6079f44b60c294e4aef3f74f7afba8b472b8d9262e2b"
+    },
+    {
+      "key": "steigbuegel",
+      "category": "industrie_verkehr",
+      "name": "Steigbügel",
+      "widthMeters": 0.45,
+      "heightMeters": 0.2,
+      "file": "assets/industrie_verkehr/steigbuegel.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "a2fe73fc9109bfd1a0679f483967136935079a06eb439bc209c44e25dbd7ce42",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        470,
+        37,
+        1305,
+        831
+      ],
+      "sourceSha256": "33bcf64b070471af0c5e0b276db564580fbf918ab964c15f6a80f7523ad63155",
+      "rgbaSha256": "64c2ce6f600a862be1082617677c393f1c52da56f4faf6fe75a7d7afac2c03bd"
+    },
+    {
+      "key": "einstiegsleiter",
+      "category": "industrie_verkehr",
+      "name": "Einstiegsleiter",
+      "widthMeters": 0.5,
+      "heightMeters": 2.5,
+      "file": "assets/industrie_verkehr/einstiegsleiter.webp",
+      "pixelWidth": 1230,
+      "pixelHeight": 1278,
+      "mode": "RGBA",
+      "sha256": "fb808fb464b66bc2437e2c42928272c8e9bff5181ddaec8982eaac1bfce7324c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        161,
+        15,
+        1032,
+        1244
+      ],
+      "sourceSha256": "c4ebba4bc0208a0f14b3a4780df08b7bd2f16c8924a9abde3bba66769c84bbcd",
+      "rgbaSha256": "43ea5cee223d83174a58e050670ef9163c6616f0374755cac55aad815a609e18"
+    },
+    {
+      "key": "kanaldeckel",
+      "category": "industrie_verkehr",
+      "name": "Kanaldeckel",
+      "widthMeters": 0.7,
+      "heightMeters": 0.7,
+      "file": "assets/industrie_verkehr/kanaldeckel.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "865b0e97853bd5cc9eadcad24244e257a3e268b7f004ac245cc2971854aa8909",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        35,
+        1210,
+        1228
+      ],
+      "sourceSha256": "d8c7b79791e4d18114d69d0bc69a3b3fb75685bbde95dda206b93c4b3e906194",
+      "rgbaSha256": "5f4bce595e2fe5a6cdbde9aecfa862fcff40b2d4c715a04a16c045dc98852521"
+    },
+    {
+      "key": "kanaleinstieg",
+      "category": "industrie_verkehr",
+      "name": "Kanaleinstieg",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/industrie_verkehr/kanaleinstieg.webp",
+      "pixelWidth": 1299,
+      "pixelHeight": 1211,
+      "mode": "RGBA",
+      "sha256": "3f3e4b9e2e3d5fca3363e0b3b7c8d535a36ce1a123772d0b9dba28fb441c9176",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        14,
+        1263,
+        1155
+      ],
+      "sourceSha256": "e48da9eaf37ba84a99bbf2fccb5b318d95ecd4332518116fcbbd38ec9589e652",
+      "rgbaSha256": "b05340e5475f7917302e5fea618289f6759cb5e53bfe74dbd37f9f87cf709eae"
+    },
+    {
+      "key": "teigmischer-mit-bottich",
+      "category": "industrie_verkehr",
+      "name": "Teigmischer mit Bottich",
+      "widthMeters": 1.5,
+      "heightMeters": 1.2,
+      "file": "assets/industrie_verkehr/teigmischer-mit-bottich.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "7ccf66dec1b44e9c822167a1f235024b290a2b7107baea81e7b35553165a3d04",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        37,
+        51,
+        1388,
+        1096
+      ],
+      "sourceSha256": "2956029d5c8d5b002023660434cbd471294edde53c28e07afcb9cdb1bd12366a",
+      "rgbaSha256": "3bf5de4fbb9213a4fcad0b3430ad6f2b16b91283c6d7071a917b046c7ad546e0"
+    },
+    {
+      "key": "greifarm",
+      "category": "industrie_verkehr",
+      "name": "Greifarm",
+      "widthMeters": 2.5,
+      "heightMeters": 1.5,
+      "file": "assets/industrie_verkehr/greifarm.webp",
+      "pixelWidth": 1619,
+      "pixelHeight": 971,
+      "mode": "RGBA",
+      "sha256": "80c428cbeac0aa45a034cbf3079ba9afaadcba4ef1b9d0a9968123457793fa41",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        21,
+        1589,
+        931
+      ],
+      "sourceSha256": "5b4097ae2bc47a3217ed681696708a5060e86aa63b900c94b78778042f693a14",
+      "rgbaSha256": "58943aeba9cb414617c0b1dfcc1d1bafcf58bb2994efd8b984ff59b4b6cdf53f"
+    },
+    {
+      "key": "industriekessel",
+      "category": "industrie_verkehr",
+      "name": "Industriekessel",
+      "widthMeters": 1.8,
+      "heightMeters": 1.8,
+      "file": "assets/industrie_verkehr/industriekessel.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "acc7628c128f33dec0597f9b28a61094d9703c8f3cee8f8bffd73378c8533b92",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "sourceSha256": "9f34bf768b94e1c433cea73979bdf4eb464c0bea5751e9e071cf67b0dcf2195a",
+      "rgbaSha256": "44fdb3fe246303bb9f56d6767d7fba411398da46c596d0df8cb60adf74340020"
+    },
+    {
+      "key": "industriebackofen",
+      "category": "industrie_verkehr",
+      "name": "Industriebackofen",
+      "widthMeters": 3,
+      "heightMeters": 2,
+      "file": "assets/industrie_verkehr/industriebackofen.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "532190109bffe2b5103109fd27dee3fde4848e7c2e00ea5d08e8cad8d83a5b4a",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        65,
+        21,
+        1466,
+        1024
+      ],
+      "sourceSha256": "5234b13edea3a5bd027ae5a566235c5ccb3be244ef423709eb345ab9f035f64d",
+      "rgbaSha256": "4b9c3b3fcc1a6ed371fc7f882df82f0759cdc35f315f75f2e50aacf1b7aba43e"
+    },
+    {
+      "key": "sackware",
+      "category": "industrie_verkehr",
+      "name": "Sackware",
+      "widthMeters": 0.7,
+      "heightMeters": 0.45,
+      "file": "assets/industrie_verkehr/sackware.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "01e3634a92b2e809ea5d1a020273fda4b4584425340d33b58b007e05437de39b",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1514,
+        1024
+      ],
+      "sourceSha256": "a3c821966a51d7eaa62212666215826b628ff4ead0c3cc4aa2e3f5e0fe4f9175",
+      "rgbaSha256": "1c50ae258c0e9a56789542178b70523954a3fe404fb10119b4c2d20cb6832e7c"
+    },
+    {
+      "key": "zutatenregal",
+      "category": "industrie_verkehr",
+      "name": "Zutatenregal",
+      "widthMeters": 2,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/zutatenregal.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "ff09dd947fd3ba56160f4d158842d11ae5137ca3e814d04dc9167b151e869fb4",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        112,
+        9,
+        2061,
+        724
+      ],
+      "sourceSha256": "fd58eca6531f3662aa65d4e30f5fb4d545ec11aad658ca21ee60d6db610abb67",
+      "rgbaSha256": "1e9a26ba2b65268c652a935015a8a4a41729dd489de30974ceb01d3010b9e6d8"
+    },
+    {
+      "key": "bedienpult",
+      "category": "industrie_verkehr",
+      "name": "Bedienpult",
+      "widthMeters": 1,
+      "heightMeters": 0.6,
+      "file": "assets/industrie_verkehr/bedienpult.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "5935189ada1efeb870dce459b84a1e7dc906d8b22c53aabdbf18f829235679c1",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        93,
+        17,
+        1442,
+        1024
+      ],
+      "sourceSha256": "44346714c85b215f9ccdf25c113a7a394830cd4a90f985bc3282e8604ffe2e70",
+      "rgbaSha256": "8195507a57ea9f48f1f62a51329e9fe026434ff9217b678b62a69df740373631"
+    },
+    {
+      "key": "feuerleiter",
+      "category": "industrie_verkehr",
+      "name": "Feuerleiter",
+      "widthMeters": 0.8,
+      "heightMeters": 3,
+      "file": "assets/industrie_verkehr/feuerleiter.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "1cfd80ab06bc59415223976cab913540e98adbae426e3370db85ef5e6171acaa",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        65,
+        17,
+        946,
+        1493
+      ],
+      "sourceSha256": "25c23781c1820aa7165ac11c9126c4e0f868c21f744d539a729e40e4c623a25e",
+      "rgbaSha256": "5f64799a864b0161cd7f7d4633ea11882383ee0151b52b944d4a7e9160514ea4"
+    },
+    {
+      "key": "pfeiler-mit-schutzbuegel",
+      "category": "industrie_verkehr",
+      "name": "Pfeiler mit Schutzbügel",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/industrie_verkehr/pfeiler-mit-schutzbuegel.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "d30ef9a8aad9e5906191c97a19518f3e30324b1ef60ae004fe7890e63e783bb2",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1234,
+        1254
+      ],
+      "sourceSha256": "58f722990eac24ba173732e4218dcdf798339d7adf5a6950a90b6501c134a1f6",
+      "rgbaSha256": "c556b28becb903336c4012e41c119c5ae285ccfe8a9bf5c3c79c82987c4adfea"
+    },
+    {
+      "key": "entwaesserungsrinne",
+      "category": "industrie_verkehr",
+      "name": "Entwässerungsrinne",
+      "widthMeters": 2,
+      "heightMeters": 0.2,
+      "file": "assets/industrie_verkehr/entwaesserungsrinne.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "215f056ce7c017043d57620696a8345ad39617eb8cb0f293a0f45a23b9781942",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        69,
+        2142,
+        620
+      ],
+      "sourceSha256": "8d7cf800d8113dcbaa4b1b04d0cb5797fd27c4925df8e1adb046d8be1c87faa4",
+      "rgbaSha256": "9eb64988ea59041579876a9f580922fc678705c0ca141de18ea5837e6e20fb68"
+    },
+    {
+      "key": "ticketautomat",
+      "category": "industrie_verkehr",
+      "name": "Ticketautomat",
+      "widthMeters": 0.6,
+      "heightMeters": 0.5,
+      "file": "assets/industrie_verkehr/ticketautomat.webp",
+      "pixelWidth": 1374,
+      "pixelHeight": 1145,
+      "mode": "RGBA",
+      "sha256": "8598ac5f5ae5c840fbaac32886fd7f4882b053d984b7cad754e81d69e2d91721",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1340,
+        1145
+      ],
+      "sourceSha256": "005ad0cbe88192c6da38c3ae3369d9115db33aaa5cd0bd89e2cfffa496f50583",
+      "rgbaSha256": "42979a3d1a4d61f8341241848a60ad86d7551b6d48f519b848129355135f2783"
+    },
+    {
+      "key": "leuchte",
+      "category": "industrie_verkehr",
+      "name": "Leuchte",
+      "widthMeters": 0.6,
+      "heightMeters": 0.2,
+      "file": "assets/industrie_verkehr/leuchte.webp",
+      "pixelWidth": 2048,
+      "pixelHeight": 768,
+      "mode": "RGBA",
+      "sha256": "e72f5e49ad408fcf47c088144767848a256bd021ffafa64b6f66d467251e945c",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        81,
+        2010,
+        768
+      ],
+      "sourceSha256": "49a8932f6d07cf9ce877d707dbbde5d0d9b5602e510d1b70513729c925bc7d80",
+      "rgbaSha256": "69fade6084e167f57db7274e50ac07211e18af71c4199d3a636680b4986434b3"
+    },
+    {
+      "key": "stellplatzlinien",
+      "category": "industrie_verkehr",
+      "name": "Stellplatzlinien",
+      "widthMeters": 2.5,
+      "heightMeters": 5,
+      "file": "assets/industrie_verkehr/stellplatzlinien.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "ff84096d6a1887456529af05bc864187d52fa013b0f9f438e2a47ca30addf5f8",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        195,
+        21,
+        834,
+        1455
+      ],
+      "sourceSha256": "8c1072fe8463860d2e045cfd4295b9b651149b3f8342dc138aae1688e3d03ac9",
+      "rgbaSha256": "26674b3b8f83052582560eadfbff5617e68f5cd99fcbf3dbe663957b1fbab339"
+    },
+    {
+      "key": "richtungspfeil",
+      "category": "industrie_verkehr",
+      "name": "Richtungspfeil",
+      "widthMeters": 0.8,
+      "heightMeters": 2,
+      "file": "assets/industrie_verkehr/richtungspfeil.webp",
+      "pixelWidth": 793,
+      "pixelHeight": 1983,
+      "mode": "RGBA",
+      "sha256": "c2d7acc88d6b62e011508af062401fd88b122274faf6c627a8bba777bb31ac5d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        95,
+        754,
+        1913
+      ],
+      "sourceSha256": "14e0bb953b8c30ce07c31421bb0840537865b4d6c08f3541af3f11a0c827277e",
+      "rgbaSha256": "fc80f060874a314a2d76f80ecdc053bd5f36614211f5582a8ce0956193f61f27"
+    },
+    {
+      "key": "orgel",
+      "category": "sakral_natur",
+      "name": "Orgel",
+      "widthMeters": 3,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/orgel.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "34be6eec7e55b8f7da3d6e3c17a082fc6728fbd9bcccaf2226588b7df01cb685",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        46,
+        15,
+        1754,
+        887
+      ],
+      "sourceSha256": "1f435853da52a8a8c53d2d1338ef67f7ddc6f1f187515870970044c9bef7b082",
+      "rgbaSha256": "95ac3e8cb077b67391f4619888a58e3cb2174c782314c28aa0c0eaf4d22f0f67"
+    },
+    {
+      "key": "heckensegment",
+      "category": "sakral_natur",
+      "name": "Heckensegment",
+      "widthMeters": 3,
+      "heightMeters": 0.8,
+      "file": "assets/sakral_natur/heckensegment.webp",
+      "pixelWidth": 1983,
+      "pixelHeight": 793,
+      "mode": "RGBA",
+      "sha256": "7f87e1fc84418f78072b49d4e781ee430e2bcac35f0335d4b567158a5f28dbbd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        27,
+        0,
+        1975,
+        793
+      ],
+      "sourceSha256": "fc40feb9cc87b21ab36af90b7355760601870d9e3accdcb4d4bea57addf52a7f",
+      "rgbaSha256": "6e842594913de9689d6155d7144f4cee446df96b771e7d3130a2bfc105c0575c"
+    },
+    {
+      "key": "blumenbeet",
+      "category": "sakral_natur",
+      "name": "Blumenbeet",
+      "widthMeters": 2,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/blumenbeet.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "dc91045ceae50f712603ad76bf0d2a297597cd27ad8b521f67f4787cce40105f",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        36,
+        33,
+        1756,
+        887
+      ],
+      "sourceSha256": "574e2cba7048a1ae010efc2e2aa7af85a1f491d68ae7f882feff8e856f9cd6e0",
+      "rgbaSha256": "d074b6af4d549339046a6bd0b7e10bd2026945ec84a22a4ab950aeb7bbfe2099"
+    },
+    {
+      "key": "gartengeraetestaender",
+      "category": "sakral_natur",
+      "name": "Gartengeräteständer",
+      "widthMeters": 1.5,
+      "heightMeters": 0.5,
+      "file": "assets/sakral_natur/gartengeraetestaender.webp",
+      "pixelWidth": 1794,
+      "pixelHeight": 877,
+      "mode": "RGBA",
+      "sha256": "8e53602ef06b91813b1f989dfef18288d2fe54eb5d486599ef788e83efacf2b0",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1780,
+        877
+      ],
+      "sourceSha256": "c49fac8159911f43e3c6b5964a78e923601ac7e133cef3fc23ea901a1aa2bcd3",
+      "rgbaSha256": "65fa15097de3fbf23ba3a190bbc0b5c807fc5ffcd8a4ab2b95fe344ab891735a"
+    },
+    {
+      "key": "bewaesserungssprinkler",
+      "category": "sakral_natur",
+      "name": "Bewässerungssprinkler",
+      "widthMeters": 0.2,
+      "heightMeters": 0.2,
+      "file": "assets/sakral_natur/bewaesserungssprinkler.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "ce5b5cb151ddf6d04c894647171250331bd9d3e2808f2659be55ef933df69d63",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        57,
+        25,
+        1202,
+        1228
+      ],
+      "sourceSha256": "9d88cc75ceff8cd947ce36d63b13224329d1b88b9bcdf808f6a818590285b618",
+      "rgbaSha256": "e4aed3af38b29bb5a27b69733048f26967ec7e7fae85401e8fb5f3a11dc69616"
+    },
+    {
+      "key": "gartenschlauch",
+      "category": "sakral_natur",
+      "name": "Gartenschlauch",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/gartenschlauch.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "cb2098902300a132f61ad7140c43d7bae2d9cfe57e9b4b97fd2478210a6d0ccb",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        14,
+        45,
+        1242,
+        1198
+      ],
+      "sourceSha256": "d26b05ad105c1647da6032d224ac5a6958a9f03926414a52e48fcac74c9b3b6c",
+      "rgbaSha256": "371308d70bf6b3358c17a182b5e4048c4682265bf5d8d2363ece456094d8b30d"
+    },
+    {
+      "key": "pflanzkuebel-aussen",
+      "category": "sakral_natur",
+      "name": "Pflanzkübel außen",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/pflanzkuebel-aussen.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "9049755306fb72710709d80a6129ff2c2636ffed68032457ee3c25a1a267dd5e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        33,
+        1246,
+        1254
+      ],
+      "sourceSha256": "fa1b6ed1dc0bb12b511ab7247bbfde5572d0f41e7c8ec26d6202da2637540606",
+      "rgbaSha256": "f7b3f6ecfbdf3d2e26cdf46834889c0ae1c70b453feb461df01f1aef8f8df408"
+    },
+    {
+      "key": "nadelbaum",
+      "category": "sakral_natur",
+      "name": "Nadelbaum",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "file": "assets/sakral_natur/nadelbaum.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "41c2bb2d055132d160de2aa8c259e4df55aa28bf1b9108606b1ff89600338fcd",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1234,
+        1254
+      ],
+      "sourceSha256": "ea1ba9a4cbd6094eb836c485e1b1d36b56346b682607346613d143522f76e17d",
+      "rgbaSha256": "9d41d4002cb0c0c225760f9481217ffaa996a8180e7cbe7a5d65087911c18a93"
+    },
+    {
+      "key": "junger-laubbaum",
+      "category": "sakral_natur",
+      "name": "Junger Laubbaum",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/junger-laubbaum.webp",
+      "pixelWidth": 1278,
+      "pixelHeight": 1230,
+      "mode": "RGBA",
+      "sha256": "6d8a548f8409f7b744de85f1c5cdd471254414e656f6cf0c4cc660a487257507",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1262,
+        1230
+      ],
+      "sourceSha256": "4a784fad34fcdc8f3628329928b998baf37bda15399beda8db7fc5772b2f95b5",
+      "rgbaSha256": "22c39fb89dd06386f63661926a776f781f798b42307f9a0c88df446c4af8b23e"
+    },
+    {
+      "key": "baumstumpf",
+      "category": "sakral_natur",
+      "name": "Baumstumpf",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/sakral_natur/baumstumpf.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "7d031b15d4d3a9886fc8d72c6e6667a04d9a75f8c2594f24bd00ec43d018deb7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1240,
+        1254
+      ],
+      "sourceSha256": "40343e8e2428c06fd138d2305c1f71dced57f48d8d940d7bf3070c0d4080ecc0",
+      "rgbaSha256": "7b3e94294ca0ab71912a90dfb9472879e2c76995679f0799f184b6b5ec5d818a"
+    },
+    {
+      "key": "farn",
+      "category": "sakral_natur",
+      "name": "Farn",
+      "widthMeters": 0.8,
+      "heightMeters": 0.8,
+      "file": "assets/sakral_natur/farn.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "c750227c7d38a23931f9f64e497f54734789b21ac0d4c041f158a6252d2f578e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1227,
+        1254
+      ],
+      "sourceSha256": "c75f7476fa7669a1be0b0ac53d98be3217323e50e8faff7fe6c65a6f55294997",
+      "rgbaSha256": "ce3e0ea36f4a41ca6a0263f4295886035da3fba6134f3a371c17f72f048dc07e"
+    },
+    {
+      "key": "wurzel",
+      "category": "sakral_natur",
+      "name": "Wurzel",
+      "widthMeters": 1.5,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/wurzel.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "53c3f9fa1fbb31c4eeccebd7c6ac64008517b7e4ad5636cceaef10647274dfdb",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        25,
+        8,
+        1520,
+        1024
+      ],
+      "sourceSha256": "54c8f8a95e6e22c116d1e8eb10b98d5a6d1858f4f0ce2f34eaaafe2f5622e94b",
+      "rgbaSha256": "21b63373e1beef102307c81c1f8e0fbaaa8ecfe5f03fd6f09598f0fc320fc4b7"
+    },
+    {
+      "key": "laubstreu",
+      "category": "sakral_natur",
+      "name": "Laubstreu",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/laubstreu.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "9751318ffe569e19fa18e20f75e48eb5f30a09941fcc2aa8e235f9bacdb8e04e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1236,
+        1254
+      ],
+      "sourceSha256": "94eef7e418a5e37e3d5efb2f2f8e0e596bf4bc636ccbf688670c264e5553eb36",
+      "rgbaSha256": "ef39466ead8e07625fae5097a04a894d4207117deadb37ad5dff83af4db18191"
+    },
+    {
+      "key": "pilze",
+      "category": "sakral_natur",
+      "name": "Pilze",
+      "widthMeters": 0.4,
+      "heightMeters": 0.4,
+      "file": "assets/sakral_natur/pilze.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "6c06042603284ff90e1c05b0b85fb2bdf211ec4e374469bb8b48f9ba5016be70",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        39,
+        1228,
+        1254
+      ],
+      "sourceSha256": "a00aa06f8af67c313554c5af279448a052eedde95c774c559bf8e88146117148",
+      "rgbaSha256": "305bc86f25ac8898c49a4fd1a78064bb455942c74d94341d7b245b4845257ffc"
+    },
+    {
+      "key": "bodenmulde",
+      "category": "sakral_natur",
+      "name": "Bodenmulde",
+      "widthMeters": 2,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/bodenmulde.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "bdcd4353ec67ffed8d12a2ad4c245b45bedb257487b6be4a7ad11631f9d17b15",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1436,
+        1086
+      ],
+      "sourceSha256": "b82b3274fc1fb73b6ba7f1bb5e24ce260de4d4de274a0e0cc64e5d664e0d76fa",
+      "rgbaSha256": "877e0fd8841cc97301181092bb502017c0fc770a45d2cb7e153244de81ed3ed6"
+    },
+    {
+      "key": "felsspalte",
+      "category": "sakral_natur",
+      "name": "Felsspalte",
+      "widthMeters": 3,
+      "heightMeters": 0.6,
+      "file": "assets/sakral_natur/felsspalte.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "9eee7b0787b41c41251584a7175c1399dd51df6dacea488341cbabcadb095ff5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        47,
+        21,
+        1754,
+        847
+      ],
+      "sourceSha256": "bf3b51071cd011383aaeb0d1980ed33887122f9b9aed321e0a69de64639dc8b7",
+      "rgbaSha256": "eb372c56c9de1b458818ade9d9d755d398f8de4caf0da50ad2e77a8322ad535a"
+    },
+    {
+      "key": "felskante",
+      "category": "sakral_natur",
+      "name": "Felskante",
+      "widthMeters": 4,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/felskante.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "97c7583d86a343036a1cc74f5810cc1e67151bd4a4b09908b23b9c6e22fdfb7a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        51,
+        20,
+        2166,
+        702
+      ],
+      "sourceSha256": "a2e3f4cea2d231370697022e5e2e95169acbd175305e9eb1d9475e8de854fb9d",
+      "rgbaSha256": "342b7353219752985f31acd9427ec37bf18f9e688e779bcb1fd85eeb8c585cbd"
+    },
+    {
+      "key": "wasserstrudel",
+      "category": "sakral_natur",
+      "name": "Wasserstrudel",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/wasserstrudel.webp",
+      "pixelWidth": 1269,
+      "pixelHeight": 1239,
+      "mode": "RGBA",
+      "sha256": "40605f7aa9b9313457b7634b4d45f14bd3eed419103da76b034ab251e08921a3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1255,
+        1239
+      ],
+      "sourceSha256": "9da2908c6e732854989453f87db4e9dfefb0694b8d005915d9d4677e5d28e950",
+      "rgbaSha256": "7a11a6c21fa375cd89377c4e256c33e5e74a1331bec9866e890b93ea13e6e6c5"
+    },
+    {
+      "key": "abgebrochener-ast",
+      "category": "sakral_natur",
+      "name": "Abgebrochener Ast",
+      "widthMeters": 1.5,
+      "heightMeters": 0.3,
+      "file": "assets/sakral_natur/abgebrochener-ast.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "67ed65b5f7674f03cf66553eef9b8abe5220f47b8c6544983323595b25cef20c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        61,
+        21,
+        1746,
+        849
+      ],
+      "sourceSha256": "0e8e92b3eccb9af864e072560c2c780460b2d2f81e7a230c8776497476ba049a",
+      "rgbaSha256": "f8df970b1c5931dee6a511ecb384eeedb66df243c69419dca8db6ce1e870c14d"
+    },
+    {
+      "key": "kieselbank",
+      "category": "sakral_natur",
+      "name": "Kieselbank",
+      "widthMeters": 3,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/kieselbank.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "a57ef319e02c4f863f9e75868581494538024434830ea798f13ffa9d990087ff",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        39,
+        9,
+        1522,
+        1024
+      ],
+      "sourceSha256": "56676141644b51d498f734e22c013c96bfc078e4fa5588fa7e3fcbf458d91c82",
+      "rgbaSha256": "427d1a8ed1865288ef456d261990e4b5393c2890abe489b5b95cd60b3a780b3a"
+    },
+    {
+      "key": "trittstein",
+      "category": "sakral_natur",
+      "name": "Trittstein",
+      "widthMeters": 0.7,
+      "heightMeters": 0.5,
+      "file": "assets/sakral_natur/trittstein.webp",
+      "pixelWidth": 1484,
+      "pixelHeight": 1060,
+      "mode": "RGBA",
+      "sha256": "3abc5d2f8b710503e7729a35254d8d740e46b1e80004904fbed9b533fd3bcf25",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        8,
+        1430,
+        988
+      ],
+      "sourceSha256": "a577de817a109b94e6a75085723f4763ee16a6b02c6856816e3247f982e590a6",
+      "rgbaSha256": "57e2c09509f9b5ffe021c15fe1c42c6c1a111fbb6c058da622b4f4a91bb7198b"
+    },
+    {
+      "key": "schilf",
+      "category": "sakral_natur",
+      "name": "Schilf",
+      "widthMeters": 1.5,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/schilf.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "d77ecde514a3d18b4c9c6fbe73eed336828c172435b9c703534004e19df2b464",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        33,
+        31,
+        1482,
+        1024
+      ],
+      "sourceSha256": "992c774fbbe961b5f1cd6aaa275ecded9c773a7c59e0e6225ba79c8a2908ad65",
+      "rgbaSha256": "816cbd5c99ded2578edd1fbf5874cd37de63301b23e6fe9f73b0e1009f738663"
+    },
+    {
+      "key": "treibholz",
+      "category": "sakral_natur",
+      "name": "Treibholz",
+      "widthMeters": 2,
+      "heightMeters": 0.5,
+      "file": "assets/sakral_natur/treibholz.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "cfafb36e204b2e81e16dc7ab063b0279871c2ec7f775108bd355c829315fa069",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        56,
+        25,
+        2125,
+        724
+      ],
+      "sourceSha256": "71273ce7049847227befafce5411bd4ada830e35d244e381276e56dba5d27e07",
+      "rgbaSha256": "9223852af3479663cc45e7fca25dcb845690ce01ad29736814ca1b8f2939550c"
+    },
+    {
+      "key": "stroemungsoverlay",
+      "category": "sakral_natur",
+      "name": "Strömungsoverlay",
+      "widthMeters": 3,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/stroemungsoverlay.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "10e492745b2c2331048d1f3ce77eaca6eb21ed13cbf85e3403fef74da6f2aefa",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1759,
+        887
+      ],
+      "sourceSha256": "c2a9452d7b4b8789211dfa2e45d9bb503c0ce6a304bbad4012b73b607b566da0",
+      "rgbaSha256": "9640cbe70ddc5b7cc17c8792811ae6fcefe423d108daece799cc2fcb15d4b129"
+    },
+    {
+      "key": "nasses-uferoverlay",
+      "category": "sakral_natur",
+      "name": "Nasses Uferoverlay",
+      "widthMeters": 3,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/nasses-uferoverlay.webp",
+      "pixelWidth": 1981,
+      "pixelHeight": 794,
+      "mode": "RGBA",
+      "sha256": "85a713b7416a82decb3a7346e349833a473bd4b7f9a5ccd5566923890d011d1a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        30,
+        19,
+        1965,
+        794
+      ],
+      "sourceSha256": "6e626083e762dff7fc5b062d39717a81cb72d0268757a4e78e3104dfeeed7f4e",
+      "rgbaSha256": "42af93c343c9ca3d93347f5b464763c210231f38c80914a37cdfb24db81ba7ee"
+    },
+    {
+      "key": "kleine-steine",
+      "category": "sakral_natur",
+      "name": "Kleine Steine",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/kleine-steine.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "190d883428758247708ce14ebf3ec6cddb08400c30e1aaa775d5f6b6713a38ca",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1232,
+        1254
+      ],
+      "sourceSha256": "4dd6b40c340790406ae2ef497b9fd469f7ff195209c5fa1aac9445315c27687b",
+      "rgbaSha256": "6ab69971599f9497825b0d6deb5bdac731179628b19a8820e05954a2e048ca2d"
+    },
+    {
+      "key": "geroell",
+      "category": "sakral_natur",
+      "name": "Geröll",
+      "widthMeters": 2,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/geroell.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "f0a87dd9c1d80a494083a041e9e58354220291740b32b8264b6cb35f5bcf96c4",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1416,
+        1086
+      ],
+      "sourceSha256": "141b7bddd0beb7e4afef4fc397df358130200fd9c25b072353a95d403d175299",
+      "rgbaSha256": "747dbfeb1d2c43219e021701fb9eaf5e3224892f578778f464e86d6e9c5614e9"
+    },
+    {
+      "key": "kletterpflanze",
+      "category": "sakral_natur",
+      "name": "Kletterpflanze",
+      "widthMeters": 1,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/kletterpflanze.webp",
+      "pixelWidth": 887,
+      "pixelHeight": 1774,
+      "mode": "RGBA",
+      "sha256": "e95d8a0fd5aac6487fdaecf83f8e1ed158547c1f7f1a3c2c206ad5d4d8815a2e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        873,
+        1774
+      ],
+      "sourceSha256": "55766fd491305a015c985662b4fe6076a70b30e8ac9f44e7e634cc0490bdbf88",
+      "rgbaSha256": "4ec2f38564927f67800a4ba449c0a4cb2f28758784312a78a57e711b5afb4b33"
+    },
+    {
+      "key": "gartenspuren",
+      "category": "sakral_natur",
+      "name": "Gartenspuren",
+      "widthMeters": 3,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/gartenspuren.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "910459e7af82144ec60c0b0cc05f29449e7e06f27e0b9e2cef938a2da6aa0748",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1763,
+        887
+      ],
+      "sourceSha256": "30515d73a90743fba1293e5343ea814ee96f49638c675738cb0324b9d8713e2a",
+      "rgbaSha256": "9847bbb520dca59e980af7a8506fde89ed2d3a69e4a2f52eb35ce24497ebbd3e"
+    },
+    {
+      "key": "improvisierte-unterkunft",
+      "category": "sakral_natur",
+      "name": "Improvisierte Unterkunft",
+      "widthMeters": 2.5,
+      "heightMeters": 2,
+      "file": "assets/sakral_natur/improvisierte-unterkunft.webp",
+      "pixelWidth": 1402,
+      "pixelHeight": 1122,
+      "mode": "RGBA",
+      "sha256": "07242aec95ae7160300bc0956621eb6895c671b385a1a3a82c9087db82dc37e9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1394,
+        1122
+      ],
+      "sourceSha256": "5abb05b2919b3d105f7a762f269acc4519c8dee5e7a1373b9d38c3b422486766",
+      "rgbaSha256": "7e72255d39f43116b2ff2b61792922849c5b6bc0e004b23f953d2972917c07f7"
+    },
+    {
+      "key": "rostoverlay",
+      "category": "sakral_natur",
+      "name": "Rostoverlay",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/rostoverlay.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "78b5d4846436b66c9c7a44bf7af7660a52947aaaaf8e917fd7b64584f145f743",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        47,
+        1222,
+        1254
+      ],
+      "sourceSha256": "9d8f2061928b24f9edca44cc4241af68e4a5c7c9a4d877ee5a0776c858659171",
+      "rgbaSha256": "4e6865e454cd11dc4cd4b7e3fd5916e811b9c71dc742f5cd79260f12863c68f2"
+    },
+    {
+      "key": "ablagerungsoverlay",
+      "category": "sakral_natur",
+      "name": "Ablagerungsoverlay",
+      "widthMeters": 1.5,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/ablagerungsoverlay.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "aea494167250188ae4eaaa407d86e940e9244386100e0d291fe6f74fd6ba4c0a",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1452,
+        1024
+      ],
+      "sourceSha256": "fb968f2b8d32e82c31a74874996e19b85800dc49998ca6e600dfb8fb01e1e5f3",
+      "rgbaSha256": "c2cacc2904ae1a7ad1a6f381f0370aa36b8771aad464fe900d9d493c773509d1"
+    },
+    {
+      "key": "moos",
+      "category": "sakral_natur",
+      "name": "Moos",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/sakral_natur/moos.webp",
+      "pixelWidth": 1312,
+      "pixelHeight": 1199,
+      "mode": "RGBA",
+      "sha256": "2fec6370eed216cd6f856f1de15215de8b8bfda3deb126c53ed94ac7ae0da391",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        1282,
+        1199
+      ],
+      "sourceSha256": "4c631f29c72482cc4a791965ac6a891c8cba335c66ef2f22c0c3d10bc0c96053",
+      "rgbaSha256": "482160b4ff34821d1c1f83a5d633da7441858d25cfd36cf297e091d5ecec2af5"
+    },
+    {
+      "key": "feuerring",
+      "category": "sakral_natur",
+      "name": "Feuerring",
+      "widthMeters": 5,
+      "heightMeters": 5,
+      "file": "assets/sakral_natur/feuerring.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "daf6ea8bbbf1b6aec5c4122dd52c9b6806cf40de62be507015f69d6acc533b51",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        5,
+        1234,
+        1254
+      ],
+      "sourceSha256": "391b244f71ab5efa88cadf7b71cf331c1850fcc7b5d1fc722ff71db508768a8a",
+      "rgbaSha256": "ba1af1f62778265cb464a49cda5ac6b0f03e3750a0480e646734bdb735879bb1"
+    },
+    {
+      "key": "rosenlager",
+      "category": "sakral_natur",
+      "name": "Rosenlager",
+      "widthMeters": 2,
+      "heightMeters": 1.5,
+      "file": "assets/sakral_natur/rosenlager.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "2aa03fbddca461b0dddf7d67924510d297a597c55ff8c4e2d3b86a1dd4969d6c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        25,
+        8,
+        1432,
+        1086
+      ],
+      "sourceSha256": "94248d5bb5d4b2358e9eab17078830df358c9e6b4186154aee8be215f1339546",
+      "rgbaSha256": "56f08b216a7b6bd3058d00b22896ab3c7ab74358f98f95c16003ec79f33b1469"
+    },
+    {
+      "key": "toranlage",
+      "category": "bauteile",
+      "name": "Toranlage",
+      "widthMeters": 4,
+      "heightMeters": 0.5,
+      "file": "assets/bauteile/toranlage.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "21e27920f0b9382a0f67a2a9e9d04e3334e5362645bf0bdab602b5833411cdb5",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        28,
+        21,
+        1745,
+        845
+      ],
+      "sourceSha256": "4264eb2aef880ad4a4ef9a086b590eeb25b5fd2899f261924a144eb13e4ee43c",
+      "rgbaSha256": "ba27fb9525950ce79f4c2cf2c8332ceb87443990d1508bf1400e167e368d5575"
+    },
+    {
+      "key": "historische-tuer",
+      "category": "bauteile",
+      "name": "Historische Tür",
+      "widthMeters": 1.2,
+      "heightMeters": 0.2,
+      "file": "assets/bauteile/historische-tuer.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "dc1a05cab11d5473c841982c7339c8c8a9981a5dc9f3ac7c91cb1b8f7264152f",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        46,
+        21,
+        1488,
+        998
+      ],
+      "sourceSha256": "af35e736c55a1d3ccf17c1fc58ee51050da52ebe2a4ae2d2cfc8d2793d3fbaf0",
+      "rgbaSha256": "b2c00be4fdfa748c021b67e62051c7b0aeb709785d7cb856674b22be9c592a34"
+    },
+    {
+      "key": "torbeschlag",
+      "category": "bauteile",
+      "name": "Torbeschlag",
+      "widthMeters": 0.4,
+      "heightMeters": 0.15,
+      "file": "assets/bauteile/torbeschlag.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "7712f6cc7cc6afd06ccc7ecacbb02541a4fe26479af2894c1c2e70251155ce6a",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        131,
+        20,
+        1751,
+        847
+      ],
+      "sourceSha256": "e27f1abcaf164da0d55bc07b07e76088d2678b78ca756a7b23e349d78c91feb0",
+      "rgbaSha256": "9a864312eb8027958943fed26d13888dde62f6a201b11874637de85083feced2"
+    },
+    {
+      "key": "informationstafel",
+      "category": "bauteile",
+      "name": "Informationstafel",
+      "widthMeters": 1,
+      "heightMeters": 0.4,
+      "file": "assets/bauteile/informationstafel.webp",
+      "pixelWidth": 1783,
+      "pixelHeight": 882,
+      "mode": "RGBA",
+      "sha256": "ef5ad0ac7f666aa122f707b5b6a68630a10438bf27687dad583212a5b35f800e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        81,
+        9,
+        1715,
+        882
+      ],
+      "sourceSha256": "aa7b811bb9784d93702a9bb197265cec884d67efd19174f115ab434c5aa1b396",
+      "rgbaSha256": "2c39bacb006543ee5256dd050209c0e614c9dcc647fa6a6f4fdb0ff3cd4a1d59"
+    },
+    {
+      "key": "fensterbank",
+      "category": "bauteile",
+      "name": "Fensterbank",
+      "widthMeters": 1.2,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/fensterbank.webp",
+      "pixelWidth": 2171,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "a55b1b68acfe49001353399979b51bb2cfb8009282866cf586e351dcc6f1aeae",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        63,
+        2075,
+        724
+      ],
+      "sourceSha256": "1063f479356395d48b7beac6254e865d7507c60360e9fd28d58a0a2c6f49c301",
+      "rgbaSha256": "35f10c78dd4f1154ec07b8b93e87c2328699c90e752dc9ea6e92880d36afa548"
+    },
+    {
+      "key": "tuerbeschlag",
+      "category": "bauteile",
+      "name": "Türbeschlag",
+      "widthMeters": 0.15,
+      "heightMeters": 0.1,
+      "file": "assets/bauteile/tuerbeschlag.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "eaec3d42789993a6e84df21e735c57d4e64e17a19389169a07ace9f3b8af3de6",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        105,
+        21,
+        1522,
+        1000
+      ],
+      "sourceSha256": "3f426f406ee4c0c6d88dec4088a834afd726a01aa63cb1533888ac7f28c1759c",
+      "rgbaSha256": "05417f0e3ff709d837c81f9648ed409e979345c6677a018df9c2af4a3d7e5219"
+    },
+    {
+      "key": "dachentwaesserung",
+      "category": "bauteile",
+      "name": "Dachentwässerung",
+      "widthMeters": 1.5,
+      "heightMeters": 0.2,
+      "file": "assets/bauteile/dachentwaesserung.webp",
+      "pixelWidth": 1921,
+      "pixelHeight": 819,
+      "mode": "RGBA",
+      "sha256": "14622b1e67f1ed39fa1ceca99ca854833625df1c321010678be0622260c1b55c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        111,
+        99,
+        1819,
+        779
+      ],
+      "sourceSha256": "7cc5863cfd9c8b04ca07ca24a0ab696580f3f976b92e852f8d81bfff7b895d28",
+      "rgbaSha256": "751176118e9c6ed0a83e2a31a584daf9ca9bf6d4072ab1014d96dae24bd328f0"
+    },
+    {
+      "key": "gelaender",
+      "category": "bauteile",
+      "name": "Geländer",
+      "widthMeters": 2,
+      "heightMeters": 0.15,
+      "file": "assets/bauteile/gelaender.webp",
+      "pixelWidth": 1448,
+      "pixelHeight": 1086,
+      "mode": "RGBA",
+      "sha256": "49b4fa9c27a5ddf9c50f4a14933df8455da5dd1ec611acb32a6e82f897742ba9",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        34,
+        295,
+        1414,
+        847
+      ],
+      "sourceSha256": "5eece5e5989e0dbaaf7ec210783a12c0ec4da4970d77d68ab3ba4e6e92eaee00",
+      "rgbaSha256": "c2f228d25fa5352287decd9564a0bf7590a7e467e343494187c281ddc0fa7236"
+    },
+    {
+      "key": "zaunpfosten",
+      "category": "bauteile",
+      "name": "Zaunpfosten",
+      "widthMeters": 0.2,
+      "heightMeters": 0.2,
+      "file": "assets/bauteile/zaunpfosten.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "208caa3da00924d0d3956cf04d960a498ed4d0f61c58de8c0bef034b4fb60cc1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1254,
+        1198
+      ],
+      "sourceSha256": "425b7a2fb4e2095bf64f52e71c15362ef43959ca926e7796dd13dad568792080",
+      "rgbaSha256": "2545cee5f2b22bcd1b6f09c21741b72b7da5e5a0491b6734255e6c3a0ea505f5"
+    },
+    {
+      "key": "holzbohle",
+      "category": "bauteile",
+      "name": "Holzbohle",
+      "widthMeters": 2,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/holzbohle.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "7afd7933099ef1a1db00894ff82e63777aaef7ce9f9ca59f292bfb28727bf796",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        43,
+        2124,
+        684
+      ],
+      "sourceSha256": "3b4a2db2de7c9878162d18f155034638269c8cec3493d5c7f51c431345d76fb8",
+      "rgbaSha256": "65ac1ccc92fc944ad2df44f49481f36927eb073a9092bb173f4a18b28d57c211"
+    },
+    {
+      "key": "seil",
+      "category": "bauteile",
+      "name": "Seil",
+      "widthMeters": 3,
+      "heightMeters": 0.06,
+      "file": "assets/bauteile/seil.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "13fb0db08a8ebfee21ca932316e23dcd812de9e3f9a23be5ff99cf0fddd91611",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        50,
+        21,
+        1491,
+        969
+      ],
+      "sourceSha256": "67aa1ffde98bc41021f6df30d268531e2a53af886959fcd4d5bea8ef00a1d4ef",
+      "rgbaSha256": "b006755ab3f5d96313defcd67017c9133f8c4468e4b55a7ec9c84865032b70c4"
+    },
+    {
+      "key": "befestigungspfosten",
+      "category": "bauteile",
+      "name": "Befestigungspfosten",
+      "widthMeters": 0.25,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/befestigungspfosten.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "b1d6099e99fe322e164dd69dba3fac9824e57a03ad0a551fed4dfad92bea2f80",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        41,
+        20,
+        1198,
+        1228
+      ],
+      "sourceSha256": "6980a9ebbad2ed4c583f18e19376a839ef9e895372b1dcce09f02d5c2ae0e394",
+      "rgbaSha256": "c47e46d581edc7a2bf41336e81c9ed008d8f7f9c59d4e00fe5adaf794c7e4d3c"
+    },
+    {
+      "key": "holzbalken",
+      "category": "bauteile",
+      "name": "Holzbalken",
+      "widthMeters": 3,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/holzbalken.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "2ed98665d49c08b8ba2cb2c1d64360f20518ef09a928e7d99e774069a934e146",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        78,
+        97,
+        2099,
+        642
+      ],
+      "sourceSha256": "2eced5c6abfbbe18bc5d349f7fb3930b727a30badf8fc4c903148ef03e91ad88",
+      "rgbaSha256": "162b507c89c9ee30cca804564694469240e1ad4a938ffa01aaff15198da0b6a4"
+    },
+    {
+      "key": "dachziegel",
+      "category": "bauteile",
+      "name": "Dachziegel",
+      "widthMeters": 0.4,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/dachziegel.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "8f7b797a7f98d61ad2ae9cb036ee2cef767434d4f0b326bf0b1105b50012b29b",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1488,
+        1024
+      ],
+      "sourceSha256": "17aa35c4627cd2b3c7ad907f0c620b85d1ba1fc52db5f57d401ab634620294b3",
+      "rgbaSha256": "e8c347323d1371af90fe4e80b3badfbc8a4520e8a407f85b55f638247592fe9f"
+    },
+    {
+      "key": "dachschindel",
+      "category": "bauteile",
+      "name": "Dachschindel",
+      "widthMeters": 0.4,
+      "heightMeters": 0.2,
+      "file": "assets/bauteile/dachschindel.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "f2e5057de93bb76c5ec77066e222de8fd35f9dba3c271cdd670c22650aae520e",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        59,
+        15,
+        1722,
+        867
+      ],
+      "sourceSha256": "d5b7287e48805aa0544e2dd1c8e37dcb8098713c23226592acbbf07e97be3d78",
+      "rgbaSha256": "f851a7259762820ffdef9a0d5cbf1259802188987ec26806488b367509820e71"
+    },
+    {
+      "key": "zerbrochener-tisch",
+      "category": "bauteile",
+      "name": "Zerbrochener Tisch",
+      "widthMeters": 1.2,
+      "heightMeters": 0.8,
+      "file": "assets/bauteile/zerbrochener-tisch.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "7b0c2047566d2e3cea4a0fa28a6599b48152e8b7dad8c8110be00bb4a27925be",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1522,
+        1024
+      ],
+      "sourceSha256": "586dda315f1370b66c96d81258264a5bc7f8de5783743c7bd7a3677f1e8ac0a3",
+      "rgbaSha256": "d243ecf628f4a5edc85969553320e991182518c12a0a325ca3883f93d573eaf4"
+    },
+    {
+      "key": "ofenrest",
+      "category": "bauteile",
+      "name": "Ofenrest",
+      "widthMeters": 0.8,
+      "heightMeters": 0.7,
+      "file": "assets/bauteile/ofenrest.webp",
+      "pixelWidth": 1327,
+      "pixelHeight": 1185,
+      "mode": "RGBA",
+      "sha256": "d0c8bcecf39722839074941103c23f8202a6c798c0d4d3997e3a518951617899",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        1,
+        1307,
+        1185
+      ],
+      "sourceSha256": "8d9b34aee0f155ae9c34e327effe20259dd18dc642c3bf03565a293e492bd9f3",
+      "rgbaSha256": "fd7cd86f590f356cf12eb6a43d2054a3805929e10b858ab076565636fa6e9fc1"
+    },
+    {
+      "key": "bettgestell",
+      "category": "bauteile",
+      "name": "Bettgestell",
+      "widthMeters": 2,
+      "heightMeters": 1,
+      "file": "assets/bauteile/bettgestell.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "04e33503de7c989176d0713a5b5eb74d39b048b0ce6d033a5bee04584627a73d",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        160,
+        25,
+        1615,
+        833
+      ],
+      "sourceSha256": "b160097d1cc75aed972af895b72e702082399dcb0a9e02a68024e6a443fb2642",
+      "rgbaSha256": "c67b1b6475637052d964504ac73da2b0ab6b34c7adf4938382dfef0b106157a1"
+    },
+    {
+      "key": "geborstener-fensterrahmen",
+      "category": "bauteile",
+      "name": "Geborstener Fensterrahmen",
+      "widthMeters": 1.2,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/geborstener-fensterrahmen.webp",
+      "pixelWidth": 1862,
+      "pixelHeight": 845,
+      "mode": "RGBA",
+      "sha256": "f6682365aa4bcb967903c734aa9a713e69c800000cfc0ce5a742dcef6462f203",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        33,
+        23,
+        1784,
+        845
+      ],
+      "sourceSha256": "ec78291d2a682a56504a11ab7e0e9eb846d3b81926f5431ee893abc61e12f2b4",
+      "rgbaSha256": "2b76d37d4c256ba4c7ebb5dd94ff44591ed3aa7c19dfa1932376a0ab0c045f44"
+    },
+    {
+      "key": "mauerrest",
+      "category": "bauteile",
+      "name": "Mauerrest",
+      "widthMeters": 2,
+      "heightMeters": 0.4,
+      "file": "assets/bauteile/mauerrest.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "49b8c4080996ad02e5595ada2a90c80cbd3cada1a9e14aabc93c01f51304d6ba",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1754,
+        849
+      ],
+      "sourceSha256": "4b4e636cb67132136c27c300f17cac1aa306dc3e1380d932ef709d962d89e72d",
+      "rgbaSha256": "1895d4fba4111219956592e8ee2911dc2ebf14a5cea5351753116bb8e4362107"
+    },
+    {
+      "key": "verwitterter-zaun",
+      "category": "bauteile",
+      "name": "Verwitterter Zaun",
+      "widthMeters": 2,
+      "heightMeters": 0.15,
+      "file": "assets/bauteile/verwitterter-zaun.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "17e04d35219c83d6f1119eb34ca9584c01c6ff0afc1db8b5b9891a8db84fee33",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        21,
+        21,
+        1520,
+        998
+      ],
+      "sourceSha256": "b66760009a8dcc8743220f602c4da3efd46702f43331e879c1241147ad067790",
+      "rgbaSha256": "89df05d254257a7df74808f05c191700375ff7b2890de08a3d45a44f4827e621"
+    },
+    {
+      "key": "gitter",
+      "category": "bauteile",
+      "name": "Gitter",
+      "widthMeters": 1,
+      "heightMeters": 1,
+      "file": "assets/bauteile/gitter.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "d9bca619839924ac47b77f5f900cbafeba0570744549892c3408aa1de67cb63c",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        33,
+        1200,
+        1254
+      ],
+      "sourceSha256": "581b5da3ddd2df805c933e06a955e02b1a645e1ce77528c8e0428a13571b5e0e",
+      "rgbaSha256": "1111df5113d6ff80175fb133c396f7bf90017bb5957a6ae86609331f0335c185"
+    },
+    {
+      "key": "dachstuetze",
+      "category": "bauteile",
+      "name": "Dachstütze",
+      "widthMeters": 0.25,
+      "heightMeters": 0.25,
+      "file": "assets/bauteile/dachstuetze.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "6ad30db6d544bb001d4fc06b1fe87d5ef047b0ae82f444645e76eda60685d7b7",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        1226,
+        1238
+      ],
+      "sourceSha256": "60d851b33f9b8b96bd2c727e01b1b168725ea34d652ee90e7cef590aec5b4df8",
+      "rgbaSha256": "e4bcf1a0e71649c16715a47a7f4015da7b5a0ddab4aab90e33f338c9de71058b"
+    },
+    {
+      "key": "scharnier",
+      "category": "bauteile",
+      "name": "Scharnier",
+      "widthMeters": 0.2,
+      "heightMeters": 0.1,
+      "file": "assets/bauteile/scharnier.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "e0bcb9fcb6be91571e0353f28493a61a21d023cd8665249e97ea7beab7d8aa8b",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        166,
+        21,
+        1617,
+        887
+      ],
+      "sourceSha256": "0748d72540a3e4f56a37ee46b0579623ddea81c1b6e8536dc44dfd010c53161f",
+      "rgbaSha256": "4cb7af164fb6f79949d501be12983c7326b2ea0c585a830b4e5e9dea94efdc62"
+    },
+    {
+      "key": "vorhaengeschloss",
+      "category": "bauteile",
+      "name": "Vorhängeschloss",
+      "widthMeters": 0.12,
+      "heightMeters": 0.08,
+      "file": "assets/bauteile/vorhaengeschloss.webp",
+      "pixelWidth": 1536,
+      "pixelHeight": 1024,
+      "mode": "RGBA",
+      "sha256": "327153a4ab5bf2f86c5fdc38b3d1f32e3cced11dcb2f7907ef41455a5e8130a6",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        301,
+        21,
+        1450,
+        1000
+      ],
+      "sourceSha256": "b74aa2e7875ca13f3e9eb3c9151c0bba36c953a059829b3aa025ef7293e41aa2",
+      "rgbaSha256": "a606988dade7811065330064fe6073fa777d45990210178dd1accee1b88201d1"
+    },
+    {
+      "key": "gelaenderrest",
+      "category": "bauteile",
+      "name": "Geländerrest",
+      "widthMeters": 1.5,
+      "heightMeters": 0.2,
+      "file": "assets/bauteile/gelaenderrest.webp",
+      "pixelWidth": 1954,
+      "pixelHeight": 805,
+      "mode": "RGBA",
+      "sha256": "63f83cc3ecbeaf7419ca3a0e62111bd027991b8046efc84765ab25100fd4f8a1",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        122,
+        106,
+        1868,
+        765
+      ],
+      "sourceSha256": "c3cb5f676f9f30b232412457578c256cf05c9ba4733e9e9100282ac3572c145c",
+      "rgbaSha256": "8cff0c16ac651aba84eb18cb02ff42a140673a7e3d561e4154dd192d06e78747"
+    },
+    {
+      "key": "schacht-mauerfassung",
+      "category": "bauteile",
+      "name": "Schacht-Mauerfassung",
+      "widthMeters": 2,
+      "heightMeters": 2,
+      "file": "assets/bauteile/schacht-mauerfassung.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "94160016a191304b38b953a6b90849268afe22a54ff35a0d92ce7754133533f3",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        49,
+        53,
+        1234,
+        1194
+      ],
+      "sourceSha256": "aad902dcabdc8edf0e0012d8f9d59caaa17e4a88ab98b28e1b351e83ba28ff99",
+      "rgbaSha256": "f8ec491b495187dd202040241057069b4723eebf35f517367efc7ef57536b107"
+    },
+    {
+      "key": "schacht-ueberdachung",
+      "category": "bauteile",
+      "name": "Schacht-Überdachung",
+      "widthMeters": 3,
+      "heightMeters": 3,
+      "file": "assets/bauteile/schacht-ueberdachung.webp",
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "sha256": "8d109d9542cd4c07e627db34aec9cf4c73285aaae51983bf35da635007bca8e6",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        39,
+        3,
+        1206,
+        1254
+      ],
+      "sourceSha256": "67562ff4f9221c307ec918ea5b72f21763370aad1596275e95e1eee72fe80d05",
+      "rgbaSha256": "2562b7734b01a2572c7e760c25990994d52b6ad407c68228a1ddf6ec7ab6b3c9"
+    },
+    {
+      "key": "sitzstufe",
+      "category": "bauteile",
+      "name": "Sitzstufe",
+      "widthMeters": 3,
+      "heightMeters": 0.8,
+      "file": "assets/bauteile/sitzstufe.webp",
+      "pixelWidth": 2172,
+      "pixelHeight": 724,
+      "mode": "RGBA",
+      "sha256": "2c362575f2c580d1e3163f995610b7b16cc6c55c7f9fdd7970d995082d53a3be",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        35,
+        9,
+        2092,
+        724
+      ],
+      "sourceSha256": "6bd2a01092b52e6f8b446ffb8d1027759658a7d39b86ebb651125612f0cb5be5",
+      "rgbaSha256": "5d9c859a15b9417dddca7a70ba1aa7772fc6594d6dfa11ab747047223af70428"
+    },
+    {
+      "key": "treppe",
+      "category": "bauteile",
+      "name": "Treppe",
+      "widthMeters": 1.5,
+      "heightMeters": 3,
+      "file": "assets/bauteile/treppe.webp",
+      "pixelWidth": 1024,
+      "pixelHeight": 1536,
+      "mode": "RGBA",
+      "sha256": "0be90d7a6ef6925224b89edfcb19447b0c6d47af38110ef4545e92f197f20d64",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaBounds": [
+        65,
+        62,
+        938,
+        1464
+      ],
+      "sourceSha256": "8bc10fa86f9c1b81aa979aa56401260868b6d30f84d583bd03518025126e8eb6",
+      "rgbaSha256": "73ea50a66804fd1080dd9eb21f646ab1c5c77f412431cb9a1941962993db808d"
+    },
+    {
+      "key": "grundmauersegment",
+      "category": "bauteile",
+      "name": "Grundmauersegment",
+      "widthMeters": 3,
+      "heightMeters": 0.5,
+      "file": "assets/bauteile/grundmauersegment.webp",
+      "pixelWidth": 1774,
+      "pixelHeight": 887,
+      "mode": "RGBA",
+      "sha256": "dacd77c0c0d46afb90953b52745d6efd5947eb7af37d90cb20b39bab31146aea",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBounds": [
+        65,
+        21,
+        1754,
+        847
+      ],
+      "sourceSha256": "a810f04fbbce579f3ef7bfa2dc161f11c8e4e8a1f313138611de0882bebf15ce",
+      "rgbaSha256": "feb745cdfdf30a49b4396e9a68e7c0936b48939ac7f4429bfac22beddec1e9e3"
+    }
+  ]
+}

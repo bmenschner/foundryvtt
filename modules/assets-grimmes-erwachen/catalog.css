@@ -1,0 +1,14 @@
+.age-catalog {display:flex;flex-direction:column;gap:10px;overflow:auto;padding:8px;min-height:0}
+.age-catalog p {margin:0}
+.age-tools {display:flex;gap:10px;align-items:center}
+.age-tools input {flex:1;min-width:120px}
+.age-tools select {max-width:240px}
+.age-cards {display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.age-card {height:auto;min-height:145px;display:flex;flex-direction:column;padding:8px;gap:6px;white-space:normal;line-height:1.3}
+.age-card[aria-pressed=true] {outline:3px solid #cd9b4a;outline-offset:-3px}
+.age-card img {width:100%;height:100px;object-fit:contain;background:repeating-conic-gradient(#bbb 0% 25%,#eee 0% 50%) 50% / 16px 16px;border-radius:4px}
+.age-card span {font-size:12px}
+.age-detail {display:flex;flex-direction:column;gap:8px;border-top:1px solid #888;padding-top:12px}
+.age-detail label {display:flex;gap:8px;align-items:center}
+.age-detail input[type=number] {max-width:110px}
+.age-detail input[readonly] {flex:1;min-width:0;font-size:12px}
