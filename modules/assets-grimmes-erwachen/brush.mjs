@@ -95,7 +95,7 @@ export async function showBrush() {
   const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Stempel · 1 × 1 m','stamp'),new Option('Freihand','freehand'),new Option('Rechteck','rectangle'));
   const width=node('input');width.type='number';width.min='0.25';width.max='20';width.step='0.25';width.value='2';width.setAttribute('aria-label','Pinselbreite in Metern');
   const label=node('label','Pinselbreite (m)');label.append(width);
-  width.disabled=true;mode.addEventListener('change',()=>{width.disabled=mode.value==='stamp';});
+  width.disabled=true;label.hidden=true;mode.addEventListener('change',()=>{width.disabled=mode.value==='stamp';label.hidden=mode.value==='stamp';});
   const extend=node('button','Ausgewählte Fläche erweitern');extend.addEventListener('click',async()=>{if(busy)return;setEnabled(false);try{(await import('./resize.mjs')).beginResize();}catch(error){status.textContent=error.message;}});
   const toggle=node('button','Malen starten'),undo=node('button','Letzten Strich zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Material wählen und Malen starten. Esc beendet den Malmodus.');status.setAttribute('aria-live','polite');
@@ -150,7 +150,7 @@ export async function showBrush() {
       const surface=renderStroke({points:path,...stroke,bounds,ppm,image});
       await saveStroke({scene,level,asset:stroke.asset,bounds,surface});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
     }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=false;clear();}
+    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=false;clear();if(enabled&&!disposed)preview();}
   },options);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=toggle.disabled=true;try{await undoStroke();status.textContent='Letzter Strich zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=toggle.disabled=false;}},options);
 }
