@@ -3,6 +3,12 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const root='modules/grimmes-erwachen';
 const read=name=>JSON.parse(fs.readFileSync(`${root}/data/${name}.json`,'utf8'));
+
+test('all packaged hosts use the Eden database icon for sheet and prototype token',()=>{
+  const hosts=read('actors').filter(a=>a.type==='host');assert.equal(hosts.length,10);
+  const icon='systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg';
+  for(const host of hosts) { assert.equal(host.img,icon,host.name);assert.equal(host.prototypeToken.texture.src,icon,host.name); }
+});
 test('every packaged scene has a native v14 background and a 1 m grid',()=>{
   for(const scene of read('scenes')) {
     const level=scene.levels?.find(l=>l._id===scene.initialLevel);

@@ -79,6 +79,7 @@ async function checkMedia(paths) {
 
 const sceneImage = scene => scene.levels?.find(l=>l.background?.src)?.background.src ?? scene.background?.src;
 const replaceablePortrait = path => !path || path.startsWith(`${BASE}/assets/tokens/`) || path === 'icons/svg/mystery-man.svg';
+const replaceableHostIcon = path => !path || path === 'icons/svg/circuit.svg';
 
 export async function repairMedia(options={}) { return exclusively(()=>runRepairMedia(options)); }
 
@@ -91,9 +92,17 @@ async function runRepairMedia({chapters=[1,2,3],withRendered=false}={}) {
     const data = selectDocuments({actors,journals,scenes},chapters,true);
     if (withRendered) data.scenes.push(...await renderedScenes(chapters));
     await checkMedia([...data.scenes.map(sceneImage),...data.actors.map(a=>a.img),...data.journals.flatMap(j=>j.pages.filter(p=>p.type==='image').map(p=>p.src))]);
-    const portraits = new Map();
+    const portraits = new Map(), hostIcons = new Map();
     for (const source of data.actors) {
       const actor = game.actors.find(a=>a.getFlag(ID,'key')===source.flags[ID].key);
+      if (actor?.type==='host' && source.type==='host') {
+        hostIcons.set(actor.id,source.img);
+        const changes={};
+        if (replaceableHostIcon(actor.img)) changes.img=source.img;
+        if (replaceableHostIcon(actor.prototypeToken?.texture?.src)) changes['prototypeToken.texture.src']=source.prototypeToken.texture.src;
+        if (Object.keys(changes).length) { await actor.update(changes); report.actors++; }
+        continue;
+      }
       if (!actor || !source.img?.includes('/assets/portraits/')) continue;
       portraits.set(actor.id,source.img);
       const changes = {};
@@ -118,6 +127,15 @@ async function runRepairMedia({chapters=[1,2,3],withRendered=false}={}) {
       const changes = Array.from(scene.tokens ?? []).filter(t=>portraits.has(t.actorId) && replaceablePortrait(t.texture?.src))
         .map(t=>({_id:t.id ?? t._id,'texture.src':portraits.get(t.actorId)}));
       if (changes.length) { await scene.updateEmbeddedDocuments('Token',changes); report.tokens += changes.length; }
+    }
+    // Hosts may be placed on any world scene, including personal Matrix scenes.
+    // Deployed IC/devices share their host actorId; their own icons must not be replaced.
+    for (const scene of game.scenes.values()) {
+      const changes=Array.from(scene.tokens ?? []).filter(t=>hostIcons.has(t.actorId)
+        && !t.flags?.['shadowrun6-eden']?.deployedItemUuid
+        && replaceableHostIcon(t.texture?.src))
+        .map(t=>({_id:t.id ?? t._id,'texture.src':hostIcons.get(t.actorId)}));
+      if (changes.length) { await scene.updateEmbeddedDocuments('Token',changes); report.tokens+=changes.length; }
     }
     for (const source of data.journals) {
       const journal = game.journal.find(j=>j.getFlag(ID,'key')===source.flags[ID].key);

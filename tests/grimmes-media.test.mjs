@@ -21,7 +21,7 @@ function setup(){
   globalThis.game={user:{isGM:true},release:{generation:14},actors:collection([actor]),scenes:collection([scene]),journal:collection([journal])};
   const source={actors:[{_id:'actor',flags:flags('actor-key'),img:`${base}/portraits/actor.png`}],scenes:[{_id:'scene',flags:flags('scene-key'),levels:[{background:{src:`${base}/maps/map.webp`}}]}],journals:[{_id:'journal',flags:flags('journal-key'),pages:[{_id:'page',name:'Bild',type:'image',src:`${base}/backgrounds/kapitel-1.jpg`,flags:flags('art')}]}]};
   globalThis.fetch=async(path,opts)=>({ok:true,json:async()=>structuredClone(source[path.match(/(actors|scenes|journals)\.json$/)[1]])});
-  return {actor,scene,journal};
+  return {actor,scene,journal,source};
 }
 test('scene conversion explicitly preserves background in a v14 level',()=>{
   setup();const source={background:{src:'map.webp'},grid:{distance:1,units:'m'},tokens:[{x:80}],walls:[{c:[0,0,80,0]}]};
@@ -42,4 +42,26 @@ test('repair creates absent level and stops before mutations on missing media',a
   const {scene}=setup();scene.levels=[];assert.equal((await repairMedia()).scenes,1);assert.equal(scene.initialLevel,scene.levels[0].id);
   const fresh=setup();const goodFetch=globalThis.fetch;globalThis.fetch=async(path,opts)=>opts?.method==='HEAD'?{ok:false}:goodFetch(path,opts);
   await assert.rejects(repairMedia(),/Bild fehlt/);assert.equal(fresh.scene.levels[0].background.src,null);assert.equal(fresh.actor.img,`${base}/tokens/old.png`);
+});
+
+test('host repair fixes sheet, prototype and placed tokens but preserves custom art and deployed devices',async()=>{
+  const {actor,scene,source}=setup();
+  const icon='systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg';
+  actor.type='host';actor.img='icons/svg/circuit.svg';actor.prototypeToken.texture.src='icons/svg/circuit.svg';
+  source.actors[0].type='host';source.actors[0].img=icon;source.actors[0].prototypeToken={texture:{src:icon}};
+  scene.tokens=[];
+  const placed=doc({id:'placed',actorId:actor.id,x:345,y:678,texture:{src:'icons/svg/circuit.svg'}});
+  const custom=doc({id:'custom-host',actorId:actor.id,texture:{src:'worlds/my-map/custom.svg'}});
+  const deployed=doc({id:'device',actorId:actor.id,texture:{src:'icons/svg/circuit.svg'},flags:{'shadowrun6-eden':{deployedItemUuid:'Actor.actor.Item.device'}}});
+  const other=doc({id:'unmanaged-host',actorId:'unmanaged',texture:{src:'icons/svg/circuit.svg'}});
+  const personal=doc({id:'personal-scene',tokens:[placed,custom,deployed,other]});game.scenes.push(personal);
+  const report=await repairMedia();
+  assert.equal(report.actors,1);assert.equal(report.tokens,1);
+  assert.equal(actor.img,icon);assert.equal(actor.prototypeToken.texture.src,icon);assert.equal(placed.texture.src,icon);
+  assert.equal(placed.x,345);assert.equal(placed.y,678);assert.equal(actor.system.body,7);
+  assert.equal(custom.texture.src,'worlds/my-map/custom.svg');assert.equal(deployed.texture.src,'icons/svg/circuit.svg');assert.equal(other.texture.src,'icons/svg/circuit.svg');
+  const again=await repairMedia();assert.equal(again.actors,0);assert.equal(again.tokens,0);
+  actor.img='worlds/custom/sheet.svg';actor.prototypeToken.texture.src='worlds/custom/prototype.svg';
+  assert.equal((await repairMedia()).actors,0);assert.equal(actor.img,'worlds/custom/sheet.svg');assert.equal(actor.prototypeToken.texture.src,'worlds/custom/prototype.svg');
+  actor.img='icons/svg/circuit.svg';assert.equal((await repairMedia({chapters:[3]})).actors,0);assert.equal(actor.img,'icons/svg/circuit.svg');
 });
