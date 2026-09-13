@@ -3010,5 +3010,124 @@
         "key": "map-guide-a3-08-alchera"
       }
     }
+  },
+  {
+    "_id": "cf07b1d868b3049a",
+    "name": "Matrix – Heidelberg: Hosts und Ermittlungen",
+    "pages": [
+      {
+        "_id": "f6eefc0f81636379",
+        "name": "Start – Matrixrecherche in Heidelberg",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Matrix – Heidelberg 2080</h1><p>Alle sechs Hostprofile, A/S/D/F-Werte, IC-Folgen, Geräte und Zugriffszuordnungen sind eigene SR6-Adaptionen. Die Quellen belegen Orte und Hinweise, keine vollständigen Hoststatblocks. Zugriffsstufen OUTSIDER / USER / ADMIN werden durch Eden verwaltet; die folgenden Rollen und Datenfreigaben sind Spielleitungsinhalt, keine zusätzliche Zugriffsautomatik. Dateidatensätze sind im Text vorbereitet, nicht als neue, vom System unbekannte Itemtypen angelegt.</p><h2>Benutzung</h2><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><h2>Zeitlinie</h2><p>Kampagnenjahr 2080. T0 bezeichnet die Nacht des Picknicks und Angriffs, T1 den folgenden frühen Morgen mit Celines Fund. Das erste Treffen mit Lucas folgt nach der in eurer Runde verwendeten Chronologie. Die Vorlage nennt 2081 und widersprüchliche Angaben zur 24-Stunden-Frist bzw. zum Abschlussdatum; deshalb keine ungeprüften Wochentage oder festen Fristen übernehmen. Vermisstenzahlen und bereits eingegangene Meldungen an den aktuellen Spieltag anpassen.</p><h2>Hosts</h2><ul><li>@UUID[Actor.371daa024113d8bf]{Uniklinik Heidelberg – Neurologie}</li><li>@UUID[Actor.0e643815c6bab02a]{DFB-Camp Heidelberg – Turnierverwaltung}</li><li>@UUID[Actor.2dd41d74ab74b0a9]{Cocktail Club – Altes Hallenbad}</li><li>@UUID[Actor.297a000420707fff]{Heiligenberg – Festspielgelände}</li><li>@UUID[Actor.a0714f88d148d321]{AGC Heidelberg – Standortverwaltung}</li><li>@UUID[Actor.52e0ecdd2099652d]{Sternschutz Heidelberg – Einsatz und Fallakten}</li></ul>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "d158129dd15b563a",
+        "name": "Uniklinik Heidelberg – Neurologie",
+        "type": "text",
+        "sort": 100000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.371daa024113d8bf]{Host öffnen}</p><h1>Uniklinik Heidelberg – Neurologie</h1><p><strong>Eigene SR6-Adaption · Hoststufe 6 · A/S/D/F 6/7/8/9</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 45–47, 56: Die Uniklinik behandelt Celine ohne gesicherte Erklärung ihres Zustands. Ihre Akte enthält eine Kopie des Sternschutzprotokolls. Ein hauseigener Sicherheitsdienst und eine magisch verstärkte Sondertruppe sind beschrieben.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Fachabteilungen, Besuchszeiten und Kontakt zur Stationsverwaltung; keine Patientennamen oder Behandlungsdaten.</p><p><strong>USER:</strong> Klinisches Dienstkonto: Stationsbelegung und freigegebene Behandlungsakten. Angehörigenportal: ausschließlich freigegebene Auskünfte. USER ist keine automatische Freigabe sämtlicher Patientendaten.</p><p><strong>ADMIN:</strong> Archivsuche, Berechtigungsverwaltung und Verwaltungsprotokolle im Neurologie-Verbund. Lebenswichtige Geräte bilden ein separates Netz und sind kein Host-Ziel.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Patientenakte Celine</td><td>USER, klinisches Dienstkonto</td><td>Verlegung von der pädiatrischen in die Erwachsenen-Neurologie; Koma ohne abschließende Erklärung. Der Befund beweist weder einen Täter noch ein digitales Heilmittel.</td><td>S. 45–46</td></tr><tr><td>Beigefügtes Einsatzprotokoll</td><td>USER, klinisches Dienstkonto</td><td>Fund am Südhang des Heiligenbergs durch einen Jogger; Verweis auf die fallführende Sternschutzstelle. Ermöglicht den Wechsel zur Polizeirecherche.</td><td>S. 46, 56</td></tr><tr><td>Pflege- und Besuchsverwaltung</td><td>USER / ADMIN für Änderungen</td><td>Optionale Datenablage für eine plausible Besuchslegende oder Terminvereinbarung; keine zusätzlich erfundenen Zeugenaussagen.</td><td>Adaption</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Keine Kameraaufzeichnung der Tat auf dem Heiligenberg, kein Alchera-Wissen, keine Heilung per Edit File.</p><h2>Alternativer Zugang</h2><p>Mit berechtigtem Interesse bei Ärzten oder Angehörigen nachfragen; der Host ist ein alternativer Rechercheweg.</p><h2>Darstellung</h2><p>Ein heller Klinikcampus aus Glas mit farbcodierten Datenfluren; Patientenakten erscheinen als geschlossene Lichtkapseln.</p><h2>Sicherheitsreaktion</h2><p>Nach bestätigtem Eindringen zunächst Zugänge prüfen und Klinik-IT alarmieren, dann IC laut Reihenfolge bereitstellen. Bei Angriff auf Verwaltungsgeräte den beschriebenen Sicherheitsdienst hinzuziehen. Keine automatische Abschaltung von Patientenversorgung.</p><p>IC-Folge: Patrouille → Marker → Binder → Aufspüren → Störer → Killer</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "b84aa5717f63beeb",
+        "name": "DFB-Camp Heidelberg – Turnierverwaltung",
+        "type": "text",
+        "sort": 200000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.0e643815c6bab02a]{Host öffnen}</p><h1>DFB-Camp Heidelberg – Turnierverwaltung</h1><p><strong>Eigene SR6-Adaption · Hoststufe 4 · A/S/D/F 4/5/7/6</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 43–44, 50, 57: Camp und Unterkünfte liegen zwischen Uniklinik und Neckar. Betreuer und Teams melden Abwesenheiten verspätet. Öffentlich wird das Ausmaß der vermissten Spieler heruntergespielt.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Spielplan, Ergebnisse, Anreise und öffentlich freigegebene Turniermeldungen.</p><p><strong>USER:</strong> Betreuerkonto: eigene Mannschaft, Zimmerbelegung und Abwesenheiten. Die Gesamtsicht benötigt Turnierleitungsfreigabe.</p><p><strong>ADMIN:</strong> Mannschaftsübergreifendes Verwaltungsarchiv und Abgleich der Abwesenheiten mit Ergebnissen. Verzögerte Meldungen bleiben verzögert; das System ist nicht allwissend.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Ergebnisse und Spielzeiten</td><td>OUTSIDER</td><td>Öffentliche Resultate bilden die Vergleichsbasis für die Vermisstenrecherche.</td><td>S. 43, 50, 57</td></tr><tr><td>Belegungs- und Abwesenheitslisten</td><td>USER, Betreuerrolle</td><td>Fehlende Jugendliche wurden zunächst intern gesucht; einzelne Listen sind unvollständig. Die unterschiedlichen Meldezeiten erklären widersprüchliche Auskünfte.</td><td>S. 43–44</td></tr><tr><td>Zusammengeführte Vermisstenmeldungen</td><td>ADMIN oder Freigabe der Turnierleitung</td><td>Bei gründlichem Abgleich zeigt sich: seit Beginn der Ereignisse jede Nacht ein Junge, jeweils nach einer Niederlage seiner Mannschaft. Anzahl an den aktuellen Spieltag anpassen, keine festen Fantasienamen ergänzen.</td><td>S. 43, 57</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Keine vollständige Entführungsaufnahme, kein Beweis für den Aufenthaltsort der Jungen in der Alchera. Medizinische Detailakten liegen nicht hier.</p><h2>Alternativer Zugang</h2><p>Gespräche mit Spielern, Betreuern und im Freibad liefern dieselben tragenden Spuren.</p><h2>Darstellung</h2><p>Ein virtuelles Trainingszentrum: Spielpläne als Anzeigetafeln, Mannschaften als Kabinen, Akten als versiegelte Schließfächer.</p><h2>Sicherheitsreaktion</h2><p>Diensthabende IT benachrichtigen; bei Manipulation von Belegungsdaten Betreuer informieren. Die Leitung versucht den Vorfall diskret zu halten. IC wird erst nach bestätigtem Alarm eskaliert.</p><p>IC-Folge: Patrouille → Marker → Aufspüren → Blaster</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "4f3ea3fab79bf643",
+        "name": "Cocktail Club – Altes Hallenbad",
+        "type": "text",
+        "sort": 300000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.2dd41d74ab74b0a9]{Host öffnen}</p><h1>Cocktail Club – Altes Hallenbad</h1><p><strong>Eigene SR6-Adaption · Hoststufe 3 · A/S/D/F 3/4/6/5</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 41–43: Der Club ist eine gehobene Dachterrassenbar im vierten Stock. Lucas Steltz beauftragt die Runner privat und verwendet einen toten Matrixbriefkasten für Berichte.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Öffnungszeiten, Karte, Reservierungsanfrage und Weg zum vierten Stock.</p><p><strong>USER:</strong> Servicekonto: Reservierungen, Bestellungen und Abrechnung der eigenen Schicht. Gastkonto zeigt nur die eigene Buchung.</p><p><strong>ADMIN:</strong> Reservierungsverwaltung und Haustechnik des Clubs. Der Host umfasst nicht automatisch das gesamte Alte Hallenbad.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Öffentlicher Clubeintrag</td><td>OUTSIDER</td><td>Bestätigt Dachterrassenbar und Treffpunkt, kein Schwimmbadbetrieb.</td><td>S. 41–42</td></tr><tr><td>Reservierung und Serviceplan</td><td>USER, Servicekonto</td><td>Als optionale Adaption kann eine Buchung für das Treffen vorhanden sein. Sie bestätigt höchstens Zeit und Tisch; kein Klartext des Auftrags und keine automatische Aliasauflösung.</td><td>Adaption zu S. 42</td></tr><tr><td>Abrechnung und Zugangsverwaltung</td><td>ADMIN</td><td>Optionale Hilfen für eine Servicelegende oder die Planung eines diskreten Treffens. Keine Tonmitschnitte des vertraulichen Gesprächs.</td><td>Adaption</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Lucas&#x27; privater Matrixbriefkasten und sein Commlink gehören nicht zum Club-Host. Die Finanzierung des Auftrags steht nicht in einer Clubdatei.</p><h2>Alternativer Zugang</h2><p>Den vereinbarten Termin wahrnehmen oder mit dem Personal sprechen; ein Hack ist für den Auftrag nicht nötig.</p><h2>Darstellung</h2><p>Eine stilisierte Dachterrasse bei Nacht; Reservierungen schweben als Tischkarten, Musik und Speisekarte bilden öffentliche AR-Flächen.</p><h2>Sicherheitsreaktion</h2><p>Zunächst Sitzung prüfen und Clubverwaltung verständigen. Bei sichtbaren Störungen kann das Personal Hausrecht ausüben. Keine automatische konzernweite Fahndung.</p><p>IC-Folge: Patrouille → Marker → Blaster</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "55f3c6e78c340f53",
+        "name": "Heiligenberg – Festspielgelände",
+        "type": "text",
+        "sort": 400000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.297a000420707fff]{Host öffnen}</p><h1>Heiligenberg – Festspielgelände</h1><p><strong>Eigene SR6-Adaption · Hoststufe 4 · A/S/D/F 4/5/7/6</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 47–49, 56–57: AR-Wegweiser, Ticketkontrollen, Shuttles und Festspielbetrieb sind beschrieben. Ein Aufräumer fand Picknickreste; ein Wachmann hörte Streit aus Richtung des Gasthauses.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Programm, Ticketkauf, Shuttlehinweise, Wanderwege und historische Informationstafeln.</p><p><strong>USER:</strong> Veranstaltungskonto: zugeteilte Schichten und Ticketprüfung. Keine automatische Einsicht in sämtliche Personalakten.</p><p><strong>ADMIN:</strong> Gesamte Veranstaltungsverwaltung und Dienstzuordnung. Bühnentechnik ist nur über die ausdrücklich aufgeführten Geräte erreichbar.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Programm- und Ortsarchiv</td><td>OUTSIDER</td><td>Opernprogramm und Heiligenberg-Landmarken, darunter Thingstätte, Heidenloch und Klosterruinen. Der Betreiber bestreitet eine Walküren-Werbeaktion.</td><td>S. 47–48, 56–57</td></tr><tr><td>Dienstplan und Kontaktverzeichnis</td><td>USER, Veranstaltungsrolle</td><td>Adaption: hilft, die zuständige Reinigungskraft und den Wachdienst der fraglichen Nacht zu finden. Die Beobachtungen müssen im Gespräch gewonnen werden.</td><td>S. 48; Ablage als Adaption</td></tr><tr><td>Ticket- und Betriebsprotokolle</td><td>ADMIN</td><td>Adaption: erlaubt die Prüfung eingetragener Tickets und Dienstvorgänge. Ein fehlender Ticketkauf beweist nicht, dass jemand nicht im Wald war.</td><td>Adaption</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Keine digitale Täterliste und keine Aufzeichnung des Picknickfunds erfinden: Der Aufräumer entsorgte die Reste und wollte nicht zum Sternschutz. Das Alchera-Portal ist kein elektronisches Gerät. Der Landsmann besitzt hier nur Werbeeinträge.</p><h2>Alternativer Zugang</h2><p>Reinigungskraft, Wachdienst und Gasthauspersonal befragen; AR-Recherche ersetzt diese Aussagen nicht.</p><h2>Darstellung</h2><p>Ein digitales Amphitheater im Buchenwald; Ticketdaten erscheinen als Sitzplätze, technische Dienste als Backstage-Gänge.</p><h2>Sicherheitsreaktion</h2><p>Veranstaltungs-IT alarmieren, bei Eingriffen in Ticketprüfung oder Anzeigen örtlichen Wachdienst verständigen. Den Publikumsbetrieb möglichst weiterführen.</p><p>IC-Folge: Patrouille → Marker → Störer → Blaster</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "05c369665ade57c2",
+        "name": "AGC Heidelberg – Standortverwaltung",
+        "type": "text",
+        "sort": 500000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.a0714f88d148d321]{Host öffnen}</p><h1>AGC Heidelberg – Standortverwaltung</h1><p><strong>Eigene SR6-Adaption · Hoststufe 7 · A/S/D/F 8/7/9/10</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 40–43, 56, 58: Die AG Chemie hat einen Standort in Heidelberg. Lucas Steltz leitet den strategischen Einkauf; AGC fördert musikalischen Nachwuchs. Sein Auftrag wird privat bezahlt.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Standortkontakt, freigegebene Konzerninformationen und öffentliches Kultursponsoring.</p><p><strong>USER:</strong> Mitarbeiterkonto: rollenbezogenes Verzeichnis und eigene Verwaltungsaufgaben; ein normales Konto öffnet keine Forschung oder Personalarchive.</p><p><strong>ADMIN:</strong> Standort-Verwaltungsarchiv und Berechtigungen dieses Hosts. Forschungsnetze, Konzernzentrale und private PANs bleiben separate Ziele.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Standort- und Sponsoringportal</td><td>OUTSIDER</td><td>Bestätigt den lokalen Konzernbezug und das musikalische Förderumfeld. Keine vertrauliche Patientenliste.</td><td>S. 42, 56</td></tr><tr><td>Mitarbeiterverzeichnis</td><td>USER, passende Verwaltungsrolle</td><td>Ordnet Lucas Steltz dem strategischen Einkauf zu. Das ist kein Beleg für einen offiziellen Konzernauftrag.</td><td>S. 43</td></tr><tr><td>Förder- und Verwaltungsarchiv</td><td>ADMIN</td><td>Adaption: kann Celines musikalisches Förderumfeld stützen. Private Zahlungen, der tote Matrixbriefkasten und aktuelle Ermittlungsberichte sind hier nicht hinterlegt.</td><td>S. 56; Ablage als Adaption</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Kein Unternehmensverschwörungs-Beweis, keine Alchera-Lösung und keine globale AGC-Administratorberechtigung. Lucas&#x27; privates Engagement ist nicht automatisch Konzernwissen.</p><h2>Alternativer Zugang</h2><p>Lucas selbst befragen und öffentliche Sponsoringinformationen nutzen. Der schwere Host ist ein optionaler Nebenweg.</p><h2>Darstellung</h2><p>Ein präziser Glascampus mit molekularen Skulpturen; Verwaltungsflügel hinter segmentierten Zugangsschleusen.</p><h2>Sicherheitsreaktion</h2><p>Bestätigter Einbruch alarmiert die Konzernsicherheit. Zugriffe protokollieren, lokale Eingänge prüfen und IC eskalieren; eine diensthabende Spinne kann die Spielleitung separat zuweisen. Keine automatisch ausgestattete Spinne wird importiert.</p><p>IC-Folge: Patrouille → Marker → Binder → Aufspüren → Störer → Killer</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "f3099061931ce92e",
+        "name": "Sternschutz Heidelberg – Einsatz und Fallakten",
+        "type": "text",
+        "sort": 600000,
+        "text": {
+          "format": 1,
+          "content": "<p>@UUID[Actor.52e0ecdd2099652d]{Host öffnen}</p><h1>Sternschutz Heidelberg – Einsatz und Fallakten</h1><p><strong>Eigene SR6-Adaption · Hoststufe 6 · A/S/D/F 8/6/7/9</strong></p><h2>Quellenbasis</h2><p>Grimms Erwachen, S. 40–41, 46–47, 56: Der Sternschutz bearbeitet Celines Fund, sieht keine gesicherten Gewaltanzeichen und führt den Vorgang als Unfall. Die Recherche nennt Finder, Rettungseinsatz und die eingeschränkte Spurensicherung.</p><h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Kontakt zur lokalen Dienststelle und öffentliche Sicherheitshinweise; keine frei zugänglichen Fallakten.</p><p><strong>USER:</strong> Sachbearbeiterkonto mit Fallzuweisung: freigegebene Einsatzakten. Allgemeine Mitarbeiterrechte reichen nicht für beliebige Fälle.</p><p><strong>ADMIN:</strong> Lokale Fallrecherche und Archivverwaltung. Keine pauschale Freigabe für sämtliche Sternschutz-Standorte oder externe Datenbanken.</p><h2>Daten und Spuren</h2><table><thead><tr><th>Daten</th><th>Zugang</th><th>Ergebnis / Grenze</th><th>Basis</th></tr></thead><tbody><tr><td>Fundmeldung Celine</td><td>USER, Fallzuweisung</td><td>Fund durch Mariusz Kolanski, einen 23-jährigen Medizinstudenten, am frühen Morgen um 05:45 Uhr am Südhang. Rettungsdienst war vor der Polizei vor Ort.</td><td>S. 56</td></tr><tr><td>Rettungs- und Spurensicherungsvermerk</td><td>USER, Fallzuweisung</td><td>Der Bereich war durch Erstversorgung und Bergung verändert; eine umfassende forensische Untersuchung unterblieb. Das Protokoll liefert keinen eindeutigen Täter.</td><td>S. 56</td></tr><tr><td>Abschlussvermerk und Meldeverlauf</td><td>ADMIN oder Freigabe der Sachbearbeitung</td><td>Der Fall wurde nach medizinischem Befund als Unfall behandelt und geschlossen. Das dokumentiert die begrenzte Ermittlung, keine erwiesene Bestechung. DFB-Meldungen nur ergänzen, sobald diese im aktuellen Spielverlauf tatsächlich eingegangen sind.</td><td>S. 40–41, 43, 56</td></tr></tbody></table><h2>Nicht verfügbar</h2><p>Keine vollständige Aufnahme der Tat, kein sicheres Wissen um Walküren oder Alchera. Gelöschte lokale Dateien beseitigen nicht automatisch alle Aktenkopien.</p><h2>Alternativer Zugang</h2><p>Die Kopie des Fundprotokolls in der Klinik, ein Kontakt oder eine plausible Fallanfrage kann denselben zentralen Hinweis liefern.</p><h2>Darstellung</h2><p>Eine sachliche digitale Leitstelle: Einsatzkarten, nummerierte Aktenkorridore und verriegelte Archivschränke.</p><h2>Sicherheitsreaktion</h2><p>Bestätigten Zugriff als Sicherheitsvorfall protokollieren, diensthabende IT verständigen und IC eskalieren. Eine physische Reaktion setzt einen belastbaren Ortshinweis voraus; ein Alarm kennt nicht automatisch den Aufenthaltsort der Runner.</p><p>IC-Folge: Patrouille → Marker → Aufspüren → Binder → Killer</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "3f08917efddc649b",
+        "name": "Quellen und Grenzen",
+        "type": "text",
+        "sort": 800000,
+        "text": {
+          "format": 1,
+          "content": "<h1>Quellen und Umsetzung</h1><p>Alle sechs Hostprofile, A/S/D/F-Werte, IC-Folgen, Geräte und Zugriffszuordnungen sind eigene SR6-Adaptionen. Die Quellen belegen Orte und Hinweise, keine vollständigen Hoststatblocks. Zugriffsstufen OUTSIDER / USER / ADMIN werden durch Eden verwaltet; die folgenden Rollen und Datenfreigaben sind Spielleitungsinhalt, keine zusätzliche Zugriffsautomatik. Dateidatensätze sind im Text vorbereitet, nicht als neue, vom System unbekannte Itemtypen angelegt.</p><p>Grimms Erwachen, Ring aus Feuer, gedruckte S. 40–58. Die Beinarbeit auf S. 55 überlässt der Spielleitung ausdrücklich die Trennung zwischen öffentlichen Informationen, gesicherten Hosts und nicht digital verfügbaren Hinweisen.</p><p>Kampagnenjahr 2080. T0 bezeichnet die Nacht des Picknicks und Angriffs, T1 den folgenden frühen Morgen mit Celines Fund. Das erste Treffen mit Lucas folgt nach der in eurer Runde verwendeten Chronologie. Die Vorlage nennt 2081 und widersprüchliche Angaben zur 24-Stunden-Frist bzw. zum Abschlussdatum; deshalb keine ungeprüften Wochentage oder festen Fristen übernehmen. Vermisstenzahlen und bereits eingegangene Meldungen an den aktuellen Spieltag anpassen.</p><ul><li><a href=\"https://shadowrunsixthworld.com/shadowrun-sixth-world-faq/\">Offizielle SR6-FAQ, Matrix: Hostalarm, IC-Folge und Hostgrenzen</a></li><li><a href=\"https://github.com/yjeroen/foundry-shadowrun6-eden/tree/release-4.0.8\">Eden release-4.0.8: Host- und Software-Datenmodelle</a></li></ul><p>Keine Spinnen-Actors, neuen Matrixkarten oder automatischen Alarmabläufe enthalten. Die bestehenden vier Hosts für Abenteuer 1 bleiben unverändert. Das ältere Matrixjournal in Kapitel 1 beschreibt den ursprünglichen Paketstand; dieses Kapitel-3-Journal ergänzt ihn, ohne eure bestehenden Journaltexte zu überschreiben.</p>"
+        },
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-matrix-hosts",
+        "adaptation": true
+      }
+    }
   }
 ]
