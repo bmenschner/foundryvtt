@@ -35644,7 +35644,7 @@
     "_id": "4a2f434796708ee3",
     "name": "Rathaus Wolfsburg",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 6,
       "type": "foundation",
@@ -35927,7 +35927,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -35949,7 +35949,7 @@
     "_id": "ca386e7da54ac8e4",
     "name": "Sanders – Wohnhaus",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 4,
       "type": "foundation",
@@ -36180,7 +36180,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -36202,7 +36202,7 @@
     "_id": "9f32bbc74fa07067",
     "name": "Sanders – Sternschutz",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 7,
       "type": "foundation",
@@ -36433,7 +36433,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -36455,7 +36455,7 @@
     "_id": "72c4abfeb5d917c4",
     "name": "Schloss Wolfsburg",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 3,
       "type": "foundation",
@@ -36660,7 +36660,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -36682,7 +36682,7 @@
     "_id": "371daa024113d8bf",
     "name": "Uniklinik Heidelberg – Neurologie",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 6,
       "type": "foundation",
@@ -37070,7 +37070,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -37096,7 +37096,7 @@
     "_id": "0e643815c6bab02a",
     "name": "DFB-Camp Heidelberg – Turnierverwaltung",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 4,
       "type": "foundation",
@@ -37432,7 +37432,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -37458,7 +37458,7 @@
     "_id": "2dd41d74ab74b0a9",
     "name": "Cocktail Club – Altes Hallenbad",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 3,
       "type": "foundation",
@@ -37768,7 +37768,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -37794,7 +37794,7 @@
     "_id": "297a000420707fff",
     "name": "Heiligenberg – Festspielgelände",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 4,
       "type": "foundation",
@@ -38130,7 +38130,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -38158,7 +38158,7 @@
     "_id": "a0714f88d148d321",
     "name": "AGC Heidelberg – Standortverwaltung",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 7,
       "type": "foundation",
@@ -38546,7 +38546,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
@@ -38570,7 +38570,7 @@
     "_id": "52e0ecdd2099652d",
     "name": "Sternschutz Heidelberg – Einsatz und Fallakten",
     "type": "host",
-    "img": "icons/svg/circuit.svg",
+    "img": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg",
     "system": {
       "rating": 6,
       "type": "foundation",
@@ -38932,7 +38932,7 @@
       "width": 1,
       "height": 1,
       "texture": {
-        "src": "icons/svg/circuit.svg"
+        "src": "systems/shadowrun6-eden/icons/compendium/black-chrome/ziggurat-city-database.svg"
       },
       "disposition": 0,
       "displayName": 20
