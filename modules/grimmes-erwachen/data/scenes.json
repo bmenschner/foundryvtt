@@ -94080,5 +94080,105 @@
       }
     ],
     "initialLevel": "281df70092bbe040"
+  },
+  {
+    "_id": "8f0cfefd955f1035",
+    "name": "Heidelberg 2080 – Spielerkarte",
+    "width": 3840,
+    "height": 2160,
+    "padding": 0,
+    "grid": {
+      "type": 0,
+      "size": 100,
+      "distance": 1,
+      "units": "m"
+    },
+    "tokenVision": false,
+    "fogExploration": false,
+    "environment": {
+      "darknessLevel": 0,
+      "globalLight": {
+        "enabled": true
+      }
+    },
+    "navigation": false,
+    "active": false,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-city-heidelberg-player",
+        "overview": true,
+        "audience": "player",
+        "scaleNote": "Illustrative Stadtübersicht, kein vermessener Maßstab"
+      }
+    },
+    "levels": [
+      {
+        "_id": "b7cb397d0cf272e6",
+        "name": "Spielplan",
+        "background": {
+          "src": "modules/grimmes-erwachen/assets/city-maps/heidelberg-2080-player.png"
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "map-level"
+          }
+        }
+      }
+    ],
+    "initialLevel": "b7cb397d0cf272e6"
+  },
+  {
+    "_id": "dfd788dd2397cae1",
+    "name": "Heidelberg 2080 – GM-Karte",
+    "width": 3840,
+    "height": 2160,
+    "padding": 0,
+    "grid": {
+      "type": 0,
+      "size": 100,
+      "distance": 1,
+      "units": "m"
+    },
+    "tokenVision": false,
+    "fogExploration": false,
+    "environment": {
+      "darknessLevel": 0,
+      "globalLight": {
+        "enabled": true
+      }
+    },
+    "navigation": false,
+    "active": false,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-city-heidelberg-gm",
+        "overview": true,
+        "audience": "gm",
+        "scaleNote": "Illustrative Stadtübersicht, kein vermessener Maßstab"
+      }
+    },
+    "levels": [
+      {
+        "_id": "be1a64f209c286bf",
+        "name": "Spielplan",
+        "background": {
+          "src": "modules/grimmes-erwachen/assets/city-maps/heidelberg-2080-gm.png"
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "key": "map-level"
+          }
+        }
+      }
+    ],
+    "initialLevel": "be1a64f209c286bf"
   }
 ]
