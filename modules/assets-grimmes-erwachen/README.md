@@ -4,6 +4,8 @@ Eigenständige Bibliothek für Foundry 14 mit **282 Elementen**: 277 Ausstattung
 
 ## Bedienungsverbesserungen in Version 1.3.0
 
+**Neu in Version 1.4.0:** Standard ist **Stempel · 1 × 1 m**. Linksklick setzt ein eigenes 1-m-Tile; gedrückt halten und ziehen belegt zusammenhängende Felder bis zum Loslassen. Ein Rasterrahmen zeigt die Zielposition, gefüllte Rahmen zeigen den laufenden Zug. „Letzten Strich zurücknehmen“ entfernt den gesamten letzten Zug. Texturen bleiben maßstabsgerecht. Pro Zug maximal 512 Felder; wiederholte Besuche desselben Feldes werden innerhalb des Zuges übersprungen. Bereits vorhandene Tiles aus älteren Zügen werden nicht automatisch ersetzt. Speicherung erfolgt nach dem Loslassen. Freihand, Rechteck und die Ziehgriffe bleiben erhalten. Zur normalen Szenenbedienung den Modus pausieren oder Esc drücken.
+
 - Links in der Foundry-Navigation öffnet das **Bilder-Symbol „Assets – Grimmes Erwachen“** den Katalog. Die Unterwerkzeuge öffnen Katalog oder Pinsel erneut.
 - **Gehweg – helle Betonplatten** ergänzt Asphalt und Bordsteine. Im Katalog unter Straßen und im Pinsel als Material verfügbar, 4 × 4 m pro Wiederholung.
 - Neue Tiles setzen den Foundry-14-Anker ausdrücklich auf die linke obere Ecke. Dadurch werden gemalte Rechtecke nicht mehr um eine halbe Breite/Höhe nach links/oben versetzt. Bereits gespeicherte oder manuell korrigierte Tiles werden nicht automatisch verschoben.

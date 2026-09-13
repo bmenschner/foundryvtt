@@ -1,6 +1,8 @@
 import {ID,loadCatalog,tileData,assetPath} from './catalog.mjs';
+import {stampCells,saveStamps} from './stamps.mjs';
 let active;
 const history=[];
+export function recordHistory(entry){history.push(entry);}
 export function squareCells(points,size) {
   if(!points.length || !Number.isFinite(size) || size<=0)throw new Error('Ungültige Pinselbreite.');
   const origin=points[0],cells=new Map();let last={x:0,y:0};
@@ -75,8 +77,8 @@ export async function undoStroke() {
   checkContext(canvas.scene,canvas.level);
   const index=history.findLastIndex(h=>h.scene===canvas.scene && h.levelId===canvas.level.id);
   if(index<0) throw new Error('Kein eigener Pinselstrich zum Zurücknehmen auf dieser Ebene.');
-  const h=history[index],tile=h.scene.tiles.get(h.id);
-  if(tile?.flags?.[ID]?.painted) await h.scene.deleteEmbeddedDocuments('Tile',[h.id]);
+  const h=history[index],ids=(h.ids??[h.id]).filter(id=>h.scene.tiles.get(id)?.flags?.[ID]?.painted);
+  if(ids.length) await h.scene.deleteEmbeddedDocuments('Tile',ids);
   history.splice(index,1);
 }
 export async function showBrush() {
@@ -90,16 +92,17 @@ export async function showBrush() {
   const panel=node('section');panel.className='age-brush';panel.tabIndex=-1;panel.setAttribute('aria-label','Boden malen');
   panel.append(node('strong','Boden malen'));
   const material=node('select');material.setAttribute('aria-label','Material');for(const a of assets)material.append(new Option(a.name,a.key));
-  const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Freihand','freehand'),new Option('Rechteck','rectangle'));
+  const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Stempel · 1 × 1 m','stamp'),new Option('Freihand','freehand'),new Option('Rechteck','rectangle'));
   const width=node('input');width.type='number';width.min='0.25';width.max='20';width.step='0.25';width.value='2';width.setAttribute('aria-label','Pinselbreite in Metern');
   const label=node('label','Pinselbreite (m)');label.append(width);
+  width.disabled=true;label.hidden=true;mode.addEventListener('change',()=>{width.disabled=mode.value==='stamp';label.hidden=mode.value==='stamp';});
   const extend=node('button','Ausgewählte Fläche erweitern');extend.addEventListener('click',async()=>{if(busy)return;setEnabled(false);try{(await import('./resize.mjs')).beginResize();}catch(error){status.textContent=error.message;}});
   const toggle=node('button','Malen starten'),undo=node('button','Letzten Strich zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Material wählen und Malen starten. Esc beendet den Malmodus.');status.setAttribute('aria-live','polite');
   panel.append(material,mode,label,toggle,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='age-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
-  let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false;
+  let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
   const controller=new AbortController(),options={signal:controller.signal};
   function clear(){overlay.getContext('2d').clearRect(0,0,overlay.width,overlay.height);}
   function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';toggle.textContent=value?'Malen pausieren':'Malen starten';points=[];pointer=null;clear();}
@@ -110,6 +113,12 @@ export async function showBrush() {
   resize();window.addEventListener('resize',()=>{setEnabled(false);resize();},options);
   function world(event){return canvas.canvasCoordinatesFromClient({x:event.clientX,y:event.clientY});}
   function preview(){
+    if(mode.value==='stamp'){
+      clear();const ctx=overlay.getContext('2d');
+      const draw=(cell,fill)=>{const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+ppm,y:cell.y+ppm});ctx.fillStyle='rgba(110,210,140,0.3)';ctx.strokeStyle='#a5ffc0';ctx.lineWidth=2;if(fill)ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);};
+      try{if(points.length)for(const cell of stampCells(points,ppm,rect))draw(cell,true);if(hover)for(const cell of stampCells([hover],ppm,rect))draw(cell,false);}catch(error){overflow=true;status.textContent=error.message;}
+      return;
+    }
     clear();if(!points.length)return;
     const ctx=overlay.getContext('2d'),client=points.map(p=>canvas.clientCoordinatesFromCanvas(p));
     ctx.strokeStyle=ctx.fillStyle='rgba(110,210,140,0.45)';
@@ -126,19 +135,22 @@ export async function showBrush() {
       e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,diameter:metres*ppm,asset:assets.find(a=>a.key===material.value)};preview();
     }catch(error){status.textContent=error.message;setEnabled(false);}
   },options);
-  overlay.addEventListener('pointermove',e=>{if(pointer!==e.pointerId || !points.length)return;const p=world(e);if(stroke.mode==='rectangle')points=[points[0],p];else if(points.length<9999)points.push(p);else overflow=true;preview();},options);
+  overlay.addEventListener('pointermove',e=>{if(busy)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
+  overlay.addEventListener('pointerleave',()=>{hover=null;if(!points.length)clear();},options);
   overlay.addEventListener('pointercancel',()=>{points=[];pointer=null;clear();},options);
   overlay.addEventListener('pointerup',async e=>{
     if(pointer!==e.pointerId || !points.length)return;
     const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=toggle.disabled=undo.disabled=true;status.textContent='Strich wird gespeichert …';
     try {
-      checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');const bounds=strokeBounds(path,stroke.diameter,stroke.mode,rect);
+      checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');
       const image=new Image();image.src=assetPath(stroke.asset);await image.decode();
       if(disposed) return;checkContext(scene,level);
+      if(stroke.mode==='stamp'){await saveStamps({scene,level,asset:stroke.asset,cells:stampCells(path,ppm,rect),ppm,image});status.textContent='1-m-Felder gesetzt. Rückgängig entfernt diesen gesamten Zug.';return;}
+      const bounds=strokeBounds(path,stroke.diameter,stroke.mode,rect);
       const surface=renderStroke({points:path,...stroke,bounds,ppm,image});
       await saveStroke({scene,level,asset:stroke.asset,bounds,surface});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
     }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=false;clear();}
+    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=false;clear();if(enabled&&!disposed)preview();}
   },options);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=toggle.disabled=true;try{await undoStroke();status.textContent='Letzter Strich zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=toggle.disabled=false;}},options);
 }
