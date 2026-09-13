@@ -15,6 +15,14 @@ Version 1.0.2 korrigiert die Platzierung unter der Schicksalswürfel-Beschriftun
 
 ## Pool und Auswertung
 
+### Einzelgänger (ab Version 1.2.0)
+
+Unter den Schicksalswürfel-Feldern steht die Checkbox **Einzelgänger (+1 W6)**. Sie ist in jedem neuen Dialog ausgeschaltet und erhöht bei Auswahl den Basis-Pool um einen normalen Würfel. Beispiel: Pool 12, verwenden 3, hinzufügen 2 und Einzelgänger ergibt 15 Würfel, davon 5 Schicksalswürfel. Der Bonus wird beim Absenden einmalig angewendet; die Pool-Vorschau des Systems enthält ihn vor dem Absenden noch nicht.
+
+Die manuelle +1-Regel entspricht dem bisherigen Matrix-Makro der Spielrunde. Das Modul prüft weder den Vorteil am Charakter noch seine situationsabhängigen Voraussetzungen. Nur aktivieren, wenn der Bonus für diese Probe gelten soll, und nicht zusätzlich im Pool-Modifikator eintragen. Normale Abzüge und die Pool-Obergrenze des Systems gelten weiterhin.
+
+Zum Prüfen: Pool 12 ohne Schicksalswürfel mit ausgeschalteter Checkbox ergibt 12 normale Würfel, eingeschaltet 13. Mehrfaches Ein-/Ausschalten darf den Bonus nicht aufsummieren; neu geöffnete Dialoge starten wieder ausgeschaltet.
+
 Die beiden Felder haben unterschiedliche Funktionen und lassen sich kombinieren:
 
 | Vorhandener Pool | Verwenden (ersetzen) | Hinzufügen | Ergebnis |

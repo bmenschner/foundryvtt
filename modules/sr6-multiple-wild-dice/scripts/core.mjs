@@ -8,7 +8,7 @@ export function parseCount(value) {
 
 // Eden writes a boolean choice immediately before constructing its formula.
 // Keep the numeric choice on this single configuration object only.
-export function installCount(configured, requested, added = 0) {
+export function installCount(configured, requested, added = 0, loner = false) {
   parseCount(requested);
   parseCount(added);
   const descriptor = Object.getOwnPropertyDescriptor(configured, "useWildDie");
@@ -31,7 +31,7 @@ export function installCount(configured, requested, added = 0) {
   });
   // Eden subsequently applies the modifier, wounds and its normal pool cap.
   // Adjust the base exactly once, not on every read or recalculation.
-  configured.pool = originalPool + added;
+  configured.pool = originalPool + added + (loner ? 1 : 0);
   return () => {
     const value = configured.useWildDie;
     Object.defineProperty(configured, "useWildDie", {
