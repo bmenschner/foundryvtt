@@ -27,7 +27,7 @@ function reset(){
 }
 const log=console.info;console.info=()=>{};
 reset();
-const first=await importBundle();assert.deepEqual(first.created,{Actor:75,JournalEntry:39,Scene:36});
+const first=await importBundle();assert.deepEqual(first.created,{Actor:81,JournalEntry:40,Scene:36});
 assert([...game.scenes.values()].every(scene=>scene.levels?.some(level=>level.background?.src)));
 const second=await importBundle();assert.deepEqual(second.created,{Actor:0,JournalEntry:0,Scene:0});assert.deepEqual(second.skipped,first.created);
 reset();
@@ -82,6 +82,32 @@ assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:
 assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:0});
 assert.equal(JSON.stringify({levels:oldScene.levels,walls:oldScene.walls,tokens:oldScene.tokens}),oldGeometry);
 // Missing rendered files must stop both import and repair before world changes.
+// Upgrade from 1.2.3: add only the six Heidelberg hosts and the new journal.
+const heidelbergHostKey = a => a.getFlag('grimmes-erwachen','key')?.startsWith('a3-host-');
+const heidelbergHosts = [...game.actors.values()].filter(heidelbergHostKey);
+assert.equal(heidelbergHosts.length,6);
+for(const host of heidelbergHosts) game.actors.delete(host.id);
+const hostJournal = game.journal.find(j=>j.getFlag('grimmes-erwachen','key')==='a3-matrix-hosts');
+game.journal.delete(hostJournal.id);
+const originalHost=game.actors.find(a=>a.type==='host');
+originalHost.system.rating=11;originalHost.items[0].system.active=false;
+const customJournal=game.journal.find(j=>j.getFlag('grimmes-erwachen','chapter')===3);
+customJournal.pages[0].text={format:1,content:'Eigene Kampagnennotiz'};
+const priorActors=JSON.stringify([...game.actors.values()]);
+const priorJournals=JSON.stringify([...game.journal.values()]);
+const priorScenes=JSON.stringify([...game.scenes.values()]);
+assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:6,JournalEntry:1,Scene:0});
+assert.equal(JSON.stringify([...game.actors.values()].filter(a=>!heidelbergHostKey(a))),priorActors);
+assert.equal(JSON.stringify([...game.journal.values()].filter(j=>j.getFlag('grimmes-erwachen','key')!=='a3-matrix-hosts')),priorJournals);
+assert.equal(JSON.stringify([...game.scenes.values()]),priorScenes);
+const addedHost=game.actors.find(heidelbergHostKey);addedHost.system.rating=9;
+assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:0});
+assert.equal(addedHost.system.rating,9);
+// The new journal must also be usable when a group's chapter-3 import excludes actors.
+reset();await importBundle({chapters:[3],withActors:false});
+assert.equal(game.actors.size,0);
+const noActorJournal=game.journal.find(j=>j.getFlag('grimmes-erwachen','key')==='a3-matrix-hosts');
+assert(noActorJournal);assert(!JSON.stringify(noActorJournal.pages).includes('@UUID[Actor.'));
 reset();const normalFetch=globalThis.fetch;
 globalThis.fetch=async(path,opts)=>opts?.method==='HEAD' && path.includes('/rendered-v2/')?{ok:false}:normalFetch(path,opts);
 console.error=()=>{};await assert.rejects(updateContents(),/Bild fehlt/);console.error=errorLog;
@@ -90,6 +116,6 @@ reset();await updateContents({chapters:[2]});
 assert([...game.scenes.values()].every(s=>s.getFlag('grimmes-erwachen','chapter')===2));
 assert.equal(game.scenes.size,11+catalog.maps.filter(m=>m.key.startsWith('a2-')).length);
 console.info=log;
-const report={passed:true,tests:['Vollimport: 75 Actors, 39 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
+const report={passed:true,tests:['Vollimport: 81 Actors, 40 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
 
 console.log(JSON.stringify(report,null,2));

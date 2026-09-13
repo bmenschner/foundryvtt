@@ -36677,5 +36677,2279 @@
         "targetSystem": "4.0.8"
       }
     }
+  },
+  {
+    "_id": "371daa024113d8bf",
+    "name": "Uniklinik Heidelberg – Neurologie",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 6,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 3,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Ein heller Klinikcampus aus Glas mit farbcodierten Datenfluren; Patientenakten erscheinen als geschlossene Lichtkapseln.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Nach bestätigtem Eindringen zunächst Zugänge prüfen und Klinik-IT alarmieren, dann IC laut Reihenfolge bereitstellen. Bei Angriff auf Verwaltungsgeräte den beschriebenen Sicherheitsdienst hinzuziehen. Keine automatische Abschaltung von Patientenversorgung.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Binder → Aufspüren → Störer → Killer</p>",
+      "sculpting": "<p>Ein heller Klinikcampus aus Glas mit farbcodierten Datenfluren; Patientenakten erscheinen als geschlossene Lichtkapseln.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Fachabteilungen, Besuchszeiten und Kontakt zur Stationsverwaltung; keine Patientennamen oder Behandlungsdaten.</p><p><strong>USER:</strong> Klinisches Dienstkonto: Stationsbelegung und freigegebene Behandlungsakten. Angehörigenportal: ausschließlich freigegebene Auskünfte. USER ist keine automatische Freigabe sämtlicher Patientendaten.</p><p><strong>ADMIN:</strong> Archivsuche, Berechtigungsverwaltung und Verwaltungsprotokolle im Neurologie-Verbund. Lebenswichtige Geräte bilden ein separates Netz und sind kein Host-Ziel.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 6,
+          "sleaze": 7,
+          "dataProcessing": 8,
+          "firewall": 9
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "83b11185e100790f",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "5f0e0a11e9bae259",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "cbeb47bbb9875b7e",
+        "name": "03 – Binder",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "binder"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "3a8867f2acf8f87c",
+        "name": "04 – Aufspüren",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "track"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 3,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "45b63773a936d382",
+        "name": "05 – Störer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "jammer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 4,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "c8645a3ecdc7d88c",
+        "name": "06 – Killer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "killer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 5,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 45–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "b7ed3652dd245dee",
+        "name": "Stationsverwaltungsterminal",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 3,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 6,
+              "firewall": 6
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 3,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "467752907fdbae52",
+        "name": "Zutrittsleser Verwaltung",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 3,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 6,
+              "firewall": 6
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 3,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "Uniklinik Heidelberg – Neurologie",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-uniklinik",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 45–47, 56",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [
+          "a3-03-uniklinik"
+        ],
+        "sourceHostStats": false
+      }
+    }
+  },
+  {
+    "_id": "0e643815c6bab02a",
+    "name": "DFB-Camp Heidelberg – Turnierverwaltung",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 4,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 2,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Ein virtuelles Trainingszentrum: Spielpläne als Anzeigetafeln, Mannschaften als Kabinen, Akten als versiegelte Schließfächer.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Diensthabende IT benachrichtigen; bei Manipulation von Belegungsdaten Betreuer informieren. Die Leitung versucht den Vorfall diskret zu halten. IC wird erst nach bestätigtem Alarm eskaliert.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Aufspüren → Blaster</p>",
+      "sculpting": "<p>Ein virtuelles Trainingszentrum: Spielpläne als Anzeigetafeln, Mannschaften als Kabinen, Akten als versiegelte Schließfächer.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Spielplan, Ergebnisse, Anreise und öffentlich freigegebene Turniermeldungen.</p><p><strong>USER:</strong> Betreuerkonto: eigene Mannschaft, Zimmerbelegung und Abwesenheiten. Die Gesamtsicht benötigt Turnierleitungsfreigabe.</p><p><strong>ADMIN:</strong> Mannschaftsübergreifendes Verwaltungsarchiv und Abgleich der Abwesenheiten mit Ergebnissen. Verzögerte Meldungen bleiben verzögert; das System ist nicht allwissend.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 4,
+          "sleaze": 5,
+          "dataProcessing": 7,
+          "firewall": 6
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "cd86f21d1c8592fe",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 43–44, 50, 57"
+          }
+        }
+      },
+      {
+        "_id": "c98e96e06863b254",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 43–44, 50, 57"
+          }
+        }
+      },
+      {
+        "_id": "1b201a16e824e18a",
+        "name": "03 – Aufspüren",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "track"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 43–44, 50, 57"
+          }
+        }
+      },
+      {
+        "_id": "ea1133053e48047c",
+        "name": "04 – Blaster",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "blaster"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 3,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 43–44, 50, 57"
+          }
+        }
+      },
+      {
+        "_id": "4d7c5e30bab5383f",
+        "name": "Turnier-Anzeigetafel",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "303406922ab1cb08",
+        "name": "Verwaltungsterminal Wohnheim",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "DFB-Camp Heidelberg – Turnierverwaltung",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-dfb",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 43–44, 50, 57",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [
+          "a3-07-trainingscamp"
+        ],
+        "sourceHostStats": false
+      }
+    }
+  },
+  {
+    "_id": "2dd41d74ab74b0a9",
+    "name": "Cocktail Club – Altes Hallenbad",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 3,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 1,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Eine stilisierte Dachterrasse bei Nacht; Reservierungen schweben als Tischkarten, Musik und Speisekarte bilden öffentliche AR-Flächen.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Zunächst Sitzung prüfen und Clubverwaltung verständigen. Bei sichtbaren Störungen kann das Personal Hausrecht ausüben. Keine automatische konzernweite Fahndung.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Blaster</p>",
+      "sculpting": "<p>Eine stilisierte Dachterrasse bei Nacht; Reservierungen schweben als Tischkarten, Musik und Speisekarte bilden öffentliche AR-Flächen.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Öffnungszeiten, Karte, Reservierungsanfrage und Weg zum vierten Stock.</p><p><strong>USER:</strong> Servicekonto: Reservierungen, Bestellungen und Abrechnung der eigenen Schicht. Gastkonto zeigt nur die eigene Buchung.</p><p><strong>ADMIN:</strong> Reservierungsverwaltung und Haustechnik des Clubs. Der Host umfasst nicht automatisch das gesamte Alte Hallenbad.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 3,
+          "sleaze": 4,
+          "dataProcessing": 6,
+          "firewall": 5
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "323e23a971e45650",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 41–43"
+          }
+        }
+      },
+      {
+        "_id": "3c0787501542d5d5",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 41–43"
+          }
+        }
+      },
+      {
+        "_id": "35cdadd7f07a3214",
+        "name": "03 – Blaster",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "blaster"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 41–43"
+          }
+        }
+      },
+      {
+        "_id": "6f2d9099432d6935",
+        "name": "Reservierungsterminal",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "7adb574f4f385487",
+        "name": "AR-Speisekarte und Musiksteuerung",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "Cocktail Club – Altes Hallenbad",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-cocktail",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 41–43",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [
+          "a3-01-cocktail"
+        ],
+        "sourceHostStats": false
+      }
+    }
+  },
+  {
+    "_id": "297a000420707fff",
+    "name": "Heiligenberg – Festspielgelände",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 4,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 2,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Ein digitales Amphitheater im Buchenwald; Ticketdaten erscheinen als Sitzplätze, technische Dienste als Backstage-Gänge.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Veranstaltungs-IT alarmieren, bei Eingriffen in Ticketprüfung oder Anzeigen örtlichen Wachdienst verständigen. Den Publikumsbetrieb möglichst weiterführen.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Störer → Blaster</p>",
+      "sculpting": "<p>Ein digitales Amphitheater im Buchenwald; Ticketdaten erscheinen als Sitzplätze, technische Dienste als Backstage-Gänge.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Programm, Ticketkauf, Shuttlehinweise, Wanderwege und historische Informationstafeln.</p><p><strong>USER:</strong> Veranstaltungskonto: zugeteilte Schichten und Ticketprüfung. Keine automatische Einsicht in sämtliche Personalakten.</p><p><strong>ADMIN:</strong> Gesamte Veranstaltungsverwaltung und Dienstzuordnung. Bühnentechnik ist nur über die ausdrücklich aufgeführten Geräte erreichbar.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 4,
+          "sleaze": 5,
+          "dataProcessing": 7,
+          "firewall": 6
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "ccddb433ed05c87b",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 47–49, 56–57"
+          }
+        }
+      },
+      {
+        "_id": "235563ca8bb4f242",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 47–49, 56–57"
+          }
+        }
+      },
+      {
+        "_id": "37a79843d00cc16c",
+        "name": "03 – Störer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "jammer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 47–49, 56–57"
+          }
+        }
+      },
+      {
+        "_id": "fd554e9e954dbaf4",
+        "name": "04 – Blaster",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "blaster"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 3,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 47–49, 56–57"
+          }
+        }
+      },
+      {
+        "_id": "51324128bd3bec39",
+        "name": "Ticketleser am Veranstaltungseingang",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "3c1c5637287c3044",
+        "name": "AR-Wegweiser und Shuttleanzeige",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 2,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 9,
+              "max": 9
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 4,
+              "firewall": 4
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 2,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "Heiligenberg – Festspielgelände",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-festspiele",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 47–49, 56–57",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [
+          "a3-06-festspiel",
+          "a3-04-heidenloch",
+          "a3-05-landsmann"
+        ],
+        "sourceHostStats": false
+      }
+    }
+  },
+  {
+    "_id": "a0714f88d148d321",
+    "name": "AGC Heidelberg – Standortverwaltung",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 7,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 3,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Ein präziser Glascampus mit molekularen Skulpturen; Verwaltungsflügel hinter segmentierten Zugangsschleusen.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Bestätigter Einbruch alarmiert die Konzernsicherheit. Zugriffe protokollieren, lokale Eingänge prüfen und IC eskalieren; eine diensthabende Spinne kann die Spielleitung separat zuweisen. Keine automatisch ausgestattete Spinne wird importiert.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Binder → Aufspüren → Störer → Killer</p>",
+      "sculpting": "<p>Ein präziser Glascampus mit molekularen Skulpturen; Verwaltungsflügel hinter segmentierten Zugangsschleusen.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Standortkontakt, freigegebene Konzerninformationen und öffentliches Kultursponsoring.</p><p><strong>USER:</strong> Mitarbeiterkonto: rollenbezogenes Verzeichnis und eigene Verwaltungsaufgaben; ein normales Konto öffnet keine Forschung oder Personalarchive.</p><p><strong>ADMIN:</strong> Standort-Verwaltungsarchiv und Berechtigungen dieses Hosts. Forschungsnetze, Konzernzentrale und private PANs bleiben separate Ziele.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 8,
+          "sleaze": 7,
+          "dataProcessing": 9,
+          "firewall": 10
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "ab4c3eaddca2732b",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "59624272f2e4f96b",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "9ebc73f8d4467ff2",
+        "name": "03 – Binder",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "binder"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "950cd7ea21419f32",
+        "name": "04 – Aufspüren",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "track"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 3,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "7352e2746a67c420",
+        "name": "05 – Störer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "jammer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 4,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "69d9fe41b1dbab62",
+        "name": "06 – Killer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "killer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 5,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–43, 56, 58"
+          }
+        }
+      },
+      {
+        "_id": "ef9f4877b9d1536f",
+        "name": "Besucherterminal Standortverwaltung",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 3,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 6,
+              "firewall": 6
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 3,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "66f1b594862e10b4",
+        "name": "Zutrittsleser Verwaltungsbereich",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 4,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 8,
+              "firewall": 8
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 4,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "AGC Heidelberg – Standortverwaltung",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-agc",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 40–43, 56, 58",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [],
+        "sourceHostStats": false
+      }
+    }
+  },
+  {
+    "_id": "52e0ecdd2099652d",
+    "name": "Sternschutz Heidelberg – Einsatz und Fallakten",
+    "type": "host",
+    "img": "icons/svg/circuit.svg",
+    "system": {
+      "rating": 6,
+      "type": "foundation",
+      "resolutionGrade": 3,
+      "scale": 3,
+      "convergenceThreshold": 40,
+      "description": "<p>Lokaler Verwaltungs-Host in Heidelberg 2080. Eigene SR6-Adaption.</p><p>Eine sachliche digitale Leitstelle: Einsatzkarten, nummerierte Aktenkorridore und verriegelte Archivschränke.</p><p>Vertrauliche Ermittlungsinformationen stehen ausschließlich im GM-Journal „Matrix – Heidelberg: Hosts und Ermittlungen“.</p>",
+      "notes": "<p>Bestätigten Zugriff als Sicherheitsvorfall protokollieren, diensthabende IT verständigen und IC eskalieren. Eine physische Reaktion setzt einen belastbaren Ortshinweis voraus; ein Alarm kennt nicht automatisch den Aufenthaltsort der Runner.</p><p>Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.</p><p>IC-Folge: Patrouille → Marker → Aufspüren → Binder → Killer</p>",
+      "sculpting": "<p>Eine sachliche digitale Leitstelle: Einsatzkarten, nummerierte Aktenkorridore und verriegelte Archivschränke.</p>",
+      "outsiderAccess": "<h2>Zugriff</h2><p><strong>OUTSIDER:</strong> Kontakt zur lokalen Dienststelle und öffentliche Sicherheitshinweise; keine frei zugänglichen Fallakten.</p><p><strong>USER:</strong> Sachbearbeiterkonto mit Fallzuweisung: freigegebene Einsatzakten. Allgemeine Mitarbeiterrechte reichen nicht für beliebige Fälle.</p><p><strong>ADMIN:</strong> Lokale Fallrecherche und Archivverwaltung. Keine pauschale Freigabe für sämtliche Sternschutz-Standorte oder externe Datenbanken.</p>",
+      "matrix": {
+        "attributes": {
+          "attack": 8,
+          "sleaze": 6,
+          "dataProcessing": 7,
+          "firewall": 9
+        },
+        "overwatchScore": 0
+      },
+      "edge": {
+        "current": 0
+      }
+    },
+    "items": [
+      {
+        "_id": "622a6b8706460dab",
+        "name": "01 – Patrouille",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "patrol"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": true
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 0,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–41, 46–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "bc7798061394ce5a",
+        "name": "02 – Marker",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "marker"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 1,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–41, 46–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "24e10fd4ebfa79f0",
+        "name": "03 – Aufspüren",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "track"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 2,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–41, 46–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "24688a66c4d09269",
+        "name": "04 – Binder",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "binder"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 3,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–41, 46–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "520927821fa108ad",
+        "name": "05 – Killer",
+        "type": "software",
+        "img": "icons/svg/eye.svg",
+        "system": {
+          "type": "IC",
+          "multiTypes": [
+            "killer"
+          ],
+          "description": "Eigene SR6-Adaption. Host im Actorverzeichnis öffnen und bei Bedarf als verknüpften Token auf die Szene ziehen. IC und Geräte über Edens Bereitstellungsfunktion einsetzen. Anfangs ist nur Patrouille aktiv. Die nummerierte Alarmfolge ist eine Vorlage für die Spielleitung, kein automatischer Spawn. Im Alarm höchstens ein zusätzliches IC pro Runde bereitstellen; IC bleiben in ihrem Host. Nicht jede öffentliche Recherche erfordert einen Einbruch. Matrixhandlungen und Proben nach SR6/Eden abwickeln; die SR5-Suchproben und Limits aus dem Abenteuer werden nicht als SR6-Regeln übernommen.",
+          "matrix": {
+            "matrixCM": {
+              "dmg": 0
+            }
+          },
+          "active": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "deploymentOrder": 4,
+            "adaptation": true,
+            "source": "Grimms Erwachen, S. 40–41, 46–47, 56"
+          }
+        }
+      },
+      {
+        "_id": "e6d968ecbb6c7498",
+        "name": "Bürgerkontaktterminal",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 3,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 6,
+              "firewall": 6
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 3,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      },
+      {
+        "_id": "2686a81de5bcf965",
+        "name": "Archiv-Arbeitsplatz",
+        "type": "gear",
+        "img": "icons/svg/circuit.svg",
+        "system": {
+          "genesisID": "",
+          "description": "Ergaenztes abstraktes Geraeteprofil dieses Verwaltungsnetzes; keine Festlegung einer Position auf der Detailkarte. Weitere Grenzen stehen im GM-Journal.",
+          "product": "",
+          "page": 0,
+          "modifier": 0,
+          "wild": false,
+          "pool": 0,
+          "isElectronicMatrixDevice": true,
+          "matrix": {
+            "deviceRating": 3,
+            "hasWirelessInterface": true,
+            "hasDataCableInterface": true,
+            "wirelessActive": true,
+            "matrixCM": {
+              "value": 10,
+              "max": 10
+            },
+            "attributes": {
+              "attack": null,
+              "sleaze": null,
+              "dataProcessing": 6,
+              "firewall": 6
+            }
+          },
+          "type": "ELECTRONICS",
+          "subtype": "SECURITY",
+          "count": 1,
+          "countable": false,
+          "availDef": "",
+          "avail": 0,
+          "ammocap": 0,
+          "ammocount": 0,
+          "ammoLoaded": "regular",
+          "priceDef": "",
+          "price": 0,
+          "customName": "",
+          "usedForPool": false,
+          "notes": "",
+          "accessories": "",
+          "needsRating": false,
+          "rating": 3,
+          "skill": "",
+          "skillSpec": "",
+          "dmg": 0,
+          "stun": false,
+          "dmgDef": "",
+          "attackRating": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "modes": {
+            "BF": false,
+            "FA": false,
+            "SA": false,
+            "SS": false
+          },
+          "defense": 0,
+          "social": 0,
+          "essence": 0,
+          "capacity": 0,
+          "natural": false,
+          "a": 0,
+          "s": 0,
+          "d": 0,
+          "f": 0,
+          "progSlots": 0,
+          "handlOn": 0,
+          "handlOff": 0,
+          "accOn": 0,
+          "accOff": 0,
+          "spdiOn": 0,
+          "spdiOff": 0,
+          "tspd": 0,
+          "bod": 0,
+          "arm": 0,
+          "pil": 0,
+          "sen": 0,
+          "sea": 0,
+          "vtype": "",
+          "vehicle": {
+            "opMode": "manual"
+          },
+          "strWeapon": false,
+          "dualHand": false
+        },
+        "flags": {
+          "grimmes-erwachen": {
+            "adaptation": true
+          }
+        }
+      }
+    ],
+    "prototypeToken": {
+      "name": "Sternschutz Heidelberg – Einsatz und Fallakten",
+      "actorLink": true,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "icons/svg/circuit.svg"
+      },
+      "disposition": 0,
+      "displayName": 20
+    },
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-host-sternschutz",
+        "adaptation": true,
+        "source": "Grimms Erwachen, S. 40–41, 46–47, 56",
+        "targetSystem": "4.0.8",
+        "relatedSceneKeys": [],
+        "sourceHostStats": false
+      }
+    }
   }
 ]
