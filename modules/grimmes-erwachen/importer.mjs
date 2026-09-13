@@ -33,9 +33,29 @@ export async function updateContents({chapters=[1,2,3]}={}) {
   return exclusively(async()=>{
     const imported=await runImportBundle({chapters,withActors:true,withRendered:true});
     const repaired=await runRepairMedia({chapters,withRendered:true});
-    ui.notifications.info(`Aktualisiert: ${imported.created.Scene} neue Szenen, ${imported.created.Actor} neue NSC/Hosts. Fehlende Bilder wurden ergänzt. Neue Karten benötigen Wände und Tokenpositionen.`,{permanent:true});
-    return {imported,repaired};
+    const descriptions=await runUpdateActorDescriptions(chapters);
+    ui.notifications.info(`Aktualisiert: ${imported.created.Scene} neue Szenen, ${imported.created.Actor} neue NSC/Hosts, ${imported.created.JournalEntry} neue Journals. ${descriptions.updated} Beschreibungen ergänzt; ${descriptions.preserved} eigene Beschreibungen beibehalten. Vollständige Figurentexte stehen auch im Hauptdarsteller-Journal.`,{permanent:true});
+    return {imported,repaired,descriptions};
   });
+}
+
+async function runUpdateActorDescriptions(chapters) {
+  const entries=await readData('actor-descriptions');
+  if (!Array.isArray(entries) || entries.some(e=>typeof e.key!=='string' || !Number.isInteger(e.chapter) || typeof e.description!=='string' || !Array.isArray(e.previousDescriptions) || e.previousDescriptions.some(v=>typeof v!=='string'))) {
+    throw new Error('Ungültige Daten für die Beschreibungsaktualisierung.');
+  }
+  const report={updated:0,preserved:0};
+  for(const entry of entries.filter(e=>chapters.includes(e.chapter))) {
+    const actor=game.actors.find(a=>a.type==='NPC' && a.getFlag(ID,'chapter')===entry.chapter && a.getFlag(ID,'key')===entry.key);
+    if (!actor) continue;
+    const current=actor.system.description ?? '';
+    if (current===entry.description) continue;
+    if (current.trim() && !entry.previousDescriptions.includes(current)) { report.preserved++; continue; }
+    // Only known shipped short text or an empty field may be replaced. Never touch notes, stats, IC or artwork.
+    await actor.update({'system.description':entry.description});
+    report.updated++;
+  }
+  return report;
 }
 
 export function prepareScene(data) {
@@ -230,7 +250,7 @@ export async function showImporter() {
   const DialogClass = foundry.applications.api.DialogV2;
   const result = await DialogClass.wait({
     window:{title:'Grimmes Erwachen – Import'},
-    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 10 Matrix-Hosts und 40 Journals mit Bildseiten.</p><p><strong>Inhalte aktualisieren</strong> ergänzt fehlende NSC, Hosts und Journals sowie 32 neue Karten als separate Szenen (1 m/Kästchen). Bereits per Kartenmakro angelegte Szenen werden erkannt. Fehlende Bilder werden repariert; eigene Bilder und Spielwerte bleiben erhalten. Die neuen Karten haben zunächst keine Wände, Lichter oder Tokens und freie Sicht. Bestehende Grundrisse bleiben erhalten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
+    content:'<p>Foundry 14 / Eden 4.x: 30 taktische Karten (1 m/Kästchen), 4 Hintergründe in 4K/16:9, 71 NSC mit Porträts, 10 Matrix-Hosts und 43 Journals mit Bildseiten.</p><p><strong>Inhalte aktualisieren</strong> ergänzt fehlende NSC, Hosts und Journals sowie die Figurenbeschreibungen und Spielhilfen für Abenteuer 3. Eigene Beschreibungstexte bleiben erhalten. Außerdem ergänzt die Funktion 32 neue Karten als separate Szenen (1 m/Kästchen). Bereits per Kartenmakro angelegte Szenen werden erkannt. Fehlende Bilder werden repariert; eigene Bilder und Spielwerte bleiben erhalten. Die neuen Karten haben zunächst keine Wände, Lichter oder Tokens und freie Sicht. Bestehende Grundrisse bleiben erhalten.</p><p><strong>Bereits importiert?</strong> „Bilder ergänzen / reparieren“ ergänzt fehlende Szenenhintergründe, ersetzt die bisherigen Monogramme und fügt Bildseiten hinzu. Eigene Bilder, Spielwerte und Journaltexte bleiben erhalten.</p><p>Der normale Import überspringt bereits vorhandene Dokumente. NSC enthalten eigene SR6-Arbeitswerte; Sonderkräfte werden teilweise am Tisch abgewickelt.</p><label>Abenteuer <select name="chapter"><option value="all">Alle drei Abenteuer</option><option value="1">Spuk in der Wolfsburg</option><option value="2">Zucker für die Kinder</option><option value="3">Ring aus Feuer</option></select></label>',
     buttons:[
       {action:'update',label:'Inhalte aktualisieren',callback:(event,button,dialog)=>({update:true,chapter:dialog.element.querySelector('[name=chapter]').value})},
       {action:'repair',label:'Bilder ergänzen / reparieren',callback:(event,button,dialog)=>({repair:true,chapter:dialog.element.querySelector('[name=chapter]').value})},

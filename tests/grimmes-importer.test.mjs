@@ -27,7 +27,7 @@ function reset(){
 }
 const log=console.info;console.info=()=>{};
 reset();
-const first=await importBundle();assert.deepEqual(first.created,{Actor:81,JournalEntry:40,Scene:36});
+const first=await importBundle();assert.deepEqual(first.created,{Actor:81,JournalEntry:43,Scene:36});
 assert([...game.scenes.values()].every(scene=>scene.levels?.some(level=>level.background?.src)));
 const second=await importBundle();assert.deepEqual(second.created,{Actor:0,JournalEntry:0,Scene:0});assert.deepEqual(second.skipped,first.created);
 reset();
@@ -82,6 +82,31 @@ assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:
 assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:0});
 assert.equal(JSON.stringify({levels:oldScene.levels,walls:oldScene.walls,tokens:oldScene.tokens}),oldGeometry);
 // Missing rendered files must stop both import and repair before world changes.
+// 1.2.4 world: refresh only untouched shipped descriptions, preserve custom text and every other field.
+const descEntries=JSON.parse(fs.readFileSync(root+'grimmes-erwachen/data/actor-descriptions.json','utf8'));
+const descActors=descEntries.map(e=>game.actors.find(a=>a.getFlag('grimmes-erwachen','key')===e.key));
+for(const [i,actor] of descActors.entries()) actor.system.description=descEntries[i].previousDescriptions[0];
+descActors[0].system.description='<p>Meine eigene Beschreibung</p>';
+descActors[1].system.description='';
+descActors[2].system.notes='<p>Meine vertrauliche Notiz</p>';
+const protectedData=actor=>JSON.stringify({system:{...actor.system,description:undefined},img:actor.img,items:actor.items,prototypeToken:actor.prototypeToken});
+const beforeDescriptions=descActors.map(protectedData);
+const handoutKeys=['a3-hauptdarsteller','a3-beinarbeit','a3-krankenakte-ausfuehrlich'];
+for(const key of handoutKeys) game.journal.delete(game.journal.find(j=>j.getFlag('grimmes-erwachen','key')===key).id);
+const descriptionUpgrade=await updateContents({chapters:[3]});
+assert.deepEqual(descriptionUpgrade.imported.created,{Actor:0,JournalEntry:3,Scene:0});
+assert.deepEqual(descriptionUpgrade.descriptions,{updated:27,preserved:1});
+assert.equal(descActors[0].system.description,'<p>Meine eigene Beschreibung</p>');
+for(let i=1;i<descActors.length;i++) assert.equal(descActors[i].system.description,descEntries[i].description);
+assert.deepEqual(descActors.map(protectedData),beforeDescriptions);
+const descriptionsAgain=await updateContents({chapters:[3]});
+assert.deepEqual(descriptionsAgain.imported.created,{Actor:0,JournalEntry:0,Scene:0});
+assert.deepEqual(descriptionsAgain.descriptions,{updated:0,preserved:1});
+// Selecting another chapter must not update an old chapter-3 description.
+descActors[1].system.description=descEntries[1].previousDescriptions[0];
+await updateContents({chapters:[2]});
+assert.equal(descActors[1].system.description,descEntries[1].previousDescriptions[0]);
+await updateContents({chapters:[3]});
 // Upgrade from 1.2.3: add only the six Heidelberg hosts and the new journal.
 const heidelbergHostKey = a => a.getFlag('grimmes-erwachen','key')?.startsWith('a3-host-');
 const heidelbergHosts = [...game.actors.values()].filter(heidelbergHostKey);
@@ -116,6 +141,6 @@ reset();await updateContents({chapters:[2]});
 assert([...game.scenes.values()].every(s=>s.getFlag('grimmes-erwachen','chapter')===2));
 assert.equal(game.scenes.size,11+catalog.maps.filter(m=>m.key.startsWith('a2-')).length);
 console.info=log;
-const report={passed:true,tests:['Vollimport: 81 Actors, 40 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
+const report={passed:true,tests:['Vollimport: 81 Actors, 43 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
 
 console.log(JSON.stringify(report,null,2));

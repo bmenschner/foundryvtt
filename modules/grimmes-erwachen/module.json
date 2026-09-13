@@ -1,8 +1,8 @@
 {
   "id": "grimmes-erwachen",
   "title": "Grimmes Erwachen – drei Abenteuer für SR6",
-  "description": "Privates Abenteuerpaket für Foundry 14 und Shadowrun 6 Eden 4.0.8: 30 taktische 1-m-Karten, vier 4K-Hintergründe in 16:9, 71 NSC, zehn Matrix-Hosts mit 45 IC und strukturierte Journals. Eigene SR6-Adaption der bereitgestellten SR5-Vorlage. Zusätzlich 32 neu gerenderte Karten als separate Arbeitskopien, inklusive der am 5-m-Feuerring kalibrierten Alchera und 277 transparente Ausstattungs-Icons mit Katalog. Integrierte Aktualisierung ergänzt neue Karten und NSC und repariert fehlende Bilder. Zwei rasterlose Heidelberg-Stadtübersichten für Abenteuer 3 (Spieler und GM), auf 3840 × 2160 Pixel hochskaliert. Sechs ergänzte Heidelberg-Hosts mit Quellenhinweisen, IC, Geräten und Recherchejournal für Abenteuer 3.",
-  "version": "1.2.4",
+  "description": "Privates Abenteuerpaket für Foundry 14 und Shadowrun 6 Eden 4.0.8: 30 taktische 1-m-Karten, vier 4K-Hintergründe in 16:9, 71 NSC, zehn Matrix-Hosts mit 45 IC und strukturierte Journals. Eigene SR6-Adaption der bereitgestellten SR5-Vorlage. Zusätzlich 32 neu gerenderte Karten als separate Arbeitskopien, inklusive der am 5-m-Feuerring kalibrierten Alchera und 277 transparente Ausstattungs-Icons mit Katalog. Integrierte Aktualisierung ergänzt neue Karten und NSC und repariert fehlende Bilder. Zwei rasterlose Heidelberg-Stadtübersichten für Abenteuer 3 (Spieler und GM), auf 3840 × 2160 Pixel hochskaliert. Sechs ergänzte Heidelberg-Hosts mit Quellenhinweisen, IC, Geräten und Recherchejournal für Abenteuer 3. Abenteuer 3: 28 ausführlichere Figurenbeschreibungen, Hauptdarsteller und Beinarbeit als GM-Journals sowie eine ausführliche Krankenakte; vorhandene eigene Beschreibungen bleiben geschützt.",
+  "version": "1.2.5",
   "authors": [
     {
       "name": "Private Abenteueraufbereitung mit Codex"

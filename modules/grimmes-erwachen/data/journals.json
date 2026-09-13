@@ -3129,5 +3129,547 @@
         "adaptation": true
       }
     }
+  },
+  {
+    "_id": "3a4373f60f5cc9dc",
+    "name": "Hauptdarsteller – Heidelberg (GM)",
+    "pages": [
+      {
+        "_id": "31e4851e082d1b5a",
+        "name": "Start – Figurenübersicht",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<p>GM-Nachschlagewerk für den heutigen Spielabend. Der Band beschreibt unter Hauptdarsteller ausführlich Lucas und die neun Walküren; weitere Figuren sind aus den Szenen und der Beinarbeit ergänzt. Nicht festgelegtes Aussehen bleibt ausdrücklich offen. Sämtliche Texte sind sinngemäße Zusammenfassungen der bereitgestellten Vorlage.</p><p>Dieses Journal enthält Täterwissen und die Auflösung. Nicht vollständig an Spieler freigeben. Die Beschreibungen in den Actors enthalten nur Erscheinung und Auftreten; die vollständigen Hintergründe stehen hier.</p><ul><li>@UUID[Actor.dff28772ebc76960]{Lucas Steltz}</li><li>@UUID[Actor.f5e1d2a35bd63000]{Celine Gruber}</li><li>@UUID[Actor.52d26757d8dd9378]{Marlon Neugebauer}</li><li>@UUID[Actor.e03629d2cf974178]{Marie Gruber}</li><li>@UUID[Actor.a9b72360f407358f]{Jonas Gruber}</li><li>@UUID[Actor.88204099a121cd82]{Lea Neugebauer-Jablonski}</li><li>@UUID[Actor.c9e509ab26c29611]{Elmar}</li><li>@UUID[Actor.fbaf12ef71ff3d02]{Dr. Jeanique Alber}</li><li>@UUID[Actor.2a164d48b4091626]{Carsten Wernberger}</li><li>@UUID[Actor.161d49b7753b6c00]{Mariusz Kolanski}</li><li>@UUID[Actor.7fa5db9516148356]{Ruppert Sager}</li><li>@UUID[Actor.102ed142d319f244]{Birgit}</li><li>@UUID[Actor.90f2a5c0fdf8684b]{Sven}</li><li>@UUID[Actor.391cbbda644f8e02]{Felix}</li><li>@UUID[Actor.305eb6df6b76e875]{Moritz}</li><li>@UUID[Actor.2aa0ae1b04681cc8]{Festspiel-Aufräumer}</li><li>@UUID[Actor.a62029fe87c8dcba]{Festspiel-Wachmann}</li><li>@UUID[Actor.e7aaacd3f97259ab]{Jugendfußballer}</li><li>@UUID[Actor.9db608b717e672b0]{Brünhild}</li><li>@UUID[Actor.3c0a2a8a3746b9c5]{Geiravör}</li><li>@UUID[Actor.42146ee236fac162]{Herja}</li><li>@UUID[Actor.772bcce2923511af]{Kára}</li><li>@UUID[Actor.1c29baaf773f1bce]{Mista}</li><li>@UUID[Actor.e5186dce82b54d29]{Sigrun}</li><li>@UUID[Actor.cecb7e263755dab2]{Skuld}</li><li>@UUID[Actor.2372d07572c78906]{Svafa}</li><li>@UUID[Actor.6264091c776a817a]{Thrudr}</li><li>@UUID[Actor.bb6772f03b95a509]{Feuergeist}</li></ul><h2>Vor dem Finale festlegen: Schicksal der Vermissten</h2><p>Die Vorlage bietet auf S. 54 zwei Varianten: eine tragische Aufloesung mit dem Tod der Entfuehrten oder eine maerchenhafte Rettung, bei der Marlon und die Jungen nach Ende des magischen Schlafs lebend am Grund des Heidenlochs gefunden werden. Die Spielleitung waehlt passend zur Runde; der Band legt keinen einzigen Ausgang fest.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "ebe216fcce75bfda",
+        "name": "Lucas Steltz",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Lucas Steltz</h1><p>@UUID[Actor.dff28772ebc76960]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/dff28772ebc76960.png\" width=\"220\" alt=\"Lucas Steltz\"><h2>Erscheinung und Auftreten</h2><p>Ein großer Mann mit der schlanken, trainierten Erscheinung eines Ausdauerläufers. Kurzes graubraunes Haar und tiefe Falten um den Mund prägen sein Gesicht. Er wirkt beherrscht und lächelt nur selten. Der 47-Jährige tritt beim Treffen als Herr Schmidt auf.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Lucas ist Celines Patenonkel. Marie Gruber half ihm vor mehr als fünfzehn Jahren in einer persönlichen Krise und nahm keine Belohnung an. Daraus wurde trotz ihrer erfolglosen Bekehrungsversuche eine enge Freundschaft. Er fühlt sich der Familie verpflichtet und bezahlt die Runner aus eigenem Vermögen. Er verlangt Diskretion und Berichte über einen toten Matrixbriefkasten. Die Vorlage nennt einerseits AGC Mannheim, andererseits den strategischen Einkauf am Standort Heidelberg; keine zusätzliche Konzernverschwörung daraus ableiten.</p><p>Quelle: Grimms Erwachen, S. 41–43, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 100000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "57ce3455ae959b39",
+        "name": "Celine Gruber",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Celine Gruber</h1><p>@UUID[Actor.f5e1d2a35bd63000]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/f5e1d2a35bd63000.png\" width=\"220\" alt=\"Celine Gruber\"><h2>Erscheinung und Auftreten</h2><p>Die 15-jährige Schülerin ist eine begabte Musikerin: Sie spielt Querflöte und Cello und nimmt an Jugendorchestern teil. In der Klinik liegt sie mit rotblondem Haar und blassem Gesicht zwischen Überwachungsgeräten; eine Atemmaske unterstützt vorsorglich ihre vorhandene Spontanatmung.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Sie liebt Turandot und Marlon. Nach dem Streit mit ihren Eltern traf sie ihn auf dem Heiligenberg. Beim Angriff auf Marlon entkam sie; das unbewusst nachgestellte Opfer im Heidenloch machte sie zum Gefäß der schlafenden Brünhild. Tagsüber bleibt das magische Phänomen schwerer zu erkennen. Nach der Befreiung erwacht Celine nach etwa vier Stunden. Sie ist zunächst verängstigt, gewinnt später Selbstvertrauen und entwickelt Adeptenfähigkeiten. Diese Auflösung gehört nicht in eine vorab geteilte Patienteninformation.</p><p>Quelle: Grimms Erwachen, S. 40–41, 45–46, 53–54, 56, 59. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 200000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "13dc0af3ac85a6c2",
+        "name": "Marlon Neugebauer",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Marlon Neugebauer</h1><p>@UUID[Actor.52d26757d8dd9378]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/52d26757d8dd9378.png\" width=\"220\" alt=\"Marlon Neugebauer\"><h2>Erscheinung und Auftreten</h2><p>Ein 15-jähriger Ork mit außergewöhnlichem musikalischem Talent an der Oboe. Früher spielte er ambitioniert Jugendfußball. Bei seinem letzten bekannten Aufbruch trug er eine schwarze Trainingsjacke mit DFB-Emblem lässig über der Schulter und nahm eine Decke und einen Picknickkorb mit.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Er ist in Celine verliebt. Ein Konflikt mit einem Mitschüler führte zur Suspendierung und gefährdet seine Stipendien; das macht ihn nicht zum Täter an Celine. Für den gemeinsamen Abend organisierte er ein Picknick nahe der Freilichtbühne. Nach dem Streit im Landsmann schlugen Felix und Moritz ihn nieder und warfen ihn ins Heidenloch. Die Bedeutung seiner Fußballjacke führt später zum Zusammenhang zwischen DFB-Emblem, Valknut und Einherjar. Seinen endgültigen Zustand nicht allein aus einer fehlenden Leiche ableiten.</p><p>Quelle: Grimms Erwachen, S. 40–41, 46, 54, 56. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 300000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "012786f6d3080e5a",
+        "name": "Marie Gruber",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Marie Gruber</h1><p>@UUID[Actor.e03629d2cf974178]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/e03629d2cf974178.png\" width=\"220\" alt=\"Marie Gruber\"><h2>Erscheinung und Auftreten</h2><p>Eine Krankenschwester Mitte vierzig. Biedere Blusen und eine strenge Frisur bestimmen ihr gepflegtes Erscheinungsbild. Ihr Auftreten ist kontrolliert und von ihrem deutsch-katholischen Glauben geprägt; die Sorge um ihre Tochter ist dennoch unübersehbar.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Sie reagiert zunächst mit Vorurteilen auf Metamenschen und ist über Celines Beziehung zu Marlon entsetzt. Sobald die Runner ihr Vertrauen gewinnen, überwiegt ihre Angst um Celine: Sie berichtet vom ungewöhnlichen Streit am Vortag und zeigt das Zimmer der Tochter mit dessen musikalischen Interessen. Marie half Lucas einst in einer Lebenskrise. Ihre Hinweise können ersatzweise auch in der Klinik vermittelt werden.</p><p>Quelle: Grimms Erwachen, S. 44–47, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 400000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "c1113de91e835699",
+        "name": "Jonas Gruber",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Jonas Gruber</h1><p>@UUID[Actor.a9b72360f407358f]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/a9b72360f407358f.png\" width=\"220\" alt=\"Jonas Gruber\"><h2>Erscheinung und Auftreten</h2><p>Celines Vater ist Lehrer. Er wirkt zurückhaltend und wenig auffällig; im Gespräch lässt er meist seiner Frau Marie den Vortritt. Die Familie lebt in einer gutbürgerlichen, eher nüchtern eingerichteten Wohnung.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Auch Jonas ist von dem strengen Glauben und den Vorurteilen des Haushalts geprägt. Bei glaubwürdiger Hilfsbereitschaft werden die Grubers auskunftsfreudig. Er ist ein Zugang zu Celines familiärem Umfeld, kein heimlicher Gegenspieler. Individuelle äußere Merkmale über seine unscheinbare Wirkung hinaus nennt die Vorlage nicht.</p><p>Quelle: Grimms Erwachen, S. 44–46, 56. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 500000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "41eab31aed170523",
+        "name": "Lea Neugebauer-Jablonski",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Lea Neugebauer-Jablonski</h1><p>@UUID[Actor.88204099a121cd82]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/88204099a121cd82.png\" width=\"220\" alt=\"Lea Neugebauer-Jablonski\"><h2>Erscheinung und Auftreten</h2><p>Eine kräftig gebaute Orkin mittleren Alters. Sie lebt mit Elmar und acht Kindern in einer viel zu kleinen, abgewohnten, aber mit Mühe sauber gehaltenen Dreizimmerwohnung. Über Marlon spricht sie unter Tränen.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Sie vermisst ihren Sohn aufrichtig. Zuletzt wirkte er vor seinem Aufbruch nervös, zog sich mehrfach um und suchte ungewöhnliche Dinge zusammen. Auf gezielte Fragen nennt sie die Trainingsjacke mit DFB-Logo sowie Decke und Picknickkorb. Höflichkeit und Einfühlung öffnen dieses Gespräch. Die beengte Wohnung befindet sich im achten Stock; die Familie versteckt Marlon nicht.</p><p>Quelle: Grimms Erwachen, S. 45–46, 56. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 600000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "a7cc86f3e06c32c5",
+        "name": "Elmar",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Elmar</h1><p>@UUID[Actor.c9e509ab26c29611]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/c9e509ab26c29611.png\" width=\"220\" alt=\"Elmar\"><h2>Erscheinung und Auftreten</h2><p>Leas derzeitiger Lebensgefährte ist ein schmaler Ork, etwas jünger als sie. Er wirkt ungeduldig und deutlich weniger besorgt als Lea. Am liebsten hätte er die Besucher bald wieder aus der engen Wohnung.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Seine Gleichgültigkeit ist eine falsche Fährte: Er möchte seine neue, zweifelhaft beschaffte AR-Brille ausprobieren und empfindet die Wohnung ohnehin als überfüllt. Bei gewaltsamem Eindringen kann er mit einer Brechstange angreifen. Er ist nicht an Marlons Verschwinden beteiligt.</p><p>Quelle: Grimms Erwachen, S. 46–47. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 700000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "119b3cb6d59f2211",
+        "name": "Dr. Jeanique Alber",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Dr. Jeanique Alber</h1><p>@UUID[Actor.fbaf12ef71ff3d02]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/fbaf12ef71ff3d02.png\" width=\"220\" alt=\"Dr. Jeanique Alber\"><h2>Erscheinung und Auftreten</h2><p>Eine Zwergin und Assistenzärztin der Neurologie. Sie ist eine mögliche Ansprechpartnerin im Fall Celine Gruber. Weitere individuelle Angaben zu Alter, Frisur oder Kleidung macht die Vorlage nicht.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Die Ärzte sind durch das unerklärte Koma ratlos und können für glaubwürdige Hinweise von außen dankbar sein. Alber kann eine medizinisch begründete Gesprächsmöglichkeit eröffnen; die Akte mit dem beigefügten Polizeiprotokoll ist am Bett über ein festes Datapad zugänglich. Sie kennt keine abschließende magische Diagnose und liefert nicht die Lösung der Alchera.</p><p>Quelle: Grimms Erwachen, S. 46, 59. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 800000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "b1e85288f8fa3687",
+        "name": "Carsten Wernberger",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Carsten Wernberger</h1><p>@UUID[Actor.2a164d48b4091626]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/2a164d48b4091626.png\" width=\"220\" alt=\"Carsten Wernberger\"><h2>Erscheinung und Auftreten</h2><p>Jugendkoordinator beim DFB und möglicher Ansprechpartner für die verschwundenen Spieler. Die Vorlage beschreibt seine Funktion, aber kein individuelles Aussehen.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Er kann einen zweiten Runnerauftrag veranlassen. Er möchte die Jugendlichen finden, ohne das Versagen der Aufsicht öffentlich eingestehen und seinen Posten verlieren zu müssen. Seine Motivation ist diskrete Schadensbegrenzung, nicht die Verursachung der Entführungen.</p><p>Quelle: Grimms Erwachen, S. 43–44. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 900000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "398cbd7604722260",
+        "name": "Mariusz Kolanski",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Mariusz Kolanski</h1><p>@UUID[Actor.161d49b7753b6c00]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/161d49b7753b6c00.png\" width=\"220\" alt=\"Mariusz Kolanski\"><h2>Erscheinung und Auftreten</h2><p>Ein 23-jähriger polnischer Medizinstudent, der regelmäßig auf dem Heiligenberg joggt. Weitere individuelle äußere Merkmale sind in der Vorlage nicht festgelegt.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Er fand Celine am frühen Morgen um 05:45 Uhr, prüfte ihre Vitalparameter und verständigte den Rettungsdienst. Die Polizei kam erst hinzu, nachdem die medizinische Versorgung angelaufen war. Er ist Finder und möglicher Zeuge des Zustands am Fundort, kein Augenzeuge des Angriffs.</p><p>Quelle: Grimms Erwachen, S. 56. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1000000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "4a988e83295e186b",
+        "name": "Ruppert Sager",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Ruppert Sager</h1><p>@UUID[Actor.7fa5db9516148356]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/7fa5db9516148356.png\" width=\"220\" alt=\"Ruppert Sager\"><h2>Erscheinung und Auftreten</h2><p>Pächter des Café-Restaurants Landsmann. Das Lokal gibt sich im Festspielbetrieb gehoben. Für Sager ist kein ausführliches individuelles Erscheinungsbild festgelegt.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Das Personalumfeld des Gasthauses ist von nationalistischer und metamenschenfeindlicher Haltung geprägt. Daraus entsteht das Milieu des Angriffs; die konkret benannten Täter sind Felix und Moritz. Sager nicht ohne weitere Spielhandlung als nachgewiesenen Mittäter am Schacht behandeln.</p><p>Quelle: Grimms Erwachen, S. 40–41, 48–49. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1100000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "c070d047c432a417",
+        "name": "Birgit",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Birgit</h1><p>@UUID[Actor.102ed142d319f244]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/102ed142d319f244.png\" width=\"220\" alt=\"Birgit\"><h2>Erscheinung und Auftreten</h2><p>Eine eher rundliche Kellnerin im Café-Restaurant Landsmann. Gegenüber metamenschlichen Gästen wird ihr Service frostig. Fragen nach dem vermissten Paar machen sie sichtbar nervös.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Sie war beim eigentlichen Vorfall nicht mehr anwesend, kennt aber das Gerede im Personal. Unter ausreichend wirksamem Druck kann sie Felix und Moritz nennen. Entkommt sie mit einer Ausflucht, kann sie die beiden warnen und sich krankmelden. Ihre Nervosität betrifft mögliche Konsequenzen, nicht automatisch Reue.</p><p>Quelle: Grimms Erwachen, S. 48–49. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1200000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "e42f79800c96c43e",
+        "name": "Sven",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sven</h1><p>@UUID[Actor.90f2a5c0fdf8684b]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/90f2a5c0fdf8684b.png\" width=\"220\" alt=\"Sven\"><h2>Erscheinung und Auftreten</h2><p>Barmann im Landsmann, mit militärisch kurzem Haar und sauber gezogenem Scheitel. Er begegnet unerwünschten Gästen kühl und verneint Fragen nach dem Paar auffällig energisch.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Wie Birgit kennt er den Vorfall vom Hörensagen und war zur Tatzeit nicht mehr da. Er kann Felix und Moritz als beteiligte Kollegen nennen. Ohne wirksames Nachfragen kann er die Täter warnen. Seine Aussage ist kein unmittelbarer Augenzeugenbericht.</p><p>Quelle: Grimms Erwachen, S. 48–49. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1300000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "71c82de8833d6ca0",
+        "name": "Felix",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Felix</h1><p>@UUID[Actor.391cbbda644f8e02]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/391cbbda644f8e02.png\" width=\"220\" alt=\"Felix\"><h2>Erscheinung und Auftreten</h2><p>Einer der Barmänner des Landsmann. Die Vorlage gibt nicht jedem der beiden Täter ein eindeutig zugeordnetes vollständiges Erscheinungsbild; der junge schmale Ersatzbediener mit abheilendem blauem Auge wird nicht sicher beim Namen genannt.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Felix gehört mit Moritz zu den Angreifern, die Marlon überwältigten und in das Heidenloch warfen. Zunächst leugnet er, verlangt Beweise oder versucht mit Verbündeten, die Runner einzuschüchtern. Er kennt den Übergriff, aber nicht dessen unbeabsichtigte magische Bedeutung.</p><p>Quelle: Grimms Erwachen, S. 40–41, 48–49. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1400000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "f61469c2bc51d8a1",
+        "name": "Moritz",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Moritz</h1><p>@UUID[Actor.305eb6df6b76e875]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/305eb6df6b76e875.png\" width=\"220\" alt=\"Moritz\"><h2>Erscheinung und Auftreten</h2><p>Hilfskoch im Landsmann und einer der beiden am Übergriff beteiligten Mitarbeiter. Individuelle äußere Merkmale sind ihm in der Vorlage nicht zuverlässig zugeordnet.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Gemeinsam mit Felix griff er Marlon an und brachte ihn zum Heidenloch. Nach einer Konfrontation oder erfolgreichen Befragung lässt sich die Tat rekonstruieren. Täterwissen über den Angriff ist nicht gleich Wissen über Brünhild, Celines Geistergefäß oder die Alchera.</p><p>Quelle: Grimms Erwachen, S. 40–41, 48–49. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1500000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "c1434b53f2db967b",
+        "name": "Festspiel-Aufräumer",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Festspiel-Aufräumer</h1><p>@UUID[Actor.2aa0ae1b04681cc8]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/2aa0ae1b04681cc8.png\" width=\"220\" alt=\"Festspiel-Aufräumer\"><h2>Erscheinung und Auftreten</h2><p>Ein orkischer Mitarbeiter, der auf dem Festspielgelände Aufräumarbeiten übernimmt. Der Band nennt ihn nicht beim Namen; der Actor ist eine Sammelrolle für diesen Zeugen.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Er fand im Wald neben der Bühne eine verlassene Decke und einen umgestürzten Picknickkorb, an dessen Inhalt Tiere gegangen waren. Weil er Schwierigkeiten mit dem Sternschutz vermeiden wollte, warf er die Sachen weg. Zugänglichkeit hängt vom Umgang der Runner ab. Er beobachtete die Tat nicht.</p><p>Quelle: Grimms Erwachen, S. 48. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1600000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "8f33a678c44ef502",
+        "name": "Festspiel-Wachmann",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Festspiel-Wachmann</h1><p>@UUID[Actor.a62029fe87c8dcba]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/a62029fe87c8dcba.png\" width=\"220\" alt=\"Festspiel-Wachmann\"><h2>Erscheinung und Auftreten</h2><p>Ein Mitarbeiter des nächtlichen Sicherheitsdienstes am Festspielgelände. Name und individuelles Erscheinungsbild sind nicht festgelegt.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Er hörte in der fraglichen Nacht eine Auseinandersetzung aus Richtung des Gasthauses, die er als verbalen Streit einordnete. Seine Aussage lenkt zum Landsmann, identifiziert aber weder sicher die Beteiligten noch beweist sie den späteren Angriff.</p><p>Quelle: Grimms Erwachen, S. 48. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1700000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "aa6cd2344d86af7c",
+        "name": "Jugendfußballer",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Jugendfußballer</h1><p>@UUID[Actor.e7aaacd3f97259ab]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/e7aaacd3f97259ab.png\" width=\"220\" alt=\"Jugendfußballer\"><h2>Erscheinung und Auftreten</h2><p>Sammelrolle für die jungen Teilnehmer des DFB-Camps. Sie kommen aus Landesauswahlen, trainieren unter erheblichem Leistungsdruck und hoffen auf Auswahlplätze oder Profiverträge. Die Vorlage beschreibt keine einheitliche Einzelperson.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Unter Teamkameraden werden vermeintliche nächtliche Ausflüge zunächst verschwiegen. Die später zusammengestellten Fälle betreffen Jungen, die nach einer Niederlage verschwanden. Freizeitkontakte im Freibad sind ein möglicher Rechercheweg. Keine erfundenen Namen oder fixe Zahl als belegte Vermisstenliste ausgeben; den aktuellen Spieltag beachten.</p><p>Quelle: Grimms Erwachen, S. 43–44, 50, 57. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1800000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "031f435f56ee05fd",
+        "name": "Brünhild",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Brünhild</h1><p>@UUID[Actor.9db608b717e672b0]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/9db608b717e672b0.png\" width=\"220\" alt=\"Brünhild\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Auch Brunichild, die Kriegerin mit der Brünne. Bronzehelm und schimmernde Brustplatte zeichnen sie aus; in der Alchera ruht sie auf Rosenblüten.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Ihr Schlaf ist mit Celines Zustand verknüpft. Der Traum erscheint auf einem benachbarten Gipfel und nicht einfach als derselbe Ort wie das Heidenloch. Die Vorlage löst ihn durch das märchenhafte Wachküssen nach Überwinden der Feuergeister. Danach verschwindet die Alchera; Celine erwacht später.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 1900000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "a881ead8d4819232",
+        "name": "Geiravör",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Geiravör</h1><p>@UUID[Actor.3c0a2a8a3746b9c5]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/3c0a2a8a3746b9c5.png\" width=\"220\" alt=\"Geiravör\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Speerkämpferin führt Wurfspeere, deren Vorrat nicht zu versiegen scheint.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Ihr charakteristisches Kampfmittel sind die Wurfspeere; keine zusätzlichen SR5-Schadenswerte in den bestehenden SR6-Actor übertragen.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2000000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "6c018a69a9bbc130",
+        "name": "Herja",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Herja</h1><p>@UUID[Actor.42146ee236fac162]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/42146ee236fac162.png\" width=\"220\" alt=\"Herja\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Verheerende fällt besonders durch das Chaos und die Zerstörung auf, die ihren Weg begleiten.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Die Vorlage verbindet sie mit Entropie und Unfällen.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2100000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "3cdde4f78a804a6a",
+        "name": "Kára",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Kára</h1><p>@UUID[Actor.772bcce2923511af]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/772bcce2923511af.png\" width=\"220\" alt=\"Kára\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Ungestüme, auch Schwanenkönigin, ist eine wilde Schwertkämpferin.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Gestaltwandlung und schwere Wunden prägen ihr Kräftebild in der Vorlage.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2200000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "79806c212a6e7702",
+        "name": "Mista",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Mista</h1><p>@UUID[Actor.1c29baaf773f1bce]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/1c29baaf773f1bce.png\" width=\"220\" alt=\"Mista\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Herrin des Nebels, auch Wolkentrud beziehungsweise Wolkenkraft, verbirgt und verwirrt Gegner mit Nebel.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Wasser, Luft, Nebelgestalt und Wetterbeherrschung gehören zu ihrer Charakterisierung.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2300000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "49b5d4695222e00c",
+        "name": "Sigrun",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Sigrun</h1><p>@UUID[Actor.e5186dce82b54d29]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/e5186dce82b54d29.png\" width=\"220\" alt=\"Sigrun\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Gebieterin über die Siegrunen ist die besonders zaubermächtige Schwester.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Sie kann Brünhilds Traum als Alchera manifestieren und ist zentral für das Angebot an die Runner. Der Band verbindet sie mit Alchera-Erschaffung und astralem Tor.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2400000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "bc470c42be007dec",
+        "name": "Skuld",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Skuld</h1><p>@UUID[Actor.cecb7e263755dab2]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/cecb7e263755dab2.png\" width=\"220\" alt=\"Skuld\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Schuld setzt Gegnern mit Zweifeln und emotionalen Krisen zu.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Begierdenspiegelung und Einfluss bestimmen ihre besondere Wirkung.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2500000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "3df7db17496b4727",
+        "name": "Svafa",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Svafa</h1><p>@UUID[Actor.2372d07572c78906]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/2372d07572c78906.png\" width=\"220\" alt=\"Svafa\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Die Einschläfernde bringt Schlaf über ihre Gegner.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Ihre charakteristische Kraft ist eine lähmende Berührung.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2600000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "b637ac0f5fd4379e",
+        "name": "Thrudr",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Thrudr</h1><p>@UUID[Actor.6264091c776a817a]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/6264091c776a817a.png\" width=\"220\" alt=\"Thrudr\"><h2>Erscheinung und Auftreten</h2><p>Die Walküre erscheint als auffallend wirklich wirkende Kriegerin mit nordeuropäischen Zügen, langem blondem oder rotem, aufwendig geflochtenem Haar und archaischer Ausrüstung aus Bronze und Fell. Die weißen Reittiere der Schwestern gehören zur Geistererscheinung. Auch Trude, die Kräftige: Ihre außergewöhnliche Körperkraft ist ihrer Erscheinung kaum anzusehen.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Freier Beschützergeist, in der Vorlage Kraftstufe 8. Acht Schwestern reiten nachts; Brünhild schläft. Ihr Ziel ist Brünhilds Befreiung. Sie deuten die Jungen mit DFB-Zeichen nach Niederlagen als Odin geweihte Krieger. Sie sind gesprächsbereit, auch nach einem Kampf, und brauchen einen Menschen dieses Zeitalters zur Lösung des Traums. Pferde sind keine separaten Kreaturen. Die charakteristischen Kräfte werden hier beschrieben, nicht als neue SR6-Regelwerte eingebaut. Die Vorlage hebt ihre Stärke besonders hervor. Bestehende SR6-Arbeitswerte bleiben unverändert.</p><p>Quelle: Grimms Erwachen, S. 51–53, 58. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2700000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "920f1a5ef8db94dc",
+        "name": "Feuergeist",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Feuergeist</h1><p>@UUID[Actor.bb6772f03b95a509]{Actor öffnen}</p><img src=\"modules/grimmes-erwachen/assets/portraits/bb6772f03b95a509.png\" width=\"220\" alt=\"Feuergeist\"><h2>Erscheinung und Auftreten</h2><p>Ein Geist, der sich aus der lodernden Waberlohe des etwa fünf Meter weiten Feuerrings lösen kann. Seine Erscheinung bildet einen Teil der magischen Barriere am Gipfel.</p><h2>Hintergrund und Spielleitungswissen</h2><p>Die Vorlage sieht einen Feuergeist der Kraftstufe 5 je Runner vor. Auch ein Überflug löst ihre Gegenwehr aus. Sie müssen überwunden werden, um die schlafende Brünhild im Inneren zu erreichen. Anzahl und konkrete Kampfwerte werden hier nicht verändert.</p><p>Quelle: Grimms Erwachen, S. 53. Sinngemäße Aufbereitung; Porträt und bereits vorhandene SR6-Spielwerte sind Adaptionen.</p>"
+        },
+        "sort": 2800000,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-hauptdarsteller",
+        "sourceAdaptation": true
+      }
+    }
+  },
+  {
+    "_id": "814d7c718b60cab6",
+    "name": "Beinarbeit – Heidelberg (GM)",
+    "pages": [
+      {
+        "_id": "de27b56908854956",
+        "name": "Start – Beinarbeit leiten",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<p>GM-Handout nach Grimms Erwachen, S. 55–57. Die nachfolgenden Rang- und Zeitangaben dokumentieren die SR5-Vorlage, nicht neue SR6-Schwellenwerte. Für eure Proben die geltenden SR6-/Eden-Regeln verwenden; Rang und Zeit helfen beim Portionieren der Hinweise. Ein Gedankenstrich bedeutet: Die Vorlage legt keine Suchdauer fest, nicht automatisch sofortige Verfügbarkeit.</p><p>Die Quellen lassen ausdrücklich offen, welche Daten öffentlich, in gesicherten Hosts oder nur über Kontakte erhältlich sind. Die vorgeschlagenen Wege hier sind Spielleitungszuordnungen. Höhere Ränge können mit bereits gewonnenen niedrigeren Informationen kombiniert werden. Falsche Gerüchte der Stufe 0 sind als solche gekennzeichnet.</p><p>Die Kampagne spielt 2080. T0 = Picknick/Angriff, T1 = Celines Fund am Folgemorgen. Keine widersprüchlichen Jahres-, Wochen- oder Abschlussdaten aus der Vorlage übernehmen.</p><p>@UUID[JournalEntry.cf07b1d868b3049a]{Matrix-Hosts und konkrete Datenzugriffe}</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "65fc6e62dbc85345",
+        "name": "Marlon – soziales Umfeld",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Marlon – soziales Umfeld</h1><p>Quelle: S. 56. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Unbrauchbare Namensverwechslung; keine belastbare Information.</td><td>öffentliche Suche</td></tr><tr><td>2</td><td>5 Minuten</td><td>15-jähriger Ork, wohnt Am Emmertsgrund 14; Mutter Lea Neugebauer-Jablonski; vom Stöckter-Gymnasium suspendiert.</td><td>Umfeld / Recherche</td></tr><tr><td>3</td><td>30 Minuten</td><td>Früher höherklassiger Jugendfußball beim FC Sandhausen; hervorragender Oboist und Mitglied von Auswahlorchestern.</td><td>Umfeld / Recherche</td></tr><tr><td>4</td><td>1 Stunde</td><td>Stipendien an Musikakademie und Schule; der Schulkonflikt gefährdet seine Förderung.</td><td>geschützte Unterlagen / Kontakte</td></tr><tr><td>5</td><td>2 Stunden</td><td>Schlägerei mit einem Mitschüler wegen einer möglichen Eifersuchtssache; Abschluss und Musikstudium sind gefährdet.</td><td>Umfeld / Kontakte</td></tr><tr><td>7</td><td>–</td><td>Er ist in Celine verliebt und plante ein Picknick im Wald nahe der Bühne, weil der Opernbesuch nicht zustande kam.</td><td>persönliche Kontakte; nicht automatisch Matrix</td></tr></tbody></table>"
+        },
+        "sort": 100000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "524dc8e23cf2067f",
+        "name": "Celine – soziales Umfeld",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Celine – soziales Umfeld</h1><p>Quelle: S. 56. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Verwechslung mit einer anderen Person; keine belastbare Auskunft.</td><td>öffentliche Suche</td></tr><tr><td>2</td><td>5 Minuten</td><td>15-jährige Schülerin, Steckelsgasse 21, Eltern Jonas und Marie, zehnte Klasse des Stöckter-Gymnasiums.</td><td>Umfeld / Recherche</td></tr><tr><td>3</td><td>–</td><td>Musikalisch geprägtes Elternhaus und streng deutsch-katholische Eltern.</td><td>persönliche Kontakte</td></tr><tr><td>4</td><td>1 Stunde</td><td>Musikakademie, Querflöte und Cello, Jugendorchester und AGC-Förderumfeld.</td><td>Recherche / AGC-Portal</td></tr><tr><td>5</td><td>–</td><td>Celine hat sich in Marlon verliebt; vorher stand vor allem die Musik im Mittelpunkt.</td><td>persönliche Kontakte</td></tr><tr><td>7</td><td>–</td><td>Ihre Lieblingsoper Turandot wurde am fraglichen Abend aufgeführt; das erklärt ihr Interesse am Heiligenberg.</td><td>persönliche Kontakte / Programmvergleich</td></tr></tbody></table>"
+        },
+        "sort": 200000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "0b618dcdc4535bf9",
+        "name": "Celine – Ermittlungen",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Celine – Ermittlungen</h1><p>Quelle: S. 56. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Keine Auskunft oder kein auffindbarer Vorgang; nicht als Beweis behandeln, dass Celine unbekannt ist.</td><td>Anfrage</td></tr><tr><td>1</td><td>1 Minute</td><td>Am frühen Morgen nach dem Picknick um 05:45 Uhr bewusstlos am Südhang des Heiligenbergs gefunden.</td><td>Klinikakte / Sternschutz</td></tr><tr><td>2</td><td>5 Minuten</td><td>Finder Mariusz Kolanski, 23, Medizinstudent und Jogger. Rettungsdienst vor Polizei; Bergung veränderte den Fundort, keine umfassende Forensik.</td><td>Klinikprotokoll / Sternschutz</td></tr><tr><td>3</td><td>30 Minuten</td><td>Nach medizinischem Befund als Unfall behandelt und geschlossen. Die uneinheitlichen Kalenderangaben der Vorlage nicht ungeprüft übernehmen.</td><td>Sternschutzakte</td></tr><tr><td>5</td><td>2 Stunden</td><td>Kontakte können die Kosten-Nutzen-Abwägung und Vorurteile hinter der geringen Ermittlungslust benennen; das ist eine Einschätzung, kein Bestechungsbeweis.</td><td>informierter Kontakt</td></tr></tbody></table>"
+        },
+        "sort": 300000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "12cef75a7e86ddbc",
+        "name": "Walküren über Heidelberg",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Walküren über Heidelberg</h1><p>Quelle: S. 57. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Missverständnis oder Gerücht, keine brauchbare Auskunft.</td><td>Recherche</td></tr><tr><td>1</td><td>1 Minute</td><td>Seit mehreren Nächten erscheinen Gestalten, die wie mythologische Walküren aussehen.</td><td>öffentliche Berichte</td></tr><tr><td>2</td><td>5 Minuten</td><td>Zunächst als Festspielwerbung gedeutet; der Veranstalter bestreitet dies.</td><td>Festspiel-Host / Presse</td></tr><tr><td>3</td><td>30 Minuten</td><td>Nächtliche Bewegungen ostwärts und westwärts; acht verschiedene Reiterinnen wurden beobachtet.</td><td>Zeugen / Sichtungsberichte</td></tr><tr><td>5</td><td>2 Stunden</td><td>Nordische Geisterdeutung: beschworen oder frei manifestiert. Eine mögliche Gefahr, noch keine sichere Erklärung der Ursache.</td><td>magisch kundige Kontakte</td></tr><tr><td>7</td><td>12 Stunden</td><td>Überlieferungen nennen neun oder zwölf Walküren. Sichtungsroute passt zwischen Heidenloch und Fußballcamp.</td><td>Vergleich von Überlieferung und Sichtungen</td></tr></tbody></table>"
+        },
+        "sort": 400000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "6c175c3c35cb9915",
+        "name": "Heiligenberg",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Heiligenberg</h1><p>Quelle: S. 57. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Unbrauchbare Reaktion; keine Information.</td><td>Recherche</td></tr><tr><td>1</td><td>1 Minute</td><td>Einer der beiden Heidelberger Hausberge.</td><td>öffentliche Ortsinformation</td></tr><tr><td>2</td><td>5 Minuten</td><td>Heiligenberg nördlich, Königstuhl südlich des Neckars; Naherholung und Ruinen.</td><td>öffentliche Ortsinformation</td></tr><tr><td>3</td><td>30 Minuten</td><td>Alte Siedlungsspuren sowie römische und mittelalterliche Nutzung.</td><td>historische Recherche</td></tr><tr><td>4</td><td>1 Stunde</td><td>Geschichten über das Heidenloch, darunter die Deutung als 56 Meter tiefer Brunnenversuch.</td><td>historische Recherche</td></tr><tr><td>5</td><td>2 Stunden</td><td>Der Abenteuerhintergrund verbindet Michaelskloster, ältere Heiligtümer und Mercurius Cimbrianus mit Odin. Als In-World-Deutung verwenden, nicht als gesicherte moderne Geschichtsforschung.</td><td>vertiefte historische Recherche</td></tr></tbody></table>"
+        },
+        "sort": 500000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "0667bc179c9d5df3",
+        "name": "DFB-Camp – Vermisste",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>DFB-Camp – Vermisste</h1><p>Quelle: S. 57. Sinngemäß; Zugangsweg ist eine redaktionelle Hilfe.</p><table><thead><tr><th>Vorlagenrang (SR5)</th><th>Vorlagenzeit</th><th>Information</th><th>Möglicher Zugang</th></tr></thead><tbody><tr><td>0</td><td>–</td><td>Keine brauchbare Kenntnis des Turniers.</td><td>Recherche</td></tr><tr><td>1</td><td>1 Minute</td><td>Jugendauswahlen aus der ADL spielen ein Turnier; das Camp bietet Gelegenheit zur Sichtung von Talenten.</td><td>öffentlicher Spielplan</td></tr><tr><td>3</td><td>30 Minuten</td><td>Hoher Leistungsdruck, harte Spiele und Hoffnung auf Profiverträge; Uniklinik direkt nebenan.</td><td>Spieler / Betreuer</td></tr><tr><td>4</td><td>1 Stunde</td><td>Mehr Vermisste als öffentlich eingeräumt; bislang Jungen, jeweils in der Nacht nach der Niederlage ihres Teams.</td><td>Betreuer / interne DFB-Daten</td></tr><tr><td>7</td><td>12 Stunden</td><td>Zusammengestellte Fälle zeigen seit Beginn der Ereignisse jede Nacht einen Vermissten. Anzahl abhängig vom aktuellen Spieltag.</td><td>Abgleich der internen Listen</td></tr></tbody></table>"
+        },
+        "sort": 600000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "002fe40b428efab3",
+        "name": "Magische Untersuchung und entscheidende Zeugen",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Magische Spuren</h1><p>Celine (S. 46): Die Vorlage unterscheidet eine oberflächlich unauffällige Aura, eine nachts erkennbare magische Präsenz im Körper und einen anspruchsvolleren Nachweis auch am Tag. Originalschwellen 1 / 3 / 6 sind SR5-Referenzen, keine hier eingeführten SR6-Proben.</p><p>Heidenloch (S. 48): Zunehmende Erkenntnis von jüngerer Geisteraktivität über stärkere Aura in der Tiefe bis zum verschlossenen Tor in eine nordisch geprägte Geisterdomäne. Die Vorlage nennt Schwellen 3 / 5 / 8 und Boni bei vollständiger Untersuchung bzw. Nacht; die SR6-Abwicklung legt die Spielleitung fest.</p><h2>Zeugen statt Datenbanklösung</h2><p>Lea nennt DFB-Jacke und Picknickkorb. Die Reinigungskraft berichtet von entsorgten Picknickresten. Der Wachmann hörte Streit beim Gasthaus. Birgit und Sven können Felix und Moritz nennen, waren aber nicht selbst bei der Tat. Die Täter schildern schließlich den Weg zum Heidenloch.</p><h2>Finale richtig verorten</h2><p>Das Heidenloch ist Kontaktort und Zugang zu einer Geisterdomäne. Die finale Alchera mit Feuerring erscheint auf einem benachbarten Gipfel, zunächst ungefähr zwei Kilometer nordöstlich (S. 52–53); sie ist nicht einfach der Schachtboden. Die Stadtübersicht ist schematisch, das Finale bei Bedarf gesondert markieren.</p>"
+        },
+        "sort": 700000,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-beinarbeit",
+        "sourceAdaptation": true
+      }
+    }
+  },
+  {
+    "_id": "f27c763f99d11179",
+    "name": "Handout – Krankenakte Celine (ausführlich)",
+    "pages": [
+      {
+        "_id": "d9f78377696b7e19",
+        "name": "Krankenakte – freigebbarer Auszug",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Uniklinik Heidelberg · Neurologie</h1><h2>Patientin: Celine Gruber</h2><p>Auszug aus der Behandlungsdokumentation. Alter: 15 Jahre. Aufnahme am Morgen nach dem Auffinden, 06:48 Uhr. Kalenderdatum entsprechend dem laufenden Fall.</p><h2>Aufnahmebefund</h2><p>Allgemeinzustand körperlich gut; leichte Unterkühlung. Schürfungen, Kratzer und Hämatome an Knien, linker Hüfte und seitlichem Rumpf sind mit einem Sturz in Unterholz oder auf unebenen Boden vereinbar. Geringe Alkoholrestspuren; weitere Laborbefunde unauffällig.</p><h2>Neurologie</h2><p>Patientin nicht weckbar. Gemessene Aktivität ähnelt einem Traumzustand; keine Lichtreaktion der Pupillen. Spontanatmung und Muskelgrundspannung vorhanden. Atemunterstützung vorsorglich. Kein Hinweis auf eine Verletzung des zentralen Nervensystems.</p><h2>Arkanmedizin</h2><p>Routineuntersuchung der Aura entspricht einem träumenden Zustand. Keine arkane Signatur erkannt; aus der Untersuchung ergibt sich keine nachgewiesene magische Ursache.</p><h2>Behandlungsverlauf</h2><p>Neurologische Konsile und Verlegung in die Allgemeine Neurologie. Mehrere Versuche, das Erwachen medikamentös einzuleiten, blieben ohne Erfolg. Künstliche Ernährung wurde begonnen; weitere Konsultation ohne abschließende Klärung. Teile der experimentellen Therapieüberlegungen sind in der Akte geschwärzt.</p><h2>Letzter dokumentierter Stand</h2><p>Akute Behandlungsmöglichkeiten ausgeschöpft. Sozialer Dienst zur weiteren Versorgung hinzugezogen. Bisher keine degenerativen Prozesse dokumentiert; bei anhaltendem tiefem Koma besteht entsprechende Sorge.</p><hr><p>Für den Spieltisch sinngemäß aus dem Anhang, Grimms Erwachen S. 59, aufbereitet. Uneinheitliche Kalenderangaben wurden für die 2080-Kampagne weggelassen. Dieser Auszug enthält keine spätere Auflösung.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-krankenakte-ausfuehrlich",
+        "sourceAdaptation": true
+      }
+    }
   }
 ]
