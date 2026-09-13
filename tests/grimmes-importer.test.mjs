@@ -27,7 +27,7 @@ function reset(){
 }
 const log=console.info;console.info=()=>{};
 reset();
-const first=await importBundle();assert.deepEqual(first.created,{Actor:75,JournalEntry:39,Scene:34});
+const first=await importBundle();assert.deepEqual(first.created,{Actor:75,JournalEntry:39,Scene:36});
 assert([...game.scenes.values()].every(scene=>scene.levels?.some(level=>level.background?.src)));
 const second=await importBundle();assert.deepEqual(second.created,{Actor:0,JournalEntry:0,Scene:0});assert.deepEqual(second.skipped,first.created);
 reset();
@@ -69,6 +69,18 @@ assert(game.scenes.find(s=>s.getFlag('grimmes-erwachen','key')==='a3-08-alchera'
 assert.deepEqual((await updateContents()).imported.created,{Actor:0,JournalEntry:0,Scene:0});
 const repairScene=newScenes[0];repairScene.levels[0].background.src=null;
 assert.equal((await updateContents()).repaired.scenes,1);assert(repairScene.levels[0].background.src.includes('/rendered-v2/karten/'));
+// An installed 1.2.2 world lacks the city scenes: update adds them once without touching existing scenes.
+const cityScenes=[...game.scenes.values()].filter(s=>s.getFlag('grimmes-erwachen','overview'));
+assert.equal(cityScenes.length,2);
+for(const city of cityScenes) {
+  assert.equal(city.width,3840);assert.equal(city.height,2160);assert.equal(city.grid.type,0);
+  assert.equal(city.active,false);assert.equal(city.navigation,false);assert.equal(city.ownership.default,0);
+  assert(!city.name.includes('Ring aus Feuer'));
+  game.scenes.delete(city.id);
+}
+assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:2});
+assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:0});
+assert.equal(JSON.stringify({levels:oldScene.levels,walls:oldScene.walls,tokens:oldScene.tokens}),oldGeometry);
 // Missing rendered files must stop both import and repair before world changes.
 reset();const normalFetch=globalThis.fetch;
 globalThis.fetch=async(path,opts)=>opts?.method==='HEAD' && path.includes('/rendered-v2/')?{ok:false}:normalFetch(path,opts);
@@ -78,6 +90,6 @@ reset();await updateContents({chapters:[2]});
 assert([...game.scenes.values()].every(s=>s.getFlag('grimmes-erwachen','chapter')===2));
 assert.equal(game.scenes.size,11+catalog.maps.filter(m=>m.key.startsWith('a2-')).length);
 console.info=log;
-const report={passed:true,tests:['Vollimport: 75 Actors, 39 Journals, 34 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
+const report={passed:true,tests:['Vollimport: 75 Actors, 39 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
 
 console.log(JSON.stringify(report,null,2));
