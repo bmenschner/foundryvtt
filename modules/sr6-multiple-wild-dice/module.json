@@ -1,8 +1,8 @@
 {
   "id": "sr6-multiple-wild-dice",
   "title": "SR6 – Mehrere Schicksalswürfel",
-  "description": "Ergänzt den Würfeldialog von Shadowrun 6 Eden um die Anzahl der Schicksalswürfel.",
-  "version": "1.1.0",
+  "description": "Ergänzt den Würfeldialog von Shadowrun 6 Eden um Schicksalswürfel und eine manuelle Einzelgänger-Auswahl (+1 W6).",
+  "version": "1.2.0",
   "authors": [{ "name": "bmenschner", "url": "https://github.com/bmenschner" }],
   "url": "https://github.com/bmenschner/foundryvtt/tree/main/modules/sr6-multiple-wild-dice",
   "compatibility": { "minimum": "14", "maximum": "14" },

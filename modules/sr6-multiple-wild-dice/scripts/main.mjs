@@ -20,7 +20,7 @@ Hooks.on("renderRollDialog", (app, html) => {
 
   let state = states.get(app);
   if (!state) {
-    state = { count: Number(configured.useWildDie) || (checkbox.checked ? 1 : 0), added: 0 };
+    state = { count: Number(configured.useWildDie) || (checkbox.checked ? 1 : 0), added: 0, loner: false };
     states.set(app, state);
     for (const [key, button] of Object.entries(app.data.buttons)) {
       if (typeof button.callback !== "function") continue;
@@ -41,7 +41,7 @@ Hooks.on("renderRollDialog", (app, html) => {
           state.added = added;
           state.checkbox.checked = count + added > 0;
           state.release?.();
-          state.release = installCount(configured, count, added);
+          state.release = installCount(configured, count, added, state.lonerInput.checked);
           state.submitted = true;
         } catch (error) {
           ui.notifications.warn(error.message);
@@ -172,6 +172,7 @@ Hooks.on("renderRollDialog", (app, html) => {
   addLabel.htmlFor = addInput.id;
   addLabel.textContent = "Schicksalswürfel hinzufügen";
   const currentRow = checkbox.closest("tr");
+  let addedRow;
   if (currentRow && labelCell) {
     const row = document.createElement("tr");
     row.dataset.sr6AddedWildRow = "true";
@@ -192,11 +193,35 @@ Hooks.on("renderRollDialog", (app, html) => {
     field.append(addInput);
     row.append(label, field);
     currentRow.after(row);
+    addedRow = row;
   } else {
     const row = document.createElement("div");
     row.append(addLabel, addInput);
     input.after(row);
+    addedRow = row;
   }
+  const lonerInput = document.createElement("input");
+  lonerInput.type = "checkbox";
+  lonerInput.id = `${ID}-loner-${hintId}`;
+  lonerInput.dataset.sr6Loner = "true";
+  lonerInput.checked = state.loner;
+  lonerInput.addEventListener("change", () => { state.loner = lonerInput.checked; });
+  const lonerLabel = document.createElement("label");
+  lonerLabel.htmlFor = lonerInput.id;
+  lonerLabel.textContent = "Einzelgänger (+1 W6)";
+  const lonerRow = document.createElement(addedRow.tagName.toLowerCase());
+  lonerRow.dataset.sr6LonerRow = "true";
+  if (addedRow.tagName === "TR") {
+    if (addedRow.cells.length === 3) lonerRow.append(addedRow.cells[0].cloneNode(false));
+    const label = document.createElement("td");
+    label.style.textAlign = "right";
+    label.append(lonerLabel);
+    const field = document.createElement("td");
+    field.append(lonerInput);
+    lonerRow.append(label, field);
+  } else lonerRow.append(lonerLabel, lonerInput);
+  addedRow.after(lonerRow);
+  state.lonerInput = lonerInput;
   state.input = input;
   state.addInput = addInput;
   state.checkbox = checkbox;
