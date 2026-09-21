@@ -39,6 +39,16 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 - „Ausgewählte Fläche erweitern“ bietet vier Kanten zum Ziehen für entsperrte, ungedrehte, mit SprawlBuilder erzeugte Flächen.
 - Esc oder Rechtsklick pausiert das Werkzeug. Ein erneuter Klick auf Boden oder Radierer aktiviert es wieder. Gemalte Bilder liegen dauerhaft unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-painted/`; Rückgängig entfernt Tiles, nicht die erzeugten Dateien.
 
+## Gerade Reihen ziehen
+
+In **Assets** ein unterstütztes Element auswählen, bei Bedarf die sichtbare Breite pro Segment einstellen und **Reihe ziehen** anklicken. Linksklick und Ziehen zeigen eine gerade Reihe in Zugrichtung; Loslassen setzt alle Segmente gemeinsam auf der aktuellen Ebene. Ein Klick setzt ein Segment. Die Vorschau zeigt Bilder, Stückzahl und tatsächliche Länge. Angefangene Endsegmente werden zu ganzen Stücken aufgerundet. Transparente Bildränder zählen nicht zum Abstand, das Bild wird nicht verzerrt.
+
+Unterstützt: Heckensegment, Grundmauersegment, Mauerrest, Entwässerungsrinne, Dachentwässerung, gerader Bordstein und Gehwegplatten. Gehwegplatten werden zunächst als ganze quadratische Segmente wiederholt. Unregelmäßige Bildenden werden nicht automatisch retuschiert oder ineinander verblendet.
+
+**Letzte Reihe zurücknehmen** entfernt die letzte eigene Reihe auf der aktuellen Ebene; die Historie gilt für die Browsersitzung. Einzelne Tiles bleiben danach mit Foundrys Tile-Werkzeug bearbeitbar. Esc, Rechtsklick oder Schließen beendet das Werkzeug. Beim Öffnen des Bodenwerkzeugs wird das Reihenwerkzeug geschlossen und umgekehrt. Maximal 128 Segmente pro Zug; die gesamte sichtbare Reihe muss innerhalb der Szene liegen.
+
+Diese erste Erweiterung erstellt gerade Reihen. Einrasten, Verbindungen zu anderen Assets, Kurven und automatische Eckstücke folgen separat. Es entstehen keine Foundry-Wände und keine dauerhaften Baugruppen.
+
 ## Unabhängigkeit und Updates
 
 **Assets – Grimmes Erwachen bleibt unverändert.** Beide Module können installiert und aktiviert bleiben. SprawlBuilder hat eigene Bilddateien, IDs, Menüs, Makros, CSS-Klassen, Tile-Markierungen und Weltordner. Es benötigt weder das alte Asset-Modul noch das Abenteuer-Modul oder ein bestimmtes Spielsystem. Bereits gebaute Szenen werden nicht migriert. Verwende jeweils nur ein Gelände-Malwerkzeug zur selben Zeit und schließe das andere vor dem Wechsel.
