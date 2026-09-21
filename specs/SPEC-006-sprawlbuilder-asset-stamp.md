@@ -25,4 +25,4 @@ Version 1.0.5, Browser nach Update neu laden. Kein Abenteuer-Neuimport. Nur PR, 
 
 ## Ergebnis
 
-81 Tests bestanden, ein Linux-Deployment-Test unter Windows übersprungen (Node 24.19.0). Alle 282 Katalogelemente unterstützen Reihen. Browserprüfungen für Asset-Stempel, Reihen und Radierer erfolgreich. Kein Live-Test in Foundry. Manueller Test: Asset wählen, Vorschau/Größe prüfen, mehrfach klicken, ziehen (nur ein Exemplar), rückgängig machen, auf Reihe wechseln, Esc/Rechtsklick und Szenenwechsel prüfen. Basiert auf dem noch offenen PR #26; separater Folge-PR.
+81 Tests bestanden, ein Linux-Deployment-Test unter Windows übersprungen (Node 24.19.0). Alle 282 Katalogelemente unterstützen Reihen. Browserprüfungen für Asset-Stempel, Reihen und Radierer erfolgreich. Kein Live-Test in Foundry. Manueller Test: Asset wählen, Vorschau/Größe prüfen, mehrfach klicken, ziehen (nur ein Exemplar), rückgängig machen, auf Reihe wechseln, Esc/Rechtsklick und Szenenwechsel prüfen. PR #26 ist in main enthalten. PR #27 wurde nur in dessen Arbeitsbranch gemerged; die unveränderte Funktionalität wird deshalb mit einem korrigierenden PR direkt nach main übernommen.
