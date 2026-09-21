@@ -1,0 +1,21 @@
+{
+  "id": "shadowrun-sprawlbuilder",
+  "title": "Shadowrun SprawlBuilder",
+  "description": "Kartenbau mit 282 vorhandenen Assets der Sammlung Grimmes Erwachen. Kategorien, Unterkategorien, Suche und 1-m-Geländestempel für Foundry 14.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Private Abenteueraufbereitung mit Codex"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14.366",
+    "maximum": "14"
+  },
+  "esmodules": [
+    "catalog.mjs"
+  ],
+  "styles": [
+    "catalog.css"
+  ]
+}
