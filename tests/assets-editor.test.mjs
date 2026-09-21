@@ -10,8 +10,8 @@ test('square brush begins at pointer, fills skipped cells and joins turns by edg
 });
 test('four edge handles keep the opposite edge fixed with legacy and explicit anchors',()=>{
   const b={x:100,y:200,width:300,height:400};
-  assert.deepEqual(tileBounds({...b,anchorX:0,anchorY:0}),b);
-  assert.deepEqual(tileBounds({...b,anchorX:0.5,anchorY:0.5}),{x:-50,y:0,width:300,height:400});
+  assert.deepEqual(tileBounds({...b,texture:{anchorX:0,anchorY:0}}),b);
+  assert.deepEqual(tileBounds({...b,texture:{anchorX:0.5,anchorY:0.5}}),{x:-50,y:0,width:300,height:400});
   assert.deepEqual(dragEdge(b,'left',{x:50,y:0}),{x:50,y:200,width:350,height:400});
   assert.deepEqual(dragEdge(b,'right',{x:500,y:0}),{x:100,y:200,width:400,height:400});
   assert.deepEqual(dragEdge(b,'top',{x:0,y:100}),{x:100,y:100,width:300,height:500});
@@ -23,5 +23,11 @@ test('catalog has an independent GM navigation control and explicit tile anchor'
   assert(controls[ID].visible);assert(controls[ID].tools.catalog.button);assert(controls[ID].tools.brush.button);assert(controls.tokens);
   game.user.isGM=false;sceneControls(controls);assert.equal(controls[ID].visible,false);
   const tile=tileData({name:'Test',key:'test',file:'assets/boden/test.webp',widthMeters:1,pixelWidth:100,pixelHeight:100,alphaBounds:[0,0,100,100]}, {grid:{size:100,distance:1,units:'m'},rect:{x:0,y:0,width:1000,height:1000}});
-  assert.equal(tile.anchorX,0);assert.equal(tile.anchorY,0);assert.equal(tile.x,450);assert.equal(tile.y,450);
+  assert.equal(tile.texture.anchorX,0);assert.equal(tile.texture.anchorY,0);assert.equal(tile.anchorX,undefined);assert.equal(tile.x,450);assert.equal(tile.y,450);
+});
+
+test('created tiles use the Foundry 14 texture anchor fields',()=>{
+  const tile=tileData({name:'Test',key:'test',file:'assets/boden/test.webp',widthMeters:1,pixelWidth:100,pixelHeight:100,alphaBounds:[0,0,100,100]}, {grid:{size:100,distance:1,units:'m'},rect:{x:200,y:300,width:1000,height:1000}});
+  assert.deepEqual(tile.texture,{src:'modules/assets-grimmes-erwachen/assets/boden/test.webp',anchorX:0,anchorY:0});
+  assert.equal('anchorX' in tile,false);assert.equal('anchorY' in tile,false);
 });

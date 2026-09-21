@@ -21,7 +21,7 @@ test('stamp upload reuses matching texture phases and creates one batch with gro
   assert.equal(f.uploads.length,4);assert.equal(f.made.length,1);assert.equal(f.made[0].length,5);
   assert.equal(new Set(f.made[0].map(t=>t.flags[ID].group)).size,1);
   assert.equal(f.made[0][0].texture.src,f.made[0][4].texture.src);
-  for(const t of f.made[0]){assert.equal(t.width,100);assert.equal(t.height,100);assert.equal(t.anchorX,0);assert.deepEqual(t.levels,['ground']);}
+  for(const t of f.made[0]){assert.equal(t.width,100);assert.equal(t.height,100);assert.equal(t.texture.anchorX,0);assert.equal(t.texture.anchorY,0);assert.equal(t.anchorX,undefined);assert.deepEqual(t.levels,['ground']);}
   await undoStroke();assert.equal(f.documents.size,0);
   await saveStamps(f.args);assert.equal(f.uploads.length,4);
 });

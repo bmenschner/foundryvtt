@@ -66,8 +66,8 @@ export async function saveStroke({scene,level,asset,bounds,surface}) {
   const tiles=Array.from(scene.tiles??[]).filter(t=>t.levels?.has?.(level.id) || t.levels?.includes?.(level.id));
   const ceiling=Math.min(0,...tiles.filter(t=>!t.flags?.[ID]?.painted).map(t=>t.sort??0));
   const latest=Math.max(ceiling-100000,...tiles.filter(t=>t.flags?.[ID]?.painted).map(t=>t.sort??0));
-  const [tile]=await scene.createEmbeddedDocuments('Tile',[{name:`Gemalt: ${asset.name}`,texture:{src:result.path},...bounds,
-    anchorX:0,anchorY:0,rotation:0,hidden:false,locked:false,sort:Math.min(ceiling-1,latest+1),elevation:level.elevation?.bottom??0,levels:[level.id],
+  const [tile]=await scene.createEmbeddedDocuments('Tile',[{name:`Gemalt: ${asset.name}`,texture:{src:result.path,anchorX:0,anchorY:0},...bounds,
+    rotation:0,hidden:false,locked:false,sort:Math.min(ceiling-1,latest+1),elevation:level.elevation?.bottom??0,levels:[level.id],
     flags:{[ID]:{painted:true,key:asset.key}}}]);
   if(!tile) throw new Error('Das gemalte Tile konnte nicht angelegt werden.');
   history.push({scene,levelId:level.id,id:tile.id});

@@ -25,7 +25,7 @@ test('brush stores images outside module, preserves other tiles, undo only remov
   const args={scene,level,asset:{key:'gras-einfach',name:'Gras'},bounds:{x:20,y:40,width:200,height:100},surface:{toBlob:cb=>cb(new Blob(['png']))}};
   await saveStroke(args);
   assert.equal(uploads[0].path,'worlds/test-world/assets-grimmes-erwachen-painted');
-  assert.equal(made[0].anchorX,0);assert.equal(made[0].anchorY,0);assert.equal(made[0].x,20);assert.equal(made[0].y,40);assert.equal(made[0].width,200);assert.deepEqual(made[0].levels,['ground']);assert(made[0].sort<0);assert(made[0].flags[ID].painted);
+  assert.equal(made[0].texture.anchorX,0);assert.equal(made[0].texture.anchorY,0);assert.equal(made[0].anchorX,undefined);assert.equal(made[0].x,20);assert.equal(made[0].y,40);assert.equal(made[0].width,200);assert.deepEqual(made[0].levels,['ground']);assert(made[0].sort<0);assert(made[0].flags[ID].painted);
   await undoStroke();assert.deepEqual(deleted,['stroke']);assert(objects.has('prop'));
   await assert.rejects(undoStroke(),/Kein eigener/);
   game.user.isGM=false;await assert.rejects(saveStroke(args),/Spielleitung/);assert.equal(uploads.length,1);

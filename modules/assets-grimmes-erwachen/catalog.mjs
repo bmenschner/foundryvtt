@@ -21,9 +21,9 @@ export function tileData(asset,{grid,rect,level},widthMeters=asset.widthMeters) 
   if (![left,top,right,bottom,asset.pixelWidth,asset.pixelHeight].every(Number.isFinite) || left<0 || top<0 || right<=left || bottom<=top || right>asset.pixelWidth || bottom>asset.pixelHeight) throw new Error('Ungültige Bildabmessungen.');
   if (!rect || ![rect.x,rect.y,rect.width,rect.height].every(Number.isFinite) || rect.width<=0 || rect.height<=0) throw new Error('Keine nutzbare Szenenfläche.');
   const scale=widthMeters*grid.size/(grid.distance*metres)/(right-left);
-  return {name:asset.name,texture:{src:assetPath(asset)},width:asset.pixelWidth*scale,height:asset.pixelHeight*scale,
+  return {name:asset.name,texture:{src:assetPath(asset),anchorX:0,anchorY:0},width:asset.pixelWidth*scale,height:asset.pixelHeight*scale,
     x:rect.x+rect.width/2-(left+right)/2*scale,y:rect.y+rect.height/2-(top+bottom)/2*scale,
-    anchorX:0,anchorY:0,rotation:0,hidden:false,locked:false,elevation:Number.isFinite(level?.elevation?.bottom)?level.elevation.bottom:0,
+    rotation:0,hidden:false,locked:false,elevation:Number.isFinite(level?.elevation?.bottom)?level.elevation.bottom:0,
     levels:level?.id?[level.id]:[],flags:{[ID]:{key:asset.key,widthMeters}}};
 }
 export async function loadCatalog() {

@@ -34,7 +34,7 @@ export async function saveStamps({scene,level,asset,cells,ppm,image}){
       const blob=await new Promise(resolve=>surface.toBlob(resolve,'image/png'));if(!blob)throw new Error('Stempelbild konnte nicht erzeugt werden.');valid();
       const result=await picker.upload('data',folder,new File([blob],`${asset.key}-stamp-${crypto.randomUUID()}.png`,{type:'image/png'}),{},{notify:false});
       if(!result?.path||result.error)throw new Error(result?.error||'Upload fehlgeschlagen.');src=result.path;textures.set(key,src);}
-    data.push({...cell,anchorX:0,anchorY:0,name:`1 m: ${asset.name}`,texture:{src},rotation:0,hidden:false,locked:false,sort,elevation:level.elevation?.bottom??0,levels:[level.id],flags:{[ID]:{painted:true,stamp:true,key:asset.key,group}}});
+    data.push({...cell,name:`1 m: ${asset.name}`,texture:{src,anchorX:0,anchorY:0},rotation:0,hidden:false,locked:false,sort,elevation:level.elevation?.bottom??0,levels:[level.id],flags:{[ID]:{painted:true,stamp:true,key:asset.key,group}}});
   }
   valid();const created=await scene.createEmbeddedDocuments('Tile',data);
   if(created?.length)recordHistory({scene,levelId:level.id,ids:created.map(t=>t.id)});
