@@ -1,6 +1,7 @@
 import {ID,loadCatalog,tileData,assetPath} from './catalog.mjs';
 import {stampCells,saveStamps,rectangleBounds} from './stamps.mjs';
-let active;
+let active,opening=0;
+export function closeBrush(){opening++;active?.dispose();}
 const history=[];
 export function recordHistory(entry){history.push(entry);}
 export function pixelsPerMeter(grid) {
@@ -60,10 +61,13 @@ export async function undoStroke() {
   history.splice(index,1);
 }
 export async function showBrush(assetKey) {
+  (await import('./rows.mjs')).closeRows();
   if(active) {active.panel.focus();return;}
+  const request=++opening;
   const scene=canvas.scene,level=canvas.level;checkContext(scene,level);
   const ppm=pixelsPerMeter(scene.grid),rect={...canvas.dimensions.sceneRect};
   const assets=(await loadCatalog()).filter(a=>a.kind==='terrain');
+  if(request!==opening)return;
   checkContext(scene,level);
   if(active) {active.panel.focus();return;}
   if(!assets.length) throw new Error('Keine Bodentexturen vorhanden.');

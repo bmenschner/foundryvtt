@@ -32,3 +32,8 @@
 .ssb-floor-card:focus-visible{outline:3px solid #fff;outline-offset:0}
 
 .ssb-brush > button[aria-pressed=true]{outline:3px solid #ff7777;outline-offset:-3px;background:#633838}
+
+.ssb-row-panel{position:fixed;top:80px;right:330px;z-index:10000;width:260px;box-sizing:border-box;padding:16px;display:flex;flex-direction:column;gap:8px;background:#242724;color:#eee;border:1px solid #a5b7a2;border-radius:8px;font:14px sans-serif;max-height:calc(100dvh - 100px);overflow-y:auto}
+.ssb-row-panel button{background:#363e36;color:#fff;min-height:32px;border:1px solid #83917f;border-radius:4px;cursor:pointer}.ssb-row-panel p{margin:0;line-height:1.4}.ssb-row-panel button:disabled{opacity:.5}
+.ssb-row-overlay{position:fixed;inset:0;z-index:50;cursor:crosshair;touch-action:none}
+@media(max-width:800px){.ssb-row-panel{right:12px;top:60px;width:230px;max-width:calc(100vw - 24px)}}
