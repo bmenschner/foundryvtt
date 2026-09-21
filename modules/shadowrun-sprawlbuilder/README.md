@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.0.0
+# Shadowrun SprawlBuilder · 1.0.1
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen**. Keine neuen Bilder generiert.
 
@@ -31,7 +31,9 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 **Gelände bauen** öffnet die übernommenen Bauwerkzeuge. Eine im Katalog ausgewählte malbare Textur wird vorgewählt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Bordsteine werden als Einzelbauteile platziert.
 
 - Linksklick setzt ein 1 × 1 m großes Tile; Ziehen setzt zusammenhängende Rasterfelder. Die Vorschau folgt der Maus. Gespeichert wird beim Loslassen.
-- Rechteck und eckiger Freihandmodus stehen ebenfalls zur Verfügung. Für große Flächen Rechtecke verwenden; maximal 512 einzelne Stempelfelder pro Zug.
+- Rechtecke rasten einschließlich Start- und Endfeld auf dasselbe 1-m-Raster wie Stempel ein. Vorschau und gespeicherte Kanten stimmen überein; mit demselben Material lassen sich Stempel ohne Lücke und mit passender Texturausrichtung ergänzen. Ziehen funktioniert in jede Richtung. Am Szenenrand werden nur vollständige Zellen berücksichtigt.
+- Für große Flächen Rechtecke verwenden: Ein Rechteck bleibt ein einzelnes Flächen-Tile. Im Stempelmodus gelten maximal 512 einzelne Felder pro Zug. Freihand und Pinselbreite entfallen.
+- Bestehende Flächen werden nicht automatisch eingerastet. Frei verschobene oder nachträglich skalierte Tiles können weiterhin außerhalb des Rasters liegen.
 - „Letzten Strich zurücknehmen“ entfernt die letzte eigene Gruppe auf der aktuellen Ebene. Diese Historie gilt für die laufende Browsersitzung.
 - „Ausgewählte Fläche erweitern“ bietet vier Kanten zum Ziehen für entsperrte, ungedrehte, mit SprawlBuilder erzeugte Flächen.
 - Esc pausiert den Malmodus. Gemalte Bilder liegen dauerhaft unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-painted/`; Rückgängig entfernt Tiles, nicht die erzeugten Dateien.
