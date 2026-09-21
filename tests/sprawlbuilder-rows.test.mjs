@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {rowData,saveRow,undoRow} from '../modules/shadowrun-sprawlbuilder/rows.mjs';
@@ -26,7 +27,7 @@ test('rows use whole segments, honour units and reject invalid bounds/counts',()
   assert.throws(()=>rowData(asset,{...options,end:{x:99999,y:2000}}),/128/);
   assert.throws(()=>rowData(asset,{...options,start:{x:4990,y:2000},end:{x:4991,y:2000}}),/innerhalb/);
   assert.throws(()=>rowData(asset,{...options,end:{x:NaN,y:0}}));
-  assert.throws(()=>rowData({...asset,key:'stuhl'},{...options,end:start}));
+  assert.equal(rowData({...asset,key:'stuhl'},{...options,end:start}).count,1);
 });
 test('save and undo affect only this row and level; async context changes prevent creation',async()=>{
   const tiles=new Map([['foreign',{flags:{}}]]);let serial=0;
@@ -41,4 +42,9 @@ test('save and undo affect only this row and level; async context changes preven
   canvas.level=level;globalThis.fetch=async()=>({ok:false});await assert.rejects(saveRow(asset,args));
   globalThis.fetch=async()=>({ok:true});await assert.rejects(saveRow(asset,{...args,cancelled:()=>true}));
   game.user.isGM=false;await assert.rejects(saveRow(asset,args));assert.equal(tiles.size,1);
+});
+
+test('every catalogue asset supports rows without category or key restrictions',()=>{
+  const assets=JSON.parse(fs.readFileSync('modules/shadowrun-sprawlbuilder/catalog.json')).icons;
+  for(const item of assets){const r=rowData(item,{...options,rect:{x:-1e6,y:-1e6,width:2e6,height:2e6},end:start});assert.equal(r.count,1,item.key);}
 });

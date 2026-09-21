@@ -8,7 +8,7 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 2. Eine Szene öffnen und die gewünschte Szenenebene auswählen. Für unser Kartenraster Distanz **1**, Einheit **m** einstellen.
 3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
 4. Sammlung, Kategorie und Unterkategorie wählen. Die Suche berücksichtigt Namen, Kategorien und Suchbegriffe; der Elementtyp unterscheidet Einzelobjekte, Bauteile, Overlays und malbare Flächen.
-5. Ein Element auswählen, seine sichtbare Breite in Metern einstellen und platzieren. Anschließend auf der Tile-Ebene verschieben oder drehen.
+5. Ein Element anklicken: Der Asset-Stempel startet direkt und die Bibliothek schließt. Die halbtransparente Vorschau folgt mit der sichtbaren Objektmitte der Maus. Im kleinen Werkzeugfenster die Breite einstellen; Linksklick setzt ein Exemplar. Weitere Klicks setzen weitere Exemplare. Auch nach Ziehen entsteht beim Loslassen nur ein Exemplar. Esc oder Rechtsklick beendet den Stempel. „Letzte Platzierung zurücknehmen“ entfernt die letzte eigene Einzelplatzierung auf der aktuellen Ebene. Anschließend auf der Tile-Ebene verschieben oder drehen.
 
 ## Bibliothek
 
@@ -41,9 +41,9 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 
 ## Gerade Reihen ziehen
 
-In **Assets** ein unterstütztes Element auswählen, bei Bedarf die sichtbare Breite pro Segment einstellen und **Reihe ziehen** anklicken. Linksklick und Ziehen zeigen eine gerade Reihe in Zugrichtung; Loslassen setzt alle Segmente gemeinsam auf der aktuellen Ebene. Ein Klick setzt ein Segment. Die Vorschau zeigt Bilder, Stückzahl und tatsächliche Länge. Angefangene Endsegmente werden zu ganzen Stücken aufgerundet. Transparente Bildränder zählen nicht zum Abstand, das Bild wird nicht verzerrt.
+In **Assets** ein beliebiges Element auswählen; im daraufhin geöffneten Stempelwerkzeug bei Bedarf die sichtbare Breite pro Segment einstellen und **Reihe ziehen** anklicken. Linksklick und Ziehen zeigen eine gerade Reihe in Zugrichtung; Loslassen setzt alle Segmente gemeinsam auf der aktuellen Ebene. Ein Klick setzt ein Segment. Die Vorschau zeigt Bilder, Stückzahl und tatsächliche Länge. Angefangene Endsegmente werden zu ganzen Stücken aufgerundet. Transparente Bildränder zählen nicht zum Abstand, das Bild wird nicht verzerrt.
 
-Unterstützt: Heckensegment, Grundmauersegment, Mauerrest, Entwässerungsrinne, Dachentwässerung, gerader Bordstein und Gehwegplatten. Gehwegplatten werden zunächst als ganze quadratische Segmente wiederholt. Unregelmäßige Bildenden werden nicht automatisch retuschiert oder ineinander verblendet.
+Die Reihenfunktion steht für alle Assets zur Verfügung, ohne Einschränkung nach Kategorie oder Bildinhalt. Gehwegplatten werden zunächst als ganze quadratische Segmente wiederholt. Unregelmäßige Bildenden werden nicht automatisch retuschiert oder ineinander verblendet.
 
 **Letzte Reihe zurücknehmen** entfernt die letzte eigene Reihe auf der aktuellen Ebene; die Historie gilt für die Browsersitzung. Einzelne Tiles bleiben danach mit Foundrys Tile-Werkzeug bearbeitbar. Esc, Rechtsklick oder Schließen beendet das Werkzeug. Beim Öffnen des Bodenwerkzeugs wird das Reihenwerkzeug geschlossen und umgekehrt. Maximal 128 Segmente pro Zug; die gesamte sichtbare Reihe muss innerhalb der Szene liegen.
 

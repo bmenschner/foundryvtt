@@ -1,4 +1,4 @@
-import {rowAssets,showRows} from './rows.mjs';
+import {showRows,showAssetStamp} from './rows.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
 export {collections,taxonomy,assetTypes};
 export const ID='shadowrun-sprawlbuilder';
@@ -90,22 +90,21 @@ export function catalogElement(icons) {
   const detail=node('div',undefined,'ssb-detail');
   const selectedName=node('strong','Noch kein Element ausgewählt.'),selectedMeta=node('small');
   const sizeLabel=node('label','Sichtbare Breite (m) '),width=node('input');width.type='number';width.min='0.01';width.max='1000';width.step='0.01';width.disabled=true;sizeLabel.append(width);
-  const place=node('button','In Szenenmitte platzieren');place.type='button';place.disabled=true;
   const row=node('button','Reihe ziehen');row.type='button';row.disabled=true;
   const pathLabel=node('label','Bildpfad '),path=node('input');path.readOnly=true;pathLabel.append(path);path.addEventListener('click',()=>path.select());
-  detail.append(selectedName,selectedMeta,sizeLabel,place,row,pathLabel,node('small','Die Breite bezieht sich auf das sichtbare Objekt. Maße sind Vorschläge. Bauteile sind Bilder; Sicht- und Bewegungswände setzt du mit Foundrys Wandwerkzeug.'));
+  detail.append(selectedName,selectedMeta,sizeLabel,row,pathLabel,node('small','Die Breite bezieht sich auf das sichtbare Objekt. Maße sind Vorschläge. Bauteile sind Bilder; Sicht- und Bewegungswände setzt du mit Foundrys Wandwerkzeug.'));
   root.append(intro,filters,tools,status,cards,paging,detail);
   let page=0,selected=null,placing=false;
   function draw() {
     const matches=filterAssets(icons,search.value,category.value,{collection:collection.value,subcategory:subcategory.value,assetType:type.value}),pages=Math.max(1,Math.ceil(matches.length/24));page=Math.min(page,pages-1);
-    if(selected&&!matches.some(a=>a.key===selected.key)){selected=null;selectedName.textContent='Noch kein Element ausgewählt.';selectedMeta.textContent='';width.value='';width.disabled=true;path.value='';place.disabled=true;row.disabled=true;}
+    if(selected&&!matches.some(a=>a.key===selected.key)){selected=null;selectedName.textContent='Noch kein Element ausgewählt.';selectedMeta.textContent='';width.value='';width.disabled=true;path.value='';row.disabled=true;}
     status.textContent=`${matches.length} Treffer · Seite ${page+1} von ${pages}`;
     previous.disabled=page===0;next.disabled=page>=pages-1;cards.replaceChildren();
     for(const asset of matches.slice(page*24,(page+1)*24)) {
       const card=node('button',undefined,'ssb-card');card.type='button';card.setAttribute('aria-label',asset.name);card.setAttribute('aria-pressed',String(selected?.key===asset.key));
       const picture=node('img');picture.src=assetPath(asset);picture.alt='';picture.loading='lazy';picture.width=120;picture.height=100;
       card.append(picture,node('span',asset.name),node('small',taxonomy[asset.category].subcategories[asset.subcategory]));
-      card.addEventListener('click',()=>{if(placing)return;selected=asset;selectedName.textContent=asset.name;selectedMeta.textContent=`${collections[asset.collection]} · ${categories[asset.category]} · ${taxonomy[asset.category].subcategories[asset.subcategory]} · ${assetTypes[asset.assetType]}`;width.disabled=false;width.value=String(asset.widthMeters);path.value=assetPath(asset);place.disabled=false;row.disabled=!rowAssets.has(asset.key);draw();});
+      card.addEventListener('click',async()=>{if(placing)return;selected=asset;selectedName.textContent=asset.name;selectedMeta.textContent=`${collections[asset.collection]} · ${categories[asset.category]} · ${taxonomy[asset.category].subcategories[asset.subcategory]} · ${assetTypes[asset.assetType]}`;width.disabled=false;width.value=String(asset.widthMeters);path.value=assetPath(asset);row.disabled=false;draw();placing=true;try{await showAssetStamp(asset,Number(width.value));if(browser?.rendered)await browser.close();}catch(error){ui.notifications.error(error.message);}finally{placing=false;}});
       cards.append(card);
     }
     if(!matches.length)cards.append(node('p','Keine passenden Elemente vorhanden. Suche oder Filter ändern.','ssb-empty'));
@@ -114,8 +113,7 @@ export function catalogElement(icons) {
   for(const el of [collection,category,subcategory,type])el.addEventListener('change',()=>{page=0;updateFilters();draw();});
   reset.addEventListener('click',()=>{search.value=collection.value=category.value=subcategory.value=type.value='';page=0;updateFilters();draw();});
   previous.addEventListener('click',()=>{pssb--;draw();});next.addEventListener('click',()=>{page++;draw();});
-  place.addEventListener('click',async()=>{if(!selected || placing)return;placing=true;place.disabled=true;try{await placeAsset(selected,Number(width.value));}catch(error){ui.notifications.error(error.message);}finally{placing=false;place.disabled=!selected;}});
-  row.addEventListener('click',async()=>{if(!selected||placing)return;placing=true;row.disabled=true;try{await showRows(selected,Number(width.value));if(browser?.rendered)await browser.close();}catch(error){ui.notifications.error(error.message);}finally{placing=false;row.disabled=!selected||!rowAssets.has(selected.key);}});
+  row.addEventListener('click',async()=>{if(!selected||placing)return;placing=true;row.disabled=true;try{await showRows(selected,Number(width.value));if(browser?.rendered)await browser.close();}catch(error){ui.notifications.error(error.message);}finally{placing=false;row.disabled=!selected;}});
   draw();return root;
 }
 export async function showCatalog() {
@@ -137,7 +135,7 @@ export function registerCatalog() {
 }
 export async function showBrush(assetKey){await (await import('./brush.mjs')).showBrush(assetKey);if(browser?.rendered)await browser.close();}
 export async function initializeCatalog() {
-  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush,showRows};
+  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush,showRows,showAssetStamp};
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id!==game.user.id)) return;
   if (game.macros.find(m=>m.getFlag(ID,'key')==='launcher')) return;
   try {await CONFIG.Macro.documentClass.create({name:'Shadowrun SprawlBuilder',type:'script',img:'icons/svg/chest.svg',command:`await game.modules.get('${ID}').api.showCatalog();`,ownership:{default:0},flags:{[ID]:{key:'launcher'}}});}

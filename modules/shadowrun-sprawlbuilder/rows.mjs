@@ -1,12 +1,10 @@
 import {ID,assetPath,tileData} from './catalog.mjs';
 import {closeBrush} from './brush.mjs';
 
-export const rowAssets=new Set(['heckensegment','grundmauersegment','mauerrest','entwaesserungsrinne','dachentwaesserung','bordstein-gerade','gehweg-betonplatten']);
 let active,opening=0;
 const history=[];
 export function closeRows(){opening++;active?.dispose();}
 export function rowData(asset,{grid,rect,level,start,end,widthMeters=asset.widthMeters}){
-  if(!rowAssets.has(asset.key))throw new Error('Dieses Element unterstützt keine Reihen.');
   if(![start?.x,start?.y,end?.x,end?.y].every(Number.isFinite))throw new Error('Ungültige Reihenposition.');
   const base=tileData(asset,{grid,rect,level},widthMeters),[left,top,right,bottom]=asset.alphaBounds;
   const scale=base.width/asset.pixelWidth,length=(right-left)*scale,depth=(bottom-top)*scale;
@@ -26,40 +24,53 @@ export function rowData(asset,{grid,rect,level,start,end,widthMeters=asset.width
   }
   return {data,count,lengthMeters:count*widthMeters};
 }
+export function assetStampData(asset,{grid,rect,level,point,widthMeters=asset.widthMeters}){
+  if(![point?.x,point?.y].every(Number.isFinite))throw new Error('Ungültige Stempelposition.');
+  const tile=tileData(asset,{grid,rect,level},widthMeters),[left,top,right,bottom]=asset.alphaBounds,scale=tile.width/asset.pixelWidth;
+  const w=(right-left)*scale,h=(bottom-top)*scale;
+  if(point.x-w/2<rect.x||point.y-h/2<rect.y||point.x+w/2>rect.x+rect.width||point.y+h/2>rect.y+rect.height)throw new Error('Das sichtbare Element muss innerhalb der Szene liegen.');
+  return {...tile,x:point.x-((left+right)/2-asset.pixelWidth/2)*scale,y:point.y-((top+bottom)/2-asset.pixelHeight/2)*scale,texture:{...tile.texture,anchorX:.5,anchorY:.5}};
+}
+export async function saveAssetStamp(asset,options){return saveRow(asset,{...options,single:true});}
+export async function undoAssetStamp(){return undoRow(true);}
+export async function showAssetStamp(asset,widthMeters=asset.widthMeters){return showRows(asset,widthMeters,true);}
 function check(scene,level){
   if(!game.user.isGM||Number(game.release?.generation)!==14||!canvas.ready||canvas.scene!==scene||!level?.id||canvas.level?.id!==level.id)throw new Error('Bitte eine Szene und Ebene als Spielleitung in Foundry 14 öffnen. Bei einem Wechsel das Reihenwerkzeug erneut öffnen.');
 }
 export async function saveRow(asset,options){
   const {scene,level}=options;const valid=()=>{check(scene,level);if(options.cancelled?.())throw new Error('Reihenplatzierung abgebrochen.');};valid();
-  const {data}=rowData(asset,{...options,grid:scene.grid});
+  const data=options.single?[assetStampData(asset,{...options,grid:scene.grid})]:rowData(asset,{...options,grid:scene.grid}).data;
   const response=await fetch(assetPath(asset),{method:'HEAD'});if(!response.ok)throw new Error('Die Bilddatei fehlt.');valid();
-  const group=crypto.randomUUID();for(const tile of data)tile.flags[ID].rowGroup=group;
+  const group=crypto.randomUUID();for(const tile of data)tile.flags[ID][options.single?'assetStamp':'rowGroup']=group;
   const created=await scene.createEmbeddedDocuments('Tile',data);
-  if(created?.length)history.push({scene,levelId:level.id,group,ids:created.map(t=>t.id)});
+  if(created?.length)history.push({scene,levelId:level.id,group,single:!!options.single,ids:created.map(t=>t.id)});
   if(created?.length!==data.length)throw new Error('Reihe nur teilweise angelegt. Rückgängig entfernt die angelegten Teile.');
   return created;
 }
-export async function undoRow(){
+export async function undoRow(single=false){
   const scene=canvas.scene,level=canvas.level;check(scene,level);
-  const index=history.findLastIndex(h=>h.scene===scene&&h.levelId===level.id);
-  if(index<0)throw new Error('Keine eigene Reihe auf dieser Ebene zum Zurücknehmen.');
-  const h=history[index],ids=h.ids.filter(id=>scene.tiles.get(id)?.flags?.[ID]?.rowGroup===h.group);
+  const index=history.findLastIndex(h=>h.scene===scene&&h.levelId===level.id&&h.single===single);
+  if(index<0)throw new Error(single?'Keine eigene Einzelplatzierung auf dieser Ebene zum Zurücknehmen.':'Keine eigene Reihe auf dieser Ebene zum Zurücknehmen.');
+  const h=history[index],ids=h.ids.filter(id=>scene.tiles.get(id)?.flags?.[ID]?.[single?'assetStamp':'rowGroup']===h.group);
   if(ids.length)await scene.deleteEmbeddedDocuments('Tile',ids);history.splice(index,1);
 }
-export async function showRows(asset,widthMeters=asset.widthMeters){
+export async function showRows(asset,widthMeters=asset.widthMeters,single=false){
   const scene=canvas.scene,level=canvas.level;check(scene,level);
   const rect={...canvas.dimensions.sceneRect};
   // Validate scale and asset before installing the drawing overlay.
   tileData(asset,{grid:scene.grid,rect,level},widthMeters);
-  if(!rowAssets.has(asset.key))throw new Error('Dieses Element unterstützt keine Reihen.');
   closeRows();closeBrush();const request=opening;
   const image=new Image();image.src=assetPath(asset);await image.decode();check(scene,level);
   if(request!==opening)return;closeBrush();
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
-  const panel=node('section');panel.className='ssb-row-panel';panel.setAttribute('aria-label','Reihe ziehen');
-  const status=node('p','Klicken und ziehen. Esc oder Rechtsklick beendet das Werkzeug.');status.setAttribute('aria-live','polite');
-  const undo=node('button','Letzte Reihe zurücknehmen'),close=node('button','Schließen');
-  panel.append(node('strong',`Reihe · ${asset.name}`),node('span',`${widthMeters} m pro Segment`),status,undo,close);
+  const panel=node('section');panel.className='ssb-row-panel';panel.setAttribute('aria-label',single?'Asset-Stempel':'Reihe ziehen');
+  const status=node('p',single?'Klick setzt ein Exemplar. Esc oder Rechtsklick beendet das Werkzeug.':'Klicken und ziehen. Esc oder Rechtsklick beendet das Werkzeug.');status.setAttribute('aria-live','polite');
+  const undo=node('button',single?'Letzte Platzierung zurücknehmen':'Letzte Reihe zurücknehmen'),close=node('button','Schließen');
+  panel.append(node('strong',`${single?'Stempel':'Reihe'} · ${asset.name}`),node('span',single?'':`${widthMeters} m pro Segment`),status,undo,close);
+  const size=node('input');size.type='number';size.min='.01';size.max='1000';size.step='.01';size.value=String(widthMeters);size.setAttribute('aria-label','Stempelbreite (m)');
+  if(single){const label=node('label','Sichtbare Breite (m)');label.append(size);panel.insertBefore(label,status);}
+  const row=node('button','Reihe ziehen');
+  if(single){panel.insertBefore(row,undo);row.addEventListener('click',()=>{if(!busy)showRows(asset,Number(size.value)).catch(error=>ui.notifications.error(error.message));});}
   const overlay=node('canvas');overlay.className='ssb-row-overlay';document.body.append(overlay,panel);
   let start=null,end=null,pointer=null,busy=false,disposed=false;
   const controller=new AbortController(),opts={signal:controller.signal};
@@ -72,12 +83,13 @@ export async function showRows(asset,widthMeters=asset.widthMeters){
   function preview(){
     clear();if(!start||!end)return;
     try{
-      check(scene,level);const result=rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
+      check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,point:end,widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
       const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0}),zoom=Math.hypot(b.x-a.x,b.y-a.y);
       for(const tile of result.data){const p=canvas.clientCoordinatesFromCanvas(tile);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(tile.rotation*Math.PI/180);ctx.globalAlpha=.65;ctx.drawImage(image,-tile.width*zoom/2,-tile.height*zoom/2,tile.width*zoom,tile.height*zoom);ctx.restore();}
-      status.textContent=`${result.count} Segmente · ${result.lengthMeters.toLocaleString('de',{maximumFractionDigits:2})} m`;
+      status.textContent=single?'Klick setzt ein Exemplar.':`${result.count} Segmente · ${result.lengthMeters.toLocaleString('de',{maximumFractionDigits:2})} m`;
     }catch(error){status.textContent=error.message;}
   }
+  size.addEventListener('input',preview,opts);
   const world=e=>canvas.canvasCoordinatesFromClient({x:e.clientX,y:e.clientY});
   overlay.addEventListener('pointerdown',e=>{if(busy||e.button!==0)return;e.preventDefault();start=end=world(e);pointer=e.pointerId;overlay.setPointerCapture(pointer);preview();},opts);
   overlay.addEventListener('pointermove',e=>{if(busy)return;if(pointer===null){start=end=world(e);}else if(pointer===e.pointerId)end=world(e);preview();},opts);
@@ -85,12 +97,12 @@ export async function showRows(asset,widthMeters=asset.widthMeters){
   overlay.addEventListener('pointercancel',()=>{start=end=null;pointer=null;clear();},opts);
   overlay.addEventListener('pointerup',async e=>{
     if(busy||pointer!==e.pointerId||!start)return;
-    const from=start,to=world(e);pointer=null;busy=true;undo.disabled=close.disabled=true;
-    try{check(scene,level);await saveRow(asset,{scene,level,rect,start:from,end:to,widthMeters,cancelled:()=>disposed});status.textContent='Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
+    const from=start,to=world(e);pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=true;
+    try{check(scene,level);await saveRow(asset,{scene,level,rect,start:from,end:to,point:to,single,widthMeters:single?Number(size.value):widthMeters,cancelled:()=>disposed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
     catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally{busy=false;undo.disabled=close.disabled=false;start=end=null;clear();}
+    finally{busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=false;start=end=null;clear();}
   },opts);
-  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{await undoRow();status.textContent='Letzte Reihe zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
+  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{await undoRow(single);status.textContent=single?'Letzte Platzierung zurückgenommen.':'Letzte Reihe zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
   close.addEventListener('click',dispose,opts);
   overlay.addEventListener('contextmenu',e=>{e.preventDefault();dispose();},opts);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.stopPropagation();dispose();}},{...opts,capture:true});
