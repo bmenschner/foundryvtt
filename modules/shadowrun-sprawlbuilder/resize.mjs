@@ -1,7 +1,7 @@
 import {ID,loadCatalog,assetPath} from './catalog.mjs';
 import {pixelsPerMeter,renderStroke} from './brush.mjs';
 let stopResize;
-export function tileBounds(tile){return {x:tile.x-(tile.anchorX??0.5)*tile.width,y:tile.y-(tile.anchorY??0.5)*tile.height,width:tile.width,height:tile.height};}
+export function tileBounds(tile){const anchorX=tile.texture?.anchorX??tile.anchorX??0.5,anchorY=tile.texture?.anchorY??tile.anchorY??0.5;return {x:tile.x-anchorX*tile.width,y:tile.y-anchorY*tile.height,width:tile.width,height:tile.height};}
 export function dragEdge(bounds,edge,point,min=1){
   const b={...bounds},right=b.x+b.width,bottom=b.y+b.height;
   if(edge==='left'){b.x=Math.min(point.x,right-min);b.width=right-b.x;}
@@ -16,7 +16,7 @@ export async function resizePainted(tile,bounds){
   function valid(){if(!game.user.isGM||!canvas.ready||tile.parent!==scene||canvas.scene!==scene||canvas.level?.id!==level?.id||!tile.flags?.[ID]?.painted||tile.locked||tile.rotation)throw new Error('Bitte ein entsperrtes, ungedrehtes gemaltes Tile auf der aktuellen Ebene auswählen.');}
   valid();
   if(!(tile.levels?.has?.(level.id)||tile.levels?.includes?.(level.id)))throw new Error('Das Tile gehört zu einer anderen Ebene.');
-  const before={x:tile.x,y:tile.y,width:tile.width,height:tile.height,anchorX:tile.anchorX,anchorY:tile.anchorY,src:tile.texture.src};
+  const before={x:tile.x,y:tile.y,width:tile.width,height:tile.height,anchorX:tile.texture?.anchorX??tile.anchorX??0.5,anchorY:tile.texture?.anchorY??tile.anchorY??0.5,src:tile.texture.src};
   const asset=(await loadCatalog()).find(a=>a.key===tile.flags[ID].key);if(!asset)throw new Error('Bodentextur fehlt im Katalog.');
   const texture=new Image(),mask=new Image();texture.src=assetPath(asset);mask.src=before.src;await Promise.all([texture.decode(),mask.decode()]);valid();
   const ppm=pixelsPerMeter(scene.grid);
@@ -26,8 +26,9 @@ export async function resizePainted(tile,bounds){
   const world=game.world.id;if(!/^[\w-]+$/.test(world))throw new Error('Ungültiger Weltordner.');
   valid();const result=await foundry.applications.apps.FilePicker.implementation.upload('data',`worlds/${world}/${ID}-painted`,new File([blob],`${asset.key}-${crypto.randomUUID()}.png`,{type:'image/png'}),{},{notify:false});
   if(!result?.path||result.error)throw new Error(result?.error||'Upload fehlgeschlagen.');valid();
-  if(Object.keys(before).some(k=>k==='src'?tile.texture.src!==before.src:tile[k]!==before[k]))throw new Error('Das Tile wurde zwischenzeitlich verändert. Bitte erneut ziehen.');
-  await tile.update({...bounds,anchorX:0,anchorY:0,'texture.src':result.path});
+  const current={x:tile.x,y:tile.y,width:tile.width,height:tile.height,anchorX:tile.texture?.anchorX??tile.anchorX??0.5,anchorY:tile.texture?.anchorY??tile.anchorY??0.5,src:tile.texture.src};
+  if(Object.keys(before).some(key=>current[key]!==before[key]))throw new Error('Das Tile wurde zwischenzeitlich verändert. Bitte erneut ziehen.');
+  await tile.update({...bounds,'texture.src':result.path,'texture.anchorX':0,'texture.anchorY':0});
 }
 export function beginResize(){
   stopResize?.();
