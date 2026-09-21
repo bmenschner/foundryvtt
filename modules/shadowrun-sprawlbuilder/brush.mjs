@@ -63,17 +63,27 @@ export async function showBrush(assetKey) {
   const ppm=pixelsPerMeter(scene.grid),rect={...canvas.dimensions.sceneRect};
   const assets=(await loadCatalog()).filter(a=>a.kind==='terrain');
   checkContext(scene,level);
+  if(active) {active.panel.focus();return;}
   if(!assets.length) throw new Error('Keine Bodentexturen vorhanden.');
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
   const panel=node('section');panel.className='ssb-brush';panel.tabIndex=-1;panel.setAttribute('aria-label','SprawlBuilder – Gelände bauen');
   panel.append(node('strong','SprawlBuilder · Gelände bauen'));
-  const material=node('select');material.setAttribute('aria-label','Material');for(const a of assets)material.append(new Option(a.name,a.key));
-  if(assets.some(a=>a.key===assetKey))material.value=assetKey;
+  let selected=assets.find(a=>a.key===assetKey)??assets[0];
+  const gallery=node('div');gallery.className='ssb-floor-gallery';gallery.setAttribute('role','group');gallery.setAttribute('aria-label','Böden');
+  const selectedName=node('p',`Boden: ${selected.name}`);selectedName.setAttribute('aria-live','polite');
+  const materialButtons=[];
+  for(const asset of assets){
+    const card=node('button');card.type='button';card.className='ssb-floor-card';card.setAttribute('aria-label',asset.name);card.setAttribute('aria-pressed',String(asset===selected));
+    const image=node('img');image.src=assetPath(asset);image.alt='';image.width=80;image.height=64;
+    card.append(image,node('span',asset.name));
+    card.addEventListener('click',()=>{if(busy)return;selected=asset;selectedName.textContent=`Boden: ${asset.name}`;for(const button of materialButtons)button.setAttribute('aria-pressed',String(button===card));});
+    gallery.append(card);materialButtons.push(card);
+  }
   const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Stempel · 1 × 1 m','stamp'),new Option('Rechteck · 1-m-Raster','rectangle'));
   const extend=node('button','Ausgewählte Fläche erweitern');extend.addEventListener('click',async()=>{if(busy)return;setEnabled(false);try{(await import('./resize.mjs')).beginResize();}catch(error){status.textContent=error.message;}});
   const toggle=node('button','Malen starten'),undo=node('button','Letzten Strich zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Material wählen und Malen starten. Esc beendet den Malmodus.');status.setAttribute('aria-live','polite');
-  panel.append(material,mode,toggle,extend,undo,close,status);
+  panel.append(node('span','Böden'),gallery,selectedName,mode,toggle,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
@@ -109,7 +119,7 @@ export async function showBrush(assetKey) {
   overlay.addEventListener('pointerdown',e=>{
     if(!enabled || busy || e.button!==0)return;
     try {checkContext(scene,level);
-      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:assets.find(a=>a.key===material.value)};preview();
+      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected};preview();
     }catch(error){status.textContent=error.message;setEnabled(false);}
   },options);
   overlay.addEventListener('pointermove',e=>{if(busy)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
@@ -117,7 +127,7 @@ export async function showBrush(assetKey) {
   overlay.addEventListener('pointercancel',()=>{points=[];pointer=null;clear();},options);
   overlay.addEventListener('pointerup',async e=>{
     if(pointer!==e.pointerId || !points.length)return;
-    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=toggle.disabled=undo.disabled=mode.disabled=material.disabled=true;status.textContent='Strich wird gespeichert …';
+    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=toggle.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
     try {
       checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');
       const image=new Image();image.src=assetPath(stroke.asset);await image.decode();
@@ -127,7 +137,7 @@ export async function showBrush(assetKey) {
       const surface=renderStroke({points:path,...stroke,bounds,ppm,image});
       await saveStroke({scene,level,asset:stroke.asset,bounds,surface});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
     }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=mode.disabled=material.disabled=false;clear();if(enabled&&!disposed)preview();}
+    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=mode.disabled=false;for(const button of materialButtons)button.disabled=false;clear();if(enabled&&!disposed)preview();}
   },options);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=toggle.disabled=true;try{await undoStroke();status.textContent='Letzter Strich zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=toggle.disabled=false;}},options);
 }

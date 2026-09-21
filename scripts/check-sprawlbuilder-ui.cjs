@@ -32,8 +32,17 @@ const server=http.createServer((req,res)=>{
     await page.getByRole('searchbox').fill('Kein solches Asset');assert.equal(await page.locator('.ssb-card').count(),0);assert(await page.locator('.ssb-empty').isVisible());
     await page.getByRole('button',{name:'Filter zurücksetzen'}).click();assert.equal(await page.locator('.ssb-card').count(),24);assert.equal(await category.inputValue(),'');
     await type.selectOption('terrain');assert.equal(await page.locator('.ssb-card').count(),3);
-    await page.getByRole('button',{name:'Straße – einfacher Asphalt',exact:true}).click();await page.getByRole('button',{name:'Gelände bauen',exact:true}).click();
-    assert.equal(await page.getByLabel('Material',{exact:true}).inputValue(),'asphalt-einfach');
+    assert.equal(await page.locator('.ssb-catalog').getByRole('button',{name:'Gelände bauen',exact:true}).count(),0);
+    assert(await page.getByRole('navigation').getByRole('button',{name:'Assets',exact:true}).isVisible());
+    assert.equal(await page.evaluate(()=>typeof sprawlControls.onChange),'undefined');
+    await page.getByRole('button',{name:'Gelände bauen',exact:true}).click();
+    const floors=page.getByRole('group',{name:'Böden',exact:true});
+    await floors.waitFor();assert.equal(await floors.getByRole('button').count(),3);
+    await floors.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+    await floors.getByRole('button',{name:'Straße – einfacher Asphalt',exact:true}).click();
+    assert.equal(await floors.locator('[aria-pressed=true]').count(),1);
+    assert.equal(await floors.getByRole('button',{name:'Straße – einfacher Asphalt',exact:true}).getAttribute('aria-pressed'),'true');
+    await page.getByRole('button',{name:'Gelände bauen',exact:true}).click();assert.equal(await page.locator('.ssb-brush').count(),1);
     await page.getByRole('button',{name:'Malen starten',exact:true}).click();
     await page.mouse.move(120,850);await page.mouse.down();await page.mouse.move(350,850,{steps:5});await page.mouse.up();
     await page.waitForFunction(()=>created.length===4);
@@ -50,6 +59,9 @@ const server=http.createServer((req,res)=>{
     await page.getByRole('button',{name:'Gelände bauen',exact:true}).click();
     const mode=page.getByLabel('Malmodus',{exact:true});
     await mode.waitFor({state:'visible'});
+    await floors.getByRole('button',{name:'Straße – einfacher Asphalt',exact:true}).click();
+    // Keep the larger gallery clear of the world coordinates exercised below.
+    await page.locator('.ssb-brush').evaluate(el=>{el.style.right='12px';});
     assert.deepEqual(await mode.locator('option').evaluateAll(options=>options.map(o=>o.value)),['stamp','rectangle']);
     assert.equal(await page.getByLabel('Pinselbreite in Metern').count(),0);
     await mode.selectOption('rectangle');await page.getByRole('button',{name:'Malen starten',exact:true}).click();
@@ -86,11 +98,21 @@ const server=http.createServer((req,res)=>{
       return true;
     }));
     await page.getByRole('button',{name:'Letzten Strich zurücknehmen'}).click();await page.waitForFunction(()=>remaining?.length===5);
+    // Switching the gallery selection changes the next stamp without changing the metre grid.
+    const otherFloor=await floors.getByRole('button').evaluateAll(buttons=>buttons.find(b=>b.getAttribute('aria-pressed')==='false').getAttribute('aria-label'));
+    await floors.getByRole('button',{name:otherFloor,exact:true}).click();
+    assert.equal(await floors.locator('[aria-pressed=true]').count(),1);
+    await move(200,1071);await page.mouse.down();await page.mouse.up();await page.waitForFunction(()=>created.length===10);
+    assert.notEqual(await page.evaluate(()=>created.at(-1).flags['shadowrun-sprawlbuilder'].key),'asphalt-einfach');
+    assert.deepEqual(await page.evaluate(()=>[created.at(-1).width,created.at(-1).height]),[100,100]);
     await page.getByRole('button',{name:'Schließen',exact:true}).click();
     await page.getByRole('button',{name:'Filter zurücksetzen'}).click();await category.selectOption('strassen');
     await page.locator('.ssb-card img').evaluateAll(async images=>{await Promise.all(images.map(im=>im.decode()));});
     if(process.env.UI_SCREENSHOT)await page.screenshot({path:process.env.UI_SCREENSHOT,fullPage:true});
     await page.setViewportSize({width:540,height:1000});
+    await page.getByRole('button',{name:'Gelände bauen',exact:true}).click();await floors.waitFor();
+    assert(await page.locator('.ssb-brush').evaluate(el=>el.scrollWidth<=el.clientWidth));
+    await page.getByRole('button',{name:'Schließen',exact:true}).click();
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
     assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>window.errors),[]);
     console.log('SprawlBuilder browser check passed: catalog, placement, stamp drag, snapped rectangle preview, four adjacent edges, identical texture phase, undo and narrow layout.');
