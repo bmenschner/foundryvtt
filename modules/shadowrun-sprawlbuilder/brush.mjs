@@ -53,7 +53,9 @@ export async function undoStroke() {
   checkContext(canvas.scene,canvas.level);
   const index=history.findLastIndex(h=>h.scene===canvas.scene && h.levelId===canvas.level.id);
   if(index<0) throw new Error('Kein eigener Pinselstrich zum Zurücknehmen auf dieser Ebene.');
-  const h=history[index],ids=(h.ids??[h.id]).filter(id=>h.scene.tiles.get(id)?.flags?.[ID]?.painted);
+  const h=history[index];
+  if(h.undo){await h.undo();history.splice(index,1);return;}
+  const ids=(h.ids??[h.id]).filter(id=>h.scene.tiles.get(id)?.flags?.[ID]?.painted);
   if(ids.length) await h.scene.deleteEmbeddedDocuments('Tile',ids);
   history.splice(index,1);
 }
@@ -68,6 +70,7 @@ export async function showBrush(assetKey) {
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
   const panel=node('section');panel.className='ssb-brush';panel.tabIndex=-1;panel.setAttribute('aria-label','SprawlBuilder – Gelände bauen');
   panel.append(node('strong','SprawlBuilder · Gelände bauen'));
+  let erasing=false;
   let selected=assets.find(a=>a.key===assetKey)??assets[0];
   const gallery=node('div');gallery.className='ssb-floor-gallery';gallery.setAttribute('role','group');gallery.setAttribute('aria-label','Böden');
   const selectedName=node('p',`Boden: ${selected.name}`);selectedName.setAttribute('aria-live','polite');
@@ -76,20 +79,22 @@ export async function showBrush(assetKey) {
     const card=node('button');card.type='button';card.className='ssb-floor-card';card.setAttribute('aria-label',asset.name);card.setAttribute('aria-pressed',String(asset===selected));
     const image=node('img');image.src=assetPath(asset);image.alt='';image.width=80;image.height=64;
     card.append(image,node('span',asset.name));
-    card.addEventListener('click',()=>{if(busy)return;selected=asset;selectedName.textContent=`Boden: ${asset.name}`;for(const button of materialButtons)button.setAttribute('aria-pressed',String(button===card));});
+    card.addEventListener('click',()=>{if(busy)return;erasing=false;selected=asset;eraser.setAttribute('aria-pressed','false');setEnabled(true);selectedName.textContent=`Boden: ${asset.name}`;for(const button of materialButtons)button.setAttribute('aria-pressed',String(button===card));});
     gallery.append(card);materialButtons.push(card);
   }
   const mode=node('select');mode.setAttribute('aria-label','Malmodus');mode.append(new Option('Stempel · 1 × 1 m','stamp'),new Option('Rechteck · 1-m-Raster','rectangle'));
   const extend=node('button','Ausgewählte Fläche erweitern');extend.addEventListener('click',async()=>{if(busy)return;setEnabled(false);try{(await import('./resize.mjs')).beginResize();}catch(error){status.textContent=error.message;}});
-  const toggle=node('button','Malen starten'),undo=node('button','Letzten Strich zurücknehmen'),close=node('button','Schließen');
-  const status=node('p','Material wählen und Malen starten. Esc beendet den Malmodus.');status.setAttribute('aria-live','polite');
-  panel.append(node('span','Böden'),gallery,selectedName,mode,toggle,extend,undo,close,status);
+  const eraser=node('button','Boden löschen');eraser.type='button';eraser.setAttribute('aria-pressed','false');
+  eraser.addEventListener('click',()=>{if(busy)return;erasing=true;eraser.setAttribute('aria-pressed','true');for(const button of materialButtons)button.setAttribute('aria-pressed','false');selectedName.textContent='Radierer · Boden löschen';setEnabled(true);});
+  const undo=node('button','Letzte Aktion zurücknehmen'),close=node('button','Schließen');
+  const status=node('p','Boden oder Radierer wählen und direkt loslegen. Esc pausiert.');status.setAttribute('aria-live','polite');
+  panel.append(node('span','Böden'),gallery,selectedName,mode,eraser,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
   const controller=new AbortController(),options={signal:controller.signal};
   function clear(){overlay.getContext('2d').clearRect(0,0,overlay.width,overlay.height);}
-  function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';toggle.textContent=value?'Malen pausieren':'Malen starten';points=[];pointer=null;clear();}
+  function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';status.textContent=value?(erasing?'Radierer aktiv. Esc pausiert.':'Boden aktiv. Esc pausiert.'):'Pausiert. Boden oder Radierer wählen, um fortzufahren.';points=[];pointer=null;clear();}
   mode.addEventListener('change',()=>{points=[];pointer=null;overflow=false;clear();if(enabled)preview();},options);
   function dispose(){disposed=true;controller.abort();Hooks.off('canvasTearDown',tearHook);Hooks.off('canvasReady',readyHook);overlay.remove();panel.remove();active=null;}
   const tearHook=Hooks.on('canvasTearDown',dispose),readyHook=Hooks.on('canvasReady',dispose);
@@ -100,7 +105,7 @@ export async function showBrush(assetKey) {
   function preview(){
     if(mode.value==='stamp'){
       clear();const ctx=overlay.getContext('2d');
-      const draw=(cell,fill)=>{const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+ppm,y:cell.y+ppm});ctx.fillStyle='rgba(110,210,140,0.3)';ctx.strokeStyle='#a5ffc0';ctx.lineWidth=2;if(fill)ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);};
+      const draw=(cell,fill)=>{const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+ppm,y:cell.y+ppm});ctx.fillStyle=erasing?'rgba(255,80,80,0.3)':'rgba(110,210,140,0.3)';ctx.strokeStyle=erasing?'#ff7777':'#a5ffc0';ctx.lineWidth=2;if(fill)ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);};
       try{if(points.length)for(const cell of stampCells(points,ppm,rect))draw(cell,true);if(hover)for(const cell of stampCells([hover],ppm,rect))draw(cell,false);}catch(error){overflow=true;status.textContent=error.message;}
       return;
     }
@@ -108,18 +113,17 @@ export async function showBrush(assetKey) {
     try {
       const bounds=rectangleBounds(points[0],points.at(-1),ppm,rect);
       const a=canvas.clientCoordinatesFromCanvas(bounds),b=canvas.clientCoordinatesFromCanvas({x:bounds.x+bounds.width,y:bounds.y+bounds.height}),ctx=overlay.getContext('2d');
-      ctx.fillStyle='rgba(110,210,140,0.45)';ctx.strokeStyle='#a5ffc0';ctx.lineWidth=2;
+      ctx.fillStyle=erasing?'rgba(255,80,80,0.45)':'rgba(110,210,140,0.45)';ctx.strokeStyle=erasing?'#ff7777':'#a5ffc0';ctx.lineWidth=2;
       ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);
     }catch(error){status.textContent=error.message;}
   }
-  toggle.addEventListener('click',()=>{if(!busy)setEnabled(!enabled);},options);
   close.addEventListener('click',dispose,options);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){setEnabled(false);e.stopPropagation();}}, {...options,capture:true});
   overlay.addEventListener('contextmenu',e=>{e.preventDefault();setEnabled(false);},options);
   overlay.addEventListener('pointerdown',e=>{
     if(!enabled || busy || e.button!==0)return;
     try {checkContext(scene,level);
-      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected};preview();
+      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected,erasing};preview();
     }catch(error){status.textContent=error.message;setEnabled(false);}
   },options);
   overlay.addEventListener('pointermove',e=>{if(busy)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
@@ -127,9 +131,14 @@ export async function showBrush(assetKey) {
   overlay.addEventListener('pointercancel',()=>{points=[];pointer=null;clear();},options);
   overlay.addEventListener('pointerup',async e=>{
     if(pointer!==e.pointerId || !points.length)return;
-    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=toggle.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
+    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=eraser.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
     try {
       checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');
+      if(stroke.erasing){
+        const areas=stroke.mode==='stamp'?stampCells(path,ppm,rect):[rectangleBounds(path[0],path.at(-1),ppm,rect)];
+        const result=await (await import('./erase.mjs')).eraseTerrain({scene,level,areas});
+        status.textContent=`${result.changed} Bodenflächen bearbeitet.${result.skipped?' Gesperrte oder gedrehte Böden übersprungen: '+result.skipped+'.':''} Rückgängig stellt die letzte Aktion wieder her.`;return;
+      }
       const image=new Image();image.src=assetPath(stroke.asset);await image.decode();
       if(disposed) return;checkContext(scene,level);
       if(stroke.mode==='stamp'){await saveStamps({scene,level,asset:stroke.asset,cells:stampCells(path,ppm,rect),ppm,image});status.textContent='1-m-Felder gesetzt. Rückgängig entfernt diesen gesamten Zug.';return;}
@@ -137,7 +146,7 @@ export async function showBrush(assetKey) {
       const surface=renderStroke({points:path,...stroke,bounds,ppm,image});
       await saveStroke({scene,level,asset:stroke.asset,bounds,surface});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
     }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally {busy=false;close.disabled=toggle.disabled=undo.disabled=mode.disabled=false;for(const button of materialButtons)button.disabled=false;clear();if(enabled&&!disposed)preview();}
+    finally {busy=false;close.disabled=eraser.disabled=undo.disabled=mode.disabled=false;for(const button of materialButtons)button.disabled=false;clear();if(enabled&&!disposed)preview();}
   },options);
-  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=toggle.disabled=true;try{await undoStroke();status.textContent='Letzter Strich zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=toggle.disabled=false;}},options);
+  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=eraser.disabled=true;try{await undoStroke();status.textContent='Letzte Aktion zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=eraser.disabled=false;}},options);
 }
