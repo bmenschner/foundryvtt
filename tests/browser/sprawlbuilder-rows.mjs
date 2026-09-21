@@ -19,7 +19,7 @@ try{
   await page.goto(`http://127.0.0.1:${server.address().port}/tests/browser/sprawlbuilder.html`);
   const search=page.getByLabel('Element suchen');await search.fill('Heckensegment');
   await page.getByRole('button',{name:'Heckensegment',exact:true}).click();
-  await page.getByRole('button',{name:'Reihe ziehen',exact:true}).click();
+  await page.locator('.ssb-row-panel').getByRole('button',{name:'Reihe ziehen',exact:true}).click();
   await page.locator('.ssb-row-panel').waitFor();
   assert.equal(await page.locator('.ssb-row-panel').count(),1);
   await page.mouse.move(110,850);await page.mouse.down();await page.mouse.move(740,850,{steps:5});
