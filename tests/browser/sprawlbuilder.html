@@ -1,0 +1,19 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>SprawlBuilder – Bibliothekstest</title>
+<link rel="stylesheet" href="/modules/shadowrun-sprawlbuilder/catalog.css">
+<style>body{font:15px system-ui;background:#20252a;color:#eee;margin:20px;max-width:780px}button,input,select{font:inherit;color:inherit;background:#333c44;border:1px solid #6b7782;border-radius:4px;padding:7px}button{cursor:pointer}h1{font-size:22px}</style>
+</head><body><h1>Shadowrun SprawlBuilder</h1><script type="module">
+import {catalogElement,loadCatalog} from '/modules/shadowrun-sprawlbuilder/catalog.mjs';
+window.created=[];window.uploads=[];window.errors=[];
+window.game={user:{isGM:true},release:{generation:14},world:{id:'sprawlbuilder-test'}};
+window.ui={notifications:{info(){},error:message=>errors.push(message)}};
+window.Hooks={on:()=>1,off(){},once(){}};
+const docs=new Map();let serial=0;
+window.canvas={ready:true,level:{id:'ground',elevation:{bottom:0}},dimensions:{sceneRect:{x:0,y:0,width:4000,height:3200}},
+  canvasCoordinatesFromClient:p=>p,clientCoordinatesFromCanvas:p=>p,
+  scene:{grid:{size:100,distance:1,units:'m'},tiles:{get:id=>docs.get(id),[Symbol.iterator]:()=>docs.values()},
+    async createEmbeddedDocuments(type,items){const result=items.map(t=>({id:String(++serial),...t}));for(const t of result)docs.set(t.id,t);created.push(...result);return result;},
+    async deleteEmbeddedDocuments(type,ids){ids.forEach(id=>docs.delete(id));window.remaining=[...docs.values()];}}
+};
+window.foundry={applications:{apps:{FilePicker:{implementation:{browse:async()=>({}),upload:async(source,folder,file)=>{uploads.push({folder,name:file.name});return{path:URL.createObjectURL(file)};}}}}}};
+document.body.append(catalogElement(await loadCatalog()));
+</script></body></html>
