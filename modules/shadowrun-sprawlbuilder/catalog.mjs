@@ -63,7 +63,7 @@ export async function placeAsset(asset,widthMeters=asset.widthMeters) {
 export function catalogElement(icons) {
   const node=(tag,text,className)=>{const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;};
   const root=node('section',undefined,'ssb-catalog');
-  const intro=node('p',`${icons.length} Kartenelemente für deine Schattenwelt. Sammlung und Verwendung wählen, dann ein Element platzieren oder Gelände bauen.`);
+  const intro=node('p',`${icons.length} Kartenelemente für deine Schattenwelt. Sammlung und Verwendung wählen, dann ein Element platzieren.`);
   const tools=node('div',undefined,'ssb-tools');
   const search=node('input');search.type='search';search.placeholder='Element suchen …';search.setAttribute('aria-label','Element suchen');
   const filters=node('div',undefined,'ssb-filters');
@@ -80,9 +80,8 @@ export function catalogElement(icons) {
     options(type,assetTypes,inCategory.filter(a=>!subcategory.value||a.subcategory===subcategory.value),'assetType','Alle Elementtypen');
   }
   updateFilters();
-  const paint=node('button','Gelände bauen');paint.type='button';paint.addEventListener('click',()=>showBrush(selected?.kind==='terrain'?selected.key:undefined).catch(error=>ui.notifications.error(error.message)));
   const reset=node('button','Filter zurücksetzen');reset.type='button';
-  tools.append(search,paint,reset);
+  tools.append(search,reset);
   const status=node('p');status.setAttribute('aria-live','polite');
   const cards=node('div',undefined,'ssb-cards');
   const paging=node('div',undefined,'ssb-tools');
@@ -121,7 +120,7 @@ export async function showCatalog() {
   if (browser?.rendered) {browser.bringToFront();return browser;}
   const icons=await loadCatalog();
   class AssetCatalog extends foundry.applications.api.ApplicationV2 {
-    static DEFAULT_OPTIONS={id:'shadowrun-sprawlbuilder-catalog',window:{title:'Shadowrun SprawlBuilder',resizable:true},position:{width:780,height:760}};
+    static DEFAULT_OPTIONS={id:'shadowrun-sprawlbuilder-catalog',window:{title:'Shadowrun SprawlBuilder · Assets',resizable:true},position:{width:780,height:760}};
     async _renderHTML(){return catalogElement(icons);}
     _replaceHTML(result,content){content.replaceChildren(result);}
   }
@@ -143,8 +142,7 @@ export async function initializeCatalog() {
 }
 export function sceneControls(controls) {
   controls[ID]={name:ID,title:'Shadowrun SprawlBuilder',icon:'fa-solid fa-images',order:Object.keys(controls).length,visible:game.user.isGM,
-    onChange:(_event,enabled)=>{if(enabled)showCatalog().catch(error=>ui.notifications.error(error.message));},
-    tools:{catalog:{name:'catalog',title:'Bilderkatalog öffnen',icon:'fa-solid fa-images',order:0,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))},
-      brush:{name:'brush',title:'Gelände bauen',icon:'fa-solid fa-border-all',order:1,button:true,onChange:()=>showBrush().catch(error=>ui.notifications.error(error.message))}}};
+    tools:{brush:{name:'brush',title:'Gelände bauen',icon:'fa-solid fa-border-all',order:0,button:true,onChange:()=>showBrush().catch(error=>ui.notifications.error(error.message))},
+      catalog:{name:'catalog',title:'Assets',icon:'fa-solid fa-images',order:1,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))}}};
 }
 if (typeof Hooks!=='undefined') {Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);Hooks.on('getSceneControlButtons',sceneControls);}

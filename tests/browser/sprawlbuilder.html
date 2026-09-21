@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/modules/shadowrun-sprawlbuilder/catalog.css">
 <style>body{font:15px system-ui;background:#20252a;color:#eee;margin:20px;max-width:780px}button,input,select{font:inherit;color:inherit;background:#333c44;border:1px solid #6b7782;border-radius:4px;padding:7px}button{cursor:pointer}h1{font-size:22px}</style>
 </head><body><h1>Shadowrun SprawlBuilder</h1><script type="module">
-import {catalogElement,loadCatalog} from '/modules/shadowrun-sprawlbuilder/catalog.mjs';
+import {catalogElement,loadCatalog,sceneControls} from '/modules/shadowrun-sprawlbuilder/catalog.mjs';
 window.created=[];window.uploads=[];window.errors=[];
 window.game={user:{isGM:true},release:{generation:14},world:{id:'sprawlbuilder-test'}};
 window.ui={notifications:{info(){},error:message=>errors.push(message)}};
@@ -15,5 +15,8 @@ window.canvas={ready:true,level:{id:'ground',elevation:{bottom:0}},dimensions:{s
     async deleteEmbeddedDocuments(type,ids){ids.forEach(id=>docs.delete(id));window.remaining=[...docs.values()];}}
 };
 window.foundry={applications:{apps:{FilePicker:{implementation:{browse:async()=>({}),upload:async(source,folder,file)=>{uploads.push({folder,name:file.name});return{path:URL.createObjectURL(file)};}}}}}};
-document.body.append(catalogElement(await loadCatalog()));
+const controls={};sceneControls(controls);window.sprawlControls=controls['shadowrun-sprawlbuilder'];
+const nav=document.createElement('nav');nav.setAttribute('aria-label','SprawlBuilder-Werkzeuge');
+for(const tool of Object.values(sprawlControls.tools)){const button=document.createElement('button');button.textContent=tool.title;button.addEventListener('click',tool.onChange);nav.append(button);}
+document.body.append(nav,catalogElement(await loadCatalog()));
 </script></body></html>

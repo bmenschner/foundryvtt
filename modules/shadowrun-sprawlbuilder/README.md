@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.0.1
+# Shadowrun SprawlBuilder · 1.0.2
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen**. Keine neuen Bilder generiert.
 
@@ -6,7 +6,7 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 
 1. Nach dem regulären Deployment unter **Module verwalten → Shadowrun SprawlBuilder** aktivieren und die Welt neu laden.
 2. Eine Szene öffnen und die gewünschte Szenenebene auswählen. Für unser Kartenraster Distanz **1**, Einheit **m** einstellen.
-3. Links **Shadowrun SprawlBuilder → Bilderkatalog öffnen** wählen. Alternativ Moduleinstellungen oder das gleichnamige Startmakro verwenden.
+3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
 4. Sammlung, Kategorie und Unterkategorie wählen. Die Suche berücksichtigt Namen, Kategorien und Suchbegriffe; der Elementtyp unterscheidet Einzelobjekte, Bauteile, Overlays und malbare Flächen.
 5. Ein Element auswählen, seine sichtbare Breite in Metern einstellen und platzieren. Anschließend auf der Tile-Ebene verschieben oder drehen.
 
@@ -28,7 +28,7 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 
 ## Gelände bauen
 
-**Gelände bauen** öffnet die übernommenen Bauwerkzeuge. Eine im Katalog ausgewählte malbare Textur wird vorgewählt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Bordsteine werden als Einzelbauteile platziert.
+**Shadowrun SprawlBuilder → Gelände bauen** öffnet ein eigenes kompaktes Werkzeugfenster mit einer kleinen Bodengalerie. Ein Vorschaubild anklicken: Der ausgewählte Boden wird umrandet und namentlich angezeigt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Anschließend Stempel oder Rechteck wählen und **Malen starten**. Ein Bodenwechsel gilt für den nächsten Zug. Bordsteine werden über **Assets** als Einzelbauteile platziert. In der Asset-Galerie gibt es keinen zusätzlichen Gelände-bauen-Button mehr.
 
 - Linksklick setzt ein 1 × 1 m großes Tile; Ziehen setzt zusammenhängende Rasterfelder. Die Vorschau folgt der Maus. Gespeichert wird beim Loslassen.
 - Rechtecke rasten einschließlich Start- und Endfeld auf dasselbe 1-m-Raster wie Stempel ein. Vorschau und gespeicherte Kanten stimmen überein; mit demselben Material lassen sich Stempel ohne Lücke und mit passender Texturausrichtung ergänzen. Ziehen funktioniert in jede Richtung. Am Szenenrand werden nur vollständige Zellen berücksichtigt.
