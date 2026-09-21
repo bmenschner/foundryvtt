@@ -32,6 +32,10 @@ Eigene Module werden aus `modules/` über die vorhandene Deployment-Action insta
 Bei geänderten Modulen startet Foundry kurz neu.
 Details: [Eigene Module verwalten](docs/managed-modules.md).
 
+Für Entwicklungsaufträge gelten [AGENTS.md](AGENTS.md) und der
+[Spec-Driven-Development-Prozess](specs/README.md). Ein Change beginnt mit einer
+Spec und endet für Codex beim Pull Request; Review und Merge erfolgen durch Menschen.
+
 ## Architecture
 
 ```
