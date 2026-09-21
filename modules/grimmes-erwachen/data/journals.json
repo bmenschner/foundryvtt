@@ -3671,5 +3671,181 @@
         "sourceAdaptation": true
       }
     }
+  },
+  {
+    "_id": "b5e4b80ce37777ae",
+    "name": "Timeline – Heidelberg (GM)",
+    "pages": [
+      {
+        "_id": "e2e6df83d286ca85",
+        "name": "01 – Feste Vorgeschichte",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Ermittlungszeitlinie · Nur für die Spielleitung</h1><p>Heidelberg 2080. Tag 0 bezeichnet die Nacht des Picknicks. Die Vorlage nennt 2081 und widersprüchliche Kalenderangaben. Diese relative Folge erhält die Ereignisabstände, ohne falsche Wochentage zu übernehmen. Quellen: Grimms Erwachen, gedruckte S. 40–46, 56, 59.</p><table><thead><tr><th>Zeitpunkt</th><th>Ereignis</th><th>Hinweis für die Spielleitung</th></tr></thead><tbody><tr><td>Vorgeschichte</td><td>Celine und Marlon verlieben sich über ihre gemeinsame Musik. Marlons Schulkonflikt bedroht seine Förderung.</td><td>Marlon ist nicht Celines Angreifer.</td></tr><tr><td>Tag −1</td><td>Celine streitet mit ihren Eltern.</td><td>Marie kann davon berichten.</td></tr><tr><td>Tag 0, nachmittags</td><td>Marlon nimmt Decke, Picknickkorb und die schwarze DFB-Trainingsjacke mit.</td><td>Lea beschreibt seinen nervösen Aufbruch.</td></tr><tr><td>Tag 0, abends</td><td>Picknick neben der Festspielbühne; das Paar hört Turandot aus dem Wald.</td><td>Der Aufräumer findet später zurückgelassene Reste.</td></tr><tr><td>Tag 0, nach der Aufführung</td><td>Celine fragt im Landsmann nach der Toilette. Das Personal beleidigt das Paar; der Streit eskaliert.</td><td>Der Wachmann hört Streit, sieht aber nicht die ganze Tat.</td></tr><tr><td>Tag 0, spät nachts</td><td>Felix und Moritz verfolgen das Paar, überwältigen Marlon und werfen ihn ins Heidenloch. Celine entkommt.</td><td>Die Täter kennen die Gewalt, nicht deren magische Folgen.</td></tr><tr><td>Unmittelbar danach</td><td>Das unbeabsichtigte Opferritual ruft Brünhild; Celine wird zum Gefäß der schlafenden Walküre.</td><td>Die magische Präsenz ist nachts leichter zu erkennen.</td></tr><tr><td>Tag 1, 05:45</td><td>Mariusz Kolanski findet Celine am Südhang, prüft ihre Vitalzeichen und ruft Hilfe.</td><td>Finder und Einsatzprotokoll sind Recherchequellen.</td></tr><tr><td>Tag 1, 06:48</td><td>Aufnahme in der Uniklinik; mehrere Untersuchungen folgen am Morgen.</td><td>Keine abschließende Erklärung für das Koma.</td></tr><tr><td>Folgetage</td><td>Der Sternschutz behandelt den Fall als Unfall und schließt ihn. Medizinische Weckversuche scheitern.</td><td>Die Kalender- und Fristangaben des Originals sind nicht konsistent.</td></tr><tr><td>Ab Tag 1, nachts</td><td>Acht Walküren reiten aus. Jede Nacht verschwindet ein Jugendfußballer nach einer Niederlage.</td><td>DFB-Zeichen wird als Odinszeichen gedeutet. Teams melden Abwesenheiten verzögert.</td></tr><tr><td>Tag 6, 22:30</td><td>Lucas Steltz trifft die Runner als Herr Schmidt im Cocktail Club und setzt eine Woche Frist.</td><td>Zeitanker der Adaption; Originaltreffen: 4. Juli, 22:30. Lucas bezahlt privat.</td></tr></tbody></table>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "b9de06f37b3d3fd6",
+        "name": "02 – Run, Ereignisuhr und Finale",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Offene Ereignisse und Ereignisuhr</h1><table><thead><tr><th>Zeitpunkt</th><th>Ereignis</th><th>Hinweis für die Spielleitung</th></tr></thead><tbody><tr><td>Ab Auftrag</td><td>Familien, Klinik und Umfeld befragen; Heiligenberg und Landsmann untersuchen; DFB-Meldungen vergleichen.</td><td>Reihenfolge frei. Hosts ergänzen die Recherche, ersetzen die Zeugen aber nicht.</td></tr><tr><td>Weitere Nächte</td><td>Weitere Entführungen und Sichtungen; optional Träume vom alten Opfer.</td><td>Die Träume sind eine Hilfestellung, keine Pflichtstation.</td></tr><tr><td>Kontakt, gewöhnlich Mitternacht</td><td>Am Heidenloch treffen die Runner die Walküren. Die Schwestern erklären ihr Ziel und bieten einen Handel an.</td><td>Andere plausible Treffpunkte sind laut Vorlage möglich. Kampf ist nicht die notwendige Lösung.</td></tr><tr><td>Nach der Vereinbarung</td><td>Sigrun bereitet Brünhilds Traum vor; die Runner sollen Gipfel nach einem Zeichen absuchen.</td><td>Empfehlung: folgende Mitternacht ausdrücklich verabreden. Das ist eine Tischentscheidung, kein starrer Kalendertag.</td></tr><tr><td>Finalnacht, Mitternacht</td><td>Ein Lichtschein erscheint auf einem benachbarten Gipfel, zunächst ungefähr zwei Kilometer nordöstlich.</td><td>Die Alchera liegt auf dem Gipfel, nicht am Schachtgrund.</td></tr><tr><td>Finale</td><td>Feuergeister überwinden und Brünhild im Feuerring erwecken; die Alchera verschwindet.</td><td>Etwa fünf Meter Ringdurchmesser; Vorlage: ein K5-Feuergeist pro Runner. Bestehende SR6-Werte verwenden.</td></tr><tr><td>Direkt nach der Befreiung</td><td>Celines Hirnaktivität steigt, sie schläft unruhig.</td><td>Noch nicht sofort wach.</td></tr><tr><td>Etwa vier Stunden später</td><td>Celine erwacht. Der Spuk endet; neue Ermittlungen und Auszahlung folgen.</td><td>Kein festes Abschlussgespräch nötig.</td></tr></tbody></table><p>Zum Auftrag nennt die Vorlage sechs vermisste Fußballer; pro weiterer Nacht kommt einer hinzu, solange die Ereignisse fortlaufen. Marlon zählt separat. Die öffentlich bekannte Zahl ist zunächst kleiner. Diese Vorgabe ist eine Spielleitungsuhr, keine minutengenaue Statistik.</p><table><tr><th>Vergangene zusätzliche Nächte</th><th>Vermisste Fußballer</th></tr><tr><td>0</td><td>6</td></tr><tr><td>1</td><td>7</td></tr><tr><td>2</td><td>8</td></tr><tr><td>3</td><td>9</td></tr><tr><td>4</td><td>10</td></tr><tr><td>5</td><td>11</td></tr><tr><td>6</td><td>12</td></tr><tr><td>7</td><td>13</td></tr></table><p>Die Frist von einer Woche ist der Auftraggeberrahmen, kein in der Vorlage festgelegter automatischer Todestermin.</p><h2>Vor dem Finale wählen</h2><p>Der Band bietet zwei Enden für Marlon und die Jungen: tragisch werden sie nach dem Ende des Spuks tot am Schachtgrund gefunden; märchenhaft erwachen sie lebend aus dem Schlaf in der Geisterdomäne und können geborgen werden. Den gewünschten Ton der Runde zugrunde legen.</p><p>Quellen: S. 42–44, 50–54. Wenn die Alchera übersehen wird, kann sie laut Vorlage erneut erscheinen; Feuerwehr und Presse liefern weitere Hinweise.</p>"
+        },
+        "sort": 100000,
+        "ownership": {
+          "default": -1
+        }
+      },
+      {
+        "_id": "f4a098cfa5292f63",
+        "name": "03 – Handouts freigeben",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Handouts gezielt freigeben</h1><p>Alle neuen Dokumente starten ausschließlich für die Spielleitung sichtbar. Die vier Spielerhandouts enthalten keine interne Freigabeseite. Ganze Dokumente erst beim angegebenen Anlass zeigen.</p><ul><li>Auftragsnotiz: nach dem Gespräch mit Schmidt; Honorare entsprechend der tatsächlichen Verhandlung nennen.</li><li>Fundmeldung: nach Zugang zur Klinikakte, zum Polizeiprotokoll oder zu einer passenden Quelle.</li><li>Jugendcamp: sobald das Verschwinden an die Öffentlichkeit gelangt. Keine geheime Gesamtzahl veröffentlichen.</li><li>Nächtliche Erscheinungen: nach ersten Sichtungen oder öffentlicher Recherche.</li></ul><p>Die Texte sind eigene Handout-Fassungen nach den Ereignissen des Bandes, keine wortgetreuen Originaldokumente. Die Auftragsnotiz ist eine Zusammenfassung für die Runner; nicht behaupten, der Band enthalte eine schriftliche Nachricht von Schmidt.</p><p>Vorhandene Krankenakte, Beinarbeit und Hauptdarsteller bleiben unverändert. Auftragsnotiz und die beiden Nachrichtenberichte geben keine Täter, magische Ursache oder Lösung preis.</p>"
+        },
+        "sort": 200000,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-timeline-gm",
+        "audience": "gm",
+        "adaptation": true
+      }
+    }
+  },
+  {
+    "_id": "7e73a8d3b258cda0",
+    "name": "Handout – Auftragsnotiz",
+    "pages": [
+      {
+        "_id": "8be98bc56d2d3181",
+        "name": "Auftragsnotiz",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Vertrauliche Auftragsnotiz</h1><h2>Treffpunkt</h2><p>Cocktail Club im Alten Hallenbad, Heidelberg. Vereinbarte Uhrzeit: 22:30 Uhr. Ansprechpartner: Herr Schmidt.</p><h2>Ausgangslage</h2><p>Celine Gruber wurde nach einem Aufenthalt auf dem Heiligenberg bewusstlos aufgefunden. Die Uniklinik konnte sie bislang nicht wecken. Ihr Begleiter Marlon Neugebauer ist verschwunden und könnte entscheidende Auskunft geben.</p><h2>Auftrag</h2><ol><li>Marlon Neugebauer finden.</li><li>Die Ereignisse auf dem Heiligenberg rekonstruieren.</li><li>Hinweise gewinnen, die Celines Erwachen ermöglichen.</li></ol><h2>Rahmen</h2><p>Eine Woche ab dem Treffen. Diskretes Vorgehen. Wesentliche Erkenntnisse über den vereinbarten toten Matrixbriefkasten melden. Bei einer grundlegenden Veränderung der Lage Rücksprache halten.</p><p>Vergütung und Vorschuss gemäß der getroffenen Vereinbarung.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-timeline-auftrag",
+        "audience": "players-on-reveal",
+        "adaptation": true
+      }
+    }
+  },
+  {
+    "_id": "b6e03e3b47180029",
+    "name": "Handout – Fundmeldung Heiligenberg",
+    "pages": [
+      {
+        "_id": "fd0c375947a181c0",
+        "name": "Fundmeldung",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Auszug · Fundmeldung Heiligenberg</h1><h2>Betroffene Person</h2><p>Celine Gruber, 15 Jahre. Bewusstlos am Südhang des Heiligenbergs aufgefunden.</p><h2>Erstmeldung</h2><p>Uhrzeit: 05:45 Uhr. Finder: Mariusz Kolanski, 23 Jahre, Medizinstudent. Herr Kolanski befand sich auf seiner üblichen Joggingrunde, prüfte die Vitalzeichen und verständigte den Rettungsdienst.</p><h2>Einsatzverlauf</h2><p>Die medizinische Versorgung hatte Vorrang. Beim Eintreffen des Sternschutzes war die Patientin bereits auf dem Weg in die Klinik. Durch Erstversorgung und Bergung war der Boden im unmittelbaren Umfeld verändert. Eine weitergehende forensische Untersuchung des Fundortes wurde nicht veranlasst.</p><h2>Vermerk</h2><p>Auf Grundlage der vorliegenden medizinischen Befunde wurde der Vorgang als Unfall mit Verletzungsfolge behandelt und die kriminalpolizeiliche Bearbeitung beendet.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-timeline-fundmeldung",
+        "audience": "players-on-reveal",
+        "adaptation": true
+      }
+    }
+  },
+  {
+    "_id": "97114fae1242489a",
+    "name": "Handout – Meldung aus dem Jugendcamp",
+    "pages": [
+      {
+        "_id": "f801ec1cd238d3be",
+        "name": "Jugendcamp",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Heidelberg · Jugendliche im Trainingscamp vermisst</h1><p>Aus dem laufenden Jugendfußballcamp am Olympialeistungszentrum werden vermisste Teilnehmer gemeldet. Spieler aus den Landesauswahlen der ADL sind während des Turniers in benachbarten Wohnheimen untergebracht.</p><p>Eine verlässliche Gesamtübersicht liegt öffentlich bislang nicht vor. Betreuer und Mannschaften haben zunächst versucht, den Aufenthaltsort fehlender Jugendlicher über Freunde und Angehörige zu klären.</p><p>Das Turnier steht im Zeichen sportlicher Höchstleistungen und der Sichtung künftiger Talente. Zugleich wächst die Sorge um diejenigen, die nicht in ihre Unterkünfte zurückgekehrt sind.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-timeline-campmeldung",
+        "audience": "players-on-reveal",
+        "adaptation": true
+      }
+    }
+  },
+  {
+    "_id": "1051b3d17e590fc1",
+    "name": "Handout – Nächtliche Reiterinnen",
+    "pages": [
+      {
+        "_id": "70d078fc45a422a9",
+        "name": "Nächtliche Erscheinungen",
+        "type": "text",
+        "text": {
+          "format": 1,
+          "content": "<h1>Rätselhafte Reiterinnen über Heidelberg</h1><p>Seit mehreren Nächten berichten Menschen in Heidelberg von archaisch gerüsteten Reiterinnen auf weißen Pferden am Himmel. Augenzeugen vergleichen die Erscheinungen mit Walküren aus nordischen Sagen.</p><p>Beobachtet wurden Bewegungen von Osten nach Westen und später wieder in Gegenrichtung. Berichte unterscheiden bislang acht verschiedene Gestalten.</p><p>Die Vermutung, es handele sich um eine Werbeaktion für die Festspiele, weist der Veranstalter zurück. Eine gesicherte Erklärung für die Erscheinungen liegt öffentlich nicht vor.</p>"
+        },
+        "sort": 0,
+        "ownership": {
+          "default": -1
+        }
+      }
+    ],
+    "ownership": {
+      "default": 0
+    },
+    "flags": {
+      "grimmes-erwachen": {
+        "chapter": 3,
+        "key": "a3-timeline-walkuerenmeldung",
+        "audience": "players-on-reveal",
+        "adaptation": true
+      }
+    }
   }
 ]

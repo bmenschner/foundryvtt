@@ -26,8 +26,22 @@ function reset(){
   globalThis.fetch=async(path)=>{const file=root+path.replace(/^modules\//,'');return {ok:fs.existsSync(file),status:fs.existsSync(file)?200:404,json:async()=>JSON.parse(fs.readFileSync(file,'utf8'))};};
 }
 const log=console.info;console.info=()=>{};
+reset();await updateContents();
+const timelineHandouts=[...game.journal.values()].filter(j=>j.getFlag('grimmes-erwachen','key')?.startsWith('a3-timeline-'));
+assert.equal(timelineHandouts.length,5);
+for(const handout of timelineHandouts) game.journal.delete(handout.id);
+const timelineBefore={actors:JSON.stringify([...game.actors.values()]),scenes:JSON.stringify([...game.scenes.values()]),journals:JSON.stringify([...game.journal.values()])};
+const timelineUpgrade=await updateContents({chapters:[3]});
+assert.deepEqual(timelineUpgrade.imported.created,{Actor:0,JournalEntry:5,Scene:0});
+assert.equal(JSON.stringify([...game.actors.values()]),timelineBefore.actors);
+assert.equal(JSON.stringify([...game.scenes.values()]),timelineBefore.scenes);
+assert.equal(JSON.stringify([...game.journal.values()].filter(j=>!j.getFlag('grimmes-erwachen','key')?.startsWith('a3-timeline-'))),timelineBefore.journals);
+const editedHandout=game.journal.find(j=>j.getFlag('grimmes-erwachen','key')==='a3-timeline-auftrag');
+editedHandout.pages[0].text.content='<p>Unser vereinbartes Honorar</p>';
+assert.deepEqual((await updateContents({chapters:[3]})).imported.created,{Actor:0,JournalEntry:0,Scene:0});
+assert.equal(editedHandout.pages[0].text.content,'<p>Unser vereinbartes Honorar</p>');
 reset();
-const first=await importBundle();assert.deepEqual(first.created,{Actor:81,JournalEntry:43,Scene:36});
+const first=await importBundle();assert.deepEqual(first.created,{Actor:81,JournalEntry:48,Scene:36});
 assert([...game.scenes.values()].every(scene=>scene.levels?.some(level=>level.background?.src)));
 const second=await importBundle();assert.deepEqual(second.created,{Actor:0,JournalEntry:0,Scene:0});assert.deepEqual(second.skipped,first.created);
 reset();
@@ -141,6 +155,6 @@ reset();await updateContents({chapters:[2]});
 assert([...game.scenes.values()].every(s=>s.getFlag('grimmes-erwachen','chapter')===2));
 assert.equal(game.scenes.size,11+catalog.maps.filter(m=>m.key.startsWith('a2-')).length);
 console.info=log;
-const report={passed:true,tests:['Vollimport: 81 Actors, 43 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
+const report={passed:true,tests:['Vollimport: 81 Actors, 48 Journals, 36 Szenen','Wiederholter Import ohne Duplikate','ID-Kollision: Token und Journalverweise umgebogen','Einzelkapitel ohne Actors','Fehlendes Bild: Abbruch vor Weltänderungen'],scope:'Isolierter Ablauf mit simulierten Foundry-Dokumentklassen; kein Live-Test in Foundry 14.'};
 
 console.log(JSON.stringify(report,null,2));
