@@ -1,9 +1,18 @@
 import {ID} from './catalog.mjs';
 import {renderStroke,recordHistory} from './brush.mjs';
 const textures=new Map();
+const cellIndex=(point,ppm,rect)=>({x:Math.floor((point.x-rect.x)/ppm),y:Math.floor((point.y-rect.y)/ppm)});
+export function rectangleBounds(start,end,ppm,rect){
+  if(!Number.isFinite(ppm)||ppm<=0||![start?.x,start?.y,end?.x,end?.y,rect?.x,rect?.y,rect?.width,rect?.height].every(Number.isFinite))throw new Error('Ungültige Rechteckkoordinaten.');
+  const a=cellIndex(start,ppm,rect),b=cellIndex(end,ppm,rect);
+  const left=Math.max(0,Math.min(a.x,b.x)),top=Math.max(0,Math.min(a.y,b.y));
+  const right=Math.min(Math.floor((rect.width+1e-7)/ppm),Math.max(a.x,b.x)+1),bottom=Math.min(Math.floor((rect.height+1e-7)/ppm),Math.max(a.y,b.y)+1);
+  if(right<=left||bottom<=top)throw new Error('Bitte vollständige 1-m-Felder innerhalb der Szene wählen.');
+  return {x:rect.x+left*ppm,y:rect.y+top*ppm,width:(right-left)*ppm,height:(bottom-top)*ppm};
+}
 export function stampCells(points,ppm,rect,limit=512){
   if(!Number.isFinite(ppm)||ppm<=0||!points.length||points.length>10000||!points.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)))throw new Error('Ungültige Stempelkoordinaten.');
-  const cells=new Map(),index=p=>({x:Math.floor((p.x-rect.x)/ppm),y:Math.floor((p.y-rect.y)/ppm)});
+  const cells=new Map(),index=p=>cellIndex(p,ppm,rect);
   function add(x,y){const key=`${x},${y}`,cell={x:rect.x+x*ppm,y:rect.y+y*ppm,width:ppm,height:ppm};
     if(cell.x<rect.x||cell.y<rect.y||cell.x+ppm>rect.x+rect.width+1e-7||cell.y+ppm>rect.y+rect.height+1e-7)return;
     if(!cells.has(key)&&cells.size>=limit)throw new Error(`Höchstens ${limit} Felder pro Zug. Bitte in Abschnitten setzen.`);cells.set(key,cell);}
