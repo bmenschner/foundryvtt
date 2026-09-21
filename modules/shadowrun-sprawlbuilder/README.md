@@ -28,15 +28,16 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 
 ## Gelände bauen
 
-**Shadowrun SprawlBuilder → Gelände bauen** öffnet ein eigenes kompaktes Werkzeugfenster mit einer kleinen Bodengalerie. Ein Vorschaubild anklicken: Der ausgewählte Boden wird umrandet und namentlich angezeigt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Anschließend Stempel oder Rechteck wählen und **Malen starten**. Ein Bodenwechsel gilt für den nächsten Zug. Bordsteine werden über **Assets** als Einzelbauteile platziert. In der Asset-Galerie gibt es keinen zusätzlichen Gelände-bauen-Button mehr.
+**Shadowrun SprawlBuilder → Gelände bauen** öffnet ein eigenes kompaktes Werkzeugfenster mit einer kleinen Bodengalerie. Ein Vorschaubild anklicken: Der ausgewählte Boden wird umrandet und namentlich angezeigt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Die Bodenauswahl aktiviert das Werkzeug sofort, ohne zusätzlichen Startknopf. Stempel oder Rechteck bestimmen die Form. Ein Bodenwechsel gilt für den nächsten Zug. Bordsteine werden über **Assets** als Einzelbauteile platziert. In der Asset-Galerie gibt es keinen zusätzlichen Gelände-bauen-Button mehr.
 
 - Linksklick setzt ein 1 × 1 m großes Tile; Ziehen setzt zusammenhängende Rasterfelder. Die Vorschau folgt der Maus. Gespeichert wird beim Loslassen.
 - Rechtecke rasten einschließlich Start- und Endfeld auf dasselbe 1-m-Raster wie Stempel ein. Vorschau und gespeicherte Kanten stimmen überein; mit demselben Material lassen sich Stempel ohne Lücke und mit passender Texturausrichtung ergänzen. Ziehen funktioniert in jede Richtung. Am Szenenrand werden nur vollständige Zellen berücksichtigt.
 - Für große Flächen Rechtecke verwenden: Ein Rechteck bleibt ein einzelnes Flächen-Tile. Im Stempelmodus gelten maximal 512 einzelne Felder pro Zug. Freihand und Pinselbreite entfallen.
 - Bestehende Flächen werden nicht automatisch eingerastet. Frei verschobene oder nachträglich skalierte Tiles können weiterhin außerhalb des Rasters liegen.
-- „Letzten Strich zurücknehmen“ entfernt die letzte eigene Gruppe auf der aktuellen Ebene. Diese Historie gilt für die laufende Browsersitzung.
+- **Boden löschen** aktiviert den Radierer mit roter Vorschau. Stempel löscht 1-m-Felder entlang des Mauswegs; Rechteck löscht den gewählten Rasterbereich. Größere Bodenflächen behalten die Textur außerhalb der Auswahl, vollständig leere Tiles werden entfernt. Alle überlappenden SprawlBuilder-Böden auf der aktuellen Ebene werden bearbeitet. Gesperrte und gedrehte Böden werden übersprungen und gemeldet; andere Objekte und Böden des alten Assets-Moduls bleiben erhalten.
+- „Letzte Aktion zurücknehmen“ entfernt die letzte eigene Malgruppe oder stellt die letzte Radierung einschließlich gelöschter Tiles wieder her. Zwischenzeitlich veränderte Flächen werden dabei nicht überschrieben. Diese Historie gilt für die laufende Browsersitzung.
 - „Ausgewählte Fläche erweitern“ bietet vier Kanten zum Ziehen für entsperrte, ungedrehte, mit SprawlBuilder erzeugte Flächen.
-- Esc pausiert den Malmodus. Gemalte Bilder liegen dauerhaft unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-painted/`; Rückgängig entfernt Tiles, nicht die erzeugten Dateien.
+- Esc oder Rechtsklick pausiert das Werkzeug. Ein erneuter Klick auf Boden oder Radierer aktiviert es wieder. Gemalte Bilder liegen dauerhaft unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-painted/`; Rückgängig entfernt Tiles, nicht die erzeugten Dateien.
 
 ## Unabhängigkeit und Updates
 

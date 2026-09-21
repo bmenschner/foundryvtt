@@ -30,3 +30,5 @@
 .ssb-floor-card img{width:100%;height:64px;object-fit:cover;border:0;border-radius:3px}
 .ssb-floor-card[aria-pressed=true]{outline:3px solid #a5ffc0;outline-offset:-3px;background:#405b43}
 .ssb-floor-card:focus-visible{outline:3px solid #fff;outline-offset:0}
+
+.ssb-brush > button[aria-pressed=true]{outline:3px solid #ff7777;outline-offset:-3px;background:#633838}
