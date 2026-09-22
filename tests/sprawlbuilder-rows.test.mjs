@@ -48,3 +48,11 @@ test('every catalogue asset supports rows without category or key restrictions',
   const assets=JSON.parse(fs.readFileSync('modules/shadowrun-sprawlbuilder/catalog.json')).icons;
   for(const item of assets){const r=rowData(item,{...options,rect:{x:-1e6,y:-1e6,width:2e6,height:2e6},end:start});assert.equal(r.count,1,item.key);}
 });
+
+test('stack placement uses scene state after the asynchronous file check',async()=>{
+  const tiles=new Map();const scene={grid,tiles,async createEmbeddedDocuments(type,data){return data.map((t,i)=>({...t,id:String(i)}));}};
+  globalThis.game={user:{isGM:true},release:{generation:14}};globalThis.canvas={ready:true,scene,level};
+  globalThis.fetch=async()=>{tiles.set('late',{id:'late',x:0,y:0,width:5000,height:5000,texture:{anchorX:0,anchorY:0},rotation:0,sort:4,elevation:5,levels:['ground']});return{ok:true};};
+  const created=await saveRow(asset,{scene,level,rect,start,end:{x:2600,y:2000}});
+  assert.deepEqual(created.map(t=>t.sort),[5,5]);assert(created.every(t=>t.elevation===5));assert.equal(tiles.get('late').sort,4);
+});

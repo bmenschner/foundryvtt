@@ -1,3 +1,4 @@
+import {stackedTile,stackControls} from './stacking.mjs';
 import {snapTargets,snapToEdges,tileRectangle} from './snapping.mjs';
 import {ID,assetPath,tileData,loadCatalog} from './catalog.mjs';
 import {closeBrush} from './brush.mjs';
@@ -46,7 +47,8 @@ export async function saveRow(asset,options){
   const data=options.single?[assetStampData(asset,{...options,grid:scene.grid})]:rowData(asset,{...options,grid:scene.grid}).data;
   const response=await fetch(assetPath(asset),{method:'HEAD'});if(!response.ok)throw new Error('Die Bilddatei fehlt.');valid();
   const group=crypto.randomUUID();for(const tile of data)tile.flags[ID][options.single?'assetStamp':'rowGroup']=group;
-  const created=await scene.createEmbeddedDocuments('Tile',data);
+  const placed=data.map(tile=>stackedTile(tile,scene.tiles,level.id,{mode:options.stack}));
+  const created=await scene.createEmbeddedDocuments('Tile',placed);
   if(created?.length)history.push({scene,levelId:level.id,group,single:!!options.single,ids:created.map(t=>t.id)});
   if(created?.length!==data.length)throw new Error('Reihe nur teilweise angelegt. Rückgängig entfernt die angelegten Teile.');
   return created;
@@ -58,14 +60,14 @@ export async function undoRow(single=false){
   const h=history[index],ids=h.ids.filter(id=>scene.tiles.get(id)?.flags?.[ID]?.[single?'assetStamp':'rowGroup']===h.group);
   if(ids.length)await scene.deleteEmbeddedDocuments('Tile',ids);history.splice(index,1);
 }
-export async function showRows(asset,widthMeters=asset.widthMeters,single=false){
+export async function showRows(asset,widthMeters=asset.widthMeters,single=false,stackInitial){
   const scene=canvas.scene,level=canvas.level;check(scene,level);
   const rect={...canvas.dimensions.sceneRect};
   // Validate scale and asset before installing the drawing overlay.
   tileData(asset,{grid:scene.grid,rect,level},widthMeters);
   closeRows();closeBrush();const request=opening;
   const image=new Image();image.src=assetPath(asset);await image.decode();
-  const assets=single?new Map((await loadCatalog()).map(a=>[a.key,a])):new Map();check(scene,level);
+  const assets=new Map((await loadCatalog()).map(a=>[a.key,a]));check(scene,level);
   if(request!==opening)return;closeBrush();
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
   const panel=node('section');panel.className='ssb-row-panel';panel.setAttribute('aria-label',single?'Asset-Stempel':'Reihe ziehen');
@@ -77,6 +79,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
   const magnet=node('input');magnet.type='checkbox';magnet.checked=true;magnet.setAttribute('aria-label','Kanten einrasten');
   const angle=node('input');angle.type='number';angle.value='0';angle.step='90';angle.setAttribute('aria-label','Drehwinkel (°)');
   if(single){const label=node('label','Kanten einrasten ');label.prepend(magnet);panel.insertBefore(label,status);const labelAngle=node('label','Drehwinkel (°) ');labelAngle.append(angle);panel.insertBefore(labelAngle,status);}
+  const stacking=stackControls(stackInitial,()=>preview());panel.insertBefore(stacking.node,status);
   let alt=false,match=null;
   const zoomLevel=()=>{const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0});return Math.hypot(b.x-a.x,b.y-a.y);};
   function placement(point){
@@ -85,7 +88,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
     const result=snapToEdges({point,width:(r-l)*base.width/asset.pixelWidth,height:(b-t)*base.height/asset.pixelHeight,rotation:Number(angle.value),targets:snapTargets(scene.tiles,assets,level.id),zoom:zoomLevel(),previous:match?.key});match=result.match;return result;
   }
   const row=node('button','Reihe ziehen');
-  if(single){panel.insertBefore(row,undo);row.addEventListener('click',()=>{if(!busy)showRows(asset,Number(size.value)).catch(error=>ui.notifications.error(error.message));});}
+  if(single){panel.insertBefore(row,undo);row.addEventListener('click',()=>{if(!busy)showRows(asset,Number(size.value),false,stacking.read()).catch(error=>ui.notifications.error(error.message));});}
   const overlay=node('canvas');overlay.className='ssb-row-overlay';document.body.append(overlay,panel);
   let start=null,end=null,pointer=null,busy=false,disposed=false;
   const controller=new AbortController(),opts={signal:controller.signal};
@@ -99,6 +102,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
     clear();if(!start||!end)return;
     try{
       check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,...placement(end),widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
+      const staged=result.data.map(t=>stackedTile(t,scene.tiles,level.id,{mode:stacking.read()}));stacking.show(staged.map(t=>t.sort));
       const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0}),zoom=Math.hypot(b.x-a.x,b.y-a.y);
       for(const tile of result.data){const p=canvas.clientCoordinatesFromCanvas(tile);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(tile.rotation*Math.PI/180);ctx.globalAlpha=.65;ctx.drawImage(image,-tile.width*zoom/2,-tile.height*zoom/2,tile.width*zoom,tile.height*zoom);ctx.restore();}
       if(single&&match)for(const contact of [match,match.secondary].filter(Boolean)){const [a,b]=contact.edge.map(p=>canvas.clientCoordinatesFromCanvas(p));ctx.strokeStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
@@ -115,15 +119,16 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
   overlay.addEventListener('pointercancel',()=>{start=end=null;pointer=null;clear();},opts);
   overlay.addEventListener('pointerup',async e=>{
     if(busy||pointer!==e.pointerId||!start)return;
+    const stack=stacking.read();stacking.disable(true);
     const from=start,to=world(e);alt=e.altKey;pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=true;
     try{check(scene,level);
       const snapped=single?placement(to):{point:to};
       const targets=[snapped.match,snapped.match?.secondary].filter(Boolean).map(m=>scene.tiles.get(m.targetId));
       const signatures=targets.map(t=>JSON.stringify(tileRectangle(t,assets)));
       const changed=()=>disposed||targets.some((target,i)=>!scene.tiles.get(target.id)||target.hidden||!snapTargets([target],assets,level.id).length||JSON.stringify(tileRectangle(target,assets))!==signatures[i]);
-      await saveRow(asset,{scene,level,rect,start:from,end:to,point:snapped.point,rotation:snapped.rotation??0,single,widthMeters:single?Number(size.value):widthMeters,cancelled:changed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
+      await saveRow(asset,{scene,level,rect,start:from,end:to,point:snapped.point,rotation:snapped.rotation??0,single,stack,widthMeters:single?Number(size.value):widthMeters,cancelled:changed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
     catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally{busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=false;start=end=null;clear();}
+    finally{stacking.disable(false);busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=false;start=end=null;clear();}
   },opts);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{await undoRow(single);status.textContent=single?'Letzte Platzierung zurückgenommen.':'Letzte Reihe zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
   close.addEventListener('click',dispose,opts);

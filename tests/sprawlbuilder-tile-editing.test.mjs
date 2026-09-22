@@ -50,18 +50,19 @@ if(process.env.FOUNDRY_CLIENT_SOURCE){
 }
 for(const [name,Base] of bases)test(`${name}: native move/drop bypass grid before two-edge snapping`,()=>{
   globalThis.game={user:{isGM:true}};const d=doc({x:150,y:250}),walk=doc({id:'walk',x:600,y:600,width:400,height:600}),curb=doc({id:'curb',x:390,y:450,width:20,height:100});
-  const scene={tiles:new Map([[d.id,d],['walk',walk],['curb',curb]])};scene.tiles[Symbol.iterator]=scene.tiles.values.bind(scene.tiles);d.parent=scene;d.schema=new Set(['x','y']);
+  const scene={tiles:new Map([[d.id,d],['walk',walk],['curb',curb],['foundation',doc({id:'foundation',x:500,y:500,width:1000,height:1000,sort:0})]])};scene.tiles[Symbol.iterator]=scene.tiles.values.bind(scene.tiles);d.parent=scene;d.schema=new Set(['x','y']);
   globalThis.canvas={ready:true,scene,level:{id:'ground'},tiles:{controlled:[]},clientCoordinatesFromCanvas:p=>p,_onDragCanvasPan(){}};
   globalThis.document={createElement:()=>({getContext:()=>({beginPath(){},moveTo(){},lineTo(){},stroke(){}}),remove(){}}),body:{append(){}}};globalThis.innerWidth=1000;globalThis.innerHeight=1000;
   const Tile=editingClass(Base),tile=new Tile();tile.document=d;tile.id=d.id;canvas.tiles.controlled=[tile];
   const preview={_original:tile,document:doc({id:null}),renderFlags:{set(){}},isPreview:true};
   const event={interactionData:{clones:[preview],origin:{x:155,y:258},offset:{x:5,y:8},destination:{x:388,y:565},shape:{origin:{x:150,y:250},move(p,{snap=false}={}){this.origin=snap?{x:Math.round(p.x/100)*100,y:Math.round(p.y/100)*100}:p;}}}};
   tile._onDragLeftMove(event);near(preview.document.x,390);near(preview.document.y,550);near(d.x,150);near(d.y,250);
-  const update=tile._prepareDragLeftDropUpdates(event)[0];near(update.x,390);near(update.y,550);assert.equal(update._id,d.id);
+  const update=tile._prepareDragLeftDropUpdates(event)[0];near(update.x,390);near(update.y,550);assert.equal(update._id,d.id);assert.equal(update.sort,1);assert.equal(preview.document.sort,1);
   // Alt pressed at release must undo the snapped preview, not save its last position.
   event.altKey=true;const free=tile._prepareDragLeftDropUpdates(event)[0];near(free.x,383);near(free.y,557);
   event.altKey=false;event.shiftKey=true;tile._onDragLeftMove(event);near(preview.document.x,390);
   assert.equal(tile._onDragLeftCancel(event),'cancel');near(d.x,150);
+  d.sort=7;d.flags[ID].stack={automatic:false,step:7};tile._onDragLeftMove(event);assert.equal(preview.document.sort,7);assert.equal(tile._prepareDragLeftDropUpdates(event)[0].sort,7);delete d.flags[ID].stack;delete d.sort;
   event.shiftKey=false;
   for(const change of [()=>{d.locked=true;},()=>{d.flags={};},()=>{canvas.tiles.controlled=[tile,{}];},()=>{game.user.isGM=false;},()=>{d.levels=['other'];}]){
     d.locked=false;d.flags={[ID]:{}};d.levels=['ground'];canvas.tiles.controlled=[tile];game.user.isGM=true;change();

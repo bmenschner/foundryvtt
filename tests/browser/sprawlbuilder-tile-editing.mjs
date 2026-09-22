@@ -20,7 +20,7 @@ try{
   await page.evaluate(async()=>{
     const {showTileEditor}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');
     const values={id:'edit',name:'Test-Bordstein',x:300,y:650,width:100,height:20,rotation:0,texture:{anchorX:.5,anchorY:.5,src:'modules/shadowrun-sprawlbuilder/assets/strassen/bordstein-gerade.webp'},levels:['ground'],flags:{'shadowrun-sprawlbuilder':{}}};
-    window.editDoc={...values,parent:canvas.scene,toObject(){return Object.fromEntries(Object.entries(this).filter(([k,v])=>k!=='parent'&&typeof v!=='function'));},async update(data){Object.assign(this,data);Hooks.callAll('updateTile',this);}};
+    window.editDoc={...values,parent:canvas.scene,toObject(){return Object.fromEntries(Object.entries(this).filter(([k,v])=>k!=='parent'&&typeof v!=='function'));},async update(data){for(const [key,value] of Object.entries(data)){if(key==='flags.shadowrun-sprawlbuilder.stack')this.flags['shadowrun-sprawlbuilder'].stack=value;else this[key]=value;}Hooks.callAll('updateTile',this);}};
     window.editObject={document:editDoc};canvas.tiles={controlled:[editObject]};showTileEditor(editObject);
   });
   const editor=page.getByRole('region',{name:'Asset bearbeiten'});await editor.waitFor();
@@ -34,6 +34,11 @@ try{
   await editor.getByRole('button',{name:'Rechts drehen um 1°',exact:true}).click();await page.waitForFunction(()=>editDoc.rotation===0);
   assert.equal(await page.getByRole('button',{name:'Frei skalieren',exact:true}).count(),0);
   assert.equal(await page.locator('.ssb-edit-corner,.ssb-edit-ghost').count(),0);
+  await editor.getByLabel('Automatisch stapeln').uncheck();
+  await editor.getByLabel('Stufe',{exact:true}).fill('7');await editor.getByLabel('Stufe',{exact:true}).press('Tab');
+  await page.waitForFunction(()=>editDoc.sort===7&&editDoc.flags['shadowrun-sprawlbuilder'].stack.automatic===false);
+  await editor.getByLabel('Automatisch stapeln').check();await page.waitForFunction(()=>editDoc.sort===0);
+  assert(await editor.getByLabel('Stufe',{exact:true}).isDisabled());
   await page.evaluate(async()=>{const {showTileEditor}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');canvas.tiles.controlled=[];showTileEditor(null);});assert.equal(await editor.count(),0);
   // Optional actual Pixi EventBoundary regression. No vendor code is bundled.
   if(process.env.FOUNDRY_PIXI_SOURCE){

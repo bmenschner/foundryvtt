@@ -1,3 +1,4 @@
+import {stackUpdate,stackMode,stackControls} from './stacking.mjs';
 import {ID,loadCatalog} from './catalog.mjs';
 import {tileRectangle,snapTargets,snapToEdges} from './snapping.mjs';
 let assets=new Map(),panel,closePanel,guide;
@@ -91,7 +92,7 @@ export function editingClass(Base){return class SprawlBuilderTile extends Base{
     const previews=Array.from(interaction?.clones??[]).filter(p=>p._original===this);
     for(const preview of previews){
       const result=moveSnap(this.document,{x:preview.document.x,y:preview.document.y},{targets:snapTargets(canvas.scene.tiles,assets,canvas.level.id),zoom:zoom(),previous:this.ssbMatch?.key,alt:!enabled||event.altKey||event.nativeEvent?.altKey});
-      this.ssbMatch=result.match;preview.document.updateSource(result.update);preview.renderFlags.set({refreshPosition:true});styleTile(preview);drawGuides(result.match);
+      this.ssbMatch=result.match;preview.document.updateSource(stackUpdate(this.document,result.update,canvas.scene.tiles,canvas.level.id));preview.renderFlags.set({refreshPosition:true,refreshState:true});styleTile(preview);drawGuides(result.match);
     }
   }
   _prepareDragLeftDropUpdates(event){
@@ -100,7 +101,7 @@ export function editingClass(Base){return class SprawlBuilderTile extends Base{
     const updates=super._prepareDragLeftDropUpdates(event);
     if(!owned(this.document)||!editable(this.document)||canvas.tiles?.controlled?.length!==1||event.interactionData?.handle||updates.length!==1||!Number.isFinite(updates[0].x)||!Number.isFinite(updates[0].y))return updates;
     const result=moveSnap(this.document,updates[0],{targets:snapTargets(canvas.scene.tiles,assets,canvas.level.id),zoom:zoom(),previous:this.ssbMatch?.key,alt:!enabled||event.altKey||event.nativeEvent?.altKey});
-    return [result.update];
+    return [stackUpdate(this.document,result.update,canvas.scene.tiles,canvas.level.id)];
   }
   _onDragLeftCancel(event){hideGuides();this.ssbMatch=null;return super._onDragLeftCancel(event);}
   _onDragLeftDrop(event){try{return super._onDragLeftDrop(event);}finally{hideGuides();this.ssbMatch=null;}}
@@ -115,15 +116,16 @@ export function showTileEditor(object){
   function field(label,value,type='number'){const l=document.createElement('label');l.textContent=label;const input=document.createElement('input');input.type=type;input.setAttribute('aria-label',label);if(type==='checkbox')input.checked=value;else{input.value=value;input.step='1';}l.append(input);panel.append(l);return input;}
   const shape=()=>tileRectangle(doc,assets),initial=shape();if(!initial)return;
   const width=field('Breite (px)',initial.width),height=field('Höhe (px)',initial.height),angle=field('Winkel (°)',doc.rotation??0),magnet=field('Kanten einrasten',enabled,'checkbox');let ratio=true;
+  const stacking=stackControls(stackMode(doc),mode=>{try{apply(stackUpdate(doc,{},canvas.scene.tiles,canvas.level.id,mode));}catch(e){ui.notifications.error(e.message);stacking.sync(stackMode(doc));}});panel.append(stacking.node);
   const lock=button('Seitenverhältnis beibehalten','fa-lock',()=>{ratio=!ratio;lock.setAttribute('aria-pressed',String(ratio));lock.firstChild.className=`fa-solid ${ratio?'fa-lock':'fa-lock-open'}`;});lock.setAttribute('aria-pressed','true');
-  async function apply(data){if(busy)return;if(!editable(doc))return closePanel?.();busy=true;
-    try{await doc.update(data);}catch(e){ui.notifications.error(e.message);}finally{busy=false;sync();}}
+  async function apply(data){if(busy)return;if(!editable(doc))return closePanel?.();busy=true;stacking.disable(true);
+    try{await doc.update(data);}catch(e){ui.notifications.error(e.message);}finally{busy=false;sync();stacking.disable(false);}}
   for(const sign of [-1,1])button(sign>0?'Vergrößern':'Verkleinern',sign>0?'fa-plus':'fa-minus',()=>{const b=shape(),factor=sign>0?1+Math.max(.01,1/Math.max(b.width,b.height)):Math.max(1/Math.min(b.width,b.height),1-Math.max(.01,1/Math.max(b.width,b.height)));apply(transformTile(doc,{width:b.width*factor,height:b.height*factor}));});
   for(const sign of [-1,1])button(sign>0?'Rechts drehen um 1°':'Links drehen um 1°',sign>0?'fa-rotate-right':'fa-rotate-left',()=>{const b=shape();apply(transformTile(doc,{width:b.width,height:b.height,rotation:(doc.rotation??0)+sign}));});
   for(const [input,key] of [[width,'width'],[height,'height'],[angle,'rotation']])input.addEventListener('change',()=>{try{const b=shape(),data={width:b.width,height:b.height,rotation:doc.rotation??0},value=Number(input.value);data[key]=value;if(ratio&&key==='width')data.height=b.height*value/b.width;if(ratio&&key==='height')data.width=b.width*value/b.height;apply(transformTile(doc,data));}catch(e){ui.notifications.error(e.message);sync();}},opts);
   magnet.addEventListener('change',()=>{enabled=magnet.checked;hideGuides();},opts);
   document.body.append(panel);
-  function sync(){const b=shape();width.value=String(Math.round(b.width*1000)/1000);height.value=String(Math.round(b.height*1000)/1000);angle.value=String(doc.rotation??0);}
+  function sync(){stacking.sync(stackMode(doc));const b=shape();width.value=String(Math.round(b.width*1000)/1000);height.value=String(Math.round(b.height*1000)/1000);angle.value=String(doc.rotation??0);}
   const update=Hooks.on('updateTile',tile=>{if(tile.id===doc.id){if(tile.locked)closePanel?.();else sync();}});
   closePanel=()=>{controller.abort();Hooks.off('updateTile',update);panel?.remove();panel=null;closePanel=null;hideGuides();};sync();
 }
