@@ -7,7 +7,7 @@ window.created=[];window.uploads=[];window.errors=[];
 window.game={user:{isGM:true},release:{generation:14},world:{id:'sprawlbuilder-test'}};
 window.ui={notifications:{info(){},error:message=>errors.push(message)}};
 const listeners=new Map();let hookSerial=0;
-window.Hooks={on(event,fn){const id=++hookSerial;listeners.set(id,{event,fn});return id;},off(event,id){listeners.delete(id);},once(){},callAll(event){for(const h of [...listeners.values()])if(h.event===event)h.fn();}};
+window.Hooks={on(event,fn){const id=++hookSerial;listeners.set(id,{event,fn});return id;},off(event,id){listeners.delete(id);},once(){},callAll(event,...args){for(const h of [...listeners.values()])if(h.event===event)h.fn(...args);}};
 const docs=new Map();let serial=0;
 window.docs=docs;
 function documentData(t){const data={...t};delete data.id;delete data.toObject;return structuredClone(data);}

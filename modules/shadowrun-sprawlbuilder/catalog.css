@@ -37,3 +37,9 @@
 .ssb-row-panel button{background:#363e36;color:#fff;min-height:32px;border:1px solid #83917f;border-radius:4px;cursor:pointer}.ssb-row-panel p{margin:0;line-height:1.4}.ssb-row-panel button:disabled{opacity:.5}
 .ssb-row-overlay{position:fixed;inset:0;z-index:50;cursor:crosshair;touch-action:none}
 @media(max-width:800px){.ssb-row-panel{right:12px;top:60px;width:230px;max-width:calc(100vw - 24px)}}
+
+.ssb-tile-editor{position:fixed;right:330px;bottom:70px;z-index:10000;background:#242724;color:#eee;border:1px solid #83917f;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:8px;font:14px sans-serif;max-height:70vh;overflow:auto;width:230px}
+.ssb-tile-editor label{display:flex;align-items:center;justify-content:space-between;gap:8px}.ssb-tile-editor input[type=number]{width:100px;min-width:0;color:#fff;background:#363e36;border:1px solid #83917f}.ssb-edit-buttons{display:flex;gap:6px}.ssb-edit-buttons button{min-width:36px;min-height:32px;background:#363e36;color:white;border:1px solid #83917f;border-radius:4px;cursor:pointer}
+.ssb-edit-corner{position:fixed;z-index:10001;width:16px;height:16px;padding:0;line-height:12px;background:#eee;color:#222;border:1px solid #333;cursor:nwse-resize;touch-action:none}
+.ssb-edit-guides{position:fixed;inset:0;z-index:49;pointer-events:none}.ssb-edit-ghost{position:fixed;z-index:48;pointer-events:none;opacity:.55;max-width:none;border:0;transform-origin:center}
+@media(max-width:800px){.ssb-tile-editor{right:12px;width:210px}}

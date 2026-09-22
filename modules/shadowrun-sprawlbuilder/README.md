@@ -43,9 +43,19 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 
 Im Asset-Stempel ist **Kanten einrasten** standardmäßig aktiv, für alle Assets. Nahe einer vorhandenen Tile-Außenkante rastet die Vorschau bündig ein; eine goldene Linie markiert das Ziel. Entlang der Kante bleibt das Element verschiebbar, nahe ihren Enden richtet es sich bündig aus. **Alt** unterdrückt das Einrasten vorübergehend; der Schalter deaktiviert es für das geöffnete Werkzeug. Der Fangbereich beträgt 12 Bildschirmpixel, zum Loslösen 20 Pixel, unabhängig vom Zoom.
 
-**Drehwinkel (°)** richtet den Stempel aus, etwa 90° für einen senkrechten Bordstein. An gedrehten Zielen passt sich die Ausrichtung parallel zum Ziel in der nächstliegenden Vierteldrehung an. Die Ziel-Tiles bleiben unverändert; es entsteht keine dauerhafte Verbindung. Einrasten gilt beim Einzelstempel, nicht beim Reihenwerkzeug oder beim nachträglichen Verschieben mit Foundrys Tile-Werkzeug.
+**Drehwinkel (°)** richtet den Stempel aus, etwa 90° für einen senkrechten Bordstein. An gedrehten Zielen passt sich die Ausrichtung parallel zum Ziel in der nächstliegenden Vierteldrehung an. Die Ziel-Tiles bleiben unverändert; es entsteht keine dauerhafte Verbindung. Einrasten gilt beim Einzelstempel und beim nachträglichen Einzelverschieben eigener Assets über Kacheln. Beim Verschieben bleibt der Drehwinkel erhalten; beim Reihenwerkzeug erfolgt kein Kantenfang.
 
 Bei bekannten SprawlBuilder-Assets zählen die sichtbaren Alpharechtecke einschließlich Skalierung, Anker und Rotation. Gemalte Flächen und unbekannte Bilder verwenden die Tile-Außenmaße. Innere Löcher, radierten Aussparungen und unregelmäßigen Pixelkonturen folgt das Werkzeug nicht. Es berücksichtigt ausschließlich nicht ausgeblendete Tiles der aktuellen Ebene; gesperrte Tiles können als Bezugskante dienen.
+
+## Kacheln präzise bearbeiten
+
+Der Kantenfang kann zwei Nachbarn gleichzeitig berücksichtigen: Die rechte Seite des Bordsteins liegt am Gehweg, während seine Oberkante am vorherigen Bordstein einrastet. Beide Bezugskanten werden hervorgehoben. Widersprüchliche zweite Ausrichtungen verdrängen die erste nicht.
+
+Unter **Kacheln** ein einzelnes SprawlBuilder-Asset auswählen. Direktes Ziehen verwendet ebenfalls den Kantenfang; **Alt** oder der Schalter erlaubt freies Verschieben. Mehrfachauswahlen behalten Foundrys gemeinsamen Versatz ohne individuelle Magnetkorrektur. Abbruch und fremde Kacheln verwenden das native Verhalten.
+
+Der dicke native Rahmen und die Transformationssymbole werden bei unseren ausgewählten Assets durch eine kompakte Werkzeugleiste ersetzt. **+ / −** skalieren um 1 %, mindestens einen sichtbaren Szenenpixel an der längeren Seite. **Breite/Höhe (px)** erlauben exakte Eingaben. Das **Schloss** hält das Seitenverhältnis; ausgeschaltet lassen sich beide Maße unabhängig ändern. **Kreispfeil** dreht um 1°, das Winkelfeld erlaubt direkte Eingabe. Änderungen über die Leiste halten die sichtbare Objektmitte fest.
+
+Der kleine **+-Eckgriff** skaliert frei ohne Raster. Während des Ziehens zeigt ein halbtransparentes Bild die neue Größe; erst Loslassen speichert. Die gegenüberliegende Ecke bleibt fest. Esc bricht den Griffzug ab. Ein Bewegungsbutton ist nicht nötig: Asset direkt greifen und ziehen. Pixelmaße sind Szenenpixel, unabhängig vom Zoom.
 
 ## Gerade Reihen ziehen
 

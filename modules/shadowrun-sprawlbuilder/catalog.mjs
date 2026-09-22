@@ -1,3 +1,4 @@
+import {registerTileEditing} from './tile-editing.mjs';
 import {showRows,showAssetStamp} from './rows.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
 export {collections,taxonomy,assetTypes};
@@ -146,4 +147,4 @@ export function sceneControls(controls) {
     tools:{brush:{name:'brush',title:'Gelände bauen',icon:'fa-solid fa-border-all',order:0,button:true,onChange:()=>showBrush().catch(error=>ui.notifications.error(error.message))},
       catalog:{name:'catalog',title:'Assets',icon:'fa-solid fa-images',order:1,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))}}};
 }
-if (typeof Hooks!=='undefined') {Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);Hooks.on('getSceneControlButtons',sceneControls);}
+if (typeof Hooks!=='undefined') {Hooks.once('init',registerTileEditing);Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);Hooks.on('getSceneControlButtons',sceneControls);}

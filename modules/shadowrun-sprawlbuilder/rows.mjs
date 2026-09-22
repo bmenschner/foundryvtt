@@ -101,7 +101,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
       check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,...placement(end),widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
       const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0}),zoom=Math.hypot(b.x-a.x,b.y-a.y);
       for(const tile of result.data){const p=canvas.clientCoordinatesFromCanvas(tile);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(tile.rotation*Math.PI/180);ctx.globalAlpha=.65;ctx.drawImage(image,-tile.width*zoom/2,-tile.height*zoom/2,tile.width*zoom,tile.height*zoom);ctx.restore();}
-      if(single&&match){const [a,b]=match.edge.map(p=>canvas.clientCoordinatesFromCanvas(p));ctx.strokeStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+      if(single&&match)for(const contact of [match,match.secondary].filter(Boolean)){const [a,b]=contact.edge.map(p=>canvas.clientCoordinatesFromCanvas(p));ctx.strokeStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
       status.textContent=single?(match?'Kante eingerastet · Alt für freie Platzierung.':'Klick setzt ein Exemplar.'):`${result.count} Segmente · ${result.lengthMeters.toLocaleString('de',{maximumFractionDigits:2})} m`;
     }catch(error){status.textContent=error.message;}
   }
@@ -118,8 +118,9 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
     const from=start,to=world(e);alt=e.altKey;pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=true;
     try{check(scene,level);
       const snapped=single?placement(to):{point:to};
-      const target=snapped.match?scene.tiles.get(snapped.match.targetId):null,signature=target?JSON.stringify(tileRectangle(target,assets)):null;
-      const changed=()=>disposed||(target&&(!scene.tiles.get(target.id)||target.hidden||!snapTargets([target],assets,level.id).length||JSON.stringify(tileRectangle(target,assets))!==signature));
+      const targets=[snapped.match,snapped.match?.secondary].filter(Boolean).map(m=>scene.tiles.get(m.targetId));
+      const signatures=targets.map(t=>JSON.stringify(tileRectangle(t,assets)));
+      const changed=()=>disposed||targets.some((target,i)=>!scene.tiles.get(target.id)||target.hidden||!snapTargets([target],assets,level.id).length||JSON.stringify(tileRectangle(target,assets))!==signatures[i]);
       await saveRow(asset,{scene,level,rect,start:from,end:to,point:snapped.point,rotation:snapped.rotation??0,single,widthMeters:single?Number(size.value):widthMeters,cancelled:changed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
     catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
     finally{busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=false;start=end=null;clear();}
