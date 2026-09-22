@@ -1,11 +1,11 @@
-import {stackUpdate,stackMode,stackControls} from './stacking.mjs';
+import {stackUpdate,stackMode,stackControls,onLevel,updateMovedStack} from './stacking.mjs';
 import {ID,loadCatalog} from './catalog.mjs';
 import {tileRectangle,snapTargets,snapToEdges} from './snapping.mjs';
 let assets=new Map(),panel,closePanel,guide;
 let enabled=true,registered=false;
 export const owned=doc=>!!doc?.flags?.[ID];
 const zoom=()=>{const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0});return Math.hypot(b.x-a.x,b.y-a.y);};
-function editable(doc){return game.user.isGM&&canvas.ready&&doc?.parent===canvas.scene&&!doc.locked&&(doc.levels?.has?.(canvas.level?.id)||doc.levels?.includes?.(canvas.level?.id));}
+function editable(doc){return game.user.isGM&&canvas.ready&&doc?.parent===canvas.scene&&!doc.locked&&onLevel(doc,canvas.level?.id);}
 export function transformTile(tile,{width,height,rotation=tile.rotation??0},catalog=assets){
   const before=tileRectangle(tile,catalog);
   if(!before||![width,height,rotation].every(Number.isFinite)||width<1||height<1)throw new Error('Breite und Höhe müssen mindestens einen Szenenpixel betragen.');
@@ -131,6 +131,7 @@ export function showTileEditor(object){
 }
 export function registerTileEditing(){
   if(registered)return;registered=true;CONFIG.Tile.objectClass=editingClass(CONFIG.Tile.objectClass);
+  Hooks.on('preUpdateTile',updateMovedStack);
   Hooks.on('controlTile',()=>{const selected=canvas.tiles?.controlled??[];showTileEditor(selected.length===1?selected[0]:null);});
   Hooks.on('canvasTearDown',()=>{closePanel?.();hideGuides();});
   Hooks.on('canvasPan',()=>{for(const object of [...(canvas.tiles?.controlled??[]),...(canvas.tiles?.preview?.children??[])])drawSelection(object);});

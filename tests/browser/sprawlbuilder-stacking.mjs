@@ -50,6 +50,22 @@ try{
   await page.mouse.click(550,800);await page.waitForFunction(()=>docs.size===4);
   assert.deepEqual(await page.evaluate(()=>[...docs.values()].at(-1).flags['shadowrun-sprawlbuilder'].stack),{automatic:false,step:8});
   await page.keyboard.press('Escape');
+  const moved=await page.evaluate(async()=>{
+    docs.clear();game.user.id='gm';window.CONFIG={Tile:{objectClass:class {}}};
+    const {registerTileEditing}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');registerTileEditing();
+    const {stackLevel}=await import('/modules/shadowrun-sprawlbuilder/stacking.mjs');
+    const data=(name,x,sort,elevation=0,levels=[])=>({name,x,y:0,width:100,height:100,rotation:0,texture:{anchorX:0,anchorY:0},sort,elevation,levels,flags:{'shadowrun-sprawlbuilder':{}}});
+    const [road,road2,arrow,car]=await canvas.scene.createEmbeddedDocuments('Tile',[data('road',0,17),data('road2',200,17),data('arrow',200,20),data('car',500,0,3)]);
+    car.parent=canvas.scene;car.toObject=()=>Object.fromEntries(Object.entries(car).filter(([k,v])=>k!=='parent'&&typeof v!=='function'));
+    canvas.tiles={controlled:[{document:car}]};const steps=[],sorts=[];
+    for(const x of [0,200,500]){
+      const changes={x};Hooks.callAll('preUpdateTile',car,changes,{},'gm');
+      for(const [k,v] of Object.entries(changes)){if(k==='flags.shadowrun-sprawlbuilder.stack')car.flags['shadowrun-sprawlbuilder'].stack=v;else car[k]=v;}
+      Hooks.callAll('updateTile',car);steps.push(stackLevel(car));sorts.push(car.sort);
+    }
+    return {steps,sorts,height:car.elevation,road:road.sort,arrow:arrow.sort};
+  });
+  assert.deepEqual(moved,{steps:[1,2,0],sorts:[18,21,0],height:3,road:17,arrow:20});
   assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>window.errors),[]);
   console.log('PASS: terrain stamps, rectangles, asset stamps and rows save automatic/manual sort with unchanged elevation; cursor preview matches saved steps 0/1/2.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve));}

@@ -2,13 +2,44 @@ import {ID} from './catalog.mjs';
 import {tileRectangle} from './snapping.mjs';
 let catalog=new Map();
 export function setStackCatalog(assets){catalog=new Map(assets.map(a=>[a.key,a]));}
-export const stackLevel=tile=>Math.max(0,Number.isFinite(tile.sort)?Math.ceil(tile.sort):0);
+const rawSort=tile=>Number.isFinite(tile.sort)?tile.sort:0;
+export function onLevel(tile,levelId){
+  if(typeof tile.includedInLevel==='function')return tile.includedInLevel(levelId);
+  const levels=tile.levels;
+  return !levels||!(levels.size??levels.length)||(levels.has?.(levelId)||levels.includes?.(levelId));
+}
+function stackScene(tiles,levelId,assets,excludeId){
+  const values=tiles instanceof Map?tiles.values():tiles??[];
+  const nodes=Array.from(values).filter(t=>!(excludeId&&(t.id??t._id)===excludeId)&&!t.hidden&&(t.alpha??1)>0&&onLevel(t,levelId))
+    .map(tile=>({tile,shape:tileRectangle(tile,assets),sort:rawSort(tile)})).filter(n=>n.shape);
+  const depths=new Map();
+  function depth(node){
+    if(depths.has(node))return depths.get(node);
+    const mode=node.tile.flags?.[ID]?.stack;
+    let value=mode?.automatic===false&&Number.isSafeInteger(mode.step)?Math.max(0,mode.step):0;
+    if(mode?.automatic!==false)for(const lower of nodes)if(lower.sort<node.sort&&overlaps(node.shape,lower.shape))value=Math.max(value,depth(lower)+1);
+    depths.set(node,value);return value;
+  }
+  return {nodes,depth};
+}
+export function stackLevel(tile){
+  const mode=tile.flags?.[ID]?.stack;
+  if(mode?.automatic===false&&Number.isSafeInteger(mode.step))return Math.max(0,mode.step);
+  const board=globalThis.canvas;
+  if(tile.parent&&tile.parent===board?.scene){
+    const scene=stackScene(board.scene.tiles,board.level?.id,catalog);
+    const node=scene.nodes.find(n=>(n.tile.id??n.tile._id)===(tile.id??tile._id));
+    if(node)return scene.depth(node);
+  }
+  return Number.isSafeInteger(mode?.step)?Math.max(0,mode.step):0;
+}
 export const stackMode=tile=>({automatic:tile.flags?.[ID]?.stack?.automatic??true,step:stackLevel(tile)});
 function corners(b){
   const a=b.rotation*Math.PI/180,c=Math.cos(a),s=Math.sin(a);
   return [[-1,-1],[1,-1],[1,1],[-1,1]].map(([x,y])=>({x:b.x+c*x*b.width/2-s*y*b.height/2,y:b.y+s*x*b.width/2+c*y*b.height/2}));
 }
 export function overlaps(a,b){
+  if(Math.hypot(a.x-b.x,a.y-b.y)>Math.hypot(a.width,a.height)/2+Math.hypot(b.width,b.height)/2)return false;
   const p=corners(a),q=corners(b);
   for(const r of [p,q])for(let i=0;i<2;i++){
     const dx=r[i+1].x-r[i].x,dy=r[i+1].y-r[i].y,len=Math.hypot(dx,dy),axis={x:-dy/len,y:dx/len};
@@ -19,19 +50,16 @@ export function overlaps(a,b){
 }
 export function stackedTile(tile,tiles,levelId,{mode=stackMode(tile),assets=catalog,excludeId=tile.id??tile._id}={}){
   if(!mode.automatic&&(!Number.isSafeInteger(mode.step)||mode.step<0))throw new Error('Die Stufe muss eine nichtnegative ganze Zahl sein.');
-  let step=mode.automatic?0:mode.step;
+  let step=mode.automatic?0:mode.step,sort=mode.automatic?0:mode.step;
   if(mode.automatic){
-    const shape=tileRectangle(tile,assets);
-    const candidates=tiles instanceof Map?tiles.values():tiles??[];
-    for(const other of candidates){
-      if((excludeId&&(other.id??other._id)===excludeId)||other.hidden||(other.alpha??1)<=0
-        ||!(other.levels?.has?.(levelId)||other.levels?.includes?.(levelId))||(other.elevation??0)!==(tile.elevation??0))continue;
-      const target=tileRectangle(other,assets);
-      if(shape&&target&&overlaps(shape,target))step=Math.max(step,stackLevel(other)+1);
+    const shape=tileRectangle(tile,assets),scene=stackScene(tiles,levelId,assets,excludeId);
+    for(const node of scene.nodes)if(shape&&overlaps(shape,node.shape)){
+      step=Math.max(step,scene.depth(node)+1);sort=Math.max(sort,Math.floor(node.sort)+1);
     }
   }
-  if(!Number.isSafeInteger(step))throw new Error('Die Stapelstufe ist zu groß.');
-  return {...tile,sort:step,flags:{...tile.flags,[ID]:{...tile.flags?.[ID],stack:{automatic:!!mode.automatic,step}}}};
+  if(mode.automatic)sort=Math.max(sort,step);
+  if(!Number.isSafeInteger(step)||!Number.isSafeInteger(sort))throw new Error('Die Stapelstufe ist zu groß.');
+  return {...tile,sort,flags:{...tile.flags,[ID]:{...tile.flags?.[ID],stack:{automatic:!!mode.automatic,step}}}};
 }
 export function stackUpdate(doc,update,tiles,levelId,mode=stackMode(doc)){
   const tile=stackedTile({...doc.toObject(),...update},tiles,levelId,{mode,excludeId:doc.id});
@@ -47,4 +75,15 @@ export function stackControls(initial={automatic:true,step:0},onChange=()=>{}){
   function sync(mode){automatic.checked=mode.automatic;step.value=String(mode.step);step.disabled=automatic.checked;}
   automatic.addEventListener('change',()=>{step.disabled=automatic.checked;onChange(read());});step.addEventListener('change',()=>onChange(read()));sync(initial);
   return {node,read,sync,show:values=>{if(automatic.checked)step.value=String(Math.max(0,...values));},disable:value=>{automatic.disabled=value;step.disabled=value||automatic.checked;}};
+}
+
+export function updateMovedStack(doc,changes,options={},userId){
+  const board=globalThis.canvas,selected=board?.tiles?.controlled??[];
+  if(!globalThis.game?.user?.isGM||userId!==(game.user.id??game.userId)||options.isUndo||!board?.ready
+    ||doc.parent!==board.scene||!doc.flags?.[ID]||doc.locked||!onLevel(doc,board.level?.id)
+    ||selected.length!==1||selected[0].document?.id!==doc.id||!stackMode(doc).automatic)return;
+  if(!['x','y'].some(k=>Number.isFinite(changes[k])&&changes[k]!==doc[k]))return;
+  if(['width','height','rotation','elevation','levels'].some(k=>k in changes))return;
+  // Runs synchronously before persistence, also for movement paths without our preview adapter.
+  Object.assign(changes,stackUpdate(doc,changes,board.scene.tiles,board.level.id));
 }
