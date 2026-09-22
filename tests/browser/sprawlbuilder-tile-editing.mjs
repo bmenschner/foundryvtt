@@ -42,7 +42,7 @@ try{
       const {styleTile}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');
       const root=new PIXI.Container();root.eventMode='static';
       function tile(name,x,y,w,h){
-        const t=new PIXI.Container();t.name=name;t.eventMode='static';t.document={flags:{'shadowrun-sprawlbuilder':{}}};
+        const t=new PIXI.Container();t.name=name;t.eventMode='static';t.document={x:x+w/2,y:y+h/2,width:w,height:h,rotation:0,texture:{anchorX:.5,anchorY:.5},flags:{'shadowrun-sprawlbuilder':{}}};
         t.frame=t.addChild(new PIXI.Container());t.frame.eventMode='auto';
         t.frame.hitArea={contains:(px,py)=>px>=x&&px<=x+w&&py>=y&&py<=y+h};
         t.controls={border:t.addChild(new PIXI.Graphics()),handles:t.addChild(new PIXI.Container())};
@@ -55,19 +55,39 @@ try{
       for(const [t,x,y] of [[curb,90,100],[walk,200,100],[prop,300,90]]){
         results.push(events.hitTest(x,y)?.name);
         t.controlled=true;styleTile(t);
+        const mark=t.children.at(-1),childCount=t.children.length;
+        if(!mark.visible||mark.eventMode!=='none'||mark===t.controls.handles)throw new Error('Missing non-interactive selection mark');
+        const shapes=mark.geometry.graphicsData;
+        if(t===curb){if(shapes.length!==1||shapes[0].fillStyle.color!==0xff6b35)throw new Error('Expected orange centre dot');}
+        else if(shapes.length!==4||shapes[0].lineStyle.color!==0xff6b35)throw new Error('Expected four orange corners');
         for(let i=0;i<10;i++){
-          styleTile(t);const target=events.hitTest(x,y);results.push(target?.name);
+          styleTile(t);if(t.children.length!==childCount)throw new Error('Duplicate marks');const target=events.hitTest(x,y);results.push(target?.name);
           let moved=null;target?.once('pointerdown',()=>{moved=target.name;});
           const event=new PIXI.FederatedPointerEvent(events);event.type='pointerdown';event.target=target;
           events.dispatchEvent(event);results.push(moved);
         }
-        t.controlled=false;styleTile(t);
+        t.controlled=false;styleTile(t);if(mark.visible)throw new Error('Mark remained after release');
       }
       results.push(events.hitTest(20,20)?.name,events.hitTest(250,20)?.name);
-      root.destroy({children:true});return results;
+      prop.controlled=true;prop.hasPreview=true;styleTile(prop);
+      if(prop.children.at(-1).visible)throw new Error('Original mark remained during drag');
+      const preview=tile('preview',280,130,60,30);preview.isPreview=true;preview._original=prop;styleTile(preview);
+      if(!preview.children.at(-1).visible)throw new Error('Preview lacks mark');
+      preview.destroy({children:true});prop.hasPreview=false;styleTile(prop);
+      if(!prop.children.at(-1).visible)throw new Error('Original mark missing after drag');
+      // Render the marks too, not only their geometry/event data.
+      const app=new PIXI.Application({width:400,height:240,backgroundColor:0x303438,antialias:true});
+      document.body.append(app.view);app.view.id='ssb-test-selection';app.stage.addChild(root);
+      for(const t of [curb,walk,prop]){t.controlled=true;styleTile(t);}
+      const old=prop.children.at(-1);old.destroy();styleTile(prop);
+      if(prop.children.at(-1)===old||prop.children.at(-1).destroyed)throw new Error('Mark not recreated after redraw');
+      app.renderer.render(app.stage);
+      window.selectionTestApp=app;return results;
     });
     assert.deepEqual(hits,[...Array(21).fill('curb'),...Array(21).fill('walk'),...Array(21).fill('prop'),'road-1','road-2']);
-    console.log('PASS: actual Pixi hit testing and pointer dispatch retain curb, pavement and prop over overlapping road stamps after selection.');
+    if(process.env.SELECTION_SCREENSHOT)await page.locator('#ssb-test-selection').screenshot({path:process.env.SELECTION_SCREENSHOT});
+    await page.evaluate(()=>{selectionTestApp.destroy(true,{children:true});delete window.selectionTestApp;});
+    console.log('PASS: actual Pixi hit testing and pointer dispatch retain curb, pavement and prop over overlapping road stamps after selection; corner/dot colour, preview and selection cleanup verified.');
   }
   assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>window.errors),[]);
   console.log('PASS: editor controls, one-pixel field adjustment, ratio unlocking, left/right rotation with wraparound, no corner handle and selection cleanup.');
