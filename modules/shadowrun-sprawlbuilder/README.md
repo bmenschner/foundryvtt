@@ -39,6 +39,14 @@ Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, 
 - „Ausgewählte Fläche erweitern“ bietet vier Kanten zum Ziehen für entsperrte, ungedrehte, mit SprawlBuilder erzeugte Flächen.
 - Esc oder Rechtsklick pausiert das Werkzeug. Ein erneuter Klick auf Boden oder Radierer aktiviert es wieder. Gemalte Bilder liegen dauerhaft unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-painted/`; Rückgängig entfernt Tiles, nicht die erzeugten Dateien.
 
+## Magnetische Kanten
+
+Im Asset-Stempel ist **Kanten einrasten** standardmäßig aktiv, für alle Assets. Nahe einer vorhandenen Tile-Außenkante rastet die Vorschau bündig ein; eine goldene Linie markiert das Ziel. Entlang der Kante bleibt das Element verschiebbar, nahe ihren Enden richtet es sich bündig aus. **Alt** unterdrückt das Einrasten vorübergehend; der Schalter deaktiviert es für das geöffnete Werkzeug. Der Fangbereich beträgt 12 Bildschirmpixel, zum Loslösen 20 Pixel, unabhängig vom Zoom.
+
+**Drehwinkel (°)** richtet den Stempel aus, etwa 90° für einen senkrechten Bordstein. An gedrehten Zielen passt sich die Ausrichtung parallel zum Ziel in der nächstliegenden Vierteldrehung an. Die Ziel-Tiles bleiben unverändert; es entsteht keine dauerhafte Verbindung. Einrasten gilt beim Einzelstempel, nicht beim Reihenwerkzeug oder beim nachträglichen Verschieben mit Foundrys Tile-Werkzeug.
+
+Bei bekannten SprawlBuilder-Assets zählen die sichtbaren Alpharechtecke einschließlich Skalierung, Anker und Rotation. Gemalte Flächen und unbekannte Bilder verwenden die Tile-Außenmaße. Innere Löcher, radierten Aussparungen und unregelmäßigen Pixelkonturen folgt das Werkzeug nicht. Es berücksichtigt ausschließlich nicht ausgeblendete Tiles der aktuellen Ebene; gesperrte Tiles können als Bezugskante dienen.
+
 ## Gerade Reihen ziehen
 
 In **Assets** ein beliebiges Element auswählen; im daraufhin geöffneten Stempelwerkzeug bei Bedarf die sichtbare Breite pro Segment einstellen und **Reihe ziehen** anklicken. Linksklick und Ziehen zeigen eine gerade Reihe in Zugrichtung; Loslassen setzt alle Segmente gemeinsam auf der aktuellen Ebene. Ein Klick setzt ein Segment. Die Vorschau zeigt Bilder, Stückzahl und tatsächliche Länge. Angefangene Endsegmente werden zu ganzen Stücken aufgerundet. Transparente Bildränder zählen nicht zum Abstand, das Bild wird nicht verzerrt.
@@ -47,7 +55,7 @@ Die Reihenfunktion steht für alle Assets zur Verfügung, ohne Einschränkung na
 
 **Letzte Reihe zurücknehmen** entfernt die letzte eigene Reihe auf der aktuellen Ebene; die Historie gilt für die Browsersitzung. Einzelne Tiles bleiben danach mit Foundrys Tile-Werkzeug bearbeitbar. Esc, Rechtsklick oder Schließen beendet das Werkzeug. Beim Öffnen des Bodenwerkzeugs wird das Reihenwerkzeug geschlossen und umgekehrt. Maximal 128 Segmente pro Zug; die gesamte sichtbare Reihe muss innerhalb der Szene liegen.
 
-Diese erste Erweiterung erstellt gerade Reihen. Einrasten, Verbindungen zu anderen Assets, Kurven und automatische Eckstücke folgen separat. Es entstehen keine Foundry-Wände und keine dauerhaften Baugruppen.
+Diese erste Erweiterung erstellt gerade Reihen. Das Reihenwerkzeug rastet noch nicht ein; dauerhafte Verbindungen, Kurven und automatische Eckstücke folgen separat. Es entstehen keine Foundry-Wände und keine dauerhaften Baugruppen.
 
 ## Unabhängigkeit und Updates
 

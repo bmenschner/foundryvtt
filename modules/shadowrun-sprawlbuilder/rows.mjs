@@ -1,4 +1,5 @@
-import {ID,assetPath,tileData} from './catalog.mjs';
+import {snapTargets,snapToEdges,tileRectangle} from './snapping.mjs';
+import {ID,assetPath,tileData,loadCatalog} from './catalog.mjs';
 import {closeBrush} from './brush.mjs';
 
 let active,opening=0;
@@ -24,12 +25,15 @@ export function rowData(asset,{grid,rect,level,start,end,widthMeters=asset.width
   }
   return {data,count,lengthMeters:count*widthMeters};
 }
-export function assetStampData(asset,{grid,rect,level,point,widthMeters=asset.widthMeters}){
+export function assetStampData(asset,{grid,rect,level,point,widthMeters=asset.widthMeters,rotation=0}){
   if(![point?.x,point?.y].every(Number.isFinite))throw new Error('Ungültige Stempelposition.');
   const tile=tileData(asset,{grid,rect,level},widthMeters),[left,top,right,bottom]=asset.alphaBounds,scale=tile.width/asset.pixelWidth;
-  const w=(right-left)*scale,h=(bottom-top)*scale;
-  if(point.x-w/2<rect.x||point.y-h/2<rect.y||point.x+w/2>rect.x+rect.width||point.y+h/2>rect.y+rect.height)throw new Error('Das sichtbare Element muss innerhalb der Szene liegen.');
-  return {...tile,x:point.x-((left+right)/2-asset.pixelWidth/2)*scale,y:point.y-((top+bottom)/2-asset.pixelHeight/2)*scale,texture:{...tile.texture,anchorX:.5,anchorY:.5}};
+  if(!Number.isFinite(rotation))throw new Error('Ungültiger Drehwinkel.');
+  const w=(right-left)*scale,h=(bottom-top)*scale,c=Math.cos(rotation*Math.PI/180),sn=Math.sin(rotation*Math.PI/180);
+  for(const x of [-w/2,w/2])for(const y of [-h/2,h/2]){const px=point.x+c*x-sn*y,py=point.y+sn*x+c*y;
+    if(px<rect.x-1e-7||py<rect.y-1e-7||px>rect.x+rect.width+1e-7||py>rect.y+rect.height+1e-7)throw new Error('Das sichtbare Element muss innerhalb der Szene liegen.');}
+  const ox=((left+right)/2-asset.pixelWidth/2)*scale,oy=((top+bottom)/2-asset.pixelHeight/2)*scale;
+  return {...tile,x:point.x-c*ox+sn*oy,y:point.y-sn*ox-c*oy,rotation:((rotation%360)+360)%360,texture:{...tile.texture,anchorX:.5,anchorY:.5}};
 }
 export async function saveAssetStamp(asset,options){return saveRow(asset,{...options,single:true});}
 export async function undoAssetStamp(){return undoRow(true);}
@@ -60,7 +64,8 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
   // Validate scale and asset before installing the drawing overlay.
   tileData(asset,{grid:scene.grid,rect,level},widthMeters);
   closeRows();closeBrush();const request=opening;
-  const image=new Image();image.src=assetPath(asset);await image.decode();check(scene,level);
+  const image=new Image();image.src=assetPath(asset);await image.decode();
+  const assets=single?new Map((await loadCatalog()).map(a=>[a.key,a])):new Map();check(scene,level);
   if(request!==opening)return;closeBrush();
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
   const panel=node('section');panel.className='ssb-row-panel';panel.setAttribute('aria-label',single?'Asset-Stempel':'Reihe ziehen');
@@ -69,6 +74,16 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
   panel.append(node('strong',`${single?'Stempel':'Reihe'} · ${asset.name}`),node('span',single?'':`${widthMeters} m pro Segment`),status,undo,close);
   const size=node('input');size.type='number';size.min='.01';size.max='1000';size.step='.01';size.value=String(widthMeters);size.setAttribute('aria-label','Stempelbreite (m)');
   if(single){const label=node('label','Sichtbare Breite (m)');label.append(size);panel.insertBefore(label,status);}
+  const magnet=node('input');magnet.type='checkbox';magnet.checked=true;magnet.setAttribute('aria-label','Kanten einrasten');
+  const angle=node('input');angle.type='number';angle.value='0';angle.step='90';angle.setAttribute('aria-label','Drehwinkel (°)');
+  if(single){const label=node('label','Kanten einrasten ');label.prepend(magnet);panel.insertBefore(label,status);const labelAngle=node('label','Drehwinkel (°) ');labelAngle.append(angle);panel.insertBefore(labelAngle,status);}
+  let alt=false,match=null;
+  const zoomLevel=()=>{const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0});return Math.hypot(b.x-a.x,b.y-a.y);};
+  function placement(point){
+    if(!magnet.checked||alt){match=null;return {point,rotation:Number(angle.value),match:null};}
+    const base=tileData(asset,{grid:scene.grid,rect,level},Number(size.value)),[l,t,r,b]=asset.alphaBounds;
+    const result=snapToEdges({point,width:(r-l)*base.width/asset.pixelWidth,height:(b-t)*base.height/asset.pixelHeight,rotation:Number(angle.value),targets:snapTargets(scene.tiles,assets,level.id),zoom:zoomLevel(),previous:match?.key});match=result.match;return result;
+  }
   const row=node('button','Reihe ziehen');
   if(single){panel.insertBefore(row,undo);row.addEventListener('click',()=>{if(!busy)showRows(asset,Number(size.value)).catch(error=>ui.notifications.error(error.message));});}
   const overlay=node('canvas');overlay.className='ssb-row-overlay';document.body.append(overlay,panel);
@@ -83,24 +98,31 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false)
   function preview(){
     clear();if(!start||!end)return;
     try{
-      check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,point:end,widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
+      check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,...placement(end),widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
       const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0}),zoom=Math.hypot(b.x-a.x,b.y-a.y);
       for(const tile of result.data){const p=canvas.clientCoordinatesFromCanvas(tile);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(tile.rotation*Math.PI/180);ctx.globalAlpha=.65;ctx.drawImage(image,-tile.width*zoom/2,-tile.height*zoom/2,tile.width*zoom,tile.height*zoom);ctx.restore();}
-      status.textContent=single?'Klick setzt ein Exemplar.':`${result.count} Segmente · ${result.lengthMeters.toLocaleString('de',{maximumFractionDigits:2})} m`;
+      if(single&&match){const [a,b]=match.edge.map(p=>canvas.clientCoordinatesFromCanvas(p));ctx.strokeStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+      status.textContent=single?(match?'Kante eingerastet · Alt für freie Platzierung.':'Klick setzt ein Exemplar.'):`${result.count} Segmente · ${result.lengthMeters.toLocaleString('de',{maximumFractionDigits:2})} m`;
     }catch(error){status.textContent=error.message;}
   }
-  size.addEventListener('input',preview,opts);
+  size.addEventListener('input',()=>{match=null;preview();},opts);angle.addEventListener('input',()=>{match=null;preview();},opts);magnet.addEventListener('change',()=>{match=null;preview();},opts);
+  for(const event of ['keydown','keyup'])document.addEventListener(event,e=>{if(e.key==='Alt'){alt=event==='keydown';preview();}},opts);
+  window.addEventListener('blur',()=>{alt=false;match=null;start=end=null;pointer=null;clear();},opts);
   const world=e=>canvas.canvasCoordinatesFromClient({x:e.clientX,y:e.clientY});
-  overlay.addEventListener('pointerdown',e=>{if(busy||e.button!==0)return;e.preventDefault();start=end=world(e);pointer=e.pointerId;overlay.setPointerCapture(pointer);preview();},opts);
-  overlay.addEventListener('pointermove',e=>{if(busy)return;if(pointer===null){start=end=world(e);}else if(pointer===e.pointerId)end=world(e);preview();},opts);
+  overlay.addEventListener('pointerdown',e=>{if(busy||e.button!==0)return;e.preventDefault();alt=e.altKey;start=end=world(e);pointer=e.pointerId;overlay.setPointerCapture(pointer);preview();},opts);
+  overlay.addEventListener('pointermove',e=>{if(busy)return;alt=e.altKey;if(pointer===null){start=end=world(e);}else if(pointer===e.pointerId)end=world(e);preview();},opts);
   overlay.addEventListener('pointerleave',()=>{if(pointer===null){start=end=null;clear();}},opts);
   overlay.addEventListener('pointercancel',()=>{start=end=null;pointer=null;clear();},opts);
   overlay.addEventListener('pointerup',async e=>{
     if(busy||pointer!==e.pointerId||!start)return;
-    const from=start,to=world(e);pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=true;
-    try{check(scene,level);await saveRow(asset,{scene,level,rect,start:from,end:to,point:to,single,widthMeters:single?Number(size.value):widthMeters,cancelled:()=>disposed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
+    const from=start,to=world(e);alt=e.altKey;pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=true;
+    try{check(scene,level);
+      const snapped=single?placement(to):{point:to};
+      const target=snapped.match?scene.tiles.get(snapped.match.targetId):null,signature=target?JSON.stringify(tileRectangle(target,assets)):null;
+      const changed=()=>disposed||(target&&(!scene.tiles.get(target.id)||target.hidden||!snapTargets([target],assets,level.id).length||JSON.stringify(tileRectangle(target,assets))!==signature));
+      await saveRow(asset,{scene,level,rect,start:from,end:to,point:snapped.point,rotation:snapped.rotation??0,single,widthMeters:single?Number(size.value):widthMeters,cancelled:changed});status.textContent=single?'Element gesetzt. Weiterklicken setzt weitere Exemplare.':'Reihe gesetzt. Weitere Reihe ziehen oder rückgängig machen.';}
     catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally{busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=false;start=end=null;clear();}
+    finally{busy=false;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=false;start=end=null;clear();}
   },opts);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{await undoRow(single);status.textContent=single?'Letzte Platzierung zurückgenommen.':'Letzte Reihe zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
   close.addEventListener('click',dispose,opts);
