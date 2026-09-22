@@ -42,3 +42,6 @@
 .ssb-tile-editor label{display:flex;align-items:center;justify-content:space-between;gap:8px}.ssb-tile-editor input[type=number]{width:100px;min-width:0;color:#fff;background:#363e36;border:1px solid #83917f}.ssb-edit-buttons{display:flex;gap:6px}.ssb-edit-buttons button{min-width:36px;min-height:32px;background:#363e36;color:white;border:1px solid #83917f;border-radius:4px;cursor:pointer}
 .ssb-edit-guides{position:fixed;inset:0;z-index:49;pointer-events:none}
 @media(max-width:800px){.ssb-tile-editor{right:12px;width:210px}}
+
+.ssb-stack-controls{display:flex;flex-direction:column;gap:6px}.ssb-stack-controls label{display:flex;align-items:center;justify-content:space-between;gap:8px}.ssb-stack-controls input[type=number]{width:90px;min-width:0}
+.ssb-stack-controls input[type=checkbox]{width:auto;min-height:0;accent-color:#ff6b35}

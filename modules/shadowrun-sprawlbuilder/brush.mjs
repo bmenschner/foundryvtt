@@ -1,3 +1,4 @@
+import {stackedTile,stackControls} from './stacking.mjs';
 import {ID,loadCatalog,tileData,assetPath} from './catalog.mjs';
 import {stampCells,saveStamps,rectangleBounds} from './stamps.mjs';
 let active,opening=0;
@@ -25,7 +26,7 @@ function checkContext(scene,level) {
   if(!game.user.isGM || Number(game.release?.generation)!==14) throw new Error('Der Malpinsel benötigt die Spielleitung und Foundry 14.');
   if(!canvas.ready || !scene || canvas.scene!==scene || !level?.id || canvas.level?.id!==level.id) throw new Error('Szene oder Ebene wurde gewechselt. Bitte den Pinsel neu öffnen.');
 }
-export async function saveStroke({scene,level,asset,bounds,surface}) {
+export async function saveStroke({scene,level,asset,bounds,surface,stack}) {
   checkContext(scene,level);
   const world=game.world.id;
   if(!/^[a-zA-Z0-9_-]+$/.test(world)) throw new Error('Ungültiger Weltordner.');
@@ -40,12 +41,10 @@ export async function saveStroke({scene,level,asset,bounds,surface}) {
   const result=await picker.upload('data',folder,new File([blob],`${asset.key}-${crypto.randomUUID()}.png`,{type:'image/png'}),{},{notify:false});
   if(!result?.path || result.error) throw new Error(result?.error || 'Upload fehlgeschlagen.');
   checkContext(scene,level);
-  const tiles=Array.from(scene.tiles??[]).filter(t=>t.levels?.has?.(level.id) || t.levels?.includes?.(level.id));
-  const ceiling=Math.min(0,...tiles.filter(t=>!t.flags?.[ID]?.painted).map(t=>t.sort??0));
-  const latest=Math.max(ceiling-100000,...tiles.filter(t=>t.flags?.[ID]?.painted).map(t=>t.sort??0));
-  const [tile]=await scene.createEmbeddedDocuments('Tile',[{name:`Gemalt: ${asset.name}`,texture:{src:result.path,anchorX:0,anchorY:0},...bounds,
-    rotation:0,hidden:false,locked:false,sort:Math.min(ceiling-1,latest+1),elevation:level.elevation?.bottom??0,levels:[level.id],
-    flags:{[ID]:{painted:true,key:asset.key}}}]);
+  const data={name:`Gemalt: ${asset.name}`,texture:{src:result.path,anchorX:0,anchorY:0},...bounds,
+    rotation:0,hidden:false,locked:false,elevation:level.elevation?.bottom??0,levels:[level.id],
+    flags:{[ID]:{painted:true,key:asset.key}}};
+  const [tile]=await scene.createEmbeddedDocuments('Tile',[stackedTile(data,scene.tiles,level.id,{mode:stack})]);
   if(!tile) throw new Error('Das gemalte Tile konnte nicht angelegt werden.');
   history.push({scene,levelId:level.id,id:tile.id});
   return tile;
@@ -92,7 +91,8 @@ export async function showBrush(assetKey) {
   eraser.addEventListener('click',()=>{if(busy)return;erasing=true;eraser.setAttribute('aria-pressed','true');for(const button of materialButtons)button.setAttribute('aria-pressed','false');selectedName.textContent='Radierer · Boden löschen';setEnabled(true);});
   const undo=node('button','Letzte Aktion zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Boden oder Radierer wählen und direkt loslegen. Esc pausiert.');status.setAttribute('aria-live','polite');
-  panel.append(node('span','Böden'),gallery,selectedName,mode,eraser,extend,undo,close,status);
+  const stacking=stackControls(undefined,()=>preview());
+  panel.append(node('span','Böden'),gallery,selectedName,mode,stacking.node,eraser,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
@@ -106,17 +106,18 @@ export async function showBrush(assetKey) {
   function resize(){overlay.width=innerWidth;overlay.height=innerHeight;clear();}
   resize();window.addEventListener('resize',()=>{setEnabled(false);resize();},options);
   function world(event){return canvas.canvasCoordinatesFromClient({x:event.clientX,y:event.clientY});}
+  function showStack(bounds){if(erasing)return;const t=stackedTile({...bounds,rotation:0,texture:{anchorX:0,anchorY:0},elevation:level.elevation?.bottom??0,flags:{[ID]:{painted:true}}},scene.tiles,level.id,{mode:stacking.read()});stacking.show([t.sort]);}
   function preview(){
     if(mode.value==='stamp'){
       clear();const ctx=overlay.getContext('2d');
-      const draw=(cell,fill)=>{const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+ppm,y:cell.y+ppm});ctx.fillStyle=erasing?'rgba(255,80,80,0.3)':'rgba(110,210,140,0.3)';ctx.strokeStyle=erasing?'#ff7777':'#a5ffc0';ctx.lineWidth=2;if(fill)ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);};
+      const draw=(cell,fill)=>{showStack(cell);const a=canvas.clientCoordinatesFromCanvas(cell),b=canvas.clientCoordinatesFromCanvas({x:cell.x+ppm,y:cell.y+ppm});ctx.fillStyle=erasing?'rgba(255,80,80,0.3)':'rgba(110,210,140,0.3)';ctx.strokeStyle=erasing?'#ff7777':'#a5ffc0';ctx.lineWidth=2;if(fill)ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);};
       try{if(points.length)for(const cell of stampCells(points,ppm,rect))draw(cell,true);if(hover)for(const cell of stampCells([hover],ppm,rect))draw(cell,false);}catch(error){overflow=true;status.textContent=error.message;}
       return;
     }
     clear();if(!points.length)return;
     try {
       const bounds=rectangleBounds(points[0],points.at(-1),ppm,rect);
-      const a=canvas.clientCoordinatesFromCanvas(bounds),b=canvas.clientCoordinatesFromCanvas({x:bounds.x+bounds.width,y:bounds.y+bounds.height}),ctx=overlay.getContext('2d');
+      showStack(bounds);const a=canvas.clientCoordinatesFromCanvas(bounds),b=canvas.clientCoordinatesFromCanvas({x:bounds.x+bounds.width,y:bounds.y+bounds.height}),ctx=overlay.getContext('2d');
       ctx.fillStyle=erasing?'rgba(255,80,80,0.45)':'rgba(110,210,140,0.45)';ctx.strokeStyle=erasing?'#ff7777':'#a5ffc0';ctx.lineWidth=2;
       ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);
     }catch(error){status.textContent=error.message;}
@@ -127,7 +128,7 @@ export async function showBrush(assetKey) {
   overlay.addEventListener('pointerdown',e=>{
     if(!enabled || busy || e.button!==0)return;
     try {checkContext(scene,level);
-      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected,erasing};preview();
+      e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected,erasing,stack:stacking.read()};preview();
     }catch(error){status.textContent=error.message;setEnabled(false);}
   },options);
   overlay.addEventListener('pointermove',e=>{if(busy)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
@@ -135,7 +136,7 @@ export async function showBrush(assetKey) {
   overlay.addEventListener('pointercancel',()=>{points=[];pointer=null;clear();},options);
   overlay.addEventListener('pointerup',async e=>{
     if(pointer!==e.pointerId || !points.length)return;
-    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;close.disabled=eraser.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
+    const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;stacking.disable(true);close.disabled=eraser.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
     try {
       checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');
       if(stroke.erasing){
@@ -145,12 +146,12 @@ export async function showBrush(assetKey) {
       }
       const image=new Image();image.src=assetPath(stroke.asset);await image.decode();
       if(disposed) return;checkContext(scene,level);
-      if(stroke.mode==='stamp'){await saveStamps({scene,level,asset:stroke.asset,cells:stampCells(path,ppm,rect),ppm,image});status.textContent='1-m-Felder gesetzt. Rückgängig entfernt diesen gesamten Zug.';return;}
+      if(stroke.mode==='stamp'){await saveStamps({scene,level,asset:stroke.asset,cells:stampCells(path,ppm,rect),ppm,image,stack:stroke.stack});status.textContent='1-m-Felder gesetzt. Rückgängig entfernt diesen gesamten Zug.';return;}
       const bounds=rectangleBounds(path[0],path.at(-1),ppm,rect);
       const surface=renderStroke({points:path,...stroke,bounds,ppm,image});
-      await saveStroke({scene,level,asset:stroke.asset,bounds,surface});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
+      await saveStroke({scene,level,asset:stroke.asset,bounds,surface,stack:stroke.stack});status.textContent='Gespeichert. Weiter malen oder pausieren, um Tiles zu bearbeiten.';
     }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}
-    finally {busy=false;close.disabled=eraser.disabled=undo.disabled=mode.disabled=false;for(const button of materialButtons)button.disabled=false;clear();if(enabled&&!disposed)preview();}
+    finally {stacking.disable(false);busy=false;close.disabled=eraser.disabled=undo.disabled=mode.disabled=false;for(const button of materialButtons)button.disabled=false;clear();if(enabled&&!disposed)preview();}
   },options);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=eraser.disabled=true;try{await undoStroke();status.textContent='Letzte Aktion zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=eraser.disabled=false;}},options);
 }

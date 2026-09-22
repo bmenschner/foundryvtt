@@ -1,4 +1,5 @@
 import {registerTileEditing} from './tile-editing.mjs';
+import {setStackCatalog,stackedTile} from './stacking.mjs';
 import {showRows,showAssetStamp} from './rows.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
 export {collections,taxonomy,assetTypes};
@@ -42,7 +43,7 @@ export async function loadCatalog() {
     if(keys.has(asset.key) || !collections[asset.collection] || !taxonomy[asset.category]?.subcategories[asset.subcategory] || !assetTypes[asset.assetType]) throw new Error('Ungültige Zuordnung im Bilderkatalog.');
     keys.add(asset.key);
   }
-  return catalog.icons;
+  setStackCatalog(catalog.icons);return catalog.icons;
 }
 export async function placeAsset(asset,widthMeters=asset.widthMeters) {
   if (!game.user.isGM) throw new Error('Nur die Spielleitung kann Elemente platzieren.');
@@ -54,7 +55,7 @@ export async function placeAsset(asset,widthMeters=asset.widthMeters) {
   const response=await fetch(data.texture.src,{method:'HEAD'});
   if (!response.ok) throw new Error('Die Bilddatei fehlt. Bitte das vollständige Asset-Modul installieren.');
   if (canvas.scene!==scene || canvas.level?.id!==level.id) throw new Error('Die Szene oder Ebene wurde gewechselt. Bitte erneut platzieren.');
-  const [created]=await scene.createEmbeddedDocuments('Tile',[data]);
+  const [created]=await scene.createEmbeddedDocuments('Tile',[stackedTile(data,scene.tiles,level.id)]);
   if (!created) throw new Error('Das Element konnte nicht angelegt werden.');
   canvas.tiles?.activate();
   created.object?.control({releaseOthers:true});

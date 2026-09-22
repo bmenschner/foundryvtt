@@ -47,6 +47,16 @@ Im Asset-Stempel ist **Kanten einrasten** standardmäßig aktiv, für alle Asset
 
 Bei bekannten SprawlBuilder-Assets zählen die sichtbaren Alpharechtecke einschließlich Skalierung, Anker und Rotation. Gemalte Flächen und unbekannte Bilder verwenden die Tile-Außenmaße. Innere Löcher, radierten Aussparungen und unregelmäßigen Pixelkonturen folgt das Werkzeug nicht. Es berücksichtigt ausschließlich nicht ausgeblendete Tiles der aktuellen Ebene; gesperrte Tiles können als Bezugskante dienen.
 
+## Automatisch stapeln
+
+Neue Einzelstempel, Reihen und Geländeflächen verwenden standardmäßig **Automatisch stapeln**. Ohne überlappende Kachel entsteht **Stufe 0**, andernfalls die höchste überlappende Stufe +1. Straße und Gehweg nebeneinander bleiben 0; Bordstein, Gullideckel und Pfeil darauf werden 1, ein Auto auf dem Pfeil 2. Reiner Kantenkontakt erhöht die Stufe nicht. Die Regel gilt für alle Assets gleich.
+
+**Stufe** zeigt beim Platzieren die Vorschau an; bei Reihen den höchsten berechneten Wert. Nach Abschalten der Automatik lässt sich eine feste nichtnegative ganze Stufe eingeben. Die Wahl wird am Tile gespeichert und im Kachelmenü bearbeitet. Automatische Einzelverschiebungen berechnen die Stufe nach dem Einrasten neu. Mehrfachverschiebung behält die bestehenden Stufen; andere Kacheln werden nicht mitverschoben oder umsortiert.
+
+Stufen steuern Foundrys Zeichenreihenfolge (`sort`). Tatsächliche Höhe und Szenenebene bleiben unverändert. Es zählen sichtbare Kacheln derselben Ebene und Höhe. Vorhandene negative Boden-Sortierungen gelten als Grundstufe 0; ältere positive Sortierungen werden berücksichtigt. Bestehende Szenen ändern sich beim Laden nicht. Ein später daruntergemalter Boden folgt ebenfalls der Überlappungsregel; für eine bewusst untere Platzierung die Automatik ausschalten und Stufe 0 wählen.
+
+Die Berechnung nutzt gedrehte sichtbare Alpharechtecke bekannter Assets; innere transparente Löcher, radierte Aussparungen und einzelne unregelmäßige Konturen werden nicht pixelgenau geprüft. Geländeflächen und unbekannte Bilder nutzen ihre Tile-Grenzen. Die halbtransparente Stempelhilfe bleibt als Werkzeugvorschau im Vordergrund; die endgültige Reihenfolge entsteht beim Speichern. Native Kachel-Ziehvorschauen verwenden bereits die berechnete Sortierung.
+
 ## Kacheln präzise bearbeiten
 
 Der Kantenfang kann zwei Nachbarn gleichzeitig berücksichtigen: Die rechte Seite des Bordsteins liegt am Gehweg, während seine Oberkante am vorherigen Bordstein einrastet. Beide Bezugskanten werden hervorgehoben. Widersprüchliche zweite Ausrichtungen verdrängen die erste nicht.

@@ -1,3 +1,4 @@
+import {stackedTile} from './stacking.mjs';
 import {ID} from './catalog.mjs';
 import {renderStroke,recordHistory} from './brush.mjs';
 const textures=new Map();
@@ -25,16 +26,13 @@ export function stampCells(points,ppm,rect,limit=512){
   }
   return [...cells.values()];
 }
-export async function saveStamps({scene,level,asset,cells,ppm,image}){
+export async function saveStamps({scene,level,asset,cells,ppm,image,stack}){
   function valid(){if(!game.user.isGM||Number(game.release?.generation)!==14||!canvas.ready||canvas.scene!==scene||canvas.level?.id!==level.id)throw new Error('Szene, Ebene oder Berechtigung geändert. Bitte erneut setzen.');}
   valid();if(!cells.length)throw new Error('Bitte innerhalb der Szene setzen.');
   const world=game.world.id;if(!/^[\w-]+$/.test(world))throw new Error('Ungültiger Weltordner.');
   const picker=foundry.applications.apps.FilePicker.implementation,folder=`worlds/${world}/${ID}-painted`;
   try{await picker.browse('data',folder);}catch{try{await picker.createDirectory('data',folder);}catch{await picker.browse('data',folder);}}
   const group=crypto.randomUUID(),data=[];
-  const existing=Array.from(scene.tiles??[]).filter(t=>t.levels?.has?.(level.id)||t.levels?.includes?.(level.id));
-  const ceiling=Math.min(0,...existing.filter(t=>!t.flags?.[ID]?.painted).map(t=>t.sort??0));
-  const sort=Math.min(ceiling-1,Math.max(ceiling-100000,...existing.filter(t=>t.flags?.[ID]?.painted).map(t=>t.sort??0))+1);
   const phase=(n,period)=>(((n%period)+period)%period).toFixed(6);
   for(const cell of cells){
     valid();const key=[world,asset.key,asset.sha256,ppm,phase(cell.x,asset.widthMeters*ppm),phase(cell.y,asset.heightMeters*ppm)].join('|');
@@ -43,9 +41,10 @@ export async function saveStamps({scene,level,asset,cells,ppm,image}){
       const blob=await new Promise(resolve=>surface.toBlob(resolve,'image/png'));if(!blob)throw new Error('Stempelbild konnte nicht erzeugt werden.');valid();
       const result=await picker.upload('data',folder,new File([blob],`${asset.key}-stamp-${crypto.randomUUID()}.png`,{type:'image/png'}),{},{notify:false});
       if(!result?.path||result.error)throw new Error(result?.error||'Upload fehlgeschlagen.');src=result.path;textures.set(key,src);}
-    data.push({...cell,name:`1 m: ${asset.name}`,texture:{src,anchorX:0,anchorY:0},rotation:0,hidden:false,locked:false,sort,elevation:level.elevation?.bottom??0,levels:[level.id],flags:{[ID]:{painted:true,stamp:true,key:asset.key,group}}});
+    data.push({...cell,name:`1 m: ${asset.name}`,texture:{src,anchorX:0,anchorY:0},rotation:0,hidden:false,locked:false,elevation:level.elevation?.bottom??0,levels:[level.id],flags:{[ID]:{painted:true,stamp:true,key:asset.key,group}}});
   }
-  valid();const created=await scene.createEmbeddedDocuments('Tile',data);
+  valid();const placed=data.map(t=>stackedTile(t,scene.tiles,level.id,{mode:stack}));
+  const created=await scene.createEmbeddedDocuments('Tile',placed);
   if(created?.length)recordHistory({scene,levelId:level.id,ids:created.map(t=>t.id)});
   if(created?.length!==data.length)throw new Error('Nicht alle Felder wurden angelegt. Rückgängig entfernt die bereits angelegten Felder dieses Zuges.');
   return created;
