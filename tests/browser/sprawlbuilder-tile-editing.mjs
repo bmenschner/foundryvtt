@@ -35,6 +35,40 @@ try{
   assert.equal(await page.getByRole('button',{name:'Frei skalieren',exact:true}).count(),0);
   assert.equal(await page.locator('.ssb-edit-corner,.ssb-edit-ghost').count(),0);
   await page.evaluate(async()=>{const {showTileEditor}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');canvas.tiles.controlled=[];showTileEditor(null);});assert.equal(await editor.count(),0);
+  // Optional actual Pixi EventBoundary regression. No vendor code is bundled.
+  if(process.env.FOUNDRY_PIXI_SOURCE){
+    await page.addScriptTag({content:fs.readFileSync(process.env.FOUNDRY_PIXI_SOURCE,'utf8')});
+    const hits=await page.evaluate(async()=>{
+      const {styleTile}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');
+      const root=new PIXI.Container();root.eventMode='static';
+      function tile(name,x,y,w,h){
+        const t=new PIXI.Container();t.name=name;t.eventMode='static';t.document={flags:{'shadowrun-sprawlbuilder':{}}};
+        t.frame=t.addChild(new PIXI.Container());t.frame.eventMode='auto';
+        t.frame.hitArea={contains:(px,py)=>px>=x&&px<=x+w&&py>=y&&py<=y+h};
+        t.controls={border:t.addChild(new PIXI.Graphics()),handles:t.addChild(new PIXI.Container())};
+        root.addChild(t);return t;
+      }
+      tile('road-1',0,0,200,200);tile('road-2',200,0,200,200);
+      const curb=tile('curb',80,60,20,120),walk=tile('walk',180,30,40,160),prop=tile('prop',280,80,60,30);
+      const parent=root.enableTempParent();root.updateTransform();root.disableTempParent(parent);
+      const events=new PIXI.EventBoundary(root),results=[];
+      for(const [t,x,y] of [[curb,90,100],[walk,200,100],[prop,300,90]]){
+        results.push(events.hitTest(x,y)?.name);
+        t.controlled=true;styleTile(t);
+        for(let i=0;i<10;i++){
+          styleTile(t);const target=events.hitTest(x,y);results.push(target?.name);
+          let moved=null;target?.once('pointerdown',()=>{moved=target.name;});
+          const event=new PIXI.FederatedPointerEvent(events);event.type='pointerdown';event.target=target;
+          events.dispatchEvent(event);results.push(moved);
+        }
+        t.controlled=false;styleTile(t);
+      }
+      results.push(events.hitTest(20,20)?.name,events.hitTest(250,20)?.name);
+      root.destroy({children:true});return results;
+    });
+    assert.deepEqual(hits,[...Array(21).fill('curb'),...Array(21).fill('walk'),...Array(21).fill('prop'),'road-1','road-2']);
+    console.log('PASS: actual Pixi hit testing and pointer dispatch retain curb, pavement and prop over overlapping road stamps after selection.');
+  }
   assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>window.errors),[]);
   console.log('PASS: editor controls, one-pixel field adjustment, ratio unlocking, left/right rotation with wraparound, no corner handle and selection cleanup.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve));}
