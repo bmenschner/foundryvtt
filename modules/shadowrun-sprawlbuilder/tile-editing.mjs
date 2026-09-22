@@ -27,7 +27,9 @@ export function moveSnap(doc,update,{catalog=assets,targets,zoom:scale=1,previou
 }
 const borderState=new WeakMap();
 export function styleTile(object){
-  const parts=[object.frame,object.controls?.border,object.controls?.handles,object.controlIcon].filter(Boolean);
+  // In V14 frame is the invisible hit-area container, not the painted border.
+  // Keep it renderable and interactive so a selected tile remains draggable.
+  const parts=[object.controls?.border,object.controls?.handles,object.controlIcon].filter(Boolean);
   const hide=game.user.isGM&&owned(object.document)&&(object.controlled||object.isPreview);
   for(const part of parts){
     if(hide){if(!borderState.has(part))borderState.set(part,{renderable:part.renderable,eventMode:part.eventMode});part.renderable=false;part.eventMode='none';}

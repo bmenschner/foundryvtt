@@ -69,7 +69,19 @@ for(const [name,Base] of bases)test(`${name}: native move/drop bypass grid befor
   }
 });
 
-test('selection frame replacement is scoped and restored on release',()=>{
-  globalThis.game={user:{isGM:true}};const part={renderable:true,eventMode:'static'},object={document:doc(),controlled:true,frame:part};styleTile(object);assert.equal(part.renderable,false);assert.equal(part.eventMode,'none');object.controlled=false;styleTile(object);assert.equal(part.renderable,true);assert.equal(part.eventMode,'static');
-  object.document.flags={};object.controlled=true;styleTile(object);assert.equal(part.renderable,true);
+test('styling preserves native hit area through selection, preview and release',()=>{
+  globalThis.game={user:{isGM:true}};
+  const frame={renderable:true,eventMode:'auto',hitArea:{contains:()=>true}};
+  const border={renderable:true,eventMode:'auto'},handles={renderable:true,eventMode:'static'},icon={renderable:true,eventMode:'static'};
+  const object={document:doc(),controlled:true,frame,controls:{border,handles},controlIcon:icon};
+  const hitArea=frame.hitArea;
+  for(const state of [{controlled:true,isPreview:false},{controlled:false,isPreview:true},{controlled:true,isPreview:false}]){
+    Object.assign(object,state);styleTile(object);styleTile(object);
+    assert.equal(frame.renderable,true);assert.equal(frame.eventMode,'auto');assert.equal(frame.hitArea,hitArea);
+    for(const part of [border,handles,icon]){assert.equal(part.renderable,false);assert.equal(part.eventMode,'none');}
+  }
+  object.controlled=false;object.isPreview=false;styleTile(object);
+  assert.equal(border.renderable,true);assert.equal(border.eventMode,'auto');assert.equal(handles.eventMode,'static');assert.equal(icon.eventMode,'static');
+  object.document.flags={};object.controlled=true;styleTile(object);assert.equal(border.renderable,true);assert.equal(frame.eventMode,'auto');
+  object.document.flags={[ID]:{}};game.user.isGM=false;styleTile(object);assert.equal(border.renderable,true);
 });
