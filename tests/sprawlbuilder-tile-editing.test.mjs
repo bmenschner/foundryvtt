@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {snapToEdges} from '../modules/shadowrun-sprawlbuilder/snapping.mjs';
-import {editingClass,styleTile,transformTile} from '../modules/shadowrun-sprawlbuilder/tile-editing.mjs';
+import {editingClass,styleTile,transformTile,selectionGeometry} from '../modules/shadowrun-sprawlbuilder/tile-editing.mjs';
 const ID='shadowrun-sprawlbuilder',near=(a,b)=>assert(Math.abs(a-b)<1e-6,`${a} != ${b}`);
 const targets=[{id:'walk',x:600,y:600,width:400,height:600,rotation:0},{id:'curb',x:390,y:450,width:20,height:100,rotation:0}];
 test('curb contacts right pavement and upper curb simultaneously, retaining primary constraint',()=>{
@@ -84,4 +84,16 @@ test('styling preserves native hit area through selection, preview and release',
   assert.equal(border.renderable,true);assert.equal(border.eventMode,'auto');assert.equal(handles.eventMode,'static');assert.equal(icon.eventMode,'static');
   object.document.flags={};object.controlled=true;styleTile(object);assert.equal(border.renderable,true);assert.equal(frame.eventMode,'auto');
   object.document.flags={[ID]:{}};game.user.isGM=false;styleTile(object);assert.equal(border.renderable,true);
+});
+
+test('selection corners leave edges open and track rotation, visible bounds and screen zoom',()=>{
+  const d=doc({x:100,y:200,width:100,height:60});
+  const g=selectionGeometry(d,new Map(),1);assert.equal(g.corners.length,4);near(g.width,1.5);
+  assert.deepEqual(g.corners[0],[{x:58,y:170},{x:50,y:170},{x:50,y:178}]);
+  const rotated=selectionGeometry(doc({...d,rotation:90}),new Map(),1);near(rotated.corners[0][1].x,130);near(rotated.corners[0][1].y,150);
+  const zoomed=selectionGeometry(d,new Map(),2);near(zoomed.width*2,1.5);near(Math.hypot(zoomed.corners[0][0].x-zoomed.corners[0][1].x,zoomed.corners[0][0].y-zoomed.corners[0][1].y)*2,8);
+  const dot=selectionGeometry(d,new Map(),.25);assert.deepEqual(dot.point,{x:100,y:200});near(dot.radius*.25,2.5);
+  const asset={pixelWidth:100,pixelHeight:60,alphaBounds:[40,0,60,60]};
+  const narrow=selectionGeometry(doc({...d,flags:{[ID]:{key:'curb'}}}),new Map([['curb',asset]]),1);assert.deepEqual(narrow.point,{x:100,y:200});
+  assert.equal(selectionGeometry(d,new Map(),0),null);
 });

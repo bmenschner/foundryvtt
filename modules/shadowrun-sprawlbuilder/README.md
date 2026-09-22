@@ -55,6 +55,8 @@ Unter **Kacheln** ein einzelnes SprawlBuilder-Asset auswählen. Direktes Ziehen 
 
 Der dicke native Rahmen und die Transformationssymbole werden bei unseren ausgewählten Assets durch eine kompakte Werkzeugleiste ersetzt. **+ / −** skalieren um 1 %, mindestens einen sichtbaren Szenenpixel an der längeren Seite. **Breite/Höhe (px)** erlauben exakte Eingaben. Das **Schloss** hält das Seitenverhältnis; ausgeschaltet lassen sich beide Maße unabhängig ändern. **Linker/rechter Kreispfeil** dreht um jeweils 1° in die entsprechende Richtung, das Winkelfeld erlaubt direkte Eingabe. Änderungen über die Leiste halten die sichtbare Objektmitte fest.
 
+Ausgewählte Assets zeigen vier kurze rot-orange Eckmarkierungen. Bei einer kurzen Seite unter 24 Bildschirmpixeln erscheint stattdessen ein kleiner Mittelpunkt. Die Markierungen folgen Drehung und sichtbarer Bildfläche; ihre Strichstärke bleibt beim Zoom konstant. Beim Ziehen wird nur die bewegte Vorschau markiert. Sie fangen keine Mausklicks ab und verschwinden bei Abwahl.
+
 Am Asset selbst gibt es keinen zusätzlichen Skalierungsgriff. Ein Bewegungsbutton ist nicht nötig: Asset direkt greifen und ziehen. Pixelmaße sind Szenenpixel, unabhängig vom Zoom.
 
 ## Gerade Reihen ziehen

@@ -26,6 +26,40 @@ export function moveSnap(doc,update,{catalog=assets,targets,zoom:scale=1,previou
   return {update:{...update,x:proposed.x+result.point.x-b.x,y:proposed.y+result.point.y-b.y},match:result.match};
 }
 const borderState=new WeakMap();
+const selectionMarks=new WeakMap();
+export function selectionGeometry(doc,catalog,scale){
+  const b=tileRectangle(doc,catalog);if(!b||!Number.isFinite(scale)||scale<=0)return null;
+  if(Math.min(b.width,b.height)*scale<24)return {point:{x:b.x,y:b.y},radius:2.5/scale};
+  const angle=b.rotation*Math.PI/180,c=Math.cos(angle),s=Math.sin(angle),length=8/scale;
+  const point=(x,y)=>({x:b.x+c*x-s*y,y:b.y+s*x+c*y});
+  const corners=[];
+  for(const sx of [-1,1])for(const sy of [-1,1]){
+    const x=sx*b.width/2,y=sy*b.height/2;
+    corners.push([point(x-sx*length,y),point(x,y),point(x,y-sy*length)]);
+  }
+  return {corners,width:1.5/scale};
+}
+function drawSelection(object){
+  let mark=selectionMarks.get(object);
+  if(mark?.destroyed){selectionMarks.delete(object);mark=null;}
+  const show=game.user.isGM&&owned(object.document)&&object.layer?.active!==false&&!object.hasPreview
+    &&(object.controlled||(object.isPreview&&object._original?.controlled));
+  if(!show){if(mark)mark.visible=false;return;}
+  const geometry=selectionGeometry(object.document,assets,zoom());
+  if(!geometry){if(mark)mark.visible=false;return;}
+  if(!mark){
+    if(!globalThis.PIXI?.Graphics||!object.addChild)return;
+    mark=object.addChild(new PIXI.Graphics());mark.eventMode='none';mark.interactiveChildren=false;
+    selectionMarks.set(object,mark);
+  }
+  mark.clear();mark.visible=true;
+  if(geometry.point){mark.beginFill(0xff6b35).drawCircle(geometry.point.x,geometry.point.y,geometry.radius).endFill();}
+  else{
+    mark.lineStyle(geometry.width,0xff6b35,1);
+    for(const [a,b,c] of geometry.corners)mark.moveTo(a.x,a.y).lineTo(b.x,b.y).lineTo(c.x,c.y);
+    mark.endFill();
+  }
+}
 export function styleTile(object){
   // In V14 frame is the invisible hit-area container, not the painted border.
   // Keep it renderable and interactive so a selected tile remains draggable.
@@ -35,6 +69,7 @@ export function styleTile(object){
     if(hide){if(!borderState.has(part))borderState.set(part,{renderable:part.renderable,eventMode:part.eventMode});part.renderable=false;part.eventMode='none';}
     else if(borderState.has(part)){Object.assign(part,borderState.get(part));borderState.delete(part);}
   }
+  drawSelection(object);
 }
 export function editingClass(Base){return class SprawlBuilderTile extends Base{
   getSnappedPosition(position){
@@ -96,7 +131,8 @@ export function registerTileEditing(){
   if(registered)return;registered=true;CONFIG.Tile.objectClass=editingClass(CONFIG.Tile.objectClass);
   Hooks.on('controlTile',()=>{const selected=canvas.tiles?.controlled??[];showTileEditor(selected.length===1?selected[0]:null);});
   Hooks.on('canvasTearDown',()=>{closePanel?.();hideGuides();});
+  Hooks.on('canvasPan',()=>{for(const object of [...(canvas.tiles?.controlled??[]),...(canvas.tiles?.preview?.children??[])])drawSelection(object);});
   Hooks.on('deleteTile',doc=>{if(panel&&owned(doc))closePanel?.();});
-  Hooks.on('deactivateTilesLayer',()=>{closePanel?.();hideGuides();});
+  Hooks.on('deactivateTilesLayer',()=>{closePanel?.();hideGuides();for(const object of canvas.tiles?.placeables??[]){const mark=selectionMarks.get(object);if(mark)mark.visible=false;}});
   Hooks.once('ready',async()=>{try{assets=new Map((await loadCatalog()).map(a=>[a.key,a]));}catch(e){ui.notifications.error(e.message);}});
 }
