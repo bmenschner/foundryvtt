@@ -53,9 +53,9 @@ Der Kantenfang kann zwei Nachbarn gleichzeitig berücksichtigen: Die rechte Seit
 
 Unter **Kacheln** ein einzelnes SprawlBuilder-Asset auswählen. Direktes Ziehen verwendet ebenfalls den Kantenfang; **Alt** oder der Schalter erlaubt freies Verschieben. Mehrfachauswahlen behalten Foundrys gemeinsamen Versatz ohne individuelle Magnetkorrektur. Abbruch und fremde Kacheln verwenden das native Verhalten.
 
-Der dicke native Rahmen und die Transformationssymbole werden bei unseren ausgewählten Assets durch eine kompakte Werkzeugleiste ersetzt. **+ / −** skalieren um 1 %, mindestens einen sichtbaren Szenenpixel an der längeren Seite. **Breite/Höhe (px)** erlauben exakte Eingaben. Das **Schloss** hält das Seitenverhältnis; ausgeschaltet lassen sich beide Maße unabhängig ändern. **Kreispfeil** dreht um 1°, das Winkelfeld erlaubt direkte Eingabe. Änderungen über die Leiste halten die sichtbare Objektmitte fest.
+Der dicke native Rahmen und die Transformationssymbole werden bei unseren ausgewählten Assets durch eine kompakte Werkzeugleiste ersetzt. **+ / −** skalieren um 1 %, mindestens einen sichtbaren Szenenpixel an der längeren Seite. **Breite/Höhe (px)** erlauben exakte Eingaben. Das **Schloss** hält das Seitenverhältnis; ausgeschaltet lassen sich beide Maße unabhängig ändern. **Linker/rechter Kreispfeil** dreht um jeweils 1° in die entsprechende Richtung, das Winkelfeld erlaubt direkte Eingabe. Änderungen über die Leiste halten die sichtbare Objektmitte fest.
 
-Der kleine **+-Eckgriff** skaliert frei ohne Raster. Während des Ziehens zeigt ein halbtransparentes Bild die neue Größe; erst Loslassen speichert. Die gegenüberliegende Ecke bleibt fest. Esc bricht den Griffzug ab. Ein Bewegungsbutton ist nicht nötig: Asset direkt greifen und ziehen. Pixelmaße sind Szenenpixel, unabhängig vom Zoom.
+Am Asset selbst gibt es keinen zusätzlichen Skalierungsgriff. Ein Bewegungsbutton ist nicht nötig: Asset direkt greifen und ziehen. Pixelmaße sind Szenenpixel, unabhängig vom Zoom.
 
 ## Gerade Reihen ziehen
 

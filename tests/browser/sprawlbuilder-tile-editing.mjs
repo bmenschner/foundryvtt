@@ -28,14 +28,13 @@ try{
   await editor.getByRole('button',{name:'Vergrößern',exact:true}).click();await page.waitForFunction(()=>editDoc.width===101);assert.equal(await page.evaluate(()=>editDoc.height),20.2);
   await editor.getByRole('button',{name:'Seitenverhältnis beibehalten',exact:true}).click();
   await editor.getByLabel('Breite (px)').fill('102');await editor.getByLabel('Breite (px)').press('Tab');await page.waitForFunction(()=>editDoc.width===102);assert.equal(await page.evaluate(()=>editDoc.height),20.2);
-  await editor.getByRole('button',{name:'Drehen um 1°',exact:true}).click();await page.waitForFunction(()=>editDoc.rotation===1);
+  await editor.getByRole('button',{name:'Rechts drehen um 1°',exact:true}).click();await page.waitForFunction(()=>editDoc.rotation===1);
   await editor.getByLabel('Winkel (°)').fill('0');await editor.getByLabel('Winkel (°)').press('Tab');await page.waitForFunction(()=>editDoc.rotation===0);
-  const handle=page.getByRole('button',{name:'Frei skalieren',exact:true}),box=await handle.boundingBox();
-  await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width/2+7,box.y+box.height/2+4,{steps:4});
-  assert.equal(await page.locator('.ssb-edit-ghost').count(),1);assert.equal(await page.evaluate(()=>editDoc.width),102);await page.mouse.up();await page.waitForFunction(()=>editDoc.width>102);
-  assert.equal(await page.locator('.ssb-edit-ghost').count(),0);
-  const topLeft=await page.evaluate(()=>({x:editDoc.x-editDoc.width/2,y:editDoc.y-editDoc.height/2}));assert(Math.abs(topLeft.x-249)<1e-6);assert(Math.abs(topLeft.y-639.9)<1e-6);
-  await page.evaluate(async()=>{const {showTileEditor}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');canvas.tiles.controlled=[];showTileEditor(null);});assert.equal(await editor.count(),0);assert.equal(await handle.count(),0);
+  await editor.getByRole('button',{name:'Links drehen um 1°',exact:true}).click();await page.waitForFunction(()=>editDoc.rotation===359);
+  await editor.getByRole('button',{name:'Rechts drehen um 1°',exact:true}).click();await page.waitForFunction(()=>editDoc.rotation===0);
+  assert.equal(await page.getByRole('button',{name:'Frei skalieren',exact:true}).count(),0);
+  assert.equal(await page.locator('.ssb-edit-corner,.ssb-edit-ghost').count(),0);
+  await page.evaluate(async()=>{const {showTileEditor}=await import('/modules/shadowrun-sprawlbuilder/tile-editing.mjs');canvas.tiles.controlled=[];showTileEditor(null);});assert.equal(await editor.count(),0);
   assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>window.errors),[]);
-  console.log('PASS: editor controls, one-pixel field adjustment, ratio unlocking, rotate, free corner image preview, fixed opposite corner and selection cleanup.');
+  console.log('PASS: editor controls, one-pixel field adjustment, ratio unlocking, left/right rotation with wraparound, no corner handle and selection cleanup.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve));}
