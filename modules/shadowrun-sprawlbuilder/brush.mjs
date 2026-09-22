@@ -106,7 +106,7 @@ export async function showBrush(assetKey) {
   function resize(){overlay.width=innerWidth;overlay.height=innerHeight;clear();}
   resize();window.addEventListener('resize',()=>{setEnabled(false);resize();},options);
   function world(event){return canvas.canvasCoordinatesFromClient({x:event.clientX,y:event.clientY});}
-  function showStack(bounds){if(erasing)return;const t=stackedTile({...bounds,rotation:0,texture:{anchorX:0,anchorY:0},elevation:level.elevation?.bottom??0,flags:{[ID]:{painted:true}}},scene.tiles,level.id,{mode:stacking.read()});stacking.show([t.sort]);}
+  function showStack(bounds){if(erasing)return;const t=stackedTile({...bounds,rotation:0,texture:{anchorX:0,anchorY:0},elevation:level.elevation?.bottom??0,flags:{[ID]:{painted:true}}},scene.tiles,level.id,{mode:stacking.read()});stacking.show([t.flags[ID].stack.step]);}
   function preview(){
     if(mode.value==='stamp'){
       clear();const ctx=overlay.getContext('2d');

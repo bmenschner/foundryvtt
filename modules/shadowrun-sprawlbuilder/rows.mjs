@@ -102,7 +102,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false,
     clear();if(!start||!end)return;
     try{
       check(scene,level);const result=single?{data:[assetStampData(asset,{grid:scene.grid,rect,level,...placement(end),widthMeters:Number(size.value)})]}:rowData(asset,{grid:scene.grid,rect,level,start,end,widthMeters}),ctx=overlay.getContext('2d');
-      const staged=result.data.map(t=>stackedTile(t,scene.tiles,level.id,{mode:stacking.read()}));stacking.show(staged.map(t=>t.sort));
+      const staged=result.data.map(t=>stackedTile(t,scene.tiles,level.id,{mode:stacking.read()}));stacking.show(staged.map(t=>t.flags[ID].stack.step));
       const a=canvas.clientCoordinatesFromCanvas({x:0,y:0}),b=canvas.clientCoordinatesFromCanvas({x:1,y:0}),zoom=Math.hypot(b.x-a.x,b.y-a.y);
       for(const tile of result.data){const p=canvas.clientCoordinatesFromCanvas(tile);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(tile.rotation*Math.PI/180);ctx.globalAlpha=.65;ctx.drawImage(image,-tile.width*zoom/2,-tile.height*zoom/2,tile.width*zoom,tile.height*zoom);ctx.restore();}
       if(single&&match)for(const contact of [match,match.secondary].filter(Boolean)){const [a,b]=contact.edge.map(p=>canvas.clientCoordinatesFromCanvas(p));ctx.strokeStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
