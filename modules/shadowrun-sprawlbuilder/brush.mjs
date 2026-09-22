@@ -1,5 +1,5 @@
 import {stackedTile,stackControls} from './stacking.mjs';
-import {ID,loadCatalog,tileData,assetPath} from './catalog.mjs';
+import {ID,loadCatalog,tileData,assetPath,closeCatalog} from './catalog.mjs';
 import {stampCells,saveStamps,rectangleBounds} from './stamps.mjs';
 let active,opening=0;
 export function closeBrush(){opening++;active?.dispose();}
@@ -90,7 +90,7 @@ export async function showBrush(assetKey) {
   const eraser=node('button','Boden löschen');eraser.type='button';eraser.setAttribute('aria-pressed','false');
   eraser.addEventListener('click',()=>{if(busy)return;erasing=true;eraser.setAttribute('aria-pressed','true');for(const button of materialButtons)button.setAttribute('aria-pressed','false');selectedName.textContent='Radierer · Boden löschen';setEnabled(true);});
   const undo=node('button','Letzte Aktion zurücknehmen'),close=node('button','Schließen');
-  const status=node('p','Boden oder Radierer wählen und direkt loslegen. Esc pausiert.');status.setAttribute('aria-live','polite');
+  const status=node('p','Boden oder Radierer wählen und direkt loslegen. Rechtsklick pausiert; Esc schließt.');status.setAttribute('aria-live','polite');
   const stacking=stackControls(undefined,()=>preview());
   panel.append(node('span','Böden'),gallery,selectedName,mode,stacking.node,eraser,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
@@ -98,7 +98,7 @@ export async function showBrush(assetKey) {
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
   const controller=new AbortController(),options={signal:controller.signal};
   function clear(){overlay.getContext('2d').clearRect(0,0,overlay.width,overlay.height);}
-  function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';status.textContent=value?(erasing?'Radierer aktiv. Esc pausiert.':'Boden aktiv. Esc pausiert.'):'Pausiert. Boden oder Radierer wählen, um fortzufahren.';points=[];pointer=null;clear();}
+  function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';status.textContent=value?(erasing?'Radierer aktiv. Rechtsklick pausiert; Esc schließt.':'Boden aktiv. Rechtsklick pausiert; Esc schließt.'):'Pausiert. Boden oder Radierer wählen, um fortzufahren.';points=[];pointer=null;hover=null;clear();if(!value){for(const button of materialButtons)button.setAttribute('aria-pressed','false');eraser.setAttribute('aria-pressed','false');selectedName.textContent='Kein Boden aktiv.';}}
   mode.addEventListener('change',()=>{points=[];pointer=null;overflow=false;clear();if(enabled)preview();},options);
   function dispose(){disposed=true;controller.abort();Hooks.off('canvasTearDown',tearHook);Hooks.off('canvasReady',readyHook);overlay.remove();panel.remove();active=null;}
   const tearHook=Hooks.on('canvasTearDown',dispose),readyHook=Hooks.on('canvasReady',dispose);
@@ -123,19 +123,19 @@ export async function showBrush(assetKey) {
     }catch(error){status.textContent=error.message;}
   }
   close.addEventListener('click',dispose,options);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){setEnabled(false);e.stopPropagation();}}, {...options,capture:true});
-  overlay.addEventListener('contextmenu',e=>{e.preventDefault();setEnabled(false);},options);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();dispose();closeCatalog().catch(error=>ui.notifications.error(error.message));}}, {...options,capture:true});
+  for(const target of [overlay,panel])target.addEventListener('contextmenu',e=>{e.preventDefault();e.stopImmediatePropagation();setEnabled(false);},options);
   overlay.addEventListener('pointerdown',e=>{
     if(!enabled || busy || e.button!==0)return;
     try {checkContext(scene,level);
       e.preventDefault();overflow=false;pointer=e.pointerId;overlay.setPointerCapture(pointer);points=[world(e)];stroke={mode:mode.value,asset:selected,erasing,stack:stacking.read()};preview();
     }catch(error){status.textContent=error.message;setEnabled(false);}
   },options);
-  overlay.addEventListener('pointermove',e=>{if(busy)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
+  overlay.addEventListener('pointermove',e=>{if(busy||!enabled)return;hover=world(e);if(pointer===e.pointerId&&points.length){if(stroke.mode==='rectangle')points=[points[0],hover];else if(points.length<9999)points.push(hover);else overflow=true;}preview();},options);
   overlay.addEventListener('pointerleave',()=>{hover=null;if(!points.length)clear();},options);
   overlay.addEventListener('pointercancel',()=>{points=[];pointer=null;clear();},options);
   overlay.addEventListener('pointerup',async e=>{
-    if(pointer!==e.pointerId || !points.length)return;
+    if(e.button!==0 || pointer!==e.pointerId || !points.length)return;
     const path=stroke.mode==='rectangle'?[points[0],world(e)]:[...points,world(e)];pointer=null;points=[];busy=true;stacking.disable(true);close.disabled=eraser.disabled=undo.disabled=mode.disabled=true;for(const button of materialButtons)button.disabled=true;status.textContent='Strich wird gespeichert …';
     try {
       checkContext(scene,level);if(overflow)throw new Error('Der Strich war zu lang. Bitte in kürzeren Abschnitten malen.');

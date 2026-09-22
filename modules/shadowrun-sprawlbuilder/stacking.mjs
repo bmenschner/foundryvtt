@@ -71,10 +71,17 @@ export function stackControls(initial={automatic:true,step:0},onChange=()=>{}){
   const automatic=document.createElement('input');automatic.type='checkbox';automatic.setAttribute('aria-label','Automatisch stapeln');autoLabel.append(automatic);
   const stepLabel=document.createElement('label');stepLabel.textContent='Stufe';
   const step=document.createElement('input');step.type='number';step.min='0';step.step='1';step.setAttribute('aria-label','Stufe');stepLabel.append(step);node.append(autoLabel,stepLabel);
+  const buttons=document.createElement('div');buttons.className='ssb-stack-buttons';
+  const minus=document.createElement('button'),plus=document.createElement('button');
+  for(const [button,text,label] of [[minus,'−','Stufe verringern'],[plus,'+','Stufe erhöhen']]){button.type='button';button.textContent=text;button.title=label;button.setAttribute('aria-label',label);buttons.append(button);}
+  node.append(buttons);let disabled=false;
   const read=()=>({automatic:automatic.checked,step:Number(step.value)});
-  function sync(mode){automatic.checked=mode.automatic;step.value=String(mode.step);step.disabled=automatic.checked;}
-  automatic.addEventListener('change',()=>{step.disabled=automatic.checked;onChange(read());});step.addEventListener('change',()=>onChange(read()));sync(initial);
-  return {node,read,sync,show:values=>{if(automatic.checked)step.value=String(Math.max(0,...values));},disable:value=>{automatic.disabled=value;step.disabled=value||automatic.checked;}};
+  function refresh(){automatic.disabled=disabled;step.disabled=disabled||automatic.checked;minus.disabled=disabled||Number(step.value)<=0;plus.disabled=disabled||Number(step.value)>=Number.MAX_SAFE_INTEGER;}
+  function sync(mode){automatic.checked=mode.automatic;step.value=String(mode.step);refresh();}
+  function adjust(delta){const value=Number(step.value);if(disabled||!Number.isSafeInteger(value)||value<0)return;sync({automatic:false,step:Math.max(0,value+delta)});onChange(read());}
+  minus.addEventListener('click',()=>adjust(-1));plus.addEventListener('click',()=>adjust(1));
+  automatic.addEventListener('change',()=>{refresh();onChange(read());});step.addEventListener('change',()=>{refresh();onChange(read());});sync(initial);
+  return {node,read,sync,show:values=>{if(automatic.checked){step.value=String(Math.max(0,...values));refresh();}},disable:value=>{disabled=value;refresh();}};
 }
 
 export function updateMovedStack(doc,changes,options={},userId){

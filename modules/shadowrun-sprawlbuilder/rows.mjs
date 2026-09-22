@@ -1,6 +1,6 @@
 import {stackedTile,stackControls} from './stacking.mjs';
 import {snapTargets,snapToEdges,tileRectangle} from './snapping.mjs';
-import {ID,assetPath,tileData,loadCatalog} from './catalog.mjs';
+import {ID,assetPath,tileData,loadCatalog,closeCatalog} from './catalog.mjs';
 import {closeBrush} from './brush.mjs';
 
 let active,opening=0;
@@ -71,7 +71,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false,
   if(request!==opening)return;closeBrush();
   const node=(tag,text)=>{const el=document.createElement(tag);if(text)el.textContent=text;return el;};
   const panel=node('section');panel.className='ssb-row-panel';panel.setAttribute('aria-label',single?'Asset-Stempel':'Reihe ziehen');
-  const status=node('p',single?'Klick setzt ein Exemplar. Esc oder Rechtsklick beendet das Werkzeug.':'Klicken und ziehen. Esc oder Rechtsklick beendet das Werkzeug.');status.setAttribute('aria-live','polite');
+  const status=node('p',single?'Klick setzt ein Exemplar. Rechtsklick beendet das Werkzeug; Esc schließt die Galerie.':'Klicken und ziehen. Rechtsklick beendet das Werkzeug; Esc schließt die Galerie.');status.setAttribute('aria-live','polite');
   const undo=node('button',single?'Letzte Platzierung zurücknehmen':'Letzte Reihe zurücknehmen'),close=node('button','Schließen');
   panel.append(node('strong',`${single?'Stempel':'Reihe'} · ${asset.name}`),node('span',single?'':`${widthMeters} m pro Segment`),status,undo,close);
   const size=node('input');size.type='number';size.min='.01';size.max='1000';size.step='.01';size.value=String(widthMeters);size.setAttribute('aria-label','Stempelbreite (m)');
@@ -118,7 +118,7 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false,
   overlay.addEventListener('pointerleave',()=>{if(pointer===null){start=end=null;clear();}},opts);
   overlay.addEventListener('pointercancel',()=>{start=end=null;pointer=null;clear();},opts);
   overlay.addEventListener('pointerup',async e=>{
-    if(busy||pointer!==e.pointerId||!start)return;
+    if(e.button!==0||busy||pointer!==e.pointerId||!start)return;
     const stack=stacking.read();stacking.disable(true);
     const from=start,to=world(e);alt=e.altKey;pointer=null;busy=true;undo.disabled=close.disabled=size.disabled=row.disabled=magnet.disabled=angle.disabled=true;
     try{check(scene,level);
@@ -132,6 +132,6 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false,
   },opts);
   undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{await undoRow(single);status.textContent=single?'Letzte Platzierung zurückgenommen.':'Letzte Reihe zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
   close.addEventListener('click',dispose,opts);
-  overlay.addEventListener('contextmenu',e=>{e.preventDefault();dispose();},opts);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.stopPropagation();dispose();}},{...opts,capture:true});
+  for(const target of [overlay,panel])target.addEventListener('contextmenu',e=>{e.preventDefault();e.stopImmediatePropagation();dispose();},opts);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();dispose();closeCatalog().catch(error=>ui.notifications.error(error.message));}},{...opts,capture:true});
 }

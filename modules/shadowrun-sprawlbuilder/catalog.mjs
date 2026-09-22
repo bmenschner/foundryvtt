@@ -1,6 +1,7 @@
 import {registerTileEditing} from './tile-editing.mjs';
 import {setStackCatalog,stackedTile} from './stacking.mjs';
-import {showRows,showAssetStamp} from './rows.mjs';
+import {showRows,showAssetStamp,closeRows} from './rows.mjs';
+import {closeBrush} from './brush.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
 export {collections,taxonomy,assetTypes};
 export const ID='shadowrun-sprawlbuilder';
@@ -106,7 +107,7 @@ export function catalogElement(icons) {
       const card=node('button',undefined,'ssb-card');card.type='button';card.setAttribute('aria-label',asset.name);card.setAttribute('aria-pressed',String(selected?.key===asset.key));
       const picture=node('img');picture.src=assetPath(asset);picture.alt='';picture.loading='lazy';picture.width=120;picture.height=100;
       card.append(picture,node('span',asset.name),node('small',taxonomy[asset.category].subcategories[asset.subcategory]));
-      card.addEventListener('click',async()=>{if(placing)return;selected=asset;selectedName.textContent=asset.name;selectedMeta.textContent=`${collections[asset.collection]} · ${categories[asset.category]} · ${taxonomy[asset.category].subcategories[asset.subcategory]} · ${assetTypes[asset.assetType]}`;width.disabled=false;width.value=String(asset.widthMeters);path.value=assetPath(asset);row.disabled=false;draw();placing=true;try{await showAssetStamp(asset,Number(width.value));if(browser?.rendered)await browser.close();}catch(error){ui.notifications.error(error.message);}finally{placing=false;}});
+      card.addEventListener('click',async()=>{if(placing)return;selected=asset;selectedName.textContent=asset.name;selectedMeta.textContent=`${collections[asset.collection]} · ${categories[asset.category]} · ${taxonomy[asset.category].subcategories[asset.subcategory]} · ${assetTypes[asset.assetType]}`;width.disabled=false;width.value=String(asset.widthMeters);path.value=assetPath(asset);row.disabled=false;draw();placing=true;try{await showAssetStamp(asset,Number(width.value));}catch(error){ui.notifications.error(error.message);}finally{placing=false;}});
       cards.append(card);
     }
     if(!matches.length)cards.append(node('p','Keine passenden Elemente vorhanden. Suche oder Filter ändern.','ssb-empty'));
@@ -115,15 +116,19 @@ export function catalogElement(icons) {
   for(const el of [collection,category,subcategory,type])el.addEventListener('change',()=>{page=0;updateFilters();draw();});
   reset.addEventListener('click',()=>{search.value=collection.value=category.value=subcategory.value=type.value='';page=0;updateFilters();draw();});
   previous.addEventListener('click',()=>{pssb--;draw();});next.addEventListener('click',()=>{page++;draw();});
-  row.addEventListener('click',async()=>{if(!selected||placing)return;placing=true;row.disabled=true;try{await showRows(selected,Number(width.value));if(browser?.rendered)await browser.close();}catch(error){ui.notifications.error(error.message);}finally{placing=false;row.disabled=!selected;}});
+  row.addEventListener('click',async()=>{if(!selected||placing)return;placing=true;row.disabled=true;try{await showRows(selected,Number(width.value));}catch(error){ui.notifications.error(error.message);}finally{placing=false;row.disabled=!selected;}});
+  root.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();closeCatalog().catch(error=>ui.notifications.error(error.message));}},{capture:true});
+  root.addEventListener('contextmenu',e=>{e.preventDefault();e.stopImmediatePropagation();closeRows();selected=null;selectedName.textContent='Noch kein Element ausgewählt.';selectedMeta.textContent='';width.disabled=true;row.disabled=true;path.value='';draw();});
   draw();return root;
 }
+export async function closeCatalog(){if(browser?.rendered)await browser.close();}
 export async function showCatalog() {
   if (!game.user.isGM) return;
   if (browser?.rendered) {browser.bringToFront();return browser;}
   const icons=await loadCatalog();
   class AssetCatalog extends foundry.applications.api.ApplicationV2 {
     static DEFAULT_OPTIONS={id:'shadowrun-sprawlbuilder-catalog',window:{title:'Shadowrun SprawlBuilder · Assets',resizable:true},position:{width:780,height:760}};
+    async close(options){closeRows();closeBrush();return super.close(options);}
     async _renderHTML(){return catalogElement(icons);}
     _replaceHTML(result,content){content.replaceChildren(result);}
   }
@@ -135,7 +140,7 @@ export function registerCatalog() {
   }
   game.settings.registerMenu(ID,'catalog',{name:'Shadowrun SprawlBuilder',label:'Bilderkatalog öffnen',hint:'Kartenelemente und Bodentexturen durchsuchen und als Tile platzieren.',icon:'fas fa-images',type:CatalogMenu,restricted:true});
 }
-export async function showBrush(assetKey){await (await import('./brush.mjs')).showBrush(assetKey);if(browser?.rendered)await browser.close();}
+export async function showBrush(assetKey){await (await import('./brush.mjs')).showBrush(assetKey);}
 export async function initializeCatalog() {
   game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush,showRows,showAssetStamp};
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id!==game.user.id)) return;

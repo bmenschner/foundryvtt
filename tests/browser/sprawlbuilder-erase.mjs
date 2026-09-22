@@ -22,7 +22,7 @@ try{
   assert.equal(await page.getByRole('button',{name:'Malen starten',exact:true}).count(),0);
   await material.click();assert.equal(await page.locator('.ssb-brush-overlay').evaluate(e=>e.style.pointerEvents),'auto');
   await panel.getByLabel('Malmodus').selectOption('rectangle');
-  async function drag(x,y,z,w){await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(z,w,{steps:4});await page.mouse.up();await page.waitForFunction(()=>!document.querySelector('.ssb-brush button[disabled]'));}
+  async function drag(x,y,z,w){await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(z,w,{steps:4});await page.mouse.up();await page.waitForFunction(()=>!document.querySelector('.ssb-brush .ssb-floor-card[disabled]'));}
   await drag(110,710,390,890);
   assert.equal(await page.evaluate(()=>docs.size),1);
   const before=await page.evaluate(()=>[...docs.values()][0].texture.src);
@@ -36,7 +36,7 @@ try{
   await panel.getByLabel('Malmodus').selectOption('rectangle');await drag(390,890,110,710);assert.equal(await page.evaluate(()=>docs.size),0);
   await panel.getByRole('button',{name:'Letzte Aktion zurücknehmen'}).click();await page.waitForFunction(()=>docs.size===1);
   assert.equal(await page.evaluate(()=>[...docs.values()][0].texture.src),before);
-  await page.keyboard.press('Escape');assert.equal(await page.locator('.ssb-brush-overlay').evaluate(e=>e.style.pointerEvents),'none');
+  await page.mouse.click(250,850,{button:'right'});assert.equal(await page.locator('.ssb-brush-overlay').evaluate(e=>e.style.pointerEvents),'none');
   await material.click();assert.equal(await page.locator('.ssb-brush-overlay').evaluate(e=>e.style.pointerEvents),'auto');
   // Upload failure and concurrent changes must not destroy the floor; undo must refuse to overwrite edits.
   const checks=await page.evaluate(async()=>{
