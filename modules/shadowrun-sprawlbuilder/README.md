@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.1.1
+# Shadowrun SprawlBuilder · 1.2.0
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen** und **100 neue Bodentexturen** in **SprawlBuilder · Böden**.
 
@@ -6,7 +6,7 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 
 1. Nach dem regulären Deployment unter **Module verwalten → Shadowrun SprawlBuilder** aktivieren und die Welt neu laden.
 2. Eine Szene öffnen und die gewünschte Szenenebene auswählen. Für unser Kartenraster Distanz **1**, Einheit **m** einstellen.
-3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
+3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Gebäude bauen** den Dach-Prototyp und **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
 4. Sammlung, Kategorie und Unterkategorie wählen. Die Suche berücksichtigt Namen, Kategorien und Suchbegriffe; der Elementtyp unterscheidet Einzelobjekte, Bauteile, Overlays und malbare Flächen.
 5. Ein Element anklicken: Der Asset-Stempel startet direkt; die Bibliothek bleibt mit Suche und Filtern offen. Die halbtransparente Vorschau folgt mit der sichtbaren Objektmitte der Maus. Im kleinen Werkzeugfenster die Breite einstellen; Linksklick setzt ein Exemplar. Weitere Klicks setzen weitere Exemplare. Auch nach Ziehen entsteht beim Loslassen nur ein Exemplar. Rechtsklick beendet den Stempel, sodass ein anderes Asset gewählt werden kann. Esc schließt Werkzeug und Bibliothek vollständig. „Letzte Platzierung zurücknehmen“ entfernt die letzte eigene Einzelplatzierung auf der aktuellen Ebene. Anschließend auf der Tile-Ebene verschieben oder drehen.
 
@@ -27,6 +27,14 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 Sammlung und Verwendung sind getrennt. Die ursprünglichen 282 Elemente gehören zur Sammlung Grimmes Erwachen; die 100 neuen Böden zur Sammlung SprawlBuilder · Böden. Beide verwenden dieselben Hauptkategorien. Dateinamen und ehemalige Kategorien bleiben als Herkunftsinformation erhalten. Die Auswahl zeigt ausschließlich belegte Kategorien mit Anzahl; Unterkategorien werden nach Auswahl der Hauptkategorie angeboten. Filter lassen sich gemeinsam zurücksetzen. Die Treffer erscheinen alphabetisch und in Seiten zu 24 Elementen.
 
 Noch keine flächigen Innenbodenmaterialien für Holz oder Auslegware und kein vollständiger modularer Wand- oder Straßenbausatz. Vorhandene Bauteile sind **Bild-Tiles**, keine Foundry-Wände: Sicht- und Bewegungssperren setzt die Spielleitung separat.
+
+## Gebäude bauen · Prototyp
+
+**Shadowrun SprawlBuilder → Gebäude bauen** öffnet ein verschiebbares Werkzeug mit vier Dachmaterialien aus dem vorhandenen Bestand: Beton, Kies, Industrie/Metall und Gras. Material, Rechteck oder L-Form und optional eine Balkonseite wählen. Auf der Karte mit der linken Maustaste die Grundfläche aufziehen; die Vorschau rastet wie der Bodenstempel auf vollständige 1-m-Felder ein. Gebäude sind zwischen 3 und 40 m breit und tief, L-Formen mindestens 5 × 5 m. Der Balkon ragt 1 m an der gewählten Außenseite heraus. Rechtsklick pausiert, **Fortsetzen** aktiviert das Werkzeug wieder, Esc oder **Schließen** beendet es. Die Fensterposition bleibt pro Welt und Benutzer erhalten.
+
+Dachfläche, durchgehende Attika mit Innen- und Außenecken, sichtbare Südseite und Balkon werden zu einem transparenten Tile gerendert. Der feste Blick von oben mit sichtbarer Südseite funktioniert am oberen und unteren Szenenrand sowie bei freistehenden Gebäuden. Ein Gebäude wird in der aktiven Foundry-14-Ebene gespeichert und automatisch über bereits überlappenden Tiles einsortiert. **Letztes Gebäude zurücknehmen** entfernt nur das zuletzt mit diesem Werkzeug erzeugte Tile auf der aktuellen Ebene. Die PNG-Dateien liegen unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-buildings/`; Rückgängig entfernt das Tile, nicht die hochgeladene Datei.
+
+Der Prototyp erzeugt die Bilddarstellung. Für begehbare Dächer, Sichtschutz oder verschiedene Innenstockwerke sind Foundry-Surfaces, Regions und Wände separat zu konfigurieren. Die Tile-Höhe stammt aus der ausgewählten Ebene; die automatische Bildreihenfolge ersetzt keine physische Ebene.
 
 ## Gelände bauen
 

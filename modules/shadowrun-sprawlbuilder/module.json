@@ -1,8 +1,8 @@
 {
   "id": "shadowrun-sprawlbuilder",
   "title": "Shadowrun SprawlBuilder",
-  "description": "Kartenbau mit 282 Assets aus Grimmes Erwachen und 100 neuen Bodentexturen. Kategorien, Suche, Materialfilter und 1-m-Geländestempel für Foundry 14.",
-  "version": "1.1.1",
+  "description": "Kartenbau mit Assets aus Grimmes Erwachen, 100 Bodentexturen und einem Gebäude-Prototyp für Foundry 14.",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "Private Abenteueraufbereitung mit Codex"

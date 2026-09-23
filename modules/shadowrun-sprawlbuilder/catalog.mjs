@@ -4,6 +4,7 @@ import {showRows,showAssetStamp,closeRows} from './rows.mjs';
 import {closeBrush} from './brush.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
 import {rememberApplication} from './panels.mjs';
+import {showBuildings,closeBuildings} from './buildings.mjs';
 export {collections,taxonomy,assetTypes};
 export const ID='shadowrun-sprawlbuilder';
 const BASE=`modules/${ID}`;
@@ -130,7 +131,7 @@ export async function showCatalog() {
   const icons=await loadCatalog();
   class AssetCatalog extends foundry.applications.api.ApplicationV2 {
     static DEFAULT_OPTIONS={id:'shadowrun-sprawlbuilder-catalog',window:{title:'Shadowrun SprawlBuilder · Assets',resizable:true},position:{width:780,height:760}};
-    async close(options){this.panelPosition?.dispose();closeRows();closeBrush();return super.close(options);}
+    async close(options){this.panelPosition?.dispose();closeRows();closeBrush();closeBuildings();return super.close(options);}
     async _renderHTML(){return catalogElement(icons);}
     _replaceHTML(result,content){content.replaceChildren(result);}
   }
@@ -144,7 +145,7 @@ export function registerCatalog() {
 }
 export async function showBrush(assetKey){await (await import('./brush.mjs')).showBrush(assetKey);}
 export async function initializeCatalog() {
-  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush,showRows,showAssetStamp};
+  game.modules.get(ID).api={showCatalog,loadCatalog,placeAsset,showBrush,showRows,showAssetStamp,showBuildings};
   if (!game.user.isGM || (game.users.activeGM && game.users.activeGM.id!==game.user.id)) return;
   if (game.macros.find(m=>m.getFlag(ID,'key')==='launcher')) return;
   try {await CONFIG.Macro.documentClass.create({name:'Shadowrun SprawlBuilder',type:'script',img:'icons/svg/chest.svg',command:`await game.modules.get('${ID}').api.showCatalog();`,ownership:{default:0},flags:{[ID]:{key:'launcher'}}});}
@@ -153,6 +154,7 @@ export async function initializeCatalog() {
 export function sceneControls(controls) {
   controls[ID]={name:ID,title:'Shadowrun SprawlBuilder',icon:'fa-solid fa-images',order:Object.keys(controls).length,visible:game.user.isGM,
     tools:{brush:{name:'brush',title:'Gelände bauen',icon:'fa-solid fa-border-all',order:0,button:true,onChange:()=>showBrush().catch(error=>ui.notifications.error(error.message))},
-      catalog:{name:'catalog',title:'Assets',icon:'fa-solid fa-images',order:1,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))}}};
+      buildings:{name:'buildings',title:'Gebäude bauen',icon:'fa-solid fa-building',order:1,button:true,onChange:()=>showBuildings().catch(error=>ui.notifications.error(error.message))},
+      catalog:{name:'catalog',title:'Assets',icon:'fa-solid fa-images',order:2,button:true,onChange:()=>showCatalog().catch(error=>ui.notifications.error(error.message))}}};
 }
 if (typeof Hooks!=='undefined') {Hooks.once('init',registerTileEditing);Hooks.once('init',registerCatalog);Hooks.once('ready',initializeCatalog);Hooks.on('getSceneControlButtons',sceneControls);}
