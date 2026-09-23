@@ -16,9 +16,10 @@ const context={grid:{size:100,distance:1,units:'m'},rect:{x:200,y:300,width:2000
 test('SprawlBuilder is standalone, complete and retains every original pixel and physical dimension',()=>{
   const manifest=JSON.parse(fs.readFileSync(`${root}/module.json`));
   assert.equal(manifest.id,ID);assert.equal(manifest.title,'Shadowrun SprawlBuilder');assert(!manifest.relationships);
-  assert.equal(icons.length,282);assert.equal(new Set(icons.map(a=>a.key)).size,282);
-  assert.deepEqual(icons.map(a=>a.key).sort(),originals.map(a=>a.key).sort());
-  for(const a of icons){
+  assert.equal(icons.length,382);assert.equal(new Set(icons.map(a=>a.key)).size,382);
+  const retained=icons.filter(a=>a.collection==='grimmes-erwachen');
+  assert.deepEqual(retained.map(a=>a.key).sort(),originals.map(a=>a.key).sort());
+  for(const a of retained){
     const old=originals.find(b=>a.key===b.key);
     assert(collections[a.collection]);assert(taxonomy[a.category]?.subcategories[a.subcategory]);assert(assetTypes[a.assetType]);
     for(const key of ['widthMeters','heightMeters','pixelWidth','pixelHeight','alphaBounds','sha256'])assert.deepEqual(a[key],old[key],`${a.key}: ${key}`);
@@ -34,8 +35,8 @@ test('SprawlBuilder is standalone, complete and retains every original pixel and
 test('semantic categories separate infrastructure, nature, floors, building pieces and small equipment',()=>{
   const expected={kanaldeckel:['strassen','kanalisation'],'gehweg-betonplatten':['strassen','gehwege'],teppich:['innenboeden','teppiche'],'gras-einfach':['natur','untergrund'],heckensegment:['natur','vegetation'],grundmauersegment:['gebaeude','waende'],mauerrest:['absperrungen','mauern'],'kuechenutensilien':['ausstattung','geschirr'],bartresen:['ausstattung','bar'],laborarbeitsplatte:['ausstattung','labor']};
   for(const [key,pair] of Object.entries(expected)){const a=icons.find(a=>a.key===key);assert.deepEqual([a.category,a.subcategory],pair);}
-  assert.equal(icons.filter(a=>a.kind==='terrain').length,3);
-  assert(icons.every(a=>a.collection==='grimmes-erwachen'));
+  assert.equal(icons.filter(a=>a.kind==='terrain').length,103);
+  assert(icons.every(a=>collections[a.collection]));
 });
 
 test('search combines hierarchy, collection, type, umlauts and aliases without inventing missing materials',()=>{
@@ -46,12 +47,12 @@ test('search combines hierarchy, collection, type, umlauts and aliases without i
   assert.deepEqual(keys(filterAssets(icons,'','natur',{assetType:'terrain',collection:'grimmes-erwachen'})),['gras-einfach']);
   assert.equal(filterAssets(icons,'','strassen',{subcategory:'labor'}).length,0);
   assert.equal(filterAssets(icons,'','natur',{collection:'unbekannt'}).length,0);
-  assert.equal(filterAssets(icons,'Sandboden').length,0);
+  assert.equal(filterAssets(icons,'Sandboden').length,10);
 });
 
 test('catalog rejects duplicate identities and broken taxonomy instead of rendering ambiguous items',async()=>{
   globalThis.fetch=async()=>({ok:true,json:async()=>catalog});
-  assert.equal((await loadCatalog()).length,282);
+  assert.equal((await loadCatalog()).length,382);
   for(const broken of [[icons[0],icons[0]],[{...icons[0],subcategory:'missing'}],[{...icons[0],file:'../../private'}]]){
     globalThis.fetch=async()=>({ok:true,json:async()=>({icons:broken})});
     await assert.rejects(loadCatalog());

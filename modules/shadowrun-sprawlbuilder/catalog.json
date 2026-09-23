@@ -8821,7 +8821,7 @@
       "category": "natur",
       "file": "assets/boden/gras-einfach.webp",
       "widthMeters": 4,
-      "heightMeters": 4.0,
+      "heightMeters": 4,
       "pixelWidth": 1254,
       "pixelHeight": 1254,
       "mode": "RGBA",
@@ -8854,7 +8854,7 @@
       "category": "strassen",
       "file": "assets/strassen/asphalt-einfach.webp",
       "widthMeters": 6,
-      "heightMeters": 6.0,
+      "heightMeters": 6,
       "pixelWidth": 1254,
       "pixelHeight": 1254,
       "mode": "RGBA",
@@ -8981,11 +8981,3712 @@
       "tags": [
         "Straßen"
       ]
+    },
+    {
+      "key": "boden-asphalt-01",
+      "name": "Asphalt – Frisch und dunkel",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "096769ff1d04ec0a5d6f4f41721118062555b404b7fa46d4c0679d351ffcd285",
+      "sourceSha256": "df2831aa38a43c68250dfb174deebc26f32c01eda7731c62e079fbb70468cb7f",
+      "rgbaSha256": "39e58d460dc1d2bcb38dd49cd0d54b10ddcfd98413d0db67caea9c87dd3f2cb2",
+      "tags": [
+        "Asphalt",
+        "Frisch und dunkel",
+        "fresh dark charcoal fine aggregate",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-02",
+      "name": "Asphalt – Sonnengebleicht",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "e5aae70371d074031305684be7874b3a8d74ba08e1b75bcda3d9971c68011d36",
+      "sourceSha256": "adb75492ca858e290449519f9618f6a7e0c01bb53704412d7fd6361039926c97",
+      "rgbaSha256": "f371ea827db8ea8867616bfe63cc186f590371955c34814485234c8ea9208143",
+      "tags": [
+        "Asphalt",
+        "Sonnengebleicht",
+        "sun-bleached light grey aggregate",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-03",
+      "name": "Asphalt – Reparierte Risse",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "94fe2b1f653eb977d16457baa1a376ff28506b38218b4e35d75e4c2f6aac5a91",
+      "sourceSha256": "55f97e4afa384f2208d967ce8e6314f89c6a7469110291b08b1d58cfd95ddb30",
+      "rgbaSha256": "51925bc90fc99620917485e7bd53f7882171de75c866805f358c9a3527a2006c",
+      "tags": [
+        "Asphalt",
+        "Reparierte Risse",
+        "weathered network of small repaired cracks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-04",
+      "name": "Asphalt – Grobes Korn",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "bc692309b2ac2be2f3255f45ead997a0a1236767e29f70bb0be97744c720edd0",
+      "sourceSha256": "b9a3cc49dd574b2e5856ee764c5211c51df44b5c2fa672f1150e6b724e809073",
+      "rgbaSha256": "bbc0962ae826d9529091330675d985c58768cec6112ce5293aaa7d4fd2ccf813",
+      "tags": [
+        "Asphalt",
+        "Grobes Korn",
+        "coarse black aggregate",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-05",
+      "name": "Asphalt – Feucht",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "7afecf09a49be6cdf61421fc5c6769e6c47bd933db223d4ab3bc93f392195251",
+      "sourceSha256": "2b5f7bf8f0007aea70bdc71569b852283ce599a8e42bf1f10aa2faeb2958971a",
+      "rgbaSha256": "1529184e789f224e796ca6e9893d8cf74ca4a310d4c007cf0c9b78dd10c2289b",
+      "tags": [
+        "Asphalt",
+        "Feucht",
+        "damp dark asphalt without puddles or reflections",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-06",
+      "name": "Asphalt – Roter Asphalt",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "50d3a4fc45b17ea6143682cb78a3fd74873eb72b791884aff8e2e2273437086d",
+      "sourceSha256": "31f47fb2786300aae8106146e2c5e1a7def2b0fd09a50c587f7d3fc997f84ada",
+      "rgbaSha256": "df33909adc2fa498f111d2b88c5a57d08be4c083e17229f15d79aad2704a8de8",
+      "tags": [
+        "Asphalt",
+        "Roter Asphalt",
+        "reddish cycleway asphalt unmarked",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-07",
+      "name": "Asphalt – Ölflecken",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "fc6ca1cc769c786fa3c7a6c94b2c9e7e3df53caf2f5008905089dad3625823af",
+      "sourceSha256": "402b37a0a83c5bcdcc2357cb29133e139bccb65c37c1fbe424373a02119a3d59",
+      "rgbaSha256": "0ae729cc5716cf44cfc57cc44222d9f9e70f034f22b3eaf03c666715f33cc318",
+      "tags": [
+        "Asphalt",
+        "Ölflecken",
+        "aged asphalt with subtle oil stains",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-08",
+      "name": "Asphalt – Flickstellen",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "2e788b109fedc133c9775b55a4f6ed0121489693643867fa9df6e7b2707c918d",
+      "sourceSha256": "14979b307bc4512e8c13803dc2b045fd2841f5ce5e8c3176f6dd6893cef80f8c",
+      "rgbaSha256": "321513128f061c509dca586d40ba8b8785084b53d20b603e81accf8e2cb4d3f5",
+      "tags": [
+        "Asphalt",
+        "Flickstellen",
+        "patch-repaired asphalt with irregular repairs",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-09",
+      "name": "Asphalt – Staubig",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "1f3d235ba67994bd34f99960bd33be1332ec20e7a2c741c708a18a812a8f2894",
+      "sourceSha256": "cee5aa73a722d2832b223ac39e681e4137a99619137e471bfc40f7b32b76f132",
+      "rgbaSha256": "2fae16b067653b09ff95ab1ac2aaf5bcce0bfaa8982bad8a9f09c153eb1cd678",
+      "tags": [
+        "Asphalt",
+        "Staubig",
+        "dust-covered industrial asphalt",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-asphalt-10",
+      "name": "Asphalt – Freiliegender Zuschlag",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Asphalt",
+      "file": "assets/boeden/boden-asphalt-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "45c66eef7d87f65096fa032e5148587821903feef9bf5d7a0bc6163a446630a2",
+      "sourceSha256": "dee2fdd2506af2078f812d9aa84f215a6426397ffc2586a09d39e210763007d5",
+      "rgbaSha256": "3d411692a05775b615bd306c101208ff757fb5f7dfb7dcf0a42e177f575b6688",
+      "tags": [
+        "Asphalt",
+        "Freiliegender Zuschlag",
+        "worn asphalt with tiny exposed pale aggregate",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-01",
+      "name": "Beton – Glatt und hell",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "347a856f7858467e1210a496a3817b81d9b0bdb2476624ec5af77fd339609fc9",
+      "sourceSha256": "4fa787fec7a63ead8a7bef07313ecad93967f8982fc020975a387cee1f647998",
+      "rgbaSha256": "f1f2d23e29b9533276506378d0a8c260115e6bd58d573b824327c921050c176f",
+      "tags": [
+        "Beton",
+        "Glatt und hell",
+        "fresh smooth light grey poured concrete",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-02",
+      "name": "Beton – Alt und rissig",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "3b6d4c14d2aac7cdd8935c60968a2aa4e2dc2c8a158a77cf3ed618954c97728f",
+      "sourceSha256": "f57c0d9cd0bcab862e63169b5c09df77d676f08b4d5e875f35b9bb6154210efa",
+      "rgbaSha256": "2c8c9525608549bea79f3fccba5b444e69a6a253ac2613d4a53e5acbd67b187b",
+      "tags": [
+        "Beton",
+        "Alt und rissig",
+        "old rough concrete with fine cracks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-03",
+      "name": "Beton – Beige gebürstet",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "388d3a7aa97d1ab2bdcbb5834f24f9c31de81ce6adfdfaaae3158aaf6af12ebf",
+      "sourceSha256": "1965df3a5cce2c7a77af34a93e92673c6b3c59ac1a9e6da9432ee529f6281b53",
+      "rgbaSha256": "1dabbbab2361bfd390cad6c38d89766c1cded1ea8e4b9123fb53cd9e6f88d425",
+      "tags": [
+        "Beton",
+        "Beige gebürstet",
+        "warm beige brushed concrete",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-04",
+      "name": "Beton – Dunkel und feucht",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d61982af424ddecd50c0850703caeb0c336bf7fcbe9eaa558b0a753aa1d4d3af",
+      "sourceSha256": "944904861968d3fd7e84f9ebed0400303dad3caee158b1df2f5b918ae519083c",
+      "rgbaSha256": "04b26845c05e658ab6e5765a20659edbf27366865c87a73ff4e11045dbf075f6",
+      "tags": [
+        "Beton",
+        "Dunkel und feucht",
+        "dark damp concrete no puddles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-05",
+      "name": "Beton – Sichtbarer Zuschlag",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "61fc612adc94f237c7b36c667039f85506bacaf99ecbfae80e05143b171c29e2",
+      "sourceSha256": "2b8fc3ffb7c87363a0261139e493c0e4d978a32e9d0b1501c8530b895fabf6ba",
+      "rgbaSha256": "2db28826def7eb16972b10a55f3f485cc760f045debb303553a4509db951f5ed",
+      "tags": [
+        "Beton",
+        "Sichtbarer Zuschlag",
+        "weathered exposed aggregate concrete",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-06",
+      "name": "Beton – Abgerieben",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f0c459dce18eb253dbee521db673c54da0f68411c42ac0817ab6f33d4aa37b29",
+      "sourceSha256": "92622842a824f7863f37354976d80d0a7c5b63de7d5780bc8f5b630d13c341bb",
+      "rgbaSha256": "316df03230ffda65b79e968da9f0f9ac730425dfb4ea1c9beeb04e6bed6a185d",
+      "tags": [
+        "Beton",
+        "Abgerieben",
+        "industrial concrete with light abrasion",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-07",
+      "name": "Beton – Ölflecken",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "a346c6a8a83f7d6517e59eabebad12852cdf31cfa91b84621e1782221c30e9d1",
+      "sourceSha256": "adc420056044de1325039a021dc5125833866995cec988d6290a1e43c2ebeedc",
+      "rgbaSha256": "c5c5b37e56850da63d28eb3d9605e4c8804dd4bbf2993fa5587612d0a7e98cf6",
+      "tags": [
+        "Beton",
+        "Ölflecken",
+        "concrete with subtle oil stains",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-08",
+      "name": "Beton – Ausgebessert",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f2d3c97ed9d8dd289cc78a840d0b108b85eb637f08f4eae6c4d3ff2b69b5c90f",
+      "sourceSha256": "71001782a1cd66aedf0b866ee586fcc61370515e2de968ee96c9b653a232b6e9",
+      "rgbaSha256": "391716dba91ec8cefa926c985145dbca8e65cf525479ce48442d6cf31c78cad1",
+      "tags": [
+        "Beton",
+        "Ausgebessert",
+        "patched concrete with irregular repairs",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-09",
+      "name": "Beton – Waschbeton",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "40d01465f01bef67f8bd88d62297aca0904e5afdb2a74825579285c45e9e17e5",
+      "sourceSha256": "73d6293ed9005f4f8194cfb58426d11b644190a02e3859857849377962577ea3",
+      "rgbaSha256": "4fc950b8d16c4f1dd43b2a3a36933e0960384449c38aca1a466ea0f40b5e151e",
+      "tags": [
+        "Beton",
+        "Waschbeton",
+        "fine pebbled washed concrete",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-beton-10",
+      "name": "Beton – Staubige Reifenspuren",
+      "category": "strassen",
+      "subcategory": "fahrbahnen",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Beton",
+      "file": "assets/boeden/boden-beton-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "1126de67eaa97cb679953e8c80efeffda728a1a9c420bc25396e4c72495abc05",
+      "sourceSha256": "3a99b37525d00daf48d377a380eb03323c63aec601420e3dc5111705064bc999",
+      "rgbaSha256": "8d9c207a551e7b4f5f8028aedf99d347bf943ba47296e18a8f9b2995c2d911cd",
+      "tags": [
+        "Beton",
+        "Staubige Reifenspuren",
+        "dusty concrete with faint tire wear",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-01",
+      "name": "Gehwegplatten – Hellgraue Quadrate",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "7c429fecad6dff9873d61c5db2b9eab9bc3037b1407269edbc81819f8d3ebd0b",
+      "sourceSha256": "06f96f6e406258307e07050c51ff68c4d4a86c3cb67674dd1a985029f1e0de75",
+      "rgbaSha256": "ad38f0b728a8a98093e4be106971b062147be3de25ca32d8710682660ec080e6",
+      "tags": [
+        "Gehwegplatten",
+        "Hellgraue Quadrate",
+        "square light grey concrete slabs 50cm with tight seams",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-02",
+      "name": "Gehwegplatten – Beige Rechtecke",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "6f0d54fe5269172c8985ba6e4907c05c0282c9bb12338aab6e78a642a9096c17",
+      "sourceSha256": "69752b6b44e793f4ec6f0dd82f587f008e1c96464d4fbfa766e9cacecd983132",
+      "rgbaSha256": "ac8d01ad3a6cb4efc14e7f11bc7b7d636d8eef1f927ebfb8cd6e5232a8395663",
+      "tags": [
+        "Gehwegplatten",
+        "Beige Rechtecke",
+        "rectangular beige concrete slabs 40x60cm staggered",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-03",
+      "name": "Gehwegplatten – Anthrazit",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "841fc46df9cac193448c3881a5936cc000060340c6cea124a8b1047f7084a9fe",
+      "sourceSha256": "2357767d372a5ab15d00af5c3c38058f109151ce720dbaa871a255bf41fbcb93",
+      "rgbaSha256": "aed30b5b4b2a7ddceae31ca4190dc3f687bcbdd6d6b7aaf9b61f0224ab56ab98",
+      "tags": [
+        "Gehwegplatten",
+        "Anthrazit",
+        "square charcoal slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-04",
+      "name": "Gehwegplatten – Rissige Platten",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "1cfe57bc7cb12cfa24e87889735896b2c4403e9c2ae78396af9611b90ca73b56",
+      "sourceSha256": "99affce25d204401d800e689b269bd9a5ca2ab8d1fbf896d60197a99e6e04c35",
+      "rgbaSha256": "9f625e1c098a9b49a30a8a1ce4f071b5448d3fd6eef75ffce5eb34b345c27e5b",
+      "tags": [
+        "Gehwegplatten",
+        "Rissige Platten",
+        "old cracked grey square slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-05",
+      "name": "Gehwegplatten – Moosfugen",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "1ec2480e1748ad8c884b1a5e302d53e200804868f3641aa14c4d8f12d5957270",
+      "sourceSha256": "ed62cba39b5dc7255ba8ae1dc034514c9ecca6d71943e9fd88b9a033c328c8a1",
+      "rgbaSha256": "fe51f818dbd141b59f7f835ef16a1bc59d471c4bb5107b93047accb6976c33eb",
+      "tags": [
+        "Gehwegplatten",
+        "Moosfugen",
+        "grey slabs 50cm with moss in narrow joints",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-06",
+      "name": "Gehwegplatten – Rote Platten",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "ff431eba1630ea9bc072ac56402cba8c5d466f6c5ddf1ee9d235397507852d0b",
+      "sourceSha256": "cfd1e27d996536d82528b6c018a776761f8d602018898e2d563233afcff5d84b",
+      "rgbaSha256": "b5a70b27144d08aee27c25866a4818ff02cbe57d7a5f0c369f76c6cbb706aee0",
+      "tags": [
+        "Gehwegplatten",
+        "Rote Platten",
+        "reddish square sidewalk slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-07",
+      "name": "Gehwegplatten – Terrazzo",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "87c13783b483d2a5955f9557980f2c9b01a8e688a6fb471fe106ee13f551c0cb",
+      "sourceSha256": "a4379f365812681cd12c7dd05ca51fdc6c087887073e1ffb705a7b4e99691bf8",
+      "rgbaSha256": "345a3d1718a8573e5c62d5fe62e032c13403db4b0b8698d80a988a930dc614b5",
+      "tags": [
+        "Gehwegplatten",
+        "Terrazzo",
+        "cream speckled terrazzo slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-08",
+      "name": "Gehwegplatten – Heller Granit",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "093e106ce20135d55be177c378a8fc6c731610a84c5465bf1b8addaad53b0792",
+      "sourceSha256": "2a7701698cee0cbdb045fe0c128d828ef33d6a02aae0e6eb19ed96c37fbeda18",
+      "rgbaSha256": "b51cd53d8d93ab6f76a12139e1fb6845c2f03e9e2c4b4d1e9cbb602d0b857976",
+      "tags": [
+        "Gehwegplatten",
+        "Heller Granit",
+        "rough pale granite slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-09",
+      "name": "Gehwegplatten – Dunkler Basalt",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "0b40a0ac91efdd66cac5f7024a3c68f8927791607dc64f576137ad7cfdb52174",
+      "sourceSha256": "9bc16c410469772f595baca2d4c118bc8ee42226d6479de1a42b42e5d0132d61",
+      "rgbaSha256": "4d5b153c3f3d2a5cea33f99086726d160d4ec89a8f2535f595582dcf572301fc",
+      "tags": [
+        "Gehwegplatten",
+        "Dunkler Basalt",
+        "dark basalt rectangular slabs 40x60cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gehweg-10",
+      "name": "Gehwegplatten – Sandstein",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gehwegplatten",
+      "file": "assets/boeden/boden-gehweg-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "4645bf244b14a13bd27827ce84ee7263a272d68e79711d17663a020dc0f5b84c",
+      "sourceSha256": "1eff9662314273cb9cd279f6c9265aa6d162211b39239a90824c8f136e687608",
+      "rgbaSha256": "ff84bbaeb414f8ea8bea9b6e1208a2723081e34ec061157eb4b08110dd6c9b38",
+      "tags": [
+        "Gehwegplatten",
+        "Sandstein",
+        "weathered sandstone square slabs 50cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-01",
+      "name": "Pflaster – Grauer Granit",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "91643e421adfe50d2542c4bc3a7e851e07d115d3251398b382ff325643191083",
+      "sourceSha256": "70389875fe4307b0f8489bc4192103ce346d797891cee126c560abb9b10089ac",
+      "rgbaSha256": "7809aa51ae86288ff3caca91166a8049c1cd597728b5a5f7e027ace4d7b2ad1e",
+      "tags": [
+        "Pflaster",
+        "Grauer Granit",
+        "small grey granite cobblestones running bond",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-02",
+      "name": "Pflaster – Ziegel im Fischgrätverband",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "aa807e28e5af033844c12caa4da9a9448cf5d39a45a97a949cf8c1496fb981cc",
+      "sourceSha256": "99f23f13a88d45f3cc29b49dcaf5c124925a73d2b319ba1958ccad16114d8d41",
+      "rgbaSha256": "35901145f0778a8dc5346c09e1f78f550e62dd2c4c46a79ef8ea6d9acb68f821",
+      "tags": [
+        "Pflaster",
+        "Ziegel im Fischgrätverband",
+        "red brick paving herringbone pattern",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-03",
+      "name": "Pflaster – Dunkler Basalt",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "e60a3c58fd50837d205c7026669ab512562f30738b524fa4e2ad810f80e9d6da",
+      "sourceSha256": "a570d8f4b1134a77ab6684c6ef18dea3dd59873eedd920cca33e1e277a498491",
+      "rgbaSha256": "c33bb85b4dcb4a032886f478abef080d4862891b4e9994510267a2ae42e07391",
+      "tags": [
+        "Pflaster",
+        "Dunkler Basalt",
+        "dark basalt cobblestones running bond",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-04",
+      "name": "Pflaster – Heller Kalkstein",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "76c5f0f3dea457da15e7e562582412ea0fdf12f393778acf5ddebd4eb2eb6307",
+      "sourceSha256": "47a975ee4a6b4febb0fdf941e2d2ef8e09932b7d0fb9837943af6153db6fce64",
+      "rgbaSha256": "056ca7fffac862af9a8de7fd6f422358be438beacdf42942787fea72276fcb9e",
+      "tags": [
+        "Pflaster",
+        "Heller Kalkstein",
+        "cream limestone small paving blocks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-05",
+      "name": "Pflaster – Grauer Verbundstein",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "c76381d9d44df011c427b4c0adf523cb455041f3c661df45e9e3f30a868a6dd9",
+      "sourceSha256": "437f12b012b8731b155ae46e98a66ddc7c18ea5ec7b2deefe2cda8af7c75e321",
+      "rgbaSha256": "5bccc6ddd01fbc24d0347a114fba0cfb83bb4759df8d61a38c8b1e008e9c3ee9",
+      "tags": [
+        "Pflaster",
+        "Grauer Verbundstein",
+        "mixed warm grey rectangular interlocking pavers",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-06",
+      "name": "Pflaster – Moosfugen",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f317ca5a185f019800065f837d8faf1a0cc72c9825068d9636413938e196d3fa",
+      "sourceSha256": "fb517ee1c77eb93eef1dcc0db01b15e17a7e35563370d2fc6d4472f1c782b487",
+      "rgbaSha256": "47d37ed2fee045c06ec7c471a6a16fa6a6d19282f88336dd7fdfd93cc4f0d611",
+      "tags": [
+        "Pflaster",
+        "Moosfugen",
+        "old cobblestones with moss joints",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-07",
+      "name": "Pflaster – Sandfarbene Blöcke",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "69bb8edd1394ff621064a7b24d1c97edec822e355898f16ae9740d8a7dd76570",
+      "sourceSha256": "1594b9b4d69cc25992fdbdbb3c92943717d1c6874be4cf4733668927e752858a",
+      "rgbaSha256": "d81004b94e3b382c1097ecd968918fa2becf67db752e0fb45982c6047ae60d8b",
+      "tags": [
+        "Pflaster",
+        "Sandfarbene Blöcke",
+        "sand-colored rectangular block paving",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-08",
+      "name": "Pflaster – Feuchte Ziegel",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "b0b0f61cc77b4b7398aca9e8ab7b8cf8b79123e2a2642d286c98262a17d6ccad",
+      "sourceSha256": "6ad9c75eda57d475447c5062e571ae2a3bad5389ac05994f5cb63b2d69abcbc9",
+      "rgbaSha256": "0a2119648b378e63d5f426a07b180a54f1e44013c7149bffd4f7cea03d40d65d",
+      "tags": [
+        "Pflaster",
+        "Feuchte Ziegel",
+        "dark wet brick paving no reflections",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-09",
+      "name": "Pflaster – Alte Terrakotta",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "2d61bd6795fa9d2252cb9f504e057e44e50eebd925a85f702dc90be90cf13ee7",
+      "sourceSha256": "b865c4a6f9a9bcd1a91b8964dbeb5d108605dfec701bc0fa4bf745d5cb389901",
+      "rgbaSha256": "dfdd57d378b233d48879ba3f2c7786f4159efbe48c48b753c2bd6e5924f41bd5",
+      "tags": [
+        "Pflaster",
+        "Alte Terrakotta",
+        "weathered terracotta brick paving running bond",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-pflaster-10",
+      "name": "Pflaster – Sechseckplatten",
+      "category": "strassen",
+      "subcategory": "gehwege",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Pflaster",
+      "file": "assets/boeden/boden-pflaster-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "84bdef7e605582e02b26fbab35e1c5b9ecdb0fd0ccda08d29b5a524cbb735782",
+      "sourceSha256": "f3cd3d0ff81fabb5a2b521a9df4695542bb3c21748fa4c6d07343c3c8a847c96",
+      "rgbaSha256": "bc5ff4a79de6318321732824228ca221c92d414e8e0fc607acec532826e288b1",
+      "tags": [
+        "Pflaster",
+        "Sechseckplatten",
+        "light grey hexagonal concrete paving blocks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-01",
+      "name": "Sandboden – Heller Strandsand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "6824826f6b5f7af2bb76d4ba6e4e43f653006f09610d71403151a62fc8c70d09",
+      "sourceSha256": "05c640c3ff3cee07537f32a6ccf961de634b8d62a217f581bf708e4fdd33e86e",
+      "rgbaSha256": "ffe671423d555e9f1c177273ebf29a405997d9c43bb3945d59edf47cbac1d1d7",
+      "tags": [
+        "Sandboden",
+        "Heller Strandsand",
+        "fine pale beach sand flat no footprints",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-02",
+      "name": "Sandboden – Goldene Wellen",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f930bafc29e04917ced80ae5388e3600725cbe71f29f59bf22b64f3598edb08b",
+      "sourceSha256": "fe445e62f907269ffd2c293926bca0c312d439979074ecab7de0475c7bcf32fa",
+      "rgbaSha256": "34a46610af4ef22e1f9355ad9cf2302a95aa2f290b0140dd4d6767d4b0e59101",
+      "tags": [
+        "Sandboden",
+        "Goldene Wellen",
+        "golden fine dry sand subtle wind ripples",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-03",
+      "name": "Sandboden – Roter Wüstensand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "9e8013ec252367697ba9c251ba5f14616a3b006f38fe3e898053197313eb4cc1",
+      "sourceSha256": "36e9483b608009a53945e0439814911ac0156f8ba48c7fda3e9aa590e0da2453",
+      "rgbaSha256": "8d5cf2e81b918e613de5eb430e481953b23a8b959faa62be31272ac224a1a025",
+      "tags": [
+        "Sandboden",
+        "Roter Wüstensand",
+        "reddish desert sand subtle low ripples",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-04",
+      "name": "Sandboden – Feuchter Sand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "72a6dfaea87ce92de5e7d80bbf98a29560b629414a2f0a9cd717444fe8ddca25",
+      "sourceSha256": "38a3eb55b3642477bbcec0a11c8861ad6b05662900bed7b3a49233ea87debba7",
+      "rgbaSha256": "4a578bce4358c04789d673f3a317b6e90ec1bbc79e736333064577342a5952a9",
+      "tags": [
+        "Sandboden",
+        "Feuchter Sand",
+        "damp compact brown sand no puddles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-05",
+      "name": "Sandboden – Grauer Mineralsand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "17ec59cc77f349320c0e2a5a0f03e5716acd97cc903462844c18d78a89d67328",
+      "sourceSha256": "3d0cefa3d059771abcebf966923ba63e52decaa090e04093974a5be2394a5b14",
+      "rgbaSha256": "d00aceb7a22917b0d16154b8a8828f8b88949610424f9d992e0e9ccc1ce0fcb4",
+      "tags": [
+        "Sandboden",
+        "Grauer Mineralsand",
+        "grey mineral sand tiny speckles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-06",
+      "name": "Sandboden – Sand mit Kieseln",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "5033febfe4cc51e4ac3defaa9834497f809ea4f0687e12ed30df98e930073766",
+      "sourceSha256": "5dd5079b2bba4450e5b7d3332503d20f000144337cf02b73cca20e622c9afc8d",
+      "rgbaSha256": "83ae9e6610da3e24a335729dfc4b2c2fa2bd46210d23363c870f63aff0a2f856",
+      "tags": [
+        "Sandboden",
+        "Sand mit Kieseln",
+        "pale sand with sparse tiny pebbles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-07",
+      "name": "Sandboden – Grober Bausand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "34486f7897a3a82942e65355eb9807685e685f23d8ff36e499dee3f4971c50fc",
+      "sourceSha256": "5c9ebcc4c01682a9b4ae252e66f798fde90f8ef6d911d43043048e2b4740857f",
+      "rgbaSha256": "95e4f9194e9e5b20a818110b9ff2c1d45b97d16d30272a0fb4d413849e52c572",
+      "tags": [
+        "Sandboden",
+        "Grober Bausand",
+        "coarse beige gritty construction sand",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-08",
+      "name": "Sandboden – Ocker mit Kies",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "07fedc4a3088af0313518c71fd13cf794e0f25f0e720da81955b5516e45a7ce6",
+      "sourceSha256": "96aa7eacc5670441846251622f32635d87df4ef5f9894a7624928b337a1f4c19",
+      "rgbaSha256": "873299428494caead3a00dda6a17ee647a9123b0a2cdfb830818954825010af6",
+      "tags": [
+        "Sandboden",
+        "Ocker mit Kies",
+        "ochre sand with tiny gravel grains",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-09",
+      "name": "Sandboden – Staubige Windspuren",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "55f3b85270ce878cce31d48488ea507484d64695577e5217a8f7e7aca93d3749",
+      "sourceSha256": "3bfb44d0c1bdffde88f485799625f6fe1bc9f224d6003d90141030ece98ee444",
+      "rgbaSha256": "da841c67198d0835e7b0c918252b9b8775bd3f19cbcee1e13994fb8649a74082",
+      "tags": [
+        "Sandboden",
+        "Staubige Windspuren",
+        "windblown dusty tan sand shallow streaks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-sand-10",
+      "name": "Sandboden – Schwarzer Vulkansand",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Sandboden",
+      "file": "assets/boeden/boden-sand-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "729f14c15ef8c6e463e06234fced862e3c4af3586a0cc7cb467c5b20a3e47a3b",
+      "sourceSha256": "61f711ae9bfbad858b7fd936b54f8278250c7508c87703f3326ab82d0edfef12",
+      "rgbaSha256": "57282b962911767e068ae280318198945a7e5abcce225c55e0dbb6032f05a509",
+      "tags": [
+        "Sandboden",
+        "Schwarzer Vulkansand",
+        "dark volcanic black sand fine grains",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-01",
+      "name": "Erdboden – Trocken und fest",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "8e2f7841d753ec88afbfc78a7a5fc0cf2889eb1bf2cf4fa9b9765b56e8e47244",
+      "sourceSha256": "753b6d53065f31185022815851bf48f112fa5f16cf5b353ff2759273c6c697e1",
+      "rgbaSha256": "84e418ad55637b6c11fda9eeb62629de5383fa99becf7eca67f9cd52593c2542",
+      "tags": [
+        "Erdboden",
+        "Trocken und fest",
+        "dry brown compacted soil",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-02",
+      "name": "Erdboden – Dunkler Humus",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "00c761c8308f376709c6fa802fe8fb524bdb3585fef143668e1cd492d8f44d26",
+      "sourceSha256": "8e2089122a369aaaa4dc0b4a9da42e5c78de8aaced99311d67c8dff1c47eaf75",
+      "rgbaSha256": "12e21448efb3a0f60f442a981135e2ab0c8041ac073e3f843d4e3d603e9697bc",
+      "tags": [
+        "Erdboden",
+        "Dunkler Humus",
+        "rich dark moist garden soil",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-03",
+      "name": "Erdboden – Rissiger Lehm",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "18f82be8f23239a4de8337945cd367673f8dd2b308dc43e707047f02d40af5b0",
+      "sourceSha256": "941df11980fc6625a2a484d5c6797dd12fad694f93df387608b280c9be44f3da",
+      "rgbaSha256": "0a440902022a83b2719b76ed586c6cae77bf061086c2149028e8c8c9e6f2c44c",
+      "tags": [
+        "Erdboden",
+        "Rissiger Lehm",
+        "pale cracked clay soil small irregular cracks",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-04",
+      "name": "Erdboden – Roter Lehm",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "0912a5a6681feb2af40b9c3d1d3c114624cf25c06a01006e1a1051841caa1916",
+      "sourceSha256": "3e009d59a50f9c7f7611c7a3acfb884d749fd7baaf8b569417e6f64e3169cb85",
+      "rgbaSha256": "f9d750cb4f5562e0fa2af06b96fb33b56bbc72889d1438e4893cc3641b4e23f1",
+      "tags": [
+        "Erdboden",
+        "Roter Lehm",
+        "reddish clay earth",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-05",
+      "name": "Erdboden – Lockere Schollen",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "b9a40e31b555a1be46213efe177f2ec3af19b4d278235c8692cb0a9c6055b42b",
+      "sourceSha256": "4b7474ae9deec86f7cb3ba73f9bb5b99b5b1634bca53f43637a4882ff9b949b4",
+      "rgbaSha256": "2a1d1fc815fa12af9a596e9e75881f87de9a69ec7355dbe7d980d14b2ec9a551",
+      "tags": [
+        "Erdboden",
+        "Lockere Schollen",
+        "loose freshly tilled dark soil subtle clumps",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-06",
+      "name": "Erdboden – Heller Staub",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d1ab2037786b39d372108a20da78877db70cf48f09054d2ea585b804aeabb1bf",
+      "sourceSha256": "e5be13870c794f6c6d3518b0eda96790b3c475b2bca6d46d57c4b72b4f85e1a8",
+      "rgbaSha256": "b24ccfe6c6f0bcbd638b8cbf6b9cbf395e47213ebdb1fa8590ad7d724ef7cd0d",
+      "tags": [
+        "Erdboden",
+        "Heller Staub",
+        "hard packed dusty tan earth",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-07",
+      "name": "Erdboden – Schlamm",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "a1d0c9cb5b49119e02f3dd2538289b2d5a7de9c29bb7a581141a2dfb901243ab",
+      "sourceSha256": "3512b66bf18f0672facbc5c30c8edf15fef83ff56c97633a78a2e32f58624d6a",
+      "rgbaSha256": "8272b4d36cfbf931ce7cd3edf808462ca0b2116b1fc9a7218353f3f55fc71310",
+      "tags": [
+        "Erdboden",
+        "Schlamm",
+        "muddy earth shallow irregular texture no puddles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-08",
+      "name": "Erdboden – Kleine Steine",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "64645f7a911348262c3b6fae36476fd3efd2cfae05cf9ee55dc1e630562aa2e4",
+      "sourceSha256": "2bd0a79a1dcc3d3809a3c74c1450c6bc66c6eeae4a28dcf1a3761ec9af364122",
+      "rgbaSha256": "17329d6cb854646f578659fd60b65433e1fdb07e05bd1be676a54a818a2328a2",
+      "tags": [
+        "Erdboden",
+        "Kleine Steine",
+        "brown earth with sparse small stones",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-09",
+      "name": "Erdboden – Industrieboden aus Erde",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "72e3b717408d50d1a455c13650552c6c456f83ebbc169b09599d27369d414282",
+      "sourceSha256": "e7948620d63de17db23f5d54ba6f1b01f26405068d8e525305a5691efc9c9a59",
+      "rgbaSha256": "1c89cf31cda1ee95860cbbabef9cbfba43f71da7a0cd76837c93249e741b57eb",
+      "tags": [
+        "Erdboden",
+        "Industrieboden aus Erde",
+        "grey brown compacted industrial dirt",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-erde-10",
+      "name": "Erdboden – Ocker mit Feinkies",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Erdboden",
+      "file": "assets/boeden/boden-erde-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f8a0a8a4d85ab10dc708ced852caaeca0d0903539a9143591a3f495064c7ba10",
+      "sourceSha256": "b5f56f88d185eff9c9c131c4fa06642bbcc3a39dee129c64456f2f70fb26e909",
+      "rgbaSha256": "39f5f9dd056f5400683cb25faae7709af9340ac9b6c140ace565459099f6ee23",
+      "tags": [
+        "Erdboden",
+        "Ocker mit Feinkies",
+        "ochre dry earth fine gravel inclusions",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-01",
+      "name": "Kies – Heller Kalkstein",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "b789bb52e497f9ca7421748f3ac88f9e299ead725966162ef55cd04aab49e7cc",
+      "sourceSha256": "4d66e891400b55ade4ebfb878b4b718854b42d2773adeb39fa3424b0bd82f492",
+      "rgbaSha256": "12f36d5cfdb047cf76816a31414941e765c2b3ad20a36419f3d1d41e97636508",
+      "tags": [
+        "Kies",
+        "Heller Kalkstein",
+        "small pale limestone gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-02",
+      "name": "Kies – Dunkler Basalt",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "06c228e92d52304dcaadbee672e9c1b56fffeea2063e3c8a298bdfd994e4833a",
+      "sourceSha256": "b5962b11b7ee25a0a7eaac1f61cd8e961b9c60cc23af082076b225dfaab6a211",
+      "rgbaSha256": "274733b774b96467185336a87bcc0c342b976de3ab164037d4c13088621c5741",
+      "tags": [
+        "Kies",
+        "Dunkler Basalt",
+        "dark basalt gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-03",
+      "name": "Kies – Runde Flusskiesel",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "aa99b474dd98da23de943f3b48efcd1f1a432483e3dd9af58efba9fe98ee1b96",
+      "sourceSha256": "b12461d9fb40916b5916de43c5d7de88e647e162b27a13833ce6880294bad218",
+      "rgbaSha256": "201fa557af03b33094cb7989c70ef8c69449719ab52413f4304a8aeec63a9b5a",
+      "tags": [
+        "Kies",
+        "Runde Flusskiesel",
+        "rounded mixed grey river gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-04",
+      "name": "Kies – Roter Splitt",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "b28bb45da7173253ae8d4bb11436ba7e5700b257a0a8d44d79847fd1094f38f6",
+      "sourceSha256": "9342dcf2e423abc665098b1a731f9ba93a5785a91456022aa7fb70bc5b3b6139",
+      "rgbaSha256": "d7a9e51ed71529a5a4726f98d6dc6d8757c2ead42e11a3392007208c5d9da7cd",
+      "tags": [
+        "Kies",
+        "Roter Splitt",
+        "reddish angular gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-05",
+      "name": "Kies – Beiger Feinkies",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "4176cf8a8461fc5a3256f36302e13dc22fc89d51b48f770d2e6712d90333c3e9",
+      "sourceSha256": "5af91cbc07f37216deed8eadbda16c94d4341c1c0821326f9c9241348fba9660",
+      "rgbaSha256": "8da332d5afafb10f2848bd0496908381f6cbafcf00907d093d5a4836dbf33014",
+      "tags": [
+        "Kies",
+        "Beiger Feinkies",
+        "beige pea gravel under 2cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-06",
+      "name": "Kies – Gleisschotter",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d46596dc82fbc189caa003f04c55711e9700334fd82c2b5e3ccf26370b71b62d",
+      "sourceSha256": "609af4d313e0817acb6822c8f9213ba987f62756cee21b4718ebe246eb293f2e",
+      "rgbaSha256": "27c659096a49de50a2dc8da5e567665a7a0a0c4dc2afa8f9d160e5588efd8f75",
+      "tags": [
+        "Kies",
+        "Gleisschotter",
+        "coarse crushed grey railway ballast 3-6cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-07",
+      "name": "Kies – Weißer Marmor",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "ae9d3828f9f15f8047cb70a315116a06291781b03d15f87d253e939d91c9fdba",
+      "sourceSha256": "605665d6af7012686c530743b07e8feab96760d3ddf31d0e070b4dc6bb60a628",
+      "rgbaSha256": "7c6f72894b92edbb9ee2eaa24ac0c067c682dbb2676798a1525258b3f5c68412",
+      "tags": [
+        "Kies",
+        "Weißer Marmor",
+        "white crushed marble gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-08",
+      "name": "Kies – Brauner Baukies",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "eda9fdc1c5f15344c5393b05b9a34726ff6f79ce39841f3eb86abf24218afa60",
+      "sourceSha256": "e8e54165a5e7284d004677b688d743ff458b1515469fc4fa359c2b15c50c2449",
+      "rgbaSha256": "6232cbf1942c569ecd9dc4f622a8a2ac23e0d0d9c655814817d58f940c5147d4",
+      "tags": [
+        "Kies",
+        "Brauner Baukies",
+        "mixed brown construction gravel 1-3cm",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-09",
+      "name": "Kies – Dunkler feuchter Kies",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "a8c48f1b76cfb86e49838523a006d3724f1005d786f95327d036c8309656784e",
+      "sourceSha256": "313001f7945a5862b222abfd69f7704a63d86b316a4d7b083af188b2ad190761",
+      "rgbaSha256": "d35fc0b15fb4a5c91fbc45cf0bfcf8a96576244facec28f22670234a818cb47d",
+      "tags": [
+        "Kies",
+        "Dunkler feuchter Kies",
+        "dark wet fine gravel no pools",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-kies-10",
+      "name": "Kies – Staubiger Kiesweg",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Kies",
+      "file": "assets/boeden/boden-kies-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "b91a2a7fcc21dc38dde93b5a1656c2713e9e88c3d116806a27c3634ba8e61d3b",
+      "sourceSha256": "27af0ef082ec1ec15317ff934a3e4a84c3fda1832eea91f0307be3a7ca5d5ab5",
+      "rgbaSha256": "b362e1c4c5cb7c867018d0c1cabbce0d56ca585eacd28e3e4a9c149af773f35e",
+      "tags": [
+        "Kies",
+        "Staubiger Kiesweg",
+        "dust-covered compacted gravel track surface",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-01",
+      "name": "Gras – Gepflegter Rasen",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "5748bd8c3d820612f366e27ae1f6113dbef438858cfb01aa6fd6f4f43f482412",
+      "sourceSha256": "76236090a25004db9857954cb9b29f575d8ca6c6545a7a1875c17130d9301d88",
+      "rgbaSha256": "233db6ad73ff22b471e1c1394fd27f4ee634c8946b47acdd26ca76ad6a2faf70",
+      "tags": [
+        "Gras",
+        "Gepflegter Rasen",
+        "short neatly mown green lawn no stripes",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-02",
+      "name": "Gras – Dicht und dunkel",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "0203b06a1487695626017b3231a535c7936db577c451c84a359a25ff305a414a",
+      "sourceSha256": "02f5d8110792cb94fe97d4e45308910e2e1c3354a579b211d648640029d52843",
+      "rgbaSha256": "aa1a7cb7539857592537099b501eb0628618b683122f9a39cd3edd36980dc923",
+      "tags": [
+        "Gras",
+        "Dicht und dunkel",
+        "lush dense dark green lawn",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-03",
+      "name": "Gras – Trockenes Sommergras",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "3ce06f9b72cca83e901c42280f88dbb9aa0fa6d3e2460db0a61e844a47296ede",
+      "sourceSha256": "45f4abda337e7f8f23e722cf2bdb7d8e471c50344644bcd8c2770b529ddbddcf",
+      "rgbaSha256": "0fff7d367dd20ffb2072c3a8e0b482437668b589f67d748f4eaf1b9ed5ab6f50",
+      "tags": [
+        "Gras",
+        "Trockenes Sommergras",
+        "dry golden summer grass short",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-04",
+      "name": "Gras – Abgetretener Rasen",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "0c76da28a182c6e8d03c7e42c6034a2efeeb0e586ddd297bdcb8631f318c541d",
+      "sourceSha256": "923e09e290b611418dc0d677011aa4cabea02e27682c27a6b93c47c5c79d5e4f",
+      "rgbaSha256": "5ceb6638621edc28637089365ca08f6ee865f80c397c8d5d3511f3b6fe51087e",
+      "tags": [
+        "Gras",
+        "Abgetretener Rasen",
+        "patchy worn lawn with small bare dirt gaps",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-05",
+      "name": "Gras – Klee und Gras",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d7353420e17e8ac6e6a7092205799638503bc2a6412f202898e6a6a6ce5782ae",
+      "sourceSha256": "f8a79068c8320b8deadc6f5ddc24b3745b9b0c9bd665969f3d742365d3236787",
+      "rgbaSha256": "b2b67c2f3cc9ff7c3d3eb328b1bba0527b645d8e8dfe2fef566c5ae089d856c7",
+      "tags": [
+        "Gras",
+        "Klee und Gras",
+        "mixed green grass and tiny clover leaves",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-06",
+      "name": "Gras – Helles Frühlingsgras",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d9cebb987537c8ab14ed01cb80ea0200c89cfbd8a99702aaad52efeff3d3479f",
+      "sourceSha256": "98676dee41553f1760f75da7c9121b51d81822139b9ab368c387d6ce99837eab",
+      "rgbaSha256": "29e12ae1fb322d5656ffc4cbecdf5af8174aed65a51560a2bc1fa242d049ce99",
+      "tags": [
+        "Gras",
+        "Helles Frühlingsgras",
+        "short pale spring grass",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-07",
+      "name": "Gras – Feuchtes Gras",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "635171dee7532addd8dc911a0750156e0b87cace56803ece898eb2a8da31b889",
+      "sourceSha256": "c138255dad017cc5de40efb3bab6eec5043e5fc18d96ceb2391393252c28dbdf",
+      "rgbaSha256": "0c9f65121a837f842eeea4e712fabfc9e99b45c9c69129fdc163f47c10160c7f",
+      "tags": [
+        "Gras",
+        "Feuchtes Gras",
+        "damp deep green short grass no reflections",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-08",
+      "name": "Gras – Industriebrache",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "5a7d28191c7e61cfdd86077d51cd34db47949e597c6ef55b3bcab90a09385db0",
+      "sourceSha256": "a3b8758b80395fd50336e4910be35f9f698fe4bda7340e9ae7a4a565ece8a1eb",
+      "rgbaSha256": "87981267383cecfa7a8311cf24e63ac0e897a6d101ac49cd4fec00203cb33ef6",
+      "tags": [
+        "Gras",
+        "Industriebrache",
+        "tough olive sparse industrial verge grass",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-09",
+      "name": "Gras – Gelbliche Stellen",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "49281836f49185224aea6137cd2d5caa9a81605f0fe89d2a27d4dfb274b33330",
+      "sourceSha256": "767346959fb7a3aaf0930270ff1b356951a60b2c69cccc4beb34ef87d2667b13",
+      "rgbaSha256": "9e7d4be2b3c72fc06bebf995b953607cf6785125006e3350be4293aded39cc45",
+      "tags": [
+        "Gras",
+        "Gelbliche Stellen",
+        "short green lawn with tiny yellowed patches",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-gras-10",
+      "name": "Gras – Ungleichmäßige Wiese",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Gras",
+      "file": "assets/boeden/boden-gras-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "2c891d261e74abdd4887df46c56b8751358cc497f401e269451aa8936c4c4b17",
+      "sourceSha256": "7913548936319384c32f5763ee379b9da0ab56b409ba3c2341859997c16eafc3",
+      "rgbaSha256": "c2405c442097aba1db985822014cc49e5fd9c86fb787b44c5d0accd1530014bb",
+      "tags": [
+        "Gras",
+        "Ungleichmäßige Wiese",
+        "overgrown uneven meadow grass top-down low growth no flowers",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-01",
+      "name": "Waldboden – Trockenes Eichenlaub",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "de8a73ab914a9e19404931ab946eef66d2da9743bf85b21a929344c8ed25ba17",
+      "sourceSha256": "47d5aacf974a3ee252eca1e4e6dc529c067a4760379d955c08217d1cdab0aadd",
+      "rgbaSha256": "2f1f9ff65ef2c422070b7feffcdc94c69cf43bd5ec266b76da51f4fc952096ef",
+      "tags": [
+        "Waldboden",
+        "Trockenes Eichenlaub",
+        "brown soil covered in small dry oak leaves",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-02",
+      "name": "Waldboden – Kiefernnadeln",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "f7b3450f11dfad749f870e043f820a8b9f564b36e0f4122476ac770a432d51bc",
+      "sourceSha256": "c3cb2bb941e22e035c02cd9b05f3c425540dae54c5d045e71e788df6094c80a2",
+      "rgbaSha256": "e468922f79893ec733d4e0bc14360ba355f378118ad2bd92829d62c367aed1cb",
+      "tags": [
+        "Waldboden",
+        "Kiefernnadeln",
+        "dark soil and pine needles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-03",
+      "name": "Waldboden – Moosteppich",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "e7327b537199eb7c584a0eaacd810b09d9f9532c8156d6fb2d8b64ca371a4b0b",
+      "sourceSha256": "f269ef385d811d3c6517db2aa29b25db5b2577ac48f85d0791eb02cc53ace3ae",
+      "rgbaSha256": "b419bebbbb4cd949a6df3847c2a7102a9294ce48bbd5876c3cc6cbcf3d07222f",
+      "tags": [
+        "Waldboden",
+        "Moosteppich",
+        "soft dense green moss carpet",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-04",
+      "name": "Waldboden – Feuchtes Laub",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "a5dd143fa0be0f21e8ba2945ef39788bd939688498477687a8a6458ab31e4393",
+      "sourceSha256": "7c9d26a8eed884e3aa90a489401f54eae4c103425e0c57562c1f8abef5c4569c",
+      "rgbaSha256": "fbd5d902f62c6cd72c51261437c241bff8a9546d159cd2219e9d216a47b779c0",
+      "tags": [
+        "Waldboden",
+        "Feuchtes Laub",
+        "damp dark leaf litter",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-05",
+      "name": "Waldboden – Feine Wurzeln",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "80c8382a1ef47a54a3d2e15c2d0d2d39edea5c28f3418675a3c4cc683ca0b7cd",
+      "sourceSha256": "0d019c4b77e1c262d1815326c48bd0d53a006491df50c8a9a4bde7bef3e62521",
+      "rgbaSha256": "1f02d13c88cb887840154ffcae49727f5626d23ae5fb9bd1ae37245356635503",
+      "tags": [
+        "Waldboden",
+        "Feine Wurzeln",
+        "mixed soil with fine roots and tiny twigs",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-06",
+      "name": "Waldboden – Trockener Humus",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "54df880cc6b8a874ea62f91ae1a8d0632f7a5869342ed216fbf7930e17e64bad",
+      "sourceSha256": "bc490aaf2cc5b9e8a7ef9f8bbbfb2c585eb93f6edb12cbef71a296e443c9ca68",
+      "rgbaSha256": "e045a88a431fc158299e887209ed2a6134670f83c893cc1dc5a628d68b4d79d6",
+      "tags": [
+        "Waldboden",
+        "Trockener Humus",
+        "dry brown forest humus with sparse leaves",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-07",
+      "name": "Waldboden – Herbstlaub",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "61d8451ac322e2280a223e3dae7b63e2c0caa66c45ab5887fbf1a62a3188a302",
+      "sourceSha256": "99faac6ff8d911793a9968b380f2cdac7ec81a5eeb267820ae09f314358b3e51",
+      "rgbaSha256": "b7e7b1732a97f17536117bf77fb179ce7ee213362b2d23bed86a55c85736a291",
+      "tags": [
+        "Waldboden",
+        "Herbstlaub",
+        "rust colored autumn leaf litter",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-08",
+      "name": "Waldboden – Trockene Steppe",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "fb1743564a290c6ee1325427b02e1dea167a8db865d7c4ad8fe76972e2b34831",
+      "sourceSha256": "fed63a7ea800fec93f880ddbee6c0767d3d06753b138444728a47f4c3894d143",
+      "rgbaSha256": "a5bf38d0af61d9f3ecd8615c0483087ae962b7bdb83578072cf0ff35f771a5f5",
+      "tags": [
+        "Waldboden",
+        "Trockene Steppe",
+        "dusty scrubland soil with tiny dead grass stems",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-09",
+      "name": "Waldboden – Dunkler Mulch",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "212e8b34449198ea59951409a477da2ddbecd93137ff35fa6a90905e237f511b",
+      "sourceSha256": "3332a695de53e808338a630dc19e9ead2dc9a6f2049fc7f1f9f97926f0201890",
+      "rgbaSha256": "8620e58a07b12f01eb9fb3d5a2df3d1d5971da9bab27f2de63c03bb1516d5d2e",
+      "tags": [
+        "Waldboden",
+        "Dunkler Mulch",
+        "dark decomposed woodland mulch",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-waldboden-10",
+      "name": "Waldboden – Moos und Erde",
+      "category": "natur",
+      "subcategory": "untergrund",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Waldboden",
+      "file": "assets/boeden/boden-waldboden-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "11e7ff0d317f7547b198b54d6fa225b390f3122d4282c6176d1861019cdd78d4",
+      "sourceSha256": "64e2923aa2a3b814547aa55ed891f722830076db0fef537f5b5cd8a51b7b8d8d",
+      "rgbaSha256": "3969526002f2c4d8f65fee81f6a3b2070af0e7f94310092491f9041b2e40c036",
+      "tags": [
+        "Waldboden",
+        "Moos und Erde",
+        "olive moss and brown earth patches",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-01",
+      "name": "Industrieboden – Dunkles Riffelblech",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-01.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "5d647f28aebc14fbde9af6773868b3c54b9a77b44c2ba2acfb28b0ddeca083b6",
+      "sourceSha256": "2ebca5a33be67445327aaf479191946a57f322b7109d8dfc68a4ee4757724294",
+      "rgbaSha256": "9170e65cc03a5a801e70487c27f938d194f076c1e76ca6371f84164872e49f98",
+      "tags": [
+        "Industrieboden",
+        "Dunkles Riffelblech",
+        "dark steel diamond tread plate regular 1m panels",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-02",
+      "name": "Industrieboden – Abgenutztes Riffelblech",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-02.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "0bfaad52475d703ce1216b264c35194dae2a1698dfaa64cac260ca1328aa09ce",
+      "sourceSha256": "ae58661263b90560b4ab43d70441cfcc44698d861ad0b632800fba21a8deacda",
+      "rgbaSha256": "3f7b565200fac17aa6b2c02af226a91333316fbdab24b7728dbd8d5848a051e8",
+      "tags": [
+        "Industrieboden",
+        "Abgenutztes Riffelblech",
+        "worn grey steel diamond tread plate regular 1m panels",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-03",
+      "name": "Industrieboden – Rostige Stahlplatten",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-03.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "3855499bf7e55fa3fe8828b607e656d545785fe0f5b9d98263c7080c494d0cce",
+      "sourceSha256": "dbd914f7948316f1a2464eaefc899246b4cfa961d6417950c4500c235bd61dba",
+      "rgbaSha256": "32b08f44038d93ca641a0a8311b0721404e2c72d5bef64d477aeab74434324c4",
+      "tags": [
+        "Industrieboden",
+        "Rostige Stahlplatten",
+        "rusted steel floor panels regular 1m squares",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-04",
+      "name": "Industrieboden – Aluminium-Riffelblech",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-04.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "d55d756b933732568da076599569315a87806b97aee4e6b263390fc00893c9e7",
+      "sourceSha256": "40a3f6e1ac13e74d5da30784c644e4224bac1c6748debfce8bd078509f5ee163",
+      "rgbaSha256": "0deb896078d6d526d0543429bca2960359d789844b229c713a929344e9d71bfa",
+      "tags": [
+        "Industrieboden",
+        "Aluminium-Riffelblech",
+        "brushed aluminium tread plate regular 1m panels",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-05",
+      "name": "Industrieboden – Gumminoppen",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-05.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "030b8b29540502099f888df3d00085ba036be62c2dce42eb209c10ff90cfe4b5",
+      "sourceSha256": "84912e3e6e6422e22bf4dfd5baca94d78ad0571809ce4037414b0e8b0017a1fc",
+      "rgbaSha256": "0cf53378cfea6102ade64715b3cd65f1a7e6b57bc13eec74dc13d3788fbd48cc",
+      "tags": [
+        "Industrieboden",
+        "Gumminoppen",
+        "dark rubber studded workshop flooring regular 50cm tiles",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-06",
+      "name": "Industrieboden – Graues Epoxidharz",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-06.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "35c3a5085cebcc1fe57d2db81ea99e641946a4e1e935c9457a064a92503ae699",
+      "sourceSha256": "19920b0146103ca9ae57829f03502eaf509f0716c98ed0599dfe059e3846d086",
+      "rgbaSha256": "3668243be2ef4dcf707ed5f55fadb390ef7c2238a0db557c9f7fb59f09e05fc6",
+      "tags": [
+        "Industrieboden",
+        "Graues Epoxidharz",
+        "grey epoxy resin industrial floor fine scuffs",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-07",
+      "name": "Industrieboden – Olivgrünes Epoxidharz",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-07.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "2e06bf25d01b7880ce33eea0309006dcec7225a06d2221956260137befa99f3b",
+      "sourceSha256": "de6ae43b6c837207e075e5bcf88958acadb42932fac7ab34e579c135571b22fa",
+      "rgbaSha256": "eb7c79e2257d21f0552d05f0a132dff83965815e60b7665b5c3dccd8b1508acd",
+      "tags": [
+        "Industrieboden",
+        "Olivgrünes Epoxidharz",
+        "olive green worn epoxy resin floor",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-08",
+      "name": "Industrieboden – Rotbrauner Antirutschboden",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-08.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "e3dbc656ce9ddac7e2c408990ad0455cd8194e6bbb9d0027882d558a02f3b7d2",
+      "sourceSha256": "26c6db9a7fd52dfdfdffd099a21b60a9b7e0995722b6f5ac9685a701e95393ed",
+      "rgbaSha256": "241e7d2d1b33c11c0a27058fe3f71372d9fefd0c6ab95b8ac7db78ec19258da4",
+      "tags": [
+        "Industrieboden",
+        "Rotbrauner Antirutschboden",
+        "red brown anti-slip industrial resin floor",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-09",
+      "name": "Industrieboden – Schwarzer Rillengummi",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-09.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "2b68c5e68256ba776a6447e237bf7811b149dd4021043209603d3dac793e6549",
+      "sourceSha256": "6b48a35fa577923aa23212bb59f214c278bbde2f3f47ed04ac2b0aa894af39d8",
+      "rgbaSha256": "2c9bf11f6ea8ff82eb9919bd32cf14b541acd96382d906147d08233b5035f7ad",
+      "tags": [
+        "Industrieboden",
+        "Schwarzer Rillengummi",
+        "black textured rubber floor fine ribs",
+        "Boden",
+        "4 m"
+      ]
+    },
+    {
+      "key": "boden-industrie-10",
+      "name": "Industrieboden – Heller Polymerboden",
+      "category": "innenboeden",
+      "subcategory": "industrieboden",
+      "collection": "sprawlbuilder-boeden",
+      "material": "Industrieboden",
+      "file": "assets/boeden/boden-industrie-10.webp",
+      "widthMeters": 4,
+      "heightMeters": 4,
+      "pixelWidth": 1254,
+      "pixelHeight": 1254,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "kind": "terrain",
+      "assetType": "terrain",
+      "generation": "built-in image_gen",
+      "sha256": "3c032e6ae306eca2d8079db1c43e1f6e4e6f665db79be3a1b3d8570a657f015c",
+      "sourceSha256": "565335a059b7ff18d640b063ac480c6462136af205b1c1b03979ba53243088a6",
+      "rgbaSha256": "643544ef73de2d6e5cee1a2c4bb0f9843f6a664e60feb6a08125571c42b72621",
+      "tags": [
+        "Industrieboden",
+        "Heller Polymerboden",
+        "pale grey seamless industrial polymer floor fine speckle",
+        "Boden",
+        "4 m"
+      ]
     }
   ],
   "module": "shadowrun-sprawlbuilder",
   "schemaVersion": 1,
   "collections": {
-    "grimmes-erwachen": "Grimmes Erwachen"
+    "grimmes-erwachen": "Grimmes Erwachen",
+    "sprawlbuilder-boeden": "SprawlBuilder · Böden"
   }
 }
