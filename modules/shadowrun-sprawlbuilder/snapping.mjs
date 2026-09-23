@@ -1,4 +1,5 @@
 import {ID} from './catalog.mjs';
+import {buildingPartInvisible} from './building-parts.mjs';
 const radians=a=>a*Math.PI/180;
 export function tileRectangle(tile,assets){
   if(![tile.x,tile.y,tile.width,tile.height].every(Number.isFinite)||tile.width<=0||tile.height<=0)return null;
@@ -8,9 +9,9 @@ export function tileRectangle(tile,assets){
   const bounds=validFootprint?footprint:asset&&!painted?asset.alphaBounds:[0,0,1,1],pw=validFootprint?1:asset&&!painted?asset.pixelWidth:1,ph=validFootprint?1:asset&&!painted?asset.pixelHeight:1;
   const [l,t,r,b]=bounds,rotation=tile.rotation??0,c=Math.cos(radians(rotation)),s=Math.sin(radians(rotation));
   const ox=((l+r)/2/pw-(tile.texture?.anchorX??tile.anchorX??.5))*tile.width,oy=((t+b)/2/ph-(tile.texture?.anchorY??tile.anchorY??.5))*tile.height;
-  return {id:tile.id,x:tile.x+c*ox-s*oy,y:tile.y+s*ox+c*oy,width:(r-l)/pw*tile.width,height:(b-t)/ph*tile.height,rotation};
+  return {id:tile.id,x:tile.x+c*ox-s*oy,y:tile.y+s*ox+c*oy,width:(r-l)/pw*tile.width,height:(b-t)/ph*tile.height,rotation,...(tile.flags?.[ID]?.buildingGroup?{buildingGroup:tile.flags[ID].buildingGroup}:{})};
 }
-export function snapTargets(tiles,assets,levelId){return Array.from(tiles).filter(t=>!t.hidden&&(t.levels?.has?.(levelId)||t.levels?.includes?.(levelId))).map(t=>tileRectangle(t,assets)).filter(Boolean);}
+export function snapTargets(tiles,assets,levelId){return Array.from(tiles).filter(t=>!t.hidden&&!buildingPartInvisible(t)&&(t.levels?.has?.(levelId)||t.levels?.includes?.(levelId))).map(t=>tileRectangle(t,assets)).filter(Boolean);}
 export function snapToEdges({point,width,height,rotation=0,targets,zoom=1,previous=null,allowRotation=true}){
   const free={point,rotation,match:null};if(!Number.isFinite(zoom)||zoom<=0)return free;
   const candidates=[];

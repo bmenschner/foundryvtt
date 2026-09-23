@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.2.1
+# Shadowrun SprawlBuilder · 1.3.0
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen** und **100 neue Bodentexturen** in **SprawlBuilder · Böden**.
 
@@ -6,7 +6,7 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 
 1. Nach dem regulären Deployment unter **Module verwalten → Shadowrun SprawlBuilder** aktivieren und die Welt neu laden.
 2. Eine Szene öffnen und die gewünschte Szenenebene auswählen. Für unser Kartenraster Distanz **1**, Einheit **m** einstellen.
-3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Gebäude bauen** den Dach-Prototyp und **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
+3. Links **Shadowrun SprawlBuilder** wählen: **Gelände bauen** öffnet die Bodengalerie, **Gebäude bauen** erstellt Gebäudeteile, **Gebäude bearbeiten** öffnet Wandwahl und Innenansicht, **Assets** die Objektbibliothek. Alternativ öffnen Moduleinstellungen oder das gleichnamige Startmakro weiterhin die Assets.
 4. Sammlung, Kategorie und Unterkategorie wählen. Die Suche berücksichtigt Namen, Kategorien und Suchbegriffe; der Elementtyp unterscheidet Einzelobjekte, Bauteile, Overlays und malbare Flächen.
 5. Ein Element anklicken: Der Asset-Stempel startet direkt; die Bibliothek bleibt mit Suche und Filtern offen. Die halbtransparente Vorschau folgt mit der sichtbaren Objektmitte der Maus. Im kleinen Werkzeugfenster die Breite einstellen; Linksklick setzt ein Exemplar. Weitere Klicks setzen weitere Exemplare. Auch nach Ziehen entsteht beim Loslassen nur ein Exemplar. Rechtsklick beendet den Stempel, sodass ein anderes Asset gewählt werden kann. Esc schließt Werkzeug und Bibliothek vollständig. „Letzte Platzierung zurücknehmen“ entfernt die letzte eigene Einzelplatzierung auf der aktuellen Ebene. Anschließend auf der Tile-Ebene verschieben oder drehen.
 
@@ -28,17 +28,25 @@ Sammlung und Verwendung sind getrennt. Die ursprünglichen 282 Elemente gehören
 
 Noch keine flächigen Innenbodenmaterialien für Holz oder Auslegware und kein vollständiger modularer Wand- oder Straßenbausatz. Vorhandene Bauteile sind **Bild-Tiles**, keine Foundry-Wände: Sicht- und Bewegungssperren setzt die Spielleitung separat.
 
-## Gebäude bauen · Prototyp
+## Gebäude bauen und einrichten
 
 **Shadowrun SprawlBuilder → Gebäude bauen** öffnet ein verschiebbares Werkzeug mit vier Dachmaterialien aus dem vorhandenen Bestand: Beton, Kies, Industrie/Metall und Gras. Material, Rechteck oder L-Form und optional eine Balkonseite wählen. Auf der Karte mit der linken Maustaste die Grundfläche aufziehen; die Vorschau rastet wie der Bodenstempel auf vollständige 1-m-Felder ein. Gebäude sind zwischen 3 und 40 m breit und tief, L-Formen mindestens 5 × 5 m. Der Balkon ragt 1 m an der gewählten Außenseite heraus. Rechtsklick pausiert, **Fortsetzen** aktiviert das Werkzeug wieder, Esc oder **Schließen** beendet es. Die Fensterposition bleibt pro Welt und Benutzer erhalten.
 
-Dachfläche, Attika mit Innen- und Außenecken, Fassade und Balkon werden zu einem gemeinsamen PNG-Tile gerendert. Transparenz gibt es außerhalb des Umrisses und in der L-Aussparung; die Dachfläche selbst ist undurchsichtig. **Fassadenansicht** wählt Südseite (unten), Nordseite (oben) oder Draufsicht ohne Fassade. Die Schattenrichtung bleibt gleich. Zum Balkon bleibt mittig ein 1 m breiter Zugang im Dachrand und in der Fassade frei; die Vorschau markiert ihn goldfarben. Ein Gebäude wird in der aktiven Foundry-14-Ebene gespeichert und automatisch über bereits überlappenden Tiles einsortiert. **Letztes Gebäude zurücknehmen** entfernt nur das zuletzt mit diesem Werkzeug erzeugte Tile auf der aktuellen Ebene. Die PNG-Dateien liegen unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-buildings/`; Rückgängig entfernt das Tile, nicht die hochgeladene Datei.
+Ab 1.3.0 entstehen getrennte Tiles für **Innenboden, Dach, vier Wandseiten und optional Balkon** mit gemeinsamer Gebäude-ID. Vor dem Aufziehen Innenboden und Dachmaterial wählen. **Dachhöhe über Innenboden** ist standardmäßig 3 m und wird in die Szeneneinheit umgerechnet. Boden und Balkon liegen auf Höhe des gewählten Levels, Dach und Dachrand auf der eingestellten Dachhöhe. Alle Teile werden zunächst dem aktiven Level zugeordnet; weitere Levels werden nicht automatisch angelegt. Die Zeichenreihenfolge setzt den Innenboden über vorhandene Bodenbilder und die Wandränder über das Dach. **Letztes Gebäude zurücknehmen** entfernt alle Teile der letzten eigenen Gruppe dieser Ebene. Die PNG-Dateien liegen unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-buildings/`; Rückgängig entfernt die Tiles, nicht die hochgeladenen Dateien.
+
+Unter **Wände anzeigen** lassen sich **oben, unten, links und rechts** unabhängig abschalten. Dadurch entfallen Wandrand und gegebenenfalls die zugehörige Fassade; Boden, Dach und Balkon bleiben erhalten. Bei einer L-Form zählt die Ausrichtung der Kante: „oben“ betrifft auch die nach oben zeigende zurückgesetzte Kante. Nach einer späteren Drehung beziehen sich die Namen weiterhin auf die ursprüngliche Gebäudeausrichtung. Beispiel: Für ein Gebäude am oberen Kartenrand „unten“ abschalten, um es zur Kartenmitte zu öffnen. Für ein Gebäude am unteren Kartenrand „oben“ abschalten.
+
+**Fassadenansicht** wählt Südseite (unten), Nordseite (oben) oder Draufsicht ohne Fassade. Die Schattenrichtung bleibt gleich. Zum Balkon bleibt mittig ein 1 m breiter Zugang im Wandrand frei; die Vorschau markiert ihn goldfarben. Der Balkon ist in diesem Ausbau eine Plattform auf Innenbodenhöhe, keine automatisch begehbare höhere Etage.
+
+Über **Gebäude bearbeiten** das Gebäude in der Liste wählen. Die vier Wandcheckboxen ändern dessen Seiten dauerhaft für alle Ansichten, auch nach Neuladen. **Innenraum bearbeiten · nur bei mir** blendet dagegen ausschließlich das Dach für die eigene GM-Ansicht aus und lässt die Karte bedienbar. Danach **Assets** oder **Gelände bauen** öffnen und den Innenraum einrichten. **Dach wieder anzeigen**, Schließen des Editors oder Szenenwechsel beendet die lokale Innenansicht. Spieler sehen währenddessen weiterhin das Dach; diese Funktion ist kein automatisches Dachverhalten für den Spielbetrieb.
+
+Verschieben, Skalieren oder Drehen eines Gebäudeteils überträgt die gemeinsame Geometrie nach dem Speichern auf die übrigen Teile. Nachträglich gesetzte Möbel und andere fremde Tiles bleiben an ihrem Ort. **Gesamtes Gebäude löschen** entfernt nur die zugehörigen Teile. Einzelne Teile dürfen weiterhin über Foundry gelöscht werden; sie werden nicht automatisch wiederhergestellt. Native Kopien einzelner Tiles sind eigenständige Bildteile ohne Verbindung zum ursprünglichen Gebäude.
 
 Ab 1.2.1 verwenden Kantenfang und Größenanzeige neuer Gebäude die rechteckige Dachgrundfläche ohne den transparenten Bildrand. Der auskragende Balkon und die L-Aussparung sind dabei keine zusätzlichen Fangkanten. Die Grundfläche bleibt bei Skalierung und Drehung korrekt. Ältere Gebäudebilder enthalten diese normierten Angaben nicht und müssen für den korrigierten Kantenfang neu erzeugt werden. Bestehende Bilder und Tiles werden beim Update nicht verändert.
 
-Rechtsklick und Fokusverlust pausieren das Werkzeug und geben Kartenklicks frei. **Fortsetzen** aktiviert die Zeichenfläche wieder. Mit Esc das Werkzeug vollständig schließen, bevor du das Dach über Foundrys Kachelwerkzeug bearbeitest. Ein eigener Modus „Innenraum bearbeiten“, getrennte Bauteile und automatische Dachausblendung sind noch nicht enthalten; Dach und Balkon können in diesem Prototyp nicht getrennt ausgeblendet werden.
+Rechtsklick und Fokusverlust pausieren das Zeichenwerkzeug und geben Kartenklicks frei. **Fortsetzen** aktiviert die Zeichenfläche wieder. Mit Esc das Zeichenwerkzeug vollständig schließen, bevor du Tiles direkt bearbeitest. Der separate Gebäude-Editor benötigt keine Zeichenfläche und kann neben der Asset-Galerie geöffnet bleiben. Beide Fenster sind verschiebbar.
 
-Der Prototyp erzeugt die Bilddarstellung. Für begehbare Dächer, Sichtschutz oder verschiedene Innenstockwerke sind Foundry-Surfaces, Regions und Wände separat zu konfigurieren. Die Tile-Höhe stammt aus der ausgewählten Ebene; die automatische Bildreihenfolge ersetzt keine physische Ebene.
+Die Wände bleiben **Bildteile**, keine Foundry-Sicht-/Bewegungswände. Für begehbare Dächer, Sichtschutz und automatisches Dachausblenden für Tokens sind Foundry-Surfaces, Regions und Wände separat zu konfigurieren. Vorhandene Gebäude aus 1.2.x werden nicht automatisch zerlegt und erscheinen nicht in der neuen Teileverwaltung. Sie bleiben unverändert; für getrennte Wände und Innenansicht ein neues Gebäude erzeugen.
 
 ## Gelände bauen
 

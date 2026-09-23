@@ -1,6 +1,7 @@
 import {stackUpdate,stackMode,stackControls,onLevel,updateMovedStack} from './stacking.mjs';
 import {ID,loadCatalog} from './catalog.mjs';
 import {tileRectangle,snapTargets,snapToEdges} from './snapping.mjs';
+import {buildingPartInvisible,registerBuildingParts,showBuildingEditor} from './building-parts.mjs';
 let assets=new Map(),panel,closePanel,guide;
 let enabled=true,registered=false;
 export const owned=doc=>!!doc?.flags?.[ID];
@@ -23,7 +24,8 @@ function drawGuides(match){
 export function moveSnap(doc,update,{catalog=assets,targets,zoom:scale=1,previous=null,alt=false}={}){
   const proposed={...doc.toObject(),...update},b=tileRectangle(proposed,catalog);
   if(!b||alt)return {update,match:null};
-  const result=snapToEdges({point:{x:b.x,y:b.y},width:b.width,height:b.height,rotation:b.rotation,targets:targets.filter(t=>t.id!==doc.id),zoom:scale,previous,allowRotation:false});
+  const group=doc.flags?.[ID]?.buildingGroup;
+  const result=snapToEdges({point:{x:b.x,y:b.y},width:b.width,height:b.height,rotation:b.rotation,targets:targets.filter(t=>t.id!==doc.id&&(!group||t.buildingGroup!==group)),zoom:scale,previous,allowRotation:false});
   return {update:{...update,x:proposed.x+result.point.x-b.x,y:proposed.y+result.point.y-b.y},match:result.match};
 }
 const borderState=new WeakMap();
@@ -73,6 +75,8 @@ export function styleTile(object){
   drawSelection(object);
 }
 export function editingClass(Base){return class SprawlBuilderTile extends Base{
+  get isVisible(){return !buildingPartInvisible(this.document)&&super.isVisible;}
+  get isInteractable(){return !buildingPartInvisible(this.document)&&super.isInteractable;}
   getSnappedPosition(position){
     if(owned(this.document)&&game.user.isGM&&canvas.tiles?.controlled?.length===1)return position??{x:this.document.x,y:this.document.y};
     return super.getSnappedPosition(position);
@@ -118,6 +122,7 @@ export function showTileEditor(object){
   const width=field('Breite (px)',initial.width),height=field('Höhe (px)',initial.height),angle=field('Winkel (°)',doc.rotation??0),magnet=field('Kanten einrasten',enabled,'checkbox');let ratio=true;
   const stacking=stackControls(stackMode(doc),mode=>{try{apply(stackUpdate(doc,{},canvas.scene.tiles,canvas.level.id,mode));}catch(e){ui.notifications.error(e.message);stacking.sync(stackMode(doc));}});panel.append(stacking.node);
   const lock=button('Seitenverhältnis beibehalten','fa-lock',()=>{ratio=!ratio;lock.setAttribute('aria-pressed',String(ratio));lock.firstChild.className=`fa-solid ${ratio?'fa-lock':'fa-lock-open'}`;});lock.setAttribute('aria-pressed','true');
+  if(doc.flags?.[ID]?.buildingVersion===2)button('Gebäude bearbeiten','fa-building',()=>showBuildingEditor(doc.flags[ID].buildingGroup).catch(error=>ui.notifications.error(error.message)));
   async function apply(data){if(busy)return;if(!editable(doc))return closePanel?.();busy=true;stacking.disable(true);
     try{await doc.update(data);}catch(e){ui.notifications.error(e.message);}finally{busy=false;sync();stacking.disable(false);}}
   for(const sign of [-1,1])button(sign>0?'Vergrößern':'Verkleinern',sign>0?'fa-plus':'fa-minus',()=>{const b=shape(),factor=sign>0?1+Math.max(.01,1/Math.max(b.width,b.height)):Math.max(1/Math.min(b.width,b.height),1-Math.max(.01,1/Math.max(b.width,b.height)));apply(transformTile(doc,{width:b.width*factor,height:b.height*factor}));});
@@ -131,6 +136,7 @@ export function showTileEditor(object){
 }
 export function registerTileEditing(){
   if(registered)return;registered=true;CONFIG.Tile.objectClass=editingClass(CONFIG.Tile.objectClass);
+  registerBuildingParts();
   Hooks.on('preUpdateTile',updateMovedStack);
   Hooks.on('controlTile',()=>{const selected=canvas.tiles?.controlled??[];showTileEditor(selected.length===1?selected[0]:null);});
   Hooks.on('canvasTearDown',()=>{closePanel?.();hideGuides();});
