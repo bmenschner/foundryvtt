@@ -6,14 +6,14 @@ export function clampPosition(position,size,viewport={width:innerWidth,height:in
 }
 export function readPosition(kind){try{const p=JSON.parse(localStorage.getItem(key(kind)));return p&&Number.isFinite(p.left)&&Number.isFinite(p.top)?{left:p.left,top:p.top}:null;}catch{return null;}}
 export function savePosition(kind,position){try{localStorage.setItem(key(kind),JSON.stringify({left:position.left,top:position.top}));}catch{/* A disabled browser store must not disable dragging. */}}
-export function movablePanel(panel,kind){
+export function movablePanel(panel,kind,{right=330}={}){
   const title=panel.querySelector('strong'),header=document.createElement('header'),reset=document.createElement('button');
   header.className='ssb-panel-header';header.setAttribute('aria-label','Fenster verschieben');
   reset.type='button';reset.className='ssb-panel-reset';reset.textContent='↺';reset.title='Position zurücksetzen';reset.setAttribute('aria-label','Position zurücksetzen');
   header.append(title,reset);panel.prepend(header);
   const controller=new AbortController(),opts={signal:controller.signal};let drag=null;
   const position=()=>{const r=panel.getBoundingClientRect();return {left:r.left,top:r.top};};
-  const defaults=()=>({left:innerWidth-panel.getBoundingClientRect().width-(innerWidth<=800?12:330),top:innerWidth<=800?60:80});
+  const defaults=()=>({left:innerWidth-panel.getBoundingClientRect().width-(innerWidth<=800?12:right),top:innerWidth<=800?60:80});
   const apply=p=>{const bounded=clampPosition(p,panel.getBoundingClientRect());Object.assign(panel.style,{left:`${bounded.left}px`,top:`${bounded.top}px`,right:'auto',bottom:'auto'});return bounded;};
   apply(readPosition(kind)??defaults());
   function finish(cancel=false){if(!drag)return;const current=drag;drag=null;if(cancel)apply(current.position);header.classList.remove('ssb-dragging');if(header.hasPointerCapture(current.id))header.releasePointerCapture(current.id);if(!cancel)savePosition(kind,position());}

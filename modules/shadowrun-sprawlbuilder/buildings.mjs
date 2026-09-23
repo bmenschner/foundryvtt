@@ -3,6 +3,7 @@ import {pixelsPerMeter} from './brush.mjs';
 import {rectangleBounds} from './stamps.mjs';
 import {stackedTile} from './stacking.mjs';
 import {movablePanel} from './panels.mjs';
+import {wallLabels,wallSelection,showBuildingEditor,closeBuildingEditor,groupParts} from './building-parts.mjs';
 
 export const roofMaterials=[
   ['boden-beton-01','Betondach'],['boden-kies-01','Kiesdach'],
@@ -51,16 +52,18 @@ export function parapetSegments(points,opening){
     return a[axis]<b[axis]?[[a,p],[q,b]]:[[a,q],[p,b]];
   });
 }
-export function renderBuilding({bounds,ppm,shape='rectangle',balcony='none',facing='south',asset,image}){
+export function wallSide(a,b){return a[1]===b[1]?(b[0]>a[0]?'north':'south'):(b[1]>a[1]?'east':'west');}
+export function renderBuilding({bounds,ppm,shape='rectangle',balcony='none',facing='south',walls={},part='all',asset,image}){
   if(!asset||!image)throw new Error('Dachtextur fehlt.');
   const width=bounds.width/ppm,height=bounds.height/ppm,points=roofOutline(width,height,shape),deck=balconyBounds(points,balcony),opening=balconyOpening(deck),segments=parapetSegments(points,opening);
+  const visible=wallSelection(walls),wallSegments=segments.filter(([a,b])=>visible[wallSide(a,b)]&&(part==='all'||part===`wall-${wallSide(a,b)}`));
   const pad=1.4,frame={x:bounds.x-pad*ppm,y:bounds.y-pad*ppm,width:bounds.width+pad*2*ppm,height:bounds.height+pad*2*ppm};
   const factor=Math.min(1,4096/Math.max(frame.width,frame.height));
   const surface=document.createElement('canvas');surface.width=Math.ceil(frame.width*factor);surface.height=Math.ceil(frame.height*factor);
   const ctx=surface.getContext('2d');ctx.setTransform(ppm*factor,0,0,ppm*factor,pad*ppm*factor,pad*ppm*factor);
   ctx.lineJoin='miter';ctx.lineCap='square';
   // Balkonplatte vor dem Dach zeichnen. Die Anschlussseite bleibt offen.
-  if(deck){
+  if(deck&&(part==='all'||part==='balcony')){
     ctx.fillStyle='#252b2d';ctx.fillRect(deck.x+.08,deck.y+.15,deck.width,deck.height);
     ctx.fillStyle='#8e9391';ctx.fillRect(deck.x,deck.y,deck.width,deck.height);
     ctx.strokeStyle='#d2cbb5';ctx.lineWidth=.07;
@@ -71,43 +74,61 @@ export function renderBuilding({bounds,ppm,shape='rectangle',balcony='none',faci
     ctx.strokeStyle='#c7d3d2';ctx.lineWidth=.05;
     for(const [side,x1,y1,x2,y2] of sides)if(side!==deck.open){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
   }
-  ctx.save();ctx.translate(.18,.28);path(ctx,points);ctx.fillStyle='rgba(0,0,0,.48)';ctx.fill();ctx.restore();
+  if(part==='all'||part==='roof'){ctx.save();ctx.translate(.18,.28);path(ctx,points);ctx.fillStyle='rgba(0,0,0,.48)';ctx.fill();ctx.restore();}
   // Fassadenrichtung ändert weder Dachtextur noch die feste Schattenrichtung.
-  for(const [[a,y],[b,y2]] of segments){if(y!==y2||!(facing==='south'&&y===height||facing==='north'&&y===0))continue;
+  for(const [[a,y],[b,y2]] of wallSegments){if(y!==y2||!(facing==='south'&&y===height||facing==='north'&&y===0))continue;
     const top=facing==='north'?y-.43:y;ctx.fillStyle='#303737';ctx.fillRect(Math.min(a,b),top,Math.abs(a-b),.43);ctx.fillStyle='#8b918c';ctx.fillRect(Math.min(a,b),top,Math.abs(a-b),.07);ctx.strokeStyle='#141a1d';ctx.lineWidth=.035;for(let x=Math.min(a,b)+1;x<Math.max(a,b);x+=1){ctx.beginPath();ctx.moveTo(x,top+.08);ctx.lineTo(x,top+.4);ctx.stroke();}}
+  if(part==='all'||part==='roof'||part==='floor'){
   path(ctx,points);ctx.save();ctx.clip();
   const pattern=ctx.createPattern(image,'repeat');if(!pattern)throw new Error('Dachtextur konnte nicht geladen werden.');
   // Der Kontext arbeitet bereits in Metern.
   pattern.setTransform(new DOMMatrix().scale(asset.widthMeters/image.width,asset.heightMeters/image.height));
-  ctx.fillStyle=pattern;ctx.fill();ctx.fillStyle='rgba(15,20,20,.17)';ctx.fill();ctx.restore();
-  // Öffnung durch einen Clip aus dem geschlossenen Rand ausschneiden; Ecken bleiben verbunden.
-  ctx.save();if(opening){const [a,b]=opening,horizontal=a[1]===b[1];ctx.beginPath();ctx.rect(-pad,-pad,width+2*pad,height+2*pad);ctx.rect(horizontal?a[0]:a[0]-.3,horizontal?a[1]-.3:a[1],horizontal?1:.6,horizontal?.6:1);ctx.clip('evenodd');}
-  for(const [color,lineWidth] of [['#1a2225',.43],['#777c78',.30],['#bdc2ba',.10]]){path(ctx,points);ctx.strokeStyle=color;ctx.lineWidth=lineWidth;ctx.stroke();}ctx.restore();
-  if(opening){ctx.strokeStyle='#626b66';ctx.lineWidth=.04;for(const [x,y] of opening){ctx.beginPath();if(opening[0][1]===opening[1][1]){ctx.moveTo(x,y-.21);ctx.lineTo(x,y+.21);}else{ctx.moveTo(x-.21,y);ctx.lineTo(x+.21,y);}ctx.stroke();}}
+  ctx.fillStyle=pattern;ctx.fill();if(part!=='floor'){ctx.fillStyle='rgba(15,20,20,.17)';ctx.fill();}ctx.restore();
+  }
+  // Seitenteile enden bündig am Zugang. Quadratische Eckstücke schließen die Fugen.
+  const isDoor=p=>opening?.some(q=>Math.abs(p[0]-q[0])<1e-8&&Math.abs(p[1]-q[1])<1e-8);
+  ctx.lineCap='butt';
+  for(const [color,lineWidth] of [['#1a2225',.43],['#777c78',.30],['#bdc2ba',.10]]){ctx.strokeStyle=ctx.fillStyle=color;ctx.lineWidth=lineWidth;
+    for(const [a,b] of wallSegments){ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.stroke();for(const p of [a,b])if(!isDoor(p))ctx.fillRect(p[0]-lineWidth/2,p[1]-lineWidth/2,lineWidth,lineWidth);}
+  }
+  if(opening&&wallSegments.length){ctx.strokeStyle='#626b66';ctx.lineWidth=.04;for(const [x,y] of opening){if(!wallSegments.some(segment=>segment.some(p=>p[0]===x&&p[1]===y)))continue;ctx.beginPath();if(opening[0][1]===opening[1][1]){ctx.moveTo(x,y-.21);ctx.lineTo(x,y+.21);}else{ctx.moveTo(x-.21,y);ctx.lineTo(x+.21,y);}ctx.stroke();}}
   return {surface,frame,points,deck};
 }
 function check(scene,level){
   if(!game.user.isGM||Number(game.release?.generation)!==14)throw new Error('Gebäude bauen benötigt die Spielleitung und Foundry 14.');
   if(!canvas.ready||canvas.scene!==scene||!level?.id||canvas.level?.id!==level.id)throw new Error('Szene oder Ebene wurde gewechselt. Bitte das Werkzeug neu öffnen.');
 }
-async function saveBuilding({scene,level,bounds,ppm,shape,balcony,facing,asset,image,cancelled=()=>false}){
+export async function saveBuilding({scene,level,bounds,ppm,shape,balcony,facing,walls={},roofHeight=3,asset,image,floorAsset=asset,floorImage=image,cancelled=()=>false}){
   const valid=()=>{check(scene,level);if(cancelled())throw new Error('Gebäudewerkzeug wurde geschlossen. Bitte erneut platzieren.');};
   valid();
   const world=game.world.id;if(!/^[\w-]+$/.test(world))throw new Error('Ungültiger Weltordner.');
-  const {surface,frame}=renderBuilding({bounds,ppm,shape,balcony,facing,asset,image});
+  if(!Number.isFinite(roofHeight)||roofHeight<=0||roofHeight>100)throw new Error('Dachhöhe muss größer als 0 und höchstens 100 m sein.');
+  roofOutline(bounds.width/ppm,bounds.height/ppm,shape);
   const picker=foundry.applications.apps.FilePicker.implementation,folder=`worlds/${world}/${ID}-buildings`;
   try{await picker.browse('data',folder);}catch{try{await picker.createDirectory('data',folder);}catch{await picker.browse('data',folder);}}
-  valid();const blob=await new Promise(resolve=>surface.toBlob(resolve,'image/png'));if(!blob)throw new Error('Gebäude konnte nicht gerendert werden.');
-  valid();const result=await picker.upload('data',folder,new File([blob],`roof-${crypto.randomUUID()}.png`,{type:'image/png'}),{},{notify:false});
-  if(!result?.path||result.error)throw new Error(result?.error||'Upload fehlgeschlagen.');
-  valid();
-  const data={name:`Gebäude: ${asset.name}`,texture:{src:result.path,anchorX:0,anchorY:0},...frame,rotation:0,hidden:false,locked:false,
-    elevation:level.elevation?.bottom??0,levels:[level.id],flags:{[ID]:{building:true,material:asset.key,shape,balcony,facing,footprint:bounds,footprintUV:[(bounds.x-frame.x)/frame.width,(bounds.y-frame.y)/frame.height,(bounds.x+bounds.width-frame.x)/frame.width,(bounds.y+bounds.height-frame.y)/frame.height]}}};
-  const [tile]=await scene.createEmbeddedDocuments('Tile',[stackedTile(data,scene.tiles,level.id)]);
-  if(!tile)throw new Error('Gebäude-Tile konnte nicht angelegt werden.');
-  history.push({scene,levelId:level.id,id:tile.id});return tile;
+  const group=crypto.randomUUID(),selection=wallSelection(walls),data=[];
+  const parts=['floor',...(balcony==='none'?[]:['balcony']),'roof',...Object.keys(wallLabels).map(side=>`wall-${side}`)];
+  const labels={floor:'Innenboden',roof:'Dach',balcony:'Balkon',...Object.fromEntries(Object.entries(wallLabels).map(([side,label])=>[`wall-${side}`,`Wand ${label}`]))};
+  for(const part of parts){
+    valid();const {surface,frame}=renderBuilding({bounds,ppm,shape,balcony,facing,part,asset:part==='floor'?floorAsset:asset,image:part==='floor'?floorImage:image});
+    const blob=await new Promise(resolve=>surface.toBlob(resolve,'image/png'));if(!blob)throw new Error('Gebäudeteil konnte nicht gerendert werden.');valid();
+    const result=await picker.upload('data',folder,new File([blob],`${group}-${part}.png`,{type:'image/png'}),{},{notify:false});
+    if(!result?.path||result.error)throw new Error(result?.error||'Upload fehlgeschlagen.');
+    const shown=!part.startsWith('wall-')||selection[part.slice(5)];
+    data.push({name:`Gebäude ${group.slice(0,4)} · ${labels[part]}`,texture:{src:result.path,anchorX:0,anchorY:0},...frame,rotation:0,hidden:!shown,alpha:shown?1:0,locked:false,
+      elevation:(level.elevation?.bottom??0)+(['floor','balcony'].includes(part)?0:roofHeight*ppm*scene.grid.distance/scene.grid.size),levels:[level.id],
+      flags:{[ID]:{building:true,buildingVersion:2,buildingGroup:group,buildingPart:part,material:asset.key,floorMaterial:floorAsset.key,shape,balcony,facing,walls:selection,roofHeight,footprint:bounds,
+        footprintUV:[(bounds.x-frame.x)/frame.width,(bounds.y-frame.y)/frame.height,(bounds.x+bounds.width-frame.x)/frame.width,(bounds.y+bounds.height-frame.y)/frame.height]}}});
+  }
+  valid();const base=stackedTile(data[0],scene.tiles,level.id);
+  const placed=data.map((d,i)=>({...d,sort:base.sort+i,flags:{[ID]:{...d.flags[ID],stack:{automatic:false,step:base.flags[ID].stack.step+i}}}}));
+  const created=await scene.createEmbeddedDocuments('Tile',placed,{ssbBuildingCreate:true});
+  if(created?.length)history.push({scene,levelId:level.id,group});
+  if(created?.length!==placed.length)throw new Error('Gebäude unvollständig. „Letztes Gebäude zurücknehmen“ entfernt die angelegten Teile.');
+  return created;
 }
 export async function showBuildings(){
+  closeBuildingEditor();
   closeBuildings();(await import('./rows.mjs')).closeRows();(await import('./brush.mjs')).closeBrush();
   const request=opening,scene=canvas.scene,level=canvas.level;check(scene,level);
   const ppm=pixelsPerMeter(scene.grid),rect={...canvas.dimensions.sceneRect};
@@ -123,9 +144,16 @@ export async function showBuildings(){
   const shape=node('select');shape.setAttribute('aria-label','Gebäudeform');shape.append(new Option('Rechteck','rectangle'),new Option('L-Form','l'));
   const facing=node('select');facing.setAttribute('aria-label','Fassadenansicht');facing.append(new Option('Fassade unten · Südseite','south'),new Option('Fassade oben · Nordseite','north'),new Option('Draufsicht ohne Fassade','none'));
   const balcony=node('select');balcony.setAttribute('aria-label','Balkonseite');for(const [v,label] of [['none','Kein Balkon'],['north','Balkon oben'],['south','Balkon unten'],['east','Balkon rechts'],['west','Balkon links']])balcony.append(new Option(label,v));
+  const floor=node('select');floor.setAttribute('aria-label','Innenboden');for(const a of catalog.filter(a=>a.kind==='terrain'))floor.append(new Option(a.name,a.key));floor.value='boden-beton-01';
+  const height=node('input');height.type='number';height.min='.1';height.max='100';height.step='.1';height.value='3';height.setAttribute('aria-label','Dachhöhe über Innenboden (m)');
+  const heightLabel=node('label','Dachhöhe über Innenboden (m)');heightLabel.append(height);
+  const wallControls=node('fieldset');wallControls.className='ssb-wall-controls';wallControls.append(node('legend','Wände anzeigen'));
+  const sideInputs=new Map();for(const [side,label] of Object.entries(wallLabels)){const input=node('input');input.type='checkbox';input.checked=true;input.setAttribute('aria-label',`Wand ${label}`);const wrapper=node('label',label);wrapper.prepend(input);wallControls.append(wrapper);sideInputs.set(side,input);}
+  const readWalls=()=>Object.fromEntries([...sideInputs].map(([side,input])=>[side,input.checked]));
   const status=node('p','Auf der Karte klicken und eine Grundfläche aufziehen (3–40 m). Rechtsklick pausiert; Esc schließt.');status.setAttribute('aria-live','polite');
   const undo=node('button','Letztes Gebäude zurücknehmen'),close=node('button','Schließen');
-  panel.append(node('span','Dachmaterial'),gallery,material,shape,facing,balcony,status,undo,close);
+  const edit=node('button','Gebäude bearbeiten');edit.type='button';let lastGroup;
+  panel.append(node('span','Dachmaterial'),gallery,material,shape,facing,wallControls,balcony,node('span','Innenboden'),floor,heightLabel,status,edit,undo,close);
   const overlay=node('canvas');overlay.className='ssb-building-overlay';document.body.append(overlay,panel);
   const stopMoving=movablePanel(panel,'buildings'),controller=new AbortController(),opts={signal:controller.signal};
   let pointer=null,start=null,end=null,busy=false,paused=false,disposed=false;
@@ -142,25 +170,29 @@ export async function showBuildings(){
     const ctx=overlay.getContext('2d'),toScreen=(x,y)=>canvas.clientCoordinatesFromCanvas({x:bounds.x+x*ppm,y:bounds.y+y*ppm});
     function polygon(p){ctx.beginPath();p.forEach(([x,y],i)=>{const v=toScreen(x,y);if(!i)ctx.moveTo(v.x,v.y);else ctx.lineTo(v.x,v.y);});ctx.closePath();}
     if(deck){const a=toScreen(deck.x,deck.y),b=toScreen(deck.x+deck.width,deck.y+deck.height);ctx.fillStyle='rgba(210,185,145,.55)';ctx.fillRect(a.x,a.y,b.x-a.x,b.y-a.y);}
-    polygon(points);ctx.fillStyle='rgba(110,165,165,.45)';ctx.fill();ctx.strokeStyle='#ddf5df';ctx.lineWidth=3;ctx.stroke();
-    const opening=balconyOpening(deck);if(opening){const a=toScreen(...opening[0]),b=toScreen(...opening[1]);ctx.strokeStyle='#ffca70';ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+    polygon(points);ctx.fillStyle='rgba(110,165,165,.45)';ctx.fill();ctx.strokeStyle='#ddf5df';ctx.lineWidth=3;
+    const opening=balconyOpening(deck),selection=readWalls();for(const [from,to] of parapetSegments(points,opening)){if(!selection[wallSide(from,to)])continue;const a=toScreen(...from),b=toScreen(...to);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+    if(opening&&selection[balcony.value]){const a=toScreen(...opening[0]),b=toScreen(...opening[1]);ctx.strokeStyle='#ffca70';ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
     status.textContent=`${w} × ${h} m · ${shape.value==='l'?'L-Form':'Rechteck'} · ${level.id}`;
   }catch(error){status.textContent=error.message;}}
   update();
   material.addEventListener('change',update,opts);shape.addEventListener('change',preview,opts);balcony.addEventListener('change',preview,opts);facing.addEventListener('change',preview,opts);
+  for(const input of sideInputs.values())input.addEventListener('change',preview,opts);
+  const fields=[material,shape,facing,balcony,floor,height,undo,close,edit,...gallery.children,...sideInputs.values()];
+  edit.addEventListener('click',()=>{if(!busy)showBuildingEditor(lastGroup).catch(error=>ui.notifications.error(error.message));},opts);
   overlay.addEventListener('pointerdown',e=>{if(paused||busy||e.button!==0)return;e.preventDefault();pointer=e.pointerId;start=end=world(e);overlay.setPointerCapture(pointer);preview();},opts);
   overlay.addEventListener('pointermove',e=>{if(paused||busy)return;if(pointer===e.pointerId){end=world(e);preview();}},opts);
   overlay.addEventListener('pointerleave',()=>{if(pointer===null){start=end=null;clear();}},opts);
   overlay.addEventListener('pointercancel',()=>{pointer=null;start=end=null;clear();},opts);
   overlay.addEventListener('pointerup',async e=>{if(e.button!==0||pointer!==e.pointerId||!start||busy)return;
-    end=world(e);pointer=null;busy=true;for(const el of [material,shape,facing,balcony,undo,close,...gallery.children])el.disabled=true;
+    end=world(e);pointer=null;busy=true;for(const el of fields)el.disabled=true;
     try{check(scene,level);const bounds=rectangleBounds(start,end,ppm,rect),selected=materials.find(m=>m.asset.key===material.value).asset;
       roofOutline(bounds.width/ppm,bounds.height/ppm,shape.value);
-      const image=new Image();image.src=assetPath(selected);await image.decode();if(disposed)return;
-      await saveBuilding({scene,level,bounds,ppm,shape:shape.value,balcony:balcony.value,facing:facing.value,asset:selected,image,cancelled:()=>disposed});if(!disposed)status.textContent='Gebäude gesetzt. Weitere Grundfläche aufziehen oder rückgängig machen.';
-    }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}finally{busy=false;start=end=null;clear();for(const el of [material,shape,facing,balcony,undo,close,...gallery.children])el.disabled=false;}
+      const image=new Image(),floorImage=new Image(),floorAsset=catalog.find(a=>a.key===floor.value);image.src=assetPath(selected);floorImage.src=assetPath(floorAsset);await Promise.all([image.decode(),floorImage.decode()]);if(disposed)return;
+      const created=await saveBuilding({scene,level,bounds,ppm,shape:shape.value,balcony:balcony.value,facing:facing.value,walls:readWalls(),roofHeight:Number(height.value),asset:selected,image,floorAsset,floorImage,cancelled:()=>disposed});lastGroup=created[0].flags[ID].buildingGroup;if(!disposed)status.textContent='Gebäudeteile gesetzt. „Gebäude bearbeiten“ öffnet Wandwahl und Innenansicht.';
+    }catch(error){status.textContent=error.message;ui.notifications.error(error.message);}finally{busy=false;start=end=null;clear();for(const el of fields)el.disabled=false;}
   },opts);
-  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{check(scene,level);const i=history.findLastIndex(h=>h.scene===scene&&h.levelId===level.id);if(i<0)throw new Error('Kein eigenes Gebäude auf dieser Ebene zum Zurücknehmen.');const h=history[i];if(scene.tiles.get(h.id)?.flags?.[ID]?.building)await scene.deleteEmbeddedDocuments('Tile',[h.id]);history.splice(i,1);status.textContent='Gebäude zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
+  undo.addEventListener('click',async()=>{if(busy)return;busy=true;undo.disabled=true;try{check(scene,level);const i=history.findLastIndex(h=>h.scene===scene&&h.levelId===level.id);if(i<0)throw new Error('Kein eigenes Gebäude auf dieser Ebene zum Zurücknehmen.');const h=history[i],ids=groupParts(scene,h.group).map(doc=>doc.id);if(ids.length)await scene.deleteEmbeddedDocuments('Tile',ids);history.splice(i,1);status.textContent='Gebäude mit allen Teilen zurückgenommen.';}catch(error){status.textContent=error.message;}finally{busy=false;undo.disabled=false;}},opts);
   close.addEventListener('click',dispose,opts);
   function pause(){if(pointer!==null&&overlay.hasPointerCapture(pointer))overlay.releasePointerCapture(pointer);paused=true;start=end=null;pointer=null;clear();overlay.style.pointerEvents='none';status.textContent='Pausiert. Karte ist bedienbar. „Fortsetzen“ aktiviert das Werkzeug.';resume.hidden=false;}
   for(const target of [overlay,panel])target.addEventListener('contextmenu',e=>{e.preventDefault();e.stopImmediatePropagation();pause();},opts);

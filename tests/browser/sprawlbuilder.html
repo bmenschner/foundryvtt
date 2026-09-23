@@ -4,20 +4,20 @@
 </head><body><h1>Shadowrun SprawlBuilder</h1><script type="module">
 import {catalogElement,loadCatalog,sceneControls} from '/modules/shadowrun-sprawlbuilder/catalog.mjs';
 window.created=[];window.uploads=[];window.errors=[];
-window.game={user:{isGM:true},release:{generation:14},world:{id:'sprawlbuilder-test'}};
+window.game={user:{id:'gm',isGM:true},release:{generation:14},world:{id:'sprawlbuilder-test'}};
 window.ui={notifications:{info(){},error:message=>errors.push(message)}};
 const listeners=new Map();let hookSerial=0;
 window.Hooks={on(event,fn){const id=++hookSerial;listeners.set(id,{event,fn});return id;},off(event,id){listeners.delete(id);},once(){},callAll(event,...args){for(const h of [...listeners.values()])if(h.event===event)h.fn(...args);}};
 const docs=new Map();let serial=0;
 window.docs=docs;
 function documentData(t){const data={...t};delete data.id;delete data.toObject;return structuredClone(data);}
-function makeDoc(t){const id=t._id??String(++serial);return {...t,_id:id,id,toObject(){return documentData(this);}};}
+function makeDoc(t){const id=t._id??String(++serial),doc={...t,_id:id,id,toObject(){return documentData(this);}};Object.defineProperty(doc,'parent',{value:canvas.scene});return doc;}
 window.canvas={ready:true,level:{id:'ground',elevation:{bottom:0}},dimensions:{sceneRect:{x:0,y:0,width:4000,height:3200}},
   canvasCoordinatesFromClient:p=>p,clientCoordinatesFromCanvas:p=>p,
   scene:{grid:{size:100,distance:1,units:'m'},tiles:{get:id=>docs.get(id),[Symbol.iterator]:()=>docs.values()},
     async createEmbeddedDocuments(type,items){const result=items.map(makeDoc);for(const t of result)docs.set(t.id,t);created.push(...result);return result;},
-    async updateEmbeddedDocuments(type,items){return items.map(p=>{const t=docs.get(p._id);if('texture.src' in p)t.texture.src=p['texture.src'];t._stats={modifiedTime:Date.now()};return t;});},
-    async deleteEmbeddedDocuments(type,ids){ids.forEach(id=>docs.delete(id));window.remaining=[...docs.values()];}}
+    async updateEmbeddedDocuments(type,items,options={}){return items.map(p=>{const t=docs.get(p._id);for(const [key,value] of Object.entries(p)){if(key==='_id')continue;const path=key.split('.');let target=t;for(const part of path.slice(0,-1))target=target[part]??=( {} );target[path.at(-1)]=structuredClone(value);}t._stats={modifiedTime:Date.now()};Hooks.callAll('updateTile',t,p,options,game.user.id);return t;});},
+    async deleteEmbeddedDocuments(type,ids){ids.forEach(id=>{const doc=docs.get(id);docs.delete(id);if(doc)Hooks.callAll('deleteTile',doc,{},game.user.id);});window.remaining=[...docs.values()];}}
 };
 window.foundry={applications:{apps:{FilePicker:{implementation:{browse:async()=>({}),upload:async(source,folder,file)=>{uploads.push({folder,name:file.name});return{path:URL.createObjectURL(file)};}}}}}};
 const controls={};sceneControls(controls);window.sprawlControls=controls['shadowrun-sprawlbuilder'];
