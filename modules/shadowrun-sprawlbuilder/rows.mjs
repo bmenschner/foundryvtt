@@ -1,4 +1,5 @@
 import {stackedTile,stackControls} from './stacking.mjs';
+import {movablePanel} from './panels.mjs';
 import {snapTargets,snapToEdges,tileRectangle} from './snapping.mjs';
 import {ID,assetPath,tileData,loadCatalog,closeCatalog} from './catalog.mjs';
 import {closeBrush} from './brush.mjs';
@@ -90,9 +91,10 @@ export async function showRows(asset,widthMeters=asset.widthMeters,single=false,
   const row=node('button','Reihe ziehen');
   if(single){panel.insertBefore(row,undo);row.addEventListener('click',()=>{if(!busy)showRows(asset,Number(size.value),false,stacking.read()).catch(error=>ui.notifications.error(error.message));});}
   const overlay=node('canvas');overlay.className='ssb-row-overlay';document.body.append(overlay,panel);
+  const stopMoving=movablePanel(panel,'asset-tool');
   let start=null,end=null,pointer=null,busy=false,disposed=false;
   const controller=new AbortController(),opts={signal:controller.signal};
-  const dispose=()=>{if(disposed)return;disposed=true;controller.abort();for(const [event,id] of hooks)Hooks.off(event,id);overlay.remove();panel.remove();if(active?.dispose===dispose)active=null;};
+  const dispose=()=>{if(disposed)return;disposed=true;stopMoving();controller.abort();for(const [event,id] of hooks)Hooks.off(event,id);overlay.remove();panel.remove();if(active?.dispose===dispose)active=null;};
   const hooks=[['canvasTearDown',Hooks.on('canvasTearDown',dispose)],['canvasReady',Hooks.on('canvasReady',dispose)],['canvasPan',Hooks.on('canvasPan',()=>{start=end=null;pointer=null;clear();})]];
   active={dispose};
   const clear=()=>overlay.getContext('2d').clearRect(0,0,overlay.width,overlay.height);

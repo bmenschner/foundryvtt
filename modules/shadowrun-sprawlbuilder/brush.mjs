@@ -1,4 +1,5 @@
 import {stackedTile,stackControls} from './stacking.mjs';
+import {movablePanel} from './panels.mjs';
 import {ID,loadCatalog,tileData,assetPath,closeCatalog,normalize} from './catalog.mjs';
 import {stampCells,saveStamps,rectangleBounds} from './stamps.mjs';
 let active,opening=0;
@@ -101,12 +102,13 @@ export async function showBrush(assetKey) {
   panel.append(node('span','Böden'),search,materialFilter,gallery,empty,selectedName,mode,stacking.node,eraser,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
+  const stopMoving=movablePanel(panel,'terrain');
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
   const controller=new AbortController(),options={signal:controller.signal};
   function clear(){overlay.getContext('2d').clearRect(0,0,overlay.width,overlay.height);}
   function setEnabled(value){enabled=value;overlay.style.pointerEvents=value?'auto':'none';status.textContent=value?(erasing?'Radierer aktiv. Rechtsklick pausiert; Esc schließt.':'Boden aktiv. Rechtsklick pausiert; Esc schließt.'):'Pausiert. Boden oder Radierer wählen, um fortzufahren.';points=[];pointer=null;hover=null;clear();if(!value){for(const button of materialButtons)button.setAttribute('aria-pressed','false');eraser.setAttribute('aria-pressed','false');selectedName.textContent='Kein Boden aktiv.';}}
   mode.addEventListener('change',()=>{points=[];pointer=null;overflow=false;clear();if(enabled)preview();},options);
-  function dispose(){disposed=true;controller.abort();Hooks.off('canvasTearDown',tearHook);Hooks.off('canvasReady',readyHook);overlay.remove();panel.remove();active=null;}
+  function dispose(){disposed=true;stopMoving();controller.abort();Hooks.off('canvasTearDown',tearHook);Hooks.off('canvasReady',readyHook);overlay.remove();panel.remove();active=null;}
   const tearHook=Hooks.on('canvasTearDown',dispose),readyHook=Hooks.on('canvasReady',dispose);
   active={panel,dispose};
   function resize(){overlay.width=innerWidth;overlay.height=innerHeight;clear();}

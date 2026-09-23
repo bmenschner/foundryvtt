@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.1.0
+# Shadowrun SprawlBuilder · 1.1.1
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen** und **100 neue Bodentexturen** in **SprawlBuilder · Böden**.
 
@@ -11,6 +11,8 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 5. Ein Element anklicken: Der Asset-Stempel startet direkt; die Bibliothek bleibt mit Suche und Filtern offen. Die halbtransparente Vorschau folgt mit der sichtbaren Objektmitte der Maus. Im kleinen Werkzeugfenster die Breite einstellen; Linksklick setzt ein Exemplar. Weitere Klicks setzen weitere Exemplare. Auch nach Ziehen entsteht beim Loslassen nur ein Exemplar. Rechtsklick beendet den Stempel, sodass ein anderes Asset gewählt werden kann. Esc schließt Werkzeug und Bibliothek vollständig. „Letzte Platzierung zurücknehmen“ entfernt die letzte eigene Einzelplatzierung auf der aktuellen Ebene. Anschließend auf der Tile-Ebene verschieben oder drehen.
 
 ## Bibliothek
+
+**Fenster verschieben:** Gelände bauen und Asset-Stempel/Reihe an der Titelleiste mit gedrückter linker Maustaste ziehen. Dabei wird nichts auf der Karte platziert. Der Pfeil **↺** setzt die Position zurück. Positionen bleiben lokal in diesem Browser getrennt nach Welt, Benutzer und Werkzeug erhalten, auch bei Materialwechsel. Die Asset-Galerie verwendet Foundrys normale Titelleiste; **Fensterposition zurücksetzen** stellt ihre Ausgangsposition wieder her. Nach Verkleinern des Browserfensters bleiben die Titelleisten erreichbar. Wenn der Browser lokale Speicherung sperrt, funktioniert das Verschieben weiterhin ohne dauerhafte Speicherung.
 
 | Hauptkategorie | Inhalt aus dem vorhandenen Bestand |
 | --- | --- |
