@@ -62,6 +62,7 @@ export async function undoStroke() {
 }
 export async function showBrush(assetKey) {
   (await import('./rows.mjs')).closeRows();
+  (await import('./buildings.mjs')).closeBuildings();
   if(active) {active.panel.focus();return;}
   const request=++opening;
   const scene=canvas.scene,level=canvas.level;checkContext(scene,level);

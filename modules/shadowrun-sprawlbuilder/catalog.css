@@ -48,6 +48,12 @@
 .ssb-edit-guides{position:fixed;inset:0;z-index:49;pointer-events:none}
 @media(max-width:800px){.ssb-tile-editor{right:12px;width:210px}}
 
+.ssb-building-panel{position:fixed;top:80px;right:330px;z-index:10000;width:270px;box-sizing:border-box;padding:16px;display:flex;flex-direction:column;gap:8px;background:#242724;color:#eee;border:1px solid #a5b7a2;border-radius:8px;font:14px sans-serif;max-width:calc(100vw - 24px);max-height:calc(100dvh - 100px);overflow-y:auto}
+.ssb-building-panel :is(button,select){background:#363e36;color:#fff;min-height:32px;border:1px solid #83917f;border-radius:4px;cursor:pointer}.ssb-building-panel button:disabled{opacity:.5}.ssb-building-panel p{margin:0;line-height:1.4}
+.ssb-roof-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.ssb-roof-gallery button{display:flex;flex-direction:column;gap:3px;align-items:center;font-size:12px;padding:4px}.ssb-roof-gallery img{width:100%;height:54px;object-fit:cover}.ssb-roof-gallery button[aria-pressed=true]{outline:3px solid #a5ffc0;outline-offset:-3px}
+.ssb-building-overlay{position:fixed;inset:0;z-index:50;cursor:crosshair;touch-action:none}
+@media(max-width:800px){.ssb-building-panel{right:12px;top:60px}}
+
 .ssb-stack-controls{display:flex;flex-direction:column;gap:6px}.ssb-stack-controls label{display:flex;align-items:center;justify-content:space-between;gap:8px}.ssb-stack-controls input[type=number]{width:90px;min-width:0}
 .ssb-stack-controls input[type=checkbox]{width:auto;min-height:0;accent-color:#ff6b35}
 

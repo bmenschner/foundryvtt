@@ -62,6 +62,7 @@ export async function undoRow(single=false){
   if(ids.length)await scene.deleteEmbeddedDocuments('Tile',ids);history.splice(index,1);
 }
 export async function showRows(asset,widthMeters=asset.widthMeters,single=false,stackInitial){
+  (await import('./buildings.mjs')).closeBuildings();
   const scene=canvas.scene,level=canvas.level;check(scene,level);
   const rect={...canvas.dimensions.sceneRect};
   // Validate scale and asset before installing the drawing overlay.
