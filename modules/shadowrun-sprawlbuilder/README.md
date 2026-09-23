@@ -1,4 +1,4 @@
-# Shadowrun SprawlBuilder · 1.2.0
+# Shadowrun SprawlBuilder · 1.2.1
 
 Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen** und **100 neue Bodentexturen** in **SprawlBuilder · Böden**.
 
@@ -32,7 +32,11 @@ Noch keine flächigen Innenbodenmaterialien für Holz oder Auslegware und kein v
 
 **Shadowrun SprawlBuilder → Gebäude bauen** öffnet ein verschiebbares Werkzeug mit vier Dachmaterialien aus dem vorhandenen Bestand: Beton, Kies, Industrie/Metall und Gras. Material, Rechteck oder L-Form und optional eine Balkonseite wählen. Auf der Karte mit der linken Maustaste die Grundfläche aufziehen; die Vorschau rastet wie der Bodenstempel auf vollständige 1-m-Felder ein. Gebäude sind zwischen 3 und 40 m breit und tief, L-Formen mindestens 5 × 5 m. Der Balkon ragt 1 m an der gewählten Außenseite heraus. Rechtsklick pausiert, **Fortsetzen** aktiviert das Werkzeug wieder, Esc oder **Schließen** beendet es. Die Fensterposition bleibt pro Welt und Benutzer erhalten.
 
-Dachfläche, durchgehende Attika mit Innen- und Außenecken, sichtbare Südseite und Balkon werden zu einem transparenten Tile gerendert. Der feste Blick von oben mit sichtbarer Südseite funktioniert am oberen und unteren Szenenrand sowie bei freistehenden Gebäuden. Ein Gebäude wird in der aktiven Foundry-14-Ebene gespeichert und automatisch über bereits überlappenden Tiles einsortiert. **Letztes Gebäude zurücknehmen** entfernt nur das zuletzt mit diesem Werkzeug erzeugte Tile auf der aktuellen Ebene. Die PNG-Dateien liegen unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-buildings/`; Rückgängig entfernt das Tile, nicht die hochgeladene Datei.
+Dachfläche, Attika mit Innen- und Außenecken, Fassade und Balkon werden zu einem gemeinsamen PNG-Tile gerendert. Transparenz gibt es außerhalb des Umrisses und in der L-Aussparung; die Dachfläche selbst ist undurchsichtig. **Fassadenansicht** wählt Südseite (unten), Nordseite (oben) oder Draufsicht ohne Fassade. Die Schattenrichtung bleibt gleich. Zum Balkon bleibt mittig ein 1 m breiter Zugang im Dachrand und in der Fassade frei; die Vorschau markiert ihn goldfarben. Ein Gebäude wird in der aktiven Foundry-14-Ebene gespeichert und automatisch über bereits überlappenden Tiles einsortiert. **Letztes Gebäude zurücknehmen** entfernt nur das zuletzt mit diesem Werkzeug erzeugte Tile auf der aktuellen Ebene. Die PNG-Dateien liegen unter `worlds/<Welt-ID>/shadowrun-sprawlbuilder-buildings/`; Rückgängig entfernt das Tile, nicht die hochgeladene Datei.
+
+Ab 1.2.1 verwenden Kantenfang und Größenanzeige neuer Gebäude die rechteckige Dachgrundfläche ohne den transparenten Bildrand. Der auskragende Balkon und die L-Aussparung sind dabei keine zusätzlichen Fangkanten. Die Grundfläche bleibt bei Skalierung und Drehung korrekt. Ältere Gebäudebilder enthalten diese normierten Angaben nicht und müssen für den korrigierten Kantenfang neu erzeugt werden. Bestehende Bilder und Tiles werden beim Update nicht verändert.
+
+Rechtsklick und Fokusverlust pausieren das Werkzeug und geben Kartenklicks frei. **Fortsetzen** aktiviert die Zeichenfläche wieder. Mit Esc das Werkzeug vollständig schließen, bevor du das Dach über Foundrys Kachelwerkzeug bearbeitest. Ein eigener Modus „Innenraum bearbeiten“, getrennte Bauteile und automatische Dachausblendung sind noch nicht enthalten; Dach und Balkon können in diesem Prototyp nicht getrennt ausgeblendet werden.
 
 Der Prototyp erzeugt die Bilddarstellung. Für begehbare Dächer, Sichtschutz oder verschiedene Innenstockwerke sind Foundry-Surfaces, Regions und Wände separat zu konfigurieren. Die Tile-Höhe stammt aus der ausgewählten Ebene; die automatische Bildreihenfolge ersetzt keine physische Ebene.
 

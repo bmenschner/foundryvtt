@@ -3,7 +3,9 @@ const radians=a=>a*Math.PI/180;
 export function tileRectangle(tile,assets){
   if(![tile.x,tile.y,tile.width,tile.height].every(Number.isFinite)||tile.width<=0||tile.height<=0)return null;
   const asset=assets.get(tile.flags?.[ID]?.key),painted=tile.flags?.[ID]?.painted;
-  const bounds=asset&&!painted?asset.alphaBounds:[0,0,1,1],pw=asset&&!painted?asset.pixelWidth:1,ph=asset&&!painted?asset.pixelHeight:1;
+  const footprint=tile.flags?.[ID]?.building&&tile.flags?.[ID]?.footprintUV;
+  const validFootprint=Array.isArray(footprint)&&footprint.length===4&&footprint.every(Number.isFinite)&&footprint[0]>=0&&footprint[1]>=0&&footprint[2]<=1&&footprint[3]<=1&&footprint[2]>footprint[0]&&footprint[3]>footprint[1];
+  const bounds=validFootprint?footprint:asset&&!painted?asset.alphaBounds:[0,0,1,1],pw=validFootprint?1:asset&&!painted?asset.pixelWidth:1,ph=validFootprint?1:asset&&!painted?asset.pixelHeight:1;
   const [l,t,r,b]=bounds,rotation=tile.rotation??0,c=Math.cos(radians(rotation)),s=Math.sin(radians(rotation));
   const ox=((l+r)/2/pw-(tile.texture?.anchorX??tile.anchorX??.5))*tile.width,oy=((t+b)/2/ph-(tile.texture?.anchorY??tile.anchorY??.5))*tile.height;
   return {id:tile.id,x:tile.x+c*ox-s*oy,y:tile.y+s*ox+c*oy,width:(r-l)/pw*tile.width,height:(b-t)/ph*tile.height,rotation};
