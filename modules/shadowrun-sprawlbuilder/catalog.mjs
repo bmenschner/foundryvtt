@@ -3,6 +3,7 @@ import {setStackCatalog,stackedTile} from './stacking.mjs';
 import {showRows,showAssetStamp,closeRows} from './rows.mjs';
 import {closeBrush} from './brush.mjs';
 import {collections,taxonomy,assetTypes} from './taxonomy.mjs';
+import {rememberApplication} from './panels.mjs';
 export {collections,taxonomy,assetTypes};
 export const ID='shadowrun-sprawlbuilder';
 const BASE=`modules/${ID}`;
@@ -85,7 +86,8 @@ export function catalogElement(icons) {
   }
   updateFilters();
   const reset=node('button','Filter zurücksetzen');reset.type='button';
-  tools.append(search,reset);
+  const resetPosition=node('button','Fensterposition zurücksetzen');resetPosition.type='button';resetPosition.addEventListener('click',()=>browser?.panelPosition?.reset());
+  tools.append(search,reset,resetPosition);
   const status=node('p');status.setAttribute('aria-live','polite');
   const cards=node('div',undefined,'ssb-cards');
   const paging=node('div',undefined,'ssb-tools');
@@ -128,11 +130,11 @@ export async function showCatalog() {
   const icons=await loadCatalog();
   class AssetCatalog extends foundry.applications.api.ApplicationV2 {
     static DEFAULT_OPTIONS={id:'shadowrun-sprawlbuilder-catalog',window:{title:'Shadowrun SprawlBuilder · Assets',resizable:true},position:{width:780,height:760}};
-    async close(options){closeRows();closeBrush();return super.close(options);}
+    async close(options){this.panelPosition?.dispose();closeRows();closeBrush();return super.close(options);}
     async _renderHTML(){return catalogElement(icons);}
     _replaceHTML(result,content){content.replaceChildren(result);}
   }
-  browser=new AssetCatalog();await browser.render({force:true});return browser;
+  browser=new AssetCatalog();await browser.render({force:true});browser.panelPosition=rememberApplication(browser);return browser;
 }
 export function registerCatalog() {
   class CatalogMenu extends foundry.applications.api.ApplicationV2 {
