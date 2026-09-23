@@ -1,6 +1,6 @@
-# Shadowrun SprawlBuilder · 1.0.2
+# Shadowrun SprawlBuilder · 1.1.0
 
-Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen**. Keine neuen Bilder generiert.
+Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282 vorhandene Assets** in der Sammlung **Grimmes Erwachen** und **100 neue Bodentexturen** in **SprawlBuilder · Böden**.
 
 ## Einstieg
 
@@ -15,20 +15,22 @@ Eigenständige Asset-Bibliothek und Bauwerkzeuge für Foundry 14. Enthält **282
 | Hauptkategorie | Inhalt aus dem vorhandenen Bestand |
 | --- | --- |
 | Straßen & Infrastruktur | Asphalt, Gehwege und Bordsteine, Verkehr und Haltestellen, Kanalisation, Stadtmobiliar, Fahrzeuge |
-| Innenböden | Einzelner Teppich und Tanzflächenmodul |
+| Innenböden | Teppich, Tanzflächenmodul und Industrieböden |
 | Natur & Gelände | Rasen, Untergrund, Bäume, Hecken, Pflanzen, Felsen, Wasser, Gartenpflege, Lager |
 | Wände & Gebäudeteile | Grundmauersegment, Türen, Fenster, Dächer, Tragwerk, Treppen und Beschläge |
 | Mauern & Zäune | Mauerreste, Zäune, Tore, Geländer, Gitter, Schranken und Absperrungen |
 | Möbel & Einrichtung | Sitzen, Tische, Schränke, Betten, Sanitär, Dekoration und Beleuchtung |
 | Ausstattung & Details | Küche, Geschirr, Bar, Empfang, Forschung und Labor, Medizin, Büro, Sicherheit, Bühne, Sport, Industrie, Versorgung, Lager, Haushalt, Persönliches, Sakrales und Spuren |
 
-Sammlung und Verwendung sind getrennt. Alle aktuellen Elemente gehören zur Sammlung Grimmes Erwachen; spätere Sammlungen können dieselben Kategorien verwenden. Dateinamen und ehemalige Kategorien bleiben als Herkunftsinformation erhalten. Die Auswahl zeigt ausschließlich belegte Kategorien mit Anzahl; Unterkategorien werden nach Auswahl der Hauptkategorie angeboten. Filter lassen sich gemeinsam zurücksetzen. Die Treffer erscheinen alphabetisch und in Seiten zu 24 Elementen.
+Sammlung und Verwendung sind getrennt. Die ursprünglichen 282 Elemente gehören zur Sammlung Grimmes Erwachen; die 100 neuen Böden zur Sammlung SprawlBuilder · Böden. Beide verwenden dieselben Hauptkategorien. Dateinamen und ehemalige Kategorien bleiben als Herkunftsinformation erhalten. Die Auswahl zeigt ausschließlich belegte Kategorien mit Anzahl; Unterkategorien werden nach Auswahl der Hauptkategorie angeboten. Filter lassen sich gemeinsam zurücksetzen. Die Treffer erscheinen alphabetisch und in Seiten zu 24 Elementen.
 
-Noch keine flächigen Innenbodenmaterialien für Holz, Fliesen oder Auslegware, keine Sand-/Erdtextur und kein vollständiger modularer Wand- oder Straßenbausatz. Vorhandene Bauteile sind **Bild-Tiles**, keine Foundry-Wände: Sicht- und Bewegungssperren setzt die Spielleitung separat.
+Noch keine flächigen Innenbodenmaterialien für Holz oder Auslegware und kein vollständiger modularer Wand- oder Straßenbausatz. Vorhandene Bauteile sind **Bild-Tiles**, keine Foundry-Wände: Sicht- und Bewegungssperren setzt die Spielleitung separat.
 
 ## Gelände bauen
 
-**Shadowrun SprawlBuilder → Gelände bauen** öffnet ein eigenes kompaktes Werkzeugfenster mit einer kleinen Bodengalerie. Ein Vorschaubild anklicken: Der ausgewählte Boden wird umrandet und namentlich angezeigt. Verfügbar sind Gras, Asphalt und Gehwegplatten. Die Bodenauswahl aktiviert das Werkzeug sofort, ohne zusätzlichen Startknopf. Stempel oder Rechteck bestimmen die Form. Ein Bodenwechsel gilt für den nächsten Zug. Bordsteine werden über **Assets** als Einzelbauteile platziert. In der Asset-Galerie gibt es keinen zusätzlichen Gelände-bauen-Button mehr.
+**Shadowrun SprawlBuilder → Gelände bauen** öffnet ein eigenes kompaktes Werkzeugfenster mit einer kleinen Bodengalerie. Mit **Bodenmaterial** filtern oder **Boden suchen** verwenden. Ein Vorschaubild anklicken: Der ausgewählte Boden wird umrandet und namentlich angezeigt. Die Bodenauswahl aktiviert das Werkzeug sofort, ohne zusätzlichen Startknopf. Stempel oder Rechteck bestimmen die Form. Ein Bodenwechsel gilt für den nächsten Zug. Bordsteine werden über **Assets** als Einzelbauteile platziert. In der Asset-Galerie gibt es keinen zusätzlichen Gelände-bauen-Button mehr.
+
+Zusätzlich zu den drei bisherigen Böden gibt es jeweils zehn Varianten für Asphalt, Beton, Gehwegplatten, Pflaster, Sand, Erde, Kies, Gras, Waldboden und Industrieboden. Jede neue quadratische Textur entspricht **4 × 4 Metern**; ein Stempel setzt wie bisher **1 × 1 Meter** daraus. Namen beschreiben Material und Zustand. Die neuen Bilder liegen unter `assets/boeden/`, ihre Generierungsprompts und die Referenzquelle in `ground-generation.json`. Originale werden eigenständig erzeugt; die verlinkte Tom-Cartos-Vorschau dient als Materialreferenz.
 
 - Linksklick setzt ein 1 × 1 m großes Tile; Ziehen setzt zusammenhängende Rasterfelder. Die Vorschau folgt der Maus. Gespeichert wird beim Loslassen.
 - Rechtecke rasten einschließlich Start- und Endfeld auf dasselbe 1-m-Raster wie Stempel ein. Vorschau und gespeicherte Kanten stimmen überein; mit demselben Material lassen sich Stempel ohne Lücke und mit passender Texturausrichtung ergänzen. Ziehen funktioniert in jede Richtung. Am Szenenrand werden nur vollständige Zellen berücksichtigt.
@@ -83,7 +85,7 @@ Diese erste Erweiterung erstellt gerade Reihen. Das Reihenwerkzeug rastet noch n
 
 **Assets – Grimmes Erwachen bleibt unverändert.** Beide Module können installiert und aktiviert bleiben. SprawlBuilder hat eigene Bilddateien, IDs, Menüs, Makros, CSS-Klassen, Tile-Markierungen und Weltordner. Es benötigt weder das alte Asset-Modul noch das Abenteuer-Modul oder ein bestimmtes Spielsystem. Bereits gebaute Szenen werden nicht migriert. Verwende jeweils nur ein Gelände-Malwerkzeug zur selben Zeit und schließe das andere vor dem Wechsel.
 
-Die zusätzlichen Bilddateien benötigen ungefähr 300 MB auf dem Server. Vorhandene Bilder wurden unverändert kopiert; Git kann identische Bildinhalte intern gemeinsam speichern.
+Die ursprüngliche Bildsammlung benötigt ungefähr 300 MB auf dem Server; die 100 neuen WebP-Böden ergänzen rund 67 MiB. Vorhandene Bilder wurden unverändert kopiert; Git kann identische Bildinhalte intern gemeinsam speichern.
 
 Die bestehende GitHub Action erkennt das Modul automatisch. Änderungen kommen über Pull Request; nach Merge in `main` wird regulär verteilt. Kein Abenteuer-Neuimport nötig. Manuell installierte Module und Welten werden durch diesen PR nicht verändert.
 
@@ -91,4 +93,4 @@ Die bestehende GitHub Action erkennt das Modul automatisch. Änderungen kommen �
 
 Die Bilder stammen aus unserer generierten Sammlung. Die Gestaltungsreferenzen sind in `docs/grimmes-erwachen-kartenrecherche.md` dokumentiert, insbesondere Tom Cartos Modern Preview und Modern Asset Gallery. Es wurden keine Original-Assetbibliotheken dieser Anbieter übernommen.
 
-Automatisierte Prüfungen vergleichen alle 282 Bildprüfsummen und Maße mit dem bisherigen Modul und prüfen Kategorien, Suche, Koexistenz, Skalierung und getrenntes Rückgängig. Ein Browser-Test prüft die Bibliothek mit simulierten Foundry-Dokumenten. Dies ersetzt keinen vollständigen Test in der laufenden Foundry-Welt.
+Automatisierte Prüfungen vergleichen alle 282 bisherigen Bildprüfsummen und Maße mit dem bisherigen Modul, prüfen die 100 neuen Böden auf eindeutige Prüfsummen, gültige Pfade und Maßstab und prüfen Kategorien, Suche, Koexistenz, Skalierung und getrenntes Rückgängig. `scripts/check-sprawlbuilder-floors.cjs` prüft Bodenfilter, Suche und Platzierung mit simulierten Foundry-Dokumenten. Dies ersetzt keinen vollständigen Test in der laufenden Foundry-Welt.

@@ -1,5 +1,6 @@
 export const collections = {
-  "grimmes-erwachen": "Grimmes Erwachen"
+  "grimmes-erwachen": "Grimmes Erwachen",
+  "sprawlbuilder-boeden": "SprawlBuilder · Böden"
 };
 export const taxonomy = {
   "strassen": {
@@ -17,7 +18,8 @@ export const taxonomy = {
     "label": "Innenböden",
     "subcategories": {
       "teppiche": "Teppiche",
-      "tanzflaechen": "Tanzflächen"
+      "tanzflaechen": "Tanzflächen",
+      "industrieboden": "Industrieböden"
     }
   },
   "natur": {

@@ -1,5 +1,5 @@
 import {stackedTile,stackControls} from './stacking.mjs';
-import {ID,loadCatalog,tileData,assetPath,closeCatalog} from './catalog.mjs';
+import {ID,loadCatalog,tileData,assetPath,closeCatalog,normalize} from './catalog.mjs';
 import {stampCells,saveStamps,rectangleBounds} from './stamps.mjs';
 let active,opening=0;
 export function closeBrush(){opening++;active?.dispose();}
@@ -78,9 +78,15 @@ export async function showBrush(assetKey) {
   const gallery=node('div');gallery.className='ssb-floor-gallery';gallery.setAttribute('role','group');gallery.setAttribute('aria-label','Böden');
   const selectedName=node('p',`Boden: ${selected.name}`);selectedName.setAttribute('aria-live','polite');
   const materialButtons=[];
+  const search=node('input');search.type='search';search.placeholder='Boden suchen …';search.setAttribute('aria-label','Boden suchen');
+  const materialFilter=node('select');materialFilter.setAttribute('aria-label','Bodenmaterial');materialFilter.append(new Option('Alle Materialien',''));
+  for(const label of [...new Set(assets.map(a=>a.material??'Bestand'))].sort((a,b)=>a.localeCompare(b,'de')))materialFilter.append(new Option(label,label));
+  const empty=node('p','Keine passenden Böden. Suche oder Materialfilter ändern.');empty.hidden=true;
+  function filterFloors(){const words=normalize(search.value).trim().split(/\s+/).filter(Boolean);let count=0;for(let i=0;i<assets.length;i++){const a=assets[i];const match=(!materialFilter.value||(a.material??'Bestand')===materialFilter.value)&&words.every(word=>normalize([a.name,a.material,...(a.tags??[])].join(' ')).includes(word));materialButtons[i].hidden=!match;if(match)count++;}empty.hidden=count>0;}
+  search.addEventListener('input',filterFloors);materialFilter.addEventListener('change',filterFloors);
   for(const asset of assets){
     const card=node('button');card.type='button';card.className='ssb-floor-card';card.setAttribute('aria-label',asset.name);card.setAttribute('aria-pressed',String(asset===selected));
-    const image=node('img');image.src=assetPath(asset);image.alt='';image.width=80;image.height=64;
+    const image=node('img');image.src=assetPath(asset);image.alt='';image.width=80;image.height=64;image.loading='lazy';
     card.append(image,node('span',asset.name));
     card.addEventListener('click',()=>{if(busy)return;erasing=false;selected=asset;eraser.setAttribute('aria-pressed','false');setEnabled(true);selectedName.textContent=`Boden: ${asset.name}`;for(const button of materialButtons)button.setAttribute('aria-pressed',String(button===card));});
     gallery.append(card);materialButtons.push(card);
@@ -92,7 +98,7 @@ export async function showBrush(assetKey) {
   const undo=node('button','Letzte Aktion zurücknehmen'),close=node('button','Schließen');
   const status=node('p','Boden oder Radierer wählen und direkt loslegen. Rechtsklick pausiert; Esc schließt.');status.setAttribute('aria-live','polite');
   const stacking=stackControls(undefined,()=>preview());
-  panel.append(node('span','Böden'),gallery,selectedName,mode,stacking.node,eraser,extend,undo,close,status);
+  panel.append(node('span','Böden'),search,materialFilter,gallery,empty,selectedName,mode,stacking.node,eraser,extend,undo,close,status);
   const overlay=node('canvas');overlay.className='ssb-brush-overlay';overlay.style.pointerEvents='none';
   document.body.append(overlay,panel);
   let enabled=false,busy=false,points=[],pointer=null,stroke=null,disposed=false,overflow=false,hover=null;
